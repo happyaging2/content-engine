@@ -50,3 +50,30 @@
 - FAQ must have minimum 4 questions, each answered in 1-2 sentences
 - References must include DOI or PMID for every citation
 - Template suffix must be "timeline" — never leave blank
+
+## BATCH 2026-04-09 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing achieves 20 articles in one session efficiently
+- What-to-know box + 6-8 H2s is the right structural density for this audience
+- "After 40" suffix in title increases specificity and resonance
+- FAQ answers of 1-2 sentences are optimal for featured snippet targeting
+- Product cards placed after the "what helps" section feel natural, not promotional
+
+### GEO / AI Citation Optimization
+- "What to Know" box bullet points are highly extractable by AI systems
+- FAQ h3+p pairs are the #1 format for AI answer extraction
+- Sections framed as definitions ("What Is X?") work well for AI context windows
+- Avoid metaphors and idioms in direct answer sections — AI prefers literal language
+
+### Cluster Predictions (validate in 30 days)
+- Energy: highest predicted conversion — NAD+ products have clear CTA
+- Sleep 3am-wake article: likely featured snippet candidate (very specific query)
+- "Estrogen decline symptoms" article: strong list format for GEO extraction
+- "Blood sugar belly fat" angle: differentiated vs. generic weight loss content
+
+### Next Batch Priorities
+- Track which cluster generates first organic traffic
+- If Energy cluster converts: add 3 more Energy articles next batch
+- Consider "What Is NAD+?" explainer hub page (higher-volume informational)
+- "Perimenopause checklist" format could drive very high engagement + shares
