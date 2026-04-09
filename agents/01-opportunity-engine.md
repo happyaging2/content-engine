@@ -34,7 +34,7 @@ Score each topic:
 Priority Score = Conversion (40%) + Intent (30%) + GEO (20%) + Differentiation (10%)
 
 ## OUTPUT
-Return ONLY top 5 opportunities.
+Return ONLY top 20 opportunities.
 
 For each:
 1. Topic
