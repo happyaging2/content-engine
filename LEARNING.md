@@ -77,3 +77,40 @@
 - If Energy cluster converts: add 3 more Energy articles next batch
 - Consider "What Is NAD+?" explainer hub page (higher-volume informational)
 - "Perimenopause checklist" format could drive very high engagement + shares
+
+## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
+
+### NO DASHES IN TEXT
+- NEVER use em dashes (—) or en dashes (–) in article text
+- Use commas, periods, or colons instead
+- Example: "NAD+ levels drop after 40, and the effects are real" NOT "NAD+ levels drop after 40 — and the effects are real"
+
+### AUTHOR
+- Author for ALL articles: "Happy Aging Team" (not Dr. Daniel Yadegar)
+- Written By: Happy Aging Team
+
+### IMAGES (CRITICAL)
+- Featured image (top): NEVER use a product image. Use a lifestyle/wellness image.
+- Product card inline: Use real product image from products/[handle].json API
+- Body images: Use AI-generated realistic lifestyle images related to the content
+- For AI images, use Unsplash as source: https://source.unsplash.com/800x450/?[keyword]
+- Alternative: Use Pexels API or Pixabay for free stock images
+- Every article must have 3-4 images throughout the text
+- Images must be relevant to the section they appear in
+
+### PRODUCT CARD FIX
+- The product-card-inline must use this exact HTML structure:
+```html
+<div class="product-card-inline">
+<a href="https://happyaging.com/products/[handle]">
+<img src="[REAL_IMAGE_FROM_API]" alt="[Product Name]">
+</a>
+<div>
+<h4><a href="https://happyaging.com/products/[handle]">[Product Name]</a></h4>
+<p>[Short description]</p>
+<p><strong>$XX/month</strong> with subscription</p>
+<a href="https://happyaging.com/products/[handle]">Shop Now</a>
+</div>
+</div>
+```
+- ALWAYS verify the image URL works before publishing

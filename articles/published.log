@@ -3,3 +3,8 @@
 2026-04-09T15:14:17Z NETWORK_ERROR slug=metabolism-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
 2026-04-09T15:14:17Z NETWORK_ERROR slug=brain-fog-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
 2026-04-09T15:14:17Z NETWORK_ERROR slug=collagen-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
+FAILED: why-do-i-feel-so-tired-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/longevity-shots.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
+FAILED: sleep-problems-after-40-women — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/sleep-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
+FAILED: metabolism-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/nmn-cell-renew-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
+FAILED: brain-fog-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/brain-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
+FAILED: collagen-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/glow-shot.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
