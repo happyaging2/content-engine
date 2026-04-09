@@ -1,6 +1,6 @@
 # Batch 2026-04-09 — Opportunity List (Phase 1)
 
-Generated: 2026-04-09  
+Generated: 2026-04-09
 Total topics: 20 | Clusters: 8 | Max 3 per cluster
 
 ---
@@ -177,3 +177,15 @@ Total topics: 20 | Clusters: 8 | Max 3 per cluster
 - **Conversion potential:** 7/10
 - **Priority score:** 8.0
 - **Product bridge:** Liposomal Curcumin (liver-tonic), Liposomal Quercetin
+
+---
+
+## SELECTED FOR THIS BATCH (Top 5 by Priority Score)
+
+| # | Slug | Title | Cluster | Priority Score |
+|---|---|---|---|---|
+| 1 | why-do-i-feel-so-tired-after-40 | Why Do I Feel So Tired After 40? (The Real Reason Nobody Tells You) | Energy | 9.1 |
+| 2 | sleep-problems-after-40-women | Why Can't I Sleep Like I Used To After 40? (A Hormone Expert Explains) | Sleep | 9.0 |
+| 3 | metabolism-after-40 | What Happens to Your Metabolism After 40 (And How to Actually Fight Back) | Metabolism | 8.9 |
+| 4 | brain-fog-after-40 | Is Brain Fog After 40 Normal? What Causes It and How to Clear It | Brain | 8.8 |
+| 5 | collagen-after-40 | Why Your Skin Ages Faster After 40 (And What Science Says About Collagen) | Skin | 8.0 |
