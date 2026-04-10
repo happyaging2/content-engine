@@ -78,6 +78,48 @@
 - Consider "What Is NAD+?" explainer hub page (higher-volume informational)
 - "Perimenopause checklist" format could drive very high engagement + shares
 
+## BATCH 2026-04-10 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing (5 articles each) completes 20 articles efficiently in one session
+- Agents occasionally produce duplicate file writes when same slug assigned to overlapping prompts — avoid overlap in slug assignments across agents
+- NAD+ and NMN explainer-style articles ("What Is X?") produce the cleanest structure with best GEO extraction potential
+- Checklist-format articles (perimenopause symptoms) are highly structured and produce more H3s than typical articles — good for AI extraction
+- Step-by-step routine articles (bedtime routine) are among the longest and most naturally link to product cards
+
+### New Title Patterns That Work
+- "What Is X? The [Benefit] Behind [Outcome] (Explained Simply)" — strong for definitional GEO queries
+- "Does X Work for Women Over 40? What the Research Shows" — research framing builds trust
+- "Why X Is Sabotaging Your Y (And How to Stop It)" — urgency + empowerment
+- "X After 40: What It Is, What It Does, and Whether It Works" — comprehensive guide format
+
+### Topic Differentiation Strategy
+- Batch 2026-04-09 covered: why/symptom angles (why tired, why sleep hard, why metabolism slows)
+- Batch 2026-04-10 covers: what/how angles (what is NAD+, how to balance hormones, what to eat)
+- This creates natural internal linking: symptom article → mechanism article → product
+- Next batch should cover: when/comparison angles (when to take X, X vs Y, best time to...)
+
+### GEO / AI Optimization Notes
+- "What Is X?" articles are the #1 format for AI citation in health/wellness spaces
+- Checklist articles produce extractable bullet lists that AI systems summarize well
+- Step-by-step routine format is highly cited in AI responses to "how do I..." queries
+- Definitional + practical guide hybrid (e.g., "What Is NMN?") covers both zero-click and click-through traffic
+
+### Cluster Expansion Insights
+- Brain cluster expanded to 3 articles (was 2 in previous batch) — neuro-creamer now featured
+- Immunity reduced to 1 article — this is intentional to match lower conversion potential
+- Gut cluster: gut-hormone connection angle is highly differentiated vs. competitors
+- Skin cluster: glutathione angle covers radiance-tonic (previously uncovered product)
+- 12 different products featured across 20 articles — good coverage of full product catalog
+
+### Next Batch Priorities
+- Validate: which cluster generates first organic clicks (predict: Energy/NAD+, then Hormones/checklist)
+- Add: "X vs Y" comparison articles (NMN vs NR, marine vs bovine collagen, probiotics vs prebiotics)
+- Add: "best time to take X" articles for high-volume supplementation queries
+- Add: "how long until X works?" articles — very high conversion intent
+- Consider: "Morning routine for women over 40" as a hub page linking multiple products
+- Perimenopause checklist article is the strongest featured-snippet candidate in this batch — watch it
+
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
 ### NO DASHES IN TEXT
@@ -93,7 +135,8 @@
 - Featured image (top): NEVER use a product image. Use a lifestyle/wellness image.
 - Product card inline: Use real product image from products/[handle].json API
 - Body images: Use AI-generated realistic lifestyle images related to the content
-- For AI images, use Unsplash as source: https://source.unsplash.com/800x450/?[keyword]
+- For lifestyle images, use direct Unsplash photo URLs: https://images.unsplash.com/photo-[ID]?w=800&h=450&fit=crop
+- Do NOT use source.unsplash.com redirect URLs — use direct photo IDs only
 - Alternative: Use Pexels API or Pixabay for free stock images
 - Every article must have 3-4 images throughout the text
 - Images must be relevant to the section they appear in
