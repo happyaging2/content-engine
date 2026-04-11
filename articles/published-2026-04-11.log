@@ -1,0 +1,25 @@
+# Batch 2026-04-11 Publish Log
+# Network status: BLOCKED — proxy rejects shop-happy-aging.myshopify.com (host_not_allowed)
+# All 20 articles written, SEO QA passed, ready to publish.
+# Run articles/batch-2026-04-11-publish.sh from an environment with Shopify API access.
+
+2026-04-11T09:31:00Z NETWORK_ERROR slug=coq10-energy-after-40 — Shopify API not reachable (proxy host_not_allowed). Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=afternoon-energy-crash-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=nad-plus-sleep-connection-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=progesterone-sleep-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=night-sweats-sleep-disruption-menopause — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=sleep-supplements-women-over-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=progesterone-decline-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=thyroid-fatigue-women-over-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=cortisol-changes-after-40-women — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=calorie-restriction-backfires-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=intermittent-fasting-after-40-women — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=nmn-vs-nad-plus-difference — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=hyaluronic-acid-vs-marine-collagen — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=skin-changes-perimenopause — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=probiotics-after-40-women — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=food-sensitivities-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=nad-plus-brain-health-aging — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=sleep-deprivation-brain-fog-after-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=quercetin-immune-health-women-over-40 — Shopify API not reachable. Run batch-2026-04-11-publish.sh.
+2026-04-11T09:31:00Z NETWORK_ERROR slug=inflammation-root-of-aging — Shopify API not reachable. Run batch-2026-04-11-publish.sh.

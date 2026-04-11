@@ -1,4 +1,4 @@
-# Content Learning Rules — Last Updated: 2026-04-09
+# Content Learning Rules — Last Updated: 2026-04-11
 
 ## WINNING PATTERNS (repeat these)
 - Question-based titles get higher CTR ("Why do I..." / "What causes..." / "Is X normal?")
@@ -23,11 +23,13 @@
 - Metabolism/multi-benefit articles with 3+ product links — always narrow to single CTA
 
 ## BEST CLUSTERS
-- Energy: highest conversion (connects to NAD+, CoQ10) — prioritize in every batch
-- Sleep: high search volume, strong product fit (Sleep Blend, Magnesium)
-- Hormones: emotional resonance with audience, high engagement — not yet covered, add next batch
-- Brain: underserved in competitor content, high GEO/featured snippet potential — expanding
-- Gut: emerging interest 40+ women, strong Happiest Gut product fit — schedule next
+- Energy: highest conversion (connects to NAD+, CoQ10) — covered in all batches, always prioritize
+- Sleep: high search volume, strong product fit (Sleep Blend, Magnesium) — now fully covered
+- Hormones: emotional resonance with audience, high engagement — now covered (progesterone, thyroid, cortisol)
+- Brain: underserved in competitor content, high GEO/featured snippet potential — expanding with NAD+ brain angle
+- Gut: emerging interest 40+ women, strong Happiest Gut product fit — covered (probiotics + food sensitivities)
+- Metabolism: comparison/debunking articles (IF after 40, calorie restriction) drive high CTR
+- Skin: comparison articles (HA vs collagen) are excellent for both GEO and commercial intent
 
 ## BEST TITLE PATTERNS
 - Problem + Age + Curiosity: "Why Do I Feel So Tired After 40? (The Real Reason Nobody Tells You)"
@@ -35,6 +37,9 @@
 - Question + Solution Promise: "Is Brain Fog After 40 Normal? What Causes It and How to Clear It"
 - Empowerment: "What Happens to Your Metabolism After 40 (And How to Actually Fight Back)"
 - Science Authority: "Why Your Skin Ages Faster After 40 (And What Science Says About Collagen)"
+- Debunking: "Why Calorie Restriction Backfires After 40 (And What to Do Instead)" — high CTR
+- Comparison: "NMN vs. NAD+: What Is the Difference and Which Should You Take?" — strong GEO fit
+- Mechanism: "How Cortisol Changes After 40 and Why It Matters for Your Health" — informational depth
 
 ## BEST STRUCTURES
 - Hook (pain point) → What it is → Why it happens → What helps → Tips/Routine → FAQ → Soft CTA
@@ -119,6 +124,58 @@
 - Add: "how long until X works?" articles — very high conversion intent
 - Consider: "Morning routine for women over 40" as a hub page linking multiple products
 - Perimenopause checklist article is the strongest featured-snippet candidate in this batch — watch it
+
+## BATCH 2026-04-11 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing (5 articles each) is the proven method — use every batch
+- Agent-produced HTML files sometimes get wrapped in full DOCTYPE/html/body tags by linters — always strip to body content only before publishing
+- Some agents write CSS class as "what-to-know-box" instead of "what-to-know" — run a find-replace QA pass after writing
+- QA script should check: no full HTML wrapper, correct what-to-know class, product-card-inline present, 4+ FAQ H3s, 3+ images, references
+- All 20 articles passed QA at 2,326 average words — optimal range confirmed
+
+### Title and Intent Diversification (batch 2026-04-11)
+- Batch 2026-04-09: why/symptom angles (why tired, why sleep hard, why metabolism slows)
+- Batch 2026-04-10: what/how angles (what is NAD+, how to balance hormones)
+- Batch 2026-04-11: comparison, debunking, mechanism angles (NMN vs NAD+, HA vs collagen, calorie restriction backfires)
+- Next batch (recommended): timing, duration, routine angles (best time to take X, how long until X works, morning routine)
+
+### New Title Patterns Added (2026-04-11)
+- Debunking + alternative: "Why X Backfires After 40 (And What to Do Instead)" — high emotional trigger + empowerment
+- Comparison format: "X vs. Y: What Is the Difference and Which Should You Take?" — commercial intent, GEO optimized
+- Mechanism format: "How X Changes After 40 and Why It Matters" — informational depth, trust-building
+
+### GEO / AI Citation Optimization (updated 2026-04-11)
+- Comparison articles ("NMN vs NAD+") are highly cited by AI systems answering supplement questions
+- "Inflammaging" definitional articles generate AI citations when query is "what causes aging"
+- Progesterone-sleep mechanism articles are strong for "why do I wake up at night" AI queries
+- FAQ sections must use H3 + immediate P answer (no preamble) for AI extractability
+- Avoid jargon in FAQ answers — AI systems prefer plain-language explanations
+
+### Product Image Situation (CRITICAL, updated 2026-04-11)
+- The CDN environment blocks all traffic to shop-happy-aging.myshopify.com and happyaging.com
+- Product images from products/[handle].json are NOT accessible in the Claude Code sandbox
+- Workaround: use Unsplash lifestyle images for product card images in sandbox-generated articles
+- When running in an environment WITH internet access: always fetch real product images first
+- Action for next publish: replace Unsplash product card images with real CDN URLs
+
+### Cluster Coverage After 3 Batches
+- Energy: 6 articles total (fatigue, tired after 40, metabolism, CoQ10, afternoon crash, NAD+sleep)
+- Sleep: 6 articles total (sleep problems, 3am wake, magnesium, progesterone, hot flashes, supplement guide)
+- Hormones: 5 articles total (perimenopause, estrogen decline, hormonal belly, progesterone, thyroid, cortisol)
+- Metabolism: 5 articles total (slow metabolism, blood sugar, weight gain, calorie restriction, IF)
+- Skin: 4 articles total (dryness, collagen loss, collagen science, HA vs collagen, perimenopause skin)
+- Gut: 4 articles total (bloating, gut health general, probiotics, food sensitivities)
+- Brain: 4 articles total (brain fog, memory, NAD+ brain, sleep-brain fog link)
+- Immunity: 4 articles total (immune system, inflammation, quercetin, root of aging)
+
+### Next Batch Gaps (priority order)
+1. Hair loss after 40 — extremely high emotional resonance, untapped
+2. Joint health and collagen for joints — high volume, glow-shot extension
+3. Adrenal fatigue — complements cortisol article, very high search intent
+4. Best time to take supplements — high-conversion intent, timing queries
+5. Morning routine for women over 40 — hub article, links to 4+ products naturally
+6. Postbiotic gut health — emerging trend, Happiest Gut extension
 
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
