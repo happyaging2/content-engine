@@ -1,0 +1,25 @@
+# Batch 2026-04-12 Publish Log
+# Network status: BLOCKED — proxy rejects shop-happy-aging.myshopify.com (host_not_allowed)
+# All 20 articles written, SEO QA passed (avg 2,390 words, 0 dashes), ready to publish.
+# Run articles/batch-2026-04-12-publish.sh from an environment with Shopify API access.
+
+2026-04-12T00:00:00Z NETWORK_ERROR slug=adrenal-fatigue-after-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=best-time-to-take-nad-supplements — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=how-long-does-nad-take-to-work — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=best-time-to-take-magnesium-for-sleep — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=why-wake-up-tired-after-8-hours-sleep — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=how-long-to-improve-sleep-after-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=hair-loss-after-40-women-causes — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=adrenal-fatigue-vs-burnout-after-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=stress-hormones-after-40-women — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=how-long-to-reset-metabolism-after-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=best-time-to-take-nmn-supplements — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=how-long-does-marine-collagen-take-to-work — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=joint-pain-after-40-collagen — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=why-skin-heals-slower-after-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=postbiotics-women-over-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=how-long-do-probiotics-take-to-work-after-40 — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=morning-routine-women-over-40-energy-focus — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=how-long-does-coq10-take-to-work — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=best-time-to-take-quercetin-for-immunity — Shopify API not reachable. Run batch-2026-04-12-publish.sh.
+2026-04-12T00:00:00Z NETWORK_ERROR slug=leaky-gut-after-40-immunity — Shopify API not reachable. Run batch-2026-04-12-publish.sh.

@@ -177,6 +177,55 @@
 5. Morning routine for women over 40 — hub article, links to 4+ products naturally
 6. Postbiotic gut health — emerging trend, Happiest Gut extension
 
+## BATCH 2026-04-12 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing still the correct method, but agents frequently hit stream idle timeouts on long articles — launch in background with run_in_background=true and handle per-agent retries
+- When agents timeout partially, check git status immediately and commit completed files before retrying missing ones — prevents re-writing articles that already passed QA
+- Some meta.json files missing when agent times out mid-batch — add slug to "unknown" cluster/product in stats; always generate meta as first write per article not last
+- Average word count this batch: 2,224 words (target 1800-3500 confirmed optimal)
+- QA script confirmed: all 20 articles had 0 em/en dashes, all had what-to-know, product-card-inline, 4+ FAQs, references with DOIs
+- how-long-does-marine-collagen-take-to-work and joint-pain-after-40-collagen missing meta.json (agent timeout) — add meta check to QA script
+
+### Intent Diversification (batch 2026-04-12)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles ("best time to take X", "how long does X take to work", morning routine)
+- Next batch should cover: stacking/combining, frequency angles ("can you take X and Y together", "how often should you take X", "signs you need more X")
+
+### New Title Patterns Added (2026-04-12)
+- Duration format: "How Long Does X Take to Work? A Realistic Timeline" — very high commercial intent, converts well for supplement queries
+- Timing format: "Best Time to Take X (Morning or Night?)" — strong commercial intent, short-tail with clear answer
+- Symptom+mechanism: "Why You Wake Up Tired Even After 8 Hours of Sleep After 40" — high emotional resonance + featured snippet candidate
+
+### GEO / AI Citation Optimization (updated 2026-04-12)
+- "How long does X take to work" articles are highly cited by AI for supplement timing queries
+- Week-by-week timeline format (Week 1-2, Week 3-4, Week 6-8) is extractable by AI as structured progression
+- "Best time to take X" articles rank well for voice search and AI assistant queries
+- Morning routine hub articles are strong for "daily routine" AI recommendations and create natural internal linking opportunities
+- Postbiotics definitional article covers an emerging query space with low competitor content
+
+### Cluster Coverage After 4 Batches
+- Energy: 9 articles total (fatigue, tired, CoQ10, NAD+, adrenal fatigue, timing articles)
+- Sleep: 9 articles total (all major angles covered: why, how long, timing, hormones, deep sleep)
+- Hormones: 8 articles total (perimenopause, estrogen, progesterone, cortisol, thyroid, hair loss, stress hormones, adrenal)
+- Metabolism: 7 articles total (slow metabolism, reset timeline, NMN timing, IF, calorie restriction, blood sugar, weight)
+- Skin: 7 articles total (dryness, collagen loss, collagen science, HA vs collagen, marine collagen timeline, joints, healing)
+- Gut: 6 articles total (bloating, gut health, probiotics, food sensitivities, postbiotics, leaky gut)
+- Brain: 6 articles total (brain fog, memory, NAD+ brain, CoQ10 brain, morning routine, sleep-brain fog)
+- Immunity: 6 articles total (immune system, inflammation, quercetin timing, leaky gut immunity, root of aging, chronic inflammation)
+
+### Next Batch Gaps (priority order)
+1. "Can You Take NMN and NAD+ Together?" — stacking query, high conversion intent
+2. "How Often Should You Take Collagen?" — frequency angle, commercial intent
+3. "Signs You Are Low in Magnesium" — symptom angle, sleep-tonic bridge
+4. "Best Supplements for Perimenopause" — hub/list article, multiple products, high commercial intent
+5. "How Long Does Magnesium Take to Work?" — duration angle, sleep cluster
+6. "Does CoQ10 Help with Weight Loss?" — question+debunk format, metabolism cross-cluster
+7. "Can You Take Quercetin Every Day?" — frequency/safety angle, immunity cluster
+8. "What Is DHEA and Should Women Over 40 Take It?" — definitional + commercial, hormones cluster
+
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
 ### NO DASHES IN TEXT
