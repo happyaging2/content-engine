@@ -226,6 +226,56 @@
 7. "Can You Take Quercetin Every Day?" — frequency/safety angle, immunity cluster
 8. "What Is DHEA and Should Women Over 40 Take It?" — definitional + commercial, hormones cluster
 
+## BATCH 2026-04-13 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing (5 articles each) remains the proven method — use every batch
+- Agent stream idle timeouts still occur on long articles — always use run_in_background=true
+- When an agent times out mid-batch, check which files were written before retrying only missing articles
+- One article (how-often-should-you-take-probiotics-after-40) required direct Write tool authorship after two agent timeouts — keep a direct-write fallback for any remaining gaps
+- Average word count this batch: 2,027 words (shorter than previous batches, all still passed QA)
+- QA script confirmed: all 20 articles had 0 em/en dashes, what-to-know class, product-card-inline, 5+ FAQ H3s, 3+ images, DOI/PMID references
+- Missing meta.json issue from batch 2026-04-12 recurred for can-you-take-curcumin-every-day — agent wrote HTML but timed out before meta.json; retry agent fixed it
+
+### Intent Diversification (batch 2026-04-13)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles ("can you take X and Y together", "how often should you take X", "is it safe to take X every day")
+- Next batch should cover: lifestyle integration, root cause, and "does X work for..." skeptic angles
+
+### New Title Patterns Added (2026-04-13)
+- Stacking format: "Can You Take X and Y Together? [What/The Science of...]" — high commercial intent, GEO-optimized for AI supplement queries
+- Frequency format: "How Often Should You Take X? [A/For/What...]" — strong commercial intent, short-tail with clear answer
+- Safety+frequency hybrid: "Can You Take X Every Day? A Safety and Dosing Guide" — addresses purchase hesitation, builds trust
+
+### GEO / AI Citation Optimization (updated 2026-04-13)
+- Stacking articles ("can you take X and Y together") are highly cited by AI answering supplement combination queries
+- "Safety and dosing" articles rank well for voice search safety questions ("is it safe to take curcumin every day?")
+- Frequency articles ("how often should you take X") are strong for featured snippets because they have a direct, extractable answer
+- "Best supplements for [condition]" hub articles are among the most AI-cited formats for health queries — high GEO value
+- All these formats benefit from a "Quick Answer" box or "What to Know" box at the top for AI extractability
+
+### Cluster Coverage After 5 Batches
+- Energy: 12 articles total (fatigue, tired, CoQ10, NAD+, adrenal fatigue, timing, stacking, frequency)
+- Sleep: 12 articles total (all major angles: why, how long, timing, hormones, deep sleep, magnesium frequency, safety)
+- Hormones: 11 articles total (perimenopause, estrogen, progesterone, cortisol, thyroid, hair loss, stress hormones, DHEA, best supplements, stacking, safe combinations)
+- Metabolism: 9 articles total (slow metabolism, reset timeline, NMN timing, IF, calorie restriction, blood sugar, weight, NMN frequency, CoQ10-weight link)
+- Skin: 9 articles total (dryness, collagen loss, collagen science, HA vs collagen, marine collagen timeline, joints, healing, collagen frequency, vitamin C stack)
+- Gut: 8 articles total (bloating, gut health, probiotics, food sensitivities, postbiotics, leaky gut, quercetin safety, probiotic frequency)
+- Brain: 9 articles total (brain fog, memory, NAD+ brain, CoQ10 brain, morning routine, sleep-brain fog, CoQ10+NAD+ stack, brain aging signs, CoQ10 frequency)
+- Immunity: 8 articles total (immune system, inflammation, quercetin timing, leaky gut immunity, chronic inflammation, quercetin daily safety, curcumin daily safety, curcumin+quercetin stack)
+
+### Next Batch Gaps (priority order)
+1. "Does X Work for Women Over 40?" skeptic framing for top products (NAD+, collagen, probiotics)
+2. "Signs You Need More X" for remaining nutrients (vitamin D, omega-3, B12)
+3. "What to Eat for [Cluster]" food-based articles for each cluster (builds non-supplement content)
+4. "Can Men Over 40 Take X?" — crossover angle, broadens audience slightly
+5. "X vs Y: Which Is Better for Women Over 40?" — second round of comparison articles with new pairs
+6. Menopause weight management hub article linking multiple clusters
+7. "How to Build Your Supplement Stack from Scratch" — comprehensive hub linking 6-8 products
+
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
 ### NO DASHES IN TEXT

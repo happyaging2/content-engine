@@ -1,0 +1,24 @@
+# Batch 2026-04-13 Publish Log
+# Network status: BLOCKED — proxy rejects shop-happy-aging.myshopify.com (host_not_allowed)
+# All 20 articles written and QA passed. Run batch-2026-04-13-publish.sh from an environment with Shopify API access.
+
+2026-04-13T10:01:09Z NETWORK_ERROR slug=does-coq10-help-with-weight-loss-after-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=how-often-should-you-take-nmn — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=can-you-take-magnesium-every-night — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=can-you-take-curcumin-every-day — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=how-long-does-magnesium-take-to-work-for-sleep — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=how-often-should-you-take-collagen-supplements — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=stacking-supplements-for-hormones-after-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=how-often-should-you-take-probiotics-after-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=curcumin-and-quercetin-together — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:09Z NETWORK_ERROR slug=how-often-should-you-take-coq10 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=coq10-and-nad-stack-for-energy-focus — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=collagen-and-vitamin-c-together — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=what-is-dhea-women-over-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=can-you-take-nad-and-nmn-together — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=signs-low-magnesium-after-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=signs-you-need-more-coq10-after-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=signs-your-brain-is-aging-faster-after-40 — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=can-you-take-quercetin-every-day — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=best-supplements-for-perimenopause — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
+2026-04-13T10:01:10Z NETWORK_ERROR slug=how-often-should-you-take-nad-supplements — Shopify API not reachable. Run batch-2026-04-13-publish.sh.
