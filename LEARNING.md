@@ -287,22 +287,32 @@
 - Author for ALL articles: "Happy Aging Team" (not Dr. Daniel Yadegar)
 - Written By: Happy Aging Team
 
-### IMAGES (CRITICAL)
-- Featured image (top): NEVER use a product image. Use a lifestyle/wellness image.
-- Product card inline: Use real product image from products/[handle].json API
-- Body images: Use AI-generated realistic lifestyle images related to the content
+### IMAGES (CRITICAL — ALL IMAGES MUST FEATURE WOMEN)
+- Happy Aging is a brand for WOMEN 40+. ALL images in ALL articles MUST feature women. No exceptions.
+- Featured image (top): MUST be a lifestyle photo of a WOMAN (not product shot, not objects, not landscapes)
+- Body images: women exercising, women sleeping, women eating healthy, women in nature, women meditating
+- NEVER use generic photos without women. NEVER use men. NEVER use only objects/food/landscapes alone.
+- When searching Unsplash/Pexels, ALWAYS include "woman" or "women" in search query
+  Examples: "woman yoga morning", "women healthy breakfast", "woman sleeping peacefully"
 - For lifestyle images, use direct Unsplash photo URLs: https://images.unsplash.com/photo-[ID]?w=800&h=450&fit=crop
 - Do NOT use source.unsplash.com redirect URLs — use direct photo IDs only
-- Alternative: Use Pexels API or Pixabay for free stock images
-- Every article must have 3-4 images throughout the text
-- Images must be relevant to the section they appear in
+- Every article must have 3-4 images throughout the text, ALL featuring women
+- Verify EVERY image URL works before publishing (curl -sI [url] should return 200)
 
-### PRODUCT CARD FIX
+### PRODUCT CARD IMAGE (CRITICAL — NEVER USE GENERIC CAPSULE)
+- BEFORE writing ANY product card, fetch the real product image:
+  curl -s https://happyaging.com/products/[handle].json | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['product']['images'][0]['src'] if d['product']['images'] else 'NO_IMAGE')"
+- If the command fails or returns NO_IMAGE, do NOT include a product card
+- NEVER invent or guess image URLs. NEVER use CDN paths you haven't verified.
+- NEVER use a generic capsule/pill stock image as a product image
+- The image in the product card must be the EXACT product as sold on happyaging.com
+
+### PRODUCT CARD HTML
 - The product-card-inline must use this exact HTML structure:
 ```html
 <div class="product-card-inline">
 <a href="https://happyaging.com/products/[handle]">
-<img src="[REAL_IMAGE_FROM_API]" alt="[Product Name]">
+<img src="[VERIFIED_REAL_IMAGE_FROM_API]" alt="[Product Name]">
 </a>
 <div>
 <h4><a href="https://happyaging.com/products/[handle]">[Product Name]</a></h4>
