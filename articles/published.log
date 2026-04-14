@@ -8,3 +8,32 @@ FAILED: sleep-problems-after-40-women — {"errors":{"base":["Image upload faile
 FAILED: metabolism-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/nmn-cell-renew-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
 FAILED: brain-fog-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/brain-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
 FAILED: collagen-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/glow-shot.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
+
+=== Batch 2026-04-14 Publish Run ===
+does-nad-plus-work-for-energy-after-40: HTTP_000
+root-causes-chronic-fatigue-after-40: HTTP_000
+what-to-eat-for-energy-after-40: HTTP_000
+does-magnesium-actually-improve-sleep-after-40: HTTP_000
+what-to-eat-for-better-sleep-after-40: HTTP_000
+does-nmn-help-hormonal-balance-women-over-40: HTTP_000
+root-causes-hormonal-imbalance-after-40: HTTP_000
+what-to-eat-for-hormone-balance-after-40: HTTP_000
+does-coq10-help-metabolism-weight-after-40: HTTP_000
+root-causes-slow-metabolism-after-40-guide: HTTP_000
+does-marine-collagen-work-for-skin-after-40: HTTP_000
+what-to-eat-for-glowing-skin-after-40: HTTP_000
+does-glutathione-work-for-gut-health-after-40: HTTP_000
+what-to-eat-for-gut-health-after-40: HTTP_000
+does-neuro-creamer-work-for-brain-focus-after-40: HTTP_000
+root-causes-brain-fog-after-40-science: HTTP_000
+what-to-eat-to-clear-brain-fog-after-40: HTTP_000
+does-curcumin-work-for-inflammation-after-40: HTTP_000
+root-causes-chronic-inflammation-after-40: HTTP_000
+what-to-eat-fight-inflammation-after-40: HTTP_000
+
+=== Batch 2026-04-14 Publish Attempt ===
+Date: 2026-04-14
+Status: ALL 20 ARTICLES BLOCKED (HTTP_000 - sandbox network restriction)
+Articles ready for publish with all content, tags, and template_suffix=timeline.
+Require manual publish or environment with outbound HTTPS access to Shopify API.
+Author: Happy Aging Team | Template: timeline | All 20 QA PASSED

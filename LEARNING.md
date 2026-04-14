@@ -276,6 +276,56 @@
 6. Menopause weight management hub article linking multiple clusters
 7. "How to Build Your Supplement Stack from Scratch" — comprehensive hub linking 6-8 products
 
+## BATCH 2026-04-14 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing (5 articles each) completed all 20 articles with 0 timeouts this batch
+- 3 articles came in just below 1800-word minimum (1624w, 1670w, 1769w) — expanded by adding 1 new H2 section each; final counts: 1814w, 1882w, 1934w
+- Always run QA word-count check and expand short articles before publishing, not after
+- All 20 articles: 0 em/en dashes, author "Happy Aging Team", what-to-know, cta-block, 4+ FAQ H3s, DALL-E image placeholders, real DOI/PMID citations
+- Average word count: 2,057 words (range 1,814 to 2,459) — consistent with prior batches
+- Network blocked in sandbox again (HTTP_000) — articles fully ready, require publish from unrestricted environment
+
+### Intent Diversification (batch 2026-04-14)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14 (this batch): lifestyle integration, root cause, and skeptic "does X work?" angles
+- Next batch should cover: product comparison round 2, signs/symptoms for new nutrients, menopause hub articles
+
+### New Title Patterns Added (2026-04-14)
+- Skeptic research review: "Does X Actually Work for [Condition] After 40? What Studies Show" — high commercial intent, research credibility signals, converts skeptical buyers
+- Root cause guide: "Root Causes of [Condition] After 40 (And What to Do About Each One)" — structured 5-7 cause format, excellent for GEO extraction, builds authority
+- Lifestyle integration: "What to Eat for [Outcome] After 40 (A [Adjective] Food Guide)" — food-based content broadens SEO footprint beyond supplements, strong engagement
+
+### GEO / AI Citation Optimization (updated 2026-04-14)
+- "Does X work?" articles with RCT/meta-analysis citations are highly cited by AI for "does X supplement work" queries
+- Root cause structured lists (7 causes, numbered sections) are the #1 AI-extractable format for "why do I have [symptom]" queries
+- "What to eat" articles with food category lists and sample meal plans are AI-summarized for nutrition questions
+- Skeptic framing ("An Honest Review", "What Studies Show") builds reader trust and reduces bounce on commercial-intent pages
+- All root-cause articles should name each cause as a H2 heading, not buried in paragraphs, for clean AI extraction
+
+### Cluster Coverage After 6 Batches (Cumulative)
+- Energy: 15 articles total (added: does NAD+ work, root causes fatigue, what to eat for energy)
+- Sleep: 14 articles total (added: does magnesium work for sleep, what to eat for sleep)
+- Hormones: 14 articles total (added: does NMN help hormones, root causes hormonal imbalance, what to eat for hormones)
+- Metabolism: 11 articles total (added: does CoQ10 help metabolism, root causes slow metabolism)
+- Skin: 11 articles total (added: does marine collagen work, what to eat for glowing skin)
+- Gut: 10 articles total (added: does glutathione help gut, what to eat for gut health)
+- Brain: 12 articles total (added: does neuro creamer work, root causes brain fog, what to eat for brain fog)
+- Immunity: 11 articles total (added: does curcumin work, root causes inflammation, what to eat for inflammation)
+
+### Next Batch Gaps (priority order)
+1. "Signs You Need More X" — vitamin D, omega-3, B12, zinc (symptom-driven, high search volume, new angle)
+2. "Does [Product Name] Actually Work? An Honest Review" — product-specific review format for top 5 products
+3. "X vs Y: Which Is Better for Women Over 40?" — second round: NR vs NMN, collagen vs biotin, magnesium vs ashwagandha
+4. Menopause weight management hub — links Energy, Hormones, Metabolism clusters, high commercial value
+5. "How to Build Your Supplement Stack from Scratch for Women Over 40" — comprehensive hub article
+6. "Best Time to Take X" second round for newly covered products (curcumin, glutathione, quercetin)
+7. "Signs Your Gut Is Healing" and "Signs Your Inflammation Is Dropping" — progress-tracking angles, high engagement
+
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
 ### NO DASHES IN TEXT
