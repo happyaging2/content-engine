@@ -326,6 +326,62 @@
 6. "Best Time to Take X" second round for newly covered products (curcumin, glutathione, quercetin)
 7. "Signs Your Gut Is Healing" and "Signs Your Inflammation Is Dropping" — progress-tracking angles, high engagement
 
+## BATCH 2026-04-15 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Parallel 4-agent writing (5 articles each): Agent A and B completed fully; Agents C and D hit stream idle timeouts
+- Agent C timed out after saving 5 meta.json files but before writing HTML — direct authorship fallback used for all 5 HTML files
+- Agent D timed out after writing 3/5 HTML files — direct authorship fallback used for 2 missing HTML files
+- Lesson: always save meta.json first (already established), but also be ready for direct authorship of remaining HTML after any agent timeout
+- 1 article (best-time-to-take-glutathione) came in at 1,571 words — below minimum. Expanded with 2 new H2 sections to reach 1,966 words
+- QA script catches word-count issues: run QA immediately after writing, not just before publishing
+- All 20 articles: 0 em/en dashes, author "Happy Aging Team", what-to-know, product-card-inline, 4+ FAQ H3s, real DOI/PMID citations
+- Average word count: ~2,077 words (range 1,822 to 2,878) — consistent with prior batches
+- Network blocked in sandbox (HTTP 403) — articles fully ready, run batch-2026-04-15-publish.sh from unrestricted environment
+
+### Intent Diversification (batch 2026-04-15)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14: lifestyle integration, root cause, skeptic "does X work?" angles
+- Batch 2026-04-15 (this batch): signs/symptoms for new nutrients + progress-tracking + comparison round 2 + hub articles
+- Next batch should cover: menopause sub-cluster, product-specific honest reviews, "best supplements for [condition]" hub articles
+
+### New Title Patterns Added (2026-04-15)
+- Signs/nutrient format: "Signs You Are Low in X After 40 (And How to Know for Sure)" — symptom-driven high search volume, strong bridge to solution
+- Progress-tracking format: "Signs Your X Is Improving After 40 (What to Look for Week by Week)" — unique validation angle, high engagement, reduces churn
+- Comparison round 2: "X vs Y for [Specific Outcome] After 40: Which Works Better?" — second round differentiates from round 1 by adding specific outcome focus
+- Hub format: "Best X for Women Over 40 (What Science Actually Supports)" — evergreen, high commercial intent, AI citation magnet
+
+### GEO / AI Citation Optimization (updated 2026-04-15)
+- Signs/symptom articles with numbered lists ("Sign 1: ...", "Sign 2: ...") are the #1 extractable format for AI answering "what are the signs of X deficiency" queries
+- Progress-tracking articles ("how do I know X is working") fill a gap in AI knowledge bases and are highly cited for supplement validation queries
+- Comparison articles (NR vs NMN, collagen vs biotin, magnesium vs ashwagandha) are among the most AI-cited formats for supplement comparison queries
+- Hub articles ("best anti-aging supplements", "how to build a stack") are highly cited by AI for comprehensive recommendation queries
+- All 20 articles include direct-answer opening paragraphs that AI systems extract for zero-click responses
+
+### Cluster Coverage After 7 Batches (Cumulative)
+- Energy: 18 articles total
+- Sleep: 17 articles total
+- Hormones: 17 articles total
+- Metabolism: 11 articles total
+- Skin: 13 articles total
+- Gut: 12 articles total
+- Brain: 14 articles total
+- Immunity: 14 articles total
+- Longevity (new hub cluster): 2 articles
+
+### Next Batch Gaps (priority order)
+1. "Signs You Need More X" round 2 — vitamin K, iron, selenium, iodine (new nutrient set)
+2. "Best Supplements for Perimenopause" — targeted sub-cluster hub, very high commercial intent
+3. "Best Supplements for Menopause Brain Fog" — specific symptom hub, high AI citation potential
+4. Product honest reviews: "Does Happy Aging [Product] Actually Work? An Honest Review" — each of the top 5 products
+5. Comparison round 3: fish oil vs krill oil, magnesium vs L-theanine, collagen vs hyaluronic acid
+6. "Early Signs of Perimenopause at 40" — high search volume, strong top-of-funnel content
+7. "Signs Your Mitochondria Need Support" — cellular aging angle, differentiates brand's NAD+ focus
+
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
 ### NO DASHES IN TEXT
