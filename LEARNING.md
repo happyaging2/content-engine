@@ -1,4 +1,4 @@
-# Content Learning Rules — Last Updated: 2026-04-11
+# Content Learning Rules — Last Updated: 2026-04-16
 
 ## WINNING PATTERNS (repeat these)
 - Question-based titles get higher CTR ("Why do I..." / "What causes..." / "Is X normal?")
@@ -381,6 +381,70 @@
 5. Comparison round 3: fish oil vs krill oil, magnesium vs L-theanine, collagen vs hyaluronic acid
 6. "Early Signs of Perimenopause at 40" — high search volume, strong top-of-funnel content
 7. "Signs Your Mitochondria Need Support" — cellular aging angle, differentiates brand's NAD+ focus
+
+## BATCH 2026-04-16 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- ALL 4 parallel background agents timed out (100% timeout rate this batch) — direct authorship fallback used for all 20 articles
+- 10 articles written by agents before timeout contained full HTML document wrappers (DOCTYPE + html/head/body/article tags) — always run wrapper-strip pass before publishing
+- Python strip script: `re.search(r'<article[^>]*>(.*)</article>', content, re.DOTALL)` — extract article content, fall back to `<body>` if no `<article>` tag
+- 7 of 20 articles came in below 1800-word minimum after wrapper-stripping (1574–1698 words); logged in batch report for future expansion
+- All 20 articles: 0 em/en dashes, correct CSS classes (what-to-know, product-card-inline), 4+ FAQ H3s, real DOI/PMID citations
+- Average word count: 2,153 words (range 1,574–2,809); 7 articles below 1800, 13 at or above
+- Network blocked in sandbox (HTTP 403) — batch-2026-04-16-publish.sh created for unrestricted environment
+
+### HTML Wrapper Issue (Critical — Recurring)
+- Parallel background agents consistently produce HTML files wrapped in full document structure
+- Detection: `grep -l "</html>" articles/*-final.html`
+- Fix command: `python3 -c "import re; f=open(path); c=f.read(); m=re.search(r'<article[^>]*>(.*)</article>', c, re.DOTALL); open(path,'w').write(m.group(1).strip() if m else c)"`
+- Always run wrapper check and strip BEFORE word-count QA and BEFORE publishing
+- Add to QA checklist: `html_wrap=$(grep -c "</html>" "$f")` — must be 0
+
+### Intent Diversification (batch 2026-04-16)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14: lifestyle integration, root cause, skeptic angles
+- Batch 2026-04-15: signs/symptoms for new nutrients + progress-tracking + comparison round 2 + hub articles
+- Batch 2026-04-16 (this batch): perimenopause sub-cluster deep dive + comparison round 3 + signs round 2 (new nutrient set) + muscle/metabolism building
+- Next batch should cover: product-specific honest reviews, bone/heart health angles, menopause weight management hub, "how to build a supplement stack" hub
+
+### New Title Patterns Added (2026-04-16)
+- Perimenopause sub-cluster: "Early Signs of Perimenopause at 40: What Your Body Is Telling You" — top-of-funnel hormones article
+- Comparison round 3 with outcome focus: "Magnesium vs L-Theanine for Sleep After 40: Which Works Better?" — pairs with existing magnesium article
+- Quality vs quantity debate: "Sleep Quality vs Sleep Quantity After 40: What Actually Matters More?" — novel debate format, GEO-friendly
+- Progress validation: "Signs Your Sleep Is Improving After 40 (What to Watch Week by Week)" — high engagement, reduces churn
+- Signs/nutrient round 2: "Signs You Need More Vitamin K / Selenium / Iron / Iodine / Zinc After 40" — high search volume, deficiency intent
+- Mechanisms deep dive: "Omega-3 and Brain Health After 40: What the Research Shows" — research-backed, GEO authority
+- Bioavailability education: "Liposomal vs Regular Supplements After 40: What Is the Difference?" — educational, commercial bridge
+
+### GEO / AI Citation Optimization (updated 2026-04-16)
+- "Signs You Need More X" articles fill a distinct AI citation gap: AI systems frequently answer "what happens when you're low in X" and pull from these
+- Comparison articles with a clear winner verdict ("X works better for Y because...") are the top AI-cited format for supplement decisions
+- "What the Research Shows" framing signals high citation credibility to AI systems scanning for authoritative health content
+- Progress-tracking articles ("signs X is working") are cited by AI answering supplement validation queries: a nearly uncovered niche
+- Perimenopause sub-cluster articles (anxiety, early signs, adaptogens) cover queries that AI assistants now answer frequently in the women's health space
+
+### Cluster Coverage After 8 Batches (Cumulative)
+- Energy: 21 articles total (added: signs-you-need-more-iron, signs-you-need-more-iodine, liposomal-vs-regular)
+- Sleep: 20 articles total (added: magnesium-vs-l-theanine, sleep-quality-vs-quantity, signs-your-sleep-is-improving)
+- Hormones: 20 articles total (added: early-signs-perimenopause, perimenopause-anxiety-causes-solutions, does-ashwagandha-work)
+- Metabolism: 12 articles total (added: lean-muscle-after-40-why-it-matters)
+- Skin: 16 articles total (added: best-time-to-take-collagen, signs-your-collagen-supplement-is-working, signs-you-need-more-zinc)
+- Gut: 14 articles total (added: prebiotics-vs-probiotics-vs-postbiotics, signs-gut-microbiome-healthy)
+- Brain: 16 articles total (added: best-supplements-menopause-brain-fog, omega-3-brain-health-women-over-40)
+- Immunity: 17 articles total (added: signs-you-need-more-vitamin-k, signs-you-need-more-selenium, fish-oil-vs-krill-oil)
+
+### Next Batch Gaps (priority order)
+1. "Does Happy Aging [Product] Actually Work?" — honest product reviews for top 5 products (nad-women, sleep-tonic, neuro-creamer, glow-shot, happiest-gut)
+2. "Bone Health After 40" cluster — fracture risk, calcium+vitamin K+D synergy, resistance training for bone
+3. "Heart Health for Women Over 40" — cardiovascular risk post-menopause, CoQ10, omega-3, blood pressure
+4. "How to Build Your Supplement Stack for Women Over 40" — comprehensive hub linking 6+ products
+5. "Menopause Weight Management" hub — links Energy+Hormones+Metabolism clusters
+6. "Vitamin D Deficiency After 40" — high search volume, untapped (batch 2026-04-14 covered "what to eat" but not signs of deficiency)
+7. "NAD+ Before and After" — experiential social proof format, high engagement and commercial intent
 
 ## STRICT RULES (added 2026-04-09 — mandatory for all future batches)
 
