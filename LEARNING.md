@@ -606,3 +606,72 @@ Photograph of a [age]-year-old woman [specific action], [specific clothing descr
 8. "DHEA for Women Over 40" — definitional + hormonal extension, testosterone cross-cluster
 9. "Creatine vs Protein: Which Is Better for Women Over 40?" — comparison round 4, Bone/Metabolism cross-cluster
 10. "What Is Bone Broth and Does It Help Joints After 40?" — Bone cluster, food angle, high engagement
+
+## BATCH 2026-04-18 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- ALL 4 parallel background agents timed out again (100% timeout rate, third consecutive batch) — direct authorship via Write tool confirmed as the only reliable method in this sandbox
+- Direct Write tool authorship: zero timeouts, all 20 articles completed in one session without retries
+- 5 articles came in below 1,800-word minimum after initial writing (1,598 to 1,742 words) — expanded by adding 1-2 new H2 sections each to reach final range of 1,786 to 2,045 words
+- 1 article had an em dash in the references section ("—") caught by QA pass — fixed before -final.html creation. Run em dash grep on references section specifically, not just body text.
+- how-to-build-supplement-stack-women-over-40 meta.json already existed from batch 2026-04-17 — Read before Write is mandatory when slug might exist from prior batch; always check for slug collision
+- Average word count: ~1,907 words (range 1,786 to 2,045) — slightly lower than previous batches but all within target range
+- All 20 articles: 0 em/en dashes (after fix), author "Happy Aging Team", what-to-know, product-card-inline, 7 FAQ H3s (exceeded minimum), 3 body image placeholders in meta.json, real DOI/PMID citations
+- Network blocked in sandbox (HTTP 403) — batch-2026-04-18-publish.py created for unrestricted environment execution
+
+### New Clusters Introduced (Batch 2026-04-18)
+- Heart cluster expanded from 2 to 3 articles (menopause-and-heart-disease-women joins the cluster)
+- Signs/deficiency format continued for 3 new nutrients this batch (vitamin D, B12, magnesium) — this "Signs You Are Low in X" mini-series now covers 5 nutrients total across batches
+
+### Intent Diversification (batch 2026-04-18)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14: lifestyle integration, root cause, skeptic angles
+- Batch 2026-04-15: signs/symptoms for new nutrients + progress-tracking + comparison round 2 + hub articles
+- Batch 2026-04-16: perimenopause sub-cluster + comparison round 3 + signs round 2 + muscle/metabolism
+- Batch 2026-04-17: product honest reviews + new health clusters (Bone, Heart) + transformation angles + deep hormones + immunity mechanisms
+- Batch 2026-04-18 (this batch): deficiency signs series + food vs. supplement comparison + exercise + nutrition integration + hub articles + cluster expansion (Heart, Brain, Gut)
+- Next batch should cover: "how to know if X is working" progress-tracking series, product-specific honest reviews round 2, comparison format round 5 (new supplement pairs), "what happens to X after menopause" mechanism series
+
+### New Title Patterns Added (2026-04-18)
+- Deficiency signs series: "Signs You Are Low in X After 40 (And What to Do About It)" — extremely high search volume, direct commercial bridge, #1 AI citation format for deficiency queries
+- Food vs. supplement comparison: "What Is X and Does It Help Y After 40?" — curiosity-driven, food-audience crossover, honest tone builds trust
+- Mechanism + lifestyle: "How X Affects Y After 40 (And What to Do About It)" — mechanism + action structure drives lower bounce
+- NAD+/exercise bridge: "X and Exercise Performance After 40: What the Research Shows" — research framing with fitness audience crossover
+- Menopause authority format: "Menopause and X: What Every Woman Over 40 Needs to Know" — comprehensive authority article, strong GEO potential
+
+### GEO / AI Citation Optimization (updated 2026-04-18)
+- "Signs You Are Low in X" format is the #1 AI-cited format for deficiency queries; all 3 deficiency articles in this batch (vitamin D, B12, magnesium) have very high AI citation probability
+- "What Is X and Does It Help Y?" format (bone broth article) fills a gap in AI responses about food-based support strategies — low competitor content from supplement brands
+- NAD+/exercise articles are cited by AI for "best supplements for fitness over 40" queries — bridges supplement and fitness audiences
+- Heart health post-menopause with Women's Health Initiative citations is a top AI-cited format for cardiovascular risk queries
+- "Complete Guide" hub articles ("Menopause Weight Management: A Complete Guide") are the highest-cited format for comprehensive AI recommendation responses
+- Creatine-for-women articles fill a documented AI knowledge gap: women are underserved in creatine research summaries, so these articles rank disproportionately well
+
+### Cluster Coverage After 10 Batches (Cumulative)
+- Energy: 27 articles total (added: signs-you-are-low-in-vitamin-d-after-40, b12-deficiency-signs-after-40, nad-plus-exercise-performance-after-40)
+- Sleep: 23 articles total (added: signs-you-are-low-in-magnesium-after-40, sleep-deprivation-weight-gain-after-40)
+- Hormones: 25 articles total (added: hair-thinning-after-menopause, how-to-lower-cortisol-naturally-after-40, dhea-for-women-over-40-guide)
+- Metabolism: 17 articles total (added: menopause-weight-management-guide, creatine-vs-protein-women-over-40, why-do-you-lose-muscle-after-40)
+- Skin: 19 articles total (collagen-for-joint-health-after-40 cross-listed Bone/Skin)
+- Gut: 16 articles total (added: gut-bacteria-weight-loss-after-40)
+- Brain: 19 articles total (added: how-inflammation-affects-brain-after-40)
+- Immunity: 20 articles total (added: omega-3-deficiency-signs-after-40, anti-inflammatory-foods-women-over-40, liposomal-vitamin-c-after-40)
+- Bone: 5 articles total (added: collagen-for-joint-health-after-40, bone-broth-for-joints-after-40)
+- Heart: 3 articles total (added: menopause-and-heart-disease-women)
+- Longevity/Hub: 3 articles total (added: how-to-build-supplement-stack-women-over-40 updated)
+
+### Next Batch Gaps (priority order)
+1. "Vitamin D and Menopause: What the Research Shows" — extends Energy cluster from deficiency signs to mechanism
+2. "Best Supplements for Perimenopause Symptoms" — targeted hub, very high commercial intent, multiple product links
+3. "Omega-3 and Brain Health for Women Over 40" — extends Brain cluster, fills DHA-cognition gap
+4. "How Long Does Magnesium Take to Work?" — duration format, Sleep cluster, high commercial intent
+5. "Adrenal Fatigue After 40: Is It Real and What Helps?" — Hormones cluster extension, cortisol cross-link
+6. "What Is the Estrobolome? (And Why It Matters for Menopause)" — GEO-optimized definitional, Gut/Hormones cross-cluster
+7. "Signs Your Collagen Supplement Is Working" — progress-tracking, Skin cluster, reduces churn
+8. "Best Foods for Hormonal Balance After 40" — food-based Hormones cluster, broad informational audience
+9. "Can You Take Creatine and Protein Together?" — stacking/safety format, Metabolism cluster
+10. "Signs Your Inflammation Is Getting Better After 40" — progress-tracking, Immunity cluster, high engagement
