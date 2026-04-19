@@ -607,6 +607,71 @@ Photograph of a [age]-year-old woman [specific action], [specific clothing descr
 9. "Creatine vs Protein: Which Is Better for Women Over 40?" — comparison round 4, Bone/Metabolism cross-cluster
 10. "What Is Bone Broth and Does It Help Joints After 40?" — Bone cluster, food angle, high engagement
 
+## BATCH 2026-04-19 OBSERVATIONS (20-article batch)
+
+### Production Patterns
+- Direct Write tool authorship confirmed again as the only reliable method in this sandbox (parallel background agents not attempted this batch based on 100% timeout rate in batches 2026-04-16 through 2026-04-18)
+- 12 of 20 articles came in below 1,800-word minimum after initial writing (range 1,563 to 1,798 words) -- highest shortfall rate of any batch. Expansion required for more than half the batch.
+- Word count shortfalls occurred primarily in articles covering complex mechanisms (estrobolome, progesterone-GABA, molecular hydrogen) where content depth requires more detailed explanation to reach 1,800 words organically
+- Expansion strategy: add 1 new H2 section per article rather than padding existing sections -- produces better-quality content and maintains structural integrity
+- 1 em dash caught by QA in progesterone article references section -- fixed before -final.html creation. Always check references section specifically, not just body text.
+- All 20 articles: 0 em/en dashes (after fix), author "Happy Aging Team", what-to-know, product-card-inline, 5+ FAQ H3s, 3 body image placeholders, real DOI/PMID citations
+- Average word count: ~1,877 words (range 1,802 to 1,956) -- tighter range than previous batches, all within target
+- Network blocked in sandbox (HTTP 403) -- batch-2026-04-19-publish.py created for unrestricted environment execution
+- FETCH_FROM_API placeholder used for all product card images (established workaround from batch 2026-04-11)
+
+### Intent Diversification (batch 2026-04-19)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14: lifestyle integration, root cause, skeptic angles
+- Batch 2026-04-15: signs/symptoms for new nutrients + progress-tracking + comparison round 2 + hub articles
+- Batch 2026-04-16: perimenopause sub-cluster + comparison round 3 + signs round 2 + muscle/metabolism
+- Batch 2026-04-17: product honest reviews + new health clusters (Bone, Heart) + transformation angles + deep hormones + immunity mechanisms
+- Batch 2026-04-18: deficiency signs series + food vs. supplement comparison + exercise + nutrition integration + hub articles
+- Batch 2026-04-19 (this batch): "how to know if X is working" progress-tracking series + mechanism deep dives (estrobolome, progesterone-GABA, molecular hydrogen) + comparison round 5 (collagen peptides vs. marine, ashwagandha vs. rhodiola, liposomal vs. regular quercetin) + "what happens to X after menopause" mechanism series
+- Next batch should cover: product-specific honest reviews round 3, "best supplements for [condition]" round 2 hub articles, longevity supplement honest reviews (NMN, spermidine), new cluster (Longevity/Healthspan)
+
+### New Title Patterns Added (2026-04-19)
+- Progress-tracking series: "How to Know If Your X Supplement Is Working After 40" -- high commercial intent, reduces churn, builds trust. Applies to any supplement category.
+- Mechanism deep dive + explainer: "What Is the X? (And Why It Matters for Y)" -- GEO-optimized definitional, strong for AI citation on emerging science topics
+- Complete guide format: "What Happens to X After Menopause? A Complete Guide" -- comprehensive authority article, broad keyword coverage, strong featured snippet candidate
+- Honest review with nuance: "Does X Actually Work for Aging? An Honest Review" -- skeptic audience, builds trust through balanced coverage
+
+### GEO / AI Citation Optimization (updated 2026-04-19)
+- "How to know if X is working" articles are uniquely cited by AI for supplement validation queries -- fills a gap that research literature does not cover well (research shows efficacy but not how to self-assess it)
+- Estrobolome definitional article is a strong AI citation candidate for "gut and hormones" queries: the term is specific, the concept is emerging, and few brands have covered it in depth
+- Progesterone-GABA mechanism article is highly differentiated from competitor content and fills an AI knowledge gap for "why am I anxious in perimenopause" queries
+- "Complete Guide" format for estrogen and menopause covers an extremely broad keyword set and is among the highest-volume informational query targets in women's health
+- Honest review articles with balanced coverage ("what the evidence supports and what it does not") are increasingly preferred by AI citation systems over purely promotional content
+
+### Cluster Coverage After 11 Batches (Cumulative)
+- Energy: 29 articles total (added: vitamin-d-menopause-research-women, how-to-know-nad-supplement-is-working-after-40)
+- Sleep: 25 articles total (added: how-to-know-sleep-supplement-is-working-after-40, what-happens-sleep-after-menopause)
+- Hormones: 28 articles total (added: what-is-estrobolome-menopause, estrogen-after-menopause-complete-guide, progesterone-anxiety-connection-after-40)
+- Metabolism: 19 articles total (added: can-you-take-creatine-and-protein-together-after-40, signs-metabolism-improving-after-40)
+- Skin: 21 articles total (added: how-long-does-glutathione-take-to-work-skin, collagen-peptides-vs-marine-collagen-after-40)
+- Gut: 18 articles total (added: signs-gut-bacteria-imbalanced-after-40, what-happens-gut-health-after-menopause)
+- Brain: 21 articles total (added: how-to-know-brain-supplement-is-working-after-40, ashwagandha-vs-rhodiola-stress-fatigue-after-40)
+- Immunity: 22 articles total (added: signs-immune-system-getting-stronger-after-40, liposomal-quercetin-vs-regular-quercetin-after-40)
+- Bone: 6 articles total (added: how-long-does-collagen-take-to-work-joints)
+- Heart: 4 articles total (added: omega-3-heart-health-women-over-40)
+- Longevity: 4 articles total (added: does-molecular-hydrogen-work-for-aging-women)
+
+### Next Batch Gaps (priority order)
+1. "Best Supplements for Perimenopause Symptoms" -- hub article, multiple products, very high commercial intent
+2. "NMN vs NR: Which Is Better for Women Over 40?" -- comparison round 6, highly searched, strong GEO fit
+3. "Signs You Are Low in Omega-3 After 40" -- deficiency signs series continuation, high search volume
+4. "Spermidine and Longevity: What the Research Shows for Women Over 40" -- emerging topic, low competitor content, Longevity cluster
+5. "How Long Does Magnesium Take to Work?" -- duration format, Sleep cluster
+6. "What Is Cellular Senescence and Why It Matters After 40" -- definitional, GEO-optimized, Longevity cluster
+7. "Best Time to Take Quercetin for Immune Health" -- timing angle, Immunity cluster
+8. "Progesterone and Sleep: The Connection Explained" -- Hormones/Sleep cross-cluster, high search intent
+9. "Does CoQ10 Actually Work for Energy After 40?" -- honest review round 3 for Energy cluster
+10. "How to Support Liver Health After 40" -- emerging health concern, liver-tonic cross-cluster
+
 ## BATCH 2026-04-18 OBSERVATIONS (20-article batch)
 
 ### Production Patterns

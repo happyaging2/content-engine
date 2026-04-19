@@ -2,6 +2,61 @@
 
 ---
 
+## BATCH 2026-04-19 (Current)
+
+### Batch Overview
+- Date: 2026-04-19
+- Articles written: 20/20
+- Publishing status: Ready -- run `articles/batch-2026-04-19-publish.py` from unrestricted network
+- SEO audit: Complete (all 20 articles passed QA)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Energy | 2 | NMN Cell Renew Tonic, Longevity Shots |
+| Sleep | 2 | Sleep Tonic, Calm Tonic |
+| Hormones | 3 | Happiest Gut, NAD+ Advanced Longevity, Calm Tonic |
+| Metabolism | 2 | NMN Cell Renew Tonic, Lean Muscle Formula |
+| Skin | 2 | Radiance Tonic, Glow Shot |
+| Gut | 2 | Happiest Gut |
+| Brain | 2 | Neuro Creamer, NMN Cell Renew Tonic |
+| Immunity | 2 | Relief Tonic |
+| Bone | 1 | Glow Shot |
+| Heart | 1 | NAD+ Advanced Longevity |
+| Longevity | 1 | Hydroburn |
+
+### Articles -- Batch 2026-04-19
+| # | Title | Slug | Cluster | Product |
+|---|---|---|---|---|
+| 1 | Vitamin D and Menopause: What the Research Actually Shows | vitamin-d-menopause-research-women | Energy | longevity-shots |
+| 2 | How to Know If Your NAD+ Supplement Is Working After 40 | how-to-know-nad-supplement-is-working-after-40 | Energy | nmn-cell-renew-tonic |
+| 3 | How to Know If Your Sleep Supplement Is Working After 40 | how-to-know-sleep-supplement-is-working-after-40 | Sleep | sleep-tonic |
+| 4 | What Happens to Your Sleep After Menopause? | what-happens-sleep-after-menopause | Sleep | calm-tonic |
+| 5 | What Is the Estrobolome? (And Why It Matters for Menopause) | what-is-estrobolome-menopause | Hormones | happiest-gut |
+| 6 | What Happens to Estrogen After Menopause? A Complete Guide | estrogen-after-menopause-complete-guide | Hormones | nad-advanced-longevity-formula |
+| 7 | Progesterone and Anxiety After 40: The Connection Explained | progesterone-anxiety-connection-after-40 | Hormones | calm-tonic |
+| 8 | Can You Take Creatine and Protein Together After 40? | can-you-take-creatine-and-protein-together-after-40 | Metabolism | lean-muscle-formula |
+| 9 | 7 Signs Your Metabolism Is Actually Improving After 40 | signs-metabolism-improving-after-40 | Metabolism | nmn-cell-renew-tonic |
+| 10 | How Long Does Glutathione Take to Work for Skin? | how-long-does-glutathione-take-to-work-skin | Skin | radiance-tonic |
+| 11 | Collagen Peptides vs Marine Collagen: Which Is Better After 40? | collagen-peptides-vs-marine-collagen-after-40 | Skin | glow-shot |
+| 12 | Signs Your Gut Bacteria Are Out of Balance After 40 | signs-gut-bacteria-imbalanced-after-40 | Gut | happiest-gut |
+| 13 | What Happens to Your Gut Health After Menopause? | what-happens-gut-health-after-menopause | Gut | happiest-gut |
+| 14 | How to Know if Your Brain Supplement Is Working After 40 | how-to-know-brain-supplement-is-working-after-40 | Brain | neuro-creamer |
+| 15 | Ashwagandha vs Rhodiola for Stress and Fatigue After 40 | ashwagandha-vs-rhodiola-stress-fatigue-after-40 | Brain | nmn-cell-renew-tonic |
+| 16 | Signs Your Immune System Is Getting Stronger After 40 | signs-immune-system-getting-stronger-after-40 | Immunity | relief-tonic |
+| 17 | Liposomal Quercetin vs Regular Quercetin After 40 | liposomal-quercetin-vs-regular-quercetin-after-40 | Immunity | relief-tonic |
+| 18 | How Long Does Collagen Take to Work for Joints? | how-long-does-collagen-take-to-work-joints | Bone | glow-shot |
+| 19 | Omega-3 and Heart Health: What Women Over 40 Need to Know | omega-3-heart-health-women-over-40 | Heart | nad-advanced-longevity-formula |
+| 20 | Does Molecular Hydrogen Actually Work for Aging? | does-molecular-hydrogen-work-for-aging-women | Longevity | hydroburn |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** Articles 11 (collagen comparison), 17 (quercetin bioavailability), 7 (progesterone-anxiety)
+- **Featured snippet candidates:** Articles 9 (numbered signs format), 12 (numbered signs format), 18 (timeline format)
+- **High GEO extraction:** Articles 5 (estrobolome definitional), 6 (estrogen complete guide), 10 (glutathione timeline)
+- **Differentiated angles:** Articles 7 (progesterone-GABA mechanism), 5 (estrobolome), 20 (molecular hydrogen honest review)
+
+---
+
 ## BATCH 2026-04-10 (Current)
 
 ### Batch Overview
