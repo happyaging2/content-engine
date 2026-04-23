@@ -37,3 +37,45 @@ Status: ALL 20 ARTICLES BLOCKED (HTTP_000 - sandbox network restriction)
 Articles ready for publish with all content, tags, and template_suffix=timeline.
 Require manual publish or environment with outbound HTTPS access to Shopify API.
 Author: Happy Aging Team | Template: timeline | All 20 QA PASSED
+[2026-04-23 09:56:48] === Batch 2026-04-23 Publish Start (20 articles) ===
+[2026-04-23 09:56:48] [1/20] Publishing: Signs Your Liver Needs Support After 40
+[2026-04-23 09:56:48] HTTP_ERROR 403: 'Signs Your Liver Needs Support After 40' -> Host not in allowlist
+[2026-04-23 09:56:50] [2/20] Publishing: What Is Berberine and Does It Help Blood Sugar After 40?
+[2026-04-23 09:56:50] HTTP_ERROR 403: 'What Is Berberine and Does It Help Blood Sugar After 40?' -> Host not in allowlist
+[2026-04-23 09:56:52] [3/20] Publishing: How to Support Liver Detox After 40: What Actually Works
+[2026-04-23 09:56:52] HTTP_ERROR 403: 'How to Support Liver Detox After 40: What Actually Works' -> Host not in allowlist
+[2026-04-23 09:56:54] [4/20] Publishing: Insulin Resistance After 40: Signs, Causes, and What Helps
+[2026-04-23 09:56:54] HTTP_ERROR 403: 'Insulin Resistance After 40: Signs, Causes, and What Helps' -> Host not in allowlist
+[2026-04-23 09:56:56] [5/20] Publishing: Why Diets Stop Working After 40 (And What Does Instead)
+[2026-04-23 09:56:56] HTTP_ERROR 403: 'Why Diets Stop Working After 40 (And What Does Instead)' -> Host not in allowlist
+[2026-04-23 09:56:58] [6/20] Publishing: What Are Sirtuins and How Do They Affect Aging After 40?
+[2026-04-23 09:56:58] HTTP_ERROR 403: 'What Are Sirtuins and How Do They Affect Aging After 40?' -> Host not in allowlist
+[2026-04-23 09:57:00] [7/20] Publishing: What Is Fisetin and Can It Slow Aging After 40?
+[2026-04-23 09:57:00] HTTP_ERROR 403: 'What Is Fisetin and Can It Slow Aging After 40?' -> Host not in allowlist
+[2026-04-23 09:57:02] [8/20] Publishing: How to Support Mitochondrial Health After 40 (The Science-Backed Approach)
+[2026-04-23 09:57:03] HTTP_ERROR 403: 'How to Support Mitochondrial Health After 40 (The Science-Backed Approach)' -> Host not in allowlist
+[2026-04-23 09:57:05] [9/20] Publishing: What Is Phosphatidylserine and Can It Help Memory After 40?
+[2026-04-23 09:57:05] HTTP_ERROR 403: 'What Is Phosphatidylserine and Can It Help Memory After 40?' -> Host not in allowlist
+[2026-04-23 09:57:07] [10/20] Publishing: Lion's Mane Mushroom for Brain Health After 40: What the Research Shows
+[2026-04-23 09:57:07] HTTP_ERROR 403: 'Lion's Mane Mushroom for Brain Health After 40: What the Research Shows' -> Host not in allowlist
+[2026-04-23 09:57:09] [11/20] Publishing: What Is the Gut-Brain Axis and Why Does It Matter After 40?
+[2026-04-23 09:57:09] HTTP_ERROR 403: 'What Is the Gut-Brain Axis and Why Does It Matter After 40?' -> Host not in allowlist
+[2026-04-23 09:57:11] [12/20] Publishing: How Leaky Gut Affects Hormones After 40
+[2026-04-23 09:57:11] HTTP_ERROR 403: 'How Leaky Gut Affects Hormones After 40' -> Host not in allowlist
+[2026-04-23 09:57:13] [13/20] Publishing: Menopause and Cardiovascular Risk: What Women Over 40 Need to Know
+[2026-04-23 09:57:13] HTTP_ERROR 403: 'Menopause and Cardiovascular Risk: What Women Over 40 Need to Know' -> Host not in allowlist
+[2026-04-23 09:57:15] [14/20] Publishing: Best Heart-Healthy Supplements for Women Over 40
+[2026-04-23 09:57:15] HTTP_ERROR 403: 'Best Heart-Healthy Supplements for Women Over 40' -> Host not in allowlist
+[2026-04-23 09:57:17] [15/20] Publishing: Vitamin C and Collagen: Why This Combination Matters for Skin After 40
+[2026-04-23 09:57:17] HTTP_ERROR 403: 'Vitamin C and Collagen: Why This Combination Matters for Skin After 40' -> Host not in allowlist
+[2026-04-23 09:57:19] [16/20] Publishing: What Is Astaxanthin and Can It Improve Skin After 40?
+[2026-04-23 09:57:19] HTTP_ERROR 403: 'What Is Astaxanthin and Can It Improve Skin After 40?' -> Host not in allowlist
+[2026-04-23 09:57:21] [17/20] Publishing: Perimenopause Brain Fog: The Hormone Connection Explained
+[2026-04-23 09:57:21] HTTP_ERROR 403: 'Perimenopause Brain Fog: The Hormone Connection Explained' -> Host not in allowlist
+[2026-04-23 09:57:23] [18/20] Publishing: Estrogen and Weight Gain After 40: What's Really Happening
+[2026-04-23 09:57:23] HTTP_ERROR 403: 'Estrogen and Weight Gain After 40: What's Really Happening' -> Host not in allowlist
+[2026-04-23 09:57:25] [19/20] Publishing: Ubiquinol vs. Ubiquinone: Which Form of CoQ10 Is Best After 40?
+[2026-04-23 09:57:25] HTTP_ERROR 403: 'Ubiquinol vs. Ubiquinone: Which Form of CoQ10 Is Best After 40?' -> Host not in allowlist
+[2026-04-23 09:57:27] [20/20] Publishing: Best Supplements for Menopause Fatigue: What Actually Works
+[2026-04-23 09:57:27] HTTP_ERROR 403: 'Best Supplements for Menopause Fatigue: What Actually Works' -> Host not in allowlist
+[2026-04-23 09:57:27] === Batch Complete: 0 published, 20 failed ===
