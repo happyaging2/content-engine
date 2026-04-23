@@ -5,10 +5,10 @@
   "product_handle": "radiance-tonic",
   "cluster": "Skin",
   "intent": "commercial",
-  "image_prompt": "Photograph of a 44-year-old woman applying a serum to her glowing skin in a bright naturally lit bathroom, wearing a soft white cotton robe, soft diffused natural window light from the side, clean white marble counter visible, editorial beauty wellness photography, shot on Canon EOS R6 100mm macro f/2.8, healthy luminous skin texture, relaxed expression, 8K resolution, no watermark, no text, no CGI",
-  "body_image_prompts": [
-    "Photograph of a 46-year-old woman holding a glass of freshly squeezed orange juice at a bright sunny breakfast table with citrus fruits arranged beside her, wearing a soft yellow casual blouse, warm morning sunlight, editorial food wellness photography, shot on Canon EOS R5 85mm f/1.4, vibrant healthy expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 48-year-old woman gently touching her face in a bright bathroom mirror with a radiant confident smile, wearing a light beige linen blouse, soft natural window light, editorial beauty wellness photography, shot on Sony A7IV 50mm f/1.8, glowing healthy skin, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 42-year-old woman eating a colorful salad with bell peppers, strawberries, and greens at an outdoor cafe table, wearing a soft jade green summer dress, warm natural outdoor light, editorial food wellness photography, shot on Fujifilm X-T5 50mm f/1.8, happy vibrant expression, 8K resolution, no watermark, no text, no CGI"
+  "image_query": "woman applying skincare serum",
+  "body_image_queries": [
+    "orange juice citrus fruits",
+    "woman bathroom mirror skincare",
+    "colorful salad strawberries peppers"
   ]
 }

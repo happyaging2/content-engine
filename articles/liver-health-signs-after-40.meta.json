@@ -5,10 +5,10 @@
   "product_handle": "liver-tonic",
   "cluster": "Liver Health",
   "intent": "informational",
-  "image_prompt": "Photograph of a 44-year-old woman sitting at a bright kitchen table holding a clear glass mug of golden turmeric tea with both hands, wearing a soft cream linen blouse, warm natural window light from the left, fresh lemon slices and ginger root on the table, editorial wellness photography, shot on Canon EOS R5 85mm f/1.4, relaxed thoughtful expression, natural skin texture, 8K resolution, no watermark, no text, no CGI",
-  "body_image_prompts": [
-    "Photograph of a 46-year-old woman standing at a bright kitchen counter slicing fresh vegetables including beets and leafy greens, wearing a sage green casual top, bright overhead kitchen lighting with herbs in small pots nearby, editorial food and wellness photography, shot on Sony A7IV 50mm f/1.8, focused engaged expression, natural skin, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 43-year-old woman doing a gentle standing yoga stretch outdoors in a garden, wearing soft grey athletic wear, warm morning sunlight filtering through trees, editorial fitness photography, shot on Canon EOS R6 35mm f/2, peaceful serene expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 48-year-old woman reviewing a wellness journal while seated at a sunlit wooden desk with a glass of water and a supplement bottle nearby, wearing a casual blue striped shirt, soft diffused morning light, editorial health photography, shot on Fujifilm X-T5 50mm f/1.8, thoughtful focused expression, 8K resolution, no watermark, no text, no CGI"
+  "image_query": "woman turmeric tea kitchen",
+  "body_image_queries": [
+    "woman slicing vegetables kitchen",
+    "woman yoga stretch garden",
+    "woman wellness journal desk"
   ]
 }

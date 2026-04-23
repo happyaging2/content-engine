@@ -5,10 +5,10 @@
   "product_handle": "neuro-creamer",
   "cluster": "Brain",
   "intent": "informational",
-  "image_prompt": "Photograph of a 46-year-old woman reading a book with focused attention at a bright sunlit reading nook with bookshelves behind her, wearing a caramel-colored soft cardigan, warm natural window light from the left, a cup of coffee on the side table, editorial wellness photography, shot on Canon EOS R5 85mm f/1.4, engaged intelligent expression, natural skin texture, 8K resolution, no watermark, no text, no CGI",
-  "body_image_prompts": [
-    "Photograph of a 44-year-old woman writing in a journal at a sunlit wooden desk with a window view of greenery outside, wearing a soft grey blouse, warm diffused morning window light, editorial wellness photography, shot on Sony A7IV 50mm f/1.8, focused concentrated expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 48-year-old woman doing a gentle meditation outdoors in a garden with eyes closed, sitting on a wooden bench surrounded by flowering plants, wearing a blush pink casual outfit, warm afternoon golden light, editorial wellness photography, shot on Canon EOS R6 35mm f/2, peaceful serene expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 50-year-old woman enjoying a cup of brain-boosting coffee or tea at a bright kitchen table with a supplement bottle and fresh walnuts visible, wearing a soft teal top, bright morning kitchen light, editorial wellness photography, shot on Fujifilm X-T5 50mm f/1.8, alert energized expression, 8K resolution, no watermark, no text, no CGI"
+  "image_query": "woman reading book window",
+  "body_image_queries": [
+    "woman journaling desk window",
+    "woman meditating outdoor bench",
+    "woman coffee kitchen morning"
   ]
 }

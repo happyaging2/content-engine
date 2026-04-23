@@ -5,10 +5,10 @@
   "product_handle": "nad-advanced-longevity-formula",
   "cluster": "Longevity",
   "intent": "informational",
-  "image_prompt": "Photograph of a 44-year-old woman holding a bowl of fresh strawberries and red grapes at a bright outdoor table in a garden, wearing a soft raspberry-colored linen blouse, warm natural afternoon sunlight, editorial food wellness photography, shot on Canon EOS R6 35mm f/2, vibrant happy expression, healthy glowing skin, 8K resolution, no watermark, no text, no CGI",
-  "body_image_prompts": [
-    "Photograph of a 46-year-old woman reading a health book in a sunlit living room with a cup of tea on the table beside her, wearing a soft oatmeal knit sweater, warm natural window light from the right, editorial wellness photography, shot on Canon EOS R5 85mm f/1.4, engaged thoughtful expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 48-year-old woman stretching outdoors in a park, doing a standing hamstring stretch beside a park bench, wearing soft lilac athletic wear, warm soft morning light, editorial fitness photography, shot on Sony A7IV 50mm f/1.8, relaxed healthy expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 42-year-old woman at a kitchen counter opening a supplement bottle beside a colorful fruit bowl including strawberries and apples, wearing a white casual blouse, bright natural overhead kitchen lighting, editorial wellness photography, shot on Fujifilm X-T5 50mm f/1.8, focused expression, 8K resolution, no watermark, no text, no CGI"
+  "image_query": "woman strawberries bowl garden",
+  "body_image_queries": [
+    "woman reading book tea",
+    "woman stretching park bench",
+    "supplement bottle fruit counter"
   ]
 }

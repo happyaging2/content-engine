@@ -5,10 +5,10 @@
   "product_handle": "nmn-cell-renew-tonic",
   "cluster": "Hormones",
   "intent": "informational",
-  "image_prompt": "Photograph of a 46-year-old woman sitting at a bright sunlit desk writing thoughtfully in a journal with a cup of tea beside her, wearing a soft dusty blue blouse, warm natural window light from the side, indoor plant visible in background, editorial wellness photography, shot on Sony A7IV 50mm f/1.8, focused thoughtful expression, 8K resolution, no watermark, no text, no CGI",
-  "body_image_prompts": [
-    "Photograph of a 44-year-old woman doing gentle outdoor stretching in a park, arms extended with eyes closed and a peaceful expression, wearing a soft mint athletic outfit, warm morning soft sunlight, editorial fitness wellness photography, shot on Canon EOS R6 35mm f/2, serene calm appearance, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 48-year-old woman talking with a healthcare professional in a bright clinic consultation room, leaning forward engaged and attentive, wearing a smart casual blouse in navy, clean clinic lighting, editorial documentary health photography, shot on Canon EOS R5 85mm f/1.4, engaged intelligent expression, 8K resolution, no watermark, no text, no CGI",
-    "Photograph of a 50-year-old woman enjoying a calming evening ritual with a cup of herbal tea at a cozy kitchen table, soft lamplight and a candle nearby, wearing a warm oatmeal-colored soft knit sweater, warm bedside lamp-style lighting, editorial lifestyle wellness photography, shot on Fujifilm X-T5 50mm f/1.8, peaceful reflective expression, 8K resolution, no watermark, no text, no CGI"
+  "image_query": "woman journaling desk tea",
+  "body_image_queries": [
+    "woman stretching park outdoor",
+    "woman doctor consultation office",
+    "woman herbal tea candle evening"
   ]
 }
