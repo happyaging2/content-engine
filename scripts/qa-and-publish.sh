@@ -9,7 +9,6 @@ set -e
 
 BATCH_DATE="${1:-$(date +%Y-%m-%d)}"
 SHOPIFY_TOKEN="${SHOPIFY_TOKEN}"
-OPENAI_KEY="${OPENAI_API_KEY}"
 BLOG_ID="109440303424"
 API_URL="https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/${BLOG_ID}/articles.json"
 ARTICLES_DIR="articles"
@@ -22,58 +21,109 @@ echo "Started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee "$LOG_FILE"
 echo "[0/6] Pulling latest from git..."
 git pull origin main --quiet
 
-# Step 1: Generate DALL-E images from meta.json prompts
-echo "[1/6] Generating DALL-E 3 images..."
+# Step 1: Fetch realistic stock photos (Unsplash primary, Pexels fallback)
+echo "[1/6] Fetching stock photos (Unsplash + Pexels)..."
 python3 << 'PYEOF'
-import json, urllib.request, glob, os, time, base64, re
+import json, urllib.request, urllib.parse, glob, os, time
 
-openai_key = os.environ.get("OPENAI_KEY", "${OPENAI_API_KEY}")
-out_dir = "articles/covers"
-os.makedirs(out_dir, exist_ok=True)
+unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+pexels_key = os.environ.get("PEXELS_API_KEY", "")
+
+if not unsplash_key and not pexels_key:
+    print("  ERR: set UNSPLASH_ACCESS_KEY and/or PEXELS_API_KEY"); raise SystemExit(1)
+
+UTM = "?utm_source=happy_aging&utm_medium=referral"
+
+def unsplash_search(query):
+    if not unsplash_key: return None
+    try:
+        url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode({
+            "query": query, "orientation": "landscape", "per_page": 5, "content_filter": "high"})
+        req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        if not data.get("results"): return None
+        p = data["results"][0]
+        # Unsplash ToS: ping download_location to credit the photographer
+        try:
+            dl = urllib.request.Request(p["links"]["download_location"],
+                headers={"Authorization": f"Client-ID {unsplash_key}"})
+            urllib.request.urlopen(dl, timeout=10)
+        except Exception: pass
+        return {
+            "src": p["urls"]["regular"],
+            "alt": (p.get("alt_description") or query)[:120],
+            "credit_name": p["user"]["name"],
+            "credit_url": p["user"]["links"]["html"] + UTM,
+            "provider": "Unsplash",
+            "provider_url": "https://unsplash.com/" + UTM,
+        }
+    except Exception as e:
+        print(f"    unsplash fail '{query[:30]}': {str(e)[:50]}"); return None
+
+def pexels_search(query):
+    if not pexels_key: return None
+    try:
+        url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
+            "query": query, "orientation": "landscape", "per_page": 5})
+        req = urllib.request.Request(url, headers={"Authorization": pexels_key})
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        if not data.get("photos"): return None
+        p = data["photos"][0]
+        return {
+            "src": p["src"]["large2x"],
+            "alt": (p.get("alt") or query)[:120],
+            "credit_name": p["photographer"],
+            "credit_url": p["photographer_url"],
+            "provider": "Pexels",
+            "provider_url": "https://www.pexels.com/",
+        }
+    except Exception as e:
+        print(f"    pexels fail '{query[:30]}': {str(e)[:50]}"); return None
+
+def find_image(query, fallback):
+    img = unsplash_search(query) or pexels_search(query)
+    if not img and fallback and fallback != query:
+        img = unsplash_search(fallback) or pexels_search(fallback)
+    return img
+
+def fallback_query(meta):
+    pk = meta.get("primary_keyword") or meta.get("title") or ""
+    return (" ".join(pk.split()[:6]) + " woman wellness").strip()
 
 metas = sorted(glob.glob("articles/*.meta.json"))
-generated = 0
-
+updated = 0
 for mf in metas:
     meta = json.load(open(mf))
-    slug = meta.get("slug", os.path.basename(mf).replace(".meta.json",""))
+    slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
+    fb = fallback_query(meta)
+    changed = False
 
-    # Cover image
-    cover_file = f"{out_dir}/{slug}-cover.jpg"
-    prompt = meta.get("image_prompt","")
-    if prompt and not os.path.exists(cover_file):
-        data = json.dumps({"model":"dall-e-3","prompt":prompt,"n":1,"size":"1792x1024","quality":"standard"}).encode()
-        req = urllib.request.Request("https://api.openai.com/v1/images/generations",
-            data=data, headers={"Authorization":f"Bearer {openai_key}","Content-Type":"application/json"})
-        try:
-            resp = urllib.request.urlopen(req, timeout=120)
-            img_url = json.loads(resp.read())["data"][0]["url"]
-            urllib.request.urlretrieve(img_url, cover_file)
-            generated += 1
-            print(f"  COVER {slug}")
-        except Exception as e:
-            print(f"  ERR cover {slug}: {str(e)[:60]}")
-        time.sleep(2)
+    if not meta.get("resolved_cover"):
+        q = meta.get("image_query") or fb
+        img = find_image(q, fb)
+        if img:
+            meta["resolved_cover"] = img; changed = True
+            print(f"  COVER {slug} <- {img['provider']}")
+        else:
+            print(f"  SKIP cover {slug}")
+        time.sleep(1)
 
-    # Body images
-    body_prompts = meta.get("body_image_prompts", [])
-    for i, bp in enumerate(body_prompts):
-        body_file = f"{out_dir}/{slug}-body-{i}.jpg"
-        if os.path.exists(body_file):
-            continue
-        data = json.dumps({"model":"dall-e-3","prompt":bp,"n":1,"size":"1792x1024","quality":"standard"}).encode()
-        req = urllib.request.Request("https://api.openai.com/v1/images/generations",
-            data=data, headers={"Authorization":f"Bearer {openai_key}","Content-Type":"application/json"})
-        try:
-            resp = urllib.request.urlopen(req, timeout=120)
-            img_url = json.loads(resp.read())["data"][0]["url"]
-            urllib.request.urlretrieve(img_url, body_file)
-            generated += 1
-        except Exception as e:
-            print(f"  ERR body {slug}-{i}: {str(e)[:60]}")
-        time.sleep(2)
+    if not meta.get("resolved_body"):
+        queries = meta.get("body_image_queries") or []
+        resolved = []
+        for q in queries:
+            img = find_image(q, fb)
+            if img: resolved.append(img)
+            time.sleep(1)
+        if resolved:
+            meta["resolved_body"] = resolved; changed = True
+            print(f"  BODY  {slug} <- {len(resolved)} images")
 
-print(f"  Generated {generated} DALL-E images")
+    if changed:
+        json.dump(meta, open(mf, "w"), indent=2, ensure_ascii=False)
+        updated += 1
+
+print(f"  Resolved images for {updated} articles")
 PYEOF
 
 # Step 2: Fix product card images
@@ -134,46 +184,54 @@ for f in sorted(glob.glob("articles/*-final.html")):
 print(f"  Removed {removed} fake DOIs")
 PYEOF
 
-# Step 4: Insert DALL-E body images into HTML
-echo "[4/6] Inserting generated body images into articles..."
+# Step 4: Insert stock body images into HTML from meta.resolved_body
+echo "[4/6] Inserting stock body images into articles..."
 python3 << 'PYEOF'
-import json, glob, os, re, base64, urllib.request
+import json, glob, os, re
 
-shopify_token = os.environ.get("SHOPIFY_TOKEN", "${SHOPIFY_TOKEN}")
-covers_dir = "articles/covers"
-
+inserted = 0
 for mf in sorted(glob.glob("articles/*.meta.json")):
     meta = json.load(open(mf))
-    slug = meta.get("slug", os.path.basename(mf).replace(".meta.json",""))
+    slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
     html_file = f"articles/{slug}-final.html"
     if not os.path.exists(html_file): continue
 
-    body = open(html_file).read()
-    body_imgs = sorted(glob.glob(f"{covers_dir}/{slug}-body-*.jpg"))
-    if not body_imgs: continue
+    imgs = meta.get("resolved_body") or []
+    if not imgs: continue
 
-    # Find H2 positions to insert images after
+    body = open(html_file).read()
+
+    # Scrub legacy DALL-E placeholders from prior runs
+    body = re.sub(
+        r'\s*<!-- DALLE_BODY_IMG:[^>]*-->\s*<img[^>]*PENDING_DALLE_UPLOAD[^>]*>\s*',
+        "\n", body)
+
+    if "article-stock-image" in body:
+        open(html_file, "w").write(body)
+        continue
+
     h2s = [m.end() for m in re.finditer(r"</h2>", body)]
     if len(h2s) < 2: continue
 
-    # Pick evenly spaced insertion points
-    step = max(1, len(h2s) // (len(body_imgs) + 1))
-    insert_points = h2s[step::step][:len(body_imgs)]
+    step = max(1, len(h2s) // (len(imgs) + 1))
+    insert_points = h2s[step::step][:len(imgs)]
 
-    changed = False
-    for img_file, pos in zip(reversed(body_imgs), reversed(insert_points)):
-        # For now, use a placeholder — the actual upload happens in step 5
-        # We'll use a data URI temporarily
-        alt = f"Woman wellness - {meta.get('title','')[:30]}"
-        # Mark for later replacement with CDN URL after Shopify upload
-        marker = f'<!-- DALLE_BODY_IMG:{os.path.basename(img_file)} -->'
-        if marker not in body:
-            body = body[:pos] + f'\n{marker}\n<img src="PENDING_DALLE_UPLOAD" alt="{alt}" style="width:100%;border-radius:12px;margin:20px 0;">\n' + body[pos:]
-            changed = True
+    for img, pos in zip(reversed(imgs), reversed(insert_points)):
+        alt = (img.get("alt") or meta.get("title", ""))[:140].replace('"', "'")
+        figure = (
+            f'\n<figure class="article-stock-image" style="margin:24px 0">'
+            f'<img src="{img["src"]}" alt="{alt}" style="width:100%;border-radius:12px;display:block">'
+            f'<figcaption style="font-size:12px;color:#888;margin-top:6px">'
+            f'Photo by <a href="{img["credit_url"]}" rel="nofollow noopener">{img["credit_name"]}</a> '
+            f'on <a href="{img["provider_url"]}" rel="nofollow noopener">{img["provider"]}</a>'
+            f'</figcaption></figure>\n'
+        )
+        body = body[:pos] + figure + body[pos:]
 
-    if changed:
-        open(html_file, "w").write(body)
-print("  Body image placeholders inserted")
+    open(html_file, "w").write(body)
+    inserted += 1
+
+print(f"  Inserted stock body images into {inserted} articles")
 PYEOF
 
 # Step 5: Publish to Shopify (articles + covers)
@@ -209,11 +267,15 @@ for mf in metas:
 
     payload = {"article": {"title": title, "body_html": body, "author": "Happy Aging Team", "tags": tags, "published": True, "template_suffix": "timeline"}}
 
-    # Cover image via base64
-    cover_file = f"{covers_dir}/{slug}-cover.jpg"
-    if os.path.exists(cover_file):
-        with open(cover_file, "rb") as f:
-            payload["article"]["image"] = {"attachment": base64.b64encode(f.read()).decode(), "alt": title}
+    # Cover image: prefer resolved stock URL; fall back to legacy local file
+    cover = meta.get("resolved_cover")
+    if cover and cover.get("src"):
+        payload["article"]["image"] = {"src": cover["src"], "alt": title}
+    else:
+        cover_file = f"{covers_dir}/{slug}-cover.jpg"
+        if os.path.exists(cover_file):
+            with open(cover_file, "rb") as f:
+                payload["article"]["image"] = {"attachment": base64.b64encode(f.read()).decode(), "alt": title}
 
     data = json.dumps(payload).encode()
     req = urllib.request.Request(api, data=data, method="POST",

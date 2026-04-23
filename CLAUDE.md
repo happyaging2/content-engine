@@ -40,7 +40,15 @@ Published via Shopify Admin API (REST). Prefer the script over raw curl:
 cd /path/to/content-engine && bash scripts/qa-and-publish.sh [YYYY-MM-DD]
 ```
 
-Required env vars: `SHOPIFY_TOKEN`, `OPENAI_API_KEY`.
+Required env vars: `SHOPIFY_TOKEN`, `UNSPLASH_ACCESS_KEY`. Optional:
+`PEXELS_API_KEY` (fallback when Unsplash has no result).
+
+### Images
+Article cover and body images are fetched from **Unsplash** (primary) with
+**Pexels** as fallback. The writer emits `image_query` and
+`body_image_queries` in each `*.meta.json`; the publish script resolves them
+to real stock photo URLs and injects them with photographer credit. No more
+AI-generated images.
 
 Raw endpoint (parametrize in shell):
 ```bash

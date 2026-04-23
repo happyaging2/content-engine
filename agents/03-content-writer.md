@@ -24,13 +24,25 @@ Read LEARNING.md before every article. Follow all STRICT RULES.
 - Author: "Happy Aging Team" for all articles
 
 ### IMAGES
-- Featured image (top of article): MUST be a lifestyle/wellness image, NEVER a product shot
-- Use free stock images from Unsplash for lifestyle images
-- For Unsplash, use URLs like: https://images.unsplash.com/photo-XXXXX?w=800&h=450&fit=crop
-- Search Unsplash via: https://api.unsplash.com/search/photos?query=[keyword]&orientation=landscape
-- Include 3-4 images throughout the article body at natural section breaks
-- Images should show: women 40+, wellness lifestyle, healthy food, exercise, sleep, nature
-- Every image must have descriptive alt text for SEO
+Do NOT embed `<img>` tags in the article HTML. The publish pipeline fetches
+realistic stock photos from Unsplash (primary) and Pexels (fallback) and
+inserts them with photographer credits. Your job is to emit good search
+queries in meta.json:
+
+- `image_query` — 3 to 6 words describing the cover photo
+  (e.g. `"woman 40s morning meditation sunlight"`)
+- `body_image_queries` — list of 2 to 4 short queries, one per body image
+  (e.g. `["healthy breakfast bowl", "woman yoga studio", "green smoothie ingredients"]`)
+
+Query rules:
+- Favor realistic stock terms: women 40+, wellness moments, food, nature,
+  exercise, rest, hands, textures.
+- Avoid brand/product names (product cards handle those) and surreal or
+  stylized language ("photorealistic", "editorial", camera specs).
+- Avoid medical imagery (hospitals, pills) unless the topic demands it.
+
+Do NOT emit `image_prompt` or `body_image_prompts` (DALL-E-style). Those
+were the legacy format and are ignored by the pipeline now.
 
 ### PRODUCT CARD
 - One product card per article, placed after the "what helps" section
