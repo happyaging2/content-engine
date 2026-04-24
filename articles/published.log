@@ -79,3 +79,9 @@ Author: Happy Aging Team | Template: timeline | All 20 QA PASSED
 [2026-04-23 09:57:27] [20/20] Publishing: Best Supplements for Menopause Fatigue: What Actually Works
 [2026-04-23 09:57:27] HTTP_ERROR 403: 'Best Supplements for Menopause Fatigue: What Actually Works' -> Host not in allowlist
 [2026-04-23 09:57:27] === Batch Complete: 0 published, 20 failed ===
+[2026-04-24 09:10:00] === Batch 2026-04-24 publish started (20 articles) ===
+[2026-04-24 09:10:00] Network blocked (Host not in allowlist) — Shopify admin API inaccessible from sandbox
+[2026-04-24 09:10:00] Publish script saved: articles/batch-2026-04-24-publish.py
+[2026-04-24 09:10:00] Run from unrestricted environment: SHOPIFY_TOKEN=<token> python3 articles/batch-2026-04-24-publish.py
+[2026-04-24 09:10:00] Articles ready: 20/20 QA-passed HTML files in articles/
+[2026-04-24 09:10:00] === Batch Complete: 0 published (network blocked), 20 ready for external publish ===
