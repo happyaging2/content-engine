@@ -18,13 +18,43 @@ echo "=== JARVIS QA + Publish: Batch ${BATCH_DATE} ==="
 echo "Started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee "$LOG_FILE"
 
 # Step 0: Pull latest
-echo "[0/6] Pulling latest from git..."
+echo "[0/7] Pulling latest from git..."
 git pull origin main --quiet
 
-# Step 1: Fetch realistic stock photos (Unsplash primary, Pexels fallback)
-echo "[1/6] Fetching stock photos (Unsplash + Pexels)..."
+# Step 0b: Pre-flight validation gate (fail fast on bad metas)
+echo "[0b/7] Validating metas..."
 python3 << 'PYEOF'
-import json, urllib.request, urllib.parse, glob, os, time
+import sys, glob, json
+sys.path.insert(0, "scripts/lib")
+from jarvis_publish import validate_meta, fetch_product_handles
+
+handles = fetch_product_handles()  # None if upstream unreachable
+fail = 0
+checked = 0
+for mf in sorted(glob.glob("articles/*.meta.json")):
+    try:
+        meta = json.load(open(mf))
+    except Exception as e:
+        print(f"  PARSE-ERR {mf}: {e}"); fail += 1; continue
+    checked += 1
+    errs = validate_meta(meta, handles)
+    if errs:
+        fail += 1
+        print(f"  FAIL {meta.get('slug', mf)}")
+        for e in errs:
+            print(f"    - {e}")
+print(f"  Validation: {checked - fail}/{checked} pass")
+if fail:
+    print(f"  HALT: {fail} meta(s) failed validation; fix before publish")
+    raise SystemExit(2)
+PYEOF
+
+# Step 1: Fetch realistic stock photos (Unsplash primary, Pexels fallback)
+echo "[1/7] Fetching stock photos (Unsplash + Pexels)..."
+python3 << 'PYEOF'
+import json, urllib.request, urllib.parse, glob, os, time, sys
+sys.path.insert(0, "scripts/lib")
+from jarvis_publish import http_retry
 
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 pexels_key = os.environ.get("PEXELS_API_KEY", "")
@@ -39,8 +69,10 @@ def unsplash_search(query):
     try:
         url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode({
             "query": query, "orientation": "landscape", "per_page": 5, "content_filter": "high"})
-        req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
-        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        def _go():
+            req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
+            return json.loads(urllib.request.urlopen(req, timeout=15).read())
+        data = http_retry(_go, label=f"unsplash:{query[:24]}")
         if not data.get("results"): return None
         p = data["results"][0]
         # Unsplash ToS: ping download_location to credit the photographer
@@ -65,8 +97,10 @@ def pexels_search(query):
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
             "query": query, "orientation": "landscape", "per_page": 5})
-        req = urllib.request.Request(url, headers={"Authorization": pexels_key})
-        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        def _go():
+            req = urllib.request.Request(url, headers={"Authorization": pexels_key})
+            return json.loads(urllib.request.urlopen(req, timeout=15).read())
+        data = http_retry(_go, label=f"pexels:{query[:24]}")
         if not data.get("photos"): return None
         p = data["photos"][0]
         return {
@@ -127,18 +161,23 @@ print(f"  Resolved images for {updated} articles")
 PYEOF
 
 # Step 2: Fix product card images
-echo "[2/6] Fixing product card images..."
+echo "[2/7] Fixing product card images..."
 python3 << 'PYEOF'
-import json, urllib.request, re, glob, os
+import json, urllib.request, re, glob, os, sys
+sys.path.insert(0, "scripts/lib")
+from jarvis_publish import http_retry
 
 pmap = {}
 try:
-    products = json.loads(urllib.request.urlopen("https://happyaging.com/products.json?limit=250").read())["products"]
+    def _go():
+        return json.loads(urllib.request.urlopen(
+            "https://happyaging.com/products.json?limit=250", timeout=15).read())
+    products = http_retry(_go, label="products.json")["products"]
     for p in products:
         if p.get("images"):
             pmap[p["handle"]] = p["images"][0]["src"]
-except:
-    print("  WARNING: Could not fetch product images")
+except Exception as e:
+    print(f"  WARNING: Could not fetch product images: {str(e)[:80]}")
 
 fixed = 0
 for f in sorted(glob.glob("articles/*-final.html")):
@@ -158,7 +197,7 @@ print(f"  Fixed {fixed} product card images")
 PYEOF
 
 # Step 3: Validate DOIs
-echo "[3/6] Validating DOIs..."
+echo "[3/7] Validating DOIs..."
 python3 << 'PYEOF'
 import re, glob, urllib.request
 
@@ -185,7 +224,7 @@ print(f"  Removed {removed} fake DOIs")
 PYEOF
 
 # Step 4: Insert stock body images into HTML from meta.resolved_body
-echo "[4/6] Inserting stock body images into articles..."
+echo "[4/7] Inserting stock body images into articles..."
 python3 << 'PYEOF'
 import json, glob, os, re
 
@@ -235,18 +274,23 @@ print(f"  Inserted stock body images into {inserted} articles")
 PYEOF
 
 # Step 5: Publish to Shopify (articles + covers)
-echo "[5/6] Publishing to Shopify..."
+echo "[5/7] Publishing to Shopify..."
 python3 << PYEOF
-import json, urllib.request, glob, os, re, time, base64
+import json, urllib.request, glob, os, re, time, base64, sys
+sys.path.insert(0, "scripts/lib")
+from jarvis_publish import http_retry
 
 shopify_token = "${SHOPIFY_TOKEN}"
 api = "${API_URL}"
 covers_dir = "articles/covers"
 
-# Get existing titles
-req = urllib.request.Request(f"{api}?limit=250&fields=id,title", headers={"X-Shopify-Access-Token": shopify_token})
+# Get existing titles (retry on flaky Shopify)
+def _list():
+    req = urllib.request.Request(f"{api}?limit=250&fields=id,title",
+        headers={"X-Shopify-Access-Token": shopify_token})
+    return json.loads(urllib.request.urlopen(req, timeout=20).read())
 existing = {}
-for a in json.loads(urllib.request.urlopen(req).read())["articles"]:
+for a in http_retry(_list, label="shopify:list")["articles"]:
     existing[a["title"].lower().strip()] = a["id"]
 
 metas = sorted(glob.glob("articles/*.meta.json"))
@@ -278,32 +322,43 @@ for mf in metas:
                 payload["article"]["image"] = {"attachment": base64.b64encode(f.read()).decode(), "alt": title}
 
     data = json.dumps(payload).encode()
-    req = urllib.request.Request(api, data=data, method="POST",
-        headers={"X-Shopify-Access-Token": shopify_token, "Content-Type": "application/json"})
+    def _post():
+        req = urllib.request.Request(api, data=data, method="POST",
+            headers={"X-Shopify-Access-Token": shopify_token,
+                     "Content-Type": "application/json"})
+        return json.loads(urllib.request.urlopen(req, timeout=30).read())
     try:
-        resp = urllib.request.urlopen(req)
-        result = json.loads(resp.read())
+        result = http_retry(_post, label=f"shopify:post:{slug[:24]}")
         aid = result["article"]["id"]
         published += 1
         existing[title.lower()] = aid
         print(f"  OK {title[:50]} (id:{aid})")
     except Exception as e:
         print(f"  ERR {slug}: {str(e)[:80]}")
-    time.sleep(1)
+    time.sleep(2)
 
 print(f"  Published {published} new articles")
 PYEOF
 
 # Step 6: Verify
-echo "[6/6] Verifying..."
+echo "[6/7] Verifying..."
 python3 << PYEOF
-import urllib.request, json
-req = urllib.request.Request("${API_URL}?limit=1&fields=id", headers={"X-Shopify-Access-Token": "${SHOPIFY_TOKEN}"})
-# Just count
-req2 = urllib.request.Request("https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/${BLOG_ID}/articles/count.json", headers={"X-Shopify-Access-Token": "${SHOPIFY_TOKEN}"})
-count = json.loads(urllib.request.urlopen(req2).read())["count"]
+import urllib.request, json, sys
+sys.path.insert(0, "scripts/lib")
+from jarvis_publish import http_retry
+def _go():
+    req = urllib.request.Request(
+        "https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/${BLOG_ID}/articles/count.json",
+        headers={"X-Shopify-Access-Token": "${SHOPIFY_TOKEN}"})
+    return json.loads(urllib.request.urlopen(req, timeout=20).read())
+count = http_retry(_go, label="shopify:count")["count"]
 print(f"  Total articles on Shopify: {count}")
 PYEOF
+
+# Step 7: Refresh dedup index + aggregate publish metrics
+echo "[7/7] Rebuilding articles/index.json + publish-metrics.json..."
+python3 scripts/build-index.py
+python3 scripts/publish-metrics.py
 
 echo ""
 echo "=== QA + Publish complete: $(date -u +%Y-%m-%dT%H:%M:%SZ) ===" | tee -a "$LOG_FILE"

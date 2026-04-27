@@ -17,10 +17,12 @@ Run daily. 7 phases. 20 articles per cycle.
 ## PHASE 1: OPPORTUNITIES
 - Read config/brand.md for context
 - Read LEARNING.md for patterns to follow
+- Read articles/index.json for cross-batch dedup (run
+  `python3 scripts/build-index.py` first if it is missing or stale)
 - Check existing blog: curl https://happyaging.com/blogs/news.json?limit=250
 - Find 20 topics grouped into clusters (max 3 per cluster)
 - Clusters: Energy, Sleep, Hormones, Metabolism, Skin, Gut, Brain, Immunity
-- Follow agents/01-opportunity-engine.md rules
+- Follow agents/01-opportunity-engine.md rules (DEDUP section is mandatory)
 - Save to articles/batch-[DATE]-opportunities.md
 
 ## PHASE 2: SEO BRIEFS
@@ -46,16 +48,19 @@ Run daily. 7 phases. 20 articles per cycle.
 - Save optimized version to articles/[slug]-final.html
 
 ## PHASE 5: PUBLISH
-- Publish via Shopify REST API:
+- Use the script: `bash scripts/qa-and-publish.sh [YYYY-MM-DD]`
+  It runs the validation gate (slug/handle/image_query checks), fetches
+  stock photos with retry, posts to Shopify with exponential backoff,
+  rebuilds `articles/index.json`, and updates `articles/publish-metrics.json`.
+- Raw endpoint (only if the script is unavailable):
   ```
   curl -X POST https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/109440303424/articles.json \
     -H "X-Shopify-Access-Token: $SHOPIFY_TOKEN" \
     -H "Content-Type: application/json" \
-    -d '{"article":{"title":"...","body_html":"...","author":"Dr. Daniel Yadegar, MD","tags":"...","published":true,"template_suffix":"timeline","image":{"src":"...","alt":"..."}}}'
+    -d '{"article":{"title":"...","body_html":"...","author":"Happy Aging Team","tags":"...","published":true,"template_suffix":"timeline","image":{"src":"...","alt":"..."}}}'
   ```
-- Get product image: curl -s https://happyaging.com/products/[handle].json | first image
 - Wait 2 seconds between publishes (rate limit)
-- Log results to articles/published.log
+- Logs land in articles/qa-[DATE].log; aggregated in articles/publish-metrics.json
 
 ## PHASE 6: PERFORMANCE
 - If previous batch data available, analyze
@@ -64,7 +69,9 @@ Run daily. 7 phases. 20 articles per cycle.
 
 ## PHASE 7: LEARNING
 - Update LEARNING.md with new insights
-- Follow agents/07-learning-injection.md rules
+- Follow agents/07-learning-injection.md rules — respect EXPERIMENTAL vs
+  VALIDATED governance and the 180-day TTL
+- Use articles/publish-metrics.json for operational signals (errors, skips)
 - Commit updated LEARNING.md
 
 ## AFTER ALL PHASES
