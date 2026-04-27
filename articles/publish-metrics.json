@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-04-27T03:33:42Z",
+  "totals": {
+    "batches": 0,
+    "ok": 0,
+    "err": 0,
+    "skip_cover": 0,
+    "fake_dois_removed": 0
+  },
+  "by_batch": []
+}

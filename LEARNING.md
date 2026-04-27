@@ -1,5 +1,24 @@
 # Content Learning Rules — Last Updated: 2026-04-24
 
+## RULE GOVERNANCE (read first)
+
+Rules in this file have one of two states. Phase 7 (Learning Injection) is
+responsible for promoting and pruning them.
+
+- **VALIDATED** — backed by ≥30 days of post-publish performance data.
+  Writers (Phase 3) MUST follow these.
+- **EXPERIMENTAL** — added from in-batch observations only. Tagged with
+  `(exp, added YYYY-MM-DD, validate after YYYY-MM-DD)`. Writers SHOULD
+  follow these but they are subject to removal at the validation date if
+  Phase 6 (Performance Engine) does not confirm them.
+
+TTL: any rule older than 180 days that has not been re-confirmed by
+Performance Engine output must be removed by Phase 7. This keeps the file
+lean enough to inject into every Writer call.
+
+The Writer should treat `VALIDATED` and `EXPERIMENTAL` items as equally
+binding while writing; the distinction exists only for Phase 7 housekeeping.
+
 ## WINNING PATTERNS (repeat these)
 - Question-based titles get higher CTR ("Why do I..." / "What causes..." / "Is X normal?")
 - "What to Know" box at top increases time on page
