@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       batch_date:
-        description: "Batch date (YYYY-MM-DD) — leave blank to publish all pending batches"
+        description: "Batch date (YYYY-MM-DD) — leave blank to publish ALL pending batches"
         required: false
         default: ""
 
@@ -20,23 +20,61 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Publish batch
+      - name: Publish batch(es)
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
         run: |
+          set -e
           BATCH="${{ github.event.inputs.batch_date }}"
+          ARTICLES_DIR="articles"
+
+          run_script() {
+            local script="$1"
+            echo ""
+            echo "=========================================="
+            echo "Running: $script"
+            echo "=========================================="
+            case "$script" in
+              *.py) python3 "$script" ;;
+              *.sh) bash "$script" ;;
+            esac
+          }
+
           if [ -n "$BATCH" ]; then
-            SCRIPT="articles/batch-${BATCH}-publish.py"
-            if [ ! -f "$SCRIPT" ]; then
-              echo "ERROR: $SCRIPT not found."
+            # Try all known naming variants for the given date
+            FOUND=0
+            for candidate in \
+              "${ARTICLES_DIR}/batch-${BATCH}-publish.py" \
+              "${ARTICLES_DIR}/batch-${BATCH}-publish.sh" \
+              "${ARTICLES_DIR}/batch-${BATCH}-publish-payloads.sh"
+            do
+              if [ -f "$candidate" ]; then
+                run_script "$candidate"
+                FOUND=1
+                break
+              fi
+            done
+            if [ "$FOUND" -eq 0 ]; then
+              echo "ERROR: No publish script found for batch $BATCH"
+              echo "Looked for:"
+              echo "  ${ARTICLES_DIR}/batch-${BATCH}-publish.py"
+              echo "  ${ARTICLES_DIR}/batch-${BATCH}-publish.sh"
+              echo "  ${ARTICLES_DIR}/batch-${BATCH}-publish-payloads.sh"
               exit 1
             fi
-            echo "Publishing batch $BATCH..."
-            python3 "$SCRIPT"
           else
-            echo "No batch date specified — publishing all pending publish scripts..."
-            for script in articles/batch-*-publish.py; do
-              echo "--- Running $script ---"
-              python3 "$script"
+            echo "No batch date specified — publishing ALL pending batches in chronological order..."
+            # Collect all publish scripts (py and sh), sort by date
+            SCRIPTS=$(find "$ARTICLES_DIR" \
+              \( -name "batch-*-publish.py" -o \
+                 -name "batch-*-publish.sh" -o \
+                 -name "batch-*-publish-payloads.sh" \) \
+              | sort)
+            if [ -z "$SCRIPTS" ]; then
+              echo "No publish scripts found."
+              exit 1
+            fi
+            for script in $SCRIPTS; do
+              run_script "$script"
             done
           fi
