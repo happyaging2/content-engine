@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       batch_date:
-        description: "Batch date (YYYY-MM-DD) — leave blank to publish ALL pending batches"
+        description: "Batch date for log label (YYYY-MM-DD) — leave blank for today"
         required: false
         default: ""
 
@@ -20,61 +20,29 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Publish batch(es)
+      - name: Configure git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Run QA + Publish pipeline
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: |
-          set -e
           BATCH="${{ github.event.inputs.batch_date }}"
-          ARTICLES_DIR="articles"
+          if [ -z "$BATCH" ]; then
+            BATCH="$(date +%Y-%m-%d)"
+          fi
+          bash scripts/qa-and-publish.sh "$BATCH"
 
-          run_script() {
-            local script="$1"
-            echo ""
-            echo "=========================================="
-            echo "Running: $script"
-            echo "=========================================="
-            case "$script" in
-              *.py) python3 "$script" ;;
-              *.sh) bash "$script" ;;
-            esac
-          }
-
-          if [ -n "$BATCH" ]; then
-            # Try all known naming variants for the given date
-            FOUND=0
-            for candidate in \
-              "${ARTICLES_DIR}/batch-${BATCH}-publish.py" \
-              "${ARTICLES_DIR}/batch-${BATCH}-publish.sh" \
-              "${ARTICLES_DIR}/batch-${BATCH}-publish-payloads.sh"
-            do
-              if [ -f "$candidate" ]; then
-                run_script "$candidate"
-                FOUND=1
-                break
-              fi
-            done
-            if [ "$FOUND" -eq 0 ]; then
-              echo "ERROR: No publish script found for batch $BATCH"
-              echo "Looked for:"
-              echo "  ${ARTICLES_DIR}/batch-${BATCH}-publish.py"
-              echo "  ${ARTICLES_DIR}/batch-${BATCH}-publish.sh"
-              echo "  ${ARTICLES_DIR}/batch-${BATCH}-publish-payloads.sh"
-              exit 1
-            fi
+      - name: Commit resolved images back to repo
+        run: |
+          git add articles/*.meta.json articles/*-final.html 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: resolved stock images for batch $(date +%Y-%m-%d) [skip ci]"
+            git push origin main
           else
-            echo "No batch date specified — publishing ALL pending batches in chronological order..."
-            # Collect all publish scripts (py and sh), sort by date
-            SCRIPTS=$(find "$ARTICLES_DIR" \
-              \( -name "batch-*-publish.py" -o \
-                 -name "batch-*-publish.sh" -o \
-                 -name "batch-*-publish-payloads.sh" \) \
-              | sort)
-            if [ -z "$SCRIPTS" ]; then
-              echo "No publish scripts found."
-              exit 1
-            fi
-            for script in $SCRIPTS; do
-              run_script "$script"
-            done
+            echo "Nothing to commit."
           fi
