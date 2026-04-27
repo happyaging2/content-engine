@@ -1,0 +1,42 @@
+name: Publish to Shopify
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_date:
+        description: "Batch date (YYYY-MM-DD) — leave blank to publish all pending batches"
+        required: false
+        default: ""
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Publish batch
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+        run: |
+          BATCH="${{ github.event.inputs.batch_date }}"
+          if [ -n "$BATCH" ]; then
+            SCRIPT="articles/batch-${BATCH}-publish.py"
+            if [ ! -f "$SCRIPT" ]; then
+              echo "ERROR: $SCRIPT not found."
+              exit 1
+            fi
+            echo "Publishing batch $BATCH..."
+            python3 "$SCRIPT"
+          else
+            echo "No batch date specified — publishing all pending publish scripts..."
+            for script in articles/batch-*-publish.py; do
+              echo "--- Running $script ---"
+              python3 "$script"
+            done
+          fi
