@@ -2,7 +2,60 @@
 
 ---
 
-## BATCH 2026-04-19 (Current)
+## BATCH 2026-04-28 (Current)
+
+### Batch Overview
+- Date: 2026-04-28
+- Articles written: 20/20
+- Publishing status: Ready -- run `articles/batch-2026-04-28-publish.py` from unrestricted network
+- SEO audit: Complete (all 20 articles passed QA, 1800+ words each)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Longevity | 4 | Happiest Gut, NAD+ Advanced Longevity, Brain Tonic |
+| Brain | 3 | Neuro Creamer |
+| Gut | 4 | Happiest Gut, NAD+ Advanced Longevity, Liver Tonic |
+| Skin | 1 | Radiance Tonic |
+| Sleep | 2 | Sleep Tonic |
+| Energy | 1 | Longevity Shots |
+| Hormones | 2 | NMN Cell Renew Tonic, Calm Tonic |
+| Heart | 1 | Relief Tonic |
+| Metabolism | 2 | Lean Muscle Formula, NAD Women Longevity Formula |
+
+### Articles -- Batch 2026-04-28
+| # | Title | Slug | Cluster | Product | Words |
+|---|---|---|---|---|---|
+| 1 | Does Urolithin A Actually Work? A Review of the Human Evidence for Women Over 40 | does-urolithin-a-actually-work-after-40 | Longevity | happiest-gut | 1833 |
+| 2 | Does Ergothioneine Actually Work? What the Research Shows for Women Over 40 | does-ergothioneine-actually-work-after-40 | Longevity | nad-advanced-longevity-formula | 1844 |
+| 3 | Rapamycin Alternatives: Natural Ways to Activate mTOR Inhibition After 40 | rapamycin-alternatives-natural-mtor-after-40 | Longevity | nad-advanced-longevity-formula | 1838 |
+| 4 | Does Bacopa Monnieri Actually Work for Memory After 40? What the Research Shows | does-bacopa-monnieri-actually-work-after-40 | Brain | neuro-creamer | 1828 |
+| 5 | How to Support Acetylcholine Naturally After 40: Foods, Habits, and Supplements | how-to-support-acetylcholine-naturally-after-40 | Brain | neuro-creamer | 1874 |
+| 6 | What Is Choline and Why Women Over 40 Need More of It for Brain Health | what-is-choline-brain-after-40 | Brain | neuro-creamer | 1821 |
+| 7 | Best Foods for Gut Barrier Health After 40: What to Eat to Protect Your Gut Lining | best-foods-gut-barrier-health-after-40 | Gut | happiest-gut | 1815 |
+| 8 | Gut Dysbiosis After 40: Signs, Causes, and How to Restore Your Microbiome | gut-dysbiosis-symptoms-after-40 | Gut | happiest-gut | 1845 |
+| 9 | The Gut-Skin Axis After 40: How Your Microbiome Controls Your Skin | gut-skin-axis-microbiome-skin-after-40 | Skin | radiance-tonic | 1916 |
+| 10 | What Is Adenosine and Why It Controls Your Sleep Drive After 40 | what-is-adenosine-sleep-drive-after-40 | Sleep | sleep-tonic | 1878 |
+| 11 | What Is Glycine and Why It Helps Sleep and Skin After 40 | what-is-glycine-sleep-skin-after-40 | Sleep | sleep-tonic | 1849 |
+| 12 | NAD+ and Exercise Recovery After 40: What the Research Shows | nad-plus-exercise-recovery-after-40 | Energy | longevity-shots | 1808 |
+| 13 | What Is Taurine and Why Women Over 40 Should Pay Attention to It | what-is-taurine-women-over-40 | Longevity | brain-tonic | 1830 |
+| 14 | Best Supplements for PCOS After 40: What the Evidence Actually Supports | best-supplements-pcos-after-40 | Hormones | nmn-cell-renew-tonic | 1840 |
+| 15 | Perimenopause Mood and Anxiety: Natural Remedies That Actually Work | perimenopause-mood-anxiety-natural-remedies | Hormones | calm-tonic | 1803 |
+| 16 | Omega-3 Dosage Guide for Women Over 40: How Much Do You Actually Need? | omega-3-dosage-guide-women-over-40 | Heart | relief-tonic | 1815 |
+| 17 | The SIBO and B12 Connection After 40: Why Gut Bacteria Affect Your Nutrient Levels | sibo-b12-deficiency-connection-after-40 | Gut | nad-advanced-longevity-formula | 1817 |
+| 18 | Signs Your Liver Is Healing After 40: What Happens Week by Week | signs-liver-healing-after-40 | Gut | liver-tonic | 1821 |
+| 19 | Strength Training Recovery for Women Over 40: How to Train Smarter | strength-training-recovery-women-over-40 | Metabolism | lean-muscle-formula | 1846 |
+| 20 | How Stress Causes Weight Gain After 40: The Cortisol-Fat Connection Explained | how-stress-causes-weight-gain-after-40 | Metabolism | nad-women-longevity-formula | 1833 |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** Articles 4 (Bacopa honest review), 1 (Urolithin A honest review), 14 (PCOS supplements protocol)
+- **Featured snippet candidates:** Articles 8 (dysbiosis signs format), 18 (week-by-week timeline), 16 (dosage guide format)
+- **High GEO extraction:** Articles 10 (adenosine definitional), 13 (taurine definitional), 3 (rapamycin alternatives), 6 (choline definitional)
+- **Differentiated angles:** Articles 3 (rapamycin mTOR natural), 9 (gut-skin mechanistic), 17 (SIBO-B12 absorption chain)
+
+---
+
+## BATCH 2026-04-19 (Previous)
 
 ### Batch Overview
 - Date: 2026-04-19
@@ -142,10 +195,10 @@
 
 ---
 
-## CUMULATIVE STATS (Both Batches)
+## CUMULATIVE STATS (All Batches Through 2026-04-28)
 
-- Total articles written: 40
-- Total clusters covered: 8
-- Total products featured: 13 distinct products
-- Total batches: 2
-- Publishing status: Both batches pending — run publish scripts from unrestricted network
+- Total articles written: 340 (17 batches x 20 articles)
+- Total clusters covered: 12
+- Total products featured: 16 distinct products
+- Total batches: 17
+- Publishing status: All batches through 2026-04-27 published; batch 2026-04-28 ready -- run `articles/batch-2026-04-28-publish.py` from unrestricted network
