@@ -33,39 +33,80 @@ if not UNSPLASH_KEY and not PEXELS_KEY:
     raise SystemExit("ERROR: Set UNSPLASH_ACCESS_KEY and/or PEXELS_API_KEY.")
 
 
+# ── Rate limit tracking ───────────────────────────────────────────────────────
+
+_unsplash_requests = 0
+_unsplash_window_start = None
+UNSPLASH_RATE_LIMIT = 45  # stay under 50/hour free tier limit
+UNSPLASH_WINDOW = 3600    # seconds
+
+
+def _unsplash_rate_check():
+    global _unsplash_requests, _unsplash_window_start
+    now = time.time()
+    if _unsplash_window_start is None:
+        _unsplash_window_start = now
+    elapsed = now - _unsplash_window_start
+    if elapsed >= UNSPLASH_WINDOW:
+        _unsplash_requests = 0
+        _unsplash_window_start = now
+    if _unsplash_requests >= UNSPLASH_RATE_LIMIT:
+        wait = UNSPLASH_WINDOW - elapsed + 5
+        print(f"  [rate limit] Unsplash limit reached. Waiting {int(wait)}s for window reset...")
+        time.sleep(wait)
+        _unsplash_requests = 0
+        _unsplash_window_start = time.time()
+
+
 # ── Image search ──────────────────────────────────────────────────────────────
 
 def unsplash_search(query):
+    global _unsplash_requests
     if not UNSPLASH_KEY:
         return None
-    try:
-        url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode({
-            "query": query, "orientation": "landscape", "per_page": 5, "content_filter": "high"
-        })
-        req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {UNSPLASH_KEY}"})
-        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
-        if not data.get("results"):
-            return None
-        p = data["results"][0]
+    _unsplash_rate_check()
+    for attempt in range(3):
         try:
-            dl = urllib.request.Request(
-                p["links"]["download_location"],
-                headers={"Authorization": f"Client-ID {UNSPLASH_KEY}"}
-            )
-            urllib.request.urlopen(dl, timeout=10)
-        except Exception:
-            pass
-        return {
-            "src": p["urls"]["regular"],
-            "alt": (p.get("alt_description") or query)[:120],
-            "credit_name": p["user"]["name"],
-            "credit_url": p["user"]["links"]["html"] + UTM,
-            "provider": "Unsplash",
-            "provider_url": "https://unsplash.com/" + UTM,
-        }
-    except Exception as e:
-        print(f"    unsplash fail '{query[:40]}': {str(e)[:60]}")
-        return None
+            url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode({
+                "query": query, "orientation": "landscape", "per_page": 5, "content_filter": "high"
+            })
+            req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {UNSPLASH_KEY}"})
+            data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+            _unsplash_requests += 1
+            if not data.get("results"):
+                return None
+            p = data["results"][0]
+            try:
+                dl = urllib.request.Request(
+                    p["links"]["download_location"],
+                    headers={"Authorization": f"Client-ID {UNSPLASH_KEY}"}
+                )
+                urllib.request.urlopen(dl, timeout=10)
+                _unsplash_requests += 1
+            except Exception:
+                pass
+            return {
+                "src": p["urls"]["regular"],
+                "alt": (p.get("alt_description") or query)[:120],
+                "credit_name": p["user"]["name"],
+                "credit_url": p["user"]["links"]["html"] + UTM,
+                "provider": "Unsplash",
+                "provider_url": "https://unsplash.com/" + UTM,
+            }
+        except urllib.error.HTTPError as e:
+            if e.code == 403:
+                wait = 65 * (attempt + 1)
+                print(f"  [rate limit] Unsplash 403 on attempt {attempt+1}. Waiting {wait}s...")
+                time.sleep(wait)
+                _unsplash_requests = 0
+                _unsplash_window_start = time.time()
+            else:
+                print(f"    unsplash fail '{query[:40]}': HTTP {e.code}")
+                return None
+        except Exception as e:
+            print(f"    unsplash fail '{query[:40]}': {str(e)[:60]}")
+            return None
+    return None
 
 
 def pexels_search(query):
@@ -88,6 +129,13 @@ def pexels_search(query):
             "provider": "Pexels",
             "provider_url": "https://www.pexels.com/",
         }
+    except urllib.error.HTTPError as e:
+        if e.code == 429:
+            print(f"  [rate limit] Pexels 429. Waiting 60s...")
+            time.sleep(60)
+        else:
+            print(f"    pexels fail '{query[:40]}': HTTP {e.code}")
+        return None
     except Exception as e:
         print(f"    pexels fail '{query[:40]}': {str(e)[:60]}")
         return None
@@ -97,7 +145,7 @@ def find_image(query, fallback=None):
     img = unsplash_search(query) or pexels_search(query)
     if not img and fallback and fallback != query:
         img = unsplash_search(fallback) or pexels_search(fallback)
-    time.sleep(1)
+    time.sleep(2)
     return img
 
 
