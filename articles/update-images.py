@@ -101,6 +101,27 @@ def find_image(query, fallback=None):
     return img
 
 
+def query_from_dalle_prompt(prompt):
+    """Extract a short Unsplash search query from a DALL-E image_prompt string.
+
+    Example input:
+      'Photograph of a 46-year-old woman eating pomegranate seeds at a kitchen counter...'
+    Example output:
+      'woman eating pomegranate kitchen healthy'
+    """
+    if not prompt:
+        return None
+    # Strip "Photograph of a XX-year-old woman" prefix
+    text = re.sub(r"Photograph of a \d+-year-old woman\s*", "", prompt, flags=re.IGNORECASE)
+    # Remove camera/technical specs (everything from "shot on" or "8K" onward)
+    text = re.split(r",?\s*(shot on|8K|no watermark|editorial|no CGI)", text, flags=re.IGNORECASE)[0]
+    # Take first 8 words, drop filler words
+    words = text.strip().split()[:10]
+    stop = {"a", "an", "the", "at", "in", "on", "with", "and", "or", "of", "from", "by", "her", "his"}
+    keywords = [w.strip(".,;:") for w in words if w.lower().strip(".,;:") not in stop][:6]
+    return "woman " + " ".join(keywords) if keywords else None
+
+
 # ── Product card image fix ────────────────────────────────────────────────────
 
 def fetch_product_image_map():
@@ -247,20 +268,27 @@ def main():
 
         # Cover image
         if not meta.get("resolved_cover"):
-            q = meta.get("image_query") or fallback
+            q = (meta.get("image_query")
+                 or query_from_dalle_prompt(meta.get("image_prompt"))
+                 or fallback)
             img = find_image(q, fallback)
             if img:
                 meta["resolved_cover"] = img
                 changed_meta = True
-                print(f"  COVER {slug} <- {img['provider']}: {img['credit_name']}")
+                print(f"  COVER {slug} <- {img['provider']}: {img['credit_name']} [{q[:50]}]")
             else:
-                print(f"  COVER {slug} <- NOT FOUND")
+                print(f"  COVER {slug} <- NOT FOUND (query: {q[:50]})")
         else:
             print(f"  COVER {slug} <- already resolved")
 
         # Body images
         if not meta.get("resolved_body"):
             queries = meta.get("body_image_queries") or []
+            # Fall back to extracting queries from DALL-E body prompts
+            if not queries:
+                dalle_prompts = meta.get("body_image_prompts") or []
+                queries = [query_from_dalle_prompt(p) for p in dalle_prompts if p]
+                queries = [q for q in queries if q]
             resolved = []
             for q in queries:
                 img = find_image(q, fallback)
