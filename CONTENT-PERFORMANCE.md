@@ -2,7 +2,61 @@
 
 ---
 
-## BATCH 2026-04-28 (Current)
+## BATCH 2026-04-29 (Current)
+
+### Batch Overview
+- Date: 2026-04-29
+- Articles written: 20/20
+- Publishing status: Ready -- run `bash scripts/qa-and-publish.sh 2026-04-29` from unrestricted network (IP allowlist blocks sandbox)
+- SEO audit: Complete (all 20 articles passed QA, 1800+ words each, 0 em/en dashes)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Immunity | 2 | Relief Tonic |
+| Gut | 2 | Happiest Gut |
+| Bone | 3 | Glow Shot, Calm Tonic |
+| Heart | 2 | Brain Tonic, Calm Tonic |
+| Liver | 1 | Liver Tonic |
+| Hormones | 3 | NAD+ Women's, NMN Cell Renew, Lean Muscle |
+| Sleep | 2 | Sleep Tonic |
+| Brain | 2 | Neuro Creamer |
+| Metabolism | 2 | NAD+ Women's, Lean Muscle |
+| Longevity | 2 | NAD+ Advanced, Relief Tonic |
+
+### Articles -- Batch 2026-04-29
+| # | Title | Slug | Cluster | Product | Words |
+|---|---|---|---|---|---|
+| 1 | Elderberry After 40: What the Research Actually Shows for Immune Health | elderberry-immune-support-after-40 | Immunity | relief-tonic | 1848 |
+| 2 | Exercise and the Immune System After 40: What the Research Shows | exercise-immune-system-after-40 | Immunity | relief-tonic | 1908 |
+| 3 | Postbiotics vs Probiotics vs Prebiotics After 40: What Each Does and Which Matters Most | postbiotics-vs-probiotics-vs-prebiotics-after-40 | Gut | happiest-gut | 1819 |
+| 4 | Calcium, K2, and Vitamin D3 After 40: Why the Synergy Matters More Than Any Supplement Alone | calcium-k2-d3-synergy-after-40 | Bone | glow-shot | 1866 |
+| 5 | How Estrogen Protects Bones and What Happens to Bone Loss After 40 | estrogen-bone-loss-after-40 | Bone | glow-shot | 1865 |
+| 6 | Magnesium and Bone Health After 40: The Mineral Most Bone Protocols Leave Out | magnesium-bone-health-after-40 | Bone | calm-tonic | 1819 |
+| 7 | CoQ10 and Heart Rhythm After 40: What the Research Shows for Cardiac Energy and Arrhythmia Risk | coq10-heart-rhythm-after-40 | Heart | brain-tonic | 1832 |
+| 8 | Magnesium and Heart Health After 40: Blood Pressure, Rhythm, and Arterial Stiffness | magnesium-heart-health-after-40 | Heart | calm-tonic | 1832 |
+| 9 | Phase 1 and Phase 2 Liver Detox After 40: How the Process Actually Works | phase-1-phase-2-liver-detox-after-40 | Liver | liver-tonic | 1832 |
+| 10 | Pregnenolone Steal Syndrome After 40: How Chronic Stress Depletes Your Hormones | pregnenolone-steal-syndrome-after-40 | Hormones | nad-women-longevity-formula | 1822 |
+| 11 | Signs of Low Progesterone After 40: What Your Body Is Telling You | signs-progesterone-low-after-40 | Hormones | nmn-cell-renew-tonic | 1835 |
+| 12 | Testosterone and Muscle Loss After 40: The Hormonal Connection Women Need to Understand | testosterone-muscle-connection-after-40 | Metabolism | lean-muscle-formula | 1820 |
+| 13 | Sleep Debt After 40: How It Builds, What It Costs, and How to Recover | sleep-debt-after-40 | Sleep | sleep-tonic | 1971 |
+| 14 | Non-REM Deep Sleep After 40: Why Slow-Wave Sleep Declines and How to Get More | non-rem-deep-sleep-after-40 | Sleep | sleep-tonic | 1919 |
+| 15 | Choline Deficiency After 40: Signs, Causes, and Why the Risk Increases with Menopause | choline-deficiency-signs-after-40 | Brain | neuro-creamer | 1812 |
+| 16 | Nootropics for Women Over 40: What the Evidence Actually Shows | nootropics-women-over-40 | Brain | neuro-creamer | 2029 |
+| 17 | How to Reverse Insulin Resistance After 40: The Evidence-Based Protocol | how-to-reverse-insulin-resistance-after-40 | Metabolism | nad-women-longevity-formula | 1900 |
+| 18 | Senolytics After 40: A Guide to Clearing Senescent Cells Naturally | senolytics-guide-after-40 | Longevity | nad-advanced-longevity-formula | 1826 |
+| 19 | How to Increase Gut Microbiome Diversity After 40 | how-to-increase-gut-diversity-after-40 | Gut | happiest-gut | 1875 |
+| 20 | Quercetin as a Senolytic After 40: The Evidence for Clearing Zombie Cells | quercetin-as-senolytic-after-40 | Longevity | relief-tonic | 1858 |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** Articles 16 (nootropics guide -- high commercial intent), 17 (insulin resistance -- strong supplement CTA), 12 (testosterone-muscle -- lean-muscle-formula bridge)
+- **Featured snippet candidates:** Articles 10 (pregnenolone steal definition), 11 (progesterone signs numbered list), 9 (Phase 1/2 detox explanation)
+- **High GEO extraction:** Articles 18 (senolytics mechanism), 20 (quercetin-senolytic Bcl-2 mechanism), 14 (glymphatic clearance deep sleep), 13 (sleep debt Van Dongen citation)
+- **Differentiated angles:** Articles 9 (enzyme-level liver detox), 10 (cortisol-hormone steal mechanism), 4 (Ca/K2/D3 synergy protocol)
+
+---
+
+## BATCH 2026-04-28 (Previous)
 
 ### Batch Overview
 - Date: 2026-04-28

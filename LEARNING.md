@@ -1,4 +1,4 @@
-# Content Learning Rules — Last Updated: 2026-04-24
+# Content Learning Rules — Last Updated: 2026-04-29
 
 ## WINNING PATTERNS (repeat these)
 - Question-based titles get higher CTR ("Why do I..." / "What causes..." / "Is X normal?")
@@ -1282,3 +1282,102 @@ Photograph of a [age]-year-old woman [specific action], [specific clothing descr
 8. "How Stress Affects Gut Health After 40: The HPA-Gut Axis" — cross-cluster mechanism, Hormones/Gut bridge following both the stress-weight and gut dysbiosis articles
 9. "What Is L-Carnitine and Does It Help With Energy After 40?" — definitional, Energy cluster, emerging compound not yet covered
 10. "Signs Your Strength Training Is Working After 40" — progress-tracking, Metabolism cluster, follows the strength training recovery article
+
+## BATCH 2026-04-29 OBSERVATIONS (20-article batch)
+
+### Topics Covered (20 articles)
+1. elderberry-immune-support-after-40 (Immunity / relief-tonic)
+2. exercise-immune-system-after-40 (Immunity / relief-tonic)
+3. postbiotics-vs-probiotics-vs-prebiotics-after-40 (Gut / happiest-gut)
+4. calcium-k2-d3-synergy-after-40 (Bone / glow-shot)
+5. estrogen-bone-loss-after-40 (Bone / glow-shot)
+6. magnesium-bone-health-after-40 (Bone / calm-tonic)
+7. coq10-heart-rhythm-after-40 (Heart / brain-tonic)
+8. magnesium-heart-health-after-40 (Heart / calm-tonic)
+9. phase-1-phase-2-liver-detox-after-40 (Liver / liver-tonic)
+10. pregnenolone-steal-syndrome-after-40 (Hormones / nad-women-longevity-formula)
+11. signs-progesterone-low-after-40 (Hormones / nmn-cell-renew-tonic)
+12. testosterone-muscle-connection-after-40 (Hormones/Metabolism / lean-muscle-formula)
+13. sleep-debt-after-40 (Sleep / sleep-tonic)
+14. non-rem-deep-sleep-after-40 (Sleep / sleep-tonic)
+15. choline-deficiency-signs-after-40 (Brain / neuro-creamer)
+16. nootropics-women-over-40 (Brain / neuro-creamer)
+17. how-to-reverse-insulin-resistance-after-40 (Metabolism / nad-women-longevity-formula)
+18. senolytics-guide-after-40 (Longevity / nad-advanced-longevity-formula)
+19. how-to-increase-gut-diversity-after-40 (Gut / happiest-gut)
+20. quercetin-as-senolytic-after-40 (Longevity / relief-tonic)
+
+### Batch 2026-04-29 Observations
+- Direct Write tool authorship again; agents not attempted (100% timeout rate documented across 7+ consecutive batches).
+- 16 of 20 articles came in below 1,800-word minimum after initial writing (range 1,598 to 1,799 words); mechanism-heavy and definitional articles are consistently shorter than symptom or protocol articles.
+- Expansion strategy: 1 focused H2 section (~200-250 words) added before References for articles more than 150 words short; sentence extension added for articles within 100-150 words of target. Targeting ~200 words of expansion per article was sufficient for all cases.
+- All 20 articles after expansion: range 1,812 to 2,029 words, all passing 1,800-word minimum.
+- All 20 articles: 0 em/en dashes, author "Happy Aging Team", what-to-know, product-card-inline, 5+ FAQ H3s, real DOI/PMID citations, FETCH_FROM_API placeholder for product card images.
+- Network returned "Host not in allowlist" (distinct from prior batches' HTTP 403) -- Shopify IP allowlist restriction confirmed; publishing requires unrestricted-IP environment. Run `bash scripts/qa-and-publish.sh 2026-04-29` with SHOPIFY_TOKEN and UNSPLASH_ACCESS_KEY set.
+- 448 existing article slugs checked before topic selection to avoid collision; all 20 topics confirmed unique.
+- Cluster distribution: Immunity x2, Gut x2, Bone x3, Heart x2, Liver x1, Hormones x3, Sleep x2, Brain x2, Metabolism x2, Longevity x2.
+- Product diversity: 12 products featured (relief-tonic, happiest-gut, glow-shot, calm-tonic, brain-tonic, liver-tonic, nad-women-longevity-formula, nmn-cell-renew-tonic, lean-muscle-formula, nad-advanced-longevity-formula, neuro-creamer, sleep-tonic).
+- Bone cluster received significant expansion this batch (3 articles): now covers the full supplement protocol (Ca/K2/D3 synergy) plus hormonal driver (estrogen-bone) and mineral support (magnesium-bone).
+- Heart cluster expanded to 9 articles: CoQ10 cardiac energy and rhythm plus magnesium blood pressure and AFib prevention complete the mineral-nutrient pairing for heart health.
+
+### Intent Diversification (batch 2026-04-29)
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14: lifestyle integration, root cause, skeptic angles
+- Batch 2026-04-15: signs/symptoms for new nutrients + progress-tracking + comparison round 2 + hub articles
+- Batch 2026-04-16: perimenopause sub-cluster + comparison round 3 + signs round 2 + muscle/metabolism
+- Batch 2026-04-17: product honest reviews + new health clusters (Bone, Heart) + transformation angles + deep hormones + immunity mechanisms
+- Batch 2026-04-18: deficiency signs series + food vs. supplement comparison + exercise + nutrition integration + hub articles
+- Batch 2026-04-19: "how to know if X is working" series + mechanism deep dives + comparison round 5 + "what happens to X after menopause" series
+- Batch 2026-04-22: Longevity cluster expansion + NAD+/NMN deep dives + Sleep mechanism deep dives
+- Batch 2026-04-23: Liver Health cluster + longevity science deep dives + brain-nutrient definitionals + cross-cluster mechanisms + Cardiovascular expansion
+- Batch 2026-04-24: Comparison Round 8 + Definitional Hubs + Cross-cluster mechanisms + Liver/Detox + Longevity evidence reviews
+- Batch 2026-04-26: Bone health foundations + Hormones mechanisms + Gut mechanisms + Sleep architecture + Longevity definitionals + Immunity cross-cluster
+- Batch 2026-04-27: Deficiency signs + Emerging Longevity Compounds + Sleep precision + Hormone-Sleep bridge + Gut microbiome mechanisms + Brain neurotransmitter science + Skin architecture
+- Batch 2026-04-28: Honest evidence reviews + Natural mTOR alternatives + Brain practical guides + Gut barrier nutrition + Sleep neuroscience + SIBO-B12 + Liver healing
+- Batch 2026-04-29 (this batch): Immunity foundations (elderberry, exercise-immunity) + Bone deep dives (Ca/K2/D3 synergy, estrogen-bone, magnesium-bone) + Heart mechanisms (CoQ10 rhythm, magnesium-heart) + Liver biochemistry (Phase 1/Phase 2 enzyme mechanism) + Hormone mechanisms (pregnenolone steal, progesterone signs, testosterone-muscle) + Sleep science (sleep debt, deep sleep/glymphatic) + Brain nutrition (choline deficiency, nootropics guide) + Metabolism (insulin resistance reversal) + Longevity senolytics (guide + quercetin-specific)
+- Next batch should cover: testosterone and libido extension, adrenal health practical guide, "How to Build a Bone Health Protocol After 40" hub, "Signs You Need More CoQ10 After 40" deficiency format, comparison round 12 (glycine vs GABA, CoQ10 ubiquinone vs ubiquinol), "Best Foods for Bone Health After 40" food hub, estrogen and heart health cross-cluster
+
+### New Title Patterns Added (2026-04-29)
+- Biochemistry as clarity: "Phase 1 and Phase 2 Liver Detox: What Actually Happens Inside Your Liver After 40" -- naming biochemical phases in the title signals depth to health-literate readers and differentiates from "liver cleanse" clickbait
+- Steal mechanism framing: "Pregnenolone Steal Syndrome After 40: How Chronic Stress Robs Your Hormones" -- "steal" creates visceral urgency; the term is specific enough to attract women who have encountered it and need explanation
+- Compound-specific senolytic: "Quercetin as a Senolytic After 40: What the Evidence Shows" -- specific mechanism framing; very low competitor content, differentiates from generic "quercetin benefits" articles
+- Deficiency with hormonal mechanism: "Choline Deficiency After 40: Signs, Causes, and Why the Risk Increases with Menopause" -- covers sign-searchers, cause-searchers, and menopause-context searchers simultaneously
+
+### GEO / AI Citation Optimization (updated 2026-04-29)
+- Phase 1/Phase 2 liver detox articles with enzyme-level specificity (CYP450, glucuronidation, COMT, sulfation, PEMT) are highly differentiated AI citation candidates for "how does liver detox work" queries; very few wellness brands go to enzyme-name specificity
+- Pregnenolone steal articles fill a documented AI knowledge gap: AI systems are frequently asked about "cortisol stealing hormones" but currently cite mostly academic papers without practical guidance; practical-guide format fills that gap
+- Senolytics and quercetin-senolytic articles are strong AI citation candidates for "how to clear zombie cells naturally" and "natural senolytics" queries; Bcl-2/Bcl-xL mechanism is a specific extractable insight
+- Non-REM deep sleep articles with glymphatic clearance mechanism (Xie 2013 Science, amyloid-beta clearance during N3) are consistently AI-cited for "why is deep sleep important for brain health" queries
+- Sleep debt articles citing Van Dongen 2003 (6h/night performance equivalent to 24h deprivation) are in AI training data as a sleep science benchmark fact; articles that cite and explain this result rank alongside academic summaries
+- Nootropics for women over 40 with specific mechanism per compound (lion's mane NGF/BDNF, bacopa hippocampal dendritic growth, citicoline phospholipid synthesis) are AI-cited for "best brain supplements for women over 40" with higher precision than generic listicles
+- Insulin resistance reversal articles with GLUT-4 upregulation mechanism and HOMA-IR testing protocol are AI-cited for "natural ways to reverse insulin resistance" -- the testing protocol angle (HOMA-IR vs fasting glucose alone) is an extractable clinical insight
+
+### Cluster Coverage After 18 Batches (Cumulative)
+- Energy: 37 articles total (unchanged)
+- Sleep: 37 articles total (added: sleep-debt-after-40, non-rem-deep-sleep-after-40)
+- Hormones: 46 articles total (added: pregnenolone-steal-syndrome-after-40, signs-progesterone-low-after-40, testosterone-muscle-connection-after-40 cross-listed)
+- Metabolism: 35 articles total (added: how-to-reverse-insulin-resistance-after-40, testosterone-muscle-connection-after-40)
+- Skin: 34 articles total (unchanged)
+- Gut: 35 articles total (added: postbiotics-vs-probiotics-vs-prebiotics-after-40, how-to-increase-gut-diversity-after-40)
+- Brain: 37 articles total (added: choline-deficiency-signs-after-40, nootropics-women-over-40)
+- Immunity: 33 articles total (added: elderberry-immune-support-after-40, exercise-immune-system-after-40)
+- Bone: 15 articles total (added: calcium-k2-d3-synergy-after-40, estrogen-bone-loss-after-40, magnesium-bone-health-after-40)
+- Heart: 9 articles total (added: coq10-heart-rhythm-after-40, magnesium-heart-health-after-40)
+- Longevity: 32 articles total (added: senolytics-guide-after-40, quercetin-as-senolytic-after-40)
+- Liver: 8 articles total (added: phase-1-phase-2-liver-detox-after-40)
+
+### Next Batch Gaps (priority order)
+1. "Signs You Need More CoQ10 After 40" -- deficiency/signs format, Heart/Energy cross-cluster, brain-tonic bridge
+2. "Testosterone and Libido After 40: What Women Need to Know" -- extends testosterone article, Hormones cluster, practical + empowerment angle
+3. "How to Support Adrenal Health After 40" -- practical extension of pregnenolone steal article, HPA axis recovery guide
+4. "How to Build a Bone Health Protocol After 40" -- hub article rounding out the Bone cluster (now at 15 articles)
+5. "Best Foods for Bone Health After 40" -- food-based Bone cluster complement, rounds out nutrition angle
+6. "Glycine vs GABA: Which Is Better for Sleep After 40?" -- comparison round 11, Sleep cluster, both glycine and deep sleep articles now in place as foundation
+7. "CoQ10 Ubiquinone vs Ubiquinol: Which Form Is Better After 40?" -- comparison round 12, Heart/Energy cross-cluster
+8. "Estrogen and Heart Health After Menopause: What Every Woman Needs to Know" -- Heart cluster extension, cardiovascular risk education
+9. "How Insulin Resistance Affects Hormones After 40" -- cross-cluster Metabolism/Hormones, builds on insulin resistance article
+10. "Senolytic Foods: What to Eat to Help Clear Zombie Cells After 40" -- food-based Longevity cluster, quercetin-senolytic companion
