@@ -35,6 +35,18 @@ if not UNSPLASH_KEY and not PEXELS_KEY:
 # ── Topic → visual query mapping ──────────────────────────────────────────────
 # Maps slug keywords to specific, relevant Unsplash/Pexels search queries.
 
+BLOCKED_TERMS = {
+    "nude", "naked", "topless", "nudity", "lingerie", "bikini",
+    "underwear", "explicit", "adult content", "erotic", "sensual",
+    "sexy", "sexual", "pornographic", "nsfw",
+}
+
+
+def is_safe(alt_text):
+    text = (alt_text or "").lower()
+    return not any(t in text for t in BLOCKED_TERMS)
+
+
 TOPIC_QUERIES = {
     "nad":              ["woman energy vitality morning healthy", "woman taking supplement kitchen"],
     "nmn":              ["woman energy vitality healthy aging", "woman supplement morning routine"],
@@ -138,7 +150,10 @@ def pexels_search(query):
             photos = data.get("photos") or []
             if not photos:
                 return None
-            p = photos[0]
+            safe = [p for p in photos if is_safe(p.get("alt", ""))]
+            if not safe:
+                return None
+            p = safe[0]
             return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
         except urllib.error.HTTPError as e:
             if e.code == 429:
@@ -167,9 +182,10 @@ def unsplash_search(query):
             data = json.loads(urllib.request.urlopen(req, timeout=15).read())
             _unsplash_req += 1
             results = data.get("results") or []
-            if not results:
+            safe = [p for p in results if is_safe(p.get("alt_description", ""))]
+            if not safe:
                 return None
-            p = results[0]
+            p = safe[0]
             try:
                 dl = urllib.request.Request(p["links"]["download_location"],
                     headers={"Authorization": f"Client-ID {UNSPLASH_KEY}"})

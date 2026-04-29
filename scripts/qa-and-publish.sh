@@ -21,6 +21,55 @@ echo "Started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee "$LOG_FILE"
 echo "[0/6] Pulling latest from git..."
 git pull origin main --quiet
 
+# Step 0a: PMID validation — verify citations resolve on PubMed
+echo "[0a] Validating PMIDs in batch ${BATCH_DATE} articles..."
+python3 << 'PYEOF'
+import re, glob, os, urllib.request, urllib.error, time
+
+batch_date = os.environ.get("BATCH_DATE", "")
+pattern = f"articles/*-final.html" if not batch_date else f"articles/*-final.html"
+
+# Collect PMIDs from all -final.html files for today's batch slugs
+report = f"articles/batch-{batch_date}-report.md" if batch_date else None
+slugs = set()
+if report and os.path.exists(report):
+    for line in open(report):
+        m = re.search(r'\|\s*\d+\s*\|.*?\|\s*([a-z0-9-]+)\s*\|', line)
+        if m:
+            slugs.add(m.group(1).strip())
+
+files = [f"articles/{s}-final.html" for s in slugs if os.path.exists(f"articles/{s}-final.html")]
+if not files:
+    files = sorted(glob.glob("articles/*-final.html"))
+
+removed_total = 0
+for f in files:
+    body = open(f).read()
+    pmids = set(re.findall(r'PMID[:\s]+(\d{7,8})', body))
+    changed = False
+    for pmid in pmids:
+        try:
+            url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+            req = urllib.request.Request(url, method="HEAD",
+                headers={"User-Agent": "Mozilla/5.0"})
+            urllib.request.urlopen(req, timeout=8)
+            time.sleep(0.3)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                body = re.sub(
+                    r'<li[^>]*>[^<]*(?:<[^>]*>)*[^<]*PMID[:\s]+' + pmid + r'.*?</li>\s*',
+                    '', body, flags=re.DOTALL)
+                print(f"  REMOVED fake PMID {pmid} from {os.path.basename(f)}")
+                removed_total += 1
+                changed = True
+        except Exception:
+            pass
+    if changed:
+        open(f, "w").write(body)
+
+print(f"  PMID check done. Removed {removed_total} unresolvable citations.")
+PYEOF
+
 # Step 1: Fetch realistic stock photos (Unsplash primary, Pexels fallback)
 echo "[1/6] Fetching stock photos (Unsplash + Pexels)..."
 python3 << 'PYEOF'
@@ -34,6 +83,17 @@ if not unsplash_key and not pexels_key:
 
 UTM = "?utm_source=happy_aging&utm_medium=referral"
 
+# Images containing any of these terms in alt/description are rejected
+BLOCKED_TERMS = {
+    "nude", "naked", "topless", "nudity", "lingerie", "bikini",
+    "underwear", "explicit", "adult content", "erotic", "sensual",
+    "sexy", "sexual", "pornographic", "nsfw",
+}
+
+def is_safe(img):
+    text = ((img.get("alt_description") or "") + " " + (img.get("description") or "")).lower()
+    return not any(t in text for t in BLOCKED_TERMS)
+
 def unsplash_search(query):
     if not unsplash_key: return None
     try:
@@ -42,8 +102,10 @@ def unsplash_search(query):
         req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("results"): return None
-        p = data["results"][0]
-        # Unsplash ToS: ping download_location to credit the photographer
+        # Pick first result that passes safety check
+        safe = [p for p in data["results"] if is_safe(p)]
+        if not safe: return None
+        p = safe[0]
         try:
             dl = urllib.request.Request(p["links"]["download_location"],
                 headers={"Authorization": f"Client-ID {unsplash_key}"})
@@ -64,11 +126,15 @@ def pexels_search(query):
     if not pexels_key: return None
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
-            "query": query, "orientation": "landscape", "per_page": 5})
+            "query": query, "orientation": "landscape", "per_page": 10})
         req = urllib.request.Request(url, headers={"Authorization": pexels_key})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("photos"): return None
-        p = data["photos"][0]
+        # Pick first result whose alt passes safety check
+        safe = [p for p in data["photos"]
+                if not any(t in (p.get("alt") or "").lower() for t in BLOCKED_TERMS)]
+        if not safe: return None
+        p = safe[0]
         return {
             "src": p["src"]["large2x"],
             "alt": (p.get("alt") or query)[:120],
