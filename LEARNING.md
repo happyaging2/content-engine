@@ -469,51 +469,33 @@
 - Every article must have 3-4 images throughout the text, ALL featuring women
 - Verify EVERY image URL works before publishing (curl -sI [url] should return 200)
 
-### DALL-E IMAGE PROMPTS — REALISTIC PHOTOGRAPHY FORMULA (updated 2026-04-16)
+### IMAGE QUERIES FOR STOCK PHOTOS (updated 2026-04-29)
 
-Generic phrases like "photorealistic wellness lifestyle photography" produce AI-looking, soft, unrealistic results. Use this formula instead:
+Images are fetched from Pexels (primary) and Unsplash (fallback) using search queries.
+Do NOT generate DALL-E prompts. Do NOT use `image_prompt` or `body_image_prompts`.
 
-**Formula:**
-```
-Photograph of a [age]-year-old woman [specific action], [specific clothing description], [specific setting with props/textures], [lighting description], editorial [type] photography, shot on [camera] [focal length] [aperture], [skin/subject detail], 8K resolution, no watermark, no text, no CGI
-```
+**Use these fields in meta.json:**
+- `image_query` — 4-6 words for the cover photo
+- `body_image_queries` — list of 3-4 queries, one per body section image
 
-**Camera options (rotate to avoid repetition):**
-- Canon EOS R5 85mm f/1.4 — portraits, skin detail, bokeh
-- Sony A7IV 50mm f/1.8 — versatile, natural, documentary
-- Canon EOS R6 35mm f/2 — environment context, candid
-- Fujifilm X-T5 50mm f/1.8 — editorial, slightly warm tone
-- Canon EOS R6 100mm macro f/2.8 — close-up detail (nails, skin, food)
+**Query rules:**
+- Always start with "woman" to ensure female subjects
+- Use specific visual terms: action + setting + context
+- Match the article topic: exercise article → gym/fitness query; sleep article → bedroom/rest query
+- Avoid brand names, medical imagery, pills/capsules
+- Keep queries short and visual (not descriptive prose)
 
-**Lighting options:**
-- natural window light from left/right
-- soft diffused morning light
-- warm golden hour sunlight
-- warm bedside lamp light (evening)
-- bright overhead kitchen lighting
-
-**Style descriptors (pick one):**
-- editorial wellness photography
-- editorial fitness photography
-- editorial food and wellness photography
-- documentary editorial style
-- editorial beauty wellness photography
-- editorial health photography
-
-**Key rules:**
-- Start with "Photograph of" (NOT "A photo of", NOT "photorealistic")
-- Specify exact age (43-year-old, NOT "in her 40s")
-- Always specify the clothing in detail
-- Always name a specific camera + focal length + aperture
-- End with: 8K resolution, no watermark, no text, no CGI
-- NEVER use: "wellness lifestyle photography", "photorealistic", "high quality" alone — these produce generic AI look
-- Body image prompts should each show a DIFFERENT scene and camera to avoid repetition
-
-**Example (good):**
-`Photograph of a 44-year-old woman holding a small amber glass supplement bottle with both hands, seated at a bright kitchen counter with fresh herbs nearby, wearing casual everyday clothing, warm natural window light, editorial product-in-lifestyle photography, shot on Canon EOS R5 85mm f/1.4, natural skin texture, no makeup filter, 8K resolution, no watermark, no text, no CGI`
-
-**Example (bad — avoid):**
-`A woman in her 40s taking supplements in the kitchen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, high quality`
+**Examples by topic:**
+- NAD+/energy: `"woman energy morning vitality healthy"`, `"woman supplement kitchen wellness"`
+- Exercise/recovery: `"woman lifting weights gym fitness"`, `"woman post workout stretch"`
+- Gut health: `"woman healthy eating vegetables nutrition"`, `"woman digestive wellness food"`
+- Sleep: `"woman sleeping peaceful bedroom night"`, `"woman evening routine calm rest"`
+- Skin: `"woman glowing skin beauty natural"`, `"woman skincare radiant face"`
+- Brain/memory: `"woman reading focus concentration desk"`, `"woman brain health mental clarity"`
+- Hormones/perimenopause: `"woman midlife wellness balance nature"`, `"woman calm healthy aging"`
+- Stress/cortisol: `"woman meditation calm relaxation nature"`, `"woman stress relief yoga"`
+- Liver: `"woman healthy detox nutrition tea"`, `"woman liver wellness food"`
+- Bone/strength: `"woman strength training weights gym"`, `"woman active outdoor fitness"`
 
 ### PRODUCT CARD IMAGE (CRITICAL — NEVER USE GENERIC CAPSULE)
 - BEFORE writing ANY product card, fetch the real product image:
