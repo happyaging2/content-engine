@@ -250,54 +250,142 @@ for f in sorted(glob.glob("articles/*-final.html")):
 print(f"  Removed {removed} fake DOIs")
 PYEOF
 
-# Step 4: Insert stock body images into HTML from meta.resolved_body
-echo "[4/6] Inserting stock body images into articles..."
+# Step 4: Insert section-relevant body images and inject FAQ schema + meta description
+echo "[4/6] Inserting section images, FAQ schema, and meta description..."
 python3 << 'PYEOF'
-import json, glob, os, re
+import json, glob, os, re, time, urllib.request, urllib.parse, urllib.error
 
-inserted = 0
+pexels_key   = os.environ.get("PEXELS_API_KEY", "")
+unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+
+BLOCKED_TERMS = {"nude","naked","topless","nudity","lingerie","bikini",
+                 "underwear","explicit","erotic","sensual","sexy","sexual","nsfw"}
+
+def pexels_search(query):
+    if not pexels_key: return None
+    try:
+        url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
+            {"query": query, "orientation": "landscape", "per_page": 10})
+        req = urllib.request.Request(url, headers={"Authorization": pexels_key})
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        safe = [p for p in (data.get("photos") or [])
+                if not any(t in (p.get("alt") or "").lower() for t in BLOCKED_TERMS)]
+        if not safe: return None
+        p = safe[0]
+        return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
+    except Exception: return None
+
+def unsplash_search(query):
+    if not unsplash_key: return None
+    try:
+        url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode(
+            {"query": query, "orientation": "landscape", "per_page": 10, "content_filter": "high"})
+        req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        safe = [p for p in (data.get("results") or [])
+                if not any(t in (p.get("alt_description") or "").lower() for t in BLOCKED_TERMS)]
+        if not safe: return None
+        p = safe[0]
+        return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120]}
+    except Exception: return None
+
+def find_image(query):
+    img = pexels_search(query) or unsplash_search(query)
+    time.sleep(1.2)
+    return img
+
+def h2_to_query(h2_text):
+    skip = {"what","why","how","the","a","an","and","or","of","to","is","are",
+            "for","after","with","your","that","in","on","at","by","does","do",
+            "can","will","about","from","this","40","over","women","woman"}
+    words = [w.strip(".,?:!-()") for w in h2_text.split()
+             if w.lower().strip(".,?:!-()") not in skip and len(w) > 2][:5]
+    return "woman " + " ".join(words).lower() + " wellness"
+
+def extract_faq_pairs(html):
+    faq = re.search(
+        r'<h2[^>]*>Frequently Asked Questions</h2>(.*?)(?:<h2[^>]*>References|$)',
+        html, re.DOTALL | re.IGNORECASE)
+    if not faq: return []
+    pairs = []
+    for m in re.finditer(r'<h3[^>]*>(.*?)</h3>\s*<p[^>]*>(.*?)</p>', faq.group(1), re.DOTALL):
+        q = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        a = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(2))).strip()
+        if q and a and len(q) > 10:
+            pairs.append((q, a))
+    return pairs
+
+def build_faq_schema(pairs):
+    schema = {"@context": "https://schema.org", "@type": "FAQPage",
+              "mainEntity": [{"@type": "Question", "name": q,
+                              "acceptedAnswer": {"@type": "Answer", "text": a}}
+                             for q, a in pairs]}
+    return ('\n<script type="application/ld+json">\n'
+            + json.dumps(schema, ensure_ascii=False, indent=2) + '\n</script>\n')
+
+def meta_description(html, max_chars=155):
+    m = re.search(r'<p[^>]*>(.*?)</p>', html, re.DOTALL)
+    if not m: return ""
+    text = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(1))).strip()
+    if len(text) <= max_chars: return text
+    return text[:max_chars].rsplit(' ', 1)[0].rstrip('.,;:') + '...'
+
+inserted = schema_added = 0
 for mf in sorted(glob.glob("articles/*.meta.json")):
     meta = json.load(open(mf))
     slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
+    title = meta.get("title", slug)
     html_file = f"articles/{slug}-final.html"
     if not os.path.exists(html_file): continue
 
-    imgs = meta.get("resolved_body") or []
-    if not imgs: continue
-
     body = open(html_file).read()
 
-    # Scrub legacy DALL-E placeholders from prior runs
-    body = re.sub(
-        r'\s*<!-- DALLE_BODY_IMG:[^>]*-->\s*<img[^>]*PENDING_DALLE_UPLOAD[^>]*>\s*',
-        "\n", body)
+    # Remove legacy figcaptions and old stock images
+    body = re.sub(r'<figcaption[^>]*>.*?</figcaption>', '', body, flags=re.DOTALL)
+    body = re.sub(r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
+                  '\n', body, flags=re.DOTALL)
 
-    if "article-stock-image" in body:
-        open(html_file, "w").write(body)
-        continue
+    # Insert section-relevant images
+    skip_h2s = {"frequently asked questions", "references", "faq"}
+    h2_matches = [(m.end(), re.sub(r'<[^>]+>', '', m.group(1)).strip())
+                  for m in re.finditer(r'<h2[^>]*>(.*?)</h2>', body, re.DOTALL)
+                  if re.sub(r'<[^>]+>', '', m.group(1)).strip().lower() not in skip_h2s]
 
-    h2s = [m.end() for m in re.finditer(r"</h2>", body)]
-    if len(h2s) < 2: continue
-
-    step = max(1, len(h2s) // (len(imgs) + 1))
-    insert_points = h2s[step::step][:len(imgs)]
-
-    for img, pos in zip(reversed(imgs), reversed(insert_points)):
-        alt = (img.get("alt") or meta.get("title", ""))[:140].replace('"', "'")
-        figure = (
-            f'\n<figure class="article-stock-image" style="margin:24px 0">'
-            f'<img src="{img["src"]}" alt="{alt}" style="width:100%;border-radius:12px;display:block">'
-            f'<figcaption style="font-size:12px;color:#888;margin-top:6px">'
-            f'Photo by <a href="{img["credit_url"]}" rel="nofollow noopener">{img["credit_name"]}</a> '
-            f'on <a href="{img["provider_url"]}" rel="nofollow noopener">{img["provider"]}</a>'
-            f'</figcaption></figure>\n'
-        )
-        body = body[:pos] + figure + body[pos:]
-
-    open(html_file, "w").write(body)
+    targets = h2_matches[1:4]  # skip first H2, max 3 images
+    offset = 0
+    for pos, h2_text in targets:
+        query = h2_to_query(h2_text)
+        img = find_image(query)
+        if not img: continue
+        alt = img.get("alt", title)[:140].replace('"', "'")
+        figure = (f'\n<figure class="article-stock-image" style="margin:24px 0">'
+                  f'<img src="{img["src"]}" alt="{alt}" '
+                  f'style="width:100%;border-radius:12px;display:block">'
+                  f'</figure>\n')
+        insert_at = pos + offset
+        body = body[:insert_at] + figure + body[insert_at:]
+        offset += len(figure)
     inserted += 1
 
-print(f"  Inserted stock body images into {inserted} articles")
+    # FAQ Schema
+    pairs = extract_faq_pairs(body)
+    if pairs:
+        body = re.sub(
+            r'\s*<script type="application/ld\+json">\s*\{[^}]*"FAQPage".*?</script>\s*',
+            '\n', body, flags=re.DOTALL)
+        schema_block = build_faq_schema(pairs)
+        body = re.sub(r'(<h2[^>]*>Frequently Asked Questions</h2>)',
+                      schema_block + r'\1', body, flags=re.IGNORECASE)
+        schema_added += 1
+
+    # Meta description saved to meta.json for use at publish time
+    meta["meta_description"] = meta_description(body)
+    json.dump(meta, open(mf, "w"), indent=2, ensure_ascii=False)
+
+    open(html_file, "w").write(body)
+
+print(f"  Section images injected: {inserted} articles")
+print(f"  FAQ schema added: {schema_added} articles")
 PYEOF
 
 # Step 5: Publish to Shopify (articles + covers)
@@ -331,7 +419,10 @@ for mf in metas:
     tags = meta.get("tags","")
     if isinstance(tags, list): tags = ", ".join(tags)
 
-    payload = {"article": {"title": title, "body_html": body, "author": "Happy Aging Team", "tags": tags, "published": True, "template_suffix": "timeline"}}
+    summary = meta.get("meta_description", "")[:155]
+    payload = {"article": {"title": title, "body_html": body, "summary_html": summary,
+               "author": "Happy Aging Team", "tags": tags, "published": True,
+               "template_suffix": "timeline"}}
 
     # Cover image: prefer resolved stock URL; fall back to legacy local file
     cover = meta.get("resolved_cover")
