@@ -2,7 +2,61 @@
 
 ---
 
-## BATCH 2026-04-29 (Current)
+## BATCH 2026-04-30 (Current)
+
+### Batch Overview
+- Date: 2026-04-30
+- Articles written: 20/20
+- Publishing status: Ready -- run `python3 scripts/batch-2026-04-30-publish.py` from unrestricted network (SHOPIFY_TOKEN required)
+- SEO audit: Complete (all 20 articles passed QA, 1804 to 1911 words each, 0 em/en dashes)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Hormones | 3 | NMN Cell Renew, Calm Tonic |
+| Bone | 3 | Glow Shot |
+| Sleep | 3 | Sleep Tonic |
+| Longevity | 3 | NAD+ Advanced, NMN Cell Renew |
+| Brain | 2 | Neuro Creamer |
+| Gut | 2 | Happiest Gut |
+| Cardiovascular | 1 | NAD+ Women's |
+| Metabolism | 1 | NAD+ Women's |
+| Energy | 1 | Longevity Shots |
+| Skin | 1 | Radiance Tonic |
+
+### Articles -- Batch 2026-04-30
+| # | Title | Slug | Cluster | Product | Words |
+|---|---|---|---|---|---|
+| 1 | Testosterone and Libido After 40: What Women Need to Know | testosterone-libido-after-40-women | Hormones | nmn-cell-renew-tonic | 1861 |
+| 2 | Adrenal Recovery Protocol After 40: A Step-by-Step Guide for Women | adrenal-recovery-protocol-after-40 | Hormones | calm-tonic | 1881 |
+| 3 | Bone Health Protocol After 40: The Complete Guide for Women | bone-health-protocol-after-40 | Bone | glow-shot | 1838 |
+| 4 | Glycine vs GABA for Sleep After 40: Which Works Better? | glycine-vs-gaba-sleep-after-40 | Sleep | sleep-tonic | 1882 |
+| 5 | Best Foods for Bone Health After 40: Beyond Calcium and Dairy | best-foods-bone-health-after-40 | Bone | glow-shot | 1852 |
+| 6 | Estrogen and Heart Health After Menopause: What Every Woman Should Know | estrogen-heart-health-after-menopause | Cardiovascular | nad-women-longevity-formula | 1885 |
+| 7 | Senolytic Foods After 40: Eating to Clear Zombie Cells | senolytic-foods-after-40 | Longevity | nad-advanced-longevity-formula | 1857 |
+| 8 | NMN and Brain Health: Cognitive Benefits After 40 | nmn-brain-cognitive-benefits-after-40 | Brain | neuro-creamer | 1835 |
+| 9 | What Is TMG (Trimethylglycine)? Benefits After 40 for Women | what-is-trimethylglycine-tmg-after-40 | Longevity | nmn-cell-renew-tonic | 1856 |
+| 10 | Sleep Apnea in Women Over 40: The Overlooked Epidemic | sleep-apnea-women-over-40 | Sleep | sleep-tonic | 1804 |
+| 11 | Collagen for Tendons and Ligaments After 40: The Research | collagen-for-tendons-ligaments-after-40 | Bone | glow-shot | 1847 |
+| 12 | Insulin Resistance and Hormones After 40: The Hidden Connection | insulin-resistance-hormones-connection-after-40 | Metabolism | nad-women-longevity-formula | 1822 |
+| 13 | L-Carnitine and Energy After 40: Benefits for Women | l-carnitine-energy-after-40 | Energy | longevity-shots | 1882 |
+| 14 | L-Glutamine and Gut Healing After 40: What the Research Shows | l-glutamine-gut-healing-after-40 | Gut | happiest-gut | 1813 |
+| 15 | Vitamin E and Skin Health After 40: Beyond the Basics | vitamin-e-skin-after-40 | Skin | radiance-tonic | 1852 |
+| 16 | What Is Alpha-Ketoglutarate (AKG)? Longevity Benefits After 40 | what-is-alpha-ketoglutarate-aging-after-40 | Longevity | nad-advanced-longevity-formula | 1879 |
+| 17 | How Blood Sugar Disrupts Sleep After 40 (And What to Do) | how-blood-sugar-disrupts-sleep-after-40 | Sleep | sleep-tonic | 1843 |
+| 18 | Adaptogens Guide for Women Over 40: Which Ones Actually Work | adaptogens-guide-women-over-40 | Hormones | calm-tonic | 1911 |
+| 19 | What Is Phosphatidylcholine? Brain and Liver Benefits After 40 | what-is-phosphatidylcholine-brain-after-40 | Brain | neuro-creamer | 1863 |
+| 20 | The Gut-Immune Connection After 40: Why Your Microbiome Drives Immunity | gut-immune-connection-after-40 | Gut | happiest-gut | 1822 |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** testosterone-libido-after-40-women (NMN Cell Renew, high search intent), adaptogens-guide-women-over-40 (Calm Tonic, broad guide format), glycine-vs-gaba-sleep-after-40 (Sleep Tonic, direct comparison CTA)
+- **Featured snippet candidates:** glycine-vs-gaba-sleep-after-40 (head-to-head comparison answer box), what-is-trimethylglycine-tmg-after-40 (definition query), what-is-alpha-ketoglutarate-aging-after-40 (mechanism definition)
+- **High GEO extraction:** estrogen-heart-health-after-menopause (eNOS/endothelial mechanism), nmn-brain-cognitive-benefits-after-40 (NMNAT pathway), senolytic-foods-after-40 (SASP + pulse dosing protocol)
+- **Internal linking bridges:** what-is-trimethylglycine-tmg-after-40 -> existing NMN articles; collagen-for-tendons-ligaments-after-40 -> bone-health-protocol; gut-immune-connection-after-40 -> gut-dysbiosis and postbiotics articles
+
+---
+
+## BATCH 2026-04-29 (Previous)
 
 ### Batch Overview
 - Date: 2026-04-29
