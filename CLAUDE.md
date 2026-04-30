@@ -43,12 +43,37 @@ cd /path/to/content-engine && bash scripts/qa-and-publish.sh [YYYY-MM-DD]
 Required env vars: `SHOPIFY_TOKEN`, `UNSPLASH_ACCESS_KEY`. Optional:
 `PEXELS_API_KEY` (fallback when Unsplash has no result).
 
+For daily automation: `scripts/daily-publish.sh` (cron-ready, lock file, logging).
+Cron: `0 8 * * * bash ~/Desktop/content-engine/scripts/daily-publish.sh`
+
 ### Images
-Article cover and body images are fetched from **Unsplash** (primary) with
-**Pexels** as fallback. The writer emits `image_query` and
-`body_image_queries` in each `*.meta.json`; the publish script resolves them
-to real stock photo URLs and injects them with photographer credit. No more
-AI-generated images.
+Article cover and body images are fetched from **Pexels** (primary) with
+**Unsplash** as fallback. The writer emits `image_query` and
+`body_image_queries` in each `*.meta.json`.
+
+**Image safety rules (enforced in both scripts):**
+- Queries must use lifestyle / food / activity language only — NO "supplement", "bottle", "product", "vitamin", "pill"
+- `BLOCKED_TERMS`: rejects any alt text containing product/bottle/medical/explicit/off-brand terms
+- `COMPETITOR_BRANDS`: rejects OSH Wellness, Missha, VigorVault, Thorne, Jarrow, GNC, and 20+ others
+- `TOPIC_QUERIES` map in `articles/update-images.py`: slug keyword → 2 curated lifestyle queries
+- To re-fetch all images (e.g. after brand safety incident): clear `resolved_cover`/`resolved_body` from `*.meta.json`, then re-run `update-images.py`
+
+**Acceptable imagery:** woman in nature, cooking, yoga, reading, portrait, walking, eating healthy food.  
+**Never use:** supplement bottles, product shots, hands holding anything, medical/clinical settings, tattoos, book covers.
+
+### SEO (injected at publish time by qa-and-publish.sh Step 4)
+- **FAQ JSON-LD schema** — FAQPage structured data before FAQ H2
+- **Meta description** — first paragraph, ≤155 chars, saved to `meta.json` → `summary_html`
+- **Section images** — one per H2 section (skips first + FAQ/References), derived from H2 text
+
+### One-time fixes for already-published articles
+```bash
+# Fix SEO (schema + meta description + section images) on all published articles:
+SHOPIFY_TOKEN=... PEXELS_API_KEY=... python3 articles/patch-seo.py
+
+# Re-fetch all images (brand safety refresh):
+SHOPIFY_TOKEN=... PEXELS_API_KEY=... python3 articles/update-images.py
+```
 
 Raw endpoint (parametrize in shell):
 ```bash
@@ -65,4 +90,6 @@ curl -X POST "https://${SHOPIFY_STORE}/admin/api/2024-01/blogs/${BLOG_ID}/articl
 - No medical claims without citations
 - No invented statistics
 - Max 20 articles per batch
-- Template suffix: timeline
+- Template suffix: `timeline`
+- Brand is **premium** — images must reflect that (no product bottles, no tattoos, no book covers, no competitor brands)
+- Content writer must use `image_query` + `body_image_queries` (NOT `image_prompt` / DALL-E prompts)
