@@ -88,11 +88,36 @@ BLOCKED_TERMS = {
     "nude", "naked", "topless", "nudity", "lingerie", "bikini",
     "underwear", "explicit", "adult content", "erotic", "sensual",
     "sexy", "sexual", "pornographic", "nsfw",
+    "belly", "abdomen", "navel", "torso", "bare skin", "bare stomach",
+    "cesarean", "c-section", "surgical scar", "scar", "wound", "surgery",
+    "stretch mark", "skin close", "close-up skin", "skin texture",
+    "supplement", "vitamin", "capsule", "pill", "tablet",
+    "bottle", "vial", "jar", "tube", "container", "packaging",
+    "product", "serum bottle", "cosmetic bottle", "beauty bottle",
+    "holding bottle", "holding vial", "holding supplement",
+    "tattoo", "tattooed", "tattoos",
+    "book cover", "dopamine detox",
+    "hospital", "clinic", "medicine",
 }
 
-def is_safe(img):
-    text = ((img.get("alt_description") or "") + " " + (img.get("description") or "")).lower()
-    return not any(t in text for t in BLOCKED_TERMS)
+COMPETITOR_BRANDS = {
+    "vigorvault", "vigor vault", "nmn revive", "nmn activ", "lifeextension",
+    "life extension", "thorne", "jarrow", "now foods", "garden of life",
+    "nature's bounty", "gnc", "optimum nutrition", "ritual",
+    "elysium", "tru niagen", "alive by science", "wonderfeel", "donotage",
+    "do not age", "renue", "maac10",
+    "osh wellness", "osh ", "missha",
+    "neocell", "youtheory", "vital proteins", "sports research",
+    "swanson", "solgar", "natrol", "nature made",
+}
+
+def is_safe(alt_text):
+    text = (alt_text or "").lower()
+    if any(t in text for t in BLOCKED_TERMS):
+        return False
+    if any(b in text for b in COMPETITOR_BRANDS):
+        return False
+    return True
 
 def unsplash_search(query):
     if not unsplash_key: return None
@@ -102,8 +127,8 @@ def unsplash_search(query):
         req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("results"): return None
-        # Pick first result that passes safety check
-        safe = [p for p in data["results"] if is_safe(p)]
+        safe = [p for p in data["results"]
+                if is_safe((p.get("alt_description") or "") + " " + (p.get("description") or ""))]
         if not safe: return None
         p = safe[0]
         try:
@@ -130,9 +155,7 @@ def pexels_search(query):
         req = urllib.request.Request(url, headers={"Authorization": pexels_key})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("photos"): return None
-        # Pick first result whose alt passes safety check
-        safe = [p for p in data["photos"]
-                if not any(t in (p.get("alt") or "").lower() for t in BLOCKED_TERMS)]
+        safe = [p for p in data["photos"] if is_safe(p.get("alt") or "")]
         if not safe: return None
         p = safe[0]
         return {
@@ -154,7 +177,9 @@ def find_image(query, fallback):
 
 def fallback_query(meta):
     pk = meta.get("primary_keyword") or meta.get("title") or ""
-    return (" ".join(pk.split()[:6]) + " woman wellness").strip()
+    bad = {"supplement","vitamin","pill","capsule","product","bottle","detox"}
+    words = [w for w in pk.split()[:6] if w.lower() not in bad]
+    return (" ".join(words) + " woman wellness outdoor lifestyle").strip()
 
 metas = sorted(glob.glob("articles/*.meta.json"))
 updated = 0
@@ -258,8 +283,31 @@ import json, glob, os, re, time, urllib.request, urllib.parse, urllib.error
 pexels_key   = os.environ.get("PEXELS_API_KEY", "")
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 
-BLOCKED_TERMS = {"nude","naked","topless","nudity","lingerie","bikini",
-                 "underwear","explicit","erotic","sensual","sexy","sexual","nsfw"}
+BLOCKED_TERMS = {
+    "nude","naked","topless","nudity","lingerie","bikini","underwear",
+    "explicit","erotic","sensual","sexy","sexual","nsfw",
+    "belly","abdomen","navel","torso","bare skin","bare stomach",
+    "cesarean","c-section","surgical scar","scar","wound","surgery",
+    "supplement","vitamin","capsule","pill","tablet",
+    "bottle","vial","jar","tube","container","packaging","product",
+    "holding bottle","holding vial","holding supplement",
+    "tattoo","tattooed","tattoos","book cover","dopamine detox",
+    "hospital","clinic","medicine",
+}
+
+COMPETITOR_BRANDS = {
+    "vigorvault","vigor vault","nmn revive","nmn activ","lifeextension",
+    "life extension","thorne","jarrow","now foods","garden of life",
+    "nature's bounty","gnc","optimum nutrition","ritual",
+    "elysium","tru niagen","alive by science","wonderfeel","donotage",
+    "do not age","renue","maac10","osh wellness","osh ","missha",
+    "neocell","youtheory","vital proteins","sports research",
+    "swanson","solgar","natrol","nature made",
+}
+
+def _safe(text):
+    t = (text or "").lower()
+    return not any(k in t for k in BLOCKED_TERMS) and not any(b in t for b in COMPETITOR_BRANDS)
 
 def pexels_search(query):
     if not pexels_key: return None
@@ -268,8 +316,7 @@ def pexels_search(query):
             {"query": query, "orientation": "landscape", "per_page": 10})
         req = urllib.request.Request(url, headers={"Authorization": pexels_key})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
-        safe = [p for p in (data.get("photos") or [])
-                if not any(t in (p.get("alt") or "").lower() for t in BLOCKED_TERMS)]
+        safe = [p for p in (data.get("photos") or []) if _safe(p.get("alt") or "")]
         if not safe: return None
         p = safe[0]
         return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
@@ -283,7 +330,7 @@ def unsplash_search(query):
         req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         safe = [p for p in (data.get("results") or [])
-                if not any(t in (p.get("alt_description") or "").lower() for t in BLOCKED_TERMS)]
+                if _safe((p.get("alt_description") or "") + " " + (p.get("description") or ""))]
         if not safe: return None
         p = safe[0]
         return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120]}

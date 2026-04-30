@@ -36,61 +36,106 @@ if not UNSPLASH_KEY and not PEXELS_KEY:
 # Maps slug keywords to specific, relevant Unsplash/Pexels search queries.
 
 BLOCKED_TERMS = {
+    # Explicit content
     "nude", "naked", "topless", "nudity", "lingerie", "bikini",
     "underwear", "explicit", "adult content", "erotic", "sensual",
     "sexy", "sexual", "pornographic", "nsfw",
+    # Exposed body parts / medical imagery
+    "belly", "abdomen", "navel", "belly button", "torso", "bare skin",
+    "bare stomach", "bare belly", "cesarean", "c-section", "surgical scar",
+    "scar", "wound", "surgery", "stretch mark", "skin close", "close-up skin",
+    "stomach close", "skin texture",
+    # Any product / bottle / packaging — blocks BOTH competitor and generic
+    "supplement", "vitamin", "capsule", "pill", "tablet", "dose",
+    "bottle", "vial", "jar", "tube", "container", "packaging",
+    "product", "serum bottle", "cosmetic bottle", "beauty bottle",
+    "holding bottle", "holding vial", "holding product", "holding supplement",
+    "holding jar", "holding tube", "with bottle", "with supplement",
+    "pill box", "medicine", "pharmacy",
+    # Off-brand / low-quality / off-aesthetic
+    "tattoo", "tattooed", "tattoos",
+    "book cover", "dopamine detox",
+    "fast food", "junk food", "cigarette",
+    "hospital", "clinic", "medical office",
+}
+
+# Competitor / third-party brand names — reject any image whose alt contains these
+COMPETITOR_BRANDS = {
+    "vigorvault", "vigor vault", "nmn revive", "nmn activ", "lifeextension",
+    "life extension", "thorne", "jarrow", "now foods", "garden of life",
+    "nature's bounty", "gnc", "optimum nutrition", "ritual", "hims", "hers",
+    "elysium", "tru niagen", "tru longevity", "alive by science",
+    "wonderfeel", "donotage", "do not age", "renue", "maac10",
+    "osh wellness", "osh ",
+    "missha",
+    "neocell", "youtheory", "vital proteins", "sports research",
+    "bronson", "swanson", "solgar", "natrol", "nature made",
+    "garden of", "nutricost", "bulk supplements",
 }
 
 
 def is_safe(alt_text):
     text = (alt_text or "").lower()
-    return not any(t in text for t in BLOCKED_TERMS)
+    if any(t in text for t in BLOCKED_TERMS):
+        return False
+    if any(b in text for b in COMPETITOR_BRANDS):
+        return False
+    return True
 
 
 TOPIC_QUERIES = {
-    "nad":              ["woman energy vitality morning healthy", "woman taking supplement kitchen"],
-    "nmn":              ["woman energy vitality healthy aging", "woman supplement morning routine"],
-    "urolithin":        ["woman eating berries pomegranate healthy", "woman active outdoor healthy aging"],
-    "ergothioneine":    ["woman mushrooms cooking healthy kitchen", "woman antioxidant food wellness"],
-    "rapamycin":        ["woman longevity healthy aging active", "woman outdoor walk nature healthy"],
-    "bacopa":           ["woman reading focus concentration desk", "woman memory brain health"],
-    "acetylcholine":    ["woman brain focus mental clarity", "woman reading studying concentration"],
-    "choline":          ["woman eggs healthy breakfast nutrition", "woman brain health nutrition"],
-    "gut-barrier":      ["woman eating healthy fiber vegetables", "woman gut health nutrition food"],
-    "gut-dysbiosis":    ["woman digestive health probiotics", "woman stomach gut wellness"],
-    "gut-skin":         ["woman glowing skin healthy gut", "woman skin microbiome beauty"],
-    "adenosine":        ["woman sleep drive rest evening", "woman tired sleepy evening routine"],
-    "glycine":          ["woman sleeping peaceful bedroom night", "woman skin collagen healthy sleep"],
-    "exercise-recovery":["woman post workout stretch recovery", "woman muscle recovery fitness rest"],
-    "taurine":          ["woman heart health supplement vitality", "woman healthy aging longevity active"],
-    "pcos":             ["woman hormones wellness health balance", "woman healthy lifestyle hormonal health"],
-    "perimenopause":    ["woman midlife wellness balance health", "woman menopause natural remedies calm"],
-    "mood":             ["woman calm happy wellness nature", "woman mood anxiety natural calm"],
-    "omega-3":          ["woman fish oil supplement heart health", "woman omega fatty acids nutrition"],
-    "sibo":             ["woman digestive gut health wellness", "woman stomach bloating gut healing"],
-    "b12":              ["woman nutrition supplement energy health", "woman vitamin deficiency wellness"],
-    "liver-healing":    ["woman liver health detox nutrition", "woman healthy eating liver wellness"],
-    "strength-training":["woman lifting weights gym fitness", "woman strength training dumbbell workout"],
-    "stress-weight":    ["woman stress relief cortisol wellness", "woman healthy weight stress management"],
-    "sleep":            ["woman sleeping peaceful bed night", "woman good sleep bedroom rest"],
-    "skin":             ["woman glowing skin beauty natural", "woman skincare radiant face"],
-    "collagen":         ["woman collagen skin beauty supplement", "woman glowing skin anti-aging"],
-    "brain":            ["woman brain health focus mental clarity", "woman cognitive health reading"],
-    "memory":           ["woman memory focus brain health", "woman reading concentration mental"],
-    "energy":           ["woman energetic morning vitality health", "woman active energy wellness"],
-    "fatigue":          ["woman tired fatigue wellness recovery", "woman energy boost morning healthy"],
-    "hormone":          ["woman hormonal balance wellness health", "woman menopause natural hormones"],
-    "metabolism":       ["woman healthy metabolism fitness nutrition", "woman exercise metabolic health"],
-    "inflammation":     ["woman anti-inflammatory food turmeric", "woman healthy eating reduce inflammation"],
-    "immune":           ["woman immune health wellness nutrition", "woman healthy lifestyle immunity"],
-    "bone":             ["woman bone health exercise strength", "woman osteoporosis prevention fitness"],
-    "heart":            ["woman heart health cardio exercise", "woman cardiovascular wellness fitness"],
-    "weight":           ["woman healthy weight management fitness", "woman nutrition weight wellness"],
-    "cortisol":         ["woman stress cortisol calm meditation", "woman relaxation stress relief nature"],
-    "coq10":            ["woman energy cellular health supplement", "woman vitality heart wellness"],
-    "magnesium":        ["woman magnesium sleep calm wellness", "woman supplement mineral healthy"],
-    "vitamin-d":        ["woman sunshine vitamin d outdoor", "woman sunlight nature wellness"],
-    "probiotics":       ["woman probiotics gut health supplement", "woman yogurt fermented food wellness"],
+    # Lifestyle / activity / food ONLY — no product, no bottle, no supplement
+    "nad":              ["woman glowing skin morning light portrait", "woman energetic yoga sunrise outdoor"],
+    "nmn":              ["woman running trail outdoor morning", "woman active healthy aging smiling park"],
+    "urolithin":        ["woman eating pomegranate fruit healthy", "woman hiking trail outdoor nature"],
+    "ergothioneine":    ["woman cooking mushrooms healthy kitchen", "woman farmers market fresh food"],
+    "rapamycin":        ["woman walking park autumn healthy aging", "woman outdoor garden nature longevity"],
+    "bacopa":           ["woman reading book morning sunlight calm", "woman studying focus desk natural light"],
+    "acetylcholine":    ["woman writing journal morning light focused", "woman reading book calm morning"],
+    "choline":          ["woman eating eggs breakfast sunny kitchen", "woman healthy breakfast avocado toast"],
+    "gut-barrier":      ["woman colorful salad vegetables healthy eating", "woman cooking fresh vegetables kitchen"],
+    "gut-dysbiosis":    ["woman eating yogurt bowl healthy kitchen", "woman farmers market fresh produce"],
+    "gut-skin":         ["woman radiant face portrait natural light", "woman smiling clear skin outdoor sunlight"],
+    "adenosine":        ["woman sleeping peacefully bedroom evening", "woman relaxing evening calm bedroom"],
+    "glycine":          ["woman sleeping peaceful white bedroom", "woman restful sleep morning light"],
+    "exercise-recovery":["woman stretching yoga mat morning", "woman post run stretch outdoor park"],
+    "taurine":          ["woman running cardio outdoor park", "woman swimming active healthy lifestyle"],
+    "pcos":             ["woman meditation yoga nature calm", "woman healthy eating greens lifestyle"],
+    "perimenopause":    ["woman midlife portrait smiling confident", "woman yoga meditation calm nature"],
+    "mood":             ["woman smiling nature park happy calm", "woman meditation outdoor peaceful morning"],
+    "omega-3":          ["woman eating salmon grilled healthy meal", "woman seafood healthy eating lunch"],
+    "sibo":             ["woman herbal tea calm kitchen morning", "woman light healthy meal soup bowl"],
+    "b12":              ["woman eating leafy greens healthy lunch", "woman energy morning walk outdoor"],
+    "liver-healing":    ["woman drinking green juice morning healthy", "woman eating salad greens fresh"],
+    "strength-training":["woman lifting dumbbell gym focused", "woman strength training workout fitness"],
+    "stress-weight":    ["woman meditation outdoor nature calm", "woman yoga morning park peaceful"],
+    "sleep":            ["woman sleeping peaceful white linen bedroom", "woman waking refreshed morning light"],
+    "skin":             ["woman radiant face portrait soft light", "woman smiling outdoor natural glow"],
+    "collagen":         ["woman glowing complexion portrait outdoor", "woman healthy face smiling sunlight"],
+    "brain":            ["woman reading focus desk morning", "woman chess strategy thinking focused"],
+    "memory":           ["woman reading book focused natural light", "woman journaling desk morning calm"],
+    "energy":           ["woman outdoor morning run energetic", "woman sunrise hike active healthy"],
+    "fatigue":          ["woman stretching morning wake up bedroom", "woman outdoor walk refresh nature"],
+    "hormone":          ["woman yoga calm outdoor nature morning", "woman midlife active healthy smiling"],
+    "metabolism":       ["woman cycling outdoor active healthy", "woman healthy meal prep kitchen"],
+    "inflammation":     ["woman eating turmeric food anti-inflammatory", "woman colorful vegetables healthy meal"],
+    "immune":           ["woman outdoor nature fresh air smiling", "woman healthy food citrus vegetables"],
+    "bone":             ["woman yoga warrior pose outdoor", "woman hiking trail strength active"],
+    "heart":            ["woman walking outdoor park cardio healthy", "woman cycling nature cardiovascular"],
+    "weight":           ["woman outdoor walk nature healthy lifestyle", "woman cooking healthy meal kitchen"],
+    "cortisol":         ["woman meditation nature calm outdoor", "woman deep breathing yoga peaceful"],
+    "coq10":            ["woman energetic morning outdoor walk", "woman cycling fitness healthy aging"],
+    "magnesium":        ["woman relaxing bath evening calm", "woman sleeping peaceful bedroom night"],
+    "vitamin-d":        ["woman outdoor sunshine park morning", "woman sunlight garden smiling nature"],
+    "probiotics":       ["woman eating yogurt bowl smiling kitchen", "woman fermented food kimchi healthy"],
+    "joint":            ["woman yoga flexibility outdoor morning", "woman gentle walk park healthy aging"],
+    "arthritis":        ["woman gentle yoga seated stretching", "woman walking outdoor comfortable active"],
+    "ashwagandha":      ["woman meditation calm nature herbs garden", "woman yoga outdoor peaceful morning"],
+    "hydrogen":         ["woman drinking water glass morning healthy", "woman hydration healthy lifestyle calm"],
+    "ceramide":         ["woman applying moisturizer face morning routine", "woman healthy skin portrait soft light"],
+    "collagen-type":    ["woman portrait glowing skin natural", "woman outdoor smiling healthy complexion"],
+    "molecular":        ["woman drinking clear water healthy hydration", "woman outdoor morning fresh air"],
+    "stress-hormone":   ["woman meditation outdoor morning calm", "woman yoga breathing nature peaceful"],
 }
 
 
@@ -100,15 +145,16 @@ def topic_query_for_slug(slug, title=""):
     for key, queries in TOPIC_QUERIES.items():
         if key in slug_lower:
             return queries
-    # Generic fallback: extract nouns from title
+    # Generic fallback: lifestyle + title noun, never product-related
     skip = {"after", "40", "women", "over", "what", "is", "does", "actually",
             "work", "for", "the", "a", "an", "and", "why", "how", "to", "your",
             "you", "are", "with", "that", "can", "will", "its", "at", "in",
-            "on", "of", "by", "from", "or", "be", "do", "vs", "into", "our"}
+            "on", "of", "by", "from", "or", "be", "do", "vs", "into", "our",
+            "supplement", "vitamin", "pill", "capsule", "product"}
     words = [w.strip(".,?:!-") for w in title.split()
              if w.lower().strip(".,?:!-") not in skip and len(w) > 3][:4]
-    base = "woman " + " ".join(words).lower() + " wellness health"
-    return [base, "woman healthy aging wellness supplement"]
+    base = "woman " + " ".join(words).lower() + " wellness lifestyle"
+    return [base, "woman healthy aging outdoor portrait smiling"]
 
 
 # ── Rate limit tracking ───────────────────────────────────────────────────────
