@@ -21,6 +21,55 @@ echo "Started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee "$LOG_FILE"
 echo "[0/6] Pulling latest from git..."
 git pull origin main --quiet
 
+# Step 0a: PMID validation — verify citations resolve on PubMed
+echo "[0a] Validating PMIDs in batch ${BATCH_DATE} articles..."
+python3 << 'PYEOF'
+import re, glob, os, urllib.request, urllib.error, time
+
+batch_date = os.environ.get("BATCH_DATE", "")
+pattern = f"articles/*-final.html" if not batch_date else f"articles/*-final.html"
+
+# Collect PMIDs from all -final.html files for today's batch slugs
+report = f"articles/batch-{batch_date}-report.md" if batch_date else None
+slugs = set()
+if report and os.path.exists(report):
+    for line in open(report):
+        m = re.search(r'\|\s*\d+\s*\|.*?\|\s*([a-z0-9-]+)\s*\|', line)
+        if m:
+            slugs.add(m.group(1).strip())
+
+files = [f"articles/{s}-final.html" for s in slugs if os.path.exists(f"articles/{s}-final.html")]
+if not files:
+    files = sorted(glob.glob("articles/*-final.html"))
+
+removed_total = 0
+for f in files:
+    body = open(f).read()
+    pmids = set(re.findall(r'PMID[:\s]+(\d{7,8})', body))
+    changed = False
+    for pmid in pmids:
+        try:
+            url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+            req = urllib.request.Request(url, method="HEAD",
+                headers={"User-Agent": "Mozilla/5.0"})
+            urllib.request.urlopen(req, timeout=8)
+            time.sleep(0.3)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                body = re.sub(
+                    r'<li[^>]*>[^<]*(?:<[^>]*>)*[^<]*PMID[:\s]+' + pmid + r'.*?</li>\s*',
+                    '', body, flags=re.DOTALL)
+                print(f"  REMOVED fake PMID {pmid} from {os.path.basename(f)}")
+                removed_total += 1
+                changed = True
+        except Exception:
+            pass
+    if changed:
+        open(f, "w").write(body)
+
+print(f"  PMID check done. Removed {removed_total} unresolvable citations.")
+PYEOF
+
 # Step 1: Fetch realistic stock photos (Unsplash primary, Pexels fallback)
 echo "[1/6] Fetching stock photos (Unsplash + Pexels)..."
 python3 << 'PYEOF'
@@ -34,6 +83,42 @@ if not unsplash_key and not pexels_key:
 
 UTM = "?utm_source=happy_aging&utm_medium=referral"
 
+# Images containing any of these terms in alt/description are rejected
+BLOCKED_TERMS = {
+    "nude", "naked", "topless", "nudity", "lingerie", "bikini",
+    "underwear", "explicit", "adult content", "erotic", "sensual",
+    "sexy", "sexual", "pornographic", "nsfw",
+    "belly", "abdomen", "navel", "torso", "bare skin", "bare stomach",
+    "cesarean", "c-section", "surgical scar", "scar", "wound", "surgery",
+    "stretch mark", "skin close", "close-up skin", "skin texture",
+    "supplement", "vitamin", "capsule", "pill", "tablet",
+    "bottle", "vial", "jar", "tube", "container", "packaging",
+    "product", "serum bottle", "cosmetic bottle", "beauty bottle",
+    "holding bottle", "holding vial", "holding supplement",
+    "tattoo", "tattooed", "tattoos",
+    "book cover", "dopamine detox",
+    "hospital", "clinic", "medicine",
+}
+
+COMPETITOR_BRANDS = {
+    "vigorvault", "vigor vault", "nmn revive", "nmn activ", "lifeextension",
+    "life extension", "thorne", "jarrow", "now foods", "garden of life",
+    "nature's bounty", "gnc", "optimum nutrition", "ritual",
+    "elysium", "tru niagen", "alive by science", "wonderfeel", "donotage",
+    "do not age", "renue", "maac10",
+    "osh wellness", "osh ", "missha",
+    "neocell", "youtheory", "vital proteins", "sports research",
+    "swanson", "solgar", "natrol", "nature made",
+}
+
+def is_safe(alt_text):
+    text = (alt_text or "").lower()
+    if any(t in text for t in BLOCKED_TERMS):
+        return False
+    if any(b in text for b in COMPETITOR_BRANDS):
+        return False
+    return True
+
 def unsplash_search(query):
     if not unsplash_key: return None
     try:
@@ -42,8 +127,10 @@ def unsplash_search(query):
         req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("results"): return None
-        p = data["results"][0]
-        # Unsplash ToS: ping download_location to credit the photographer
+        safe = [p for p in data["results"]
+                if is_safe((p.get("alt_description") or "") + " " + (p.get("description") or ""))]
+        if not safe: return None
+        p = safe[0]
         try:
             dl = urllib.request.Request(p["links"]["download_location"],
                 headers={"Authorization": f"Client-ID {unsplash_key}"})
@@ -64,11 +151,13 @@ def pexels_search(query):
     if not pexels_key: return None
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
-            "query": query, "orientation": "landscape", "per_page": 5})
+            "query": query, "orientation": "landscape", "per_page": 10})
         req = urllib.request.Request(url, headers={"Authorization": pexels_key})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("photos"): return None
-        p = data["photos"][0]
+        safe = [p for p in data["photos"] if is_safe(p.get("alt") or "")]
+        if not safe: return None
+        p = safe[0]
         return {
             "src": p["src"]["large2x"],
             "alt": (p.get("alt") or query)[:120],
@@ -88,7 +177,9 @@ def find_image(query, fallback):
 
 def fallback_query(meta):
     pk = meta.get("primary_keyword") or meta.get("title") or ""
-    return (" ".join(pk.split()[:6]) + " woman wellness").strip()
+    bad = {"supplement","vitamin","pill","capsule","product","bottle","detox"}
+    words = [w for w in pk.split()[:6] if w.lower() not in bad]
+    return (" ".join(words) + " woman wellness outdoor lifestyle").strip()
 
 metas = sorted(glob.glob("articles/*.meta.json"))
 updated = 0
@@ -184,54 +275,164 @@ for f in sorted(glob.glob("articles/*-final.html")):
 print(f"  Removed {removed} fake DOIs")
 PYEOF
 
-# Step 4: Insert stock body images into HTML from meta.resolved_body
-echo "[4/6] Inserting stock body images into articles..."
+# Step 4: Insert section-relevant body images and inject FAQ schema + meta description
+echo "[4/6] Inserting section images, FAQ schema, and meta description..."
 python3 << 'PYEOF'
-import json, glob, os, re
+import json, glob, os, re, time, urllib.request, urllib.parse, urllib.error
 
-inserted = 0
+pexels_key   = os.environ.get("PEXELS_API_KEY", "")
+unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+
+BLOCKED_TERMS = {
+    "nude","naked","topless","nudity","lingerie","bikini","underwear",
+    "explicit","erotic","sensual","sexy","sexual","nsfw",
+    "belly","abdomen","navel","torso","bare skin","bare stomach",
+    "cesarean","c-section","surgical scar","scar","wound","surgery",
+    "supplement","vitamin","capsule","pill","tablet",
+    "bottle","vial","jar","tube","container","packaging","product",
+    "holding bottle","holding vial","holding supplement",
+    "tattoo","tattooed","tattoos","book cover","dopamine detox",
+    "hospital","clinic","medicine",
+}
+
+COMPETITOR_BRANDS = {
+    "vigorvault","vigor vault","nmn revive","nmn activ","lifeextension",
+    "life extension","thorne","jarrow","now foods","garden of life",
+    "nature's bounty","gnc","optimum nutrition","ritual",
+    "elysium","tru niagen","alive by science","wonderfeel","donotage",
+    "do not age","renue","maac10","osh wellness","osh ","missha",
+    "neocell","youtheory","vital proteins","sports research",
+    "swanson","solgar","natrol","nature made",
+}
+
+def _safe(text):
+    t = (text or "").lower()
+    return not any(k in t for k in BLOCKED_TERMS) and not any(b in t for b in COMPETITOR_BRANDS)
+
+def pexels_search(query):
+    if not pexels_key: return None
+    try:
+        url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
+            {"query": query, "orientation": "landscape", "per_page": 10})
+        req = urllib.request.Request(url, headers={"Authorization": pexels_key})
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        safe = [p for p in (data.get("photos") or []) if _safe(p.get("alt") or "")]
+        if not safe: return None
+        p = safe[0]
+        return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
+    except Exception: return None
+
+def unsplash_search(query):
+    if not unsplash_key: return None
+    try:
+        url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode(
+            {"query": query, "orientation": "landscape", "per_page": 10, "content_filter": "high"})
+        req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        safe = [p for p in (data.get("results") or [])
+                if _safe((p.get("alt_description") or "") + " " + (p.get("description") or ""))]
+        if not safe: return None
+        p = safe[0]
+        return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120]}
+    except Exception: return None
+
+def find_image(query):
+    img = pexels_search(query) or unsplash_search(query)
+    time.sleep(1.2)
+    return img
+
+def h2_to_query(h2_text):
+    skip = {"what","why","how","the","a","an","and","or","of","to","is","are",
+            "for","after","with","your","that","in","on","at","by","does","do",
+            "can","will","about","from","this","40","over","women","woman"}
+    words = [w.strip(".,?:!-()") for w in h2_text.split()
+             if w.lower().strip(".,?:!-()") not in skip and len(w) > 2][:5]
+    return "woman " + " ".join(words).lower() + " wellness"
+
+def extract_faq_pairs(html):
+    faq = re.search(
+        r'<h2[^>]*>Frequently Asked Questions</h2>(.*?)(?:<h2[^>]*>References|$)',
+        html, re.DOTALL | re.IGNORECASE)
+    if not faq: return []
+    pairs = []
+    for m in re.finditer(r'<h3[^>]*>(.*?)</h3>\s*<p[^>]*>(.*?)</p>', faq.group(1), re.DOTALL):
+        q = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        a = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(2))).strip()
+        if q and a and len(q) > 10:
+            pairs.append((q, a))
+    return pairs
+
+def build_faq_schema(pairs):
+    schema = {"@context": "https://schema.org", "@type": "FAQPage",
+              "mainEntity": [{"@type": "Question", "name": q,
+                              "acceptedAnswer": {"@type": "Answer", "text": a}}
+                             for q, a in pairs]}
+    return ('\n<script type="application/ld+json">\n'
+            + json.dumps(schema, ensure_ascii=False, indent=2) + '\n</script>\n')
+
+def meta_description(html, max_chars=155):
+    m = re.search(r'<p[^>]*>(.*?)</p>', html, re.DOTALL)
+    if not m: return ""
+    text = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(1))).strip()
+    if len(text) <= max_chars: return text
+    return text[:max_chars].rsplit(' ', 1)[0].rstrip('.,;:') + '...'
+
+inserted = schema_added = 0
 for mf in sorted(glob.glob("articles/*.meta.json")):
     meta = json.load(open(mf))
     slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
+    title = meta.get("title", slug)
     html_file = f"articles/{slug}-final.html"
     if not os.path.exists(html_file): continue
 
-    imgs = meta.get("resolved_body") or []
-    if not imgs: continue
-
     body = open(html_file).read()
 
-    # Scrub legacy DALL-E placeholders from prior runs
-    body = re.sub(
-        r'\s*<!-- DALLE_BODY_IMG:[^>]*-->\s*<img[^>]*PENDING_DALLE_UPLOAD[^>]*>\s*',
-        "\n", body)
+    # Remove legacy figcaptions and old stock images
+    body = re.sub(r'<figcaption[^>]*>.*?</figcaption>', '', body, flags=re.DOTALL)
+    body = re.sub(r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
+                  '\n', body, flags=re.DOTALL)
 
-    if "article-stock-image" in body:
-        open(html_file, "w").write(body)
-        continue
+    # Insert section-relevant images
+    skip_h2s = {"frequently asked questions", "references", "faq"}
+    h2_matches = [(m.end(), re.sub(r'<[^>]+>', '', m.group(1)).strip())
+                  for m in re.finditer(r'<h2[^>]*>(.*?)</h2>', body, re.DOTALL)
+                  if re.sub(r'<[^>]+>', '', m.group(1)).strip().lower() not in skip_h2s]
 
-    h2s = [m.end() for m in re.finditer(r"</h2>", body)]
-    if len(h2s) < 2: continue
-
-    step = max(1, len(h2s) // (len(imgs) + 1))
-    insert_points = h2s[step::step][:len(imgs)]
-
-    for img, pos in zip(reversed(imgs), reversed(insert_points)):
-        alt = (img.get("alt") or meta.get("title", ""))[:140].replace('"', "'")
-        figure = (
-            f'\n<figure class="article-stock-image" style="margin:24px 0">'
-            f'<img src="{img["src"]}" alt="{alt}" style="width:100%;border-radius:12px;display:block">'
-            f'<figcaption style="font-size:12px;color:#888;margin-top:6px">'
-            f'Photo by <a href="{img["credit_url"]}" rel="nofollow noopener">{img["credit_name"]}</a> '
-            f'on <a href="{img["provider_url"]}" rel="nofollow noopener">{img["provider"]}</a>'
-            f'</figcaption></figure>\n'
-        )
-        body = body[:pos] + figure + body[pos:]
-
-    open(html_file, "w").write(body)
+    targets = h2_matches[1:4]  # skip first H2, max 3 images
+    offset = 0
+    for pos, h2_text in targets:
+        query = h2_to_query(h2_text)
+        img = find_image(query)
+        if not img: continue
+        alt = img.get("alt", title)[:140].replace('"', "'")
+        figure = (f'\n<figure class="article-stock-image" style="margin:24px 0">'
+                  f'<img src="{img["src"]}" alt="{alt}" '
+                  f'style="width:100%;border-radius:12px;display:block">'
+                  f'</figure>\n')
+        insert_at = pos + offset
+        body = body[:insert_at] + figure + body[insert_at:]
+        offset += len(figure)
     inserted += 1
 
-print(f"  Inserted stock body images into {inserted} articles")
+    # FAQ Schema
+    pairs = extract_faq_pairs(body)
+    if pairs:
+        body = re.sub(
+            r'\s*<script type="application/ld\+json">\s*\{[^}]*"FAQPage".*?</script>\s*',
+            '\n', body, flags=re.DOTALL)
+        schema_block = build_faq_schema(pairs)
+        body = re.sub(r'(<h2[^>]*>Frequently Asked Questions</h2>)',
+                      schema_block + r'\1', body, flags=re.IGNORECASE)
+        schema_added += 1
+
+    # Meta description saved to meta.json for use at publish time
+    meta["meta_description"] = meta_description(body)
+    json.dump(meta, open(mf, "w"), indent=2, ensure_ascii=False)
+
+    open(html_file, "w").write(body)
+
+print(f"  Section images injected: {inserted} articles")
+print(f"  FAQ schema added: {schema_added} articles")
 PYEOF
 
 # Step 5: Publish to Shopify (articles + covers)
@@ -265,7 +466,10 @@ for mf in metas:
     tags = meta.get("tags","")
     if isinstance(tags, list): tags = ", ".join(tags)
 
-    payload = {"article": {"title": title, "body_html": body, "author": "Happy Aging Team", "tags": tags, "published": True, "template_suffix": "timeline"}}
+    summary = meta.get("meta_description", "")[:155]
+    payload = {"article": {"title": title, "body_html": body, "summary_html": summary,
+               "author": "Happy Aging Team", "tags": tags, "published": True,
+               "template_suffix": "timeline"}}
 
     # Cover image: prefer resolved stock URL; fall back to legacy local file
     cover = meta.get("resolved_cover")

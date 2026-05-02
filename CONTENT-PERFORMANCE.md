@@ -2,7 +2,168 @@
 
 ---
 
-## BATCH 2026-04-19 (Current)
+## BATCH 2026-04-30 (Current)
+
+### Batch Overview
+- Date: 2026-04-30
+- Articles written: 20/20
+- Publishing status: Ready -- run `python3 scripts/batch-2026-04-30-publish.py` from unrestricted network (SHOPIFY_TOKEN required)
+- SEO audit: Complete (all 20 articles passed QA, 1804 to 1911 words each, 0 em/en dashes)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Hormones | 3 | NMN Cell Renew, Calm Tonic |
+| Bone | 3 | Glow Shot |
+| Sleep | 3 | Sleep Tonic |
+| Longevity | 3 | NAD+ Advanced, NMN Cell Renew |
+| Brain | 2 | Neuro Creamer |
+| Gut | 2 | Happiest Gut |
+| Cardiovascular | 1 | NAD+ Women's |
+| Metabolism | 1 | NAD+ Women's |
+| Energy | 1 | Longevity Shots |
+| Skin | 1 | Radiance Tonic |
+
+### Articles -- Batch 2026-04-30
+| # | Title | Slug | Cluster | Product | Words |
+|---|---|---|---|---|---|
+| 1 | Testosterone and Libido After 40: What Women Need to Know | testosterone-libido-after-40-women | Hormones | nmn-cell-renew-tonic | 1861 |
+| 2 | Adrenal Recovery Protocol After 40: A Step-by-Step Guide for Women | adrenal-recovery-protocol-after-40 | Hormones | calm-tonic | 1881 |
+| 3 | Bone Health Protocol After 40: The Complete Guide for Women | bone-health-protocol-after-40 | Bone | glow-shot | 1838 |
+| 4 | Glycine vs GABA for Sleep After 40: Which Works Better? | glycine-vs-gaba-sleep-after-40 | Sleep | sleep-tonic | 1882 |
+| 5 | Best Foods for Bone Health After 40: Beyond Calcium and Dairy | best-foods-bone-health-after-40 | Bone | glow-shot | 1852 |
+| 6 | Estrogen and Heart Health After Menopause: What Every Woman Should Know | estrogen-heart-health-after-menopause | Cardiovascular | nad-women-longevity-formula | 1885 |
+| 7 | Senolytic Foods After 40: Eating to Clear Zombie Cells | senolytic-foods-after-40 | Longevity | nad-advanced-longevity-formula | 1857 |
+| 8 | NMN and Brain Health: Cognitive Benefits After 40 | nmn-brain-cognitive-benefits-after-40 | Brain | neuro-creamer | 1835 |
+| 9 | What Is TMG (Trimethylglycine)? Benefits After 40 for Women | what-is-trimethylglycine-tmg-after-40 | Longevity | nmn-cell-renew-tonic | 1856 |
+| 10 | Sleep Apnea in Women Over 40: The Overlooked Epidemic | sleep-apnea-women-over-40 | Sleep | sleep-tonic | 1804 |
+| 11 | Collagen for Tendons and Ligaments After 40: The Research | collagen-for-tendons-ligaments-after-40 | Bone | glow-shot | 1847 |
+| 12 | Insulin Resistance and Hormones After 40: The Hidden Connection | insulin-resistance-hormones-connection-after-40 | Metabolism | nad-women-longevity-formula | 1822 |
+| 13 | L-Carnitine and Energy After 40: Benefits for Women | l-carnitine-energy-after-40 | Energy | longevity-shots | 1882 |
+| 14 | L-Glutamine and Gut Healing After 40: What the Research Shows | l-glutamine-gut-healing-after-40 | Gut | happiest-gut | 1813 |
+| 15 | Vitamin E and Skin Health After 40: Beyond the Basics | vitamin-e-skin-after-40 | Skin | radiance-tonic | 1852 |
+| 16 | What Is Alpha-Ketoglutarate (AKG)? Longevity Benefits After 40 | what-is-alpha-ketoglutarate-aging-after-40 | Longevity | nad-advanced-longevity-formula | 1879 |
+| 17 | How Blood Sugar Disrupts Sleep After 40 (And What to Do) | how-blood-sugar-disrupts-sleep-after-40 | Sleep | sleep-tonic | 1843 |
+| 18 | Adaptogens Guide for Women Over 40: Which Ones Actually Work | adaptogens-guide-women-over-40 | Hormones | calm-tonic | 1911 |
+| 19 | What Is Phosphatidylcholine? Brain and Liver Benefits After 40 | what-is-phosphatidylcholine-brain-after-40 | Brain | neuro-creamer | 1863 |
+| 20 | The Gut-Immune Connection After 40: Why Your Microbiome Drives Immunity | gut-immune-connection-after-40 | Gut | happiest-gut | 1822 |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** testosterone-libido-after-40-women (NMN Cell Renew, high search intent), adaptogens-guide-women-over-40 (Calm Tonic, broad guide format), glycine-vs-gaba-sleep-after-40 (Sleep Tonic, direct comparison CTA)
+- **Featured snippet candidates:** glycine-vs-gaba-sleep-after-40 (head-to-head comparison answer box), what-is-trimethylglycine-tmg-after-40 (definition query), what-is-alpha-ketoglutarate-aging-after-40 (mechanism definition)
+- **High GEO extraction:** estrogen-heart-health-after-menopause (eNOS/endothelial mechanism), nmn-brain-cognitive-benefits-after-40 (NMNAT pathway), senolytic-foods-after-40 (SASP + pulse dosing protocol)
+- **Internal linking bridges:** what-is-trimethylglycine-tmg-after-40 -> existing NMN articles; collagen-for-tendons-ligaments-after-40 -> bone-health-protocol; gut-immune-connection-after-40 -> gut-dysbiosis and postbiotics articles
+
+---
+
+## BATCH 2026-04-29 (Previous)
+
+### Batch Overview
+- Date: 2026-04-29
+- Articles written: 20/20
+- Publishing status: Ready -- run `bash scripts/qa-and-publish.sh 2026-04-29` from unrestricted network (IP allowlist blocks sandbox)
+- SEO audit: Complete (all 20 articles passed QA, 1800+ words each, 0 em/en dashes)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Immunity | 2 | Relief Tonic |
+| Gut | 2 | Happiest Gut |
+| Bone | 3 | Glow Shot, Calm Tonic |
+| Heart | 2 | Brain Tonic, Calm Tonic |
+| Liver | 1 | Liver Tonic |
+| Hormones | 3 | NAD+ Women's, NMN Cell Renew, Lean Muscle |
+| Sleep | 2 | Sleep Tonic |
+| Brain | 2 | Neuro Creamer |
+| Metabolism | 2 | NAD+ Women's, Lean Muscle |
+| Longevity | 2 | NAD+ Advanced, Relief Tonic |
+
+### Articles -- Batch 2026-04-29
+| # | Title | Slug | Cluster | Product | Words |
+|---|---|---|---|---|---|
+| 1 | Elderberry After 40: What the Research Actually Shows for Immune Health | elderberry-immune-support-after-40 | Immunity | relief-tonic | 1848 |
+| 2 | Exercise and the Immune System After 40: What the Research Shows | exercise-immune-system-after-40 | Immunity | relief-tonic | 1908 |
+| 3 | Postbiotics vs Probiotics vs Prebiotics After 40: What Each Does and Which Matters Most | postbiotics-vs-probiotics-vs-prebiotics-after-40 | Gut | happiest-gut | 1819 |
+| 4 | Calcium, K2, and Vitamin D3 After 40: Why the Synergy Matters More Than Any Supplement Alone | calcium-k2-d3-synergy-after-40 | Bone | glow-shot | 1866 |
+| 5 | How Estrogen Protects Bones and What Happens to Bone Loss After 40 | estrogen-bone-loss-after-40 | Bone | glow-shot | 1865 |
+| 6 | Magnesium and Bone Health After 40: The Mineral Most Bone Protocols Leave Out | magnesium-bone-health-after-40 | Bone | calm-tonic | 1819 |
+| 7 | CoQ10 and Heart Rhythm After 40: What the Research Shows for Cardiac Energy and Arrhythmia Risk | coq10-heart-rhythm-after-40 | Heart | brain-tonic | 1832 |
+| 8 | Magnesium and Heart Health After 40: Blood Pressure, Rhythm, and Arterial Stiffness | magnesium-heart-health-after-40 | Heart | calm-tonic | 1832 |
+| 9 | Phase 1 and Phase 2 Liver Detox After 40: How the Process Actually Works | phase-1-phase-2-liver-detox-after-40 | Liver | liver-tonic | 1832 |
+| 10 | Pregnenolone Steal Syndrome After 40: How Chronic Stress Depletes Your Hormones | pregnenolone-steal-syndrome-after-40 | Hormones | nad-women-longevity-formula | 1822 |
+| 11 | Signs of Low Progesterone After 40: What Your Body Is Telling You | signs-progesterone-low-after-40 | Hormones | nmn-cell-renew-tonic | 1835 |
+| 12 | Testosterone and Muscle Loss After 40: The Hormonal Connection Women Need to Understand | testosterone-muscle-connection-after-40 | Metabolism | lean-muscle-formula | 1820 |
+| 13 | Sleep Debt After 40: How It Builds, What It Costs, and How to Recover | sleep-debt-after-40 | Sleep | sleep-tonic | 1971 |
+| 14 | Non-REM Deep Sleep After 40: Why Slow-Wave Sleep Declines and How to Get More | non-rem-deep-sleep-after-40 | Sleep | sleep-tonic | 1919 |
+| 15 | Choline Deficiency After 40: Signs, Causes, and Why the Risk Increases with Menopause | choline-deficiency-signs-after-40 | Brain | neuro-creamer | 1812 |
+| 16 | Nootropics for Women Over 40: What the Evidence Actually Shows | nootropics-women-over-40 | Brain | neuro-creamer | 2029 |
+| 17 | How to Reverse Insulin Resistance After 40: The Evidence-Based Protocol | how-to-reverse-insulin-resistance-after-40 | Metabolism | nad-women-longevity-formula | 1900 |
+| 18 | Senolytics After 40: A Guide to Clearing Senescent Cells Naturally | senolytics-guide-after-40 | Longevity | nad-advanced-longevity-formula | 1826 |
+| 19 | How to Increase Gut Microbiome Diversity After 40 | how-to-increase-gut-diversity-after-40 | Gut | happiest-gut | 1875 |
+| 20 | Quercetin as a Senolytic After 40: The Evidence for Clearing Zombie Cells | quercetin-as-senolytic-after-40 | Longevity | relief-tonic | 1858 |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** Articles 16 (nootropics guide -- high commercial intent), 17 (insulin resistance -- strong supplement CTA), 12 (testosterone-muscle -- lean-muscle-formula bridge)
+- **Featured snippet candidates:** Articles 10 (pregnenolone steal definition), 11 (progesterone signs numbered list), 9 (Phase 1/2 detox explanation)
+- **High GEO extraction:** Articles 18 (senolytics mechanism), 20 (quercetin-senolytic Bcl-2 mechanism), 14 (glymphatic clearance deep sleep), 13 (sleep debt Van Dongen citation)
+- **Differentiated angles:** Articles 9 (enzyme-level liver detox), 10 (cortisol-hormone steal mechanism), 4 (Ca/K2/D3 synergy protocol)
+
+---
+
+## BATCH 2026-04-28 (Previous)
+
+### Batch Overview
+- Date: 2026-04-28
+- Articles written: 20/20
+- Publishing status: Ready -- run `articles/batch-2026-04-28-publish.py` from unrestricted network
+- SEO audit: Complete (all 20 articles passed QA, 1800+ words each)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Longevity | 4 | Happiest Gut, NAD+ Advanced Longevity, Brain Tonic |
+| Brain | 3 | Neuro Creamer |
+| Gut | 4 | Happiest Gut, NAD+ Advanced Longevity, Liver Tonic |
+| Skin | 1 | Radiance Tonic |
+| Sleep | 2 | Sleep Tonic |
+| Energy | 1 | Longevity Shots |
+| Hormones | 2 | NMN Cell Renew Tonic, Calm Tonic |
+| Heart | 1 | Relief Tonic |
+| Metabolism | 2 | Lean Muscle Formula, NAD Women Longevity Formula |
+
+### Articles -- Batch 2026-04-28
+| # | Title | Slug | Cluster | Product | Words |
+|---|---|---|---|---|---|
+| 1 | Does Urolithin A Actually Work? A Review of the Human Evidence for Women Over 40 | does-urolithin-a-actually-work-after-40 | Longevity | happiest-gut | 1833 |
+| 2 | Does Ergothioneine Actually Work? What the Research Shows for Women Over 40 | does-ergothioneine-actually-work-after-40 | Longevity | nad-advanced-longevity-formula | 1844 |
+| 3 | Rapamycin Alternatives: Natural Ways to Activate mTOR Inhibition After 40 | rapamycin-alternatives-natural-mtor-after-40 | Longevity | nad-advanced-longevity-formula | 1838 |
+| 4 | Does Bacopa Monnieri Actually Work for Memory After 40? What the Research Shows | does-bacopa-monnieri-actually-work-after-40 | Brain | neuro-creamer | 1828 |
+| 5 | How to Support Acetylcholine Naturally After 40: Foods, Habits, and Supplements | how-to-support-acetylcholine-naturally-after-40 | Brain | neuro-creamer | 1874 |
+| 6 | What Is Choline and Why Women Over 40 Need More of It for Brain Health | what-is-choline-brain-after-40 | Brain | neuro-creamer | 1821 |
+| 7 | Best Foods for Gut Barrier Health After 40: What to Eat to Protect Your Gut Lining | best-foods-gut-barrier-health-after-40 | Gut | happiest-gut | 1815 |
+| 8 | Gut Dysbiosis After 40: Signs, Causes, and How to Restore Your Microbiome | gut-dysbiosis-symptoms-after-40 | Gut | happiest-gut | 1845 |
+| 9 | The Gut-Skin Axis After 40: How Your Microbiome Controls Your Skin | gut-skin-axis-microbiome-skin-after-40 | Skin | radiance-tonic | 1916 |
+| 10 | What Is Adenosine and Why It Controls Your Sleep Drive After 40 | what-is-adenosine-sleep-drive-after-40 | Sleep | sleep-tonic | 1878 |
+| 11 | What Is Glycine and Why It Helps Sleep and Skin After 40 | what-is-glycine-sleep-skin-after-40 | Sleep | sleep-tonic | 1849 |
+| 12 | NAD+ and Exercise Recovery After 40: What the Research Shows | nad-plus-exercise-recovery-after-40 | Energy | longevity-shots | 1808 |
+| 13 | What Is Taurine and Why Women Over 40 Should Pay Attention to It | what-is-taurine-women-over-40 | Longevity | brain-tonic | 1830 |
+| 14 | Best Supplements for PCOS After 40: What the Evidence Actually Supports | best-supplements-pcos-after-40 | Hormones | nmn-cell-renew-tonic | 1840 |
+| 15 | Perimenopause Mood and Anxiety: Natural Remedies That Actually Work | perimenopause-mood-anxiety-natural-remedies | Hormones | calm-tonic | 1803 |
+| 16 | Omega-3 Dosage Guide for Women Over 40: How Much Do You Actually Need? | omega-3-dosage-guide-women-over-40 | Heart | relief-tonic | 1815 |
+| 17 | The SIBO and B12 Connection After 40: Why Gut Bacteria Affect Your Nutrient Levels | sibo-b12-deficiency-connection-after-40 | Gut | nad-advanced-longevity-formula | 1817 |
+| 18 | Signs Your Liver Is Healing After 40: What Happens Week by Week | signs-liver-healing-after-40 | Gut | liver-tonic | 1821 |
+| 19 | Strength Training Recovery for Women Over 40: How to Train Smarter | strength-training-recovery-women-over-40 | Metabolism | lean-muscle-formula | 1846 |
+| 20 | How Stress Causes Weight Gain After 40: The Cortisol-Fat Connection Explained | how-stress-causes-weight-gain-after-40 | Metabolism | nad-women-longevity-formula | 1833 |
+
+### Predicted Performance (validate in 30 days)
+- **Highest conversion potential:** Articles 4 (Bacopa honest review), 1 (Urolithin A honest review), 14 (PCOS supplements protocol)
+- **Featured snippet candidates:** Articles 8 (dysbiosis signs format), 18 (week-by-week timeline), 16 (dosage guide format)
+- **High GEO extraction:** Articles 10 (adenosine definitional), 13 (taurine definitional), 3 (rapamycin alternatives), 6 (choline definitional)
+- **Differentiated angles:** Articles 3 (rapamycin mTOR natural), 9 (gut-skin mechanistic), 17 (SIBO-B12 absorption chain)
+
+---
+
+## BATCH 2026-04-19 (Previous)
 
 ### Batch Overview
 - Date: 2026-04-19
@@ -142,10 +303,10 @@
 
 ---
 
-## CUMULATIVE STATS (Both Batches)
+## CUMULATIVE STATS (All Batches Through 2026-04-28)
 
-- Total articles written: 40
-- Total clusters covered: 8
-- Total products featured: 13 distinct products
-- Total batches: 2
-- Publishing status: Both batches pending — run publish scripts from unrestricted network
+- Total articles written: 340 (17 batches x 20 articles)
+- Total clusters covered: 12
+- Total products featured: 16 distinct products
+- Total batches: 17
+- Publishing status: All batches through 2026-04-27 published; batch 2026-04-28 ready -- run `articles/batch-2026-04-28-publish.py` from unrestricted network
