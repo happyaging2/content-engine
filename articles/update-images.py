@@ -400,10 +400,15 @@ def main():
         slug = meta.get("slug") or os.path.basename(mf).replace(".meta.json", "")
         title = meta.get("title", slug)
         queries = topic_query_for_slug(slug, title)
+        # Prefer the hand-curated image_query from meta.json (set by content writer)
+        # over the TOPIC_QUERIES dict; fall back to topic_query_for_slug for the
+        # second query used as a safety net.
+        cover_q1 = meta.get("image_query") or queries[0]
+        cover_q2 = queries[1] if len(queries) > 1 else queries[0]
         changed = False
 
         if not meta.get("resolved_cover"):
-            img = find_image(queries[0]) or find_image(queries[1])
+            img = find_image(cover_q1) or find_image(cover_q2)
             if img:
                 meta["resolved_cover"] = img
                 changed = True
@@ -415,9 +420,10 @@ def main():
 
         if not meta.get("resolved_body"):
             resolved = []
-            # Use all available queries: topic queries + extras from body_image_queries if present
+            # Use all available queries: hand-curated body_image_queries first,
+            # then topic_query_for_slug as extras.
             bqs = meta.get("body_image_queries") or []
-            all_queries = (queries + bqs)[:4]
+            all_queries = (bqs + queries)[:4]
             for q in all_queries:
                 img = find_image(q)
                 if img:
