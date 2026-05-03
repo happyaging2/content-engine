@@ -5,10 +5,10 @@
   "product_handle": "brain-tonic",
   "cluster": "Energy",
   "intent": "comparison",
-  "image_query": "woman comparing supplement bottles",
+  "image_query": "woman energized morning outdoor walk",
   "body_image_queries": [
     "woman power walk headphones",
-    "smoothie supplement kitchen table",
-    "woman reading tablet kitchen"
+    "woman energized morning outdoor walk",
+    "woman energized morning outdoor walk"
   ]
 }
