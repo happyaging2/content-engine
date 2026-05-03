@@ -8,5 +8,11 @@
   "author": "Happy Aging Team",
   "excerpt": "CoQ10 is essential for mitochondrial energy production, and the brain uses 20% of the body's total energy supply. Research shows supplementing with liposomal CoQ10 can improve memory, reduce mental fatigue, and protect neurons from age-related oxidative damage.",
   "product_handle": "brain-tonic",
-  "cluster": "BrainHealth"
+  "cluster": "BrainHealth",
+  "image_query": "woman coq10 brain health healthy lifestyle",
+  "body_image_queries": [
+    "woman outdoor morning walk",
+    "healthy colorful food meal",
+    "woman relaxed confident indoor"
+  ]
 }

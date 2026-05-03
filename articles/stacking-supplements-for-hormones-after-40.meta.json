@@ -9,5 +9,11 @@
   "featured_image_alt": "Colorful healthy foods and supplements arranged for a daily wellness routine",
   "word_count_estimate": 2600,
   "intent": "commercial / stacking + safety",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman outdoor morning confident wellness",
+  "body_image_queries": [
+    "healthy hormone food balanced meal",
+    "woman yoga calm indoor",
+    "woman walking nature peaceful"
+  ]
 }

@@ -9,5 +9,11 @@
     "Photograph of a 46-year-old woman writing confidently in a journal at a wooden desk with a warm cup of tea, wearing a soft caramel-colored turtleneck, morning light from a nearby window, editorial wellness photography, shot on Sony A7IV 50mm f/1.8, natural skin, focused and energized expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman in a relaxed video call on a laptop at a bright home office, smiling and engaged, wearing a professional slate blue top, clean modern desk setup, natural overhead light, editorial documentary lifestyle photography, shot on Fujifilm X-T5 50mm f/1.8, natural skin, animated and present expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 43-year-old woman reading a challenging book in a sunlit library or reading room, fully absorbed with a slight smile, wearing a casual dusty pink sweater, warm afternoon light from a window, editorial lifestyle photography, shot on Canon EOS R6 35mm f/2, natural skin, mentally present and calm expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman working focused bright home office",
+  "body_image_queries": [
+    "woman writing confidently journal wooden",
+    "woman relaxed video call laptop",
+    "woman reading challenging book sunlit"
   ]
 }

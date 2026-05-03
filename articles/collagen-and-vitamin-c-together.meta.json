@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman drinking a vitamin C-rich smoothie with fresh citrus, representing skin nutrition habits",
   "word_count_estimate": 2400,
   "intent": "commercial/stacking",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman glowing skin portrait natural light",
+  "body_image_queries": [
+    "woman eating healthy food collagen",
+    "woman outdoor morning skincare",
+    "woman confident smile portrait"
+  ]
 }

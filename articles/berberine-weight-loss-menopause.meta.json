@@ -11,5 +11,11 @@
     "Photograph of a 47-year-old woman standing at a kitchen counter chopping fresh ginger and vegetables, wearing a casual olive green apron over a white shirt, bright natural kitchen lighting, editorial food and wellness photography, shot on Sony A7IV 50mm f/1.8, focused and engaged expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 44-year-old woman smiling after completing a morning power walk in a neighborhood park, wearing magenta athletic leggings and a grey zip jacket, fresh morning light with trees in background, editorial fitness photography, shot on Canon EOS R6 35mm f/2, healthy glow, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 50-year-old woman reading a health magazine on a couch with a cup of green tea, wearing a comfortable navy wrap cardigan, warm afternoon window light, editorial lifestyle photography, shot on Fujifilm X-T5 50mm f/1.8, relaxed posture, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman doing yoga warrior pose",
+  "body_image_queries": [
+    "woman standing kitchen counter chopping",
+    "woman smiling after completing morning",
+    "woman reading health magazine couch"
   ]
 }

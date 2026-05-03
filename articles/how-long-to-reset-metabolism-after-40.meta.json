@@ -6,7 +6,14 @@
   "primary_keyword": "how long to reset metabolism after 40",
   "cluster": "Metabolism",
   "intent": "Commercial/duration",
-  "tags": ["reset metabolism", "metabolism after 40", "slow metabolism", "weight loss", "NMN", "cellular energy"],
+  "tags": [
+    "reset metabolism",
+    "metabolism after 40",
+    "slow metabolism",
+    "weight loss",
+    "NMN",
+    "cellular energy"
+  ],
   "product": {
     "name": "NMN Cell Renew Tonic",
     "handle": "nmn-cell-renew-tonic",
@@ -16,5 +23,11 @@
   "meta_description": "Wondering how long to reset metabolism after 40? This realistic week-by-week timeline explains what changes first, why metabolism slows, and how to accelerate the process.",
   "word_count_estimate": 2800,
   "template_suffix": "timeline",
-  "status": "draft"
+  "status": "draft",
+  "image_query": "woman outdoor morning exercise active",
+  "body_image_queries": [
+    "healthy metabolism food colorful meal",
+    "woman exercising gym morning",
+    "woman cooking healthy kitchen"
+  ]
 }

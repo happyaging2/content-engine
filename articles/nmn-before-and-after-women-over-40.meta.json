@@ -10,5 +10,11 @@
     "Photograph of a 42-year-old woman doing a brisk walk along a coastal path, wearing navy athletic leggings and a light zip-up jacket, bright morning sunlight, editorial fitness photography, shot on Sony A7IV 50mm f/1.8, energized purposeful stride, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 46-year-old woman laughing while preparing a healthy salad in a bright modern kitchen, wearing a raspberry-red apron over a grey t-shirt, bright overhead kitchen lighting, editorial food and wellness photography, shot on Canon EOS R6 35mm f/2, vibrant energized expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman sitting comfortably at a home office desk reviewing documents, wearing reading glasses and a caramel-colored blazer, warm natural window light from the right, editorial lifestyle photography, shot on Fujifilm X-T5 50mm f/1.8, focused sharp alert expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman smiling confidently",
+  "body_image_queries": [
+    "woman doing brisk walk along",
+    "woman laughing while preparing healthy",
+    "woman sitting comfortably home office"
   ]
 }

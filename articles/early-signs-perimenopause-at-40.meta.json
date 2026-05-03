@@ -11,5 +11,11 @@
     "Photograph of a 44-year-old woman checking her temperature with a digital thermometer, sitting at a kitchen counter in a casual linen shirt, warm afternoon light, candid editorial style, shot on Canon EOS R5 50mm f/1.8, natural skin texture, no makeup, 8K resolution, no watermark, no text",
     "Photograph of a 42-year-old woman lying awake in bed at 3am, dim bluish moonlight through the window, wearing cotton pajamas, peaceful but alert expression, documentary style bedroom photography, shot on Sony A7IV 35mm f/2, shallow depth of field, no watermark, no text, no CGI",
     "Photograph of a 45-year-old woman doing light stretching in a bright sunlit living room in the morning, wearing comfortable athletic wear in neutral tones, wooden floors, house plants visible, editorial wellness photography, shot on Canon EOS R6 50mm f/1.8, natural light, 8K, no watermark, no text"
+  ],
+  "image_query": "woman sitting bed morning",
+  "body_image_queries": [
+    "woman checking temperature digital thermometer",
+    "woman lying awake bed",
+    "woman doing light stretching"
   ]
 }

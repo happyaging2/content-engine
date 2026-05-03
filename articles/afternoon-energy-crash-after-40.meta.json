@@ -4,5 +4,11 @@
   "tags": "afternoon fatigue, energy, NAD+, women over 40, mitochondria, cortisol",
   "summary": "Afternoon energy crashes after 40 are driven by declining NAD+, hormonal shifts that worsen blood sugar regulation, and disrupted cortisol rhythms. This article explains the biological cascade behind the 2 PM wall and provides evidence-based strategies including NAD+ supplementation to restore consistent energy.",
   "featured_image_src": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=630&fit=crop&auto=format",
-  "featured_image_alt": "Woman experiencing afternoon energy fatigue at work over 40"
+  "featured_image_alt": "Woman experiencing afternoon energy fatigue at work over 40",
+  "image_query": "woman tired desk afternoon office",
+  "body_image_queries": [
+    "woman drinking tea afternoon",
+    "woman stretching break office",
+    "woman energized outdoor walk"
+  ]
 }

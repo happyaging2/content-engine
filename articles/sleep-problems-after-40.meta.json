@@ -1,7 +1,7 @@
 {
   "title": "Why Sleep Gets Harder After 40 (And How to Fix It)",
   "slug": "sleep-problems-after-40",
-  "seo_title": "Why Sleep Gets Harder After 40 — How to Fix It",
+  "seo_title": "Why Sleep Gets Harder After 40 \u2014 How to Fix It",
   "meta_description": "Sleep problems after 40 are common but not inevitable. Learn why sleep changes at midlife and the evidence-based steps to get deep, restful sleep again.",
   "primary_keyword": "sleep problems after 40",
   "tags": "sleep, insomnia, perimenopause, women over 40, magnesium, sleep blend",
@@ -9,5 +9,11 @@
   "product_handle": "sleep-tonic",
   "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/sleep-tonic.jpg",
   "word_count_estimate": 2200,
-  "status": "ready"
+  "status": "ready",
+  "image_query": "woman sleeping peacefully bedroom morning",
+  "body_image_queries": [
+    "woman calm evening routine home",
+    "woman reading bed evening light",
+    "woman outdoor sunset walk"
+  ]
 }

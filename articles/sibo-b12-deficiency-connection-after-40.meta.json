@@ -8,5 +8,11 @@
     "Photograph of a 44-year-old woman talking to a healthcare practitioner in a bright consultation room, wearing a casual grey sweater, clinical but warm office lighting, editorial documentary wellness photography, shot on Canon EOS R6 35mm f/2, engaged attentive patient expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman preparing a plate of fermented foods including tempeh, kimchi, and yogurt in a bright kitchen, wearing a casual terracotta top, warm kitchen window light, editorial food and wellness photography, shot on Sony A7IV 50mm f/1.8, thoughtful food-preparation expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 50-year-old woman reading a health book at a kitchen counter with a cup of herbal tea and a small succulent plant nearby, wearing a casual cream knit sweater, warm natural afternoon window light, editorial documentary wellness photography, shot on Fujifilm X-T5 50mm f/1.8, focused engaged reading expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman sitting bright kitchen table looking",
+  "body_image_queries": [
+    "woman talking healthcare practitioner",
+    "woman preparing plate fermented foods",
+    "woman reading health book kitchen"
   ]
 }

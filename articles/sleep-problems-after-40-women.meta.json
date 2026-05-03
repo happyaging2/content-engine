@@ -4,9 +4,15 @@
   "seo_title": "Why Can't I Sleep Like I Used To After 40?",
   "meta_description": "Sleep problems after 40 are driven by falling progesterone, cortisol spikes, and estrogen changes. Learn what causes them and what actually helps you sleep again.",
   "primary_keyword": "sleep problems after 40 women",
-  "secondary_keywords": ["can't sleep after 40", "sleep and hormones", "perimenopause insomnia", "magnesium for sleep", "progesterone and sleep"],
+  "secondary_keywords": [
+    "can't sleep after 40",
+    "sleep and hormones",
+    "perimenopause insomnia",
+    "magnesium for sleep",
+    "progesterone and sleep"
+  ],
   "cluster": "Sleep",
-  "excerpt": "Waking at 3 AM, lighter sleep, feeling unrested — these are not just stress. After 40, falling estrogen and progesterone directly disrupt the biology of deep sleep. Here is what is actually happening and what helps.",
+  "excerpt": "Waking at 3 AM, lighter sleep, feeling unrested \u2014 these are not just stress. After 40, falling estrogen and progesterone directly disrupt the biology of deep sleep. Here is what is actually happening and what helps.",
   "tags": "sleep, hormones, perimenopause, magnesium, insomnia, women over 40, cortisol",
   "author": "Dr. Daniel Yadegar, MD",
   "product_bridge": "Liposomal Sleep Blend, Liposomal Magnesium",
@@ -15,5 +21,11 @@
     "https://happyaging.com/products/calm-tonic"
   ],
   "word_count_estimate": 2000,
-  "template_suffix": "timeline"
+  "template_suffix": "timeline",
+  "image_query": "woman sleeping peacefully bedroom morning",
+  "body_image_queries": [
+    "woman calm evening routine home",
+    "woman reading bed evening light",
+    "woman outdoor sunset walk"
+  ]
 }

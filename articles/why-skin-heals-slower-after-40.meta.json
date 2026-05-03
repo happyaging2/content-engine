@@ -9,5 +9,11 @@
   "product_handle": "glow-shot",
   "cluster": "Skin",
   "word_count": 2100,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman glowing skin portrait natural light",
+  "body_image_queries": [
+    "woman applying skincare bathroom mirror",
+    "healthy skin food colorful",
+    "woman outdoor portrait confident"
+  ]
 }

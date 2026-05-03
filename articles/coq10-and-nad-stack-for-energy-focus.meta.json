@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman at her desk with bright energy, coffee and supplements beside her",
   "word_count_estimate": 2000,
   "intent": "informational",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman energized outdoor morning active",
+  "body_image_queries": [
+    "woman running park morning",
+    "healthy breakfast colorful food",
+    "woman working focused alert"
+  ]
 }

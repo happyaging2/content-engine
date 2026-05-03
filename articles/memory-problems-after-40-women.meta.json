@@ -9,5 +9,11 @@
   "product_handle": "neuro-creamer",
   "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/neuro-creamer.jpg",
   "word_count_estimate": 2050,
-  "status": "ready"
+  "status": "ready",
+  "image_query": "woman reading focused home library",
+  "body_image_queries": [
+    "woman outdoor walk morning focused",
+    "healthy brain food omega greens",
+    "woman writing journal morning"
+  ]
 }

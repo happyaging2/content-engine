@@ -9,5 +9,11 @@
     "A woman in her 40s doing squats with a barbell in a well-lit gym, wearing fitted athletic clothes, confident and powerful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s checking her posture in a gym mirror after a workout, wearing athletic wear, pleased and satisfied, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s eating a protein-rich post-workout meal at a bright kitchen table, wearing workout clothes, energized and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman lifting dumbbells",
+  "body_image_queries": [
+    "woman doing squats barbell well-lit",
+    "woman checking posture gym mirror",
+    "woman eating protein-rich post-workout meal"
   ]
 }

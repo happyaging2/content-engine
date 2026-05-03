@@ -1,12 +1,18 @@
 {
   "slug": "collagen-after-40",
   "title": "Why Your Skin Ages Faster After 40 (And What Science Says About Collagen)",
-  "seo_title": "Why Skin Ages Faster After 40 — The Collagen Truth",
-  "meta_description": "Collagen drops 1–2% per year after 25 and crashes after menopause. Learn why skin ages faster after 40 and what clinical research says about marine collagen and antioxidants.",
+  "seo_title": "Why Skin Ages Faster After 40 \u2014 The Collagen Truth",
+  "meta_description": "Collagen drops 1\u20132% per year after 25 and crashes after menopause. Learn why skin ages faster after 40 and what clinical research says about marine collagen and antioxidants.",
   "primary_keyword": "collagen after 40",
-  "secondary_keywords": ["marine collagen for skin", "skin aging after 40", "collagen supplements women", "menopause skin changes", "collagen loss after 40"],
+  "secondary_keywords": [
+    "marine collagen for skin",
+    "skin aging after 40",
+    "collagen supplements women",
+    "menopause skin changes",
+    "collagen loss after 40"
+  ],
   "cluster": "Skin",
-  "excerpt": "Skin does not just age — it ages because collagen production slows. After 40, estrogen decline accelerates this loss. Here is what the research says about marine collagen and antioxidants for skin that looks and feels its best.",
+  "excerpt": "Skin does not just age \u2014 it ages because collagen production slows. After 40, estrogen decline accelerates this loss. Here is what the research says about marine collagen and antioxidants for skin that looks and feels its best.",
   "tags": "collagen, skin aging, marine collagen, women over 40, menopause, glutathione, antioxidants, skin health",
   "author": "Dr. Daniel Yadegar, MD",
   "product_bridge": "Glow Shot Marine Collagen, Liposomal Glutathione Radiance Tonic",
@@ -16,5 +22,11 @@
     "https://happyaging.com/products/nad-advanced-longevity-formula"
   ],
   "word_count_estimate": 1950,
-  "template_suffix": "timeline"
+  "template_suffix": "timeline",
+  "image_query": "woman glowing skin portrait natural light",
+  "body_image_queries": [
+    "woman eating healthy food collagen",
+    "woman outdoor morning skincare",
+    "woman confident smile portrait"
+  ]
 }

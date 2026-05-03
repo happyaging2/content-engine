@@ -1,7 +1,7 @@
 {
   "title": "Why Skin Gets Drier After 40 (And How to Restore Your Glow)",
   "slug": "skin-dryness-after-40",
-  "seo_title": "Why Skin Gets Drier After 40 — Restore Your Glow",
+  "seo_title": "Why Skin Gets Drier After 40 \u2014 Restore Your Glow",
   "meta_description": "Skin gets drier and duller after 40 due to collagen loss and estrogen decline. Learn what's really happening and how to restore your natural glow.",
   "primary_keyword": "skin dryness after 40",
   "tags": "skin, collagen, dry skin, glow, menopause, women over 40, marine collagen",
@@ -9,5 +9,11 @@
   "product_handle": "glow-shot",
   "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/glow-shot.jpg",
   "word_count_estimate": 2100,
-  "status": "ready"
+  "status": "ready",
+  "image_query": "woman glowing skin portrait natural light",
+  "body_image_queries": [
+    "woman applying skincare bathroom mirror",
+    "healthy skin food colorful",
+    "woman outdoor portrait confident"
+  ]
 }

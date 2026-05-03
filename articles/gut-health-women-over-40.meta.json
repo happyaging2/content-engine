@@ -9,5 +9,11 @@
   "product_handle": "happiest-gut",
   "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/happiest-gut.jpg",
   "word_count_estimate": 2100,
-  "status": "ready"
+  "status": "ready",
+  "image_query": "woman eating healthy meal kitchen",
+  "body_image_queries": [
+    "healthy gut fermented food probiotic",
+    "woman outdoor walk morning",
+    "colorful healthy vegetables meal"
+  ]
 }

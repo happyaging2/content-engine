@@ -11,5 +11,11 @@
     "Photograph of a 45-year-old woman examining her nails closely with natural light on her hands, wearing everyday clothing, close-up editorial style with visible skin texture and detail, shot on Canon EOS R6 100mm macro f/2.8, shallow depth of field, 8K, no watermark, no text",
     "Photograph of a 43-year-old woman preparing a plate of roasted broccoli, spinach, and Brussels sprouts in a bright modern kitchen, editorial food photography lifestyle, natural window light, shot on Sony A7IV 50mm f/1.8, authentic food textures, 8K, no watermark, no text",
     "Photograph of a 42-year-old woman doing low-impact strength training with light dumbbells in a sunlit gym, strong posture, wearing athletic wear, editorial fitness photography, shot on Fujifilm X-T5 35mm f/2, 8K resolution, no watermark, no text"
+  ],
+  "image_query": "woman holding bunch fresh kale dark",
+  "body_image_queries": [
+    "woman examining nails closely natural",
+    "woman preparing plate roasted broccoli",
+    "woman doing low-impact strength training"
   ]
 }

@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman in her 40s looking vibrant and healthy, representing perimenopause wellness",
   "word_count_estimate": 2900,
   "intent": "commercial / hub",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman vibrant outdoor morning lifestyle",
+  "body_image_queries": [
+    "woman healthy meal colorful",
+    "woman exercising outdoor",
+    "woman calm relaxed home"
+  ]
 }

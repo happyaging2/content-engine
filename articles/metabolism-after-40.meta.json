@@ -4,9 +4,15 @@
   "seo_title": "What Happens to Your Metabolism After 40?",
   "meta_description": "Muscle loss, estrogen decline, and falling NAD+ levels slow metabolism after 40. Learn what is actually happening in your body and the science-backed ways to fight back.",
   "primary_keyword": "metabolism after 40",
-  "secondary_keywords": ["slow metabolism after 40", "weight gain after 40", "NMN metabolism", "estrogen and metabolism", "muscle loss after 40"],
+  "secondary_keywords": [
+    "slow metabolism after 40",
+    "weight gain after 40",
+    "NMN metabolism",
+    "estrogen and metabolism",
+    "muscle loss after 40"
+  ],
   "cluster": "Metabolism",
-  "excerpt": "Your metabolism is not broken — it is responding to real biological changes. Muscle loss, hormonal shifts, and NAD+ decline all converge after 40. Here is what the science says about addressing each one.",
+  "excerpt": "Your metabolism is not broken \u2014 it is responding to real biological changes. Muscle loss, hormonal shifts, and NAD+ decline all converge after 40. Here is what the science says about addressing each one.",
   "tags": "metabolism, weight gain, NMN, NAD+, estrogen, muscle loss, women over 40, mitochondria",
   "author": "Dr. Daniel Yadegar, MD",
   "product_bridge": "NMN Cell Renew Tonic, NAD+ Advanced Protocol",
@@ -16,5 +22,11 @@
     "https://happyaging.com/products/lean-muscle-formula"
   ],
   "word_count_estimate": 2050,
-  "template_suffix": "timeline"
+  "template_suffix": "timeline",
+  "image_query": "woman outdoor morning exercise active",
+  "body_image_queries": [
+    "healthy metabolism food colorful meal",
+    "woman exercising gym morning",
+    "woman cooking healthy kitchen"
+  ]
 }

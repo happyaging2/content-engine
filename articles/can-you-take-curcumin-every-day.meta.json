@@ -9,5 +9,11 @@
   "featured_image_alt": "Golden turmeric and curcumin supplements on a wooden surface with dried turmeric root",
   "word_count_estimate": 2000,
   "intent": "informational",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman outdoor morning lifestyle wellness",
+  "body_image_queries": [
+    "turmeric golden latte kitchen",
+    "woman cooking healthy anti-inflammatory",
+    "woman walking nature trail"
+  ]
 }

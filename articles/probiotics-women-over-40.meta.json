@@ -8,5 +8,11 @@
   "author": "Happy Aging Team",
   "excerpt": "The gut microbiome shifts significantly after 40 because estrogen directly shapes which bacteria thrive. This guide breaks down the strains that matter, what CFU count to look for, and why a prebiotic-probiotic combination outperforms probiotics alone.",
   "product_handle": "happiest-gut",
-  "cluster": "GutHealth"
+  "cluster": "GutHealth",
+  "image_query": "woman eating fermented healthy food",
+  "body_image_queries": [
+    "healthy probiotic yogurt food",
+    "woman outdoor walk morning",
+    "healthy gut food fermented"
+  ]
 }

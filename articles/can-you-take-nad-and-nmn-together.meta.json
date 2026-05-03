@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman in her 40s taking morning supplements with a glass of water",
   "word_count_estimate": 2400,
   "intent": "commercial/stacking",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman vibrant outdoor morning energy",
+  "body_image_queries": [
+    "woman exercising outdoor morning",
+    "healthy colorful food bowl",
+    "woman confident active lifestyle"
+  ]
 }

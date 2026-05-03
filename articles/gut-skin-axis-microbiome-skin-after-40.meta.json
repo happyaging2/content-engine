@@ -8,5 +8,11 @@
     "Photograph of a 44-year-old woman at a bright kitchen counter preparing a smoothie bowl with mixed berries, kefir, and fresh fruits, wearing a casual cornflower blue linen top, bright natural window light, editorial food and wellness photography, shot on Sony A7IV 50mm f/1.8, engaged healthy cooking expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman sitting at a vanity applying a serum to her face with clean glowing skin, wearing a simple cream cotton robe, warm soft vanity mirror light combined with natural window light, editorial beauty wellness photography, shot on Fujifilm X-T5 50mm f/1.8, composed self-care focused expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 50-year-old woman doing a gentle outdoor walk in a park with sun on her face, wearing a light grey athletic jacket and dark leggings, soft golden afternoon sunlight, editorial fitness wellness photography, shot on Canon EOS R6 35mm f/2, relaxed happy expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman gently touching cheek examining glowing",
+  "body_image_queries": [
+    "woman bright kitchen counter preparing",
+    "woman sitting vanity applying serum",
+    "woman doing gentle outdoor walk"
   ]
 }

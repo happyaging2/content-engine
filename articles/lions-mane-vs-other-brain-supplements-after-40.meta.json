@@ -11,5 +11,11 @@
     "Photograph of a 47-year-old woman working on a laptop at a bright home office desk with plants, wearing a professional sage green blouse, soft natural window light, editorial documentary style photography, shot on Sony A7IV 50mm f/1.8, focused expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 43-year-old woman drinking a cup of coffee while reading a book in a cozy armchair by a window, wearing a cream ribbed cardigan, warm morning light with soft shadows, editorial lifestyle photography, shot on Canon EOS R5 85mm f/1.4, relaxed and engaged, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman doing a gentle outdoor walk with headphones, appearing thoughtful and energized, wearing a charcoal athletic jacket and dark jeans, sunny park setting with soft shadows, editorial lifestyle photography, shot on Canon EOS R6 35mm f/2, healthy and vibrant, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman writing journal sunlit wooden desk",
+  "body_image_queries": [
+    "woman working laptop bright home",
+    "woman drinking cup coffee while",
+    "woman doing gentle outdoor walk"
   ]
 }

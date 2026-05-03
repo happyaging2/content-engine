@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman eating healthy food for gut health and microbiome support after 40",
   "word_count_estimate": 2050,
   "intent": "commercial/frequency",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman eating fermented healthy food",
+  "body_image_queries": [
+    "healthy probiotic yogurt food",
+    "woman outdoor walk morning",
+    "healthy gut food fermented"
+  ]
 }

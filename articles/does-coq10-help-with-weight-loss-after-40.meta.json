@@ -9,5 +9,11 @@
   "featured_image_alt": "Active woman over 40 exercising and prioritizing her health and energy",
   "word_count_estimate": 2500,
   "intent": "commercial / debunk + mechanism",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman outdoor morning walk confident",
+  "body_image_queries": [
+    "woman exercising outdoor morning",
+    "healthy balanced meal colorful",
+    "woman yoga indoor calm"
+  ]
 }

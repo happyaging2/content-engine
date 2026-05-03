@@ -11,5 +11,11 @@
     "Photograph of a 44-year-old woman hiking on a forest trail with bright dappled sunlight through trees, wearing a coral athletic jacket and black leggings with a small backpack, editorial fitness photography, shot on Fujifilm X-T5 50mm f/1.8, active and strong posture, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 50-year-old woman at a home desk working on a laptop with focused concentration, wearing a relaxed navy linen blouse, warm natural window light from the left, editorial lifestyle photography, shot on Canon EOS R6 35mm f/2, alert and productive expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 46-year-old woman doing a light rowing workout on an ergometer in a bright gym, wearing a grey athletic tank and leggings, bright overhead gym lighting, editorial fitness photography, shot on Canon EOS R5 85mm f/1.4, focused and energetic, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman stretching energetically",
+  "body_image_queries": [
+    "woman hiking forest trail bright",
+    "woman home desk working laptop",
+    "woman doing light rowing workout"
   ]
 }

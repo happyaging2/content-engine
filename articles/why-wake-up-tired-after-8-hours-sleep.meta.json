@@ -9,5 +9,11 @@
   "product_handle": "sleep-tonic",
   "cluster": "Sleep",
   "word_count": 2050,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman sleeping peacefully bedroom morning",
+  "body_image_queries": [
+    "woman calm evening routine home",
+    "woman reading bed evening light",
+    "woman outdoor sunset walk"
+  ]
 }

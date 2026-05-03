@@ -10,5 +10,11 @@
     "Photograph of a 46-year-old woman lifting moderate hand weights in a bright airy fitness studio, wearing dusty rose athletic wear, soft diffused morning light through large windows, editorial fitness photography, shot on Canon EOS R5 85mm f/1.4, focused determined expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 42-year-old woman doing a push-up on a yoga mat in a sunlit living room, wearing navy fitted workout clothes, bright morning light, editorial health and fitness photography, shot on Sony A7IV 50mm f/1.8, strong form visible, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman at a gym, writing in a workout journal with a small hand weight nearby on a bench, wearing teal athletic wear, bright gym lighting, editorial documentary fitness photography, shot on Fujifilm X-T5 50mm f/1.8, focused expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman performing dumbbell squat",
+  "body_image_queries": [
+    "woman lifting moderate hand weights",
+    "woman doing push-up yoga mat",
+    "woman yoga morning light"
   ]
 }

@@ -11,5 +11,11 @@
     "Photograph of a 44-year-old woman sitting up from the couch with a tired but determined expression, wearing casual comfortable clothing, warm living room light, candid documentary style, shot on Sony A7IV 50mm f/1.8, natural skin texture, 8K, no watermark, no text",
     "Photograph of a 45-year-old woman preparing a plate of lean beef, spinach, and lentils in a bright kitchen, editorial food and health photography, natural window light, shot on Canon EOS R6 50mm f/1.8, authentic food textures, 8K, no watermark, no text",
     "Photograph of a 42-year-old woman having her blood drawn in a bright clean medical clinic, seated calmly, wearing everyday clothing, editorial health photography, shot on Fujifilm X-T5 35mm f/2, 8K resolution, no watermark, no text"
+  ],
+  "image_query": "woman sitting desk looking tired fatigued",
+  "body_image_queries": [
+    "woman sitting couch tired determined",
+    "woman preparing plate lean beef",
+    "woman having blood drawn"
   ]
 }

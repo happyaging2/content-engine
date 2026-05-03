@@ -6,7 +6,14 @@
   "primary_keyword": "adrenal fatigue vs burnout women over 40",
   "cluster": "Hormones",
   "intent": "Informational/comparison",
-  "tags": ["adrenal fatigue", "burnout", "women over 40", "cortisol", "stress", "fatigue comparison"],
+  "tags": [
+    "adrenal fatigue",
+    "burnout",
+    "women over 40",
+    "cortisol",
+    "stress",
+    "fatigue comparison"
+  ],
   "product": {
     "name": "Liposomal Magnesium (Calm Tonic)",
     "handle": "calm-tonic",
@@ -16,5 +23,11 @@
   "meta_description": "Adrenal fatigue and burnout share symptoms but need different solutions. Learn how to tell them apart, why women over 40 are most vulnerable, and how to recover from each.",
   "word_count_estimate": 2600,
   "template_suffix": "timeline",
-  "status": "draft"
+  "status": "draft",
+  "image_query": "woman resting couch tired home",
+  "body_image_queries": [
+    "woman sleeping peacefully bedroom",
+    "woman journal writing morning",
+    "woman outdoor walk gentle"
+  ]
 }

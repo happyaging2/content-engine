@@ -6,7 +6,13 @@
   "primary_keyword": "hair loss after 40 women",
   "cluster": "Hormones",
   "intent": "Informational/symptom",
-  "tags": ["hair loss after 40", "thinning hair", "hormonal hair loss", "estrogen hair loss", "women over 40"],
+  "tags": [
+    "hair loss after 40",
+    "thinning hair",
+    "hormonal hair loss",
+    "estrogen hair loss",
+    "women over 40"
+  ],
   "product": {
     "name": "NMN Cell Renew Tonic",
     "handle": "nmn-cell-renew-tonic",
@@ -16,5 +22,11 @@
   "meta_description": "Hair loss after 40 in women is often hormonal, nutritional, or both. Discover what is actually causing your thinning hair and the evidence-based approaches that address the root cause.",
   "word_count_estimate": 2500,
   "template_suffix": "timeline",
-  "status": "draft"
+  "status": "draft",
+  "image_query": "woman hair loss after 40 healthy lifestyle",
+  "body_image_queries": [
+    "woman outdoor morning walk",
+    "healthy colorful food meal",
+    "woman relaxed confident indoor"
+  ]
 }

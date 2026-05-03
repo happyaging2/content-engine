@@ -11,5 +11,11 @@
     "Photograph of a 44-year-old woman at a farmer's market selecting fresh broccoli sprouts, wearing a casual mustard linen jacket and relaxed jeans, bright outdoor natural market lighting, editorial lifestyle photography, shot on Fujifilm X-T5 50mm f/1.8, curious and engaged expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 50-year-old woman eating a cruciferous vegetable stir-fry at a colorful dining table with fresh herbs, wearing a relaxed terracotta wrap top, warm natural overhead dining room light, editorial food photography, shot on Canon EOS R5 85mm f/1.4, satisfied and healthy expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 46-year-old woman doing a light outdoor walk through a lush green park on a warm day, wearing a soft sage athletic quarter-zip and dark leggings, bright warm afternoon sunlight, editorial fitness photography, shot on Canon EOS R6 35mm f/2, energized and vibrant, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman juicing fresh broccoli kale cold-press",
+  "body_image_queries": [
+    "woman farmer's market selecting fresh",
+    "woman eating cruciferous vegetable stir-fry",
+    "woman doing light outdoor walk"
   ]
 }

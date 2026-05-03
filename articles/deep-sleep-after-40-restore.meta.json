@@ -8,5 +8,11 @@
   "author": "Happy Aging Team",
   "cluster": "sleep",
   "product_handle": "sleep-tonic",
-  "batch": "2026-04-10"
+  "batch": "2026-04-10",
+  "image_query": "woman sleeping peacefully bedroom morning",
+  "body_image_queries": [
+    "woman calm evening routine home",
+    "woman reading bed evening light",
+    "woman outdoor sunset walk"
+  ]
 }

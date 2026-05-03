@@ -10,5 +10,11 @@
     "Photograph of a 42-year-old woman sitting on the edge of her bed in a dimly lit bedroom, holding a small glass bottle of supplement, wearing light blue pajamas, warm amber bedside lamp glow, editorial wellness photography, shot on Sony A7IV 50mm f/1.8, calm focused expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman writing in a sleep journal on her nightstand, wearing a soft grey sleep shirt, warm evening light, editorial lifestyle photography, shot on Fujifilm X-T5 50mm f/1.8, cozy bedroom setting with plants visible, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 44-year-old woman waking up refreshed, sitting up in bed with a morning smile, wearing pale pink pajamas, soft morning light through curtains, editorial wellness photography, shot on Canon EOS R6 35mm f/2, natural expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman lying peacefully linen-sheeted bed",
+  "body_image_queries": [
+    "woman sitting edge bed dimly",
+    "woman writing sleep journal nightstand",
+    "woman waking refreshed"
   ]
 }

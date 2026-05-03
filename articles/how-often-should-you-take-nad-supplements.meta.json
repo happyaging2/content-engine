@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman establishing a healthy morning supplement routine",
   "word_count_estimate": 2300,
   "intent": "commercial/frequency",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman vibrant outdoor morning energy",
+  "body_image_queries": [
+    "woman exercising outdoor morning",
+    "healthy colorful food bowl",
+    "woman confident active lifestyle"
+  ]
 }

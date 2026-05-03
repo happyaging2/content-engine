@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman relaxing before bedtime with a glass of water and supplements",
   "word_count_estimate": 2400,
   "intent": "commercial / safety + frequency",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman peaceful sleep bedroom morning",
+  "body_image_queries": [
+    "woman relaxing evening home cozy",
+    "healthy magnesium food greens nuts",
+    "woman morning routine kitchen calm"
+  ]
 }

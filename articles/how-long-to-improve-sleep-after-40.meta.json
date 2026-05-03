@@ -6,7 +6,13 @@
   "primary_keyword": "how long to improve sleep after 40",
   "cluster": "Sleep",
   "intent": "Commercial/duration",
-  "tags": ["sleep improvement", "how long sleep better", "women over 40", "insomnia", "sleep supplements"],
+  "tags": [
+    "sleep improvement",
+    "how long sleep better",
+    "women over 40",
+    "insomnia",
+    "sleep supplements"
+  ],
   "product": {
     "name": "Liposomal Sleep Blend",
     "handle": "sleep-tonic",
@@ -16,5 +22,11 @@
   "meta_description": "Wondering how long to improve sleep after 40? This week-by-week guide explains what changes first, why hormones disrupt sleep, and how to get deeper rest faster.",
   "word_count_estimate": 2400,
   "template_suffix": "timeline",
-  "status": "draft"
+  "status": "draft",
+  "image_query": "woman sleeping peacefully bedroom morning",
+  "body_image_queries": [
+    "woman calm evening routine home",
+    "woman reading bed evening light",
+    "woman outdoor sunset walk"
+  ]
 }

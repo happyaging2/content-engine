@@ -9,5 +9,11 @@
   "product_handle": "brain-tonic",
   "cluster": "Brain",
   "word_count": 2050,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman energized outdoor morning active",
+  "body_image_queries": [
+    "woman running park morning",
+    "healthy breakfast colorful food",
+    "woman working focused alert"
+  ]
 }

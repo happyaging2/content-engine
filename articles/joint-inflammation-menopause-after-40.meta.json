@@ -8,5 +8,11 @@
     "Photograph of a 44-year-old woman walking on a quiet tree-lined path in a park at midday, wearing comfortable dark athletic leggings and a cream fitted long-sleeve workout top, bright even outdoor midday light, editorial health photography, shot on Sony A7IV 50mm f/1.8, confident unhurried stride and natural expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman sitting on the floor doing a gentle hip-flexor stretch in a bright home yoga space with a foam roller beside her, wearing a muted teal yoga set, soft diffused morning light, editorial fitness photography, shot on Canon EOS R6 35mm f/2, calm focused expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 43-year-old woman preparing a colorful anti-inflammatory meal with salmon, turmeric-seasoned vegetables, and dark leafy greens at a kitchen counter, wearing a casual soft burgundy linen shirt, warm overhead kitchen lighting, editorial food and wellness photography, shot on Fujifilm X-T5 50mm f/1.8, engaged natural expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman doing gentle standing knee stretch",
+  "body_image_queries": [
+    "woman walking quiet tree-lined path",
+    "woman sitting floor doing gentle",
+    "woman preparing colorful anti-inflammatory meal"
   ]
 }

@@ -8,5 +8,11 @@
   "author": "Happy Aging Team",
   "excerpt": "Glutathione is the body's master antioxidant and it declines naturally after 40, which is one reason skin loses its glow during midlife. Clinical research shows oral and liposomal glutathione can improve skin brightness, tone, and elasticity over 8 to 12 weeks.",
   "product_handle": "radiance-tonic",
-  "cluster": "SkinHealth"
+  "cluster": "SkinHealth",
+  "image_query": "woman glowing skin portrait natural light",
+  "body_image_queries": [
+    "woman applying skincare bathroom mirror",
+    "healthy skin food colorful",
+    "woman outdoor portrait confident"
+  ]
 }

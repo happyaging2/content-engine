@@ -4,9 +4,15 @@
   "seo_title": "Is Brain Fog After 40 Normal? Causes and Fixes",
   "meta_description": "Brain fog after 40 is driven by estrogen fluctuation, CoQ10 decline, and disrupted sleep. Learn why it happens and what science-backed steps actually restore mental clarity.",
   "primary_keyword": "brain fog after 40",
-  "secondary_keywords": ["brain fog menopause", "CoQ10 brain fog", "cognitive decline after 40", "mental clarity after 40", "perimenopause memory"],
+  "secondary_keywords": [
+    "brain fog menopause",
+    "CoQ10 brain fog",
+    "cognitive decline after 40",
+    "mental clarity after 40",
+    "perimenopause memory"
+  ],
   "cluster": "Brain",
-  "excerpt": "Forgetting words, losing focus, thinking through cotton — brain fog is one of the most common but least discussed symptoms of perimenopause. Here is the biology behind it and what actually helps.",
+  "excerpt": "Forgetting words, losing focus, thinking through cotton \u2014 brain fog is one of the most common but least discussed symptoms of perimenopause. Here is the biology behind it and what actually helps.",
   "tags": "brain fog, CoQ10, cognitive health, perimenopause, memory, women over 40, mental clarity",
   "author": "Dr. Daniel Yadegar, MD",
   "product_bridge": "Liposomal CoQ10 Brain Tonic, Neuro Creamer",
@@ -16,5 +22,11 @@
     "https://happyaging.com/products/sleep-tonic"
   ],
   "word_count_estimate": 2050,
-  "template_suffix": "timeline"
+  "template_suffix": "timeline",
+  "image_query": "woman focused working home office",
+  "body_image_queries": [
+    "woman reading book calm light",
+    "healthy brain food greens eggs",
+    "woman outdoor morning walk energized"
+  ]
 }

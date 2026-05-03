@@ -9,5 +9,11 @@
   "product_handle": "happiest-gut",
   "cluster": "Gut",
   "word_count": 2100,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman eating fermented healthy food",
+  "body_image_queries": [
+    "healthy probiotic yogurt food",
+    "woman outdoor walk morning",
+    "healthy gut food fermented"
+  ]
 }

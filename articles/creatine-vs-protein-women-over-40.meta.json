@@ -9,5 +9,11 @@
     "Photograph of a 46-year-old woman blending a protein smoothie in a bright kitchen with fresh berries and almond milk visible on the counter, wearing a casual grey athletic top, bright overhead kitchen lighting, editorial food and wellness photography, shot on Sony A7IV 50mm f/1.8, natural skin, focused expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 42-year-old woman doing a seated cable row exercise in a gym, wearing dark navy workout shorts and a fitted light blue sports top, gym with soft overhead lighting, editorial fitness photography, shot on Fujifilm X-T5 50mm f/1.8, strong focused posture, natural skin, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman stretching after a workout on a mat in a bright studio, wearing charcoal athletic leggings and a fitted cream sports bra top, soft natural light from windows, editorial wellness photography, shot on Canon EOS R5 85mm f/1.4, relaxed expression, natural skin, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman doing dumbbell bicep curl",
+  "body_image_queries": [
+    "woman blending protein smoothie",
+    "woman doing seated cable row",
+    "woman stretching after workout mat"
   ]
 }

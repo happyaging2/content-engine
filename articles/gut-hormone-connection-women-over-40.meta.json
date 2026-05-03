@@ -8,5 +8,11 @@
   "author": "Happy Aging Team",
   "excerpt": "The gut microbiome directly controls how estrogen, cortisol, and serotonin are produced and metabolized in women over 40. A disrupted gut can drive hormonal imbalances, mood swings, and weight changes that feel impossible to explain.",
   "product_handle": "happiest-gut",
-  "cluster": "GutHealth"
+  "cluster": "GutHealth",
+  "image_query": "woman eating healthy meal kitchen",
+  "body_image_queries": [
+    "healthy gut fermented food probiotic",
+    "woman outdoor walk morning",
+    "colorful healthy vegetables meal"
+  ]
 }

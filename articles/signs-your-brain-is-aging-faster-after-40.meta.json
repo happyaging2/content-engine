@@ -9,5 +9,11 @@
   "featured_image_alt": "Woman looking thoughtful and tired at her desk, struggling to concentrate",
   "word_count_estimate": 2000,
   "intent": "informational",
-  "batch": "2026-04-13"
+  "batch": "2026-04-13",
+  "image_query": "woman signs your brain aging healthy lifestyle",
+  "body_image_queries": [
+    "woman outdoor morning walk",
+    "healthy colorful food meal",
+    "woman relaxed confident indoor"
+  ]
 }

@@ -9,5 +9,11 @@
   "product_handle": "calm-tonic",
   "cluster": "Energy",
   "word_count": 2050,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman relaxing peaceful home afternoon",
+  "body_image_queries": [
+    "woman yoga mat morning",
+    "woman sleeping soundly bedroom",
+    "woman gentle walk nature"
+  ]
 }

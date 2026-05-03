@@ -9,5 +9,11 @@
     "Photograph of a 45-year-old woman writing in a journal at a sunlit kitchen table with a cup of green tea beside her, wearing a relaxed cream linen shirt, kitchen with warm morning light and wooden accents, soft diffused morning light, editorial lifestyle photography, shot on Sony A7IV 50mm f/1.8, thoughtful focused expression, natural skin, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman doing a brisk walk in a park with autumn trees, wearing a rose-colored athletic jacket and dark pants, tree-lined path with golden autumn light, warm golden hour sunlight, editorial fitness photography, shot on Canon EOS R6 35mm f/2, energetic expression, natural skin, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 43-year-old woman preparing a colorful omega-3 rich meal with salmon and avocado in a bright kitchen, wearing a casual white striped top, modern kitchen with herbs on the counter and natural window light, soft diffused morning light, editorial food and wellness photography, shot on Canon EOS R5 85mm f/1.4, focused natural skin, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman reading book desk",
+  "body_image_queries": [
+    "woman writing journal sunlit kitchen",
+    "woman doing brisk walk park",
+    "woman preparing colorful omega-3 rich"
   ]
 }

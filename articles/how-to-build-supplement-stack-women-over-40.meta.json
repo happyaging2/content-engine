@@ -9,5 +9,11 @@
     "Photograph of a 45-year-old woman writing in a health journal at a wooden desk near a window, with a few supplement bottles arranged beside her, wearing a relaxed cream linen top, natural morning light from the left, editorial wellness photography, shot on Fujifilm X-T5 50mm f/1.8, thoughtful focused expression, natural skin, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 49-year-old woman eating a colorful Mediterranean-style meal at a sunny dining table with fresh vegetables, olive oil, and fish, wearing a white casual top, bright warm indoor lighting, editorial food and wellness photography, shot on Sony A7IV 50mm f/1.8, natural skin, content expression, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 43-year-old woman doing a resistance training exercise with dumbbells in a bright home gym, wearing black athletic shorts and a fitted grey tank top, large windows with natural light, soft diffused morning light, editorial fitness photography, shot on Canon EOS R6 35mm f/2, strong posture, natural skin, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman arranging small amber supplement bottles",
+  "body_image_queries": [
+    "woman writing health journal wooden",
+    "woman eating colorful Mediterranean-style meal",
+    "woman doing resistance training exercise"
   ]
 }

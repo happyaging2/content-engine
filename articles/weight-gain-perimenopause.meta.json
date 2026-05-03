@@ -1,7 +1,7 @@
 {
   "title": "Why You Gain Weight During Perimenopause (And How to Manage It)",
   "slug": "weight-gain-perimenopause",
-  "seo_title": "Why You Gain Weight in Perimenopause — How to Manage",
+  "seo_title": "Why You Gain Weight in Perimenopause \u2014 How to Manage",
   "meta_description": "Weight gain during perimenopause is real and multi-factorial. Learn the hormonal drivers behind midlife weight changes and practical strategies that work.",
   "primary_keyword": "weight gain perimenopause",
   "tags": "perimenopause, weight gain, metabolism, lean muscle, women over 40, hormones",
@@ -9,5 +9,11 @@
   "product_handle": "lean-muscle-formula",
   "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/lean-muscle-formula.jpg",
   "word_count_estimate": 2300,
-  "status": "ready"
+  "status": "ready",
+  "image_query": "woman outdoor morning confident active",
+  "body_image_queries": [
+    "woman yoga calm indoor morning",
+    "healthy hormone food balanced meal",
+    "woman walking nature trail"
+  ]
 }

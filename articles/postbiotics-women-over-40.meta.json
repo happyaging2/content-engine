@@ -9,5 +9,11 @@
   "product_handle": "happiest-gut",
   "cluster": "Gut",
   "word_count": 2150,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman postbiotics healthy lifestyle",
+  "body_image_queries": [
+    "woman outdoor morning walk",
+    "healthy colorful food meal",
+    "woman relaxed confident indoor"
+  ]
 }

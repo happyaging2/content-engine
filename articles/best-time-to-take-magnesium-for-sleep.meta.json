@@ -9,5 +9,11 @@
   "product_handle": "sleep-tonic",
   "cluster": "Sleep",
   "word_count": 2300,
-  "author": "Happy Aging Team"
+  "author": "Happy Aging Team",
+  "image_query": "woman peaceful sleep bedroom morning",
+  "body_image_queries": [
+    "woman relaxing evening home cozy",
+    "healthy magnesium food greens nuts",
+    "woman morning routine kitchen calm"
+  ]
 }

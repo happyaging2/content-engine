@@ -11,5 +11,11 @@
     "Photograph of a 43-year-old woman looking at herself in a bathroom mirror with a thoughtful expression, natural morning light, close-up of face and neck, authentic candid documentary style, shot on Sony A7IV 85mm f/1.4, real skin texture, 8K, no watermark, no text",
     "Photograph of a 45-year-old woman preparing a plate of grilled fish, seaweed salad, and eggs in a bright kitchen, editorial food wellness photography, natural window light, shot on Canon EOS R6 50mm f/1.8, authentic textures, 8K resolution, no watermark, no text",
     "Photograph of a 42-year-old woman doing a low-energy morning routine making coffee, wearing a robe, looking sluggish but relatable, warm kitchen morning light, candid documentary editorial style, shot on Fujifilm X-T5 35mm f/2, 8K, no watermark, no text"
+  ],
+  "image_query": "woman gently touching neck both hands",
+  "body_image_queries": [
+    "woman looking herself bathroom mirror",
+    "woman preparing plate grilled fish",
+    "woman doing low-energy morning routine"
   ]
 }

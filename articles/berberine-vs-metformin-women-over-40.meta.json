@@ -11,5 +11,11 @@
     "Photograph of a 44-year-old woman doing a brisk walk in a tree-lined neighborhood, wearing a light grey athletic zip-up and black leggings, bright morning sunshine filtering through autumn trees, editorial fitness photography, shot on Sony A7IV 50mm f/1.8, confident stride, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 48-year-old woman preparing a colorful salad with vegetables and chickpeas in a well-lit modern kitchen, wearing a casual striped linen top, bright overhead kitchen lighting, editorial food and wellness photography, shot on Canon EOS R5 85mm f/1.4, natural skin, 8K resolution, no watermark, no text, no CGI",
     "Photograph of a 43-year-old woman writing in a wellness journal at a desk next to a window with morning light, wearing a soft cream knit sweater, warm diffused natural window light, editorial health photography, shot on Fujifilm X-T5 50mm f/1.8, relaxed focused expression, 8K resolution, no watermark, no text, no CGI"
+  ],
+  "image_query": "woman reviewing health paperwork bright kitchen",
+  "body_image_queries": [
+    "woman doing brisk walk tree-lined",
+    "woman preparing colorful salad vegetables",
+    "woman writing wellness journal desk"
   ]
 }
