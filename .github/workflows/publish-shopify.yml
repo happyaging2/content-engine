@@ -4,9 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       batch_date:
-        description: "Batch date for log label (YYYY-MM-DD) — leave blank for today"
+        description: "Batch date (YYYY-MM-DD) — leave blank for today"
         required: false
         default: ""
+      update_all_images:
+        description: "Re-fetch images on ALL published articles after publishing"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 jobs:
   publish:
@@ -20,12 +28,15 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install dependencies
+        run: pip install requests
+
       - name: Configure git identity
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
 
-      - name: Run QA + Publish pipeline
+      - name: Step 1 — QA + Publish new batch
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
@@ -37,11 +48,31 @@ jobs:
           fi
           bash scripts/qa-and-publish.sh "$BATCH"
 
+      - name: Step 2 — Re-fetch images on ALL published articles
+        if: ${{ github.event.inputs.update_all_images == 'true' }}
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          cd articles
+          python3 update-images.py
+
+      - name: Step 3 — Patch FAQ schema + section images on ALL articles
+        if: ${{ github.event.inputs.update_all_images == 'true' }}
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          cd articles
+          python3 patch-seo.py
+
       - name: Commit resolved images back to repo
         run: |
           git add articles/*.meta.json articles/*-final.html 2>/dev/null || true
           if ! git diff --cached --quiet; then
-            git commit -m "chore: resolved stock images for batch $(date +%Y-%m-%d) [skip ci]"
+            git commit -m "chore: resolved stock images $(date +%Y-%m-%d) [skip ci]"
             git push origin main
           else
             echo "Nothing to commit."
