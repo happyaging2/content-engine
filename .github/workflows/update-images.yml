@@ -1,0 +1,65 @@
+name: Update Images (All Published Articles)
+
+on:
+  workflow_dispatch:
+    inputs:
+      schema_only:
+        description: "Run patch-seo in schema-only mode (skip image re-fetch)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Configure git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Step 1 — Re-fetch cover + body images for all published articles
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          cd articles
+          python3 update-images.py
+
+      - name: Step 2 — Patch FAQ schema + meta description + section images
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          cd articles
+          if [ "${{ github.event.inputs.schema_only }}" = "true" ]; then
+            python3 patch-seo.py --schema-only
+          else
+            python3 patch-seo.py
+          fi
+
+      - name: Commit resolved image cache back to repo
+        run: |
+          git add articles/*.meta.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: resolved image cache $(date +%Y-%m-%d) [skip ci]"
+            git push origin main
+          else
+            echo "Nothing to commit."
+          fi
