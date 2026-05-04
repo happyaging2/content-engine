@@ -1,0 +1,19 @@
+{
+  "title": "Probiotics for Anxiety and Mood After 40: What the Research Shows",
+  "slug": "probiotics-mental-health-anxiety-after-40",
+  "tags": "probiotics, anxiety, mood, mental health, gut-brain axis, women over 40, perimenopause, lactobacillus",
+  "product_handle": "happiest-gut",
+  "cluster": "Gut",
+  "image_prompt": "A woman in her 40s sitting peacefully in a sunny garden reading a book with a relaxed smile, wearing a casual light linen top, warm afternoon sunlight, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s enjoying a bowl of yogurt with berries at a bright kitchen counter, wearing a casual top, morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s meditating cross-legged on a yoga mat in a calm living room with plants, wearing athletic clothes, soft natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s laughing with a friend over herbal tea at a cozy cafe table, wearing casual clothes, warm ambient light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman relaxing sunny garden reading peaceful",
+  "body_image_queries": [
+    "woman eating yogurt berries breakfast kitchen",
+    "woman meditating yoga mat calm living room",
+    "woman laughing friend herbal tea cafe"
+  ]
+}

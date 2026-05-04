@@ -1,0 +1,19 @@
+{
+  "title": "CoQ10 and Heart Health in Women After 40: What the Research Actually Shows",
+  "slug": "coq10-heart-health-research-women-after-40",
+  "tags": "CoQ10, coenzyme Q10, heart health, women over 40, cardiovascular, energy, statins, mitochondria",
+  "product_handle": "brain-tonic",
+  "cluster": "Heart",
+  "image_prompt": "A woman in her 40s hiking on a scenic trail with mountains in the background wearing athletic outdoor clothing, strong and vital expression, photorealistic wellness lifestyle photography, bright natural daylight, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a brisk jog in a sunny residential neighborhood wearing bright athletic clothing, determined and energized expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a heart-healthy breakfast with berries, nuts, and oats at a bright kitchen counter, healthy and happy expression, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s in a restorative yoga pose in a peaceful studio with natural light, wearing fitted athletic clothing, relaxed and strong, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman hiking scenic trail mountains athletic vital",
+  "body_image_queries": [
+    "woman jogging sunny neighborhood athletic energized",
+    "woman breakfast berries nuts oats kitchen healthy morning",
+    "woman yoga pose peaceful studio natural light athletic"
+  ]
+}

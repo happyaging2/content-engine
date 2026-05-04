@@ -1,0 +1,19 @@
+{
+  "title": "How to Use Retinol and Vitamin C Together After 40 (Without Irritating Your Skin)",
+  "slug": "how-to-use-retinol-vitamin-c-together-after-40",
+  "tags": "retinol, vitamin C, skincare routine, skin after 40, anti-aging, collagen, brightening, women over 40",
+  "product_handle": "glow-shot",
+  "cluster": "Skin",
+  "image_prompt": "A woman in her 40s with glowing healthy skin applying a serum in a bright elegant bathroom, wearing a white robe, soft morning light, radiant complexion, confident and relaxed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s organizing her skincare products on a bathroom shelf with a thoughtful and organized expression, wearing casual clothes, bright natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating citrus fruit and berries at a breakfast table, glowing healthy skin, wearing a casual blouse, morning sunshine, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s applying sunscreen outdoors before a morning walk, wearing light athletic clothes, sunny morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman glowing skin serum bathroom bright morning",
+  "body_image_queries": [
+    "woman organizing skincare products bathroom shelf",
+    "woman eating citrus berries breakfast glowing skin",
+    "woman applying sunscreen outdoor morning athletic"
+  ]
+}

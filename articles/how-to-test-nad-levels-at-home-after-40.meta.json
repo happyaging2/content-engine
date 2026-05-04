@@ -1,0 +1,19 @@
+{
+  "title": "How to Test Your NAD+ Levels at Home After 40: A Practical Guide",
+  "slug": "how-to-test-nad-levels-at-home-after-40",
+  "tags": "NAD+ testing, NAD levels, home test, longevity, women over 40, NMN, NR, cellular health, biohacking",
+  "product_handle": "longevity-shots",
+  "cluster": "Longevity",
+  "image_prompt": "A woman in her 40s looking at health test results on a laptop with a curious and engaged expression, wearing a comfortable casual blouse at a home desk, warm morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s taking a finger prick blood sample at home with a health kit on a clean kitchen counter, wearing casual clothes, bright natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing health tracking data on a phone app looking focused, wearing comfortable home clothes, soft indoor light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a morning exercise routine looking energized, wearing athletic clothes, bright home setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman reviewing health test results laptop home",
+  "body_image_queries": [
+    "woman finger prick blood test home health kit",
+    "woman reviewing health app phone focused",
+    "woman morning exercise routine energized home"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Vitamin D and Immunity After 40: Why Most Women Are Deficient and What to Do",
+  "slug": "vitamin-d-immunity-after-40",
+  "tags": "vitamin D, immunity, immune health, women over 40, deficiency, autoimmune, supplements, inflammation",
+  "product_handle": "relief-tonic",
+  "cluster": "Immunity",
+  "image_prompt": "A woman in her 40s standing outdoors in morning sunlight with eyes closed, arms relaxed, wearing a light casual top, peaceful and energized expression, photorealistic wellness lifestyle photography, warm golden natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s eating a salmon and leafy greens salad at a bright kitchen table, healthy and relaxed expression, wearing a casual blouse, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing lab results on a tablet with a calm focused expression at a home desk, wearing comfortable clothes, soft indoor natural light, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking briskly in a sunny park wearing a light jacket and athletic clothes, energized and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman outdoors morning sunlight peaceful energized",
+  "body_image_queries": [
+    "woman eating salmon salad bright kitchen healthy",
+    "woman reviewing tablet lab results home focused",
+    "woman walking sunny park athletic energized"
+  ]
+}

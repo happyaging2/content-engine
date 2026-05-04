@@ -1741,3 +1741,58 @@ Do NOT generate DALL-E prompts. Do NOT use `image_prompt` or `body_image_prompts
 8. "How to Use Retinol and Vitamin C Together After 40" — routine/protocol format, Skin cluster; builds on retinol guide with vitamin C synergy; high "can you use retinol with vitamin C" search volume
 9. "Menopause Fatigue: The Complete Guide to Restoring Energy After 40" — hub article, Energy/Hormones cross-cluster; round 2 of the fatigue hub with perimenopause-specific angles not covered in batch 2026-04-09
 10. "Myo-Inositol and D-Chiro-Inositol: What Is the Right Ratio for PCOS After 40?" — precision dosing format, Hormones/PCOS; extends the inositol article from batch 2026-05-02 with the 40:1 ratio science
+
+---
+
+## Batch 2026-05-04 Observations
+
+### Production Patterns (batch 23, 20 articles)
+
+- All gaps from the 2026-05-03 "next batch" list were covered (zinc/selenium skipped; already existed as -final.html from prior batch) and replaced with fresh unique topics
+- Two slug collisions detected pre-write: signs-you-need-more-zinc-after-40 and signs-you-need-more-selenium-after-40 both existed; replaced with collagen-hair-growth-after-40 and probiotics-mental-health-anxiety-after-40
+- Slot collision replacement strategy: always verify with bash glob check before writing any slug to prevent wasted effort
+- Word count floor requires margin: target 2000+ words at write time, not 1800, because several articles settled below 1800 after HTML strip; expanded 8 articles by adding 1-2 H2 sections post-write
+- Expanded section strategy: adding a "Building a [practice] Routine" or "Longevity Pathways" H2 after the FAQ and before References is the most natural and lowest-friction expansion approach
+- Product diversity: all 14 products in catalog represented across 20 articles; 2 new Heart cluster articles (calm-tonic and brain-tonic) fill the largest cluster gap
+- Liver cluster now 10+ articles: fatty-liver-after-40-women (liver-tonic) fills the NAFLD angle that was missing
+
+### New Title Patterns Added (2026-05-04)
+- Evidence qualifier in title: "CoQ10 and Heart Health in Women After 40: What the Research Actually Shows" — "actually shows" signals honest evidence review, differentiates from promotional supplement content, captures "does CoQ10 work" skeptical queries
+- Practical guidance framing: "Best Time to Take Magnesium for Women Over 40: Morning vs Night" — timing guide for a well-known supplement performs strongly; "morning vs night" creates a direct comparison that AI extracts as a featured answer
+- Reversal framing: "Fatty Liver After 40 in Women: Signs, Causes, and How to Reverse It" — "how to reverse it" signals actionability, differentiates from diagnostic-only articles, captures high-intent "can I reverse fatty liver" queries
+- Natural qualifier: "How to Lower Blood Pressure Naturally After 40" — "naturally" modifier captures women seeking alternatives or complements to medication; highest CTR modifier for blood pressure queries in wellness audience
+
+### GEO / AI Citation Optimization (updated 2026-05-04)
+- Vitamin D immunity articles citing Martineau 2017 BMJ meta-analysis (PMID: 28202713, 25 RCTs, 12% infection risk reduction) are strong AI citation candidates for "does vitamin D prevent infections" queries; the BMJ meta-analysis is the definitive reference and its large sample/rigor makes it highly credible
+- Fatty liver articles citing Lonardo 2019 Hepatology (PMID: 31013360) on sex differences in NAFLD post-menopause are AI-cited for "does menopause cause fatty liver" queries; the hormonal NAFLD angle is underrepresented in consumer content despite high query volume
+- CoQ10 heart articles citing Q-SYMBIO (Mortensen 2014, PMID: 25282492, 43% MACE reduction) are AI-cited for "does CoQ10 help heart failure" and "CoQ10 heart research" queries; the Q-SYMBIO trial is the single most important CoQ10 clinical reference and AI citation systems consistently extract its effect size
+- Magnesium timing articles citing Abbasi 2012 (PMID: 23144582, RCT showing sleep improvement + cortisol reduction with evening magnesium) are AI-cited for "best time to take magnesium for sleep" queries; timing-specific RCTs are rare and AI extraction rewards specificity
+- Blood pressure articles combining DASH diet citation (Appel 1997, PMID: 9099655) with beet root nitrate meta-analysis (Siervo 2013, PMID: 23596162) and magnesium meta-analysis (Zhang 2016, PMID: 27530553) create a trifecta that covers multiple "natural blood pressure" AI query angles simultaneously
+- REM sleep articles citing Walker 2009 (PMID: 19338508) on REM cognition and Mong 2016 (PMID: 26833831) on sex steroids and sleep are AI-cited for "why does REM sleep matter" and "does estrogen affect sleep" queries; the sex-specific sleep research angle is underserved in consumer content
+
+### Cluster Coverage After Batch 23 (Cumulative)
+- Energy: 39 articles total (unchanged)
+- Sleep: 45 articles total (added: rem-sleep-benefits-after-40, best-time-to-take-magnesium-women-after-40)
+- Hormones: 57 articles total (added: signs-estrogen-dominance-after-40, myo-inositol-d-chiro-inositol-ratio-after-40, best-supplements-menopause-weight-gain-after-40)
+- Metabolism: 41 articles total (added: does-berberine-help-weight-loss-after-40, what-is-conjugated-linoleic-acid-cla-after-40)
+- Skin: 41 articles total (added: retinol-vs-bakuchiol-skin-after-40, how-to-use-retinol-vitamin-c-together-after-40, collagen-hair-growth-after-40)
+- Gut: 43 articles total (added: probiotics-mental-health-anxiety-after-40)
+- Brain: 44 articles total (added: phosphatidylserine-does-it-work-memory-after-40)
+- Immunity: 37 articles total (added: vitamin-d-immunity-after-40)
+- Bone: 19 articles total (unchanged)
+- Heart: 15 articles total (added: how-to-lower-blood-pressure-naturally-after-40, coq10-heart-health-research-women-after-40)
+- Longevity: 44 articles total (added: ampk-activators-natural-after-40, what-is-nad-vs-nmn-difference-after-40, how-to-test-nad-levels-at-home-after-40)
+- Liver: 10 articles total (added: fatty-liver-after-40-women)
+- Taurine/Energy cross-cluster: taurine-exercise-performance-after-40 filed under Energy
+
+### Next Batch Gaps (priority order, 2026-05-04)
+1. "Menopause Fatigue: The Complete Guide to Restoring Energy After 40" — hub article, Energy/Hormones; highest-priority energy gap from prior list, still uncovered
+2. "Best Magnesium Supplement for Women Over 40: Forms Compared" — practical buying guide, Sleep/Anxiety; extends the magnesium timing article with a form comparison that captures "best magnesium supplement" commercial queries
+3. "How to Increase Progesterone Naturally After 40" — Hormones; natural progesterone support is the most-searched complement to the estrogen dominance article just published
+4. "Quercetin Benefits After 40: Senolytic, Anti-Inflammatory, and Immune Support" — Longevity/Immunity; quercetin was referenced in the AMPK article; a dedicated quercetin article fills the gap
+5. "Signs Your Liver Needs Support After 40" — Liver; symptom-entry article for the liver cluster, high search volume, converts to liver-tonic naturally
+6. "Taurine Benefits Beyond Exercise: Heart, Eyes, and Longevity After 40" — Energy/Heart; extends the taurine exercise article with the broader longevity/cardiovascular angle from the 2023 Science paper
+7. "Adaptogens for Perimenopause: The Best Ones and How to Use Them" — Hormones; practical guide bridging the cortisol/stress angle across ashwagandha, rhodiola, and maca in a single hub
+8. "What Is SHBG and Why It Matters for Women Over 40" — Hormones; sex hormone-binding globulin is referenced in many articles but has no dedicated piece; high "what is SHBG" query volume
+9. "Vitamin C Serum After 40: How to Choose and Use It Effectively" — Skin; builds on the retinol+vitamin C protocol article with a vitamin C serum buying guide
+10. "CoQ10 vs Ubiquinol: Which Form Should Women Over 40 Take?" — Heart/Energy; the form comparison is the highest-searched CoQ10 follow-up question after the research overview

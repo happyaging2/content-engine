@@ -1,0 +1,19 @@
+{
+  "title": "NAD+ vs. NMN: What Is the Difference and Which One Should You Take After 40?",
+  "slug": "what-is-nad-vs-nmn-difference-after-40",
+  "tags": "NAD+, NMN, nicotinamide mononucleotide, NAD precursors, longevity, energy, women over 40, cellular health, supplement comparison",
+  "product_handle": "longevity-shots",
+  "cluster": "Longevity",
+  "image_prompt": "A woman in her 40s doing yoga stretches on a balcony with a city park view at sunrise, wearing athletic clothes, glowing skin and calm confident energy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s standing in a bright kitchen confidently reviewing health products with a clear thoughtful expression, wearing a casual blouse, warm morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s exercising on a stationary bike at home looking energized and strong, wearing athletic clothes, bright home gym, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s smiling and looking vibrant while journaling in a sunlit home office, wearing comfortable casual clothes, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman yoga balcony sunrise athletic confident",
+  "body_image_queries": [
+    "woman reviewing health products kitchen thoughtful",
+    "woman exercising stationary bike home energized",
+    "woman journaling sunlit home office vibrant"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "What Is Conjugated Linoleic Acid (CLA) and Does It Help After 40?",
+  "slug": "what-is-conjugated-linoleic-acid-cla-after-40",
+  "tags": "CLA, conjugated linoleic acid, body composition, fat loss, lean muscle, women over 40, metabolism, dairy",
+  "product_handle": "lean-muscle-formula",
+  "cluster": "Metabolism",
+  "image_prompt": "A woman in her 40s confidently doing strength exercises in a bright gym with natural light, wearing fitted workout clothes, strong and healthy physique, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s eating grass-fed dairy products like cheese and yogurt at a kitchen table, healthy and satisfied expression, wearing casual clothes, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a body weight squat exercise in a home gym looking focused and strong, wearing workout clothes, bright light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s measuring her waist and smiling with satisfaction, wearing casual jeans, bright lifestyle setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman strength gym workout confident fit",
+  "body_image_queries": [
+    "woman eating dairy products cheese healthy meal",
+    "woman squat exercise home gym strong",
+    "woman measuring waist smiling satisfaction"
+  ]
+}

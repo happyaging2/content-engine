@@ -1,0 +1,19 @@
+{
+  "title": "REM Sleep After 40: Why It Declines and How to Get More of It",
+  "slug": "rem-sleep-benefits-after-40",
+  "tags": "REM sleep, sleep stages, women over 40, memory consolidation, emotional processing, sleep quality, perimenopause, dreaming",
+  "product_handle": "sleep-tonic",
+  "cluster": "Sleep",
+  "image_prompt": "A woman in her 40s sleeping peacefully in a cozy well-appointed bedroom with soft morning light filtering through curtains, lying on white pillows, relaxed and restful expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s writing in a dream journal beside a comfortable bed with a cup of herbal tea in soft morning light, wearing pajamas, calm and reflective expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a relaxing evening stretch routine on a yoga mat in a dimly lit peaceful bedroom, wearing comfortable sleepwear, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s waking up naturally looking refreshed and rested, sitting up in bed with morning light, wearing light pajamas, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman sleeping peacefully bedroom white pillows morning",
+  "body_image_queries": [
+    "woman dream journal herbal tea morning bedroom",
+    "woman evening stretch yoga mat bedroom peaceful",
+    "woman waking up refreshed rested morning bedroom"
+  ]
+}

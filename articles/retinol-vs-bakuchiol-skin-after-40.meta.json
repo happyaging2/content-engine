@@ -1,0 +1,19 @@
+{
+  "title": "Retinol vs. Bakuchiol for Skin After 40: Which One Is Right for You?",
+  "slug": "retinol-vs-bakuchiol-skin-after-40",
+  "tags": "retinol, bakuchiol, skincare after 40, anti-aging, skin comparison, wrinkles, women over 40, natural retinol alternative",
+  "product_handle": "radiance-tonic",
+  "cluster": "Skin",
+  "image_prompt": "A woman in her 40s applying skincare serum to her glowing face in a bright bathroom mirror, wearing a comfortable robe, warm morning light, radiant healthy complexion, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s examining skincare product labels thoughtfully in a well-lit bathroom with clean countertop, wearing casual clothes, soft natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s applying gentle moisturizer to her face with a relaxed confident expression, wearing a light blouse, bright natural window light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s smiling with smooth healthy-looking skin in a sunlit park setting, wearing a casual sundress, bright afternoon light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman applying skincare serum bathroom glowing skin",
+  "body_image_queries": [
+    "woman reading skincare labels bathroom thoughtful",
+    "woman applying moisturizer face confident natural light",
+    "woman smiling healthy skin outdoor park"
+  ]
+}

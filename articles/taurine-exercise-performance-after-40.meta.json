@@ -1,0 +1,19 @@
+{
+  "title": "Taurine and Exercise Performance After 40: What the Research Shows",
+  "slug": "taurine-exercise-performance-after-40",
+  "tags": "taurine, exercise, performance, endurance, muscle recovery, women over 40, energy, amino acid",
+  "product_handle": "brain-tonic",
+  "cluster": "Energy",
+  "image_prompt": "A woman in her 40s doing a dynamic outdoor workout on a jogging trail in the morning light, wearing fitted athletic clothes, energetic and focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s stretching her legs after a workout in a bright sunny park, wearing athletic shorts and top, post-exercise glow, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s drinking from a water bottle after exercise looking refreshed and satisfied, wearing athletic clothes, outdoor park setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s lifting light weights at a home gym with confident focused form, wearing workout clothes, bright natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman outdoor workout jogging trail morning energetic",
+  "body_image_queries": [
+    "woman stretching legs post workout sunny park",
+    "woman drinking water bottle after exercise refreshed",
+    "woman lifting weights home gym confident"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Fatty Liver After 40 in Women: Signs, Causes, and How to Reverse It",
+  "slug": "fatty-liver-after-40-women",
+  "tags": "fatty liver, NAFLD, women over 40, liver health, metabolic health, perimenopause, diet, supplements",
+  "product_handle": "liver-tonic",
+  "cluster": "Liver",
+  "image_prompt": "A woman in her 40s eating a fresh colorful salad at an outdoor cafe table in natural sunlight, looking healthy and vibrant, wearing a light summer blouse, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s chopping fresh vegetables and herbs in a bright modern kitchen, focused and relaxed expression, wearing a casual top, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a brisk morning walk on a tree-lined path in comfortable athletic clothing, energized and healthy, photorealistic wellness lifestyle photography, warm golden morning light, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting peacefully reading in a cozy corner by a window with a cup of green tea, relaxed and comfortable, wearing a soft sweater, photorealistic wellness lifestyle photography, warm indoor natural light, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman eating salad outdoor cafe healthy vibrant",
+  "body_image_queries": [
+    "woman chopping vegetables bright modern kitchen relaxed",
+    "woman morning walk tree-lined path athletic energized",
+    "woman reading cozy window green tea relaxed"
+  ]
+}

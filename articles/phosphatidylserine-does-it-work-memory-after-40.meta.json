@@ -1,0 +1,19 @@
+{
+  "title": "Does Phosphatidylserine Actually Work for Memory After 40? An Honest Review",
+  "slug": "phosphatidylserine-does-it-work-memory-after-40",
+  "tags": "phosphatidylserine, memory, brain health, cognitive function, women over 40, brain supplement, honest review, cortisol",
+  "product_handle": "neuro-creamer",
+  "cluster": "Brain",
+  "image_prompt": "A woman in her 40s studying notes at a well-lit desk with a focused and confident expression, wearing a casual cardigan, warm home office light, books and plants in background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reading a book in a cozy armchair by a window with focused engaged expression, wearing comfortable clothes, soft natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s working on a laptop at a bright kitchen table with sharp focus and calm concentration, wearing a smart casual blouse, morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a brain exercise puzzle or crossword with a satisfied smile, wearing comfortable home clothes, soft indoor light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman studying focused desk home office",
+  "body_image_queries": [
+    "woman reading book armchair focused natural light",
+    "woman working laptop kitchen table concentrated",
+    "woman doing puzzle crossword satisfied smile"
+  ]
+}
