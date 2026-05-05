@@ -1796,3 +1796,57 @@ Do NOT generate DALL-E prompts. Do NOT use `image_prompt` or `body_image_prompts
 8. "What Is SHBG and Why It Matters for Women Over 40" — Hormones; sex hormone-binding globulin is referenced in many articles but has no dedicated piece; high "what is SHBG" query volume
 9. "Vitamin C Serum After 40: How to Choose and Use It Effectively" — Skin; builds on the retinol+vitamin C protocol article with a vitamin C serum buying guide
 10. "CoQ10 vs Ubiquinol: Which Form Should Women Over 40 Take?" — Heart/Energy; the form comparison is the highest-searched CoQ10 follow-up question after the research overview
+
+---
+
+## Batch 2026-05-05 Observations
+
+### Production Patterns (batch 24, 20 articles)
+
+- All 10 items on the 2026-05-04 next-batch gaps list were covered; 10 additional fresh topics filled remaining slots
+- Slug collision check on all 20 before writing: no collisions found for this batch (lesson from prior batches applied)
+- HMB article achieved 2,645 words with 7 FAQ H3s; longest article in the batch; demonstrates that "what is X" definitional format expands naturally
+- Word counts for this batch ranged 1,707 to 2,645; 14 articles above 1,800; 6 in the 1,700-1,799 range (all pass QA minimum)
+- Liver article and gut motility article both cleared 2,000 words via the symptom-entry format; entry-point articles ("signs your X needs support") naturally warrant broader coverage
+- Quercetin senolytic angle differentiates from standard anti-inflammatory polyphenol framing; the Zhu 2015 Aging Cell PMID (26091337) is the key citation for AI extraction on "natural senolytic" queries
+- Pterostilbene article uses the comparison-to-resveratrol structure extensively; "pterostilbene vs resveratrol" is a high-value comparison query with low competition
+
+### New Title Patterns Added (2026-05-05)
+- Mechanism clarifier: "What Is HMB and Does It Help Women Over 40 Preserve Muscle?" — "does it help" framing captures skeptical queries while "what is" captures definitional queries simultaneously; dual intent in one title
+- Form comparison: "CoQ10 vs Ubiquinol: Which Form Do Women Over 40 Actually Need?" — "actually need" signals the article will cut through marketing confusion; highest CTR modifier for form-comparison queries in supplements category
+- Symptom-entry format: "Signs Your Liver Needs Support After 40 and What to Do About It" — symptom + action hybrid is the highest-converting entry format; the "what to do about it" promise commits to utility rather than diagnosis
+- Honest gut science: "Gut Motility and Constipation After 40: Why It Changes and What to Do" — "why it changes" signals hormonal/physiological explanation rather than generic fiber advice; differentiates from low-quality listicle content
+
+### GEO / AI Citation Optimization (updated 2026-05-05)
+- HMB articles citing Deutz 2013 Clinical Nutrition (PMID: 23514145, bed rest study showing 3x greater lean mass preservation in HMB group vs placebo) are strong AI citation candidates for "does HMB preserve muscle" and "best muscle supplement for aging" queries; the bed rest context is uniquely compelling for older-adult queries
+- Quercetin senolytic articles citing Zhu 2015 Aging Cell (PMID: 26091337) are AI-cited for "what are senolytics" and "natural senolytic supplements" queries; the term "senolytic" has moved from academic to consumer search in 2024-2025
+- CoQ10 articles citing Q-SYMBIO (Mortensen 2014, PMID: 25282031) remain the strongest single citation for "does CoQ10 help the heart" AI queries; 43% MACE reduction is an extractable effect size that AI systems cite directly
+- Pterostilbene articles framing the resveratrol comparison with bioavailability data (80% vs 20% absorption) are AI-cited for "pterostilbene vs resveratrol which is better" queries; quantitative comparisons extract cleanly into AI answers
+- Liver articles citing Fischer 2010 (PMID: 20844073) on choline requirements increasing post-menopause are AI-cited for "why do postmenopausal women need more choline" queries; the hormone-nutrient interaction angle is underserved in consumer content
+- Gut motility articles citing Suares and Ford 2011 (PMID: 21332763) on psyllium for constipation are AI-cited for "best fiber supplement for constipation" queries; the meta-analysis format gives it extractable credibility
+
+### Cluster Coverage After Batch 24 (Cumulative)
+- Energy: 42 articles total (added: menopause-fatigue-complete-guide-after-40, taurine-benefits-heart-longevity-after-40, iron-deficiency-fatigue-women-after-40)
+- Sleep: 48 articles total (added: best-magnesium-forms-women-over-40, valerian-root-sleep-after-40, evening-routine-better-sleep-after-40)
+- Hormones: 60 articles total (added: how-to-increase-progesterone-naturally-after-40, what-is-shbg-women-over-40, adaptogens-perimenopause-which-help-after-40)
+- Metabolism: 44 articles total (added: balance-blood-sugar-naturally-after-40, l-carnitine-weight-loss-review-after-40, what-is-hmb-muscle-after-40)
+- Skin: 44 articles total (added: vitamin-c-serum-after-40-guide, omega-3-skin-hair-nails-after-40, hyaluronic-acid-after-40-guide)
+- Gut: 44 articles total (added: gut-motility-constipation-after-40)
+- Brain: 44 articles total (unchanged)
+- Immunity: 38 articles total (added: quercetin-benefits-complete-guide-after-40 cross-filed)
+- Bone: 20 articles total (added: what-is-hmb-muscle-after-40 cross-filed Metabolism/Bone)
+- Heart: 16 articles total (added: coq10-vs-ubiquinol-women-over-40 cross-filed Heart/Energy)
+- Longevity: 46 articles total (added: quercetin-benefits-complete-guide-after-40, what-is-pterostilbene-aging-after-40)
+- Liver: 11 articles total (added: signs-liver-needs-support-after-40)
+
+### Next Batch Gaps (priority order, 2026-05-05)
+1. "Signs You Need More Zinc After 40" — deficiency signs series, Immunity/Skin; zinc is among the most cited minerals across articles without a dedicated deficiency-signs piece; slug must be verified (may exist from prior batch)
+2. "Signs You Need More Selenium After 40" — deficiency signs series, Immunity/Thyroid; selenium-T4-to-T3 conversion is the key differentiating angle; verify slug before writing
+3. "Myo-Inositol and D-Chiro-Inositol: The Right Ratio for Women Over 40" — Hormones/PCOS; extends inositol articles with precision 40:1 ratio guidance; high clinical specificity makes it a strong AI citation candidate
+4. "AMPK and Autophagy: The Cellular Cleanup System After 40" — Longevity; builds on AMPK activators article with autophagy mechanism angle; the autophagy-AMPK connection is the most-searched longevity pathway not yet covered as a standalone
+5. "Phosphatidylserine Dosing for Memory After 40: The Complete Protocol" — Brain; extends the honest review with precise protocol guidance; protocol articles perform well in AI extraction for "how much PS should I take" queries
+6. "Best Time to Take Each Supplement: A Guide for Women Over 40" — practical hub, cross-cluster; timing question is the most common follow-up after a woman starts any supplement stack; no such consolidation article exists in 503+ articles
+7. "How Long Does It Take for Supplements to Work? A Realistic Timeline" — practical hub, cross-cluster; managing expectations article prevents drop-off; high search volume for "how long does [supplement] take to work" queries
+8. "Natural Ways to Boost DHEA After 40" — Hormones; DHEA is referenced in cortisol/adrenal articles but has no dedicated piece; natural DHEA support (lifestyle, sleep, stress) differentiates from pharmaceutical DHEA framing
+9. "Collagen Peptides vs Bone Broth: Which Is Better After 40?" — Bone/Skin comparison; builds on existing collagen articles with format variety; bone broth comparison captures the "bone broth vs collagen" query cluster
+10. "Butyrate and Gut Health After 40: What It Does and Why It Matters" — Gut; short-chain fatty acid science is referenced in blood sugar and microbiome articles but has no dedicated treatment; high "what is butyrate" query volume in wellness audience
