@@ -388,17 +388,19 @@ def h2_to_query(h2_text, article_title=""):
     return query
 
 
-def inject_section_images(html, article_title, body_image_queries=None):
+def inject_section_images(html, article_title, body_image_queries=None,
+                          image_cache=None):
     """Re-inject body images, one per H2 section, each matched to that section's topic.
 
-    Prefers pre-validated body_image_queries from meta.json over H2-derived queries.
-    Applies comprehensive brand safety filtering on every result.
+    Skips articles that already have valid section images (saves Pexels quota).
+    Uses image_cache dict {query: img} when available to avoid duplicate API calls.
     """
-    # Remove previously injected article-stock-image figures
-    html = re.sub(
-        r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
-        '\n', html, flags=re.DOTALL)
-    # Remove unfilled [BODY_IMAGE_N] placeholder <img> tags (old format)
+    # Skip if article already has injected figures (valid src URLs)
+    if re.search(r'<figure class="article-stock-image"[^>]*>.*?<img[^>]+src="https?://', html,
+                 re.DOTALL):
+        return html
+
+    # Remove only unfilled [BODY_IMAGE_N] placeholder <img> tags (old format)
     html = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', html)
 
     # Find all H2 positions (skip FAQ and References)
@@ -424,10 +426,18 @@ def inject_section_images(html, article_title, body_image_queries=None):
             primary_query = h2_to_query(h2_text, article_title)
             fallbacks = SAFE_FALLBACK_QUERIES[:2]
 
-        print(f"    [{i+1}] '{h2_text[:40]}' → query: '{primary_query[:50]}'")
-        img = find_image(primary_query, fallbacks)
+        # Check cache first to avoid redundant API calls
+        img = (image_cache or {}).get(primary_query)
         if not img:
-            print(f"        no safe image found — skipping section")
+            for q in [primary_query] + fallbacks:
+                img = (image_cache or {}).get(q)
+                if img:
+                    break
+        if not img:
+            img = find_image(primary_query, fallbacks)
+            if img and image_cache is not None:
+                image_cache[primary_query] = img
+        if not img:
             continue
 
         alt = img.get("alt", article_title)[:140].replace('"', "'")
@@ -585,7 +595,26 @@ def main():
         if os.path.exists(html_f):
             local_html[slug] = html_f
 
-    print(f"[3/4] Processing all {len(existing)} Shopify articles...\n")
+    # Pre-fetch one image per unique visual context query (saves Pexels quota).
+    # All 508 articles share these ~25 cached images instead of making 2000+ calls.
+    image_cache = {}
+    if not SCHEMA_ONLY and (PEXELS_KEY or UNSPLASH_KEY):
+        print("[3/4] Pre-fetching image cache (one per topic)...")
+        unique_queries = list(dict.fromkeys(
+            ["woman " + v for v in TOPIC_VISUAL_CONTEXT.values()]
+            + SAFE_FALLBACK_QUERIES
+        ))
+        for q in unique_queries:
+            img = pexels_search(q) or unsplash_search(q)
+            if img:
+                image_cache[q] = img
+                print(f"  ✓ {q[:55]}")
+            time.sleep(0.8)
+        print(f"  Cached {len(image_cache)}/{len(unique_queries)} queries.\n")
+    else:
+        print(f"[3/4] Skipping image cache (schema-only mode or no API keys).\n")
+
+    print(f"[4/4] Processing all {len(existing)} Shopify articles...\n")
 
     ok = failed = schema_added = meta_set = img_updated = cover_updated = 0
 
@@ -639,16 +668,26 @@ def main():
         if not SCHEMA_ONLY:
             print(f"  {slug[:55]} [{source}]")
             body_image_queries = meta.get("body_image_queries") or []
-            body = inject_section_images(body, title, body_image_queries)
+            body = inject_section_images(body, title, body_image_queries, image_cache)
             img_updated += 1
 
-            # Cover image: only call Pexels for articles with NO cover.
-            # Never re-send existing Shopify CDN URLs — causes 422 errors.
-            # Shopify preserves existing cover automatically when image field is omitted.
+            # Cover image: only fetch for articles with NO existing cover.
+            # Use cache first; fall back to live Pexels only if cache misses.
             cover_src = cover_alt = None
             if not existing_cover:
                 q = meta.get("image_query") or h2_to_query(title, title)
-                img = find_image(q, SAFE_FALLBACK_QUERIES[:3])
+                img = image_cache.get(q)
+                if not img:
+                    # Try nearest cached query by topic keyword match
+                    title_lower = title.lower()
+                    for cq, cimg in image_cache.items():
+                        if any(w in title_lower for w in cq.split()[:2] if len(w) > 3):
+                            img = cimg
+                            break
+                if not img:
+                    img = find_image(q, SAFE_FALLBACK_QUERIES[:2])
+                    if img:
+                        image_cache[q] = img
                 if img:
                     cover_src = img["src"]
                     cover_alt = title
@@ -676,7 +715,7 @@ def main():
 
         time.sleep(1.2)
 
-    print(f"\n[4/4] Done.")
+    print(f"\n[Done]")
     print(f"  FAQ schema injected:     {schema_added}")
     print(f"  Meta descriptions set:   {meta_set}")
     print(f"  Section images updated:  {img_updated}")
