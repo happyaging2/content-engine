@@ -28,6 +28,53 @@ if not SCHEMA_ONLY and not PEXELS_KEY and not UNSPLASH_KEY:
     print("WARNING: No image API keys set. Running in --schema-only mode.")
     SCHEMA_ONLY = True
 
+BLOG_URL = "https://happyaging.com/blogs/news"
+SITE_URL = "https://happyaging.com"
+LOGO_URL = "https://happyaging.com/cdn/shop/files/happy-aging-logo.png"
+
+
+# ── BlogPosting + Speakable schema ────────────────────────────────────────────
+
+def build_article_schema(title, slug, meta_desc):
+    return {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": meta_desc,
+        "url": f"{BLOG_URL}/{slug}",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": f"{BLOG_URL}/{slug}"},
+        "author": {
+            "@type": "Organization",
+            "name": "Happy Aging Team",
+            "url": SITE_URL,
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Happy Aging",
+            "url": SITE_URL,
+            "logo": {"@type": "ImageObject", "url": LOGO_URL},
+        },
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["article p:first-of-type", ".faq h3"],
+        },
+    }
+
+
+def inject_article_schema(html, title, slug, meta_desc):
+    """Inject BlogPosting + Speakable schema once, before </body> or at end."""
+    # Remove old article schema if re-running
+    html = re.sub(
+        r'\s*<script type="application/ld\+json">\s*\{[^}]*"BlogPosting".*?</script>\s*',
+        '\n', html, flags=re.DOTALL)
+    schema = build_article_schema(title, slug, meta_desc)
+    block = ('\n<script type="application/ld+json">\n'
+             + json.dumps(schema, ensure_ascii=False, indent=2)
+             + '\n</script>\n')
+    if '</body>' in html:
+        return html.replace('</body>', block + '</body>', 1)
+    return html + block
+
 
 # ── FAQ Schema ────────────────────────────────────────────────────────────────
 
@@ -565,16 +612,19 @@ def main():
         if prices:
             body = fix_product_card_prices(body, prices)
 
-        # 2. FAQ Schema
+        # 2. Meta description (needed by article schema below)
+        meta_desc = extract_meta_description(body)
+
+        # 3. FAQ Schema
         pairs = extract_faq_pairs(body)
         if pairs:
             body = inject_faq_schema(body, pairs)
             schema_added += 1
 
-        # 3. Meta description
-        meta_desc = extract_meta_description(body)
+        # 4. BlogPosting + Speakable schema
+        body = inject_article_schema(body, title, slug, meta_desc)
 
-        # 4. Section images
+        # 5. Section images
         cover_src = cover_alt = None
         if not SCHEMA_ONLY:
             print(f"  {slug[:55]} [{source}]")
