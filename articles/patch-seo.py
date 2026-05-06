@@ -523,14 +523,17 @@ def shopify_get_articles():
     return articles
 
 
-def shopify_fetch_body(article_id):
-    """Fetch body_html of a single article from Shopify."""
+def shopify_fetch_article(article_id):
+    """Fetch body_html + existing cover image src for a single article."""
     url = (f"https://{SHOPIFY_STORE}/admin/api/2024-01/blogs/{BLOG_ID}"
-           f"/articles/{article_id}.json?fields=id,body_html")
+           f"/articles/{article_id}.json?fields=id,body_html,image")
     req = urllib.request.Request(url,
         headers={"X-Shopify-Access-Token": SHOPIFY_TOKEN})
     with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read()).get("article", {}).get("body_html", "")
+        art = json.loads(r.read()).get("article", {})
+    body = art.get("body_html", "")
+    existing_cover = (art.get("image") or {}).get("src")
+    return body, existing_cover
 
 
 def shopify_update(article_id, body_html, summary_html, cover_src=None, cover_alt=None):
@@ -592,12 +595,18 @@ def main():
         meta   = local_meta.get(slug, {})
 
         # Load body: prefer local file, fall back to Shopify fetch
+        # Also fetch existing cover so we don't waste Pexels quota on articles
+        # that already have a cover image.
+        existing_cover = None
         if slug in local_html:
             body = open(local_html[slug]).read()
             source = "local"
+            resolved = meta.get("resolved_cover")
+            if resolved and resolved.get("src"):
+                existing_cover = resolved["src"]
         else:
             try:
-                body = shopify_fetch_body(art_id)
+                body, existing_cover = shopify_fetch_article(art_id)
                 source = "shopify"
                 time.sleep(0.5)
             except Exception as e:
@@ -625,7 +634,7 @@ def main():
         # 4. BlogPosting + Speakable schema
         body = inject_article_schema(body, title, slug, meta_desc)
 
-        # 5. Section images
+        # 5. Section images + cover
         cover_src = cover_alt = None
         if not SCHEMA_ONLY:
             print(f"  {slug[:55]} [{source}]")
@@ -633,12 +642,12 @@ def main():
             body = inject_section_images(body, title, body_image_queries)
             img_updated += 1
 
-            # 4. Cover image — use resolved_cover from meta, or fetch via image_query
-            resolved = meta.get("resolved_cover")
-            if resolved and resolved.get("src"):
-                cover_src = resolved["src"]
+            # Cover image: reuse existing if present (saves Pexels quota).
+            # Only call Pexels for articles that have NO cover at all.
+            if existing_cover:
+                cover_src = existing_cover
                 cover_alt = title
-            elif not SCHEMA_ONLY:
+            else:
                 q = meta.get("image_query") or h2_to_query(title, title)
                 img = find_image(q, SAFE_FALLBACK_QUERIES[:3])
                 if img:
