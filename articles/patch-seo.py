@@ -278,7 +278,8 @@ def pexels_search(query):
             url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
                 {"query": query, "orientation": "landscape", "per_page": 30})
             req = urllib.request.Request(url, headers={"Authorization": PEXELS_KEY})
-            data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+            raw = urllib.request.urlopen(req, timeout=15).read()
+            data = json.loads(raw)
             all_photos = data.get("photos") or []
             safe = []
             rejected_reasons = []
@@ -298,11 +299,13 @@ def pexels_search(query):
             p = safe[0]
             return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
         except urllib.error.HTTPError as e:
+            print(f"    [pexels HTTP {e.code}] {e.read().decode()[:120]}")
             if e.code == 429:
                 time.sleep(60 * (attempt + 1))
             else:
                 return None
-        except Exception:
+        except Exception as e:
+            print(f"    [pexels error] {type(e).__name__}: {str(e)[:100]}")
             return None
     return None
 
@@ -570,6 +573,28 @@ def shopify_update(article_id, body_html, summary_html, cover_src=None, cover_al
 def main():
     mode = "schema + meta only" if SCHEMA_ONLY else "schema + meta + section images + cover"
     print(f"=== patch-seo.py [{mode}] ===\n")
+
+    # Quick connectivity test — 1 Pexels call, print raw result
+    if PEXELS_KEY and not SCHEMA_ONLY:
+        print("[0/4] Testing Pexels API key...")
+        try:
+            url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
+                {"query": "woman walking park", "per_page": 3})
+            req = urllib.request.Request(url, headers={"Authorization": PEXELS_KEY})
+            raw = urllib.request.urlopen(req, timeout=15).read()
+            data = json.loads(raw)
+            photos = data.get("photos") or []
+            if photos:
+                p = photos[0]
+                alt = p.get("alt", "")
+                print(f"  OK — {len(photos)} photos. First: '{alt[:80]}'")
+                print(f"       src: {p['src']['large2x'][:80]}")
+            else:
+                print(f"  WARNING — API responded but returned 0 photos.")
+                print(f"  Raw response: {raw[:300]}")
+        except Exception as e:
+            print(f"  ERROR — {type(e).__name__}: {e}")
+        print()
 
     print("[1/4] Fetching Shopify article list...")
     existing = shopify_get_articles()
