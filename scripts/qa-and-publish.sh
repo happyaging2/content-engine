@@ -266,10 +266,14 @@ for f in sorted(glob.glob("articles/*-final.html")):
             urllib.request.urlopen(req, timeout=5)
         except urllib.error.HTTPError as e:
             if e.code == 404:
-                pattern = re.compile(r"<li[^>]*>[^<]*(?:<[^>]*>)*[^<]*" + re.escape(doi_clean) + r"[^<]*(?:<[^>]*>)*[^<]*</li>\s*", re.DOTALL)
+                # Try to remove the entire <li> containing this DOI
+                pattern = re.compile(r"<li[^>]*>(?:[^<]|<(?!/li>))*?" + re.escape(doi_clean) + r".*?</li>\s*", re.DOTALL)
                 body, n = pattern.subn("", body)
-                if n == 0: body = body.replace(doi_clean, "[reference removed]")
-                changed = True; removed += 1
+                if n > 0:
+                    changed = True; removed += 1
+                else:
+                    # DOI not in a <li> — log and skip; do NOT replace inline
+                    print(f"  WARNING: DOI {doi_clean} not in <li> in {os.path.basename(f)} — skipping")
         except: pass
     if changed: open(f, "w").write(body)
 print(f"  Removed {removed} fake DOIs")

@@ -204,10 +204,12 @@ def h2_to_query(h2_text, article_title=""):
 
 def inject_section_images(html, article_title):
     """Re-inject body images, one per H2 section, each matched to that section's topic."""
-    # Remove previously injected figures
+    # Remove previously injected article-stock-image figures
     html = re.sub(
         r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
         '\n', html, flags=re.DOTALL)
+    # Remove unfilled [BODY_IMAGE_N] placeholder <img> tags (old format)
+    html = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', html)
 
     # Find all H2 positions (skip FAQ and References)
     skip_h2 = {"frequently asked questions", "references", "faq"}

@@ -271,10 +271,13 @@ def strip_figcaptions(html):
 
 
 def strip_article_stock_images(html):
-    """Remove previously injected article-stock-image figures so we can re-inject cleanly."""
-    return re.sub(
+    """Remove previously injected article-stock-image figures and old [BODY_IMAGE_N] placeholders."""
+    html = re.sub(
         r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
         "\n", html, flags=re.DOTALL)
+    # Also strip unfilled [BODY_IMAGE_N] placeholder <img> tags (older article format)
+    html = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', html)
+    return html
 
 
 def inject_body_images(html, imgs, title):
