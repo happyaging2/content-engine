@@ -387,6 +387,55 @@ def inject_section_images(html, article_title, body_image_queries=None):
     return html
 
 
+# ── Product price helpers ─────────────────────────────────────────────────────
+
+def fetch_product_prices():
+    """Fetch real prices from the Shopify storefront for all products.
+
+    Returns {handle: "XX.XX"} using the lowest variant price, which is
+    typically the subscription price on stores using Recharge.
+    """
+    prices = {}
+    page = 1
+    while True:
+        try:
+            url = f"https://happyaging.com/products.json?limit=250&page={page}"
+            data = json.loads(urllib.request.urlopen(url, timeout=15).read())
+            products = data.get("products", [])
+            if not products:
+                break
+            for p in products:
+                handle = p["handle"]
+                variants = p.get("variants", [])
+                if variants:
+                    min_price = min(float(v["price"]) for v in variants)
+                    # Format: "49" not "49.00" when whole number
+                    prices[handle] = (
+                        str(int(min_price)) if min_price == int(min_price)
+                        else f"{min_price:.2f}"
+                    )
+            page += 1
+            time.sleep(0.3)
+        except Exception:
+            break
+    return prices
+
+
+def fix_product_card_prices(body, prices):
+    """Replace $XX/month in product cards with real fetched prices."""
+    def _replace(m):
+        card = m.group(0)
+        hm = re.search(r'happyaging\.com/products/([a-z0-9-]+)', card)
+        if hm:
+            price = prices.get(hm.group(1))
+            if price:
+                card = re.sub(r'\$[\d.]+/month', f'${price}/month', card)
+        return card
+    return re.sub(
+        r'<div class="product-card-inline">.*?</div>\s*</div>',
+        _replace, body, flags=re.DOTALL)
+
+
 # ── Shopify helpers ───────────────────────────────────────────────────────────
 
 def shopify_get_articles():
@@ -452,9 +501,18 @@ def main():
     mode = "schema + meta only" if SCHEMA_ONLY else "schema + meta + section images + cover"
     print(f"=== patch-seo.py [{mode}] ===\n")
 
-    print("[1/3] Fetching Shopify article list...")
+    print("[1/4] Fetching Shopify article list...")
     existing = shopify_get_articles()
-    print(f"  {len(existing)} articles on Shopify.\n")
+    print(f"  {len(existing)} articles on Shopify.")
+
+    print("[2/4] Fetching real product prices from store...")
+    prices = fetch_product_prices()
+    if prices:
+        print(f"  {len(prices)} products found: " +
+              ", ".join(f"{h}=${p}" for h, p in sorted(prices.items())))
+    else:
+        print("  WARNING: could not fetch product prices — prices will not be updated.")
+    print()
 
     # Build slug → meta.json lookup from local files
     local_meta = {}
@@ -467,7 +525,7 @@ def main():
         if os.path.exists(html_f):
             local_html[slug] = html_f
 
-    print(f"[2/3] Processing all {len(existing)} Shopify articles...\n")
+    print(f"[3/4] Processing all {len(existing)} Shopify articles...\n")
 
     ok = failed = schema_added = meta_set = img_updated = cover_updated = 0
 
@@ -494,16 +552,20 @@ def main():
             print(f"  SKIP {slug[:55]} — empty body")
             continue
 
-        # 1. FAQ Schema
+        # 1. Product card prices
+        if prices:
+            body = fix_product_card_prices(body, prices)
+
+        # 2. FAQ Schema
         pairs = extract_faq_pairs(body)
         if pairs:
             body = inject_faq_schema(body, pairs)
             schema_added += 1
 
-        # 2. Meta description
+        # 3. Meta description
         meta_desc = extract_meta_description(body)
 
-        # 3. Section images
+        # 4. Section images
         cover_src = cover_alt = None
         if not SCHEMA_ONLY:
             print(f"  {slug[:55]} [{source}]")
@@ -546,7 +608,7 @@ def main():
 
         time.sleep(1.2)
 
-    print(f"\n[3/3] Done.")
+    print(f"\n[4/4] Done.")
     print(f"  FAQ schema injected:     {schema_added}")
     print(f"  Meta descriptions set:   {meta_set}")
     print(f"  Section images updated:  {img_updated}")

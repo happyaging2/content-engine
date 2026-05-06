@@ -217,35 +217,62 @@ for mf in metas:
 print(f"  Resolved images for {updated} articles")
 PYEOF
 
-# Step 2: Fix product card images
-echo "[2/6] Fixing product card images..."
+# Step 2: Fix product card images + prices
+echo "[2/6] Fixing product card images and prices..."
 python3 << 'PYEOF'
 import json, urllib.request, re, glob, os
 
-pmap = {}
+img_map = {}
+price_map = {}
 try:
-    products = json.loads(urllib.request.urlopen("https://happyaging.com/products.json?limit=250").read())["products"]
-    for p in products:
-        if p.get("images"):
-            pmap[p["handle"]] = p["images"][0]["src"]
-except:
-    print("  WARNING: Could not fetch product images")
+    page = 1
+    while True:
+        data = json.loads(urllib.request.urlopen(
+            f"https://happyaging.com/products.json?limit=250&page={page}").read())
+        products = data.get("products", [])
+        if not products:
+            break
+        for p in products:
+            h = p["handle"]
+            if p.get("images"):
+                img_map[h] = p["images"][0]["src"]
+            variants = p.get("variants", [])
+            if variants:
+                min_price = min(float(v["price"]) for v in variants)
+                price_map[h] = str(int(min_price)) if min_price == int(min_price) else f"{min_price:.2f}"
+        page += 1
+except Exception as e:
+    print(f"  WARNING: Could not fetch product data: {e}")
+
+print(f"  {len(price_map)} products found")
+
+def fix_card(card):
+    hm = re.search(r'happyaging\.com/products/([a-z0-9-]+)', card)
+    if not hm:
+        return card
+    handle = hm.group(1)
+    # Fix image
+    img_m = re.search(r'<img[^>]+src="([^"]+)"', card)
+    if img_m and "cdn.shopify.com/s/files/1/0869/3704/3264/" not in img_m.group(1):
+        real = img_map.get(handle)
+        if real:
+            card = card.replace(img_m.group(1), real)
+    # Fix price
+    price = price_map.get(handle)
+    if price:
+        card = re.sub(r'\$[\d.]+/month', f'${price}/month', card)
+    return card
 
 fixed = 0
 for f in sorted(glob.glob("articles/*-final.html")):
     body = open(f).read()
-    changed = False
-    for m in re.finditer(r'product-card-inline.*?happyaging\.com/products/([a-z0-9-]+).*?<img[^>]+src="([^"]+)"', body, re.DOTALL):
-        handle, src = m.group(1), m.group(2)
-        if "cdn.shopify.com/s/files/1/0869/3704/3264/" in src: continue
-        real = pmap.get(handle)
-        if real:
-            body = body.replace(src, real)
-            changed = True
-    if changed:
-        open(f, "w").write(body)
+    new_body = re.sub(
+        r'<div class="product-card-inline">.*?</div>\s*</div>',
+        fix_card, body, flags=re.DOTALL)
+    if new_body != body:
+        open(f, "w").write(new_body)
         fixed += 1
-print(f"  Fixed {fixed} product card images")
+print(f"  Fixed product cards in {fixed} articles")
 PYEOF
 
 # Step 3: Validate DOIs
