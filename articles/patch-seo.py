@@ -642,12 +642,11 @@ def main():
             body = inject_section_images(body, title, body_image_queries)
             img_updated += 1
 
-            # Cover image: reuse existing if present (saves Pexels quota).
-            # Only call Pexels for articles that have NO cover at all.
-            if existing_cover:
-                cover_src = existing_cover
-                cover_alt = title
-            else:
+            # Cover image: only call Pexels for articles with NO cover.
+            # Never re-send existing Shopify CDN URLs — causes 422 errors.
+            # Shopify preserves existing cover automatically when image field is omitted.
+            cover_src = cover_alt = None
+            if not existing_cover:
                 q = meta.get("image_query") or h2_to_query(title, title)
                 img = find_image(q, SAFE_FALLBACK_QUERIES[:3])
                 if img:
