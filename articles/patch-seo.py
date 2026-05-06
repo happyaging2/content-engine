@@ -281,17 +281,18 @@ def pexels_search(query):
             data = json.loads(urllib.request.urlopen(req, timeout=15).read())
             all_photos = data.get("photos") or []
             safe = []
+            rejected_reasons = []
             for p in all_photos:
                 alt = p.get("alt") or ""
                 if _safe_photo([alt, p.get("photographer")]):
                     safe.append(p)
                 else:
-                    # Debug: show why the first few were rejected
-                    if len(all_photos) <= 5 or attempt == 2:
-                        t = (alt + " " + (p.get("photographer") or "")).lower()
-                        hit = next((k for k in BLOCKED_TERMS if k in t), None) or \
-                              next((b for b in COMPETITOR_BRANDS if b in t), None)
-                        print(f"        [blocked] '{alt[:60]}' → '{hit}'")
+                    t = (alt + " " + (p.get("photographer") or "")).lower()
+                    hit = next((k for k in BLOCKED_TERMS if k in t), None) or \
+                          next((b for b in COMPETITOR_BRANDS if b in t), None)
+                    rejected_reasons.append(f"'{alt[:50]}' [{hit}]")
+            if not safe and rejected_reasons:
+                print(f"        [all blocked] " + " | ".join(rejected_reasons[:3]))
             if not safe:
                 return None
             p = safe[0]
