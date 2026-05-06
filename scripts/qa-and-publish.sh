@@ -316,30 +316,27 @@ unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 
 BLOCKED_TERMS = {
     # Explicit / nudity
-    "nude", "naked", "topless", "nudity", "lingerie", "bikini",
-    "underwear", "explicit", "adult content", "erotic", "sensual",
-    "sexy", "sexual", "pornographic", "nsfw",
-    # Exposed body parts / medical imagery
-    "belly", "abdomen", "navel", "belly button", "torso", "bare skin",
-    "bare stomach", "bare belly", "cesarean", "c-section", "surgical scar",
-    "scar", "wound", "surgery", "stretch mark", "skin close", "close-up skin",
-    "stomach close", "skin texture",
-    # Supplement / product / packaging
-    "supplement", "vitamin", "capsule", "pill", "tablet", "dose",
-    "bottle", "vial", "jar", "tube", "container", "packaging",
-    "product", "serum bottle", "cosmetic bottle", "beauty bottle",
-    "holding bottle", "holding vial", "holding product", "holding supplement",
-    "holding jar", "holding tube", "with bottle", "with supplement",
-    "pill box", "medicine", "pharmacy",
-    # Off-brand / low-quality
-    "tattoo", "tattooed", "tattoos",
-    "book cover", "dopamine detox",
-    "fast food", "junk food", "cigarette",
-    "hospital", "clinic", "medical office",
-    # Wrong persona — use leading space so "man " doesn't match "woman ",
-    # "men " doesn't match "women ", "male " doesn't match "female "
-    " man ", " men ", " boy ", " male ", "gentleman", " guy ", "guys",
-    "child", "children", "kid", "baby", "infant", "toddler",
+    "nude", "naked", "topless", "nudity", "lingerie", "bikini", "underwear",
+    "explicit", "adult content", "erotic", "sensual", "sexy", "sexual",
+    "pornographic", "nsfw",
+    # Medical / clinical imagery
+    "surgical scar", "c-section", "cesarean", "stretch mark",
+    "injection", "syringe", "iv drip", "blood draw",
+    "operating room", "hospital bed", "medical office", "clinic room",
+    "bare belly", "bare stomach", "bare skin",
+    # Actual product shots (multi-word — don't block innocent uses of "jar" etc.)
+    "supplement bottle", "vitamin bottle", "pill bottle", "medicine bottle",
+    "cosmetic bottle", "serum bottle", "beauty bottle",
+    "holding bottle", "holding supplement", "holding pill", "holding vial",
+    "pill box", "blister pack",
+    # Off-brand aesthetics
+    "tattoo", "tattooed",
+    "book cover",
+    "fast food", "junk food", "cigarette", "smoking",
+    # Wrong persona
+    " man,", " man.", "men's", "elderly man", "old man", "grandfather",
+    " boy ", " boys ", "child", "children",
+    "baby", "infant", "toddler",
 }
 
 COMPETITOR_BRANDS = {
@@ -407,7 +404,7 @@ def pexels_search(query):
     if not pexels_key: return None
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
-            {"query": query, "orientation": "landscape", "per_page": 15})
+            {"query": query, "orientation": "landscape", "per_page": 30})
         req = urllib.request.Request(url, headers={"Authorization": pexels_key})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         safe = [p for p in (data.get("photos") or []) if _safe(p.get("alt") or "")]

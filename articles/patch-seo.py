@@ -103,36 +103,33 @@ def extract_meta_description(html, max_chars=155):
 
 # ── Brand safety filters ──────────────────────────────────────────────────────
 
-# Any image whose alt/description contains these terms is rejected outright.
+# Only block images whose description clearly shows the VISUAL SUBJECT is
+# inappropriate. Use multi-word phrases, not single words — single words like
+# "vitamin", "jar", "product" appear in innocent lifestyle photo descriptions
+# (e.g. "woman cooking with a jar of spices") and would block everything.
 BLOCKED_TERMS = {
     # Explicit / nudity
     "nude", "naked", "topless", "nudity", "lingerie", "bikini", "underwear",
     "explicit", "adult content", "erotic", "sensual", "sexy", "sexual",
     "pornographic", "nsfw",
-    # Exposed body parts / medical imagery
-    "belly", "abdomen", "navel", "belly button", "torso", "bare skin",
-    "bare stomach", "bare belly", "cesarean", "c-section", "surgical scar",
-    "scar", "wound", "surgery", "stretch mark", "close-up skin", "skin texture",
-    "injection", "needle", "syringe", "iv drip", "blood draw", "blood",
-    # Products / supplements / bottles (brand rule: no product shots)
-    "supplement", "vitamin", "capsule", "pill", "tablet", "dose",
-    "bottle", "vial", "jar", "tube", "container", "packaging",
-    "product", "serum bottle", "cosmetic bottle", "beauty bottle",
-    "holding bottle", "holding vial", "holding product", "holding supplement",
-    "holding jar", "with bottle", "with supplement", "pill box",
-    "medicine", "pharmacy", "drug",
-    # Off-brand / off-aesthetic
-    "tattoo", "tattooed", "tattoos",
-    "book cover", "dopamine detox",
-    "fast food", "junk food", "cigarette", "smoking", "alcohol",
-    "hospital", "clinic", "medical office", "operating room", "emergency",
-    # Demographics that don't match persona (women 40+, no men, no children)
-    # NOTE: use leading space to avoid " man " matching "woman", " men " matching "women",
-    # " male " matching "female"
-    " man ", " man,", " man.", " men ", " men,", " men.", " male ",
-    " boy ", " boys ", "child", "children", "kid", "kids",
-    "baby", "infant", "toddler", "teenager",
-    "elderly man", "old man", "grandfather",
+    # Medical / clinical imagery
+    "surgical scar", "c-section", "cesarean", "stretch mark",
+    "injection", "syringe", "iv drip", "blood draw",
+    "operating room", "hospital bed", "medical office", "clinic room",
+    "bare belly", "bare stomach", "bare skin",
+    # Actual product shots (multi-word so we don't block innocent uses)
+    "supplement bottle", "vitamin bottle", "pill bottle", "medicine bottle",
+    "cosmetic bottle", "serum bottle", "beauty bottle",
+    "holding bottle", "holding supplement", "holding pill", "holding vial",
+    "pill box", "blister pack",
+    # Off-brand aesthetics
+    "tattoo", "tattooed",
+    "book cover",
+    "fast food", "junk food", "cigarette", "smoking",
+    # Explicit wrong persona
+    " man,", " man.", "men's", "elderly man", "old man", "grandfather",
+    " boy ", " boys ", "child", "children",
+    "baby", "infant", "toddler",
 }
 
 COMPETITOR_BRANDS = {
@@ -140,55 +137,56 @@ COMPETITOR_BRANDS = {
     "life extension", "thorne", "jarrow", "now foods", "garden of life",
     "nature's bounty", "gnc", "optimum nutrition", "ritual",
     "elysium", "tru niagen", "alive by science", "wonderfeel", "donotage",
-    "do not age", "renue", "maac10", "osh wellness", "osh ",
+    "do not age", "renue", "maac10", "osh wellness",
     "missha", "neocell", "youtheory", "vital proteins", "sports research",
     "swanson", "solgar", "natrol", "nature made",
 }
 
 # Supplement/medical topic keywords → safe lifestyle visual context
-# Used to steer H2-derived queries away from product/clinical imagery.
 TOPIC_VISUAL_CONTEXT = {
-    "ampk": "outdoor exercise morning",
-    "autophagy": "meditating peaceful sunrise",
-    "sirtuin": "hiking nature energetic",
-    "nad": "reading morning sunlit",
-    "nattokinase": "jogging coastal path",
-    "collagen": "glowing skin healthy portrait",
-    "retinol": "skincare morning bathroom",
-    "vitamin": "eating colorful vegetables kitchen",
-    "omega": "healthy meal salmon vegetables",
-    "magnesium": "relaxing calm evening",
-    "gut": "eating healthy meal kitchen",
-    "microbiome": "preparing vegetables colorful",
-    "probiotic": "yogurt breakfast healthy",
-    "butyrate": "farmers market vegetables",
-    "glucomannan": "cooking healthy meal",
-    "protein": "gym workout active",
-    "muscle": "strength training confident",
-    "sleep": "peaceful bedroom morning",
-    "menopausal": "outdoor active confident",
-    "menopause": "hiking nature confident",
-    "hormones": "yoga outdoor calm",
-    "cortisol": "meditation garden peaceful",
-    "dhea": "jogging park energetic",
-    "iodine": "eating seafood healthy",
-    "thyroid": "outdoor walking healthy",
-    "bone": "hiking active outdoor",
-    "heart": "jogging outdoor healthy",
-    "brain": "reading focused calm",
-    "skin": "portrait radiant healthy",
-    "weight": "healthy eating active lifestyle",
-    "inflammation": "yoga meditation peaceful",
-    "antioxidant": "eating berries colorful",
+    "ampk": "exercise morning",
+    "autophagy": "meditating sunrise",
+    "sirtuin": "hiking nature",
+    "nad": "reading morning",
+    "nattokinase": "jogging park",
+    "collagen": "healthy portrait",
+    "retinol": "skincare routine",
+    "vitamin": "eating vegetables kitchen",
+    "omega": "salmon meal",
+    "magnesium": "relaxing evening",
+    "gut": "healthy meal kitchen",
+    "microbiome": "cooking vegetables",
+    "probiotic": "yogurt breakfast",
+    "butyrate": "farmers market",
+    "glucomannan": "healthy meal",
+    "protein": "gym workout",
+    "muscle": "strength training",
+    "sleep": "bedroom morning",
+    "menopausal": "hiking confident",
+    "menopause": "hiking nature",
+    "hormones": "yoga outdoor",
+    "cortisol": "meditation garden",
+    "dhea": "jogging park",
+    "iodine": "cooking seafood",
+    "thyroid": "walking outdoor",
+    "bone": "hiking outdoor",
+    "heart": "jogging outdoor",
+    "brain": "reading focused",
+    "skin": "glowing portrait",
+    "weight": "healthy eating",
+    "inflammation": "yoga meditation",
+    "antioxidant": "eating berries",
 }
 
 # Safe fallback queries used when topic-specific search returns nothing.
 SAFE_FALLBACK_QUERIES = [
     "woman healthy lifestyle outdoor",
-    "woman wellness morning routine",
-    "woman eating healthy colorful meal",
-    "woman walking park sunny",
-    "woman yoga outdoor nature",
+    "woman wellness morning",
+    "woman eating healthy meal",
+    "woman walking park",
+    "woman yoga outdoor",
+    "woman smiling nature",
+    "woman active healthy",
 ]
 
 
@@ -231,14 +229,25 @@ def pexels_search(query):
     for attempt in range(3):
         try:
             url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
-                {"query": query, "orientation": "landscape", "per_page": 15})
+                {"query": query, "orientation": "landscape", "per_page": 30})
             req = urllib.request.Request(url, headers={"Authorization": PEXELS_KEY})
             data = json.loads(urllib.request.urlopen(req, timeout=15).read())
-            photos = [p for p in (data.get("photos") or [])
-                      if _safe_photo([p.get("alt"), p.get("photographer")])]
-            if not photos:
+            all_photos = data.get("photos") or []
+            safe = []
+            for p in all_photos:
+                alt = p.get("alt") or ""
+                if _safe_photo([alt, p.get("photographer")]):
+                    safe.append(p)
+                else:
+                    # Debug: show why the first few were rejected
+                    if len(all_photos) <= 5 or attempt == 2:
+                        t = (alt + " " + (p.get("photographer") or "")).lower()
+                        hit = next((k for k in BLOCKED_TERMS if k in t), None) or \
+                              next((b for b in COMPETITOR_BRANDS if b in t), None)
+                        print(f"        [blocked] '{alt[:60]}' → '{hit}'")
+            if not safe:
                 return None
-            p = photos[0]
+            p = safe[0]
             return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
         except urllib.error.HTTPError as e:
             if e.code == 429:
