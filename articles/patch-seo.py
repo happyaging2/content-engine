@@ -390,6 +390,7 @@ def inject_section_images(html, article_title, body_image_queries=None):
 # ── Shopify helpers ───────────────────────────────────────────────────────────
 
 def shopify_get_articles():
+    """Fetch all articles: returns {handle: {id, title}}."""
     articles = {}
     page_info = None
     base = f"https://{SHOPIFY_STORE}/admin/api/2024-01/blogs/{BLOG_ID}/articles.json"
@@ -416,14 +417,27 @@ def shopify_get_articles():
     return articles
 
 
-def shopify_update(article_id, body_html, summary_html):
+def shopify_fetch_body(article_id):
+    """Fetch body_html of a single article from Shopify."""
+    url = (f"https://{SHOPIFY_STORE}/admin/api/2024-01/blogs/{BLOG_ID}"
+           f"/articles/{article_id}.json?fields=id,body_html")
+    req = urllib.request.Request(url,
+        headers={"X-Shopify-Access-Token": SHOPIFY_TOKEN})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read()).get("article", {}).get("body_html", "")
+
+
+def shopify_update(article_id, body_html, summary_html, cover_src=None, cover_alt=None):
     url = (f"https://{SHOPIFY_STORE}/admin/api/2024-01/blogs/{BLOG_ID}"
            f"/articles/{article_id}.json")
-    payload = {"article": {
+    article = {
         "id": article_id,
         "body_html": body_html,
         "summary_html": summary_html,
-    }}
+    }
+    if cover_src:
+        article["image"] = {"src": cover_src, "alt": (cover_alt or "")[:120]}
+    payload = {"article": article}
     data = json.dumps(payload).encode()
     req = urllib.request.Request(url, data=data, method="PUT",
         headers={"X-Shopify-Access-Token": SHOPIFY_TOKEN,
@@ -435,33 +449,50 @@ def shopify_update(article_id, body_html, summary_html):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    mode = "schema + meta only" if SCHEMA_ONLY else "schema + meta + section images"
+    mode = "schema + meta only" if SCHEMA_ONLY else "schema + meta + section images + cover"
     print(f"=== patch-seo.py [{mode}] ===\n")
 
     print("[1/3] Fetching Shopify article list...")
     existing = shopify_get_articles()
     print(f"  {len(existing)} articles on Shopify.\n")
 
-    meta_files = sorted(glob.glob(os.path.join(ARTICLES_DIR, "*.meta.json")))
-    published = [
-        mf for mf in meta_files
-        if (lambda s: s in existing and os.path.exists(
-            os.path.join(ARTICLES_DIR, f"{s}-final.html")))(
-            json.load(open(mf)).get("slug") or
-            os.path.basename(mf).replace(".meta.json", ""))
-    ]
-    print(f"[2/3] Processing {len(published)} published articles...\n")
-
-    ok = failed = schema_added = meta_set = img_updated = 0
-
-    for mf in published:
-        meta   = json.load(open(mf))
-        slug   = meta.get("slug") or os.path.basename(mf).replace(".meta.json", "")
-        title  = meta.get("title", slug)
+    # Build slug → meta.json lookup from local files
+    local_meta = {}
+    local_html = {}
+    for mf in sorted(glob.glob(os.path.join(ARTICLES_DIR, "*.meta.json"))):
+        m = json.load(open(mf))
+        slug = m.get("slug") or os.path.basename(mf).replace(".meta.json", "")
+        local_meta[slug] = m
         html_f = os.path.join(ARTICLES_DIR, f"{slug}-final.html")
-        art_id = existing[slug]["id"]
+        if os.path.exists(html_f):
+            local_html[slug] = html_f
 
-        body = open(html_f).read()
+    print(f"[2/3] Processing all {len(existing)} Shopify articles...\n")
+
+    ok = failed = schema_added = meta_set = img_updated = cover_updated = 0
+
+    for slug, info in existing.items():
+        art_id = info["id"]
+        title  = info["title"]
+        meta   = local_meta.get(slug, {})
+
+        # Load body: prefer local file, fall back to Shopify fetch
+        if slug in local_html:
+            body = open(local_html[slug]).read()
+            source = "local"
+        else:
+            try:
+                body = shopify_fetch_body(art_id)
+                source = "shopify"
+                time.sleep(0.5)
+            except Exception as e:
+                print(f"  SKIP {slug[:55]} — fetch failed: {str(e)[:60]}")
+                failed += 1
+                continue
+
+        if not body.strip():
+            print(f"  SKIP {slug[:55]} — empty body")
+            continue
 
         # 1. FAQ Schema
         pairs = extract_faq_pairs(body)
@@ -472,23 +503,38 @@ def main():
         # 2. Meta description
         meta_desc = extract_meta_description(body)
 
-        # 3. Section images (skip if --schema-only or already has stock images)
+        # 3. Section images
+        cover_src = cover_alt = None
         if not SCHEMA_ONLY:
-            print(f"  {slug[:55]}")
+            print(f"  {slug[:55]} [{source}]")
             body_image_queries = meta.get("body_image_queries") or []
             body = inject_section_images(body, title, body_image_queries)
             img_updated += 1
+
+            # 4. Cover image — use resolved_cover from meta, or fetch via image_query
+            resolved = meta.get("resolved_cover")
+            if resolved and resolved.get("src"):
+                cover_src = resolved["src"]
+                cover_alt = title
+            elif not SCHEMA_ONLY:
+                q = meta.get("image_query") or h2_to_query(title, title)
+                img = find_image(q, SAFE_FALLBACK_QUERIES[:3])
+                if img:
+                    cover_src = img["src"]
+                    cover_alt = title
+                    cover_updated += 1
         else:
-            print(f"  {slug[:55]} (schema+meta)")
+            print(f"  {slug[:55]} (schema+meta) [{source}]")
 
         meta_set += 1
 
-        # Write back
-        open(html_f, "w").write(body)
+        # Write back local file if it exists
+        if slug in local_html:
+            open(local_html[slug], "w").write(body)
 
         # Update Shopify
         try:
-            shopify_update(art_id, body, meta_desc)
+            shopify_update(art_id, body, meta_desc, cover_src, cover_alt)
             ok += 1
         except urllib.error.HTTPError as e:
             err = e.read().decode()[:120]
@@ -501,10 +547,11 @@ def main():
         time.sleep(1.2)
 
     print(f"\n[3/3] Done.")
-    print(f"  FAQ schema injected: {schema_added}")
-    print(f"  Meta descriptions set: {meta_set}")
-    print(f"  Section images updated: {img_updated}")
-    print(f"  Shopify updates: {ok} OK, {failed} failed")
+    print(f"  FAQ schema injected:     {schema_added}")
+    print(f"  Meta descriptions set:   {meta_set}")
+    print(f"  Section images updated:  {img_updated}")
+    print(f"  Cover images updated:    {cover_updated}")
+    print(f"  Shopify updates:         {ok} OK, {failed} failed")
 
 
 if __name__ == "__main__":
