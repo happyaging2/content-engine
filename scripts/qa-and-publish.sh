@@ -309,8 +309,9 @@ BLOCKED_TERMS = {
     "book cover", "dopamine detox",
     "fast food", "junk food", "cigarette",
     "hospital", "clinic", "medical office",
-    # Wrong persona
-    "man ", "men ", "boy ", "male ", "gentleman", "guy ", "guys",
+    # Wrong persona — use leading space so "man " doesn't match "woman ",
+    # "men " doesn't match "women ", "male " doesn't match "female "
+    " man ", " men ", " boy ", " male ", "gentleman", " guy ", "guys",
     "child", "children", "kid", "baby", "infant", "toddler",
 }
 

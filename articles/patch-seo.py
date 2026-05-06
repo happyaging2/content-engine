@@ -127,8 +127,10 @@ BLOCKED_TERMS = {
     "fast food", "junk food", "cigarette", "smoking", "alcohol",
     "hospital", "clinic", "medical office", "operating room", "emergency",
     # Demographics that don't match persona (women 40+, no men, no children)
-    " man ", " man,", " man.", "men ", "men,", "men.", "male ",
-    "boy", "boys", "child", "children", "kid", "kids",
+    # NOTE: use leading space to avoid " man " matching "woman", " men " matching "women",
+    # " male " matching "female"
+    " man ", " man,", " man.", " men ", " men,", " men.", " male ",
+    " boy ", " boys ", "child", "children", "kid", "kids",
     "baby", "infant", "toddler", "teenager",
     "elderly man", "old man", "grandfather",
 }
