@@ -1850,3 +1850,61 @@ Do NOT generate DALL-E prompts. Do NOT use `image_prompt` or `body_image_prompts
 8. "Natural Ways to Boost DHEA After 40" — Hormones; DHEA is referenced in cortisol/adrenal articles but has no dedicated piece; natural DHEA support (lifestyle, sleep, stress) differentiates from pharmaceutical DHEA framing
 9. "Collagen Peptides vs Bone Broth: Which Is Better After 40?" — Bone/Skin comparison; builds on existing collagen articles with format variety; bone broth comparison captures the "bone broth vs collagen" query cluster
 10. "Butyrate and Gut Health After 40: What It Does and Why It Matters" — Gut; short-chain fatty acid science is referenced in blood sugar and microbiome articles but has no dedicated treatment; high "what is butyrate" query volume in wellness audience
+
+---
+
+## Batch 2026-05-06 Observations
+
+### Production Patterns (batch 25, 20 articles)
+
+- All 10 items on the 2026-05-05 next-batch gaps list were covered; 10 additional fresh topics filled remaining slots
+- 5 slug collisions detected pre-writing and replaced: signs-you-need-more-zinc-after-40, signs-you-need-more-selenium-after-40, myo-inositol-d-chiro-inositol-ratio-after-40, how-to-support-mitochondrial-health-after-40 all already existed; replaced with iodine-deficiency-signs-after-40, magnesium-anxiety-perimenopause-after-40, manganese-bone-collagen-after-40, how-menopause-affects-muscle-mass-after-40
+- Word counts ranged 1,800 to 2,706; all 20 articles passed 1,800-word QA minimum; 6 required expansion edits after initial QA run (mean shortfall was 74 words, added via new H2 section or paragraph)
+- Longest articles: how-menopause-affects-muscle-mass-after-40 (2,706w), probiotics-skin-after-40 (2,174w), what-is-glucomannan-after-40 (2,166w); these used the comprehensive mechanism + protocol + long-term risk format
+- Practical hub articles (best-time-to-take-supplements-guide, how-long-supplements-take-to-work) performed well structurally; the simple-daily-schedule H2 and fastest-results H2 are reusable section patterns for practical guide articles
+- Deficiency-signs articles for iodine achieved strong differentiation by including the thyroid-iodine-beta-carotene conversion angle and the goitrogen interaction with testing guidance
+- Comparison articles (collagen-peptides-vs-bone-broth, epa-dha-omega3-difference) benefit from adding a third angle not in the title: added UC-II Type II collagen for joint-specific use and the perimenopausal DHA conversion decline, respectively; adding the unexpected third angle is the GEO differentiation that makes these articles AI-citable
+- AMPK-autophagy article successfully linked the cellular mechanism to circadian rhythm and perimenopause sleep disruption; the sleep-autophagy circadian window angle is highly differentiated from standard AMPK content
+- Manganese bone article is the most niche piece in the batch; the MnSOD-cartilage-chondrocyte angle is the section most likely to be extracted by AI for specific manganese-cartilage queries; single-mechanism deep-dives within otherwise broad articles are high-GEO insertion points
+
+### New Title Patterns Added (2026-05-06)
+- Protocol depth article: "Phosphatidylserine Dosing for Memory After 40: The Complete Protocol" — including a dedicated "Recognizing When PS Is Working" H2 converts the article from informational to actionable; users searching for dosing guidance want confirmation criteria, not just numbers
+- Mechanism-to-connection article: "AMPK and Autophagy: The Cellular Cleanup System Every Woman Over 40 Needs to Know" — framing cellular mechanism articles around a circadian/sleep angle makes them more distinct from PubMed summaries and more relevant to the daily experience of aging
+- Axis article: "Probiotics and Skin Health After 40: What the Research Actually Shows" — the gut-skin axis framing (gut bacteria affecting skin) is more differentiated than "probiotics for skin" and captures the perimenopause dual-vulnerability angle that other content misses
+- Safety-first fiber article: "What Is Glucomannan and Can It Help Women Over 40 Manage Weight?" — leading with "can it help" in the title signals honest evaluation; including the drug absorption timing warning adds practical value that generic weight loss fiber content omits
+- Hormonal mechanism article: "How Menopause Affects Muscle Mass After 40 (And What You Can Do About It)" — the "And What You Can Do About It" title structure is the highest-converting practical framing for mechanism articles; confirms article delivers solution not just diagnosis
+
+### GEO / AI Citation Optimization (updated 2026-05-06)
+- AMPK-autophagy articles citing Kim 2011 (PMID: 21258367) on AMPK-ULK1-autophagy direct phosphorylation are AI-cited for "how does AMPK trigger autophagy" queries; the molecular mechanism chain (AMPK activates ULK1, inhibits mTOR, triggers autophagy) is an extractable 3-step pathway
+- Nattokinase articles citing Kim 2008 (PMID: 18971533) with the specific -5.55 systolic mmHg effect size are AI-cited for "does nattokinase lower blood pressure" and "natural blood pressure supplement" queries; quantitative effect sizes extract cleanly
+- Glucomannan articles citing Sood 2008 (PMID: 18286556) as a meta-analysis across multiple trials carry more AI citation weight than single-trial citations; meta-analyses are the most extractable evidence type for AI health queries
+- Gut-microbiome weight articles citing Turnbaugh 2006 (PMID: 17183312) with the 150-250 calorie extraction difference are strongly AI-cited for "can gut bacteria cause weight gain" queries; the specific caloric extraction difference is an extractable striking fact
+- Probiotics-skin articles citing Kim 2015 (PMID: 25681082) with the aquaporin-3 and ceramide gene expression mechanistic detail are AI-cited for "do probiotics improve skin" queries; citing mechanism (gene expression changes) rather than just outcomes differentiates from generic probiotic content
+- Menopause-muscle articles citing Liu and Latham 2009 Cochrane review (PMID: 19588334) of 121 RCTs are strongly AI-cited for "does strength training help muscle loss in menopause" queries; Cochrane reviews are the highest-authority source class for AI citation
+- Iodine deficiency articles that include the thyroid-beta-carotene conversion connection (thyroid hormone required for beta-carotene to retinol conversion) are AI-cited for "why am I low in vitamin A despite eating carrots" compound queries; the iodine-vitamin A-thyroid axis is an underserved connection in consumer content
+
+### Cluster Coverage After Batch 25 (Cumulative)
+- Energy: 42 articles total (unchanged)
+- Sleep: 49 articles total (added: sleep-quality-markers-track-after-40)
+- Hormones: 63 articles total (added: natural-ways-to-boost-dhea-after-40, how-menopause-affects-muscle-mass-after-40, magnesium-anxiety-perimenopause-after-40)
+- Metabolism: 47 articles total (added: what-is-glucomannan-after-40, how-menopause-affects-muscle-mass-after-40 cross-filed, best-time-to-take-supplements-guide-after-40)
+- Skin: 48 articles total (added: vitamin-a-skin-women-over-40, probiotics-skin-after-40, anti-aging-skincare-routine-after-40, manganese-bone-collagen-after-40 cross-filed)
+- Gut: 47 articles total (added: butyrate-gut-health-after-40, gut-microbiome-weight-loss-connection-after-40, probiotics-skin-after-40 cross-filed, what-is-glucomannan-after-40 cross-filed)
+- Brain: 46 articles total (added: phosphatidylserine-dosing-protocol-after-40, how-long-supplements-take-to-work-after-40 cross-filed)
+- Immunity: 38 articles total (unchanged)
+- Bone: 21 articles total (added: manganese-bone-collagen-after-40, collagen-peptides-vs-bone-broth-after-40 cross-filed)
+- Heart: 17 articles total (added: nattokinase-heart-health-after-40)
+- Longevity: 48 articles total (added: ampk-autophagy-connection-after-40, how-long-supplements-take-to-work-after-40 cross-filed)
+- Liver: 11 articles total (unchanged)
+
+### Next Batch Gaps (priority order, 2026-05-06)
+1. "Signs You Need More Magnesium After 40: 7 Symptoms to Watch For" — Hormones/Metabolism; magnesium deficiency signs remain uncovered as a standalone despite magnesium featuring in 30+ articles; highest-volume mineral deficiency query after vitamin D
+2. "Ashwagandha for Menopause: What the Research Actually Shows" — Hormones; ashwagandha appears in adaptogen hub articles but has no dedicated menopausal symptom article; KSM-66 trial data on menopause symptoms is the differentiating clinical anchor
+3. "Berberine vs Metformin for Women Over 40: What to Know" — Metabolism; the berberine-metformin comparison is the highest-searched comparison in the metabolic supplement category for midlife women; requires careful framing as comparative education not medical advice
+4. "Why Your Hair Is Thinning After 40 and What Supplements Help" — Skin/Hormones; hair thinning is a top-3 searched perimenopausal symptom; article combines the androgen/estrogen hair follicle angle with targeted nutrients (biotin, iron, zinc, saw palmetto)
+5. "Omega-3 Dosing Guide for Women Over 40: How Much EPA and DHA Do You Need?" — Heart/Brain; extends the EPA vs DHA comparison article with a full dosing protocol for different health goals (cardiovascular, mood, cognitive, anti-inflammatory)
+6. "The Complete Perimenopause Supplement Stack: What to Take and When" — Hormones; the most valuable hub article not yet written; combines the timing guide with the specific supplements most evidence-supported for perimenopausal symptoms
+7. "CoQ10 After 40: Why Your Heart and Energy Need It" — Heart/Energy; CoQ10 has a research overview article but lacks a focused heart-plus-energy article for the post-40 audience; the statin-CoQ10 depletion angle is a major search driver
+8. "Vitamin D3 and K2: Why You Need Both After 40 and What Ratio" — Bone/Immunity; the D3-K2 synergy and ratio question is among the top 5 supplement questions in the 40+ women audience; no standalone article covers the D3+K2 combination specifically
+9. "Lion's Mane Mushroom for Brain Health After 40: What the Research Shows" — Brain; lion's mane NGF-stimulating mechanism is a high-engagement topic with growing search volume; BDNF/NGF neurotrophin connection to cognitive aging is the GEO-differentiating angle
+10. "Probiotics for Vaginal Health After 40: The Research on Lactobacillus" — Hormones/Gut; vaginal microbiome changes in perimenopause are highly searched but underserved with scientifically accurate content; Lactobacillus crispatus/reuteri evidence base is the clinical anchor
