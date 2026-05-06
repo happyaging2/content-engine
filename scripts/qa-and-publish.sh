@@ -288,49 +288,110 @@ pexels_key   = os.environ.get("PEXELS_API_KEY", "")
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 
 BLOCKED_TERMS = {
-    "nude","naked","topless","nudity","lingerie","bikini","underwear",
-    "explicit","erotic","sensual","sexy","sexual","nsfw",
-    "belly","abdomen","navel","torso","bare skin","bare stomach",
-    "cesarean","c-section","surgical scar","scar","wound","surgery",
-    "supplement","vitamin","capsule","pill","tablet",
-    "bottle","vial","jar","tube","container","packaging","product",
-    "holding bottle","holding vial","holding supplement",
-    "tattoo","tattooed","tattoos","book cover","dopamine detox",
-    "hospital","clinic","medicine",
+    # Explicit / nudity
+    "nude", "naked", "topless", "nudity", "lingerie", "bikini",
+    "underwear", "explicit", "adult content", "erotic", "sensual",
+    "sexy", "sexual", "pornographic", "nsfw",
+    # Exposed body parts / medical imagery
+    "belly", "abdomen", "navel", "belly button", "torso", "bare skin",
+    "bare stomach", "bare belly", "cesarean", "c-section", "surgical scar",
+    "scar", "wound", "surgery", "stretch mark", "skin close", "close-up skin",
+    "stomach close", "skin texture",
+    # Supplement / product / packaging
+    "supplement", "vitamin", "capsule", "pill", "tablet", "dose",
+    "bottle", "vial", "jar", "tube", "container", "packaging",
+    "product", "serum bottle", "cosmetic bottle", "beauty bottle",
+    "holding bottle", "holding vial", "holding product", "holding supplement",
+    "holding jar", "holding tube", "with bottle", "with supplement",
+    "pill box", "medicine", "pharmacy",
+    # Off-brand / low-quality
+    "tattoo", "tattooed", "tattoos",
+    "book cover", "dopamine detox",
+    "fast food", "junk food", "cigarette",
+    "hospital", "clinic", "medical office",
+    # Wrong persona
+    "man ", "men ", "boy ", "male ", "gentleman", "guy ", "guys",
+    "child", "children", "kid", "baby", "infant", "toddler",
 }
 
 COMPETITOR_BRANDS = {
-    "vigorvault","vigor vault","nmn revive","nmn activ","lifeextension",
-    "life extension","thorne","jarrow","now foods","garden of life",
-    "nature's bounty","gnc","optimum nutrition","ritual",
-    "elysium","tru niagen","alive by science","wonderfeel","donotage",
-    "do not age","renue","maac10","osh wellness","osh ","missha",
-    "neocell","youtheory","vital proteins","sports research",
-    "swanson","solgar","natrol","nature made",
+    "vigorvault", "vigor vault", "nmn revive", "nmn activ", "lifeextension",
+    "life extension", "thorne", "jarrow", "now foods", "garden of life",
+    "nature's bounty", "gnc", "optimum nutrition", "ritual", "hims", "hers",
+    "elysium", "tru niagen", "tru longevity", "alive by science",
+    "wonderfeel", "donotage", "do not age", "renue", "maac10",
+    "osh wellness", "osh ", "missha",
+    "neocell", "youtheory", "vital proteins", "sports research",
+    "bronson", "swanson", "solgar", "natrol", "nature made",
+    "garden of", "nutricost", "bulk supplements",
 }
+
+TOPIC_VISUAL_CONTEXT = {
+    "ampk": "outdoor exercise morning",
+    "autophagy": "meditating peaceful sunrise",
+    "nattokinase": "jogging coastal path",
+    "collagen": "glowing skin healthy portrait",
+    "gut": "eating healthy meal kitchen",
+    "microbiome": "preparing vegetables colorful",
+    "probiotic": "eating yogurt bowl kitchen",
+    "glucomannan": "healthy meal vegetables satisfied",
+    "sleep": "peaceful bedroom morning",
+    "magnesium": "relaxing calm evening",
+    "omega": "healthy meal salmon vegetables",
+    "protein": "gym workout active",
+    "muscle": "strength training confident",
+    "menopause": "hiking nature confident",
+    "hormone": "yoga outdoor calm",
+    "thyroid": "walking outdoor energetic",
+    "iodine": "cooking healthy meal",
+    "vitamin": "eating fruit outdoor",
+    "zinc": "cooking colorful vegetables",
+    "iron": "energetic morning run",
+    "calcium": "yoga stretching outdoor",
+    "dhea": "active lifestyle outdoor",
+    "testosterone": "strength training weights",
+    "estrogen": "walking garden serene",
+    "cortisol": "meditation breathing calm",
+    "inflammation": "healthy salad bowl",
+    "antioxidant": "eating berries colorful",
+    "resveratrol": "eating grapes vineyard",
+    "butyrate": "cooking fiber vegetables",
+    "phosphatidylserine": "reading focused morning",
+    "lion's mane": "focused writing outdoor",
+    "ashwagandha": "yoga meditation calm",
+    "berberine": "healthy meal balanced",
+}
+
+SAFE_FALLBACK_QUERIES = [
+    "woman 40s healthy lifestyle outdoor",
+    "woman wellness nature morning",
+    "woman healthy eating kitchen",
+    "woman yoga outdoor serene",
+    "woman walking park smiling",
+]
 
 def _safe(text):
     t = (text or "").lower()
-    return not any(k in t for k in BLOCKED_TERMS) and not any(b in t for b in COMPETITOR_BRANDS)
+    return (not any(k in t for k in BLOCKED_TERMS)
+            and not any(b in t for b in COMPETITOR_BRANDS))
 
 def pexels_search(query):
     if not pexels_key: return None
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
-            {"query": query, "orientation": "landscape", "per_page": 10})
+            {"query": query, "orientation": "landscape", "per_page": 15})
         req = urllib.request.Request(url, headers={"Authorization": pexels_key})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         safe = [p for p in (data.get("photos") or []) if _safe(p.get("alt") or "")]
         if not safe: return None
-        p = safe[0]
-        return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
+        return {"src": safe[0]["src"]["large2x"], "alt": (safe[0].get("alt") or query)[:120]}
     except Exception: return None
 
 def unsplash_search(query):
     if not unsplash_key: return None
     try:
         url = "https://api.unsplash.com/search/photos?" + urllib.parse.urlencode(
-            {"query": query, "orientation": "landscape", "per_page": 10, "content_filter": "high"})
+            {"query": query, "orientation": "landscape", "per_page": 15, "content_filter": "high"})
         req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}"})
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         safe = [p for p in (data.get("results") or [])
@@ -340,18 +401,31 @@ def unsplash_search(query):
         return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120]}
     except Exception: return None
 
-def find_image(query):
+def find_image(query, fallbacks=None):
     img = pexels_search(query) or unsplash_search(query)
+    if not img and fallbacks:
+        for fb in fallbacks:
+            img = pexels_search(fb) or unsplash_search(fb)
+            if img: break
     time.sleep(1.2)
     return img
 
-def h2_to_query(h2_text):
+def h2_to_query(h2_text, article_title=""):
+    combined = (h2_text + " " + article_title).lower()
+    for keyword, visual in TOPIC_VISUAL_CONTEXT.items():
+        if keyword in combined:
+            return "woman " + visual
     skip = {"what","why","how","the","a","an","and","or","of","to","is","are",
             "for","after","with","your","that","in","on","at","by","does","do",
-            "can","will","about","from","this","40","over","women","woman"}
+            "can","will","about","from","this","40","over","women","woman",
+            "supplement","vitamin","capsule","pill","tablet","dose","bottle"}
     words = [w.strip(".,?:!-()") for w in h2_text.split()
-             if w.lower().strip(".,?:!-()") not in skip and len(w) > 2][:5]
-    return "woman " + " ".join(words).lower() + " wellness"
+             if w.lower().strip(".,?:!-()") not in skip
+             and len(w.strip(".,?:!-()")) > 2][:4]
+    if not words:
+        words = [w.strip(".,?:!-()") for w in article_title.split()
+                 if w.lower().strip(".,?:!-()") not in skip][:3]
+    return "woman " + " ".join(words).lower() + " outdoor lifestyle"
 
 def extract_faq_pairs(html):
     faq = re.search(
@@ -391,10 +465,11 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
 
     body = open(html_file).read()
 
-    # Remove legacy figcaptions and old stock images
+    # Remove legacy figcaptions, old stock images, and [BODY_IMAGE_N] placeholders
     body = re.sub(r'<figcaption[^>]*>.*?</figcaption>', '', body, flags=re.DOTALL)
     body = re.sub(r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
                   '\n', body, flags=re.DOTALL)
+    body = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', body)
 
     # Insert section-relevant images
     skip_h2s = {"frequently asked questions", "references", "faq"}
@@ -403,10 +478,17 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
                   if re.sub(r'<[^>]+>', '', m.group(1)).strip().lower() not in skip_h2s]
 
     targets = h2_matches[1:4]  # skip first H2, max 3 images
+    body_image_queries = meta.get("body_image_queries") or []
     offset = 0
-    for pos, h2_text in targets:
-        query = h2_to_query(h2_text)
-        img = find_image(query)
+    for i, (pos, h2_text) in enumerate(targets):
+        if body_image_queries and i < len(body_image_queries):
+            primary_query = body_image_queries[i]
+            derived = h2_to_query(h2_text, title)
+            fallbacks = [derived] + SAFE_FALLBACK_QUERIES[:2]
+        else:
+            primary_query = h2_to_query(h2_text, title)
+            fallbacks = SAFE_FALLBACK_QUERIES[:2]
+        img = find_image(primary_query, fallbacks)
         if not img: continue
         alt = img.get("alt", title)[:140].replace('"', "'")
         figure = (f'\n<figure class="article-stock-image" style="margin:24px 0">'
