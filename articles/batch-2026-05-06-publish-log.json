@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "ampk-autophagy-connection-after-40",
+    "status": "error",
+    "message": "HTTPSConnectionPool(host='shop-happy-aging.myshopify.com', port=443): Max retries exceeded with url: /admin/api/2024-01/blogs/109440303424/articles.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1016)')))"
+  },
+  {
+    "slug": "phosphatidylserine-dosing-protocol-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "best-time-to-take-supplements-guide-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "how-long-supplements-take-to-work-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "natural-ways-to-boost-dhea-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "collagen-peptides-vs-bone-broth-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "butyrate-gut-health-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "iodine-deficiency-signs-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "magnesium-anxiety-perimenopause-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "manganese-bone-collagen-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "epa-dha-omega3-difference-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "whey-protein-women-over-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "anti-aging-skincare-routine-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "sleep-quality-markers-track-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "gut-microbiome-weight-loss-connection-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "nattokinase-heart-health-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "vitamin-a-skin-women-over-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "probiotics-skin-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "what-is-glucomannan-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  },
+  {
+    "slug": "how-menopause-affects-muscle-mass-after-40",
+    "status": "error",
+    "http_status": 403,
+    "message": "Host not in allowlist"
+  }
+]
