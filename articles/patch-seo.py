@@ -318,6 +318,32 @@ def pexels_search(query):
     return None
 
 
+def pexels_search_many(query, max_results=20):
+    """Return a list of up to max_results safe photos — used to build the image pool."""
+    if not PEXELS_KEY:
+        return []
+    headers = {
+        "Authorization": PEXELS_KEY,
+        "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                       "AppleWebKit/537.36 (KHTML, like Gecko) "
+                       "Chrome/124.0.0.0 Safari/537.36"),
+        "Accept": "application/json",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    try:
+        url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
+            {"query": query, "orientation": "landscape", "per_page": 30})
+        req = urllib.request.Request(url, headers=headers)
+        data = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        return [
+            {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
+            for p in (data.get("photos") or [])
+            if _safe_photo([p.get("alt") or "", p.get("photographer") or ""])
+        ][:max_results]
+    except Exception:
+        return []
+
+
 def unsplash_search(query):
     global _unsplash_req
     if not UNSPLASH_KEY:
@@ -399,19 +425,22 @@ def h2_to_query(h2_text, article_title=""):
     return query
 
 
-def inject_section_images(html, article_title, body_image_queries=None,
-                          image_cache=None):
-    """Re-inject body images, one per H2 section, each matched to that section's topic.
+def inject_section_images(html, article_title, slug="", body_image_queries=None,
+                          image_pool=None, image_cache=None):
+    """Re-inject body images, one per H2 section, varied per article via slug hash.
 
-    Skips articles that already have valid section images (saves Pexels quota).
-    Uses image_cache dict {query: img} when available to avoid duplicate API calls.
+    image_pool: {query: [img, img, ...]} — pool of safe photos per query.
+                Each article picks a different photo using hash(slug + section_idx).
+    image_cache: legacy {query: single_img} — still checked as fallback.
+    Skips articles that already have valid section images.
     """
     # Skip if article already has injected figures (valid src URLs)
     if re.search(r'<figure class="article-stock-image"[^>]*>.*?<img[^>]+src="https?://', html,
                  re.DOTALL):
         return html
 
-    # Remove only unfilled [BODY_IMAGE_N] placeholder <img> tags (old format)
+    # Strip ALL [BODY_IMAGE_N] placeholders — any format (img tag, plain text, etc.)
+    html = re.sub(r'\[BODY_IMAGE_\d+\]', '', html)
     html = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', html)
 
     # Find all H2 positions (skip FAQ and References)
@@ -425,29 +454,48 @@ def inject_section_images(html, article_title, body_image_queries=None,
 
     # Skip first H2 (too close to top); target up to 3 images
     targets = h2_matches[1:4]
+    pool = image_pool or {}
+    stop = {"woman", "the", "and", "for", "with", "your"}
 
     offset = 0
     for i, (pos, h2_text) in enumerate(targets):
-        # Prefer pre-validated query from meta.json; fall back to H2 derivation
         if body_image_queries and i < len(body_image_queries):
             primary_query = body_image_queries[i]
-            derived_query = h2_to_query(h2_text, article_title)
-            fallbacks = [derived_query] + SAFE_FALLBACK_QUERIES[:2]
+            fallbacks = [h2_to_query(h2_text, article_title)] + SAFE_FALLBACK_QUERIES[:2]
         else:
             primary_query = h2_to_query(h2_text, article_title)
             fallbacks = SAFE_FALLBACK_QUERIES[:2]
 
-        # Check cache first to avoid redundant API calls
-        img = (image_cache or {}).get(primary_query)
-        if not img:
-            for q in [primary_query] + fallbacks:
-                img = (image_cache or {}).get(q)
-                if img:
+        # Pick from pool (varied per article + section via hash)
+        photo_pool = pool.get(primary_query)
+        if not photo_pool:
+            for fb in fallbacks:
+                photo_pool = pool.get(fb)
+                if photo_pool:
                     break
-        if not img:
-            img = find_image(primary_query, fallbacks)
-            if img and image_cache is not None:
-                image_cache[primary_query] = img
+        if not photo_pool:
+            # Topic keyword scan
+            title_lower = article_title.lower()
+            for cq, cpool in pool.items():
+                words = [w for w in cq.split() if w not in stop and len(w) > 3]
+                if any(w in title_lower for w in words):
+                    photo_pool = cpool; break
+        if not photo_pool:
+            # Guaranteed fallback: safe fallback queries always pre-fetched
+            for fb in SAFE_FALLBACK_QUERIES:
+                photo_pool = pool.get(fb)
+                if photo_pool: break
+
+        img = None
+        if photo_pool:
+            # Hash of slug + section index → unique photo per article per section
+            idx = abs(hash(slug + str(i))) % len(photo_pool)
+            img = photo_pool[idx]
+        else:
+            # Last resort: legacy cache or live API
+            img = (image_cache or {}).get(primary_query)
+            if not img:
+                img = find_image(primary_query, fallbacks)
         if not img:
             continue
 
@@ -521,9 +569,12 @@ def fetch_products():
                     )
                 kws = _extract_product_keywords(p.get("title", ""))
                 if kws:
-                    linking.append({"handle": handle,
-                                    "title": p.get("title", ""),
-                                    "keywords": kws})
+                    linking.append({
+                        "handle": handle,
+                        "title": p.get("title", ""),
+                        "keywords": kws,
+                        "img_url": (p["images"][0]["src"] if p.get("images") else ""),
+                    })
             page += 1
             time.sleep(0.3)
         except Exception:
@@ -643,9 +694,10 @@ def inject_product_cta(html, products, prices, article_title):
     if not best_prod:
         return html
 
-    handle   = best_prod["handle"]
-    prod_url = f"https://happyaging.com/products/{handle}"
-    price    = prices.get(handle, "")
+    handle    = best_prod["handle"]
+    prod_url  = f"https://happyaging.com/products/{handle}"
+    price     = prices.get(handle, "")
+    img_url   = best_prod.get("img_url", "")
 
     # Strip dosage numbers for a clean display name
     short_name = re.sub(
@@ -654,22 +706,42 @@ def inject_product_cta(html, products, prices, article_title):
 
     price_line = f" — from ${price}/month" if price else ""
 
+    # Contextual intro sentence derived from article topic
+    _skip = {"why","how","what","when","is","are","the","a","an","for","and","or",
+             "of","to","in","on","at","after","40","over","women","woman","your",
+             "you","do","does","can","will","with","its","this","that","these"}
+    topic_words = [w.strip("?,.:;!'\"") for w in article_title.split()
+                   if w.lower().strip("?,.:;!'\"") not in _skip
+                   and len(w.strip("?,.:;!'\"")) > 3]
+    topic = " ".join(topic_words[:3]).lower() if topic_words else "healthy aging"
+    intro = (f"If you're looking to support {topic}, "
+             f"this science-backed formula was developed specifically for women over 40.")
+
+    img_block = (
+        f'<img src="{img_url}" alt="{short_name}" '
+        'style="width:100px;height:100px;object-fit:contain;'
+        'border-radius:8px;background:#fff;flex-shrink:0">\n'
+        if img_url else ""
+    )
+
     cta = (
         '\n<div class="article-product-cta" '
         'style="background:#FDF8F3;border:2px solid #E8D5B7;border-radius:16px;'
-        'padding:28px 32px;margin:48px 0;text-align:center">\n'
+        'padding:24px 28px;margin:48px 0">\n'
         '<p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;'
-        'color:#8B7355;font-weight:700;margin:0 0 8px">Recommended by Happy Aging</p>\n'
-        f'<h3 style="font-size:22px;color:#2D2D2D;font-weight:700;margin:0 0 12px">'
+        'color:#8B7355;font-weight:700;margin:0 0 16px">Recommended by Happy Aging</p>\n'
+        '<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">\n'
+        + img_block +
+        '<div style="flex:1;min-width:180px">\n'
+        f'<h3 style="font-size:19px;color:#2D2D2D;font-weight:700;margin:0 0 6px">'
         f'{short_name}</h3>\n'
-        '<p style="color:#6B6B6B;font-size:15px;margin:0 0 22px;line-height:1.6">'
-        'Science-backed formula designed for women over 40.</p>\n'
+        f'<p style="color:#5A5A5A;font-size:14px;margin:0 0 14px;line-height:1.55">'
+        f'{intro}</p>\n'
         f'<a href="{prod_url}" '
-        'style="display:inline-block;background:#8B7355;color:#fff;padding:13px 36px;'
-        'border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;'
-        'letter-spacing:0.02em">'
+        'style="display:inline-block;background:#8B7355;color:#fff;padding:11px 28px;'
+        'border-radius:8px;text-decoration:none;font-weight:700;font-size:14px">'
         f'Try {short_name}{price_line} →</a>\n'
-        '</div>\n'
+        '</div>\n</div>\n</div>\n'
     )
 
     # Insert before FAQ H2 (preferred position)
@@ -826,24 +898,31 @@ def main():
         if os.path.exists(html_f):
             local_html[slug] = html_f
 
-    # Pre-fetch one image per unique visual context query (saves Pexels quota).
-    # All 508 articles share these ~25 cached images instead of making 2000+ calls.
-    image_cache = {}
+    # Pre-fetch image pool: ~25 queries × up to 20 photos each = ~500 unique photos.
+    # Each article picks by hash(slug) so covers and body images are varied.
+    image_pool  = {}   # {query: [img, img, ...]}
+    image_cache = {}   # {query: img}  — first photo per query (legacy fallback)
     if not SCHEMA_ONLY and (PEXELS_KEY or UNSPLASH_KEY):
-        print("[3/4] Pre-fetching image cache (one per topic)...")
+        print("[3/4] Pre-fetching image pool (up to 20 photos per topic)...")
         unique_queries = list(dict.fromkeys(
             ["woman " + v for v in TOPIC_VISUAL_CONTEXT.values()]
             + SAFE_FALLBACK_QUERIES
         ))
         for q in unique_queries:
-            img = pexels_search(q) or unsplash_search(q)
-            if img:
-                image_cache[q] = img
-                print(f"  ✓ {q[:55]}")
+            photos = pexels_search_many(q)  # returns list of safe photos
+            if not photos:
+                fb = unsplash_search(q)
+                if fb:
+                    photos = [fb]
+            if photos:
+                image_pool[q]  = photos
+                image_cache[q] = photos[0]
+                print(f"  ✓ {q[:55]}  ({len(photos)} photos)")
             time.sleep(0.8)
-        print(f"  Cached {len(image_cache)}/{len(unique_queries)} queries.\n")
+        total_photos = sum(len(v) for v in image_pool.values())
+        print(f"  Pool: {len(image_pool)} queries, {total_photos} unique photos.\n")
     else:
-        print(f"[3/4] Skipping image cache (schema-only mode or no API keys).\n")
+        print(f"[3/4] Skipping image pool (schema-only mode or no API keys).\n")
 
     print(f"[4/4] Processing all {len(existing)} Shopify articles...\n")
 
@@ -913,41 +992,42 @@ def main():
         if not SCHEMA_ONLY:
             print(f"  {slug[:55]} [{source}]")
             body_image_queries = meta.get("body_image_queries") or []
-            body = inject_section_images(body, title, body_image_queries, image_cache)
+            body = inject_section_images(
+                body, title, slug=slug,
+                body_image_queries=body_image_queries,
+                image_pool=image_pool, image_cache=image_cache)
             img_updated += 1
 
-            # Cover image: only fetch for articles with NO existing cover.
-            # Drain the pre-populated image_cache before making any live API calls —
-            # live calls eat the 200 req/hour Pexels quota and still often fail.
+            # Cover image: pick from pool using hash(slug) for per-article variety.
             cover_src = cover_alt = None
             if not existing_cover:
                 q = meta.get("image_query") or h2_to_query(title, title)
+                title_lower = title.lower()
+                stop = {"woman", "the", "and", "for", "with", "your"}
 
-                # 1. Exact cache hit (works for topic-keyword titles via h2_to_query)
-                img = image_cache.get(q)
+                # 1. Exact pool hit
+                pool = image_pool.get(q)
 
-                # 2. Topic-keyword scan: find cached query whose non-stop words appear in title
-                if not img:
-                    title_lower = title.lower()
-                    stop = {"woman", "the", "and", "for", "with", "your"}
-                    for cq, cimg in image_cache.items():
+                # 2. Topic-keyword scan against pool
+                if not pool:
+                    for cq, cpool in image_pool.items():
                         words = [w for w in cq.split() if w not in stop and len(w) > 3]
                         if any(w in title_lower for w in words):
-                            img = cimg
-                            break
+                            pool = cpool; break
 
-                # 3. Guaranteed cache hit: SAFE_FALLBACK_QUERIES are always pre-fetched
-                if not img:
+                # 3. Guaranteed: SAFE_FALLBACK_QUERIES are always pre-fetched
+                if not pool:
                     for fb in SAFE_FALLBACK_QUERIES:
-                        img = image_cache.get(fb)
-                        if img:
-                            break
+                        pool = image_pool.get(fb)
+                        if pool: break
 
-                # 4. Last resort: live API (only if cache is completely empty)
-                if not img:
+                if pool:
+                    # hash(slug) → unique photo per article, stable across re-runs
+                    idx = abs(hash(slug)) % len(pool)
+                    img = pool[idx]
+                else:
+                    # 4. Last resort: live API only if pool is empty
                     img = find_image(q, SAFE_FALLBACK_QUERIES[:2])
-                    if img:
-                        image_cache[q] = img
 
                 if img:
                     cover_src = img["src"]

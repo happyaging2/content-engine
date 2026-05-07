@@ -490,7 +490,10 @@ def fetch_products_for_linking():
                     ([" ".join(words[:2])] if len(words) >= 2 else []) +
                     [w for w in words if len(w) >= 4]))
                 if kws:
-                    linking.append({"handle": h, "title": p.get("title",""), "keywords": kws})
+                    linking.append({
+                        "handle": h, "title": p.get("title",""), "keywords": kws,
+                        "img_url": (p["images"][0]["src"] if p.get("images") else ""),
+                    })
             time.sleep(0.2)
         except Exception:
             break
@@ -563,25 +566,43 @@ def inject_product_cta(html, products, prices, article_title):
                     best_prod = prod; break
             if best_prod: break
     if not best_prod: return html
-    handle   = best_prod["handle"]
-    prod_url = f"https://happyaging.com/products/{handle}"
-    price    = prices.get(handle, "")
+    handle    = best_prod["handle"]
+    prod_url  = f"https://happyaging.com/products/{handle}"
+    price     = prices.get(handle, "")
+    img_url   = best_prod.get("img_url", "")
     short_name = re.sub(r'\b\d+\s*(?:mg|mcg|g|iu|ml|caps?|tablets?|count)\b',
                         '', best_prod["title"], flags=re.I).strip()
     price_line = f" — from ${price}/month" if price else ""
+    _skip = {"why","how","what","when","is","are","the","a","an","for","and","or",
+             "of","to","in","on","at","after","40","over","women","woman","your",
+             "you","do","does","can","will","with","its","this","that","these"}
+    topic_words = [w.strip("?,.:;!'\"") for w in article_title.split()
+                   if w.lower().strip("?,.:;!'\"") not in _skip
+                   and len(w.strip("?,.:;!'\"")) > 3]
+    topic = " ".join(topic_words[:3]).lower() if topic_words else "healthy aging"
+    intro = (f"If you're looking to support {topic}, "
+             f"this science-backed formula was developed specifically for women over 40.")
+    img_block = (f'<img src="{img_url}" alt="{short_name}" '
+                 'style="width:100px;height:100px;object-fit:contain;'
+                 'border-radius:8px;background:#fff;flex-shrink:0">\n'
+                 if img_url else "")
     cta = (
         '\n<div class="article-product-cta" '
         'style="background:#FDF8F3;border:2px solid #E8D5B7;border-radius:16px;'
-        'padding:28px 32px;margin:48px 0;text-align:center">\n'
+        'padding:24px 28px;margin:48px 0">\n'
         '<p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;'
-        'color:#8B7355;font-weight:700;margin:0 0 8px">Recommended by Happy Aging</p>\n'
-        f'<h3 style="font-size:22px;color:#2D2D2D;font-weight:700;margin:0 0 12px">'
+        'color:#8B7355;font-weight:700;margin:0 0 16px">Recommended by Happy Aging</p>\n'
+        '<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">\n'
+        + img_block +
+        '<div style="flex:1;min-width:180px">\n'
+        f'<h3 style="font-size:19px;color:#2D2D2D;font-weight:700;margin:0 0 6px">'
         f'{short_name}</h3>\n'
-        '<p style="color:#6B6B6B;font-size:15px;margin:0 0 22px;line-height:1.6">'
-        'Science-backed formula designed for women over 40.</p>\n'
+        f'<p style="color:#5A5A5A;font-size:14px;margin:0 0 14px;line-height:1.55">'
+        f'{intro}</p>\n'
         f'<a href="{prod_url}" style="display:inline-block;background:#8B7355;color:#fff;'
-        'padding:13px 36px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px">'
-        f'Try {short_name}{price_line} →</a>\n</div>\n'
+        'padding:11px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px">'
+        f'Try {short_name}{price_line} →</a>\n'
+        '</div>\n</div>\n</div>\n'
     )
     new_html = re.sub(r'(<h2[^>]*>\s*(?:Frequently Asked Questions|FAQ)\s*</h2>)',
                       cta + r'\1', html, count=1, flags=re.I)
@@ -639,6 +660,7 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
     body = re.sub(r'<figcaption[^>]*>.*?</figcaption>', '', body, flags=re.DOTALL)
     body = re.sub(r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
                   '\n', body, flags=re.DOTALL)
+    body = re.sub(r'\[BODY_IMAGE_\d+\]', '', body)
     body = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', body)
 
     # Insert section-relevant images
