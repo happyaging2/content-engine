@@ -465,15 +465,43 @@ def inject_section_images(html, article_title, body_image_queries=None,
     return html
 
 
-# ── Product price helpers ─────────────────────────────────────────────────────
+# ── Product helpers ───────────────────────────────────────────────────────────
 
-def fetch_product_prices():
-    """Fetch real prices from the Shopify storefront for all products.
+_PRODUCT_STOPWORDS = {
+    "happy", "aging", "supplement", "formula", "complex", "blend", "advanced",
+    "ultra", "daily", "plus", "pro", "extra", "strength", "boost", "pure",
+    "natural", "organic", "the", "for", "women", "woman", "men", "support",
+    "with", "and", "our", "new",
+}
 
-    Returns {handle: "XX.XX"} using the lowest variant price, which is
-    typically the subscription price on stores using Recharge.
+
+def _extract_product_keywords(title):
+    """Return matchable keyword phrases from a product title (longest first)."""
+    cleaned = re.sub(r'\b\d+\s*(?:mg|mcg|g|iu|ml|oz|caps?|tablets?|count)\b',
+                     '', title, flags=re.I)
+    cleaned = re.sub(r'[^\w\s-]', ' ', cleaned)
+    words = [w.strip('-') for w in cleaned.split()
+             if w.lower().strip('-') not in _PRODUCT_STOPWORDS
+             and len(w.strip('-')) > 2]
+    if not words:
+        return []
+    kws = []
+    if len(words) >= 2:
+        kws.append(" ".join(words[:2]))
+    for w in sorted(words, key=len, reverse=True):
+        if len(w) >= 4:
+            kws.append(w)
+    return list(dict.fromkeys(kws))
+
+
+def fetch_products():
+    """Fetch all store products; return (prices_dict, linking_list).
+
+    prices_dict: {handle: "XX"} (lowest variant price)
+    linking_list: [{handle, title, keywords}] for contextual article links
     """
     prices = {}
+    linking = []
     page = 1
     while True:
         try:
@@ -487,16 +515,98 @@ def fetch_product_prices():
                 variants = p.get("variants", [])
                 if variants:
                     min_price = min(float(v["price"]) for v in variants)
-                    # Format: "49" not "49.00" when whole number
                     prices[handle] = (
                         str(int(min_price)) if min_price == int(min_price)
                         else f"{min_price:.2f}"
                     )
+                kws = _extract_product_keywords(p.get("title", ""))
+                if kws:
+                    linking.append({"handle": handle,
+                                    "title": p.get("title", ""),
+                                    "keywords": kws})
             page += 1
             time.sleep(0.3)
         except Exception:
             break
-    return prices
+    return prices, linking
+
+
+def _inject_link_in_para(para_html, kw, url):
+    """Inject one `<a>` for kw into para_html; respects existing link nesting."""
+    kw_re = re.compile(r'\b' + re.escape(kw) + r'\b', re.I)
+    result = []
+    i = 0
+    in_link = False
+    done = False
+    while i < len(para_html):
+        if para_html[i] == '<':
+            j = para_html.find('>', i)
+            if j < 0:
+                result.append(para_html[i:]); break
+            tag = para_html[i:j + 1]
+            if re.match(r'<a\b', tag, re.I):
+                in_link = True
+            elif re.match(r'</a', tag, re.I):
+                in_link = False
+            result.append(tag)
+            i = j + 1
+        else:
+            j = para_html.find('<', i)
+            if j < 0:
+                j = len(para_html)
+            text = para_html[i:j]
+            if not done and not in_link:
+                m = kw_re.search(text)
+                if m:
+                    s, e = m.start(), m.end()
+                    text = (text[:s]
+                            + f'<a href="{url}" style="color:#8B7355;font-weight:600">'
+                            + text[s:e] + '</a>'
+                            + text[e:])
+                    done = True
+            result.append(text)
+            i = j
+    return "".join(result), done
+
+
+def inject_product_links(html, products, max_links=2):
+    """Inject up to max_links contextual product links into article paragraphs.
+
+    - Skips first 2 paragraphs (intro/hook)
+    - Skips text already inside an existing <a> tag
+    - Idempotent: won't double-link the same product URL
+    - Targets first natural occurrence of each product keyword
+    """
+    if not products:
+        return html
+    injected = 0
+    for prod in products:
+        if injected >= max_links:
+            break
+        prod_url = f"https://happyaging.com/products/{prod['handle']}"
+        found = False
+        for kw in prod["keywords"]:
+            if found or injected >= max_links:
+                break
+            if len(kw) < 3:
+                continue
+            # Re-parse after each injection so offsets stay valid
+            paras = list(re.finditer(r'<p\b[^>]*>.*?</p>', html, re.DOTALL))
+            for pm in paras[2:]:
+                para = pm.group(0)
+                if prod_url in para:   # already linked this product
+                    found = True; break
+                # Quick text-only check (avoids tag noise)
+                text = re.sub(r'<[^>]+>', '', para)
+                if not re.search(r'\b' + re.escape(kw) + r'\b', text, re.I):
+                    continue
+                new_para, did_inject = _inject_link_in_para(para, kw, prod_url)
+                if did_inject:
+                    html = html[:pm.start()] + new_para + html[pm.end():]
+                    injected += 1
+                    found = True
+                    break
+    return html
 
 
 def fix_product_card_prices(body, prices):
@@ -608,13 +718,15 @@ def main():
     existing = shopify_get_articles()
     print(f"  {len(existing)} articles on Shopify.")
 
-    print("[2/4] Fetching real product prices from store...")
-    prices = fetch_product_prices()
+    print("[2/4] Fetching products (prices + linking)...")
+    prices, products_for_linking = fetch_products()
     if prices:
-        print(f"  {len(prices)} products found: " +
+        print(f"  {len(prices)} products — prices: " +
               ", ".join(f"{h}=${p}" for h, p in sorted(prices.items())))
     else:
         print("  WARNING: could not fetch product prices — prices will not be updated.")
+    if products_for_linking:
+        print(f"  {len(products_for_linking)} products available for contextual linking.")
     print()
 
     # Build slug → meta.json lookup from local files
@@ -649,7 +761,7 @@ def main():
 
     print(f"[4/4] Processing all {len(existing)} Shopify articles...\n")
 
-    ok = failed = schema_added = meta_set = img_updated = cover_updated = 0
+    ok = failed = schema_added = meta_set = img_updated = cover_updated = links_added = 0
 
     for slug, info in existing.items():
         art_id = info["id"]
@@ -684,19 +796,26 @@ def main():
         if prices:
             body = fix_product_card_prices(body, prices)
 
-        # 2. Meta description (needed by article schema below)
+        # 2. Contextual product links (1-2 per article, subtle inline links)
+        if products_for_linking:
+            body_before = body
+            body = inject_product_links(body, products_for_linking)
+            if body != body_before:
+                links_added += 1
+
+        # 3. Meta description (needed by article schema below)
         meta_desc = extract_meta_description(body)
 
-        # 3. FAQ Schema
+        # 4. FAQ Schema
         pairs = extract_faq_pairs(body)
         if pairs:
             body = inject_faq_schema(body, pairs)
             schema_added += 1
 
-        # 4. BlogPosting + Speakable schema
+        # 5. BlogPosting + Speakable schema
         body = inject_article_schema(body, title, slug, meta_desc)
 
-        # 5. Section images + cover
+        # 6. Section images + cover
         cover_src = cover_alt = None
         if not SCHEMA_ONLY:
             print(f"  {slug[:55]} [{source}]")
@@ -751,6 +870,7 @@ def main():
     print(f"\n[Done]")
     print(f"  FAQ schema injected:     {schema_added}")
     print(f"  Meta descriptions set:   {meta_set}")
+    print(f"  Product links injected:  {links_added} articles")
     print(f"  Section images updated:  {img_updated}")
     print(f"  Cover images updated:    {cover_updated}")
     print(f"  Shopify updates:         {ok} OK, {failed} failed")
