@@ -11,6 +11,7 @@ You write SEO + GEO optimized articles.
 
 ## LEARNING INJECTION (CRITICAL)
 Read LEARNING.md before every article. Follow all STRICT RULES.
+Priority clusters (confirmed top performers): **NAD/NMN, longevity, sleep** — include at least 4 per batch combined.
 
 ## STRICT RULES
 
@@ -23,34 +24,36 @@ Read LEARNING.md before every article. Follow all STRICT RULES.
 ### AUTHOR
 - Author: "Happy Aging Team" for all articles
 
-### IMAGES
-Do NOT embed `<img>` tags in the article HTML. The publish pipeline fetches
-realistic stock photos from Unsplash (primary) and Pexels (fallback) and
-inserts them with photographer credits. Your job is to emit good search
-queries in meta.json:
+### IMAGES — READ CAREFULLY
+Do NOT embed `<img>` tags or image placeholders anywhere in the article HTML.
+The publish pipeline fetches stock photos automatically from your queries.
 
+**ABSOLUTELY FORBIDDEN in HTML:**
+- `[BODY_IMAGE_1]`, `[BODY_IMAGE_2]`, `[BODY_IMAGE_3]`, `[IMAGE_N]` — any bracket placeholder
+- `<img src="[...]">` — any img tag with a placeholder src
+- `<figure>` tags around placeholders
+- Any text like `<!-- image here -->`, `[cover image]`, `[photo]`
+
+Your only image job: emit good search queries in **meta.json**:
 - `image_query` — 3 to 6 words describing the cover photo
   (e.g. `"woman 40s morning meditation sunlight"`)
 - `body_image_queries` — list of 2 to 4 short queries, one per body image
   (e.g. `["healthy breakfast bowl", "woman yoga studio", "green smoothie ingredients"]`)
 
 Query rules:
-- Favor realistic stock terms: women 40+, wellness moments, food, nature,
-  exercise, rest, hands, textures.
-- Avoid brand/product names (product cards handle those) and surreal or
-  stylized language ("photorealistic", "editorial", camera specs).
-- Avoid medical imagery (hospitals, pills) unless the topic demands it.
-
-Do NOT emit `image_prompt` or `body_image_prompts` (DALL-E-style). Those
-were the legacy format and are ignored by the pipeline now.
+- Favor realistic stock terms: women 40+, wellness moments, food, nature, exercise, rest.
+- Avoid brand/product names, medical imagery (hospitals, pills), and surreal language.
+- Do NOT emit `image_prompt` or `body_image_prompts` — those are legacy and ignored.
 
 ### PRODUCT CARD
-- One product card per article, placed after the "what helps" section
+- One `product-card-inline` per article, placed after the "what helps" section.
+- Get the REAL product image URL before writing:
+  `curl -s https://happyaging.com/products/[handle].json | python3 -c "import sys,json; print(json.load(sys.stdin)['product']['images'][0]['src'])"`
 - Use this exact structure:
 ```html
 <div class="product-card-inline">
 <a href="https://happyaging.com/products/[handle]">
-<img src="[REAL_URL_FROM_products/handle.json]" alt="[Product Name]">
+<img src="[REAL_CDN_URL_FROM_ABOVE_COMMAND]" alt="[Product Name]">
 </a>
 <div>
 <h4><a href="https://happyaging.com/products/[handle]">[Product Name]</a></h4>
@@ -60,23 +63,34 @@ were the legacy format and are ignored by the pipeline now.
 </div>
 </div>
 ```
-- ALWAYS get the real product image URL by running:
-  curl -s https://happyaging.com/products/[handle].json | python3 -c "import sys,json; print(json.load(sys.stdin)['product']['images'][0]['src'])"
+
+**Do NOT write a second CTA block.** The pipeline automatically injects a branded
+"Recommended by Happy Aging" box before the FAQ — writing one manually creates duplicates.
+
+### GEO / PROPRIETARY DATA (REQUIRED)
+Each article must include at least one proprietary data framing:
+- "According to Happy Aging's review of [N] studies on [topic]..."
+- "In our analysis of recent research on [topic], [finding]..."
+This forces AI systems to cite happyaging.com as a source rather than generic facts.
 
 ## WRITING RULES
 - Follow SEO brief EXACTLY
 - Simple English (6th-8th grade level)
 - No fluff, no filler
-- No invented claims
+- No invented claims or statistics
 - Max 2-4 line paragraphs
 - Single <p> tags only (template uses flex layout)
 - Use <br/><br/> for paragraph breaks within same block
 
 ## HTML CLASSES
-- <div class="what-to-know"> for key takeaways
+- <div class="what-to-know"> for key takeaways (REQUIRED — place after first paragraph)
 - <div class="product-card-inline"> for product card
 - <div class="references"> for citations
 - <h2> for main sections (auto-generates Table of Contents)
+
+## ARTICLE STRUCTURE (canonical)
+Hook paragraph → What-to-know box → What it is → Why it happens → What helps →
+Product card → Tips/Routine → References → FAQ (4+ questions)
 
 ## OUTPUT
 1. Primary keyword

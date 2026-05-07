@@ -49,28 +49,36 @@ Cron: `0 8 * * * bash ~/Desktop/content-engine/scripts/daily-publish.sh`
 ### Images
 Article cover and body images are fetched from **Pexels** (primary) with
 **Unsplash** as fallback. The writer emits `image_query` and
-`body_image_queries` in each `*.meta.json`.
+`body_image_queries` in each `*.meta.json`. The writer must NOT write `<img>` tags
+or any `[BODY_IMAGE_N]` placeholders in the article HTML — the pipeline handles all images.
+
+**Image variety strategy (patch-seo.py + qa-and-publish.sh):**
+- Pre-fetch phase builds `image_pool`: ~25 queries × up to 20 photos each = ~500 unique photos
+- Covers: `pool[abs(hash(slug)) % len(pool)]` — unique per article, stable on re-runs
+- Body images: `pool[abs(hash(slug + section_index)) % len(pool)]` — unique per article per section
+- No duplicate covers or body images across articles
 
 **Image safety rules (enforced in both scripts):**
 - Queries must use lifestyle / food / activity language only — NO "supplement", "bottle", "product", "vitamin", "pill"
-- `BLOCKED_TERMS`: rejects any alt text containing product/bottle/medical/explicit/off-brand terms
+- `BLOCKED_TERMS`: rejects alt text with product/bottle/medical/explicit/off-brand phrases (multi-word only)
 - `COMPETITOR_BRANDS`: rejects OSH Wellness, Missha, VigorVault, Thorne, Jarrow, GNC, and 20+ others
-- `TOPIC_QUERIES` map in `articles/update-images.py`: slug keyword → 2 curated lifestyle queries
+- `TOPIC_VISUAL_CONTEXT`: maps supplement/medical keywords to safe lifestyle visual queries
 - To re-fetch all images (e.g. after brand safety incident): clear `resolved_cover`/`resolved_body` from `*.meta.json`, then re-run `update-images.py`
 
 **Acceptable imagery:** woman in nature, cooking, yoga, reading, portrait, walking, eating healthy food.  
 **Never use:** supplement bottles, product shots, hands holding anything, medical/clinical settings, tattoos, book covers.
 
 ### What qa-and-publish.sh injects at publish time (Step 4)
+- **`[BODY_IMAGE_N]` strip** — removes all placeholder text/tags in any format before injecting real images
+- **Section images** — one per H2 section (skips first + FAQ/References); unique per article via slug hash
+- **Contextual product links** — 1-2 inline `<a>` links per article, color `#8B7355`, matched by keyword to relevant Happy Aging product; skips intro paragraphs and existing links; idempotent
+- **Product CTA block** — `article-product-cta` div before FAQ; flex layout with product image (CDN), contextual intro sentence derived from article title, real price, buy button; idempotent
 - **FAQ JSON-LD schema** — FAQPage structured data before FAQ H2
 - **Meta description** — first paragraph, ≤155 chars, saved to `meta.json` → `summary_html`
-- **Section images** — one per H2 section (skips first + FAQ/References), derived from H2 text
-- **Contextual product links** — 1-2 inline `<a>` links per article, color `#8B7355`, matched by keyword to relevant Happy Aging product; skips intro paragraphs and existing links; idempotent
-- **Product CTA block** — branded box (`article-product-cta` class) injected before the FAQ section; picks best-matching product by title keyword overlap, shows real price + "Try X → " button; idempotent
 
 ### Pexels API — important
 - Must send `User-Agent` browser header or Cloudflare returns 403 (error 1010)
-- Free tier: 200 req/hour. Use pre-populated image cache for covers; live API only as last resort
+- Free tier: 200 req/hour. Image pool is pre-fetched (~25 API calls total); article loop uses zero live calls
 - `TOPIC_VISUAL_CONTEXT` dict maps supplement/medical keywords to safe lifestyle visual queries
 
 ### One-time fixes for already-published articles
@@ -101,5 +109,10 @@ curl -X POST "https://${SHOPIFY_STORE}/admin/api/2024-01/blogs/${BLOG_ID}/articl
 - No invented statistics
 - Max 20 articles per batch
 - Template suffix: `timeline`
+- Author: `Happy Aging Team` (not Dr. Daniel Yadegar)
 - Brand is **premium** — images must reflect that (no product bottles, no tattoos, no book covers, no competitor brands)
-- Content writer must use `image_query` + `body_image_queries` (NOT `image_prompt` / DALL-E prompts)
+- Writer emits `image_query` + `body_image_queries` in meta.json — NOT `image_prompt` / DALL-E prompts
+- Writer must NOT write `<img>` tags or `[BODY_IMAGE_N]` placeholders in article HTML
+- Writer must NOT write a `article-product-cta` block — the pipeline injects it automatically
+- Each article must include at least one "According to Happy Aging's review of..." proprietary data framing
+- Priority clusters every batch: NAD/NMN + longevity + sleep = minimum 4 articles combined
