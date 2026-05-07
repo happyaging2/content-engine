@@ -40,8 +40,8 @@ Published via Shopify Admin API (REST). Prefer the script over raw curl:
 cd /path/to/content-engine && bash scripts/qa-and-publish.sh [YYYY-MM-DD]
 ```
 
-Required env vars: `SHOPIFY_TOKEN`. Optional: `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`.
-Pexels is now **primary** for images (User-Agent fix applied); Unsplash is fallback.
+Required env vars: `SHOPIFY_TOKEN`. Optional: `PEXELS_API_KEY`, `PIXABAY_API_KEY`, `UNSPLASH_ACCESS_KEY`.
+Pexels is **primary**; Pixabay (free, no attribution) is secondary; Unsplash is fallback.
 
 For daily automation: `scripts/daily-publish.sh` (cron-ready, lock file, logging).
 Cron: `0 8 * * * bash ~/Desktop/content-engine/scripts/daily-publish.sh`
@@ -53,10 +53,11 @@ Article cover and body images are fetched from **Pexels** (primary) with
 or any `[BODY_IMAGE_N]` placeholders in the article HTML — the pipeline handles all images.
 
 **Image variety strategy (patch-seo.py + qa-and-publish.sh):**
-- Pre-fetch phase builds `image_pool`: ~25 queries × up to 20 photos each = ~500 unique photos
+- Pre-fetch phase builds `image_pool`: per-article title queries + TOPIC_VISUAL_CONTEXT
+- Pexels: `per_page=80` → up to 60 safe photos per query; Pixabay adds up to 30 more = 90 per query
 - Covers: `pool[abs(hash(slug)) % len(pool)]` — unique per article, stable on re-runs
 - Body images: `pool[abs(hash(slug + section_index)) % len(pool)]` — unique per article per section
-- No duplicate covers or body images across articles
+- Each article gets its own title-derived cover query → nearly zero duplicate covers
 
 **Image safety rules (enforced in both scripts):**
 - Queries must use lifestyle / food / activity language only — NO "supplement", "bottle", "product", "vitamin", "pill"
@@ -76,15 +77,17 @@ or any `[BODY_IMAGE_N]` placeholders in the article HTML — the pipeline handle
 - **FAQ JSON-LD schema** — FAQPage structured data before FAQ H2
 - **Meta description** — first paragraph, ≤155 chars, saved to `meta.json` → `summary_html`
 
-### Pexels API — important
-- Must send `User-Agent` browser header or Cloudflare returns 403 (error 1010)
-- Free tier: 200 req/hour. Image pool is pre-fetched (~25 API calls total); article loop uses zero live calls
-- `TOPIC_VISUAL_CONTEXT` dict maps supplement/medical keywords to safe lifestyle visual queries
+### Image APIs — important
+- **Pexels**: must send `User-Agent` browser header (Cloudflare 403 without it). Free tier: 200 req/hour. Uses `per_page=80` to maximize variety per call.
+- **Pixabay**: free API, no attribution required, 200 req/hour. Used as supplemental source to reach ~90 photos/query.
+- **Unsplash**: fallback only (50 req/hour free tier).
+- Image pool pre-fetched before article loop; article loop uses zero live calls.
+- `TOPIC_VISUAL_CONTEXT` dict maps supplement/medical keywords to safe lifestyle visual queries (50+ entries).
 
 ### One-time fixes for already-published articles
 ```bash
 # Fix SEO + images + product links + CTA on ALL published articles (511+):
-SHOPIFY_TOKEN=... PEXELS_API_KEY=... python3 articles/patch-seo.py
+SHOPIFY_TOKEN=... PEXELS_API_KEY=... PIXABAY_API_KEY=... python3 articles/patch-seo.py
 
 # Inject Blog/ItemList/BreadcrumbList schema on blog listing page:
 SHOPIFY_TOKEN=... python3 articles/patch-blog-schema.py
@@ -116,3 +119,11 @@ curl -X POST "https://${SHOPIFY_STORE}/admin/api/2024-01/blogs/${BLOG_ID}/articl
 - Writer must NOT write a `article-product-cta` block — the pipeline injects it automatically
 - Each article must include at least one "According to Happy Aging's review of..." proprietary data framing
 - Priority clusters every batch: NAD/NMN + longevity + sleep = minimum 4 articles combined
+
+## Writing Language Rules (CRITICAL)
+- **Simple language**: 6th-8th grade reading level. Our persona is a busy woman over 40 — she wants clear, practical answers, not a medical journal.
+- **No invented or estimated data**: NEVER cite statistics, percentages, or study findings unless they come from a real, verifiable source (PubMed PMID or DOI). If a number can't be verified, remove it.
+- **No unreliable sources**: Do not use non-peer-reviewed blogs, news sites, press releases, or manufacturer claims as data sources. Only peer-reviewed studies.
+- **Avoid jargon**: Replace technical terms with plain equivalents whenever possible. If a technical term must be used, explain it in the same sentence.
+- **No condescending tone**: Write like a knowledgeable friend, not a doctor lecturing. Warm, direct, and encouraging.
+- **Product linkage**: Every article must naturally lead to a Happy Aging product recommendation. The CTA intro connects the article topic to the specific product benefit (injected by the pipeline).
