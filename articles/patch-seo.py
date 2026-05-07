@@ -22,6 +22,7 @@ PEXELS_KEY    = os.environ.get("PEXELS_API_KEY", "").strip()
 UNSPLASH_KEY  = os.environ.get("UNSPLASH_ACCESS_KEY", "").strip()
 PIXABAY_KEY   = os.environ.get("PIXABAY_API_KEY", "").strip()
 SCHEMA_ONLY   = "--schema-only" in sys.argv
+FORCE_COVERS  = "--force-covers" in sys.argv   # replace covers even if one already exists
 
 if not SHOPIFY_TOKEN:
     raise SystemExit("ERROR: Set SHOPIFY_TOKEN")
@@ -922,6 +923,8 @@ def shopify_update(article_id, body_html, summary_html, cover_src=None, cover_al
 
 def main():
     mode = "schema + meta only" if SCHEMA_ONLY else "schema + meta + section images + cover"
+    if FORCE_COVERS and not SCHEMA_ONLY:
+        mode += " (FORCE-COVERS: replacing all existing covers)"
     print(f"=== patch-seo.py [{mode}] ===\n")
 
     # Quick connectivity test — 1 Pexels call, print raw result
@@ -1104,8 +1107,9 @@ def main():
             img_updated += 1
 
             # Cover image: use per-article title-derived query for maximum variety.
+            # --force-covers replaces covers even if one already exists (fixes repeated covers).
             cover_src = cover_alt = None
-            if not existing_cover:
+            if not existing_cover or FORCE_COVERS:
                 # Per-article query: pre-computed from article title (or meta image_query)
                 q = meta.get("image_query") or title_cover_queries.get(slug) or h2_to_query(title, title)
                 title_lower = title.lower()
