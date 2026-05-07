@@ -45,14 +45,23 @@ If weak → rewrite title. Keep meta description ≤155 chars.
 - [ ] FAQ answers use plain language (no jargon, no metaphors)
 - [ ] Quotable standalone sentences present (can be cited without context)
 
+### LANGUAGE QUALITY GATE
+- [ ] Reading level is 6th-8th grade — no medical jargon without plain explanation
+- [ ] No invented or estimated statistics (must cite PMID or DOI for any numbers)
+- [ ] No data from unreliable sources (blogs, press releases, manufacturer claims)
+- [ ] Tone is warm and practical, like a knowledgeable friend — not clinical
+- [ ] Technical terms are always explained immediately in plain language
+
 ### FORBIDDEN
 - ALL CAPS headings
 - Fluff / filler sentences
 - Keyword stuffing
-- Invented statistics or data not sourced to a real study
+- Invented statistics or data not sourced to a real peer-reviewed study
+- Data from non-peer-reviewed sources (blogs, news, manufacturer claims)
 - Long dense paragraphs (>6 lines)
 - Multiple product CTA blocks (pipeline injects one automatically — writer adds only `product-card-inline`)
 - Em dashes or en dashes
+- Medical jargon without plain-English explanation
 
 ## OUTPUT
 1. Issues found (list each, with line/section)

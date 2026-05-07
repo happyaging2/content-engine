@@ -78,8 +78,10 @@ import json, urllib.request, urllib.parse, glob, os, time
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 pexels_key = os.environ.get("PEXELS_API_KEY", "")
 
-if not unsplash_key and not pexels_key:
-    print("  ERR: set UNSPLASH_ACCESS_KEY and/or PEXELS_API_KEY"); raise SystemExit(1)
+pixabay_key = os.environ.get("PIXABAY_API_KEY", "")
+
+if not unsplash_key and not pexels_key and not pixabay_key:
+    print("  ERR: set UNSPLASH_ACCESS_KEY and/or PEXELS_API_KEY and/or PIXABAY_API_KEY"); raise SystemExit(1)
 
 UTM = "?utm_source=happy_aging&utm_medium=referral"
 
@@ -175,10 +177,30 @@ def pexels_search(query):
     except Exception as e:
         print(f"    pexels fail '{query[:30]}': {str(e)[:50]}"); return None
 
+def pixabay_search(query):
+    if not pixabay_key: return None
+    try:
+        url = "https://pixabay.com/api/?" + urllib.parse.urlencode({
+            "key": pixabay_key, "q": query, "image_type": "photo",
+            "orientation": "horizontal", "per_page": 20, "safesearch": "true"})
+        data = json.loads(urllib.request.urlopen(url, timeout=15).read())
+        hits = [h for h in (data.get("hits") or [])
+                if is_safe((h.get("tags") or "") + " " + (h.get("user") or ""))
+                and (h.get("largeImageURL") or h.get("webformatURL"))]
+        if not hits: return None
+        h = hits[0]
+        return {"src": h.get("largeImageURL") or h["webformatURL"],
+                "alt": (h.get("tags","").split(",")[0].strip() or query)[:120],
+                "credit_name": h.get("user","Pixabay"),
+                "credit_url": "https://pixabay.com/",
+                "provider": "Pixabay", "provider_url": "https://pixabay.com/"}
+    except Exception as e:
+        print(f"    pixabay fail '{query[:30]}': {str(e)[:50]}"); return None
+
 def find_image(query, fallback):
-    img = unsplash_search(query) or pexels_search(query)
+    img = pexels_search(query) or pixabay_search(query) or unsplash_search(query)
     if not img and fallback and fallback != query:
-        img = unsplash_search(fallback) or pexels_search(fallback)
+        img = pexels_search(fallback) or pixabay_search(fallback) or unsplash_search(fallback)
     return img
 
 def fallback_query(meta):
@@ -319,6 +341,7 @@ import json, glob, os, re, time, urllib.request, urllib.parse, urllib.error
 
 pexels_key   = os.environ.get("PEXELS_API_KEY", "")
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+pixabay_key  = os.environ.get("PIXABAY_API_KEY", "")
 
 BLOCKED_TERMS = {
     # Explicit / nudity
@@ -438,11 +461,27 @@ def unsplash_search(query):
         return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120]}
     except Exception: return None
 
+def pixabay_search_step4(query):
+    if not pixabay_key: return None
+    try:
+        url = "https://pixabay.com/api/?" + urllib.parse.urlencode({
+            "key": pixabay_key, "q": query, "image_type": "photo",
+            "orientation": "horizontal", "per_page": 20, "safesearch": "true"})
+        data = json.loads(urllib.request.urlopen(url, timeout=15).read())
+        hits = [h for h in (data.get("hits") or [])
+                if _safe((h.get("tags") or "") + " " + (h.get("user") or ""))
+                and (h.get("largeImageURL") or h.get("webformatURL"))]
+        if not hits: return None
+        h = hits[0]
+        return {"src": h.get("largeImageURL") or h["webformatURL"],
+                "alt": (h.get("tags","").split(",")[0].strip() or query)[:120]}
+    except Exception: return None
+
 def find_image(query, fallbacks=None):
-    img = pexels_search(query) or unsplash_search(query)
+    img = pexels_search(query) or pixabay_search_step4(query) or unsplash_search(query)
     if not img and fallbacks:
         for fb in fallbacks:
-            img = pexels_search(fb) or unsplash_search(fb)
+            img = pexels_search(fb) or pixabay_search_step4(fb) or unsplash_search(fb)
             if img: break
     time.sleep(1.2)
     return img
@@ -580,8 +619,14 @@ def inject_product_cta(html, products, prices, article_title):
                    if w.lower().strip("?,.:;!'\"") not in _skip
                    and len(w.strip("?,.:;!'\"")) > 3]
     topic = " ".join(topic_words[:3]).lower() if topic_words else "healthy aging"
-    intro = (f"If you're looking to support {topic}, "
-             f"this science-backed formula was developed specifically for women over 40.")
+    matching_kw = next(
+        (kw for kw in best_prod["keywords"]
+         if re.search(r'\b' + re.escape(kw) + r'\b', title_lower, re.I)
+         and len(kw) >= 4),
+        topic
+    )
+    intro = (f"Many women over 40 reading about {matching_kw} find that adding "
+             f"{short_name} to their daily routine makes a real difference.")
     img_block = (f'<img src="{img_url}" alt="{short_name}" '
                  'style="width:100px;height:100px;object-fit:contain;'
                  'border-radius:8px;background:#fff;flex-shrink:0">\n'
@@ -656,12 +701,13 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
 
     body = open(html_file).read()
 
-    # Remove legacy figcaptions, old stock images, and [BODY_IMAGE_N] placeholders
+    # Remove legacy figcaptions, old stock images, and [BODY_IMAGE_N] placeholders (all formats)
     body = re.sub(r'<figcaption[^>]*>.*?</figcaption>', '', body, flags=re.DOTALL)
     body = re.sub(r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
                   '\n', body, flags=re.DOTALL)
     body = re.sub(r'\[BODY_IMAGE_\d+\]', '', body)
     body = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', body)
+    body = re.sub(r'<figure[^>]*>\s*<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>\s*</figure>', '', body)
 
     # Insert section-relevant images
     skip_h2s = {"frequently asked questions", "references", "faq"}

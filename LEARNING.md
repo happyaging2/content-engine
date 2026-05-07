@@ -49,6 +49,10 @@ These are real numbers from the pipeline. Use them to guide every content decisi
 - Multiple CTAs or product links in one article — pick one hero product per article
 - Assumed CDN image paths — always verify product image URLs via products/[handle].json before publishing
 - Metabolism/multi-benefit articles with 3+ product links — always narrow to single CTA
+- **Scientific language that alienates the reader** — our persona is a busy woman over 40, not a researcher; write like a knowledgeable friend
+- **Invented or estimated statistics** — if you can't verify a number with a PMID or DOI, do not include it; made-up data destroys trust and credibility
+- **Unreliable data sources** — no blogs, press releases, news articles, or manufacturer claims; only peer-reviewed studies
+- Jargon without explanation — always follow a technical term with a plain-English definition in the same sentence
 
 ## BEST CLUSTERS (updated with measured performance data, May 2026)
 - **NAD/NMN** ⭐ CONFIRMED TOP PERFORMER — largest share of +282% organic growth; always 3-4/batch minimum

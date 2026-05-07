@@ -75,9 +75,12 @@ This forces AI systems to cite happyaging.com as a source rather than generic fa
 
 ## WRITING RULES
 - Follow SEO brief EXACTLY
-- Simple English (6th-8th grade level)
+- Simple English (6th-8th grade level) — our reader is a busy woman over 40, not a scientist
+- Write like a knowledgeable friend, not a doctor. Warm, direct, practical.
 - No fluff, no filler
-- No invented claims or statistics
+- **NEVER invent or estimate statistics.** Only cite numbers from real peer-reviewed studies with a PMID or DOI. If you can't verify it, leave it out entirely.
+- **NEVER use data from unreliable sources**: no blogs, news articles, press releases, or manufacturer claims.
+- Replace medical jargon with plain language. If you must use a technical term, explain it immediately in the same sentence.
 - Max 2-4 line paragraphs
 - Single <p> tags only (template uses flex layout)
 - Use <br/><br/> for paragraph breaks within same block

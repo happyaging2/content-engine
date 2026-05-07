@@ -20,11 +20,12 @@ ARTICLES_DIR  = os.path.dirname(os.path.abspath(__file__))
 SHOPIFY_TOKEN = os.environ.get("SHOPIFY_TOKEN", "").strip()
 PEXELS_KEY    = os.environ.get("PEXELS_API_KEY", "").strip()
 UNSPLASH_KEY  = os.environ.get("UNSPLASH_ACCESS_KEY", "").strip()
+PIXABAY_KEY   = os.environ.get("PIXABAY_API_KEY", "").strip()
 SCHEMA_ONLY   = "--schema-only" in sys.argv
 
 if not SHOPIFY_TOKEN:
     raise SystemExit("ERROR: Set SHOPIFY_TOKEN")
-if not SCHEMA_ONLY and not PEXELS_KEY and not UNSPLASH_KEY:
+if not SCHEMA_ONLY and not PEXELS_KEY and not UNSPLASH_KEY and not PIXABAY_KEY:
     print("WARNING: No image API keys set. Running in --schema-only mode.")
     SCHEMA_ONLY = True
 
@@ -191,38 +192,79 @@ COMPETITOR_BRANDS = {
 
 # Supplement/medical topic keywords → safe lifestyle visual context
 TOPIC_VISUAL_CONTEXT = {
-    "ampk": "exercise morning",
-    "autophagy": "meditating sunrise",
-    "sirtuin": "hiking nature",
-    "nad": "reading morning",
-    "nattokinase": "jogging park",
-    "collagen": "healthy portrait",
-    "retinol": "skincare routine",
-    "vitamin": "eating vegetables kitchen",
-    "omega": "salmon meal",
-    "magnesium": "relaxing evening",
-    "gut": "healthy meal kitchen",
-    "microbiome": "cooking vegetables",
-    "probiotic": "yogurt breakfast",
-    "butyrate": "farmers market",
-    "glucomannan": "healthy meal",
-    "protein": "gym workout",
-    "muscle": "strength training",
-    "sleep": "bedroom morning",
-    "menopausal": "hiking confident",
-    "menopause": "hiking nature",
-    "hormones": "yoga outdoor",
-    "cortisol": "meditation garden",
-    "dhea": "jogging park",
-    "iodine": "cooking seafood",
-    "thyroid": "walking outdoor",
-    "bone": "hiking outdoor",
-    "heart": "jogging outdoor",
-    "brain": "reading focused",
-    "skin": "glowing portrait",
-    "weight": "healthy eating",
-    "inflammation": "yoga meditation",
-    "antioxidant": "eating berries",
+    "ampk": "exercise morning energetic",
+    "autophagy": "meditating peaceful sunrise",
+    "sirtuin": "hiking nature trail",
+    "nad": "reading morning coffee",
+    "nmn": "morning routine energetic",
+    "nmn": "morning routine energetic",
+    "nattokinase": "jogging coastal park",
+    "collagen": "glowing skin portrait",
+    "retinol": "skincare morning ritual",
+    "vitamin": "eating colorful vegetables",
+    "omega": "salmon healthy meal",
+    "magnesium": "relaxing bath evening",
+    "gut": "healthy salad bowl",
+    "microbiome": "preparing vegetables colorful",
+    "probiotic": "yogurt bowl breakfast",
+    "butyrate": "farmers market vegetables",
+    "glucomannan": "balanced meal satisfied",
+    "protein": "gym workout active",
+    "muscle": "strength training confident",
+    "sleep": "peaceful bedroom sunrise",
+    "menopausal": "hiking confident nature",
+    "menopause": "hiking nature serene",
+    "hormones": "yoga outdoor calm",
+    "cortisol": "meditation garden breathing",
+    "dhea": "active outdoor lifestyle",
+    "iodine": "cooking seafood healthy",
+    "thyroid": "walking energetic outdoor",
+    "bone": "hiking outdoor strong",
+    "heart": "jogging outdoor healthy",
+    "brain": "reading focused calm",
+    "skin": "glowing portrait natural",
+    "weight": "healthy eating balanced",
+    "inflammation": "yoga stretching serene",
+    "antioxidant": "eating berries colorful",
+    "astaxanthin": "glowing skin outdoor portrait",
+    "quercetin": "eating colorful fruits",
+    "resveratrol": "walking vineyard healthy",
+    "coq10": "active lifestyle energetic",
+    "berberine": "healthy meal balanced",
+    "pterostilbene": "eating blueberries fresh",
+    "spermidine": "eating wheat germ healthy",
+    "fisetin": "eating strawberries fresh",
+    "lion": "focused writing outdoor cafe",
+    "ashwagandha": "yoga meditation calm",
+    "phosphatidylserine": "reading focused morning",
+    "lutein": "eating leafy greens",
+    "zeaxanthin": "eating colorful vegetables",
+    "zinc": "cooking colorful vegetables",
+    "iron": "energetic morning run",
+    "calcium": "yoga stretching outdoor",
+    "energy": "active woman morning energetic",
+    "fatigue": "resting peaceful nature",
+    "joint": "yoga gentle stretching",
+    "hair": "natural portrait confident smile",
+    "nail": "healthy hands natural",
+    "mood": "smiling woman nature happy",
+    "anxiety": "meditation calm garden breathing",
+    "focus": "reading focused cafe morning",
+    "memory": "reading books focused calm",
+    "libido": "couple walking beach sunset",
+    "fertility": "healthy woman nature serene",
+    "adrenal": "calm breathing yoga morning",
+    "insulin": "healthy meal vegetables",
+    "blood sugar": "healthy meal balanced",
+    "longevity": "active woman hiking nature",
+    "aging": "confident woman outdoor portrait",
+    "mitochondria": "morning run energetic",
+    "detox": "green smoothie healthy kitchen",
+    "liver": "healthy salad greens",
+    "kidney": "drinking water healthy",
+    "immune": "eating citrus fruit healthy",
+    "allergy": "walking outdoor spring",
+    "stress": "meditation yoga breathing calm",
 }
 
 # Safe fallback queries used when topic-specific search returns nothing.
@@ -318,8 +360,11 @@ def pexels_search(query):
     return None
 
 
-def pexels_search_many(query, max_results=20):
-    """Return a list of up to max_results safe photos — used to build the image pool."""
+def pexels_search_many(query, max_results=60):
+    """Return a list of up to max_results safe photos — used to build the image pool.
+
+    Uses per_page=80 (Pexels max) to get a large, varied pool in a single API call.
+    """
     if not PEXELS_KEY:
         return []
     headers = {
@@ -332,13 +377,39 @@ def pexels_search_many(query, max_results=20):
     }
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
-            {"query": query, "orientation": "landscape", "per_page": 30})
+            {"query": query, "orientation": "landscape", "per_page": 80})
         req = urllib.request.Request(url, headers=headers)
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         return [
             {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120]}
             for p in (data.get("photos") or [])
             if _safe_photo([p.get("alt") or "", p.get("photographer") or ""])
+        ][:max_results]
+    except Exception:
+        return []
+
+
+def pixabay_search_many(query, max_results=30):
+    """Return a list of up to max_results safe photos from Pixabay (free, no attribution)."""
+    if not PIXABAY_KEY:
+        return []
+    try:
+        url = "https://pixabay.com/api/?" + urllib.parse.urlencode({
+            "key": PIXABAY_KEY,
+            "q": query,
+            "image_type": "photo",
+            "orientation": "horizontal",
+            "per_page": 50,
+            "safesearch": "true",
+            "editors_choice": "false",
+        })
+        data = json.loads(urllib.request.urlopen(url, timeout=15).read())
+        return [
+            {"src": h.get("largeImageURL", h.get("webformatURL", "")),
+             "alt": (h.get("tags", query).split(",")[0].strip() or query)[:120]}
+            for h in (data.get("hits") or [])
+            if h.get("largeImageURL") or h.get("webformatURL")
+            if _safe_photo([h.get("tags", ""), h.get("user", "")])
         ][:max_results]
     except Exception:
         return []
@@ -434,14 +505,15 @@ def inject_section_images(html, article_title, slug="", body_image_queries=None,
     image_cache: legacy {query: single_img} — still checked as fallback.
     Skips articles that already have valid section images.
     """
-    # Skip if article already has injected figures (valid src URLs)
+    # Strip ALL [BODY_IMAGE_N] placeholders first — ALWAYS, even if article already has figures
+    html = re.sub(r'\[BODY_IMAGE_\d+\]', '', html)
+    html = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', html)
+    html = re.sub(r'<figure[^>]*>\s*<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>\s*</figure>', '', html)
+
+    # Skip injecting NEW figures if article already has valid ones
     if re.search(r'<figure class="article-stock-image"[^>]*>.*?<img[^>]+src="https?://', html,
                  re.DOTALL):
         return html
-
-    # Strip ALL [BODY_IMAGE_N] placeholders — any format (img tag, plain text, etc.)
-    html = re.sub(r'\[BODY_IMAGE_\d+\]', '', html)
-    html = re.sub(r'<img[^>]+src="\[BODY_IMAGE_\d+\]"[^>]*/?>', '', html)
 
     # Find all H2 positions (skip FAQ and References)
     skip_h2 = {"frequently asked questions", "references", "faq"}
@@ -706,7 +778,8 @@ def inject_product_cta(html, products, prices, article_title):
 
     price_line = f" — from ${price}/month" if price else ""
 
-    # Contextual intro sentence derived from article topic
+    # Contextual intro: ties article topic directly to product benefit
+    # Uses the best matching product keyword so the connection feels editorial, not generic.
     _skip = {"why","how","what","when","is","are","the","a","an","for","and","or",
              "of","to","in","on","at","after","40","over","women","woman","your",
              "you","do","does","can","will","with","its","this","that","these"}
@@ -714,8 +787,16 @@ def inject_product_cta(html, products, prices, article_title):
                    if w.lower().strip("?,.:;!'\"") not in _skip
                    and len(w.strip("?,.:;!'\"")) > 3]
     topic = " ".join(topic_words[:3]).lower() if topic_words else "healthy aging"
-    intro = (f"If you're looking to support {topic}, "
-             f"this science-backed formula was developed specifically for women over 40.")
+
+    # Find the product keyword that best matches the article title
+    matching_kw = next(
+        (kw for kw in best_prod["keywords"]
+         if re.search(r'\b' + re.escape(kw) + r'\b', title_lower, re.I)
+         and len(kw) >= 4),
+        topic
+    )
+    intro = (f"Many women over 40 reading about {matching_kw} find that adding "
+             f"{short_name} to their daily routine makes a real difference.")
 
     img_block = (
         f'<img src="{img_url}" alt="{short_name}" '
@@ -898,19 +979,42 @@ def main():
         if os.path.exists(html_f):
             local_html[slug] = html_f
 
-    # Pre-fetch image pool: ~25 queries × up to 20 photos each = ~500 unique photos.
+    # Pre-fetch image pool: topic queries + per-article cover queries.
+    # Pexels: up to 60 photos per query (per_page=80, filtered).
+    # Pixabay: up to 30 photos per query (free, no attribution).
     # Each article picks by hash(slug) so covers and body images are varied.
     image_pool  = {}   # {query: [img, img, ...]}
     image_cache = {}   # {query: img}  — first photo per query (legacy fallback)
-    if not SCHEMA_ONLY and (PEXELS_KEY or UNSPLASH_KEY):
-        print("[3/4] Pre-fetching image pool (up to 20 photos per topic)...")
+    if not SCHEMA_ONLY and (PEXELS_KEY or UNSPLASH_KEY or PIXABAY_KEY):
+        print("[3/4] Pre-fetching image pool (Pexels 60/query + Pixabay 30/query)...")
+
+        # Collect unique title-derived cover queries for ALL articles so each article
+        # has its own pool bucket rather than falling to shared SAFE_FALLBACK_QUERIES.
+        title_cover_queries = {}   # {slug: query}
+        for slug, info in existing.items():
+            t = info["title"]
+            meta = local_meta.get(slug, {})
+            q = meta.get("image_query") or h2_to_query(t, t)
+            title_cover_queries[slug] = q
+
         unique_queries = list(dict.fromkeys(
             ["woman " + v for v in TOPIC_VISUAL_CONTEXT.values()]
             + SAFE_FALLBACK_QUERIES
+            + list(title_cover_queries.values())
         ))
+
         for q in unique_queries:
-            photos = pexels_search_many(q)  # returns list of safe photos
-            if not photos:
+            photos: list = []
+            # Pexels (primary): up to 60 photos per query
+            if PEXELS_KEY:
+                photos = pexels_search_many(q, max_results=60)
+            # Pixabay (supplement): adds more variety, deduplicated by src
+            if PIXABAY_KEY:
+                pb_photos = pixabay_search_many(q, max_results=30)
+                existing_srcs = {p["src"] for p in photos}
+                photos += [p for p in pb_photos if p["src"] not in existing_srcs]
+            # Unsplash fallback only if both above empty
+            if not photos and UNSPLASH_KEY:
                 fb = unsplash_search(q)
                 if fb:
                     photos = [fb]
@@ -918,11 +1022,12 @@ def main():
                 image_pool[q]  = photos
                 image_cache[q] = photos[0]
                 print(f"  ✓ {q[:55]}  ({len(photos)} photos)")
-            time.sleep(0.8)
+            time.sleep(0.5)
         total_photos = sum(len(v) for v in image_pool.values())
         print(f"  Pool: {len(image_pool)} queries, {total_photos} unique photos.\n")
     else:
         print(f"[3/4] Skipping image pool (schema-only mode or no API keys).\n")
+        title_cover_queries = {}
 
     print(f"[4/4] Processing all {len(existing)} Shopify articles...\n")
 
@@ -998,24 +1103,25 @@ def main():
                 image_pool=image_pool, image_cache=image_cache)
             img_updated += 1
 
-            # Cover image: pick from pool using hash(slug) for per-article variety.
+            # Cover image: use per-article title-derived query for maximum variety.
             cover_src = cover_alt = None
             if not existing_cover:
-                q = meta.get("image_query") or h2_to_query(title, title)
+                # Per-article query: pre-computed from article title (or meta image_query)
+                q = meta.get("image_query") or title_cover_queries.get(slug) or h2_to_query(title, title)
                 title_lower = title.lower()
                 stop = {"woman", "the", "and", "for", "with", "your"}
 
-                # 1. Exact pool hit
+                # 1. Article-specific pool hit (best — unique per article topic)
                 pool = image_pool.get(q)
 
-                # 2. Topic-keyword scan against pool
+                # 2. Topic-keyword scan against pool (broader match)
                 if not pool:
                     for cq, cpool in image_pool.items():
                         words = [w for w in cq.split() if w not in stop and len(w) > 3]
                         if any(w in title_lower for w in words):
                             pool = cpool; break
 
-                # 3. Guaranteed: SAFE_FALLBACK_QUERIES are always pre-fetched
+                # 3. Guaranteed fallback: SAFE_FALLBACK_QUERIES are always pre-fetched
                 if not pool:
                     for fb in SAFE_FALLBACK_QUERIES:
                         pool = image_pool.get(fb)
@@ -1023,10 +1129,11 @@ def main():
 
                 if pool:
                     # hash(slug) → unique photo per article, stable across re-runs
+                    # Pool now has 60-90 photos so collision rate is very low
                     idx = abs(hash(slug)) % len(pool)
                     img = pool[idx]
                 else:
-                    # 4. Last resort: live API only if pool is empty
+                    # 4. Last resort: live API only if pool is completely empty
                     img = find_image(q, SAFE_FALLBACK_QUERIES[:2])
 
                 if img:
