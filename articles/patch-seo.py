@@ -609,6 +609,85 @@ def inject_product_links(html, products, max_links=2):
     return html
 
 
+def inject_product_cta(html, products, prices, article_title):
+    """Inject a prominent product CTA block before the FAQ section.
+
+    Picks the most relevant product by keyword overlap with article_title,
+    then falls back to body text matching. Idempotent via CSS class marker.
+    Inserts before <h2>Frequently Asked Questions</h2> or before last H2.
+    """
+    if 'class="article-product-cta"' in html or not products:
+        return html
+
+    title_lower = article_title.lower()
+
+    # Score by keyword overlap with article title (most specific signal)
+    best_prod, best_score = None, 0
+    for prod in products:
+        score = sum(1 for kw in prod["keywords"]
+                    if re.search(r'\b' + re.escape(kw) + r'\b', title_lower, re.I))
+        if score > best_score:
+            best_score, best_prod = score, prod
+
+    # Fallback: first product keyword match in body text
+    if not best_prod or best_score == 0:
+        body_text = re.sub(r'<[^>]+>', '', html).lower()
+        for prod in products:
+            for kw in prod["keywords"]:
+                if len(kw) >= 4 and re.search(r'\b' + re.escape(kw) + r'\b', body_text, re.I):
+                    best_prod = prod
+                    break
+            if best_prod:
+                break
+
+    if not best_prod:
+        return html
+
+    handle   = best_prod["handle"]
+    prod_url = f"https://happyaging.com/products/{handle}"
+    price    = prices.get(handle, "")
+
+    # Strip dosage numbers for a clean display name
+    short_name = re.sub(
+        r'\b\d+\s*(?:mg|mcg|g|iu|ml|caps?|tablets?|count)\b', '',
+        best_prod["title"], flags=re.I).strip()
+
+    price_line = f" — from ${price}/month" if price else ""
+
+    cta = (
+        '\n<div class="article-product-cta" '
+        'style="background:#FDF8F3;border:2px solid #E8D5B7;border-radius:16px;'
+        'padding:28px 32px;margin:48px 0;text-align:center">\n'
+        '<p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;'
+        'color:#8B7355;font-weight:700;margin:0 0 8px">Recommended by Happy Aging</p>\n'
+        f'<h3 style="font-size:22px;color:#2D2D2D;font-weight:700;margin:0 0 12px">'
+        f'{short_name}</h3>\n'
+        '<p style="color:#6B6B6B;font-size:15px;margin:0 0 22px;line-height:1.6">'
+        'Science-backed formula designed for women over 40.</p>\n'
+        f'<a href="{prod_url}" '
+        'style="display:inline-block;background:#8B7355;color:#fff;padding:13px 36px;'
+        'border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;'
+        'letter-spacing:0.02em">'
+        f'Try {short_name}{price_line} →</a>\n'
+        '</div>\n'
+    )
+
+    # Insert before FAQ H2 (preferred position)
+    new_html = re.sub(
+        r'(<h2[^>]*>\s*(?:Frequently Asked Questions|FAQ)\s*</h2>)',
+        cta + r'\1', html, count=1, flags=re.I)
+    if new_html != html:
+        return new_html
+
+    # Fallback: before the last H2 in the article
+    h2_matches = list(re.finditer(r'<h2[^>]*>', html))
+    if len(h2_matches) >= 2:
+        last_h2_pos = h2_matches[-1].start()
+        return html[:last_h2_pos] + cta + html[last_h2_pos:]
+
+    return html + cta
+
+
 def fix_product_card_prices(body, prices):
     """Replace $XX/month in product cards with real fetched prices."""
     def _replace(m):
@@ -761,7 +840,7 @@ def main():
 
     print(f"[4/4] Processing all {len(existing)} Shopify articles...\n")
 
-    ok = failed = schema_added = meta_set = img_updated = cover_updated = links_added = 0
+    ok = failed = schema_added = meta_set = img_updated = cover_updated = links_added = ctas_added = 0
 
     for slug, info in existing.items():
         art_id = info["id"]
@@ -802,6 +881,13 @@ def main():
             body = inject_product_links(body, products_for_linking)
             if body != body_before:
                 links_added += 1
+
+        # 2b. Product CTA block (prominent, before FAQ section)
+        if products_for_linking:
+            body_before = body
+            body = inject_product_cta(body, products_for_linking, prices, title)
+            if body != body_before:
+                ctas_added += 1
 
         # 3. Meta description (needed by article schema below)
         meta_desc = extract_meta_description(body)
@@ -871,6 +957,7 @@ def main():
     print(f"  FAQ schema injected:     {schema_added}")
     print(f"  Meta descriptions set:   {meta_set}")
     print(f"  Product links injected:  {links_added} articles")
+    print(f"  Product CTA blocks:      {ctas_added} articles")
     print(f"  Section images updated:  {img_updated}")
     print(f"  Cover images updated:    {cover_updated}")
     print(f"  Shopify updates:         {ok} OK, {failed} failed")

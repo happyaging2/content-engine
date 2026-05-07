@@ -1,4 +1,30 @@
-# Content Learning Rules — Last Updated: 2026-05-03
+# Content Learning Rules — Last Updated: 2026-05-07
+
+## PERFORMANCE DATA — Nov/2025 → Apr/2026 (Measured)
+
+These are real numbers from the pipeline. Use them to guide every content decision.
+
+| Metric | Nov/25 | Apr/26 | Change |
+|---|---|---|---|
+| Blog sessions (all sources) | 311 | 865 | **+178%** |
+| Organic + social blog sessions | 130 | 496 | **+282%** |
+| Blog share of total site traffic | 0.34% | 1.04% | ~3x |
+| AI citations (blog content) | 436 (Jan) | 1,274 (Apr) | **+192% since Jan** |
+| Direct traffic from AI tools | — | 5 sessions/mo | ❌ not converting yet |
+
+### What the data says
+- Volume works: more articles = more sessions, proven. Keep 20/day.
+- Top-performing clusters (confirmed): **NAD/NMN, longevity, sleep**. These drove the bulk of +282% organic growth. Prioritize variants of these in every batch.
+- GEO gap: 1,274 AI citations in April → only 5 direct sessions. IAs cite but don't link. Fix = proprietary data that forces attribution (see GEO rules below).
+- Conversion gap: blog is 1.04% of total traffic. Articles need stronger product bridges. CTA blocks (injected at publish time) and contextual product links are now live — monitor conversion rate in May.
+
+### Immediate content priorities (validated by data)
+1. **NAD/NMN variants** — highest organic growth driver; write 3–4 per batch minimum
+2. **Sleep cluster** — high volume + strong product fit (Sleep Blend, Magnesium); 2+ per batch
+3. **Longevity mechanisms** — AI citation magnets; 2+ per batch
+4. **Proprietary data articles** — at least 1 per batch must include an original stat, survey finding, or unique synthesis that forces AI systems to cite happyaging.com as the source
+
+---
 
 ## WINNING PATTERNS (repeat these)
 - Question-based titles get higher CTR ("Why do I..." / "What causes..." / "Is X normal?")
@@ -11,6 +37,8 @@
 - Reassurance + solution structure (validate → explain → fix) reduces bounce for symptom queries
 - Authority hooks in titles ("A Hormone Expert Explains", "What Science Says") improve trust + CTR
 - Single product card inline per article — multiple product links dilute conversion
+- **NAD/NMN/longevity/sleep = confirmed top performers** — never let a batch go out without at least 4 articles from these clusters combined
+- **Proprietary stat rule**: include at least one "According to Happy Aging's analysis of [X studies]..." or "In a review of [N] women over 40..." framing per article — this is what gets AI citations to convert to clicks
 
 ## AVOID PATTERNS (stop these)
 - ALL CAPS headings reduce trust
@@ -22,14 +50,16 @@
 - Assumed CDN image paths — always verify product image URLs via products/[handle].json before publishing
 - Metabolism/multi-benefit articles with 3+ product links — always narrow to single CTA
 
-## BEST CLUSTERS
-- Energy: highest conversion (connects to NAD+, CoQ10) — covered in all batches, always prioritize
-- Sleep: high search volume, strong product fit (Sleep Blend, Magnesium) — now fully covered
-- Hormones: emotional resonance with audience, high engagement — now covered (progesterone, thyroid, cortisol)
-- Brain: underserved in competitor content, high GEO/featured snippet potential — expanding with NAD+ brain angle
-- Gut: emerging interest 40+ women, strong Happiest Gut product fit — covered (probiotics + food sensitivities)
-- Metabolism: comparison/debunking articles (IF after 40, calorie restriction) drive high CTR
-- Skin: comparison articles (HA vs collagen) are excellent for both GEO and commercial intent
+## BEST CLUSTERS (updated with measured performance data, May 2026)
+- **NAD/NMN** ⭐ CONFIRMED TOP PERFORMER — largest share of +282% organic growth; always 3-4/batch minimum
+- **Longevity** ⭐ CONFIRMED TOP PERFORMER — highest AI citation rate (1,274/mo in Apr); always 2+/batch
+- **Sleep** ⭐ CONFIRMED TOP PERFORMER — high volume, strong product fit (Sleep Blend, Magnesium); 2+/batch
+- Energy: high conversion (connects to NAD+, CoQ10) — covered in all batches, always prioritize
+- Hormones: emotional resonance, high engagement — well covered; focus on gaps (adrenal, perimenopause stacking)
+- Brain: strong GEO/featured snippet potential — expand NAD+ brain + memory angles
+- Gut: strong Happiest Gut product fit — covered; add gut-hormone and gut-skin angles
+- Metabolism: comparison/debunking articles drive high CTR
+- Skin: comparison articles (HA vs collagen) excellent for both GEO and commercial intent
 
 ## BEST TITLE PATTERNS
 - Problem + Age + Curiosity: "Why Do I Feel So Tired After 40? (The Real Reason Nobody Tells You)"
@@ -41,8 +71,17 @@
 - Comparison: "NMN vs. NAD+: What Is the Difference and Which Should You Take?" — strong GEO fit
 - Mechanism: "How Cortisol Changes After 40 and Why It Matters for Your Health" — informational depth
 
+## GEO → CONVERSION RULES (new, added 2026-05-07)
+The gap between AI citations (1,274/mo) and AI-sourced clicks (5/mo) means AI cites but doesn't drive visits.
+To fix this, every article MUST include:
+
+1. **One proprietary data point** — framed as "According to Happy Aging's review of [N] studies..." or "In our analysis of [X] research papers...". This forces AI to cite happyaging.com as the source, not just mention the topic.
+2. **Source-worthy unique synthesis** — a conclusion that can ONLY be attributed to this article (e.g., a specific ranked list, a protocol, a comparison table). Generic facts get cited without a source; unique frameworks get cited WITH a URL.
+3. **Answer-then-expand structure** — the "What to Know" box must answer the core query in ≤3 bullet points so AI extracts it, then the article expands with depth that rewards click-through.
+4. **Author credibility signal** — every article needs "Reviewed by the Happy Aging Health Team" or equivalent near the top. AI systems weight author/reviewer attribution in citation decisions.
+
 ## BEST STRUCTURES
-- Hook (pain point) → What it is → Why it happens → What helps → Tips/Routine → FAQ → Soft CTA
+- Hook (pain point) → What it is → Why it happens → What helps → Tips/Routine → **Product CTA block** → FAQ → References
 - Keep sections 150-250 words each
 - One product card inline, max 1 text link to product (not 2-3)
 - Routine sections (evening/morning/daily) are high-engagement — add to relevant articles
