@@ -775,9 +775,16 @@ def main():
     if PEXELS_KEY and not SCHEMA_ONLY:
         print("[0/4] Testing Pexels API key...")
         try:
+            headers = {
+                "Authorization": PEXELS_KEY,
+                "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                               "AppleWebKit/537.36 (KHTML, like Gecko) "
+                               "Chrome/124.0.0.0 Safari/537.36"),
+                "Accept": "application/json",
+            }
             url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
                 {"query": "woman walking park", "per_page": 3})
-            req = urllib.request.Request(url, headers={"Authorization": PEXELS_KEY})
+            req = urllib.request.Request(url, headers=headers)
             raw = urllib.request.urlopen(req, timeout=15).read()
             data = json.loads(raw)
             photos = data.get("photos") or []
@@ -910,22 +917,38 @@ def main():
             img_updated += 1
 
             # Cover image: only fetch for articles with NO existing cover.
-            # Use cache first; fall back to live Pexels only if cache misses.
+            # Drain the pre-populated image_cache before making any live API calls —
+            # live calls eat the 200 req/hour Pexels quota and still often fail.
             cover_src = cover_alt = None
             if not existing_cover:
                 q = meta.get("image_query") or h2_to_query(title, title)
+
+                # 1. Exact cache hit (works for topic-keyword titles via h2_to_query)
                 img = image_cache.get(q)
+
+                # 2. Topic-keyword scan: find cached query whose non-stop words appear in title
                 if not img:
-                    # Try nearest cached query by topic keyword match
                     title_lower = title.lower()
+                    stop = {"woman", "the", "and", "for", "with", "your"}
                     for cq, cimg in image_cache.items():
-                        if any(w in title_lower for w in cq.split()[:2] if len(w) > 3):
+                        words = [w for w in cq.split() if w not in stop and len(w) > 3]
+                        if any(w in title_lower for w in words):
                             img = cimg
                             break
+
+                # 3. Guaranteed cache hit: SAFE_FALLBACK_QUERIES are always pre-fetched
+                if not img:
+                    for fb in SAFE_FALLBACK_QUERIES:
+                        img = image_cache.get(fb)
+                        if img:
+                            break
+
+                # 4. Last resort: live API (only if cache is completely empty)
                 if not img:
                     img = find_image(q, SAFE_FALLBACK_QUERIES[:2])
                     if img:
                         image_cache[q] = img
+
                 if img:
                     cover_src = img["src"]
                     cover_alt = title
