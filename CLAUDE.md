@@ -40,8 +40,8 @@ Published via Shopify Admin API (REST). Prefer the script over raw curl:
 cd /path/to/content-engine && bash scripts/qa-and-publish.sh [YYYY-MM-DD]
 ```
 
-Required env vars: `SHOPIFY_TOKEN`, `UNSPLASH_ACCESS_KEY`. Optional:
-`PEXELS_API_KEY` (fallback when Unsplash has no result).
+Required env vars: `SHOPIFY_TOKEN`. Optional: `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`.
+Pexels is now **primary** for images (User-Agent fix applied); Unsplash is fallback.
 
 For daily automation: `scripts/daily-publish.sh` (cron-ready, lock file, logging).
 Cron: `0 8 * * * bash ~/Desktop/content-engine/scripts/daily-publish.sh`
@@ -61,15 +61,25 @@ Article cover and body images are fetched from **Pexels** (primary) with
 **Acceptable imagery:** woman in nature, cooking, yoga, reading, portrait, walking, eating healthy food.  
 **Never use:** supplement bottles, product shots, hands holding anything, medical/clinical settings, tattoos, book covers.
 
-### SEO (injected at publish time by qa-and-publish.sh Step 4)
+### What qa-and-publish.sh injects at publish time (Step 4)
 - **FAQ JSON-LD schema** — FAQPage structured data before FAQ H2
 - **Meta description** — first paragraph, ≤155 chars, saved to `meta.json` → `summary_html`
 - **Section images** — one per H2 section (skips first + FAQ/References), derived from H2 text
+- **Contextual product links** — 1-2 inline `<a>` links per article, color `#8B7355`, matched by keyword to relevant Happy Aging product; skips intro paragraphs and existing links; idempotent
+- **Product CTA block** — branded box (`article-product-cta` class) injected before the FAQ section; picks best-matching product by title keyword overlap, shows real price + "Try X → " button; idempotent
+
+### Pexels API — important
+- Must send `User-Agent` browser header or Cloudflare returns 403 (error 1010)
+- Free tier: 200 req/hour. Use pre-populated image cache for covers; live API only as last resort
+- `TOPIC_VISUAL_CONTEXT` dict maps supplement/medical keywords to safe lifestyle visual queries
 
 ### One-time fixes for already-published articles
 ```bash
-# Fix SEO (schema + meta description + section images) on all published articles:
+# Fix SEO + images + product links + CTA on ALL published articles (511+):
 SHOPIFY_TOKEN=... PEXELS_API_KEY=... python3 articles/patch-seo.py
+
+# Inject Blog/ItemList/BreadcrumbList schema on blog listing page:
+SHOPIFY_TOKEN=... python3 articles/patch-blog-schema.py
 
 # Re-fetch all images (brand safety refresh):
 SHOPIFY_TOKEN=... PEXELS_API_KEY=... python3 articles/update-images.py

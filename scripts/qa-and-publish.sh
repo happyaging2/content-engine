@@ -152,7 +152,13 @@ def pexels_search(query):
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
             "query": query, "orientation": "landscape", "per_page": 10})
-        req = urllib.request.Request(url, headers={"Authorization": pexels_key})
+        headers = {
+            "Authorization": pexels_key,
+            "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"),
+            "Accept": "application/json",
+        }
+        req = urllib.request.Request(url, headers=headers)
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         if not data.get("photos"): return None
         safe = [p for p in data["photos"] if is_safe(p.get("alt") or "")]
@@ -405,7 +411,13 @@ def pexels_search(query):
     try:
         url = "https://api.pexels.com/v1/search?" + urllib.parse.urlencode(
             {"query": query, "orientation": "landscape", "per_page": 30})
-        req = urllib.request.Request(url, headers={"Authorization": pexels_key})
+        headers = {
+            "Authorization": pexels_key,
+            "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"),
+            "Accept": "application/json",
+        }
+        req = urllib.request.Request(url, headers=headers)
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         safe = [p for p in (data.get("photos") or []) if _safe(p.get("alt") or "")]
         if not safe: return None
@@ -452,6 +464,135 @@ def h2_to_query(h2_text, article_title=""):
                  if w.lower().strip(".,?:!-()") not in skip][:3]
     return "woman " + " ".join(words).lower() + " outdoor lifestyle"
 
+def fetch_products_for_linking():
+    """Return (prices_dict, linking_list) from the public store."""
+    _STOP = {"happy","aging","supplement","formula","complex","blend","advanced",
+             "ultra","daily","plus","pro","extra","strength","boost","pure",
+             "natural","organic","the","for","women","woman","men","support","with","and"}
+    prices, linking = {}, []
+    for page in range(1, 5):
+        try:
+            data = json.loads(urllib.request.urlopen(
+                f"https://happyaging.com/products.json?limit=250&page={page}", timeout=15).read())
+            prods = data.get("products", [])
+            if not prods: break
+            for p in prods:
+                h = p["handle"]
+                variants = p.get("variants", [])
+                if variants:
+                    mp = min(float(v["price"]) for v in variants)
+                    prices[h] = str(int(mp)) if mp == int(mp) else f"{mp:.2f}"
+                cleaned = re.sub(r'\b\d+\s*(?:mg|mcg|g|iu|ml|caps?|tablets?|count)\b',
+                                 '', p.get("title",""), flags=re.IGNORECASE)
+                words = [w.strip('-') for w in cleaned.split()
+                         if w.lower().strip('-') not in _STOP and len(w.strip('-')) > 2]
+                kws = list(dict.fromkeys(
+                    ([" ".join(words[:2])] if len(words) >= 2 else []) +
+                    [w for w in words if len(w) >= 4]))
+                if kws:
+                    linking.append({"handle": h, "title": p.get("title",""), "keywords": kws})
+            time.sleep(0.2)
+        except Exception:
+            break
+    return prices, linking
+
+
+def _inject_link_in_para(para_html, kw, url):
+    kw_re = re.compile(r'\b' + re.escape(kw) + r'\b', re.I)
+    result, i, in_link, done = [], 0, False, False
+    while i < len(para_html):
+        if para_html[i] == '<':
+            j = para_html.find('>', i)
+            if j < 0: result.append(para_html[i:]); break
+            tag = para_html[i:j+1]
+            if re.match(r'<a\b', tag, re.I): in_link = True
+            elif re.match(r'</a', tag, re.I): in_link = False
+            result.append(tag); i = j+1
+        else:
+            j = para_html.find('<', i)
+            if j < 0: j = len(para_html)
+            text = para_html[i:j]
+            if not done and not in_link:
+                m = kw_re.search(text)
+                if m:
+                    s, e = m.start(), m.end()
+                    text = (text[:s] +
+                            f'<a href="{url}" style="color:#8B7355;font-weight:600">'
+                            + text[s:e] + '</a>' + text[e:])
+                    done = True
+            result.append(text); i = j
+    return "".join(result), done
+
+
+def inject_product_links(html, products, max_links=2):
+    if not products: return html
+    injected = 0
+    for prod in products:
+        if injected >= max_links: break
+        prod_url = f"https://happyaging.com/products/{prod['handle']}"
+        found = False
+        for kw in prod["keywords"]:
+            if found or injected >= max_links: break
+            if len(kw) < 3: continue
+            paras = list(re.finditer(r'<p\b[^>]*>.*?</p>', html, re.DOTALL))
+            for pm in paras[2:]:
+                para = pm.group(0)
+                if prod_url in para: found = True; break
+                if not re.search(r'\b' + re.escape(kw) + r'\b',
+                                 re.sub(r'<[^>]+>', '', para), re.I): continue
+                new_para, did_inject = _inject_link_in_para(para, kw, prod_url)
+                if did_inject:
+                    html = html[:pm.start()] + new_para + html[pm.end():]
+                    injected += 1; found = True; break
+    return html
+
+
+def inject_product_cta(html, products, prices, article_title):
+    if 'class="article-product-cta"' in html or not products: return html
+    title_lower = article_title.lower()
+    best_prod, best_score = None, 0
+    for prod in products:
+        score = sum(1 for kw in prod["keywords"]
+                    if re.search(r'\b' + re.escape(kw) + r'\b', title_lower, re.I))
+        if score > best_score: best_score, best_prod = score, prod
+    if not best_prod or best_score == 0:
+        body_text = re.sub(r'<[^>]+>', '', html).lower()
+        for prod in products:
+            for kw in prod["keywords"]:
+                if len(kw) >= 4 and re.search(r'\b' + re.escape(kw) + r'\b', body_text, re.I):
+                    best_prod = prod; break
+            if best_prod: break
+    if not best_prod: return html
+    handle   = best_prod["handle"]
+    prod_url = f"https://happyaging.com/products/{handle}"
+    price    = prices.get(handle, "")
+    short_name = re.sub(r'\b\d+\s*(?:mg|mcg|g|iu|ml|caps?|tablets?|count)\b',
+                        '', best_prod["title"], flags=re.I).strip()
+    price_line = f" — from ${price}/month" if price else ""
+    cta = (
+        '\n<div class="article-product-cta" '
+        'style="background:#FDF8F3;border:2px solid #E8D5B7;border-radius:16px;'
+        'padding:28px 32px;margin:48px 0;text-align:center">\n'
+        '<p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;'
+        'color:#8B7355;font-weight:700;margin:0 0 8px">Recommended by Happy Aging</p>\n'
+        f'<h3 style="font-size:22px;color:#2D2D2D;font-weight:700;margin:0 0 12px">'
+        f'{short_name}</h3>\n'
+        '<p style="color:#6B6B6B;font-size:15px;margin:0 0 22px;line-height:1.6">'
+        'Science-backed formula designed for women over 40.</p>\n'
+        f'<a href="{prod_url}" style="display:inline-block;background:#8B7355;color:#fff;'
+        'padding:13px 36px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px">'
+        f'Try {short_name}{price_line} →</a>\n</div>\n'
+    )
+    new_html = re.sub(r'(<h2[^>]*>\s*(?:Frequently Asked Questions|FAQ)\s*</h2>)',
+                      cta + r'\1', html, count=1, flags=re.I)
+    if new_html != html: return new_html
+    h2s = list(re.finditer(r'<h2[^>]*>', html))
+    if len(h2s) >= 2:
+        p = h2s[-1].start()
+        return html[:p] + cta + html[p:]
+    return html + cta
+
+
 def extract_faq_pairs(html):
     faq = re.search(
         r'<h2[^>]*>Frequently Asked Questions</h2>(.*?)(?:<h2[^>]*>References|$)',
@@ -480,7 +621,11 @@ def meta_description(html, max_chars=155):
     if len(text) <= max_chars: return text
     return text[:max_chars].rsplit(' ', 1)[0].rstrip('.,;:') + '...'
 
-inserted = schema_added = 0
+print("  Fetching products for linking + CTA...")
+prices, products_for_linking = fetch_products_for_linking()
+print(f"  {len(products_for_linking)} products loaded for contextual linking.")
+
+inserted = schema_added = links_added = ctas_added = 0
 for mf in sorted(glob.glob("articles/*.meta.json")):
     meta = json.load(open(mf))
     slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
@@ -525,6 +670,18 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
         offset += len(figure)
     inserted += 1
 
+    # Contextual product links (1-2 subtle inline links)
+    if products_for_linking:
+        before = body
+        body = inject_product_links(body, products_for_linking)
+        if body != before: links_added += 1
+
+    # Product CTA block (prominent, before FAQ section)
+    if products_for_linking:
+        before = body
+        body = inject_product_cta(body, products_for_linking, prices, title)
+        if body != before: ctas_added += 1
+
     # FAQ Schema
     pairs = extract_faq_pairs(body)
     if pairs:
@@ -542,8 +699,10 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
 
     open(html_file, "w").write(body)
 
-print(f"  Section images injected: {inserted} articles")
-print(f"  FAQ schema added: {schema_added} articles")
+print(f"  Section images injected:  {inserted} articles")
+print(f"  Product links injected:   {links_added} articles")
+print(f"  Product CTA blocks added: {ctas_added} articles")
+print(f"  FAQ schema added:         {schema_added} articles")
 PYEOF
 
 # Step 5: Publish to Shopify (articles + covers)
