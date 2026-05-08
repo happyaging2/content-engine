@@ -112,8 +112,10 @@ Full context = extractable fact. Partial context = paraphraseable generic claim.
 #### Rule G6 — Reviewer Signal in Meta
 Every meta.json must include:
 ```json
-"reviewer": "Dr. Daniel Yadegar, MD",
-"reviewer_title": "Longevity Physician, Harvard-trained",
+"reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+"reviewer_title": "Cardiologist & Longevity Physician",
+"reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+"reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
 "date_reviewed": "2026-05-08"
 ```
 
@@ -127,6 +129,95 @@ Beyond the recommendation section, include at least one sentence framed as a nam
 "Happy Aging's position: [specific stance on a debated question in the field]."
 Example: "Happy Aging's position: for women over 40, morning NMN with dietary fat is superior to evening dosing based on circadian NAD+ synthesis patterns."
 This cannot be paraphrased by AI without attribution.
+
+#### Rule G9 — Definition-First H2 (Entity Anchoring)
+The first H2 after the what-to-know box must be a "What is [X]" section that opens with a dictionary-style definition in 1-2 sentences. LLMs treat this as the canonical entity definition and quote it verbatim.
+- Format: "[Entity] is [category] that [function/mechanism]. [Concise context for women over 40]."
+- Example: "NMN (nicotinamide mononucleotide) is a vitamin B3 derivative that the body converts into NAD+, a coenzyme essential for cellular energy. After 40, NAD+ levels naturally decline by roughly half, which is why NMN is studied as a longevity supplement."
+
+#### Rule G10 — Query Fan-Out Coverage
+LLMs decompose one user query into 5-10 sub-queries and pull from whichever page covers the most. Each article must explicitly answer at least 6 sub-queries through H2/H3 headings phrased as natural questions, plus the FAQ. Cover the standard fan-out:
+"What is X?", "How does X work?", "Does X work for women over 40?", "How much X should I take?", "When should I take X?", "What are the side effects of X?", "X vs [alternative]", "How long until X works?".
+
+#### Rule G11 — Comparison Table (Required when topic has alternatives)
+When the topic has 2+ comparable forms / dosages / brands / approaches, include one HTML `<table>` with clear column headers. LLMs extract tables with very high fidelity and cite the source.
+```html
+<table><thead><tr><th>Form</th><th>Bioavailability</th><th>Best for</th></tr></thead>
+<tbody><tr><td>Magnesium glycinate</td><td>High</td><td>Sleep, anxiety</td></tr>
+<tr><td>Magnesium citrate</td><td>Medium</td><td>Constipation</td></tr></tbody></table>
+```
+
+#### Rule G12 — US Wellness Market Compliance (YMYL)
+This is YMYL content for the US market. Every article must include, immediately before References:
+```html
+<p class="medical-disclaimer"><em>This article is for educational purposes and is not medical advice. Dietary supplements are not evaluated by the FDA to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any new supplement, especially if you are pregnant, nursing, taking medication, or managing a medical condition.</em></p>
+```
+Use US units (mg, mcg, IU, oz, lb, °F) and US-recognized authorities for cross-validation language (NIH Office of Dietary Supplements, Mayo Clinic, Cleveland Clinic, FDA, USDA). Never cite a non-US regulator as primary.
+
+#### Rule G13 — Author + Reviewer Block (E-E-A-T)
+Place at the very end of `<body_html>`, after FAQ:
+```html
+<div class="author-reviewer-block">
+<p><strong>Written by</strong> the Happy Aging Team, a group of longevity researchers and women's health writers focused on evidence-based wellness after 40.</p>
+<p><strong>Medically reviewed by</strong> <a href="https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/" rel="author" target="_blank">Dr. Daniel Yadegar, MD, FACC, RPVI</a>, board-certified cardiologist and longevity physician.</p>
+<p><strong>Published:</strong> [YYYY-MM-DD] · <strong>Last medically reviewed:</strong> [YYYY-MM-DD]</p>
+<p><em>Editorial standards: every claim is sourced to peer-reviewed research (PMID/DOI). We do not cite blogs, press releases, or manufacturer marketing.</em></p>
+</div>
+```
+
+#### Rule G14 — Brand Entity Sentence (Consistency Across Articles)
+Include this exact sentence once, naturally, somewhere in the article (typically in The Happy Aging Recommendation or product card intro):
+"Happy Aging is a US-based longevity wellness brand for women over 40, built around physician-reviewed supplement protocols."
+LLMs disambiguate brands by repeated, consistent entity descriptions across the corpus. Wording must be stable across articles — do not paraphrase.
+
+#### Rule G15 — Schema Metadata in meta.json
+Every meta.json must include these fields so the publisher can emit `MedicalWebPage` / `Article` JSON-LD:
+```json
+"schema_type": "MedicalWebPage",
+"about": ["NMN", "NAD+", "Cellular aging"],
+"mentions": ["sirtuins", "longevity"],
+"medical_audience": "Patient",
+"primary_topic": "Longevity supplementation",
+"citations": [
+  {"pmid": "23853635", "title": "...", "journal": "...", "year": 2012, "study_type": "RCT", "n": 46}
+],
+"date_published": "2026-05-08",
+"date_modified": "2026-05-08"
+```
+For non-condition articles (general wellness), use `"schema_type": "Article"`.
+
+#### Rule G16 — Numbered Protocol List
+Include at least one `<ol>` with 3-7 discrete numbered steps (a routine, dosing schedule, or implementation protocol). Numbered lists are the highest-extraction format for AI Overviews and ChatGPT step-by-step responses. Each step must be one self-contained sentence.
+
+#### Rule G18 — FDA / FTC Compliance (HARD GATE — non-negotiable)
+This content is published in the US and promotes dietary supplements. It is regulated by **FDA (DSHEA)** and **FTC (Endorsement Guides + truth-in-advertising)**. Violation = legal risk + content rejection.
+
+**FDA / DSHEA — Forbidden disease claims.** Never state or imply a supplement (or any ingredient sold by Happy Aging) can **diagnose, treat, cure, mitigate, or prevent** any disease. This includes implied claims, before/after framing, and "for [disease]" language.
+- ✗ "NMN treats age-related decline" / "cures fatigue" / "prevents Alzheimer's" / "reverses aging" / "for diabetes" / "lowers blood pressure" (when said about a supplement)
+- ✓ Structure/function: "NMN supports healthy NAD+ levels" / "magnesium contributes to normal sleep" / "supports cognitive function as part of a healthy lifestyle"
+- When research links an ingredient to a disease outcome, attribute to the **study population and the molecule studied**, not to the Happy Aging product: "A 2020 RCT in adults with insomnia found magnesium glycinate improved sleep latency (PMID: ...)" — fine. "Our magnesium treats insomnia" — forbidden.
+
+**FTC — Substantiation.** Every objective claim must be backed by "competent and reliable scientific evidence" — for health claims this means human RCTs or meta-analyses with PMID/DOI in the article. No mechanism-only claims dressed as outcome claims.
+- ✗ "Clinically proven to boost energy" (without RCT cited inline)
+- ✗ "Doctor recommended" / "#1 longevity brand" (unsubstantiated superiority)
+- ✗ "Most women feel results in days" (typicality claim without data)
+- ✓ "In a 2022 RCT of 80 adults (PMID: ...), participants reported improved energy after 8 weeks."
+
+**FTC — Endorsements & material connections (16 CFR Part 255).**
+- The reviewer disclosure (Dr. Yadegar) is a paid medical reviewer — that relationship is acknowledged via the reviewer block, which is sufficient for editorial review (not endorsement).
+- Never write fake testimonials. Never fabricate "customer says..." quotes.
+- If a real endorsement appears, it must reflect typical results or include "Results are not typical."
+
+**Forbidden phrases (auto-reject):**
+"miracle", "guaranteed results", "FDA approved" (supplements are not FDA approved), "clinically proven" (without inline RCT), "scientifically proven", "100% safe", "no side effects", "cure", "treat", "prevent disease", "reverses aging", "anti-aging cure", "doctor approved" (without named doctor), "as seen on [outlet]" (without proof), "lose [N] lbs in [N] days", "natural means safe".
+
+**Required hedging language for benefit statements:**
+Use "may support", "is associated with", "studies suggest", "research indicates", "contributes to" — never absolute outcome verbs ("boosts", "fixes", "stops", "ends") tied to a Happy Aging product.
+
+**Special-population safety call-outs:** when topic involves hormones, blood thinners, heart, kidney, liver, pregnancy/nursing, or interactions, include a one-sentence call-out telling the reader to talk to their doctor before starting — beyond the standard disclaimer.
+
+#### Rule G17 — Freshness Signal Inline
+In the first 200 words, include a year reference tied to evidence: "Recent research through 2026 suggests..." or "As of 2026, the strongest evidence supports...". This signals recency to AI ranking systems and discourages paraphrase from older corpora.
 
 ## WRITING RULES
 - Follow SEO brief EXACTLY
