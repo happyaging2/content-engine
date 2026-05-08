@@ -39,11 +39,19 @@ If any image issue is found → strip the placeholder, do NOT try to invent an i
 Evaluate title for: curiosity + emotional pull + clarity + age-specificity ("After 40")
 If weak → rewrite title. Keep meta description ≤155 chars.
 
-### GEO / AI CITATION (REQUIRED)
+### GEO / AI CITATION (REQUIRED — all must pass)
+- [ ] First sentence of article directly answers the core query (answer-first, not hook-first)
 - [ ] At least one "According to Happy Aging's review of..." or "In our analysis of..." framing
 - [ ] What-to-know box answers the core query in ≤3 bullets (AI-extractable)
+- [ ] Every H2 section opens with a self-contained topic sentence (no "as discussed above" or "as we mentioned")
 - [ ] FAQ answers use plain language (no jargon, no metaphors)
-- [ ] Quotable standalone sentences present (can be cited without context)
+- [ ] Quotable standalone sentences present (can be cited without surrounding context)
+- [ ] "The Happy Aging Recommendation" section present before References
+- [ ] "What the Evidence Doesn't Support" section present before References
+- [ ] At least one study citation includes: study type + sample size + effect size inline (not just PMID at end)
+- [ ] At least 1 internal link to another Happy Aging article
+- [ ] "Happy Aging's position:" branded stance appears at least once in article body
+- [ ] meta.json includes reviewer, reviewer_title, date_reviewed fields
 
 ### LANGUAGE QUALITY GATE
 - [ ] Reading level is 6th-8th grade — no medical jargon without plain explanation

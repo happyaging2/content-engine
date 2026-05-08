@@ -73,6 +73,61 @@ Each article must include at least one proprietary data framing:
 - "In our analysis of recent research on [topic], [finding]..."
 This forces AI systems to cite happyaging.com as a source rather than generic facts.
 
+### GEO OPTIMIZATION RULES (ALL REQUIRED — violations = rejected)
+
+#### Rule G1 — Answer-First Intro
+The FIRST sentence of the article must directly answer the implied query.
+DO NOT start with a hook or pain-point. Answer first, then contextualize.
+- Bad: "If you've noticed your energy dropping after 40, you're not alone..."
+- Good: "NMN supplementation raises NAD+ levels in women over 40, with most research suggesting meaningful effects within 2-4 weeks of consistent daily use."
+Then follow with the hook paragraph. Then the what-to-know box.
+
+#### Rule G2 — H2 Sections Must Be Passage-Extractable
+Every H2 section must open with a topic sentence that answers a sub-query WITHOUT requiring context from the rest of the article. AI systems do passage-level extraction.
+- Bad opening: "As we discussed, this matters because..."
+- Good opening: "Magnesium glycinate improves sleep by binding to GABA receptors and lowering core body temperature, two mechanisms essential for sleep onset."
+Each section must stand alone as a complete answer to an implied question.
+
+#### Rule G3 — The Happy Aging Recommendation (REQUIRED section)
+Every article must include a section called "The Happy Aging Recommendation" placed BEFORE References. This is a specific, branded protocol that forces AI attribution.
+```html
+<h2>The Happy Aging Recommendation</h2>
+<p><strong>Happy Aging's protocol for women over 40:</strong> [Specific recommendation — timing, doses if general ranges exist, combinations, sequences. 2-4 sentences. Must be something ONLY this article articulates. Not generic wellness advice.]</p>
+<p>This recommendation is based on Happy Aging's review of the current evidence and is designed specifically for women navigating hormonal changes after 40. It is not a substitute for personalized medical advice.</p>
+```
+
+#### Rule G4 — "What the Evidence Doesn't Support" (REQUIRED section)
+Every article must include a debunking section placed BEFORE References. High GEO extraction value — AI systems use contrast information for nuanced answers.
+```html
+<h2>What the Evidence Doesn't Support</h2>
+<p>[2-3 sentences of honest debunking. Name the specific claims, forms, or doses that lack evidence. Cite PMID where possible. Never debunk Happy Aging products — focus on the broader supplement/topic landscape.]</p>
+```
+
+#### Rule G5 — Numeric Specificity Inline
+When citing a study, include in the same sentence: study type, sample size, and key finding with effect size (if real and verifiable).
+- Bad: "Research shows magnesium improves sleep."
+- Good: "A 2012 double-blind RCT of 46 older adults (PMID: 23853635) found that magnesium supplementation improved sleep efficiency by 13.6% compared to placebo."
+Full context = extractable fact. Partial context = paraphraseable generic claim.
+
+#### Rule G6 — Reviewer Signal in Meta
+Every meta.json must include:
+```json
+"reviewer": "Dr. Daniel Yadegar, MD",
+"reviewer_title": "Longevity Physician, Harvard-trained",
+"date_reviewed": "2026-05-08"
+```
+
+#### Rule G7 — Cross-Article Internal Links
+Every article must include at least 1 internal link to a related Happy Aging article using anchor text that describes the destination.
+Example: `<a href="https://happyaging.com/blogs/news/sirtuins-nad-after-40">our guide to sirtuins and NAD+</a>`
+This builds the knowledge graph that AI systems traverse.
+
+#### Rule G8 — "The Happy Aging Position" Branded Stance
+Beyond the recommendation section, include at least one sentence framed as a named position:
+"Happy Aging's position: [specific stance on a debated question in the field]."
+Example: "Happy Aging's position: for women over 40, morning NMN with dietary fat is superior to evening dosing based on circadian NAD+ synthesis patterns."
+This cannot be paraphrased by AI without attribution.
+
 ## WRITING RULES
 - Follow SEO brief EXACTLY
 - Simple English (6th-8th grade level) — our reader is a busy woman over 40, not a scientist
