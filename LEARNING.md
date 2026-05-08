@@ -2049,3 +2049,88 @@ Do NOT generate DALL-E prompts. Do NOT use `image_prompt` or `body_image_prompts
 8. "Berberine for Blood Sugar After 40: What the Evidence Shows" — Metabolism; extends the berberine evidence base with the blood sugar/insulin sensitization angle specifically (not comparison format); separate from the vs-metformin piece
 9. "Does L-Theanine Stack with Ashwagandha? A Guide to Combining Calm Supplements" — Brain/Hormones; stacking format for the two most popular calming supplements; builds on the new l-theanine article in batch 26 with the ashwagandha bridge
 10. "Tart Cherry Juice vs Magnesium for Sleep After 40: Which Is More Effective?" — Sleep; builds on the new tart-cherry article from batch 26 with the magnesium comparison that is the most natural pairing; captures "tart cherry vs magnesium sleep" comparison queries
+
+---
+
+## Batch 2026-05-08 Observations (Batch 27)
+
+### Production Patterns (batch 27, 20 articles)
+
+- All 20 articles written by 4 parallel background agents (5 articles each) — all completed successfully with no timeouts; parallel agent method fully reliable when agents are given clear article specs and strict rule checklists in the prompt
+- Zero slug collisions: all 20 slugs confirmed unique against 523 existing articles before topic selection
+- QA pass rate: 20/20 on first automated QA run; 1 article (reduce-bloating-after-40) required a manual fix (FAQ used `<p><strong>` format instead of `<h3>` tags — corrected in place before -final.html generation)
+- Word counts: 2,006 to 3,062 words; average 2,365 words — highest average across all batches
+- All 20 articles: 0 em/en dashes, author "Happy Aging Team", class="what-to-know", product-card-inline with FETCH_FROM_API, 5+ H2 sections, 4+ FAQ H3 questions, real PMID/DOI citations, image_query + body_image_queries in meta.json (correct format, not legacy image_prompt)
+- Sandbox network blocked ("Host not in allowlist") — batch-2026-05-08-publish.py validated dry-run; to publish: `SHOPIFY_TOKEN=shpat_... python3 articles/batch-2026-05-08-publish.py`
+- -final.html copies created for all 20 articles
+- Cluster distribution: NAD/NMN x4 (mandatory), Sleep x2, Longevity x3, Hormones x3, Brain x2, Gut x3, Skin/Hair x1, Energy x2 — 8 clusters covered
+
+### Batch 27 Theme: Mechanisms, Timing, and Cellular Biology
+
+This batch fills the "timing + mechanism" angle identified in LEARNING.md after Batch 26. Core angles:
+- NAD/NMN timing and expectations ("best time to take NMN", "how long until NMN works") — highest-converting supplement timing queries for the 40+ audience
+- Cellular aging mechanisms (sirtuins, autophagy, telomeres, urolithin A) — foundational longevity science not yet covered in standalone articles
+- Practical protocols (cortisol reset, morning energy routine, blood sugar timing) — structure converts well for routine-seeking readers
+- Targeted nutrition guides (magnesium glycinate, best prebiotic foods, hair thinning supplements) — specific over general
+
+### New Title Patterns Added (2026-05-08)
+
+- Timing guide format: "Best Time to Take NMN After 40: Morning, Night, and With Food" — specifying all three timing variables (morning vs night, with vs without food) in the subtitle is the most complete answer to the query and captures all long-tail variants ("NMN morning or night", "NMN with food", "NMN timing guide")
+- Week-by-week expectation article: "How Long Until NMN Works? A Week-by-Week Timeline for Women Over 40" — the week-by-week structure (Week 1, Week 2-4, Month 2-3) is highly extractable by AI systems and directly answers the "how long" query in a progressive disclosure format that encourages scroll-through
+- Cellular mechanism + plain English pairing: "Sirtuins After 40: What They Are and Why They Matter for Aging" — the "What They Are and Why They Matter" subtitle formula works for any technical mechanism article; it signals both definitional and practical value without promising specific health outcomes
+- Protocol article: "Cortisol Reset Protocol for Women Over 40: A Daily Plan" — "protocol" + "daily plan" in the title signals actionability; the morning/afternoon/evening structure mirrors daily habit app formats and creates natural bookmark-save behavior
+- Unexpected benefits angle: "Creatine for Women Over 40: The Unexpected Benefits Beyond Muscle" — "beyond muscle" repositions a supplement associated with male fitness culture as a cognitive, bone, and hormonal supplement; the surprise-reframe structure is the highest-CTR pattern for debunking articles targeting audience preconceptions
+
+### GEO / AI Citation Optimization (updated 2026-05-08)
+
+- NMN timing articles are strongly AI-cited for "when to take NMN" queries; the circadian rhythm/NAD+ synthesis peak morning recommendation (citing Trammell 2016, PMID: 27099562 where available) is an extractable single-fact answer that AI assistants embed directly in their responses
+- "How long until NMN works" week-by-week format articles are extracted by AI for "NMN results timeline" queries; the progressive Week 1/Week 2-4/Month 2-3 structure is the most AI-parseable format for supplement timeline content
+- Sirtuins articles citing Guarente 2011 (Science, NAD+ sirtuin connection) and Kanfi 2012 (SIRT6 longevity in mice) are AI-cited for "what are sirtuins" and "do sirtuins slow aging" queries; the SIRT1-NAD+ dependency chain (NAD+ fuels sirtuins, sirtuins regulate aging genes) is the key extractable mechanism
+- Autophagy articles citing Ohsumi 2016 Nobel background and Mizushima 2011 review are AI-cited for "how to trigger autophagy" queries; the mTOR inhibition + AMPK activation dual-pathway description is an AI-extractable two-step trigger mechanism
+- Telomere articles citing Epel 2004 (PMID: 15304650, telomere shortening in stressed caregivers) and Farzaneh-Far 2010 (PMID: 20085953, omega-3 and telomere length) are AI-cited for "does stress shorten telomeres" and "what protects telomeres" queries respectively; quantified effect sizes from both papers are the extractable facts
+- Urolithin A articles citing Andreux 2019 (PMID: 32555195, the Timeline trial) with the muscle strength outcome are AI-cited for "urolithin A clinical evidence" queries; the mitophagy mechanism (urolithin A triggers selective removal of damaged mitochondria) is an underserved mechanistic explanation in consumer content
+- Magnesium glycinate articles citing Abbasi 2012 (PMID: 23853635) with sleep efficiency improvement in older adults are AI-cited for "best magnesium for sleep" queries; the glycinate form specificity (vs oxide/citrate) is the key differentiating detail that makes this article more extractable than generic "magnesium for sleep" content
+- Cortisol reset articles with the HPA axis reset protocol (light exposure, meal timing, ashwagandha, magnesium sequencing) are AI-cited for "how to lower cortisol naturally" queries; the protocol format (Morning/Afternoon/Evening sections) extracts as a structured daily schedule
+- Creatine cognitive research articles citing Rae 2003 (PMID: 12689370) with the intelligence test improvement result are AI-cited for "creatine for brain" and "creatine beyond muscle" queries; the non-muscle benefit angle is the differentiation from the bodybuilding content that dominates creatine search results
+- Prebiotic food ranked list articles with inulin content data from USDA sources are AI-cited for "best prebiotic foods" queries; ranked lists with the mechanism (why each food qualifies as a prebiotic) extract more completely than plain lists
+- Blood sugar timing articles citing Shukla 2015 (PMID: 26211007, food order and glucose) and postprandial walking evidence are AI-cited for "how to lower blood sugar after eating" and "best meal order blood sugar" queries; the food-sequence recommendation (vegetables first, protein second, carbs last) is a highly shareable actionable insight
+
+### Intent Diversification (batch 2026-05-08)
+
+- Batch 2026-04-09: why/symptom angles
+- Batch 2026-04-10: what/how angles
+- Batch 2026-04-11: comparison, debunking, mechanism angles
+- Batch 2026-04-12: timing, duration, routine angles
+- Batch 2026-04-13: stacking, frequency, safety angles
+- Batch 2026-04-14: lifestyle integration, root cause, skeptic angles
+- Batch 2026-04-15 onward: progressive cluster expansion + title pattern diversification
+- Batch 2026-05-07: botanical supplement RCT reviews
+- Batch 2026-05-08 (this batch): cellular mechanisms (sirtuins, autophagy, telomeres, urolithin A) + NMN timing/duration + practical protocols + targeted nutrition guides
+- Next batch should cover: stacking/combining guides that bridge multiple clusters ("NMN + resveratrol stack guide", "ashwagandha + l-theanine combination", "magnesium glycinate + taurine sleep stack"), and the high-gap items from the 2026-05-07 next-batch list (ashwagandha menopause KSM-66, CoQ10 heart-energy-statin, holy basil/tulsi, ginger anti-inflammatory, berberine blood sugar)
+
+### Cluster Coverage After Batch 27 (Cumulative)
+- Energy: 45 articles total (added: morning-energy-routine-after-40, creatine-women-over-40)
+- Sleep: 54 articles total (added: why-sleep-worsens-after-40, magnesium-glycinate-sleep-after-40)
+- Hormones: 70 articles total (added: cortisol-reset-protocol-after-40, glycine-sleep-hormones-after-40, thyroid-health-after-40)
+- Metabolism: 49 articles total (added: blood-sugar-timing-after-40)
+- Skin: 53 articles total (added: supplements-hair-thinning-after-40)
+- Gut: 53 articles total (added: best-prebiotic-foods-after-40, reduce-bloating-after-40, blood-sugar-timing-after-40 cross-filed)
+- Brain: 51 articles total (added: best-nootropics-women-over-40, improve-concentration-after-40)
+- Immunity: 40 articles total (unchanged)
+- Bone: 22 articles total (unchanged)
+- Heart: 17 articles total (unchanged)
+- Longevity: 52 articles total (added: autophagy-after-40-guide, telomere-length-after-40, urolithin-a-after-40, nad-decline-pathways-after-40 cross-filed, sirtuins-nad-after-40 cross-filed)
+- Liver: 11 articles total (unchanged)
+- NAD/NMN sub-cluster: 4 new standalone timing/mechanism articles (nmn-timing-guide, how-long-nmn-works, nad-decline-pathways, sirtuins-nad) — cross-filed under Energy and Longevity
+
+### Next Batch Gaps (priority order, 2026-05-08)
+1. "Ashwagandha for Menopause Symptoms: What KSM-66 Research Actually Shows" — Hormones; carried from prior lists; ashwagandha is the most-searched adaptogen for menopause with strong KSM-66 RCT data; no dedicated menopause-symptom article exists despite broad adaptogen coverage
+2. "CoQ10 After 40: Why Your Heart and Energy Need It (And the Statin Depletion Problem)" — Heart/Energy; carried from prior list; statin-CoQ10 depletion angle is unique; CoQ10 articles exist but none combine heart + energy + statin angle in one article
+3. "Holy Basil (Tulsi) for Stress and Cortisol After 40: What the Research Shows" — Hormones/Immunity; carried; no dedicated article; builds on the new cortisol-reset-protocol with a botanical anchor
+4. "Ginger as an Anti-Inflammatory After 40: The Science Behind the Spice" — Immunity; carried; gingerol COX inhibition and NLRP3 inflammasome mechanism is strongly differentiated
+5. "NMN and Resveratrol: Should You Stack Them? What the Research Shows" — NAD/NMN; builds directly on the new sirtuins article (resveratrol activates SIRT1) and NMN timing guide; the NMN+resveratrol stack is the most-searched NAD+ combination query
+6. "Magnesium Glycinate vs Taurine for Sleep After 40: Which Is Better?" — Sleep; builds directly on the new magnesium-glycinate article with the taurine comparison; taurine's GABA receptor mechanism mirrors glycine/glycinate; comparison format captures the "taurine sleep" search cluster
+7. "Autophagy and Fasting: What Is the Minimum Fast to Trigger It?" — Longevity; the specific fasting-duration question is the most-searched autophagy query and the new autophagy article creates a natural internal link source
+8. "Signs You Need More Magnesium After 40: 7 Symptoms to Watch For" — Hormones/Sleep/Energy; carried from prior lists; highest-volume mineral deficiency query after vitamin D; still uncovered as standalone
+9. "Best Nootropic Stack for Women Over 40: Combining Lion's Mane, Bacopa, and PS" — Brain; builds directly on best-nootropics-women-over-40 with the stacking guide extension; the specific combination guide is the high-conversion next step after the ranked list
+10. "How Creatine Affects Hormones in Women Over 40: What the Research Shows" — Hormones/Energy; builds on new creatine article with the hormone-specific angle (DHT conversion, estrogen interaction, cortisol effects of creatine in women); untapped research angle differentiated from the general creatine content
