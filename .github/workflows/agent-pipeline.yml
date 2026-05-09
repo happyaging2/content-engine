@@ -1,0 +1,84 @@
+name: Agent Pipeline (Phase 1 -> Phase 4 -> Publish as Draft)
+
+on:
+  # Daily generation: every morning 06:00 UTC. Drafts then auto-publish step
+  # of qa-and-publish.sh runs at 11:00 UTC via publish-shopify.yml — that
+  # gives Phase 1-4 ~5h of headroom.
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      batch_date:
+        description: "Batch date (YYYY-MM-DD) — leave blank for today"
+        required: false
+        default: ""
+      batch_size:
+        description: "Number of articles to generate"
+        required: false
+        default: "10"
+      concurrency:
+        description: "Max parallel writers (Phase 3)"
+        required: false
+        default: "5"
+      dry_run:
+        description: "Phase 1 only — preview topics without writing"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+# Don't stack daily runs if a manual one is already going.
+concurrency:
+  group: agent-pipeline
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Run pipeline (Phase 1 -> 3 -> 4)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          BATCH="${{ github.event.inputs.batch_date }}"
+          if [ -z "$BATCH" ]; then BATCH="$(date -u +%Y-%m-%d)"; fi
+          SIZE="${{ github.event.inputs.batch_size || '10' }}"
+          CONC="${{ github.event.inputs.concurrency || '5' }}"
+          DRY=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then DRY="--dry-run"; fi
+
+          python3 scripts/run-pipeline.py \
+            --batch-date "$BATCH" \
+            --batch-size "$SIZE" \
+            --concurrency "$CONC" \
+            $DRY
+
+      - name: Commit generated articles + meta
+        run: |
+          git add articles/*-final.html articles/*.meta.json articles/batch-*-report.md 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "agent-pipeline: $(date -u +%Y-%m-%d) batch [skip ci]"
+            git push origin main
+          else
+            echo "No new articles to commit (dry run, or all rejected)."
+          fi
