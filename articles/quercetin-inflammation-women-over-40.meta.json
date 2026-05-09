@@ -1,14 +1,13 @@
 {
   "title": "Quercetin and Inflammation After 40: What Women Need to Know",
   "slug": "quercetin-inflammation-women-over-40",
-  "tags": "quercetin, inflammation, inflammaging, senolytic, flavonoid, COX-2, women over 40, joint health, immune support, antioxidant",
+  "tags": "quercetin, inflammation, inflammaging, women over 40, anti-inflammatory supplements, senolytic, immune health, joint health, quercetin phytosome",
   "product_handle": "relief-tonic",
-  "image_query": "woman 40s healthy eating vegetables cooking kitchen",
+  "image_query": "woman 40s active yoga healthy outdoors",
   "body_image_queries": [
-    "woman 40s active yoga stretching morning wellness",
-    "woman 40s farmers market fresh produce healthy",
-    "woman 40s walking outdoor nature healthy aging",
-    "woman 40s cooking healthy meal kitchen vibrant"
+    "woman 40s walking park healthy lifestyle",
+    "woman 40s cooking vegetables anti-inflammatory food",
+    "woman 40s stretching yoga outdoor wellness"
   ],
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
@@ -16,15 +15,15 @@
   "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
   "date_reviewed": "2026-05-09",
   "schema_type": "MedicalWebPage",
-  "about": ["quercetin anti-inflammatory", "inflammaging women over 40", "quercetin senolytic", "quercetin bioavailability", "flavonoids aging"],
-  "mentions": ["quercetin", "quercetin phytosome", "bromelain", "COX-2", "5-LOX", "TNF-alpha", "IL-6", "IL-1beta", "CRP", "Nrf2", "senescent cells", "dasatinib", "fisetin"],
+  "about": ["quercetin anti-inflammatory", "inflammaging", "senolytic supplements", "quercetin phytosome bioavailability", "chronic inflammation women over 40", "quercetin bromelain"],
+  "mentions": ["quercetin phytosome", "bromelain", "COX-2", "TNF-alpha", "IL-6", "CRP", "senescent cells", "Nrf2", "flavonoids", "fisetin"],
   "medical_audience": "Patient",
   "primary_topic": "quercetin inflammation women over 40",
   "citations": [
-    {"pmid": "18417116", "note": "Boots - quercetin health effects antioxidant nutraceutical"},
+    {"pmid": "18417116", "note": "Boots - quercetin health effects review"},
     {"pmid": "27405810", "note": "Serban - quercetin blood pressure meta-analysis RCTs"},
     {"pmid": "23798923", "note": "Askari - quercetin inflammation oxidative stress markers"},
-    {"pmid": "28273655", "note": "Zhu - fisetin quercetin senescent cells BCL-XL"}
+    {"pmid": "28273655", "note": "Zhu - senolytic agents fisetin navitoclax"}
   ],
   "date_published": "2026-05-09",
   "date_modified": "2026-05-09"
