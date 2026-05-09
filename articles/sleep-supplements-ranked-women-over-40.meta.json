@@ -1,0 +1,32 @@
+{
+  "title": "Sleep Supplements for Women Over 40: Ranked by Evidence",
+  "slug": "sleep-supplements-ranked-women-over-40",
+  "tags": "sleep supplements, magnesium, L-theanine, glycine, apigenin, melatonin, women over 40, sleep quality, insomnia",
+  "product_handle": "calm-tonic",
+  "image_query": "woman 40s peaceful sleep bedroom morning",
+  "body_image_queries": [
+    "woman 40s healthy sleep routine calm bedroom",
+    "woman 40s evening herbal tea relaxing",
+    "woman 40s morning refreshed rested smiling",
+    "woman 40s wellness lifestyle calm meditation"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["sleep supplements", "magnesium glycinate", "L-theanine", "glycine", "apigenin", "phosphatidylserine", "melatonin"],
+  "mentions": ["GABA", "cortisol", "perimenopause sleep", "magnesium deficiency", "sleep maintenance", "insomnia women"],
+  "medical_audience": "Patient",
+  "primary_topic": "best sleep supplements women over 40",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly"},
+    {"pmid": "31585029", "title": "Effects of L-theanine administration on stress-related symptoms and cognitive functions"},
+    {"pmid": "22529837", "title": "The effects of glycine on subjective daytime performance in partially sleep-restricted healthy volunteers"},
+    {"pmid": "15649738", "title": "Melatonin as a hypnotic: pro"},
+    {"pmid": "15512856", "title": "Effects of phosphatidylserine complex on endocrine and psychological responses to mental stress"}
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}
