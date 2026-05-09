@@ -71,16 +71,15 @@ When mentioning NAD Advanced in body copy, use FTC-safe language:
 
 ### PRODUCT CARD
 - One `product-card-inline` per article, placed after the "what helps" section.
-- Get the REAL product image URL before writing:
-  `curl -s https://happyaging.com/products/[handle].json | python3 -c "import sys,json; print(json.load(sys.stdin)['product']['images'][0]['src'])"`
+- Use `src="FETCH_FROM_API"` as the placeholder — the pipeline (patch-seo.py) resolves it to the real Shopify CDN URL automatically. Do NOT curl; do NOT hardcode CDN URLs.
 - Use this exact structure:
 ```html
 <div class="product-card-inline">
 <a href="https://happyaging.com/products/[handle]">
-<img src="[REAL_CDN_URL_FROM_ABOVE_COMMAND]" alt="[Product Name]">
+<img src="FETCH_FROM_API" alt="[Product Name]" width="100" height="100" loading="lazy">
 </a>
 <div>
-<h4><a href="https://happyaging.com/products/[handle]">[Product Name]</a></h4>
+<h3><a href="https://happyaging.com/products/[handle]">[Product Name]</a></h3>
 <p>[One line about the product]</p>
 <p><strong>$XX/month</strong> with subscription</p>
 <a href="https://happyaging.com/products/[handle]">Shop Now</a>
@@ -257,9 +256,11 @@ In the first 200 words, include a year reference tied to evidence: "Recent resea
 
 ## HTML CLASSES
 - <div class="what-to-know"> for key takeaways (REQUIRED — place after first paragraph)
-- <div class="product-card-inline"> for product card
+- Inside the what-to-know box use `<h2>What to Know</h2>` — NOT `<h3>`. Shopify already renders the article title as `<h1>`, so the body must start at `<h2>` to preserve heading hierarchy.
+- <div class="product-card-inline"> for product card (heading inside is `<h3>`, never `<h4>`)
 - <div class="references"> for citations
 - <h2> for main sections (auto-generates Table of Contents)
+- NEVER emit `<h1>` anywhere in the article body. Shopify renders the article title as `<h1>` automatically; a writer-emitted `<h1>` creates a duplicate `<h1>` on the published page.
 
 ## ARTICLE STRUCTURE (canonical)
 Hook paragraph → What-to-know box → What it is → Why it happens → What helps →

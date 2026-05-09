@@ -154,6 +154,142 @@ def extract_meta_description(html, max_chars=155):
     return truncated.rstrip('.,;:') + '...'
 
 
+# ── Typography normalization ─────────────────────────────────────────────────
+
+def _walk_text(html, transform):
+    """Apply transform(text_segment) to text nodes only.
+
+    Skips HTML tags, comments, and the contents of <script>/<style> blocks
+    (so JSON-LD payloads are never mangled).
+    """
+    out = []
+    i = 0
+    n = len(html)
+    while i < n:
+        c = html[i]
+        if c != '<':
+            j = html.find('<', i)
+            if j < 0:
+                j = n
+            out.append(transform(html[i:j]))
+            i = j
+            continue
+        if html.startswith('<!--', i):
+            j = html.find('-->', i)
+            j = n if j < 0 else j + 3
+            out.append(html[i:j])
+            i = j
+            continue
+        m = re.match(r'<(script|style)\b', html[i:i + 10], re.IGNORECASE)
+        if m:
+            tag = m.group(1).lower()
+            close = re.search(rf'</{tag}\s*>', html[i:], re.IGNORECASE)
+            j = i + close.end() if close else n
+            out.append(html[i:j])
+            i = j
+            continue
+        # Generic tag — quote-aware end finder
+        j = i + 1
+        in_q = None
+        while j < n:
+            ch = html[j]
+            if in_q:
+                if ch == in_q:
+                    in_q = None
+            elif ch in ('"', "'"):
+                in_q = ch
+            elif ch == '>':
+                break
+            j += 1
+        out.append(html[i:j + 1])
+        i = j + 1
+    return ''.join(out)
+
+
+_NBSP_UNIT_RE = re.compile(
+    r'(\d+(?:[.,]\d+)?)\s+'
+    r'(mg|mcg|µg|IU|kcal|grams?|kg|percent|%|'
+    r'hours?|minutes?|seconds?|days?|weeks?|months?|years?|'
+    r'degrees?|°[FC]|ng/mL|mmol/L|mg/dL)\b',
+    re.IGNORECASE,
+)
+
+
+def _normalize_text_segment(text):
+    """nbsp on number+unit pairs, curly quotes, single ellipsis."""
+    # Number + unit → use non-breaking space
+    text = _NBSP_UNIT_RE.sub(r'\1 \2', text)
+    # Apostrophe inside words (don't, it's, women's)
+    text = re.sub(r"(\w)'(\w)", r'\1’\2', text)
+    # Opening single quote
+    text = re.sub(r"(^|[\s\(\[])'", lambda m: m.group(1) + '‘', text)
+    # Closing/leftover single quote
+    text = text.replace("'", '’')
+    # Opening double quote
+    text = re.sub(r'(^|[\s\(\[])"', lambda m: m.group(1) + '“', text)
+    # Closing/leftover double quote
+    text = text.replace('"', '”')
+    # Three dots → single ellipsis
+    text = text.replace('...', '…')
+    return text
+
+
+def _normalize_typography(body, products_by_handle=None):
+    """Apply all corpus-wide HTML + typography fixes:
+
+      • <h1>...</h1>            → <h2>...</h2>     (Shopify already renders title as h1)
+      • <h3>What to Know</h3>   → <h2>What to Know</h2>
+      • product-card-inline:    <h4> → <h3>; resolve FETCH_FROM_API; add width/height/loading
+      • Number + unit:          inserts &nbsp;
+      • Straight quotes / "..."  → curly quotes / …  (skips <script>/<style>/attributes)
+
+    Idempotent: re-running yields the same output.
+    """
+    # 1. Strip stray <h1> in body — keep content, demote to <h2>.
+    body = re.sub(r'<h1\b([^>]*)>(.*?)</h1>', r'<h2\1>\2</h2>',
+                  body, flags=re.DOTALL | re.IGNORECASE)
+
+    # 2. <h3>What to Know</h3> → <h2>What to Know</h2>
+    body = re.sub(r'<h3([^>]*)>(\s*What to Know\s*)</h3>',
+                  r'<h2\1>\2</h2>', body, flags=re.IGNORECASE)
+
+    # 3. Inside product-card-inline: h4→h3, resolve FETCH_FROM_API, add image attrs
+    def _fix_card(m):
+        card = m.group(0)
+        card = re.sub(r'<h4(\s[^>]*)?>', lambda mm: '<h3' + (mm.group(1) or '') + '>',
+                      card, flags=re.IGNORECASE)
+        card = re.sub(r'</h4\s*>', '</h3>', card, flags=re.IGNORECASE)
+
+        if products_by_handle:
+            hm = re.search(r'happyaging\.com/products/([a-z0-9-]+)', card)
+            if hm:
+                prod = products_by_handle.get(hm.group(1))
+                if prod and prod.get("img_url"):
+                    card = card.replace('src="FETCH_FROM_API"', f'src="{prod["img_url"]}"')
+
+        def _img_attrs(im):
+            tag = im.group(0)
+            extra = ''
+            if not re.search(r'\swidth=', tag, re.I):
+                extra += ' width="100" height="100"'
+            if not re.search(r'\sloading=', tag, re.I):
+                extra += ' loading="lazy"'
+            if not extra:
+                return tag
+            return tag[:-1].rstrip('/') + extra + ('/>' if tag.endswith('/>') else '>')
+
+        card = re.sub(r'<img\b[^>]*>', _img_attrs, card, flags=re.IGNORECASE)
+        return card
+
+    body = re.sub(r'<div class="product-card-inline">.*?</div>\s*</div>',
+                  _fix_card, body, flags=re.DOTALL)
+
+    # 4. Text-only transforms (skip tags, scripts, comments)
+    body = _walk_text(body, _normalize_text_segment)
+
+    return body
+
+
 # ── Brand safety filters ──────────────────────────────────────────────────────
 
 # Only block images whose description clearly shows the VISUAL SUBJECT is
@@ -580,7 +716,8 @@ def inject_section_images(html, article_title, slug="", body_image_queries=None,
         figure = (
             f'\n<figure class="article-stock-image" style="margin:24px 0">'
             f'<img src="{img["src"]}" alt="{alt}" '
-            f'style="width:100%;border-radius:12px;display:block">'
+            f'width="800" height="533" loading="lazy" decoding="async" '
+            f'style="width:100%;height:auto;border-radius:12px;display:block">'
             f'</figure>\n'
         )
         insert_at = pos + offset
@@ -973,6 +1110,8 @@ def main():
         print("  WARNING: could not fetch product prices — prices will not be updated.")
     if products_for_linking:
         print(f"  {len(products_for_linking)} products available for contextual linking.")
+    # Handle → product lookup (used by _normalize_typography to resolve FETCH_FROM_API placeholders)
+    products_by_handle = {p["handle"]: p for p in products_for_linking}
     print()
 
     # Build slug → meta.json lookup from local files
@@ -1068,6 +1207,12 @@ def main():
         if not body.strip():
             print(f"  SKIP {slug[:55]} — empty body")
             continue
+
+        # 0. Typography + structural normalization (idempotent):
+        #    <h1>→<h2>, <h3>What to Know</h3>→<h2>, product-card <h4>→<h3>,
+        #    FETCH_FROM_API → real CDN URL, img width/height/loading,
+        #    nbsp on number+unit, curly quotes, single ellipsis.
+        body = _normalize_typography(body, products_by_handle)
 
         # 1. Product card prices
         if prices:
