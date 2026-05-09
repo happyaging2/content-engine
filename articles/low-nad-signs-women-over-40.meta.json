@@ -22,9 +22,9 @@
   "medical_audience": "Patient",
   "primary_topic": "signs of low NAD+ women over 40",
   "citations": [
-    {"pmid": "33099023", "title": "Oral NMN supplementation safely elevates NAD+ levels", "journal": "Cell Metabolism", "year": 2020, "study_type": "RCT", "n": 30},
-    {"pmid": "29249690", "title": "NAD+ intermediates: the biology and therapeutic potential of NMN and NR", "journal": "Cell Metabolism", "year": 2018, "study_type": "Review", "n": null},
-    {"pmid": "27304508", "title": "CD38 dictates age-related NAD decline through SIRT3-dependent mechanism", "journal": "Cell Metabolism", "year": 2016, "study_type": "Mechanistic", "n": null}
+    {"pmid": "33099023", "title": "Oral nicotinamide mononucleotide supplementation safely elevates NAD+ levels", "journal": "Cell Metabolism", "year": 2020},
+    {"pmid": "29249690", "title": "NAD+ intermediates: the biology and therapeutic potential of NMN and NR", "journal": "Cell Metabolism", "year": 2018},
+    {"pmid": "27304508", "title": "CD38 dictates age-related NAD decline", "journal": "Cell Metabolism", "year": 2016}
   ],
   "date_published": "2026-05-09",
   "date_modified": "2026-05-09"
