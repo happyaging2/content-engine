@@ -1,0 +1,54 @@
+name: GEO — Weekly Monitor & Refresh Queue
+
+on:
+  # Every Monday at 06:00 UTC
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  weekly-geo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      # 1. Flag articles older than 90 days into REFRESH-QUEUE.md
+      - name: Re-review stale articles (90-day cadence)
+        run: python3 scripts/re-review-stale.py --threshold-days 90
+
+      # 2. Track LLM citations (Perplexity / ChatGPT search / Claude / Google AIO)
+      - name: LLM citation monitor
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          if [ -n "$PERPLEXITY_API_KEY$OPENAI_API_KEY$ANTHROPIC_API_KEY$SERPAPI_KEY" ]; then
+            python3 scripts/llm-citation-monitor.py
+          else
+            echo "No LLM API keys configured — skipping citation monitor."
+            echo "Add at least one of PERPLEXITY_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, SERPAPI_KEY in repo Secrets."
+          fi
+
+      - name: Commit reports
+        run: |
+          git add REFRESH-QUEUE.md LLM-CITATIONS.md articles/*.meta.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "geo-weekly: refresh queue + LLM citation report $(date +%Y-%m-%d) [skip ci]"
+            git push origin main
+          else
+            echo "No changes to commit."
+          fi
