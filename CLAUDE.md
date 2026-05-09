@@ -67,6 +67,12 @@ Daily run, 20 articles per cycle.
 - **Dedup**: `scripts/check-duplicate-topics.py` rejects candidate topics
   with slug collisions, ≥55% title token overlap, or recent overlapping
   entities. Mandatory pre-step before Phase 1 scoring.
+- **Comparison content**: `config/competitors.json` registers competing brands
+  per cluster. `scripts/generate-comparison-topics.py` produces
+  `COMPARISON-QUEUE.md`; Phase 1 reserves ≥2 batch slots/cycle. When a brief's
+  `format: comparison`, Phase 3 routes to `agents/03b-comparison-writer.md`
+  (extends 03 with FTC compliance, required `<table>`, hedged-language rules).
+  `lib_medical_schema.build_comparison_itemlist` emits `ItemList` JSON-LD.
 
 ## Publishing
 Published via Shopify Admin API (REST). Prefer the script over raw curl:

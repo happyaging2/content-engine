@@ -1,0 +1,77 @@
+{
+  "_doc": "Competitor registry for comparison content generation. Each cluster maps to competing products. Add/edit freely. Used by scripts/generate-comparison-topics.py and the comparison writer.",
+  "clusters": {
+    "nmn": {
+      "happyaging_product": {
+        "name": "Happy Aging Longevity Shot",
+        "url": "https://happyaging.com/products/longevity-shot",
+        "form": "Liquid shot",
+        "key_ingredient_dose": "NMN 250mg + supporting actives",
+        "third_party_tested": "Citrus Labs",
+        "third_party_url": "https://www.citruslabs.com/testedproducts/happy-aging-longevity-shot"
+      },
+      "competitors": [
+        {"name": "Tru Niagen", "url": "https://www.truniagen.com/", "form": "Capsule", "active": "NR (nicotinamide riboside)", "dose_mg": 300, "third_party_tested": "ChromaDex (proprietary)"},
+        {"name": "Wonderfeel Youngr NMN", "url": "https://wonderfeel.com/", "form": "Capsule", "active": "NMN", "dose_mg": 900, "third_party_tested": null},
+        {"name": "DoNotAge Pure NMN", "url": "https://donotage.org/", "form": "Capsule", "active": "NMN", "dose_mg": 500, "third_party_tested": null},
+        {"name": "Renue NMN", "url": "https://renuebyscience.com/", "form": "Sublingual powder", "active": "NMN", "dose_mg": 250, "third_party_tested": null},
+        {"name": "ProHealth Longevity NMN Pro", "url": "https://www.prohealth.com/", "form": "Capsule", "active": "NMN", "dose_mg": 500, "third_party_tested": null}
+      ]
+    },
+    "perimenopause": {
+      "happyaging_product": {
+        "name": "Happy Aging Calm Shot",
+        "url": "https://happyaging.com/products/calm-shot",
+        "form": "Liquid shot",
+        "key_ingredient_dose": "Ashwagandha + supporting adaptogens",
+        "third_party_tested": "Citrus Labs",
+        "third_party_url": "https://www.citruslabs.com/testedproducts/happy-aging-calm-shot"
+      },
+      "competitors": [
+        {"name": "Bonafide Relizen", "url": "https://hellobonafide.com/", "form": "Capsule", "active": "Pollen extract", "third_party_tested": null},
+        {"name": "Estroven Complete Multi-Symptom", "url": "https://www.estroven.com/", "form": "Capsule", "active": "Black cohosh + soy", "third_party_tested": null},
+        {"name": "Equelle (Pharmavite)", "url": "https://equelle.com/", "form": "Tablet", "active": "S-equol", "third_party_tested": null},
+        {"name": "Amberen", "url": "https://amberen.com/", "form": "Capsule", "active": "Proprietary blend", "third_party_tested": null},
+        {"name": "Hum Nutrition Hormone Balance", "url": "https://www.humnutrition.com/", "form": "Capsule", "active": "Chasteberry + DIM", "third_party_tested": null}
+      ]
+    },
+    "skin": {
+      "happyaging_product": {
+        "name": "Happy Aging Glow Shot",
+        "url": "https://happyaging.com/products/glow-shot",
+        "form": "Liquid shot",
+        "key_ingredient_dose": "Marine collagen + supporting actives",
+        "third_party_tested": "Citrus Labs",
+        "third_party_url": "https://www.citruslabs.com/testedproducts/happy-aging-glow-shot"
+      },
+      "competitors": [
+        {"name": "Vital Proteins Collagen Peptides", "url": "https://www.vitalproteins.com/", "form": "Powder", "active": "Bovine collagen", "dose_g": 20, "third_party_tested": null},
+        {"name": "Ancient Nutrition Multi Collagen", "url": "https://ancientnutrition.com/", "form": "Powder", "active": "Multi-source collagen", "dose_g": 9, "third_party_tested": null},
+        {"name": "Sports Research Collagen Peptides", "url": "https://sportsresearch.com/", "form": "Powder", "active": "Bovine collagen", "dose_g": 11, "third_party_tested": "NSF"},
+        {"name": "NeoCell Super Collagen", "url": "https://www.neocell.com/", "form": "Powder/Tablet", "active": "Hydrolyzed collagen", "dose_g": 6.6, "third_party_tested": null},
+        {"name": "Hum Nutrition Collagen Love", "url": "https://www.humnutrition.com/", "form": "Capsule", "active": "Marine collagen", "third_party_tested": null}
+      ]
+    },
+    "magnesium": {
+      "happyaging_product": null,
+      "competitors": [
+        {"name": "Thorne Magnesium Bisglycinate", "url": "https://www.thorne.com/", "form": "Powder", "active": "Mg bisglycinate", "dose_mg": 200, "third_party_tested": "NSF"},
+        {"name": "Pure Encapsulations Magnesium Glycinate", "url": "https://www.pureencapsulations.com/", "form": "Capsule", "active": "Mg glycinate", "dose_mg": 120, "third_party_tested": null},
+        {"name": "Natural Vitality Calm", "url": "https://www.naturalvitality.com/", "form": "Powder", "active": "Mg citrate", "dose_mg": 350, "third_party_tested": null},
+        {"name": "Doctor's Best High Absorption Magnesium", "url": "https://drbvitamins.com/", "form": "Tablet", "active": "Mg lysinate glycinate", "dose_mg": 200, "third_party_tested": null}
+      ]
+    },
+    "ashwagandha": {
+      "happyaging_product": {
+        "name": "Happy Aging Calm Shot",
+        "url": "https://happyaging.com/products/calm-shot"
+      },
+      "competitors": [
+        {"name": "Goli Ashwa Gummies", "url": "https://goli.com/", "form": "Gummy", "active": "KSM-66 ashwagandha", "dose_mg": 300, "third_party_tested": null},
+        {"name": "Moon Juice SuperYou", "url": "https://moonjuice.com/", "form": "Capsule", "active": "Ashwagandha + adaptogens", "third_party_tested": null},
+        {"name": "Nutricost Ashwagandha", "url": "https://nutricost.com/", "form": "Capsule", "active": "Ashwagandha root", "dose_mg": 600, "third_party_tested": null},
+        {"name": "Gaia Herbs Ashwagandha", "url": "https://www.gaiaherbs.com/", "form": "Capsule", "active": "Ashwagandha root", "dose_mg": 350, "third_party_tested": null}
+      ]
+    }
+  }
+}

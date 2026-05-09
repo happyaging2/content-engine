@@ -28,6 +28,10 @@ jobs:
       - name: Re-review stale articles (90-day cadence)
         run: python3 scripts/re-review-stale.py --threshold-days 90
 
+      # 1b. Build comparison queue from config/competitors.json (after dedup)
+      - name: Generate comparison-topic queue
+        run: python3 scripts/generate-comparison-topics.py
+
       # 2. Track LLM citations (Perplexity / ChatGPT search / Claude / Google AIO)
       - name: LLM citation monitor
         env:
@@ -45,7 +49,7 @@ jobs:
 
       - name: Commit reports
         run: |
-          git add REFRESH-QUEUE.md LLM-CITATIONS.md articles/*.meta.json 2>/dev/null || true
+          git add REFRESH-QUEUE.md COMPARISON-QUEUE.md LLM-CITATIONS.md articles/*.meta.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "geo-weekly: refresh queue + LLM citation report $(date +%Y-%m-%d) [skip ci]"
             git push origin main
