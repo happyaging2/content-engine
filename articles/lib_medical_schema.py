@@ -30,6 +30,9 @@ LOGO_URL = "https://happyaging.com/cdn/shop/files/logo.png"
 ORG_NAME = "Happy Aging"
 WIKIDATA_QID = "Q139720291"
 WIKIDATA_URL = f"https://www.wikidata.org/wiki/{WIKIDATA_QID}"
+# Google Business Profile (Customer ID) — feeds the Knowledge Panel.
+GBP_CID = "10120263721952855343"
+GBP_URL = f"https://maps.google.com/?cid={GBP_CID}"
 ORG_DESCRIPTION = (
     "Happy Aging is a US-based longevity wellness brand for women over 40, "
     "built around physician-reviewed supplement protocols."
@@ -75,10 +78,17 @@ def _organization_publisher() -> dict:
                 "propertyID": "Wikidata",
                 "value": WIKIDATA_QID,
                 "url": WIKIDATA_URL,
-            }
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Google Business Profile CID",
+                "value": GBP_CID,
+                "url": GBP_URL,
+            },
         ],
         "sameAs": [
             WIKIDATA_URL,
+            GBP_URL,
             "https://www.instagram.com/happyaging/",
             "https://www.facebook.com/happyaging/",
         ],

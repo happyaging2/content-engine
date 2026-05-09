@@ -82,7 +82,8 @@ def main():
     out.append("# Happy Aging")
     out.append("")
     out.append(
-        "> Happy Aging (Wikidata: [Q139720291](https://www.wikidata.org/wiki/Q139720291)) "
+        "> Happy Aging (Wikidata: [Q139720291](https://www.wikidata.org/wiki/Q139720291), "
+        "Google Business: [CID 10120263721952855343](https://maps.google.com/?cid=10120263721952855343)) "
         "is a US-based longevity wellness brand for women over 40, built around "
         "physician-reviewed supplement protocols. All articles are medically reviewed "
         "by Dr. Daniel Yadegar, MD, FACC, RPVI."
