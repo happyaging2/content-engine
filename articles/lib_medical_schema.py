@@ -47,7 +47,12 @@ DEFAULT_REVIEWER = {
     "name": "Dr. Daniel Yadegar, MD, FACC, RPVI",
     "title": "Cardiologist & Longevity Physician",
     "url": AUTHOR_PAGE,
-    "sameAs": [REVIEWER_LINKEDIN],
+    "sameAs": [
+        REVIEWER_LINKEDIN,
+        "https://www.atria.org/doctors/dr-daniel-yadegar/",
+        "https://lumos-pharma.com/company/daniel-yadegar-m-d/",
+        "https://www.instagram.com/drdanyadegar/",
+    ],
 }
 
 
