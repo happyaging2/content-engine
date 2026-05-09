@@ -61,7 +61,7 @@ def _person_reviewer(meta: dict) -> dict:
 
 
 def _organization_publisher() -> dict:
-    return {
+    org = {
         "@type": "Organization",
         "name": ORG_NAME,
         "url": SITE_URL,
@@ -74,6 +74,101 @@ def _organization_publisher() -> dict:
             "https://www.facebook.com/happyaging/",
         ],
     }
+    # Third-party clinical testing references — independent validation that
+    # strengthens E-E-A-T and helps LLMs treat the brand as authoritative.
+    reviews = _brand_third_party_reviews()
+    if reviews:
+        org["subjectOf"] = reviews
+    return org
+
+
+# ── Third-party clinical testing registry ────────────────────────────────────
+# Independent labs that have clinically tested Happy Aging products. Each entry
+# becomes a Review JSON-LD object so LLMs and Google can cross-reference the
+# brand against external validators (Citrus Labs, future NSF/USP/ConsumerLab).
+THIRD_PARTY_VALIDATIONS: list[dict] = [
+    {
+        "product": "Happy Aging Longevity Shot",
+        "match": ["longevity shot", "nmn shot", "nad shot"],
+        "lab": "Citrus Labs",
+        "lab_url": "https://www.citruslabs.com",
+        "url": "https://www.citruslabs.com/testedproducts/happy-aging-longevity-shot",
+        "review_type": "Clinical efficacy testing",
+    },
+    {
+        "product": "Happy Aging Calm Shot",
+        "match": ["calm shot", "stress shot", "ashwagandha shot"],
+        "lab": "Citrus Labs",
+        "lab_url": "https://www.citruslabs.com",
+        "url": "https://www.citruslabs.com/testedproducts/happy-aging-calm-shot",
+        "review_type": "Clinical efficacy testing",
+    },
+    {
+        "product": "Happy Aging Glow Shot",
+        "match": ["glow shot", "skin shot", "collagen shot", "beauty shot"],
+        "lab": "Citrus Labs",
+        "lab_url": "https://www.citruslabs.com",
+        "url": "https://www.citruslabs.com/testedproducts/happy-aging-glow-shot",
+        "review_type": "Clinical efficacy testing",
+    },
+]
+
+
+def _brand_third_party_reviews() -> list[dict]:
+    """All third-party validations attached at the Organization level."""
+    return [
+        {
+            "@type": "Review",
+            "url": v["url"],
+            "name": f"{v['lab']} clinical testing — {v['product']}",
+            "author": {
+                "@type": "Organization",
+                "name": v["lab"],
+                "url": v["lab_url"],
+            },
+            "itemReviewed": {
+                "@type": "Product",
+                "name": v["product"],
+                "brand": {"@type": "Brand", "name": ORG_NAME},
+            },
+            "reviewAspect": v["review_type"],
+        }
+        for v in THIRD_PARTY_VALIDATIONS
+    ]
+
+
+def _article_third_party_reviews(html: str, meta: dict) -> list[dict]:
+    """Validations relevant to the specific article (matched on body + meta)."""
+    haystack = " ".join(
+        [
+            html.lower(),
+            (meta.get("title") or "").lower(),
+            " ".join(meta.get("about") or []).lower(),
+            " ".join(meta.get("mentions") or []).lower(),
+        ]
+    )
+    matched = []
+    for v in THIRD_PARTY_VALIDATIONS:
+        if any(needle in haystack for needle in v["match"]):
+            matched.append(
+                {
+                    "@type": "Review",
+                    "url": v["url"],
+                    "name": f"{v['lab']} clinical testing — {v['product']}",
+                    "author": {
+                        "@type": "Organization",
+                        "name": v["lab"],
+                        "url": v["lab_url"],
+                    },
+                    "itemReviewed": {
+                        "@type": "Product",
+                        "name": v["product"],
+                        "brand": {"@type": "Brand", "name": ORG_NAME},
+                    },
+                    "reviewAspect": v["review_type"],
+                }
+            )
+    return matched
 
 
 def _author_team() -> dict:
@@ -191,6 +286,9 @@ def build_medical_schema(
     citations = _citation_objects(meta)
     if citations:
         schema["citation"] = citations
+    article_reviews = _article_third_party_reviews(html, meta)
+    if article_reviews:
+        schema["subjectOf"] = article_reviews
     return schema
 
 
