@@ -1,21 +1,33 @@
 {
   "_doc": "Competitor registry for comparison content generation. Each cluster maps to competing products. Add/edit freely. Used by scripts/generate-comparison-topics.py and the comparison writer.",
   "clusters": {
-    "nmn": {
+    "longevity": {
+      "_note": "Hero cluster — NAD Advanced is the flagship product. See config/hero-product.json for full data sheet.",
       "happyaging_product": {
-        "name": "Happy Aging Longevity Shot",
-        "url": "https://happyaging.com/products/longevity-shot",
-        "form": "Liquid shot",
-        "key_ingredient_dose": "NMN 250mg + supporting actives",
+        "name": "NAD+ Women's Longevity Formula",
+        "short_name": "NAD Advanced",
+        "url": "https://happyaging.com/pages/nad-advanced",
+        "form": "Capsule (90 ct, 30-day supply)",
+        "active": "Liposomal NAD+ + NMNH + NR + Trans-Resveratrol + 26 additional actives across 6 synergistic blends",
+        "ingredient_count": 30,
+        "blends": ["NAD+ SuperBooster", "Cellular Activators", "Skin Glow", "Hormone Harmony", "Brain Booster", "SuperAntioxidant Organic"],
+        "hallmarks_targeted": 12,
+        "diet": "Vegan, Non-GMO, Gluten-Free",
+        "price_range_usd": "80-150",
         "third_party_tested": "Citrus Labs",
         "third_party_url": "https://www.citruslabs.com/testedproducts/happy-aging-longevity-shot"
       },
       "competitors": [
-        {"name": "Tru Niagen", "url": "https://www.truniagen.com/", "form": "Capsule", "active": "NR (nicotinamide riboside)", "dose_mg": 300, "third_party_tested": "ChromaDex (proprietary)"},
-        {"name": "Wonderfeel Youngr NMN", "url": "https://wonderfeel.com/", "form": "Capsule", "active": "NMN", "dose_mg": 900, "third_party_tested": null},
-        {"name": "DoNotAge Pure NMN", "url": "https://donotage.org/", "form": "Capsule", "active": "NMN", "dose_mg": 500, "third_party_tested": null},
-        {"name": "Renue NMN", "url": "https://renuebyscience.com/", "form": "Sublingual powder", "active": "NMN", "dose_mg": 250, "third_party_tested": null},
-        {"name": "ProHealth Longevity NMN Pro", "url": "https://www.prohealth.com/", "form": "Capsule", "active": "NMN", "dose_mg": 500, "third_party_tested": null}
+        {"name": "Tru Niagen", "url": "https://www.truniagen.com/", "form": "Capsule", "active": "NR (nicotinamide riboside)", "dose_mg": 300, "ingredient_count": 1, "third_party_tested": "ChromaDex (proprietary)", "female_specific": false},
+        {"name": "Elysium Health Basis", "url": "https://www.elysiumhealth.com/", "form": "Capsule", "active": "NR + pterostilbene", "ingredient_count": 2, "female_specific": false},
+        {"name": "Life Extension NAD+ Cell Regenerator", "url": "https://www.lifeextension.com/", "form": "Capsule", "active": "Niagen NR", "ingredient_count": 1, "female_specific": false},
+        {"name": "Wonderfeel Youngr NMN", "url": "https://wonderfeel.com/", "form": "Capsule", "active": "NMN + 5 cofactors", "dose_mg": 900, "ingredient_count": 6, "third_party_tested": null, "female_specific": false},
+        {"name": "DoNotAge Pure NMN", "url": "https://donotage.org/", "form": "Capsule", "active": "NMN", "dose_mg": 500, "ingredient_count": 1, "female_specific": false},
+        {"name": "Renue NMN", "url": "https://renuebyscience.com/", "form": "Sublingual powder", "active": "NMN", "dose_mg": 250, "ingredient_count": 1, "female_specific": false},
+        {"name": "ProHealth Longevity NMN Pro", "url": "https://www.prohealth.com/", "form": "Capsule", "active": "NMN", "dose_mg": 500, "ingredient_count": 1, "female_specific": false},
+        {"name": "IM8 Daily Ultimate Essentials", "url": "https://im8health.com/", "form": "Daily greens powder", "active": "92 nutrients including spermidine, NMN, vitamins, minerals, probiotics", "ingredient_count": 92, "third_party_tested": null, "female_specific": false, "founder_signal": "Co-created with David Beckham; Dr. Andrew Steele (longevity scientist) on advisory"},
+        {"name": "Thorne NiaCel 400", "url": "https://www.thorne.com/products/dp/niacel-r-400", "form": "Capsule", "active": "Nicotinamide Riboside (Niagen)", "dose_mg": 400, "ingredient_count": 1, "third_party_tested": "NSF, TGA", "female_specific": false},
+        {"name": "Arrae Bloom (longevity-positioned)", "url": "https://arrae.com/", "form": "Capsule", "active": "MSM, hyaluronic acid, biotin, antioxidants", "ingredient_count": 6, "third_party_tested": null, "female_specific": true, "note": "Skin/longevity-adjacent; women-focused brand"}
       ]
     },
     "perimenopause": {

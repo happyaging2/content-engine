@@ -1,0 +1,149 @@
+{
+  "_doc": "Single source of truth for Happy Aging's hero product. Read by lib_medical_schema.py, build-llms-txt.py, the writer agents, and the comparison stack. Update here = updates everywhere.",
+  "name": "NAD+ Women's Longevity Formula",
+  "short_name": "NAD Advanced",
+  "url": "https://happyaging.com/pages/nad-advanced",
+  "tagline": "The Female Longevity Revolution",
+  "positioning": "The first women-specific longevity formula targeting all 12 hallmarks of aging",
+  "format": "90 capsules / 30-day supply",
+  "dosage": "2 capsules daily, in the morning with water",
+  "price_range_usd": "80-150",
+  "certifications": ["Vegan", "Non-GMO", "Gluten-Free"],
+  "structure_function_claims": [
+    "Supports healthy aging",
+    "Supports energy",
+    "Supports radiant skin",
+    "Supports immune health",
+    "Supports mental clarity",
+    "Supports hormonal balance"
+  ],
+  "twelve_hallmarks_of_aging": [
+    "Genomic instability",
+    "Telomere attrition",
+    "Epigenetic alterations",
+    "Loss of proteostasis",
+    "Disabled macroautophagy",
+    "Deregulated nutrient sensing",
+    "Mitochondrial dysfunction",
+    "Cellular senescence",
+    "Stem cell exhaustion",
+    "Altered intercellular communication",
+    "Chronic inflammation",
+    "Dysbiosis"
+  ],
+  "scientific_foundation": {
+    "framework": "12 hallmarks of aging",
+    "citations": [
+      {"author": "López-Otín et al.", "journal": "Cell", "year": 2013},
+      {"journal": "Aging Cell", "year": 2023}
+    ]
+  },
+  "blends": [
+    {
+      "name": "NAD+ SuperBooster Longevity Blend",
+      "focus": "Genomic stability, mitochondrial function, nutrient sensing, senescence",
+      "ingredients": [
+        {"name": "Liposomal NAD+", "tag": "advanced", "function": "Direct NAD+ delivery via liposomes for enhanced bioavailability"},
+        {"name": "Nicotinamide Riboside (NR)", "function": "NAD+ precursor; mitochondrial performance and DNA repair"},
+        {"name": "Trans-Resveratrol", "function": "SIRT1 activator; modulates gene expression; anti-inflammatory"},
+        {"name": "NMNH (Reduced NMN)", "tag": "cutting-edge", "function": "Rapid NAD+ elevation for energy and DNA protection"}
+      ]
+    },
+    {
+      "name": "Cellular Activators Blend",
+      "focus": "Mitochondrial dysfunction, proteostasis, genomic stability, autophagy",
+      "ingredients": [
+        {"name": "Urolithin A", "function": "Stimulates mitophagy; supports DNA repair; activates sirtuins"},
+        {"name": "PQQ (Pyrroloquinoline Quinone)", "function": "Stimulates mitochondrial biogenesis"},
+        {"name": "TMG (Trimethylglycine)", "function": "Methyl donor; supports cellular energy"},
+        {"name": "CoQ10 (Coenzyme Q10)", "function": "Antioxidant electron carrier for cellular energy"},
+        {"name": "D-Ribose", "function": "ATP synthesis substrate"},
+        {"name": "Glutathione (Reduced)", "tag": "bioactive", "function": "Protects DNA and proteins from oxidative stress"}
+      ]
+    },
+    {
+      "name": "Skin Glow Complex",
+      "focus": "Proteostasis, genomic stability, intercellular communication",
+      "ingredients": [
+        {"name": "Hyaluronic Acid", "function": "Maintains extracellular matrix and skin hydration"},
+        {"name": "Vitamin C", "function": "Collagen cofactor and antioxidant"},
+        {"name": "Grape Seed Extract", "function": "Polyphenol antioxidant; anti-inflammatory"},
+        {"name": "Bamboo Extract (Silica)", "function": "Supports skin firmness and structural proteins"}
+      ]
+    },
+    {
+      "name": "Hormone Harmony Blend",
+      "focus": "Nutrient sensing, intercellular communication, inflammation",
+      "ingredients": [
+        {"name": "Maca Root", "function": "Modulates HPA axis for vitality"},
+        {"name": "Vitex (Chasteberry)", "function": "Supports balanced sex hormones"},
+        {"name": "Pumpkin Seed", "function": "Zinc source for repair and hormonal health"}
+      ]
+    },
+    {
+      "name": "Brain Booster Blend",
+      "focus": "Mitochondrial function, intercellular communication, inflammation",
+      "ingredients": [
+        {"name": "L-Theanine", "function": "Calming and focus-enhancing amino acid"},
+        {"name": "Lion's Mane Mushroom", "function": "Stimulates nerve growth factor (NGF)"},
+        {"name": "Ginkgo Biloba", "function": "Improves brain circulation and protects neurons"}
+      ]
+    },
+    {
+      "name": "SuperAntioxidant Organic Blend",
+      "focus": "Chronic inflammation, genomic stability, dysbiosis",
+      "ingredients": [
+        {"name": "Açaí", "organic": true, "function": "High-ORAC antioxidant; DNA protection; anti-inflammatory"},
+        {"name": "Goji Berry", "organic": true, "function": "Polyphenol-rich superfruit; immune support"},
+        {"name": "Maqui Berry", "organic": true, "function": "Highest antioxidant capacity; anti-aging"},
+        {"name": "Blueberry", "organic": true, "function": "Anthocyanins for brain and cardiovascular health"},
+        {"name": "Raspberry", "organic": true, "function": "Ellagic acid for cellular protection"},
+        {"name": "Beet Root", "organic": true, "function": "Boosts nitric oxide for vascular health"},
+        {"name": "Blackberry", "organic": true, "function": "Antioxidant power and cellular protection"},
+        {"name": "Strawberry", "organic": true, "function": "Vitamin C boost and antioxidant support"},
+        {"name": "Acerola Cherry", "organic": true, "function": "Natural vitamin C and immune support"},
+        {"name": "Spirulina", "organic": true, "function": "Nutrient-dense microalgae; immune and antioxidant support"}
+      ]
+    }
+  ],
+  "differentiators": [
+    "First women-specific longevity formula targeting all 12 hallmarks of aging",
+    "30 synergistic premium ingredients vs competitors' 1-2",
+    "Advanced liposomal delivery + NMNH (reduced NMN) — cutting-edge bioavailable forms",
+    "Co-founded by Harvard-trained longevity physician Dr. Daniel Yadegar",
+    "Vegan, non-GMO, gluten-free, organic superfoods"
+  ],
+  "competitors_explicit": [
+    {"name": "Elysium Health (Basis)", "differentiator_vs": "Single NAD+ pathway, 2 ingredients, no female-specific support"},
+    {"name": "Tru Niagen", "differentiator_vs": "Single ingredient (NR), generic formulation"},
+    {"name": "Life Extension NAD+ Cell Regenerator", "differentiator_vs": "Traditional approach, no liposomal delivery, male-focused research"}
+  ],
+  "target_audience": {
+    "primary": "Women 35-65, educated, affluent, proactive about health and longevity",
+    "secondary": "Women 25-35 starting their longevity journey early"
+  },
+  "results_timeline": [
+    {"week": "1", "outcome": "Energy boost, better sleep, mental clarity begins"},
+    {"week": "2-3", "outcome": "Skin starts glowing, hormonal balance improves"},
+    {"week": "4-6", "outcome": "Sustained vitality, cognitive enhancement, inflammation reduction"},
+    {"week": "8+", "outcome": "Complete cellular transformation, optimal longevity"}
+  ],
+  "media_features": ["Vogue", "Women's Health", "Bazaar", "Marie Claire", "Forbes", "Equinox", "Bustle", "Wellworthy"],
+  "third_party_tested": "Citrus Labs",
+  "third_party_url": "https://www.citruslabs.com/testedproducts/happy-aging-longevity-shot",
+  "ftc_compliance_notes": {
+    "allowed_superlatives": [
+      "First women-specific NAD+ formula targeting all 12 hallmarks of aging (factually verifiable differentiator)",
+      "Co-founded by Harvard-trained longevity physician (verifiable via Dr. Yadegar bio)"
+    ],
+    "use_with_inline_citation_only": [
+      "5x better absorption (only with head-to-head bioavailability study cited)",
+      "Clinically proven (only with named RCT and PMID inline)"
+    ],
+    "always_hedge": [
+      "Use 'may support' / 'studies suggest' / 'is associated with' for benefits",
+      "Never imply diagnosis, treatment, cure, or prevention of disease",
+      "Testimonials must include 'Results may vary' or reflect typical outcomes"
+    ]
+  }
+}

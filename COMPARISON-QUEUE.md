@@ -1,6 +1,6 @@
 # Comparison Queue — generated 2026-05-09
 
-Total candidates: **67** · Kept after dedup: **67** · Rejected: 0
+Total candidates: **77** · Kept after dedup: **77** · Rejected: 0
 
 Phase 1 reserves >=2 slots per batch of 20 for comparison topics. 
 When picking, prioritize types in this order: `ha-vs-competitor` > 
@@ -10,21 +10,31 @@ When picking, prioritize types in this order: `ha-vs-competitor` >
 
 | Topic | Cluster | Type | Products |
 |---|---|---|---|
-| Happy Aging Longevity Shot vs Tru Niagen | nmn | ha-vs-competitor | Happy Aging Longevity Shot, Tru Niagen |
-| Happy Aging Longevity Shot vs Wonderfeel Youngr NMN | nmn | ha-vs-competitor | Happy Aging Longevity Shot, Wonderfeel Youngr NMN |
-| Happy Aging Longevity Shot vs DoNotAge Pure NMN | nmn | ha-vs-competitor | Happy Aging Longevity Shot, DoNotAge Pure NMN |
-| Happy Aging Longevity Shot vs Renue NMN | nmn | ha-vs-competitor | Happy Aging Longevity Shot, Renue NMN |
-| Happy Aging Longevity Shot vs ProHealth Longevity NMN Pro | nmn | ha-vs-competitor | Happy Aging Longevity Shot, ProHealth Longevity NMN Pro |
-| Best nmn supplements for women over 40 (2026): brands compared | nmn | best-of | Tru Niagen, Wonderfeel Youngr NMN, DoNotAge Pure NMN, Renue NMN, ProHealth Longevity NMN Pro, Happy Aging Longevity Shot |
-| Tru Niagen vs Wonderfeel Youngr NMN: which is better for women over 40 | nmn | competitor-vs-competitor | Tru Niagen, Wonderfeel Youngr NMN |
-| Tru Niagen vs DoNotAge Pure NMN: which is better for women over 40 | nmn | competitor-vs-competitor | Tru Niagen, DoNotAge Pure NMN |
-| Wonderfeel Youngr NMN vs DoNotAge Pure NMN: which is better for women over 40 | nmn | competitor-vs-competitor | Wonderfeel Youngr NMN, DoNotAge Pure NMN |
-| Is Tru Niagen worth it? An evidence-based review | nmn | single-brand-review | Tru Niagen |
-| Is Wonderfeel Youngr NMN worth it? An evidence-based review | nmn | single-brand-review | Wonderfeel Youngr NMN |
-| Is DoNotAge Pure NMN worth it? An evidence-based review | nmn | single-brand-review | DoNotAge Pure NMN |
-| Is Renue NMN worth it? An evidence-based review | nmn | single-brand-review | Renue NMN |
-| Is ProHealth Longevity NMN Pro worth it? An evidence-based review | nmn | single-brand-review | ProHealth Longevity NMN Pro |
-| Nmn brands compared: form, dose, and third-party testing | nmn | landscape | Tru Niagen, Wonderfeel Youngr NMN, DoNotAge Pure NMN, Renue NMN, ProHealth Longevity NMN Pro, Happy Aging Longevity Shot |
+| NAD+ Women's Longevity Formula vs Tru Niagen | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Tru Niagen |
+| NAD+ Women's Longevity Formula vs Elysium Health Basis | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Elysium Health Basis |
+| NAD+ Women's Longevity Formula vs Life Extension NAD+ Cell Regenerator | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Life Extension NAD+ Cell Regenerator |
+| NAD+ Women's Longevity Formula vs Wonderfeel Youngr NMN | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Wonderfeel Youngr NMN |
+| NAD+ Women's Longevity Formula vs DoNotAge Pure NMN | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, DoNotAge Pure NMN |
+| NAD+ Women's Longevity Formula vs Renue NMN | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Renue NMN |
+| NAD+ Women's Longevity Formula vs ProHealth Longevity NMN Pro | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, ProHealth Longevity NMN Pro |
+| NAD+ Women's Longevity Formula vs IM8 Daily Ultimate Essentials | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, IM8 Daily Ultimate Essentials |
+| NAD+ Women's Longevity Formula vs Thorne NiaCel 400 | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Thorne NiaCel 400 |
+| NAD+ Women's Longevity Formula vs Arrae Bloom (longevity-positioned) | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Arrae Bloom (longevity-positioned) |
+| Best longevity supplements for women over 40 (2026): brands compared | longevity | best-of | Tru Niagen, Elysium Health Basis, Life Extension NAD+ Cell Regenerator, Wonderfeel Youngr NMN, DoNotAge Pure NMN, Renue NMN, ProHealth Longevity NMN Pro, IM8 Daily Ultimate Essentials, Thorne NiaCel 400, Arrae Bloom (longevity-positioned), NAD+ Women's Longevity Formula |
+| Tru Niagen vs Elysium Health Basis: which is better for women over 40 | longevity | competitor-vs-competitor | Tru Niagen, Elysium Health Basis |
+| Tru Niagen vs Life Extension NAD+ Cell Regenerator: which is better for women over 40 | longevity | competitor-vs-competitor | Tru Niagen, Life Extension NAD+ Cell Regenerator |
+| Elysium Health Basis vs Life Extension NAD+ Cell Regenerator: which is better for women over 40 | longevity | competitor-vs-competitor | Elysium Health Basis, Life Extension NAD+ Cell Regenerator |
+| Is Tru Niagen worth it? An evidence-based review | longevity | single-brand-review | Tru Niagen |
+| Is Elysium Health Basis worth it? An evidence-based review | longevity | single-brand-review | Elysium Health Basis |
+| Is Life Extension NAD+ Cell Regenerator worth it? An evidence-based review | longevity | single-brand-review | Life Extension NAD+ Cell Regenerator |
+| Is Wonderfeel Youngr NMN worth it? An evidence-based review | longevity | single-brand-review | Wonderfeel Youngr NMN |
+| Is DoNotAge Pure NMN worth it? An evidence-based review | longevity | single-brand-review | DoNotAge Pure NMN |
+| Is Renue NMN worth it? An evidence-based review | longevity | single-brand-review | Renue NMN |
+| Is ProHealth Longevity NMN Pro worth it? An evidence-based review | longevity | single-brand-review | ProHealth Longevity NMN Pro |
+| Is IM8 Daily Ultimate Essentials worth it? An evidence-based review | longevity | single-brand-review | IM8 Daily Ultimate Essentials |
+| Is Thorne NiaCel 400 worth it? An evidence-based review | longevity | single-brand-review | Thorne NiaCel 400 |
+| Is Arrae Bloom (longevity-positioned) worth it? An evidence-based review | longevity | single-brand-review | Arrae Bloom (longevity-positioned) |
+| Longevity brands compared: form, dose, and third-party testing | longevity | landscape | Tru Niagen, Elysium Health Basis, Life Extension NAD+ Cell Regenerator, Wonderfeel Youngr NMN, DoNotAge Pure NMN, Renue NMN, ProHealth Longevity NMN Pro, IM8 Daily Ultimate Essentials, Thorne NiaCel 400, Arrae Bloom (longevity-positioned), NAD+ Women's Longevity Formula |
 | Happy Aging Calm Shot vs Bonafide Relizen | perimenopause | ha-vs-competitor | Happy Aging Calm Shot, Bonafide Relizen |
 | Happy Aging Calm Shot vs Estroven Complete Multi-Symptom | perimenopause | ha-vs-competitor | Happy Aging Calm Shot, Estroven Complete Multi-Symptom |
 | Happy Aging Calm Shot vs Equelle (Pharmavite) | perimenopause | ha-vs-competitor | Happy Aging Calm Shot, Equelle (Pharmavite) |

@@ -33,6 +33,70 @@ WIKIDATA_URL = f"https://www.wikidata.org/wiki/{WIKIDATA_QID}"
 # Google Business Profile (Customer ID) — feeds the Knowledge Panel.
 GBP_CID = "10120263721952855343"
 GBP_URL = f"https://maps.google.com/?cid={GBP_CID}"
+# Hero product — full data lives in config/hero-product.json. Every
+# NAD/NMN/longevity article CTA defaults here, and a Product/DietarySupplement
+# JSON-LD block is emitted whenever the article matches the hero's keywords.
+HERO_PRODUCT_NAME = "NAD+ Women's Longevity Formula"
+HERO_PRODUCT_SHORT = "NAD Advanced"
+HERO_PRODUCT_URL = "https://happyaging.com/pages/nad-advanced"
+HERO_KEYWORDS = [
+    "nad", "nad+", "nmn", "nmnh", "longevity", "anti-aging", "anti aging",
+    "sirtuins", "resveratrol", "urolithin", "mitochondrial", "12 hallmarks",
+    "cellular aging", "healthy aging", "senescence",
+]
+
+
+def _hero_product_schema() -> dict:
+    """DietarySupplement / Product JSON-LD with the 6-blend structure surfaced
+    as additionalProperty so LLMs can extract the formulation."""
+    return {
+        "@type": "DietarySupplement",
+        "name": HERO_PRODUCT_NAME,
+        "alternateName": HERO_PRODUCT_SHORT,
+        "url": HERO_PRODUCT_URL,
+        "brand": {"@type": "Brand", "name": ORG_NAME},
+        "manufacturer": {
+            "@type": "Organization",
+            "name": ORG_NAME,
+            "url": SITE_URL,
+        },
+        "description": (
+            "The first women-specific longevity formula targeting all 12 "
+            "hallmarks of aging. 30 premium ingredients across 6 synergistic "
+            "blends: NAD+ SuperBooster, Cellular Activators, Skin Glow, "
+            "Hormone Harmony, Brain Booster, and SuperAntioxidant Organic."
+        ),
+        "targetPopulation": "Women 35-65 seeking science-backed longevity support",
+        "recommendedIntake": "2 capsules daily, in the morning with water",
+        "isProprietary": True,
+        "nonProprietaryName": "NAD+ precursor + multi-pathway longevity blend",
+        "activeIngredient": (
+            "Liposomal NAD+; Nicotinamide Riboside (NR); NMNH (Reduced NMN); "
+            "Trans-Resveratrol; Urolithin A; PQQ; CoQ10; Glutathione; "
+            "Hyaluronic Acid; Vitamin C; Maca Root; Vitex; L-Theanine; "
+            "Lion's Mane; Ginkgo Biloba"
+        ),
+        "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Capsule count", "value": "90"},
+            {"@type": "PropertyValue", "name": "Servings per container", "value": "30"},
+            {"@type": "PropertyValue", "name": "Diet", "value": "Vegan, Non-GMO, Gluten-Free"},
+            {"@type": "PropertyValue", "name": "Aging hallmarks targeted", "value": "12"},
+            {"@type": "PropertyValue", "name": "Active compounds", "value": "30"},
+            {"@type": "PropertyValue", "name": "Third-party tested", "value": "Citrus Labs"},
+        ],
+    }
+
+
+def _article_mentions_hero(html: str, meta: dict) -> bool:
+    haystack = " ".join(
+        [
+            html.lower(),
+            (meta.get("title") or "").lower(),
+            " ".join(meta.get("about") or []).lower(),
+            " ".join(meta.get("mentions") or []).lower(),
+        ]
+    )
+    return any(k in haystack for k in HERO_KEYWORDS)
 ORG_DESCRIPTION = (
     "Happy Aging is a US-based longevity wellness brand for women over 40, "
     "built around physician-reviewed supplement protocols."
@@ -313,6 +377,11 @@ def build_medical_schema(
     article_reviews = _article_third_party_reviews(html, meta)
     if article_reviews:
         schema["subjectOf"] = article_reviews
+    # Surface the hero product whenever the article touches NAD/NMN/longevity
+    # entities. This puts a structured DietarySupplement next to the article
+    # body for LLM/Google extraction.
+    if _article_mentions_hero(html, meta):
+        schema["mentions"] = (schema.get("mentions") or []) + [_hero_product_schema()]
     return schema
 
 
