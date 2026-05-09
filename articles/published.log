@@ -57,7 +57,7 @@ Author: Happy Aging Team | Template: timeline | All 20 QA PASSED
 [2026-04-23 09:57:05] [9/20] Publishing: What Is Phosphatidylserine and Can It Help Memory After 40?
 [2026-04-23 09:57:05] HTTP_ERROR 403: 'What Is Phosphatidylserine and Can It Help Memory After 40?' -> Host not in allowlist
 [2026-04-23 09:57:07] [10/20] Publishing: Lion's Mane Mushroom for Brain Health After 40: What the Research Shows
-[2026-04-23 09:57:07] HTTP_ERROR 403: 'Lion's Mane Mushroom for Brain Health After 40: What the Research Shows' -> Host not in allowlist
+[2026-04-23 09:57:07] HTTP_ERROR 403: 'Lion\'s Mane Mushroom for Brain Health After 40: What the Research Shows' -> Host not in allowlist
 [2026-04-23 09:57:09] [11/20] Publishing: What Is the Gut-Brain Axis and Why Does It Matter After 40?
 [2026-04-23 09:57:09] HTTP_ERROR 403: 'What Is the Gut-Brain Axis and Why Does It Matter After 40?' -> Host not in allowlist
 [2026-04-23 09:57:11] [12/20] Publishing: How Leaky Gut Affects Hormones After 40
@@ -73,7 +73,7 @@ Author: Happy Aging Team | Template: timeline | All 20 QA PASSED
 [2026-04-23 09:57:21] [17/20] Publishing: Perimenopause Brain Fog: The Hormone Connection Explained
 [2026-04-23 09:57:21] HTTP_ERROR 403: 'Perimenopause Brain Fog: The Hormone Connection Explained' -> Host not in allowlist
 [2026-04-23 09:57:23] [18/20] Publishing: Estrogen and Weight Gain After 40: What's Really Happening
-[2026-04-23 09:57:23] HTTP_ERROR 403: 'Estrogen and Weight Gain After 40: What's Really Happening' -> Host not in allowlist
+[2026-04-23 09:57:23] HTTP_ERROR 403: 'Estrogen and Weight Gain After 40: What\'s Really Happening' -> Host not in allowlist
 [2026-04-23 09:57:25] [19/20] Publishing: Ubiquinol vs. Ubiquinone: Which Form of CoQ10 Is Best After 40?
 [2026-04-23 09:57:25] HTTP_ERROR 403: 'Ubiquinol vs. Ubiquinone: Which Form of CoQ10 Is Best After 40?' -> Host not in allowlist
 [2026-04-23 09:57:27] [20/20] Publishing: Best Supplements for Menopause Fatigue: What Actually Works
@@ -85,3 +85,31 @@ Author: Happy Aging Team | Template: timeline | All 20 QA PASSED
 [2026-04-24 09:10:00] Run from unrestricted environment: SHOPIFY_TOKEN=<token> python3 articles/batch-2026-04-24-publish.py
 [2026-04-24 09:10:00] Articles ready: 20/20 QA-passed HTML files in articles/
 [2026-04-24 09:10:00] === Batch Complete: 0 published (network blocked), 20 ready for external publish ===
+
+--- BATCH 2026-05-09 ---
+Environment: Shopify Admin API returned 403 (host not in allowlist) for all publish attempts.
+Articles staged and ready. Manual publish required or run from allowed host:
+
+bash scripts/qa-and-publish.sh 2026-05-09
+
+Articles ready (20 total):
+1. nmn-week-by-week-results-women-over-40 | "What to Expect Week by Week When You Take NMN After 40" | NMN Cell Renew Tonic
+2. low-nad-signs-women-over-40 | "7 Signs of Low NAD+ in Women Over 40" | NAD+ Longevity Shot
+3. resveratrol-nad-combination-after-40 | "Resveratrol and NAD+: Why This Combination Matters After 40" | NAD+ Longevity Shot
+4. nad-perimenopause-fatigue-connection | "The NAD+ and Perimenopause Fatigue Connection" | NAD+ Longevity Shot
+5. nmn-morning-vs-evening-timing-after-40 | "NMN Morning vs Evening: When Is the Best Time?" | NMN Cell Renew Tonic
+6. longevity-supplement-stack-women-over-40-evidence | "Best Longevity Supplement Stack (Ranked by Evidence)" | NAD+ Advanced Protocol
+7. waking-3am-hormone-fix-after-40 | "Why You Wake Up at 3am After 40 (Hormone Fix)" | Liposomal Sleep Blend
+8. sleep-supplements-ranked-women-over-40 | "Sleep Supplements for Women Over 40: Ranked by Evidence" | Liposomal Magnesium
+9. mitochondria-fatigue-women-over-40 | "Why Your Mitochondria Are Making You Tired After 40" | Liposomal CoQ10
+10. coq10-guide-energy-women-over-40 | "CoQ10 for Energy After 40: A Practical Guide" | Liposomal CoQ10
+11. adrenal-health-hormones-women-over-40 | "Adrenal Health After 40: Connected to Every Hormone Problem" | Liposomal Magnesium
+12. perimenopause-supplement-protocol-women-over-40 | "The Complete Perimenopause Supplement Protocol" | NAD+ Advanced Protocol
+13. word-finding-perimenopause-brain-after-40 | "Word-Finding Problems in Perimenopause" | Neuro Creamer
+14. alpha-gpc-choline-brain-after-40 | "Alpha-GPC and Choline for Brain Health After 40" | Liposomal CoQ10
+15. gut-bloating-hormone-connection-after-40 | "The Gut-Hormone Connection: Why Bloating Gets Worse" | Happiest Gut
+16. prebiotic-probiotic-postbiotic-women-over-40 | "Prebiotic vs Probiotic vs Postbiotic: What You Actually Need" | Happiest Gut
+17. marine-collagen-guide-women-over-40 | "Marine Collagen for Women Over 40: Benefits and What to Expect" | Glow Shot
+18. skin-radiance-supplements-ranked-women-over-40 | "Best Skin Radiance Supplements (Evidence-Based Ranking)" | Liposomal Glutathione
+19. quercetin-inflammation-women-over-40 | "Quercetin and Inflammation After 40" | Liposomal Quercetin
+20. molecular-hydrogen-recovery-women-over-40 | "Molecular Hydrogen for Cellular Recovery After 40" | Hydroburn
