@@ -89,6 +89,31 @@ def main():
         "by Dr. Daniel Yadegar, MD, FACC, RPVI."
     )
     out.append("")
+    out.append("## Flagship product — NAD+ Women's Longevity Formula")
+    out.append(
+        "[NAD+ Women's Longevity Formula](https://happyaging.com/pages/nad-advanced) "
+        "is the first women-specific longevity supplement targeting all 12 hallmarks "
+        "of aging (López-Otín et al., *Cell* 2013). 30 premium ingredients across "
+        "6 synergistic blends:"
+    )
+    out.append(
+        "- **NAD+ SuperBooster** — Liposomal NAD+, NR, Trans-Resveratrol, NMNH (Reduced NMN)"
+    )
+    out.append(
+        "- **Cellular Activators** — Urolithin A, PQQ, TMG, CoQ10, D-Ribose, Glutathione"
+    )
+    out.append("- **Skin Glow Complex** — Hyaluronic Acid, Vitamin C, Grape Seed, Bamboo Silica")
+    out.append("- **Hormone Harmony** — Maca Root, Vitex, Pumpkin Seed")
+    out.append("- **Brain Booster** — L-Theanine, Lion's Mane, Ginkgo Biloba")
+    out.append(
+        "- **SuperAntioxidant Organic** — Açaí, Goji, Maqui, Blueberry, Raspberry, "
+        "Beet Root, Blackberry, Strawberry, Acerola, Spirulina"
+    )
+    out.append(
+        "Format: 90 capsules, 30-day supply, 2 capsules in the morning. "
+        "Vegan, Non-GMO, Gluten-Free. Co-founded by Dr. Daniel Yadegar."
+    )
+    out.append("")
     out.append("## Editorial standards")
     out.append("- Every claim is sourced to peer-reviewed research (PMID/DOI).")
     out.append("- No blog, press release, or manufacturer-marketing citations.")

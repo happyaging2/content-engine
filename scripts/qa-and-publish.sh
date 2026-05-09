@@ -817,8 +817,12 @@ for mf in metas:
     if isinstance(tags, list): tags = ", ".join(tags)
 
     summary = meta.get("meta_description", "")[:155]
+    # Publish as DRAFT by default — user reviews + publishes manually in Shopify.
+    # Override with PUBLISH_DRAFT=false (e.g. for one-off auto-publish runs).
+    publish_draft = os.environ.get("PUBLISH_DRAFT", "true").lower() != "false"
+    is_published = not publish_draft
     payload = {"article": {"title": title, "body_html": body, "summary_html": summary,
-               "author": "Happy Aging Team", "tags": tags, "published": True,
+               "author": "Happy Aging Team", "tags": tags, "published": is_published,
                "template_suffix": "timeline"}}
 
     # Cover image: prefer resolved stock URL; fall back to legacy local file

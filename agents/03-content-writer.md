@@ -45,6 +45,30 @@ Query rules:
 - Avoid brand/product names, medical imagery (hospitals, pills), and surreal language.
 - Do NOT emit `image_prompt` or `body_image_prompts` — those are legacy and ignored.
 
+### HERO PRODUCT — DEFAULT CTA (read first)
+The flagship product is **NAD+ Women's Longevity Formula** ("NAD Advanced") at
+`https://happyaging.com/pages/nad-advanced`. Full ingredient + positioning data
+in `config/hero-product.json`.
+
+**Default the product card to NAD Advanced** for any article in these clusters:
+- Longevity, anti-aging, healthy aging, "12 hallmarks of aging"
+- NAD+, NMN, NR, NMNH, sirtuins, resveratrol, urolithin
+- Mitochondrial function, autophagy, cellular senescence
+- Multi-system energy / brain fog / hormonal balance for women 40+
+- Beauty-from-within (because of the Skin Glow Complex blend)
+
+Only route to a shot product (Calm / Glow / Longevity Shot) when the topic is
+**single-mechanism niche** that the shot specifically addresses. When in doubt,
+default to NAD Advanced — that's the traction priority.
+
+When mentioning NAD Advanced in body copy, use FTC-safe language:
+- ✓ "Happy Aging's NAD+ Women's Longevity Formula combines 30 ingredients
+   across 6 synergistic blends to address all 12 hallmarks of aging"
+- ✓ "Includes advanced forms — liposomal NAD+ and NMNH (Reduced NMN)"
+- ✗ "5x better absorption" (no inline study)
+- ✗ "Clinically proven" (without PMID inline)
+- ✗ "The best NAD+ supplement" (superiority without RCT)
+
 ### PRODUCT CARD
 - One `product-card-inline` per article, placed after the "what helps" section.
 - Get the REAL product image URL before writing:
