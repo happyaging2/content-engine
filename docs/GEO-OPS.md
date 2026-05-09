@@ -40,28 +40,73 @@ build-pillar-pages.py         → pages/pillar-*.html (when new entities are add
 
 ---
 
-## Scheduled jobs (cron)
+## Autonomous execution — GitHub Actions
+
+Everything below runs on a schedule with **no local machine required**. Just
+configure repository secrets once (see next section) and the workflows trigger
+themselves.
+
+| Workflow file | Trigger | What it does |
+|---|---|---|
+| `.github/workflows/publish-shopify.yml`     | daily 11:00 UTC + manual | QA + publish today's batch to Shopify |
+| `.github/workflows/geo-post-publish.yml`    | on push to `articles/**` | Build llms.txt, pillar pages, internal links, IndexNow ping |
+| `.github/workflows/geo-weekly.yml`          | Mondays 06:00 UTC + manual | Flag stale articles (>90d) + LLM citation monitor |
+| `.github/workflows/geo-monthly.yml`         | 1st of month 05:00 UTC + manual | Enrich PMIDs from PubMed + retro-patch MedicalWebPage schema |
+| `.github/workflows/update-images.yml`       | manual                  | Force re-fetch covers + body images (legacy) |
+
+The post-publish workflow uses a `concurrency: geo-post-publish` group with
+`cancel-in-progress: true`, so back-to-back commits from the daily publish
+collapse into a single run.
+
+The `[skip ci]` suffix on auto-commits prevents recursive workflow triggers.
+
+### Local cron alternative
+
+If you ever want to run from a local machine instead, the equivalent crontab is:
 
 ```cron
-# Daily content publish
 0  8 * * * bash ~/Desktop/content-engine/scripts/daily-publish.sh
-
-# Weekly: flag articles >90 days since last review
-0 6 * * 1 cd ~/Desktop/content-engine && python3 scripts/re-review-stale.py
-
-# Weekly: monitor LLM citations
-0 7 * * 1 cd ~/Desktop/content-engine && python3 scripts/llm-citation-monitor.py
-
-# After each publish: notify Bing/IndexNow
-# (already integrated in qa-and-publish.sh once INDEXNOW_KEY is set)
-
-# Monthly: enrich any new PMIDs with PubMed metadata
-0 5 1 * * cd ~/Desktop/content-engine && python3 scripts/enrich-citations-from-pubmed.py
+0  6 * * 1 cd ~/Desktop/content-engine && python3 scripts/re-review-stale.py
+0  7 * * 1 cd ~/Desktop/content-engine && python3 scripts/llm-citation-monitor.py
+0  5 1 * * cd ~/Desktop/content-engine && python3 scripts/enrich-citations-from-pubmed.py
 ```
+
+But GitHub Actions is preferred — single source of truth, no maintenance.
 
 ---
 
-## Required env vars
+## Repository Secrets (one-time setup for autonomy)
+
+Add these in **GitHub → Settings → Secrets and variables → Actions → New
+repository secret**. Required ones unblock the daily publish; optional ones
+unlock additional autonomous behaviors (citation monitoring, IndexNow, etc.).
+
+### Required (without these, the daily publish breaks)
+
+| Secret | Purpose |
+|---|---|
+| `SHOPIFY_TOKEN`        | Shopify Admin API — publish + retro-patch |
+| `PEXELS_API_KEY`       | Cover/body images (primary) |
+| `PIXABAY_API_KEY`      | Cover/body images (secondary) |
+
+### Recommended (each unlocks a piece of GEO autonomy)
+
+| Secret | Unlocks |
+|---|---|
+| `NCBI_API_KEY`         | Monthly PMID enrichment at 10 req/s instead of 3 (faster, more reliable) |
+| `INDEXNOW_KEY`         | Auto-notification of Bing → ChatGPT Search index after every publish |
+| `PERPLEXITY_API_KEY`   | Weekly Perplexity citation tracking |
+| `OPENAI_API_KEY`       | Weekly ChatGPT search citation tracking |
+| `ANTHROPIC_API_KEY`    | Weekly Claude web-search citation tracking |
+| `SERPAPI_KEY`          | Weekly Google AI Overviews citation tracking |
+| `UNSPLASH_ACCESS_KEY`  | Image fallback when Pexels + Pixabay miss |
+
+If a recommended secret is missing, the workflow logs a friendly skip message
+and continues — nothing fails.
+
+---
+
+## Required env vars (legacy — for local cron use only)
 
 | Var | Used by | Purpose |
 |---|---|---|
