@@ -46,16 +46,11 @@ jobs:
       - name: Auto internal linking
         run: python3 scripts/auto-internal-links.py
 
-      # 4. Notify Bing (= ChatGPT Search index) via IndexNow
-      - name: IndexNow submit
-        env:
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
-        run: |
-          if [ -n "$INDEXNOW_KEY" ]; then
-            bash scripts/indexnow-submit.sh
-          else
-            echo "INDEXNOW_KEY not set — skipping (host the verification file at /<KEY>.txt to enable)."
-          fi
+      # IndexNow is handled by the Shopify app (Bing IndexNow integration on
+      # the Happy Aging store). Re-enabling our own submitter would fail Bing's
+      # key-verification check because the .txt file is owned by the app.
+      # If the app is ever removed, restore the IndexNow submit step from
+      # scripts/indexnow-submit.sh and host public/<KEY>.txt at the site root.
 
       - name: Commit generated assets
         run: |
