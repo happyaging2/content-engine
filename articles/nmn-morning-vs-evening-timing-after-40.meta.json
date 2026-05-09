@@ -1,0 +1,60 @@
+{
+  "title": "NMN Morning vs Evening: When Is the Best Time to Take It After 40?",
+  "slug": "nmn-morning-vs-evening-timing-after-40",
+  "author": "Happy Aging Team",
+  "tags": "NMN, NAD+, circadian rhythm, timing, women over 40, energy, sleep, perimenopause, longevity",
+  "product_handle": "nmn-cell-renew-tonic",
+  "image_query": "woman 40s morning routine healthy breakfast",
+  "body_image_queries": [
+    "woman 40s morning sunlight circadian wellness",
+    "woman 40s evening relaxing wind down routine",
+    "woman 40s consistent healthy schedule planning",
+    "woman 40s sleep quality rest peaceful bedroom"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["NMN", "NAD+", "circadian rhythm", "NMN timing"],
+  "mentions": ["NAMPT", "CLOCK", "BMAL1", "SIRT1", "sirtuins", "perimenopause", "mitochondria", "longevity", "estrogen"],
+  "medical_audience": "Patient",
+  "primary_topic": "best time to take NMN after 40",
+  "citations": [
+    {
+      "pmid": "19940851",
+      "title": "Circadian clock feedback cycle through NAMPT-mediated NAD+ biosynthesis",
+      "journal": "Science",
+      "year": 2009,
+      "study_type": "Mechanistic",
+      "n": null
+    },
+    {
+      "pmid": "19407202",
+      "title": "Circadian control of the NAD+ salvage pathway by CLOCK-SIRT1",
+      "journal": "Science",
+      "year": 2009,
+      "study_type": "Mechanistic",
+      "n": null
+    },
+    {
+      "pmid": "33099023",
+      "title": "Oral nicotinamide mononucleotide supplementation safely elevates NAD+ levels in skeletal muscle and blood of older adults",
+      "journal": "Cell Metabolism",
+      "year": 2020,
+      "study_type": "RCT",
+      "n": 30
+    },
+    {
+      "pmid": "33888596",
+      "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women",
+      "journal": "Science",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 25
+    }
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

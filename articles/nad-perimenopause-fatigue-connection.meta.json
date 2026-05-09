@@ -1,0 +1,60 @@
+{
+  "title": "The NAD+ and Perimenopause Fatigue Connection: What Science Says",
+  "slug": "nad-perimenopause-fatigue-connection",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, perimenopause, fatigue, women over 40, mitochondria, sirtuins, longevity, NMN, menopause",
+  "product_handle": "longevity-shots",
+  "image_query": "woman 40s tired perimenopause fatigue lifestyle",
+  "body_image_queries": [
+    "woman 40s low energy midlife wellness",
+    "woman 40s mitochondria cellular energy yoga",
+    "woman 40s sleep quality restorative rest",
+    "woman 40s outdoor walking energized nature"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+", "perimenopause", "perimenopausal fatigue", "mitochondrial dysfunction"],
+  "mentions": ["NMN", "NR", "sirtuins", "SIRT1", "SIRT3", "NAMPT", "CD38", "estrogen", "longevity", "inflammaging"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ perimenopause fatigue",
+  "citations": [
+    {
+      "pmid": "33099023",
+      "title": "Oral nicotinamide mononucleotide supplementation safely elevates NAD+ levels in skeletal muscle and blood of older adults",
+      "journal": "Cell Metabolism",
+      "year": 2020,
+      "study_type": "RCT",
+      "n": 30
+    },
+    {
+      "pmid": "27304508",
+      "title": "CD38 dictates age-related NAD decline and mitochondrial dysfunction through an SIRT3-dependent mechanism",
+      "journal": "Cell Metabolism",
+      "year": 2016,
+      "study_type": "Mechanistic",
+      "n": null
+    },
+    {
+      "pmid": "29514064",
+      "title": "Therapeutic potential of NAD-boosting molecules: the in vivo evidence",
+      "journal": "Cell Metabolism",
+      "year": 2018,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "25902545",
+      "title": "In vivo NAD assay reveals the intracellular NAD contents and redox state in healthy human brain and their age dependences",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "year": 2015,
+      "study_type": "Observational",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}
