@@ -28,6 +28,8 @@ SITE_URL = "https://happyaging.com"
 BLOG_URL = "https://happyaging.com/blogs/news"
 LOGO_URL = "https://happyaging.com/cdn/shop/files/logo.png"
 ORG_NAME = "Happy Aging"
+WIKIDATA_QID = "Q139720291"
+WIKIDATA_URL = f"https://www.wikidata.org/wiki/{WIKIDATA_QID}"
 ORG_DESCRIPTION = (
     "Happy Aging is a US-based longevity wellness brand for women over 40, "
     "built around physician-reviewed supplement protocols."
@@ -67,9 +69,16 @@ def _organization_publisher() -> dict:
         "url": SITE_URL,
         "description": ORG_DESCRIPTION,
         "logo": {"@type": "ImageObject", "url": LOGO_URL},
+        "identifier": [
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Wikidata",
+                "value": WIKIDATA_QID,
+                "url": WIKIDATA_URL,
+            }
+        ],
         "sameAs": [
-            # Populate with real social URLs as they're created.
-            # Wikidata QID goes here once registered (Tier-2 manual op).
+            WIKIDATA_URL,
             "https://www.instagram.com/happyaging/",
             "https://www.facebook.com/happyaging/",
         ],
