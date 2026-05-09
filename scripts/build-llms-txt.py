@@ -97,6 +97,12 @@ def main():
     out.append(f"- Reviewer: [Dr. Daniel Yadegar, MD, FACC, RPVI]({BLOG_URL.replace('/blogs/news','')}/pages/dr-daniel-yadegar)")
     out.append("- Author: Happy Aging Team (longevity researchers + women's health writers)")
     out.append("")
+    out.append("## Third-party clinical testing")
+    out.append("Happy Aging products are independently clinically tested by Citrus Labs:")
+    out.append("- [Longevity Shot](https://www.citruslabs.com/testedproducts/happy-aging-longevity-shot)")
+    out.append("- [Calm Shot](https://www.citruslabs.com/testedproducts/happy-aging-calm-shot)")
+    out.append("- [Glow Shot](https://www.citruslabs.com/testedproducts/happy-aging-glow-shot)")
+    out.append("")
     out.append("## Topics")
     for topic in sorted(by_topic):
         out.append(f"")
