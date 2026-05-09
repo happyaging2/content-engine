@@ -1,7 +1,6 @@
 {
   "title": "Why You Wake Up at 3am After 40 (And the Hormone Fix That Works)",
   "slug": "waking-3am-hormone-fix-after-40",
-  "author": "Happy Aging Team",
   "tags": "sleep, hormones, perimenopause, cortisol, progesterone, magnesium, women over 40, insomnia, 3am waking",
   "product_handle": "sleep-tonic",
   "image_query": "woman 40s peaceful bedroom morning light",
@@ -22,10 +21,10 @@
   "medical_audience": "Patient",
   "primary_topic": "waking up at 3am after 40 hormones",
   "citations": [
-    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "J Res Med Sci", "year": 2012, "study_type": "RCT", "n": 46},
-    {"pmid": "9415946", "title": "Sleep loss results in an elevation of cortisol levels the next evening", "journal": "Sleep", "year": 1997},
-    {"pmid": "21209025", "title": "Progesterone prevents sleep disturbances in postmenopausal women", "journal": "J Clin Endocrinol Metab", "year": 2011},
-    {"pmid": "31585029", "title": "Effects of L-theanine administration on stress-related symptoms and cognitive functions", "journal": "Nutrients", "year": 2019}
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly"},
+    {"pmid": "9415946", "title": "Sleep loss results in an elevation of cortisol levels the next evening"},
+    {"pmid": "21209025", "title": "Progesterone prevents sleep disturbances in postmenopausal women"},
+    {"pmid": "31585029", "title": "Effects of L-theanine administration on stress-related symptoms and cognitive functions"}
   ],
   "date_published": "2026-05-09",
   "date_modified": "2026-05-09"
