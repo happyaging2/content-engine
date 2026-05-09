@@ -1,0 +1,33 @@
+{
+  "title": "Resveratrol and NAD+: Why This Combination Matters After 40",
+  "slug": "resveratrol-nad-combination-after-40",
+  "author": "Happy Aging Team",
+  "tags": "longevity, NAD+, resveratrol, sirtuins, NMN, anti-aging, women over 40, cellular health",
+  "product_handle": "longevity-shots",
+  "image_query": "woman 40s healthy energy nature walk",
+  "body_image_queries": [
+    "woman 40s vibrant healthy lifestyle outdoors",
+    "woman 40s morning routine wellness kitchen",
+    "woman 40s yoga stretching energy vitality",
+    "woman 40s smiling healthy active longevity"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["resveratrol", "NAD+", "sirtuin activation", "NMN supplementation", "longevity supplements"],
+  "mentions": ["SIRT1", "NMN", "nicotinamide riboside", "sirtuins", "perimenopause NAD+"],
+  "medical_audience": "Patient",
+  "primary_topic": "resveratrol NAD+ combination after 40",
+  "citations": [
+    {"pmid": "34016740", "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women", "journal": "Science", "year": 2021},
+    {"pmid": "24786309", "title": "NAD+ and sirtuins in aging and disease", "journal": "Trends Cell Biol", "year": 2014},
+    {"pmid": "16732220", "title": "Therapeutic potential of resveratrol: the in vivo evidence", "journal": "Nat Rev Drug Discov", "year": 2006},
+    {"pmid": "26785480", "title": "NAD+ in aging, metabolism, and neurodegeneration", "journal": "Science", "year": 2015},
+    {"pmid": "29514063", "title": "Therapeutic potential of NAD-boosting molecules", "journal": "Cell Metab", "year": 2018}
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

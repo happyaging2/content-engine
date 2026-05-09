@@ -1,0 +1,44 @@
+{
+  "title": "What to Expect Week by Week When You Take NMN After 40",
+  "slug": "nmn-week-by-week-results-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NMN, NAD+, longevity, women over 40, energy, cellular health, perimenopause",
+  "product_handle": "nmn-cell-renew-tonic",
+  "image_query": "woman 40s energized morning routine",
+  "body_image_queries": [
+    "woman 40s healthy energy morning",
+    "woman 40s exercising outdoors active",
+    "woman 40s glowing skin wellness",
+    "woman 40s focused working productive"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["NMN", "NAD+", "nicotinamide mononucleotide"],
+  "mentions": ["sirtuins", "mitochondria", "longevity", "cellular repair", "perimenopause"],
+  "medical_audience": "Patient",
+  "primary_topic": "NMN results timeline women over 40",
+  "citations": [
+    {
+      "pmid": "33099023",
+      "title": "Oral nicotinamide mononucleotide supplementation safely elevates NAD+ levels in skeletal muscle and blood of older adults",
+      "journal": "Cell Metabolism",
+      "year": 2020,
+      "study_type": "RCT",
+      "n": 30
+    },
+    {
+      "pmid": "33888596",
+      "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women",
+      "journal": "Science",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 25
+    }
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

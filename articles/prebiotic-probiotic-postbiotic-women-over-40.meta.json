@@ -1,0 +1,31 @@
+{
+  "title": "Prebiotic vs Probiotic vs Postbiotic: What Women Over 40 Actually Need",
+  "slug": "prebiotic-probiotic-postbiotic-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "gut health, prebiotic, probiotic, postbiotic, women over 40, digestion, bloating, microbiome",
+  "product_handle": "happiest-gut",
+  "image_query": "woman 40s healthy eating kitchen",
+  "body_image_queries": [
+    "woman 40s eating yogurt breakfast kitchen",
+    "woman 40s preparing vegetables healthy meal",
+    "woman 40s drinking morning wellness routine"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["prebiotic supplements", "probiotic supplements", "postbiotic supplements", "gut microbiome", "women's digestive health"],
+  "mentions": ["Lactobacillus rhamnosus", "Bifidobacterium longum", "inulin", "fructooligosaccharides", "butyrate", "short-chain fatty acids"],
+  "medical_audience": "Patient",
+  "primary_topic": "prebiotic probiotic postbiotic women over 40",
+  "citations": [
+    {"pmid": "34256014", "title": "Gut-microbiota-targeted diets modulate human immune status", "journal": "Cell", "year": 2021},
+    {"pmid": "24912386", "title": "ISAPP consensus on probiotic definition", "journal": "Nat Rev Gastroenterol Hepatol", "year": 2014},
+    {"pmid": "28611480", "title": "ISAPP consensus on prebiotic definition", "journal": "Nat Rev Gastroenterol Hepatol", "year": 2017},
+    {"pmid": "30046148", "title": "Inflammaging review", "journal": "Nat Rev Endocrinol", "year": 2018}
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}
