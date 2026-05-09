@@ -761,6 +761,18 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
                       schema_block + r'\1', body, flags=re.IGNORECASE)
         schema_added += 1
 
+    # MedicalWebPage / Article schema with reviewer Person + HowTo (GEO E-E-A-T)
+    sys.path.insert(0, os.path.abspath("articles"))
+    try:
+        from lib_medical_schema import inject_medical_schema
+        body = inject_medical_schema(
+            body, title=title, slug=slug,
+            meta_desc=meta.get("meta_description") or meta_description(body),
+            meta=meta,
+        )
+    except Exception as e:
+        print(f"  WARN: medical schema injection failed for {slug}: {e}")
+
     # Meta description saved to meta.json for use at publish time
     meta["meta_description"] = meta_description(body)
     json.dump(meta, open(mf, "w"), indent=2, ensure_ascii=False)

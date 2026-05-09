@@ -17,6 +17,37 @@ Example: Energy, Sleep, Hormones, Metabolism, Skin, Gut, Brain, Immunity
 
 Each topic MUST belong to a cluster.
 
+## DEDUPLICATION (MANDATORY — runs before scoring)
+Before scoring, write your candidate topic list (one per line) to `/tmp/candidates.txt`
+and run:
+```bash
+python3 scripts/check-duplicate-topics.py /tmp/candidates.txt
+```
+The script writes `kept.txt` (proceed) and `rejected.txt` (with reasons). Only score
+topics in `kept.txt`. Rejection reasons:
+- slug collision with an existing article
+- title token-overlap ≥55% (Jaccard) with an existing title
+- same `primary_topic` + 2+ shared `about` entities with an article published in the last 180 days
+
+If `kept.txt` has fewer than 20 topics, generate more candidates and re-run dedup.
+
+## COMPETITOR CITATION GAP (recommended — informs GEO Potential score)
+Optionally run, before scoring:
+```bash
+python3 scripts/competitor-citation-gap.py /tmp/candidates.txt
+```
+This produces `COMPETITOR-GAP.md` ranked by opportunity (higher score = weaker
+competitors currently being cited by Perplexity / ChatGPT / Google AI Overviews).
+Use this to bias the GEO Potential subscore: queries where high-authority sites
+(Mayo, NIH, Healthline) dominate are harder to displace; queries dominated by
+low-authority blogs are green fields.
+
+## REFRESH QUEUE (90-day cadence)
+Before generating new candidates, check `REFRESH-QUEUE.md`. Articles flagged
+there are >90 days past their last medical review and need refreshing through
+Phase 4 (citations re-validated, `date_reviewed` + `date_modified` bumped, GEO
+fields back-filled if missing). Refresh ≥2 stale articles per batch of 20 new.
+
 ## OPPORTUNITY TYPES
 - pain-driven queries
 - question-based queries
