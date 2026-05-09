@@ -316,6 +316,58 @@ def build_medical_schema(
     return schema
 
 
+def build_comparison_itemlist(*, title: str, meta: dict) -> dict | None:
+    """When meta['format'] == 'comparison', emit an ItemList of Product objects.
+    Google Shopping + AI Overviews shopping ingest ItemList for side-by-side
+    product cards. Pulled from meta['products_compared']."""
+    if (meta.get("format") or "").lower() != "comparison":
+        return None
+    products = meta.get("products_compared") or []
+    if len(products) < 2:
+        return None
+    items = []
+    for i, p in enumerate(products, start=1):
+        if not isinstance(p, dict) or not p.get("name"):
+            continue
+        prod_obj: dict = {
+            "@type": "Product",
+            "name": p["name"],
+        }
+        if p.get("url"):
+            prod_obj["url"] = p["url"]
+        if p.get("brand"):
+            prod_obj["brand"] = {"@type": "Brand", "name": p["brand"]}
+        elif "happyaging" in (p.get("url") or "").lower():
+            prod_obj["brand"] = {"@type": "Brand", "name": ORG_NAME}
+        if p.get("active"):
+            prod_obj["additionalProperty"] = [
+                {"@type": "PropertyValue", "name": "Active ingredient", "value": p["active"]}
+            ]
+        if p.get("dose"):
+            prod_obj.setdefault("additionalProperty", []).append(
+                {"@type": "PropertyValue", "name": "Dose", "value": p["dose"]}
+            )
+        if p.get("form"):
+            prod_obj.setdefault("additionalProperty", []).append(
+                {"@type": "PropertyValue", "name": "Form", "value": p["form"]}
+            )
+        if p.get("third_party_tested"):
+            prod_obj.setdefault("additionalProperty", []).append(
+                {"@type": "PropertyValue", "name": "Third-party tested", "value": p["third_party_tested"]}
+            )
+        items.append({"@type": "ListItem", "position": i, "item": prod_obj})
+    if not items:
+        return None
+    return {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": title,
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "numberOfItems": len(items),
+        "itemListElement": items,
+    }
+
+
 def build_howto_schema(*, title: str, html: str) -> dict | None:
     """If the article contains a numbered <ol> protocol with 3+ items, emit HowTo."""
     # Find the first <ol> with multiple <li>
@@ -368,6 +420,13 @@ def inject_medical_schema(
         html,
         flags=re.DOTALL,
     )
+    # Strip stale ItemList (re-runs)
+    html = re.sub(
+        r'\s*<script type="application/ld\+json">\s*\{[^}]*"@type":\s*"ItemList".*?</script>\s*',
+        "\n",
+        html,
+        flags=re.DOTALL,
+    )
     schema = build_medical_schema(
         title=title, slug=slug, meta_desc=meta_desc, meta=meta, html=html
     )
@@ -375,6 +434,9 @@ def inject_medical_schema(
     howto = build_howto_schema(title=title, html=html)
     if howto:
         block += render_jsonld_block(howto)
+    comparison = build_comparison_itemlist(title=title, meta=meta)
+    if comparison:
+        block += render_jsonld_block(comparison)
     if "</body>" in html:
         return html.replace("</body>", block + "</body>", 1)
     return html + block
@@ -383,6 +445,7 @@ def inject_medical_schema(
 __all__ = [
     "build_medical_schema",
     "build_howto_schema",
+    "build_comparison_itemlist",
     "inject_medical_schema",
     "render_jsonld_block",
     "DEFAULT_REVIEWER",
