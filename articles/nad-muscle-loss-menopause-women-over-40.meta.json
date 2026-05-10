@@ -1,0 +1,32 @@
+{
+  "title": "NAD+ and Muscle Loss After Menopause: The Cellular Connection Women Need to Know",
+  "slug": "nad-muscle-loss-menopause-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, muscle loss, menopause, sarcopenia, cellular health, longevity, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s doing resistance training with light dumbbells in a well-lit home gym, wearing athletic leggings and a fitted tank top, with a bright clean exercise space and natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a yoga warrior pose in a bright studio wearing athletic clothes in soft tones, with a clean wood floor and large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating a healthy protein-rich meal at a kitchen table, with grilled salmon and colorful vegetables on a clean white plate, wearing a casual home outfit in a bright modern dining area, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing bodyweight squats outdoors in athletic wear, in a sunny backyard or park with green grass, wearing fitted workout leggings and a breathable top, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s stretching her legs before a workout in a park, wearing athletic shoes and comfortable workout clothes, sitting on a park bench with morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+ and muscle loss", "sarcopenia menopause", "muscle preservation women over 40", "NMN muscle insulin sensitivity", "sirtuin muscle function"],
+  "mentions": ["sarcopenia", "NAD+", "NMN", "SIRT1", "SIRT3", "estrogen", "insulin sensitivity", "mitochondria", "muscle protein synthesis", "resistance training"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ muscle loss menopause women",
+  "citations": [
+    {"pmid": "34811282", "citation": "Yoshino M et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021."},
+    {"pmid": "29502867", "citation": "Rajman L, Chwalek K, Sinclair DA. Therapeutic potential of NAD-boosting molecules. Cell Metab. 2018."},
+    {"pmid": "28273063", "citation": "Mills KF et al. Long-term administration of NMN mitigates age-associated physiological decline in mice. Cell Metab. 2016."}
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
