@@ -1,0 +1,37 @@
+{
+  "title": "Supplement Timing Guide for Women Over 40: When to Take What for Best Results",
+  "slug": "supplement-timing-guide-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "supplement timing, NMN, magnesium, NAD+, morning supplements, evening supplements, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s organizing supplements on a kitchen counter in the morning sunlight, wearing a casual light-colored morning top, clean white kitchen counter with supplement bottles neatly arranged and a glass of water, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s laying out morning supplements in an organized way on a bright kitchen counter with a glass of water, wearing casual morning clothes in soft colors, natural morning sunlight, supplement bottles neatly arranged, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a supplement capsule with a full glass of water, a healthy breakfast with eggs and avocado visible in the background on a kitchen table, wearing a casual soft top, calm and organized expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s setting out evening supplements next to a glass of water on a tidy nightstand in a calm bedroom, wearing comfortable pajamas, soft warm lamp light, peaceful bedroom atmosphere, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing a wellness journal and supplement schedule at a kitchen table, focused and organized expression, healthy foods including fruit and vegetables visible in the background, wearing a casual light top, pen in hand, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["supplement timing women over 40", "chronopharmacology supplements", "NMN timing morning", "magnesium glycinate evening sleep", "probiotic timing before meals", "fat-soluble vitamin absorption"],
+  "mentions": ["NAD Advanced Longevity Formula", "NMN", "magnesium glycinate", "CoQ10", "Vitamin D3", "B complex", "melatonin", "zinc", "probiotics", "curcumin", "omega-3", "chronopharmacology"],
+  "medical_audience": "Patient",
+  "primary_topic": "supplement timing guide women over 40",
+  "citations": [
+    {
+      "pmid": "34811282",
+      "citation": "Yoshino M, Yoshino J, Kayser BD, et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021;372(6547):1224-1229."
+    },
+    {
+      "pmid": "23853635",
+      "citation": "Abbasi B, Kimiagar M, Sadeghniiat K, Shirazi MM, Hedayati M, Rashidkhani B. The effect of magnesium supplementation on primary insomnia in elderly: A double-blind placebo-controlled clinical trial. J Res Med Sci. 2012;17(12):1161-1169."
+    }
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
