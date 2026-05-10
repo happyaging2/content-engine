@@ -511,14 +511,57 @@ def inject_medical_schema(
     return html + block
 
 
+def build_site_schema_graph() -> dict:
+    """Site-wide @graph: Organization + WebSite + Person reviewer + author Org.
+    Emit ONCE in the Shopify theme (theme.liquid <head>) — every page inherits.
+    Without this, the Organization is only a `publisher` field per article and
+    Google never consolidates 'Happy Aging' as a single Knowledge Graph entity.
+    """
+    org = _organization_publisher()
+    org["@id"] = f"{SITE_URL}#organization"
+    return {
+        "@context": "https://schema.org",
+        "@graph": [
+            org,
+            {
+                "@type": "WebSite",
+                "@id": f"{SITE_URL}#website",
+                "url": SITE_URL,
+                "name": ORG_NAME,
+                "description": ORG_DESCRIPTION,
+                "publisher": {"@id": f"{SITE_URL}#organization"},
+                "inLanguage": "en-US",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": f"{SITE_URL}/search?q={{search_term_string}}",
+                    },
+                    "query-input": "required name=search_term_string",
+                },
+            },
+            {
+                **_person_reviewer({}),
+                "@id": f"{AUTHOR_PAGE}#person",
+            },
+            {
+                **_author_team(),
+                "@id": f"{SITE_URL}#editorial-team",
+            },
+        ],
+    }
+
+
 __all__ = [
     "build_medical_schema",
     "build_howto_schema",
     "build_comparison_itemlist",
+    "build_site_schema_graph",
     "inject_medical_schema",
     "render_jsonld_block",
     "DEFAULT_REVIEWER",
     "REVIEWER_LINKEDIN",
     "AUTHOR_PAGE",
     "ORG_DESCRIPTION",
+    "THIRD_PARTY_VALIDATIONS",
 ]

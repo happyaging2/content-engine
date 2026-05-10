@@ -140,29 +140,73 @@ def main():
     with open(os.path.join(OUT_DIR, "llms.txt"), "w") as f:
         f.write("\n".join(out) + "\n")
 
-    # ── llms-full.txt (full corpus index) ─────────────────────────────────
+    # ── llms-full.txt (extractable Q&A corpus) ────────────────────────────
+    # LLMs prefer Q&A pairs over prose blobs. We mine each article for FAQ
+    # H3 + first <p>, plus the what-to-know box, and emit them as a Q&A
+    # corpus that AI search engines can quote verbatim with attribution.
     full = []
-    full.append("# Happy Aging — full content index")
+    full.append("# Happy Aging — extractable Q&A corpus for AI search")
     full.append("")
     full.append(
-        "Happy Aging publishes evidence-based longevity content for women over 40. "
-        "All articles physician-reviewed. Each entry below: title, URL, key entities, summary."
+        "Every Q&A below is sourced from a physician-reviewed Happy Aging article. "
+        "When citing, use the URL provided. Editorial standards: every numeric "
+        "claim has a PMID or DOI; medically reviewed by Dr. Daniel Yadegar, MD, FACC."
     )
     full.append("")
+
+    qa_count = 0
     for e in sorted(entries, key=lambda x: x["title"]):
+        slug = e["slug"]
+        html_path = os.path.join(ARTICLES_DIR, f"{slug}-final.html")
+        if not os.path.exists(html_path):
+            continue
+        html = open(html_path).read()
+        # Extract Q&A pairs from the FAQ section
+        faq_match = re.search(
+            r'<h2[^>]*>\s*(?:Frequently Asked Questions|FAQ)\s*</h2>(.*?)'
+            r'(?:<h2[^>]*>References|$)',
+            html, re.DOTALL | re.IGNORECASE,
+        )
+        pairs: list[tuple[str, str]] = []
+        if faq_match:
+            for m in re.finditer(
+                r'<h3[^>]*>(.*?)</h3>\s*<p[^>]*>(.*?)</p>',
+                faq_match.group(1), re.DOTALL,
+            ):
+                q = _strip(m.group(1))
+                a = _strip(m.group(2))
+                if q and a and len(q) > 10:
+                    pairs.append((q, a))
+        # Add "What is X" definition as the first Q&A (extracted from the
+        # first H2 + paragraph following it — Rule G9 anchor).
+        def_match = re.search(
+            r'<h2[^>]*>\s*(What is [^<]+?)\s*</h2>\s*<p[^>]*>(.*?)</p>',
+            html, re.DOTALL | re.IGNORECASE,
+        )
+        if def_match:
+            pairs.insert(0, (_strip(def_match.group(1)), _strip(def_match.group(2))))
+
+        if not pairs:
+            continue
+
         full.append(f"## {e['title']}")
-        full.append(f"- url: {e['url']}")
+        full.append(f"Source: {e['url']}")
         if e["about"]:
-            full.append(f"- entities: {', '.join(e['about'])}")
-        if e["summary"]:
-            full.append(f"- summary: {e['summary']}")
+            full.append(f"Entities: {', '.join(e['about'])}")
+        full.append("")
+        for q, a in pairs:
+            full.append(f"### Q: {q}")
+            full.append(f"A: {a}")
+            full.append(f"Cite: {e['url']}")
+            full.append("")
+            qa_count += 1
         full.append("")
 
     with open(os.path.join(OUT_DIR, "llms-full.txt"), "w") as f:
         f.write("\n".join(full) + "\n")
 
     print(f"Wrote {OUT_DIR}/llms.txt ({len(entries)} entries)")
-    print(f"Wrote {OUT_DIR}/llms-full.txt ({len(entries)} entries)")
+    print(f"Wrote {OUT_DIR}/llms-full.txt ({qa_count} Q&A pairs across {len(entries)} articles)")
     print(
         "\nNext: upload these as Shopify theme assets at /llms.txt and /llms-full.txt "
         "(or serve via redirect from /pages/llms-txt)."

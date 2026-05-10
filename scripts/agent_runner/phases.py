@@ -114,6 +114,9 @@ def run_phase1(
     batch_size: int,
     refresh_queue_md: str = "",
     comparison_queue_md: str = "",
+    performance_md: str = "",
+    llm_citations_md: str = "",
+    competitor_gap_md: str = "",
 ) -> dict:
     """Generate today's batch of topics. Returns {batch_date, topics: [...]}."""
     client = Anthropic()
@@ -132,6 +135,18 @@ def run_phase1(
         f"4 slots combined per batch. Each batch must touch ≥1 of these.\n"
         f"- Default product CTA for longevity/NAD/NMN/multi-system topics is "
         f"NAD Advanced (config/hero-product.json).\n\n"
+        f"## Performance feedback loop (CRITICAL — read before scoring)\n"
+        f"Bias topic selection toward clusters/topics that:\n"
+        f"  - Show product-click conversion in CONTENT-PERFORMANCE.md\n"
+        f"  - Are queries where competitors won AI citations this week\n"
+        f"    (LLM-CITATIONS.md `Lost` rows) — generate counter-articles\n"
+        f"  - Have low AI authority competitors per COMPETITOR-GAP.md\n\n"
+        f"## CONTENT-PERFORMANCE.md (last batch outcomes)\n"
+        f"```\n{performance_md or '(empty — first run)'}\n```\n\n"
+        f"## LLM-CITATIONS.md (where Happy Aging was/wasn't cited this week)\n"
+        f"```\n{llm_citations_md or '(empty — run scripts/llm-citation-monitor.py)'}\n```\n\n"
+        f"## COMPETITOR-GAP.md (low-authority queries to attack)\n"
+        f"```\n{competitor_gap_md or '(empty — run scripts/competitor-citation-gap.py)'}\n```\n\n"
         f"## REFRESH-QUEUE.md\n```\n{refresh_queue_md or '(empty)'}\n```\n\n"
         f"## COMPARISON-QUEUE.md\n```\n{comparison_queue_md or '(empty)'}\n```\n"
     )

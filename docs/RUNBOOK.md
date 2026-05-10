@@ -51,6 +51,13 @@ photos.
 4. Upload `public/robots.txt` as a theme asset at the site root (overrides
    Shopify's default robots — explicitly allows OAI-SearchBot, GPTBot,
    PerplexityBot, ClaudeBot, Applebot-Extended, Google-Extended).
+5. **Site-wide JSON-LD** — run `python3 scripts/build-site-schema.py`,
+   then paste the contents of `public/site-schema-block.html` into
+   `layout/theme.liquid` immediately above `</head>`. Without this the
+   Organization is never consolidated as a Knowledge Graph entity.
+6. Upload `pages/editorial-team.html` as Shopify Page with handle
+   `editorial-team` (canonical author bylines + Citrus Labs testing
+   references; AboutPage + Person + Organization JSON-LD).
 
 ---
 

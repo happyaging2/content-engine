@@ -493,7 +493,11 @@ def pexels_search(query):
         data = json.loads(urllib.request.urlopen(req, timeout=15).read())
         safe = [p for p in (data.get("photos") or []) if _safe(p.get("alt") or "")]
         if not safe: return None
-        return {"src": safe[0]["src"]["large2x"], "alt": (safe[0].get("alt") or query)[:120]}
+        p = safe[0]
+        return {"src": p["src"]["large2x"], "alt": (p.get("alt") or query)[:120],
+                "credit_name": p.get("photographer", "Pexels contributor"),
+                "credit_url": p.get("photographer_url", "https://www.pexels.com/"),
+                "provider": "Pexels", "provider_url": "https://www.pexels.com/"}
     except Exception: return None
 
 def unsplash_search(query):
@@ -507,7 +511,10 @@ def unsplash_search(query):
                 if _safe((p.get("alt_description") or "") + " " + (p.get("description") or ""))]
         if not safe: return None
         p = safe[0]
-        return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120]}
+        return {"src": p["urls"]["regular"], "alt": (p.get("alt_description") or query)[:120],
+                "credit_name": p.get("user", {}).get("name", "Unsplash contributor"),
+                "credit_url": (p.get("user", {}).get("links", {}) or {}).get("html", "https://unsplash.com/"),
+                "provider": "Unsplash", "provider_url": "https://unsplash.com/"}
     except Exception: return None
 
 def pixabay_search_step4(query):
@@ -523,7 +530,10 @@ def pixabay_search_step4(query):
         if not hits: return None
         h = hits[0]
         return {"src": h.get("largeImageURL") or h["webformatURL"],
-                "alt": (h.get("tags","").split(",")[0].strip() or query)[:120]}
+                "alt": (h.get("tags","").split(",")[0].strip() or query)[:120],
+                "credit_name": h.get("user", "Pixabay contributor"),
+                "credit_url": "https://pixabay.com/",
+                "provider": "Pixabay", "provider_url": "https://pixabay.com/"}
     except Exception: return None
 
 def find_image(query, fallbacks=None):
@@ -752,6 +762,58 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
 
     body = open(html_file).read()
 
+    # ── Visible reviewer byline (right after H1) ─────────────────────────
+    # E-E-A-T signal that AI Overviews extracts more reliably than schema-only.
+    # Idempotent — skipped if already present.
+    if 'class="reviewer-byline"' not in body:
+        byline = (
+            '\n<div class="reviewer-byline" style="display:flex;align-items:center;'
+            'gap:10px;padding:10px 14px;margin:14px 0 22px;background:#FDF8F3;'
+            'border-left:3px solid #8B7355;border-radius:6px;font-size:13px;'
+            'color:#5A5A5A">'
+            '<span style="color:#8B7355;font-weight:700">✓ Medically reviewed</span>'
+            '<span>by '
+            '<a href="https://happyaging.com/pages/dr-daniel-yadegar" '
+            'rel="author" style="color:#2D2D2D;font-weight:600;text-decoration:none">'
+            'Dr. Daniel Yadegar, MD, FACC, RPVI</a>'
+            ' · Cardiologist & Longevity Physician</span>'
+            '</div>\n'
+        )
+        body = re.sub(r'(</h1>)', r'\1' + byline, body, count=1, flags=re.IGNORECASE)
+
+    # ── CitrusLabs trust badge (when article matches a clinically-tested SKU) ──
+    citrus_match = None
+    body_l = body.lower()
+    title_l = title.lower()
+    for needle, prod, prod_url in [
+        (("longevity shot","nmn shot","nad shot"), "Happy Aging Longevity Shot",
+         "https://www.citruslabs.com/testedproducts/happy-aging-longevity-shot"),
+        (("calm shot","stress shot","ashwagandha shot"), "Happy Aging Calm Shot",
+         "https://www.citruslabs.com/testedproducts/happy-aging-calm-shot"),
+        (("glow shot","skin shot","collagen shot","beauty shot"), "Happy Aging Glow Shot",
+         "https://www.citruslabs.com/testedproducts/happy-aging-glow-shot"),
+    ]:
+        if any(n in body_l or n in title_l for n in needle):
+            citrus_match = (prod, prod_url); break
+    if citrus_match and 'class="citruslabs-badge"' not in body:
+        prod, purl = citrus_match
+        badge = (
+            f'\n<div class="citruslabs-badge" style="display:inline-flex;'
+            f'align-items:center;gap:8px;padding:6px 12px;margin:0 0 18px;'
+            f'background:#fff;border:1px solid #E8D5B7;border-radius:999px;'
+            f'font-size:12px;color:#5A5A5A">'
+            f'<span style="color:#8B7355;font-weight:700">Independently tested</span>'
+            f'<span>·</span>'
+            f'<a href="{purl}" target="_blank" rel="noopener" '
+            f'style="color:#2D2D2D;font-weight:600;text-decoration:none">'
+            f'Citrus Labs clinical study — {prod} →</a>'
+            f'</div>\n'
+        )
+        body = re.sub(
+            r'(class="reviewer-byline"[^>]*>.*?</div>)',
+            r'\1' + badge, body, count=1, flags=re.DOTALL
+        )
+
     # Remove legacy figcaptions, old stock images, and [BODY_IMAGE_N] placeholders (all formats)
     body = re.sub(r'<figcaption[^>]*>.*?</figcaption>', '', body, flags=re.DOTALL)
     body = re.sub(r'\s*<figure class="article-stock-image"[^>]*>.*?</figure>\s*',
@@ -780,9 +842,23 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
         img = find_image(primary_query, fallbacks)
         if not img: continue
         alt = img.get("alt", title)[:140].replace('"', "'")
+        # ImageObject JSON-LD inline — credit + license signals for AI extraction
+        img_schema = {
+            "@context": "https://schema.org", "@type": "ImageObject",
+            "contentUrl": img["src"], "url": img["src"], "name": alt,
+            "description": alt,
+            "creditText": img.get("credit_name") or img.get("provider", "Stock photo"),
+            "creator": {"@type": "Organization",
+                        "name": img.get("provider") or "Stock photo provider"},
+            "license": (img.get("provider_url") or "https://www.pexels.com/license/"),
+            "acquireLicensePage": (img.get("provider_url") or "https://www.pexels.com/license/"),
+        }
         figure = (f'\n<figure class="article-stock-image" style="margin:24px 0">'
                   f'<img src="{img["src"]}" alt="{alt}" '
                   f'style="width:100%;border-radius:12px;display:block">'
+                  f'<script type="application/ld+json">'
+                  f'{json.dumps(img_schema, ensure_ascii=False)}'
+                  f'</script>'
                   f'</figure>\n')
         insert_at = pos + offset
         body = body[:insert_at] + figure + body[insert_at:]
