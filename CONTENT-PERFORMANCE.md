@@ -2,7 +2,57 @@
 
 ---
 
-## BATCH 2026-04-30 (Current)
+## BATCH 2026-05-10 (Current)
+
+### Batch Overview
+- Date: 2026-05-10
+- Articles written: 20/20
+- Publishing status: Ready -- run `python3 scripts/publish_articles.py` from unrestricted network (sandbox IP blocked by Shopify allowlist)
+- SEO audit: Passed -- 0 em/en dashes, correct author ("Happy Aging Team"), GEO rules G1-G21 verified, real PMIDs only (34811282, 29502867, 28273063, 23853635, 29936521)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| NAD/NMN | 5 | NAD Advanced ($99) |
+| Longevity/Exercise | 6 | NAD Advanced ($99) |
+| Gut/GLP-1 | 3 | Happiest Gut ($25) |
+| Hormones | 3 | Calm Tonic ($55), NAD Advanced ($99) |
+| Sleep | 2 | Sleep Tonic ($55) |
+| Cardiovascular | 1 | NAD Advanced ($99) |
+
+### Articles -- Batch 2026-05-10
+| # | Title | Slug | Cluster | Product | Format |
+|---|---|---|---|---|---|
+| 1 | NMNH (Reduced NMN): What Women Over 40 Need to Know | nmnh-reduced-nmn-supplement-women-over-40 | NAD/NMN | nad-advanced-longevity-formula | Explainer + Comparison |
+| 2 | NAD+ Precursors Compared: NR vs NMN vs NMNH vs Niacin | nad-precursors-compared-nr-nmn-nmnh-niacin-women-40 | NAD/NMN | nad-advanced-longevity-formula | Comparison |
+| 3 | Sauna Therapy and Longevity: What Women Over 40 Need to Know | sauna-therapy-longevity-women-over-40 | Longevity | nad-advanced-longevity-formula | Guide + Protocol |
+| 4 | VO2 Max and Longevity: Why It Matters More After 40 | vo2-max-longevity-women-over-40 | Longevity | nad-advanced-longevity-formula | Guide + Protocol |
+| 5 | Zone 2 Cardio, NAD+, and Aging: The Connection Women Over 40 Need | zone-2-cardio-nad-aging-women-over-40 | NAD/NMN | nad-advanced-longevity-formula | Guide + Table |
+| 6 | HRV After 40: What Heart Rate Variability Tells You About Biological Age | hrv-heart-rate-variability-biological-aging-women-40 | Longevity | nad-advanced-longevity-formula | Guide + Protocol |
+| 7 | Bloating After 40: A Step-by-Step Guide for Women | bloating-after-40-step-by-step-guide-women | Gut | happiest-gut | Protocol |
+| 8 | Hot Flash Supplements Compared: What Actually Works After 40 | hot-flash-supplements-compared-women-over-40 | Hormones | calm-tonic | Comparison |
+| 9 | Cold Therapy for Women Over 40: Ice Bath Benefits and Risks | cold-therapy-women-over-40-ice-bath-benefits | Longevity | nad-advanced-longevity-formula | Guide + Comparison |
+| 10 | NAD+ and Muscle Loss at Menopause: What Women Need to Know | nad-muscle-loss-menopause-women-over-40 | NAD/NMN | nad-advanced-longevity-formula | Guide + Protocol |
+| 11 | Epigenetic Age Testing: What It Reveals About Your Biological Age | epigenetic-age-testing-biological-age-women-over-40 | Longevity | nad-advanced-longevity-formula | Guide + Comparison |
+| 12 | NAD+ and Skin Aging: The Connection for Women Over 40 | nad-plus-skin-aging-complexion-women-over-40 | NAD/NMN | nad-advanced-longevity-formula | Guide + Protocol |
+| 13 | GLP-1 Foods and Supplements: A Practical Satiety Guide for Women Over 40 | glp-1-foods-supplements-satiety-women-over-40 | Gut/GLP-1 | happiest-gut | Guide + Table |
+| 14 | Night Sweats After 40: Natural Solutions That Have Science Behind Them | night-sweats-after-40-natural-solutions-women | Hormones/Sleep | sleep-tonic | Guide + Protocol |
+| 15 | How Estrogen Affects Sleep Architecture After 40 | estrogen-sleep-architecture-after-40-women | Sleep | sleep-tonic | Guide + Table |
+| 16 | Supplement Timing Guide for Women Over 40 | supplement-timing-guide-women-over-40 | General/NAD | nad-advanced-longevity-formula | Reference Table |
+| 17 | Gut Microbiome and Immunity After Menopause | gut-microbiome-immunity-after-menopause-women | Gut | happiest-gut | Guide + Protocol |
+| 18 | The 30-Day Longevity Reset Plan for Women Over 40 | 30-day-longevity-reset-plan-women-over-40 | Longevity | nad-advanced-longevity-formula | Protocol |
+| 19 | Zinc for Hormonal Health in Women Over 40 | zinc-hormonal-health-women-over-40 | Hormones | nad-advanced-longevity-formula | Guide + Table |
+| 20 | Heart Health Supplements for Women Over 40 | heart-health-supplements-women-over-40 | Cardiovascular | nad-advanced-longevity-formula | Comparison |
+
+### Predicted Performance
+- **Highest GEO extraction potential:** supplement-timing-guide (reference table format), nad-precursors-compared (4-way comparison), glp-1-foods-supplements (high query volume in 2026), hrv-biological-aging (device comparison table)
+- **Featured snippet candidates:** zone-2-cardio-nad (heart rate zone definition), nmnh-reduced-nmn ("what is NMNH" direct answer), hot-flash-supplements-compared (comparison query)
+- **High conversion potential:** nad-muscle-loss-menopause (NMN with clinical trial anchor), 30-day-longevity-reset-plan (protocol format with 3 product anchors), supplement-timing-guide (timing guidance increases perceived value of products)
+- **Internal linking bridges:** zone-2-cardio-nad -> nmnh-reduced-nmn -> nad-precursors-compared (NAD cluster chain); bloating + gut-microbiome + glp-1 (Gut cluster chain)
+
+---
+
+## BATCH 2026-04-30 (Previous)
 
 ### Batch Overview
 - Date: 2026-04-30
@@ -223,7 +273,7 @@
 ### Batch Overview
 - Date: 2026-04-10
 - Articles written: 20/20
-- Publishing status: Ready — run `articles/batch-2026-04-10-publish.sh` from unrestricted network
+- Publishing status: Ready -- run `articles/batch-2026-04-10-publish.sh` from unrestricted network
 - SEO audit: Complete (see batch-2026-04-10-seo-audit.md)
 
 ### Cluster Distribution
@@ -238,7 +288,7 @@
 | Brain | 3 | Liposomal CoQ10 Brain Tonic, Neuro Creamer |
 | Immunity | 1 | Liposomal Curcumin (Liver Tonic) |
 
-### Articles — Batch 2026-04-10
+### Articles -- Batch 2026-04-10
 | # | Title | Slug | Cluster | Primary Keyword | Product |
 |---|---|---|---|---|---|
 | 1 | What Is NAD+? The Molecule Behind Your Energy and Aging | what-is-nad-plus-energy-aging | Energy | what is NAD+ | longevity-shots |
@@ -275,9 +325,9 @@
 ### Batch Overview
 - Date: 2026-04-09
 - Articles written: 20/20
-- Publishing status: Pending network access — run `articles/publish.sh` from unrestricted network
+- Publishing status: Pending network access -- run `articles/publish.sh` from unrestricted network
 
-### Articles — Batch 2026-04-09
+### Articles -- Batch 2026-04-09
 | # | Title | Slug | Cluster | Primary Keyword |
 |---|---|---|---|---|
 | 1 | Why You Feel More Tired After 40 | why-you-feel-tired-after-40 | Energy | fatigue after 40 |
