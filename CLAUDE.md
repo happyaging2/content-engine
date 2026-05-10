@@ -1,7 +1,7 @@
 # JARVIS Content Engine
 
 Automated SEO/GEO content pipeline for Happy Aging (happyaging.com).
-Daily run, **20 articles per cycle** (default `batch_size=20`).
+Daily run, **10 articles per cycle** (default `batch_size=10`).
 
 ## Agent System
 
@@ -18,7 +18,7 @@ Daily run, **20 articles per cycle** (default `batch_size=20`).
 
 ## Pipeline Flow
 ```
-1. Opportunity Engine   → 20 prioritized topics (≥2 comparison, ≥2 refresh)
+1. Opportunity Engine   → 10 prioritized topics (≥2 comparison, ≥2 refresh)
 2. SEO Brief Engine     → deterministic brief per topic
 3. Content Writer       → parallel writers (concurrency=5), Sonnet 4.6
 4. SEO Optimizer        → parallel quality gate (concurrency=5), Sonnet 4.6
@@ -37,11 +37,11 @@ Daily run, **20 articles per cycle** (default `batch_size=20`).
 `qa-and-publish.sh` picks them up and publishes as drafts.
 
 ```bash
-# Generate today's batch (default 20 articles, concurrency 5)
+# Generate today's batch (default 10 articles, concurrency 5)
 ANTHROPIC_API_KEY=... python3 scripts/run-pipeline.py
 
 # Override
-python3 scripts/run-pipeline.py --batch-date 2026-05-10 --batch-size 20 --concurrency 5
+python3 scripts/run-pipeline.py --batch-date 2026-05-10 --batch-size 10 --concurrency 5
 python3 scripts/run-pipeline.py --dry-run        # Phase 1 only, print topics
 PHASE4_MODEL=claude-opus-4-7 python3 scripts/run-pipeline.py  # max-rigor gate
 ```
@@ -201,7 +201,7 @@ curl -X POST "https://${SHOPIFY_STORE}/admin/api/2024-01/blogs/${BLOG_ID}/articl
 - All text in English (US)
 - No medical claims without citations
 - No invented statistics
-- **20 articles per batch** (default `batch_size=20`)
+- **10 articles per batch** (default `batch_size=10`)
 - Template suffix: `timeline`
 - Author: `Happy Aging Team` (not Dr. Daniel Yadegar)
 - Brand is **premium** — images must reflect that (no product bottles, no tattoos, no book covers, no competitor brands)

@@ -15,7 +15,7 @@ on:
       batch_size:
         description: "Number of articles to generate"
         required: false
-        default: "20"
+        default: "10"
       concurrency:
         description: "Max parallel writers (Phase 3)"
         required: false
@@ -62,7 +62,7 @@ jobs:
         run: |
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then BATCH="$(date -u +%Y-%m-%d)"; fi
-          SIZE="${{ github.event.inputs.batch_size || '20' }}"
+          SIZE="${{ github.event.inputs.batch_size || '10' }}"
           CONC="${{ github.event.inputs.concurrency || '5' }}"
           DRY=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then DRY="--dry-run"; fi
