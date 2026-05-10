@@ -1,0 +1,64 @@
+name: Discovery — autocomplete + PAA + Reddit + competitors
+
+on:
+  # Sunday 04:00 UTC — runs ~26h before the Sunday-night → Monday 06:00
+  # agent-pipeline cron, so OPPORTUNITY-FEED.md is fresh when Phase 1 reads it.
+  schedule:
+    - cron: "0 4 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discovery-weekly
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure git
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Mine Google autocomplete (free, no key)
+        run: python3 scripts/discover-autocomplete.py
+
+      - name: Mine People Also Ask (SerpAPI)
+        if: ${{ env.SERPAPI_KEY != '' }}
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python3 scripts/discover-paa.py
+
+      - name: Mine Reddit (no auth)
+        run: python3 scripts/discover-reddit.py
+
+      - name: Mine competitor sitemaps + RSS
+        run: python3 scripts/discover-competitors.py
+
+      - name: Aggregate into OPPORTUNITY-FEED.md
+        run: python3 scripts/build-opportunity-feed.py
+
+      - name: Commit feed + raw discovery snapshots
+        run: |
+          git add OPPORTUNITY-FEED.md data/discovery/ 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "discovery: $(date -u +%Y-%m-%d) feed [skip ci]"
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push origin main && exit 0
+              echo "push failed (attempt $i) — retrying"
+              sleep $((i * 2))
+            done
+            echo "push failed after 4 attempts" && exit 1
+          else
+            echo "No new opportunities to commit."
+          fi

@@ -117,6 +117,7 @@ def run_phase1(
     performance_md: str = "",
     llm_citations_md: str = "",
     competitor_gap_md: str = "",
+    opportunity_feed_md: str = "",
 ) -> dict:
     """Generate today's batch of topics. Returns {batch_date, topics: [...]}."""
     client = Anthropic()
@@ -135,6 +136,15 @@ def run_phase1(
         f"4 slots combined per batch. Each batch must touch ≥1 of these.\n"
         f"- Default product CTA for longevity/NAD/NMN/multi-system topics is "
         f"NAD Advanced (config/hero-product.json).\n\n"
+        f"## Discovery feed (NEW — read FIRST before scoring)\n"
+        f"OPPORTUNITY-FEED.md aggregates fresh signals from autocomplete, "
+        f"PAA, Reddit, and competitor sitemaps. **Counter-article targets** "
+        f"(rows tagged `[counter-target]`) are highest priority — a "
+        f"competitor just published and first mover wins AI citations. "
+        f"**Reddit high-score** questions are real-language signal, often "
+        f"pre-Google. Use this feed as the primary source of NEW (non-refresh, "
+        f"non-comparison) candidates before falling back to your own brainstorming.\n\n"
+        f"## OPPORTUNITY-FEED.md\n```\n{opportunity_feed_md or '(empty — run scripts/build-opportunity-feed.py)'}\n```\n\n"
         f"## Performance feedback loop (CRITICAL — read before scoring)\n"
         f"Bias topic selection toward clusters/topics that:\n"
         f"  - Show product-click conversion in CONTENT-PERFORMANCE.md\n"

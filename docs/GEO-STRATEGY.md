@@ -263,6 +263,25 @@ deduped via `scripts/check-duplicate-topics.py`.
 
 ---
 
+## 10b. Discovery — find opportunities, don't just generate from clusters
+
+The Opportunity Engine (Phase 1) consumes `OPPORTUNITY-FEED.md`, regenerated
+every Sunday by `discovery-weekly.yml`. Four discovery sources feed it:
+
+| Source | Script | Free? | Why |
+|---|---|---|---|
+| Google Autocomplete | `discover-autocomplete.py` | ✅ no key | Long-tail breadth — 26-letter + question-prefix expansion per seed |
+| People Also Ask | `discover-paa.py` | needs `SERPAPI_KEY` | Literal Google question boxes — highest AI Overview extraction value |
+| Reddit | `discover-reddit.py` | ✅ no key | Real-language signal from r/Perimenopause, r/Menopause, r/loseit (GLP-1), r/Longevity, r/supplements |
+| Competitor sitemaps + RSS | `discover-competitors.py` | ✅ no key | Detects when Grüns/AG1/Happy Mammoth/Hum/Pendulum/Lemme/etc. publishes — first mover wins citation |
+
+The aggregator (`build-opportunity-feed.py`) deduplicates against existing
+articles, classifies each candidate into a priority cluster
+(NAD-NMN / bloating / GLP-1 / hormonal / sleep / magnesium / ashwagandha /
+collagen-skin), and ranks **counter-article targets first** because AI search
+updates faster than SEO — the brand that publishes first on a topic gets the
+citation for weeks.
+
 ## 10. Monitor prompts, not keywords
 
 Track real questions, not just keywords. Run weekly via
