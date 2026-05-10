@@ -14,12 +14,18 @@ API_URL="https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/${BLOG_I
 ARTICLES_DIR="articles"
 LOG_FILE="articles/qa-${BATCH_DATE}.log"
 
+# Export BATCH_DATE so every python heredoc below can scope its work to today's
+# slugs (read from articles/batch-<date>-report.md). Without scoping, every
+# Step iterates the full corpus (500+ files) — wastes API budget and re-injects
+# CTAs into already-published articles.
+export BATCH_DATE
+
 echo "=== JARVIS QA + Publish: Batch ${BATCH_DATE} ==="
 echo "Started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee "$LOG_FILE"
 
-# Step 0: Pull latest
+# Step 0: Pull latest (rebase to avoid race with concurrent agent-pipeline push)
 echo "[0/6] Pulling latest from git..."
-git pull origin main --quiet
+git pull --rebase origin main --quiet 2>/dev/null || git pull origin main --quiet || true
 
 # Step 0a: PMID validation — verify citations resolve on PubMed
 echo "[0a] Validating PMIDs in batch ${BATCH_DATE} articles..."
@@ -81,7 +87,19 @@ pexels_key = os.environ.get("PEXELS_API_KEY", "")
 pixabay_key = os.environ.get("PIXABAY_API_KEY", "")
 
 if not unsplash_key and not pexels_key and not pixabay_key:
-    print("  ERR: set UNSPLASH_ACCESS_KEY and/or PEXELS_API_KEY and/or PIXABAY_API_KEY"); raise SystemExit(1)
+    print("  WARN: no image API key set — skipping image fetch (will fall back "
+          "to local covers/no images at publish time)")
+    raise SystemExit(0)
+
+# Scope work to today's batch — meta.json files whose date_published equals
+# BATCH_DATE. Fallback (no BATCH_DATE set or empty result): only metas missing
+# resolved_cover. Avoids re-fetching images for 500+ legacy articles every run.
+batch_date = os.environ.get("BATCH_DATE", "")
+
+def _is_today(meta):
+    if not batch_date:
+        return True
+    return (meta.get("date_published") or "").startswith(batch_date)
 
 UTM = "?utm_source=happy_aging&utm_medium=referral"
 
@@ -213,6 +231,8 @@ metas = sorted(glob.glob("articles/*.meta.json"))
 updated = 0
 for mf in metas:
     meta = json.load(open(mf))
+    if not _is_today(meta):
+        continue
     slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
     fb = fallback_query(meta)
     changed = False
@@ -306,10 +326,29 @@ PYEOF
 # Step 3: Validate DOIs
 echo "[3/6] Validating DOIs..."
 python3 << 'PYEOF'
-import re, glob, urllib.request
+import re, glob, json, os, urllib.request, urllib.error
+
+batch_date = os.environ.get("BATCH_DATE", "")
+
+def _today_html_files():
+    if not batch_date:
+        return sorted(glob.glob("articles/*-final.html"))
+    out = []
+    for mf in sorted(glob.glob("articles/*.meta.json")):
+        try:
+            m = json.load(open(mf))
+        except Exception:
+            continue
+        if not (m.get("date_published") or "").startswith(batch_date):
+            continue
+        slug = m.get("slug", os.path.basename(mf).replace(".meta.json", ""))
+        p = f"articles/{slug}-final.html"
+        if os.path.exists(p):
+            out.append(p)
+    return out
 
 removed = 0
-for f in sorted(glob.glob("articles/*-final.html")):
+for f in _today_html_files():
     body = open(f).read()
     dois = set(re.findall(r"(10\.\d{4,9}/[^\s<\"&;]+)", body))
     changed = False
@@ -337,7 +376,17 @@ PYEOF
 # Step 4: Insert section-relevant body images and inject FAQ schema + meta description
 echo "[4/6] Inserting section images, FAQ schema, and meta description..."
 python3 << 'PYEOF'
-import json, glob, os, re, time, urllib.request, urllib.parse, urllib.error
+import json, glob, os, re, sys, time, urllib.request, urllib.parse, urllib.error
+
+# Batch scoping: only act on today's articles. Without this, the loop iterates
+# every meta.json in the repo (500+) re-injecting CTAs and re-rendering schema
+# on already-published articles every single run.
+batch_date = os.environ.get("BATCH_DATE", "")
+
+def _is_today(meta):
+    if not batch_date:
+        return True
+    return (meta.get("date_published") or "").startswith(batch_date)
 
 pexels_key   = os.environ.get("PEXELS_API_KEY", "")
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
@@ -694,6 +743,8 @@ print(f"  {len(products_for_linking)} products loaded for contextual linking.")
 inserted = schema_added = links_added = ctas_added = 0
 for mf in sorted(glob.glob("articles/*.meta.json")):
     meta = json.load(open(mf))
+    if not _is_today(meta):
+        continue
     slug = meta.get("slug", os.path.basename(mf).replace(".meta.json", ""))
     title = meta.get("title", slug)
     html_file = f"articles/{slug}-final.html"
@@ -793,21 +844,42 @@ import json, urllib.request, glob, os, re, time, base64
 shopify_token = "${SHOPIFY_TOKEN}"
 api = "${API_URL}"
 covers_dir = "articles/covers"
+batch_date = os.environ.get("BATCH_DATE", "")
 
-# Get existing titles
-req = urllib.request.Request(f"{api}?limit=250&fields=id,title", headers={"X-Shopify-Access-Token": shopify_token})
-existing = {}
-for a in json.loads(urllib.request.urlopen(req).read())["articles"]:
-    existing[a["title"].lower().strip()] = a["id"]
+# Get existing articles, indexed by BOTH title and handle (slug). Title-only
+# dedup breaks when Phase 4 rewrites titles between runs — slug stays stable.
+def _fetch_existing():
+    by_title, by_handle = {}, {}
+    page_url = f"{api}?limit=250&fields=id,title,handle"
+    while page_url:
+        req = urllib.request.Request(page_url, headers={"X-Shopify-Access-Token": shopify_token})
+        resp = urllib.request.urlopen(req)
+        data = json.loads(resp.read())
+        for a in data.get("articles", []):
+            by_title[a["title"].lower().strip()] = a["id"]
+            if a.get("handle"):
+                by_handle[a["handle"].lower().strip()] = a["id"]
+        # Shopify pagination via Link header
+        link = resp.headers.get("Link", "")
+        m = re.search(r'<([^>]+)>;\s*rel="next"', link or "")
+        page_url = m.group(1) if m else None
+    return by_title, by_handle
+
+existing_titles, existing_handles = _fetch_existing()
 
 metas = sorted(glob.glob("articles/*.meta.json"))
 published = 0
 
 for mf in metas:
     meta = json.load(open(mf))
+    # Only publish today's batch — never re-publish legacy metas.
+    if batch_date and not (meta.get("date_published") or "").startswith(batch_date):
+        continue
     title = meta.get("title","").strip()
     slug = meta.get("slug", os.path.basename(mf).replace(".meta.json",""))
-    if title.lower() in existing: continue
+    # Slug-based dedup is the source of truth (stable across title rewrites).
+    if slug.lower() in existing_handles: continue
+    if title.lower() in existing_titles: continue
 
     html_file = f"articles/{slug}-final.html"
     if not os.path.exists(html_file): continue
@@ -843,7 +915,9 @@ for mf in metas:
         result = json.loads(resp.read())
         aid = result["article"]["id"]
         published += 1
-        existing[title.lower()] = aid
+        existing_titles[title.lower()] = aid
+        if result["article"].get("handle"):
+            existing_handles[result["article"]["handle"].lower()] = aid
         print(f"  OK {title[:50]} (id:{aid})")
     except Exception as e:
         print(f"  ERR {slug}: {str(e)[:80]}")

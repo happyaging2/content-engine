@@ -10,11 +10,11 @@ Models:
   - Sonnet 4.6 (claude-sonnet-4-6) for Phase 3 (parallel writers)
 
 Usage:
-    ANTHROPIC_API_KEY=sk-ant-... python3 scripts/run-pipeline.py [--batch-size 10]
+    ANTHROPIC_API_KEY=sk-ant-... python3 scripts/run-pipeline.py [--batch-size 20]
 
 Optional:
     --batch-date YYYY-MM-DD   (default: today UTC)
-    --batch-size N            (default: 10)
+    --batch-size N            (default: 20)
     --concurrency N           (default: 5; max parallel writers)
     --dry-run                 (run Phase 1 only; print topics, do not write)
     --topics-from FILE        (skip Phase 1, load topics from JSON file)
@@ -35,7 +35,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from agent_runner.phases import (  # noqa: E402
     run_phase1,
     run_phase3_parallel,
-    run_phase4,
+    run_phase4_parallel,
     save_article_files,
 )
 
@@ -53,10 +53,28 @@ def _read(path: str) -> str:
     return open(path, encoding="utf-8").read()
 
 
+def _cleanup_orphan(slug: str) -> None:
+    """Remove any stale -final.html / .meta.json from a previous run when this
+    slug is rejected today. Prevents republishing of yesterday's pass after
+    today's reject."""
+    if not slug:
+        return
+    for path in (
+        os.path.join(ROOT, "articles", f"{slug}-final.html"),
+        os.path.join(ROOT, "articles", f"{slug}.meta.json"),
+    ):
+        if os.path.exists(path):
+            try:
+                os.remove(path)
+                log.info("  cleaned orphan %s", os.path.basename(path))
+            except OSError:
+                pass
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch-date", default=dt.date.today().isoformat())
-    ap.add_argument("--batch-size", type=int, default=10)
+    ap.add_argument("--batch-size", type=int, default=20)
     ap.add_argument("--concurrency", type=int, default=5)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--topics-from", default=None,
@@ -119,17 +137,23 @@ def main():
     successes = [a for a in articles if not a.get("_failed")]
     log.info("Phase 3 done. %s/%s succeeded", len(successes), len(articles))
 
-    # ── Phase 4: gate + persist ────────────────────────────────────────────
+    # ── Phase 4: gate (parallel) + persist ─────────────────────────────────
+    verdicts = run_phase4_parallel(
+        articles=successes,
+        batch_date=batch_date,
+        concurrency=args.concurrency,
+    )
     passed = rejected = 0
-    for art in successes:
-        try:
-            verdict = run_phase4(article=art, batch_date=batch_date)
-        except Exception as e:
-            log.error("Phase 4 failed for %s: %s", art.get("slug"), e)
+    for art, verdict in zip(successes, verdicts):
+        slug = art.get("slug", "")
+        if verdict is None:
             rejected += 1
+            _cleanup_orphan(slug)
             continue
         if verdict["verdict"] == "reject" or verdict["geo_score"] < 70:
             rejected += 1
+            log.info("  REJECT %s  score=%s", slug[:40], verdict["geo_score"])
+            _cleanup_orphan(slug)
             continue
         save_article_files(article=art, verdict=verdict, batch_date=batch_date)
         passed += 1

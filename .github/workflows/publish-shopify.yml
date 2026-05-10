@@ -19,6 +19,14 @@ on:
           - "true"
           - "false"
 
+permissions:
+  contents: write
+
+# Serialize publishes — also avoids racing with agent-pipeline's git push.
+concurrency:
+  group: publish-shopify
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -44,6 +52,7 @@ jobs:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then
@@ -56,6 +65,7 @@ jobs:
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           cd articles
@@ -66,6 +76,7 @@ jobs:
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           cd articles
@@ -76,7 +87,13 @@ jobs:
           git add articles/*.meta.json articles/*-final.html 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: resolved stock images $(date +%Y-%m-%d) [skip ci]"
-            git push origin main
+            # Rebase before push to handle race with agent-pipeline.yml.
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push origin main && exit 0
+              echo "push failed (attempt $i) — retrying"
+              sleep $((i * 2))
+            done
+            echo "push failed after 4 attempts" && exit 1
           else
             echo "Nothing to commit."
           fi

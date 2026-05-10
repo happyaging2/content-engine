@@ -15,7 +15,7 @@ on:
       batch_size:
         description: "Number of articles to generate"
         required: false
-        default: "10"
+        default: "20"
       concurrency:
         description: "Max parallel writers (Phase 3)"
         required: false
@@ -62,7 +62,7 @@ jobs:
         run: |
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then BATCH="$(date -u +%Y-%m-%d)"; fi
-          SIZE="${{ github.event.inputs.batch_size || '10' }}"
+          SIZE="${{ github.event.inputs.batch_size || '20' }}"
           CONC="${{ github.event.inputs.concurrency || '5' }}"
           DRY=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then DRY="--dry-run"; fi
@@ -78,7 +78,12 @@ jobs:
           git add articles/*-final.html articles/*.meta.json articles/batch-*-report.md 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "agent-pipeline: $(date -u +%Y-%m-%d) batch [skip ci]"
-            git push origin main
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push origin main && exit 0
+              echo "push failed (attempt $i) — retrying"
+              sleep $((i * 2))
+            done
+            echo "push failed after 4 attempts" && exit 1
           else
             echo "No new articles to commit (dry run, or all rejected)."
           fi
