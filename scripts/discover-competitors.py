@@ -78,12 +78,42 @@ def _expand_sitemap(url: str, depth: int = 0, max_depth: int = 3) -> list[str]:
     locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", content)
     if not locs:
         return []
-    if _is_sitemap_index(content) or any(loc.lower().endswith(".xml") or "/sitemap" in loc.lower() for loc in locs[:5]):
-        # Recurse into child sitemaps. Cap to first 8 children to avoid
-        # exploding on giant Shopify catalogs.
+
+    def _looks_like_child_sitemap(u: str) -> bool:
+        ul = u.lower()
+        return ul.endswith(".xml") or "/sitemap" in ul
+
+    if _is_sitemap_index(content) or any(_looks_like_child_sitemap(loc) for loc in locs[:5]):
+        # Split children into article/blog sitemaps vs the rest. We want to
+        # ALWAYS recurse into blog/article children (the whole point of the
+        # discovery layer), regardless of how many product/collection
+        # sitemaps come before them in a Shopify catalog.
+        article_children: list[str] = []
+        other_children: list[str] = []
+        article_hints = ("blog", "article", "news", "journal", "learn", "post")
+        non_article_hints = ("product", "collection", "page_", "policies", "policy", "cart", "checkout")
+        for child in locs:
+            cl = child.lower()
+            if not _looks_like_child_sitemap(child):
+                # Non-sitemap leaf URL inside an "index" — just pass it through.
+                other_children.append(child)
+                continue
+            if any(h in cl for h in article_hints):
+                article_children.append(child)
+            elif any(h in cl for h in non_article_hints):
+                # Drop product/collection sitemaps entirely — never article URLs.
+                continue
+            else:
+                other_children.append(child)
+
+        # Always recurse into ALL article-shaped sitemaps. Cap "other"
+        # children at 8 to avoid runaway recursion on giant catalogs.
         out: list[str] = []
-        for child in locs[:8]:
-            if child.lower().endswith(".xml") or "/sitemap" in child.lower():
+        for child in article_children:
+            out.extend(_expand_sitemap(child, depth=depth + 1, max_depth=max_depth))
+            time.sleep(0.4)
+        for child in other_children[:8]:
+            if _looks_like_child_sitemap(child):
                 out.extend(_expand_sitemap(child, depth=depth + 1, max_depth=max_depth))
                 time.sleep(0.4)
             else:
