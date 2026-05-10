@@ -110,6 +110,67 @@ PILLAR_ENTITIES = {
         "keywords": ["sirtuins", "sirt1", "resveratrol"],
         "schema_type": "DefinedTerm",
     },
+    # ── Priority clusters (docs/GEO-STRATEGY.md) ────────────────────────────
+    "bloating": {
+        "name": "Bloating after 40",
+        "definition": (
+            "Bloating after 40 is the chronic abdominal distension and "
+            "discomfort that becomes more common during perimenopause due to "
+            "shifting estrogen and progesterone, slower gut motility, and "
+            "changes in the microbiome. It often peaks in the luteal phase "
+            "and around meals."
+        ),
+        "keywords": [
+            "bloating", "bloated", "abdominal distension", "gas", "ibs",
+            "gut motility", "digestive discomfort",
+        ],
+        "schema_type": "MedicalCondition",
+    },
+    "glp-1-support": {
+        "name": "GLP-1 nutrition support",
+        "definition": (
+            "GLP-1 nutrition support refers to the targeted nutrient and "
+            "supplement strategies that protect muscle mass, energy, "
+            "digestion, and micronutrient status while taking GLP-1 receptor "
+            "agonists (semaglutide, tirzepatide) — medications known to "
+            "reduce appetite and food intake."
+        ),
+        "keywords": [
+            "glp-1", "glp1", "semaglutide", "tirzepatide", "ozempic",
+            "wegovy", "mounjaro", "zepbound", "weight loss medication",
+        ],
+        "schema_type": "DefinedTerm",
+    },
+    "hormonal-balance": {
+        "name": "Hormonal balance after 35",
+        "definition": (
+            "Hormonal balance after 35 refers to the gradual changes in "
+            "estrogen, progesterone, cortisol, thyroid, and insulin signaling "
+            "that begin in the mid-30s and intensify through perimenopause. "
+            "Common downstream effects include sleep disruption, energy dips, "
+            "mood changes, and shifts in body composition."
+        ),
+        "keywords": [
+            "hormone", "hormonal", "estrogen", "progesterone", "cortisol",
+            "thyroid", "perimenopause", "menopause",
+        ],
+        "schema_type": "MedicalCondition",
+    },
+    "womens-longevity": {
+        "name": "Women's longevity over 35",
+        "definition": (
+            "Women's longevity over 35 is the practice of preserving "
+            "healthspan — the years of life spent in good health — through "
+            "evidence-based interventions that account for the unique "
+            "endocrine, metabolic, and bone-health changes that women "
+            "experience from the mid-30s onward."
+        ),
+        "keywords": [
+            "women over 35", "women over 40", "healthspan",
+            "longevity for women", "female longevity",
+        ],
+        "schema_type": "DefinedTerm",
+    },
 }
 
 BLOG_URL = "https://happyaging.com/blogs/news"

@@ -12,10 +12,23 @@ Find topics that:
 - can be cited by AI systems
 
 ## CLUSTER STRATEGY (MANDATORY)
-Group all topics into clusters.
-Example: Energy, Sleep, Hormones, Metabolism, Skin, Gut, Brain, Immunity
+Group all topics into clusters. Each topic MUST belong to a cluster, AND each
+cluster MUST have a published pillar page (see `pages/pillar-*.html`).
 
-Each topic MUST belong to a cluster.
+### Priority clusters (per docs/GEO-STRATEGY.md)
+Each batch must touch ≥1 of these. Combined slots across all four ≥4 per batch.
+
+1. **NAD+ / NMN / cellular energy** — pillar slugs: `pillar-nad`, `pillar-nmn`, `pillar-womens-longevity`
+2. **Bloating after 40** — pillar slug: `pillar-bloating`
+3. **GLP-1 nutrition support** — pillar slug: `pillar-glp-1-support`
+4. **Hormonal balance after 35** — pillar slugs: `pillar-hormonal-balance`, `pillar-perimenopause`
+
+### Secondary clusters (always allowed, lower priority)
+Sleep, magnesium, ashwagandha, sirtuins, longevity (general), skin.
+
+### Topics WITHOUT a pillar are forbidden
+If you propose a topic that doesn't fit any current cluster, the correct move
+is to create a new pillar — do not generate orphan articles.
 
 ## DEDUPLICATION (MANDATORY — runs before scoring)
 Before scoring, write your candidate topic list (one per line) to `/tmp/candidates.txt`

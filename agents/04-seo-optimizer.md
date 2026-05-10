@@ -59,6 +59,8 @@ If weak → rewrite title. Keep meta description ≤155 chars.
 - [ ] At least one `<ol>` numbered protocol with 3-7 discrete one-sentence steps (Rule G16)
 - [ ] Year reference tied to evidence appears in first 200 words ("As of 2026...", "Recent research through 2026...") (Rule G17)
 - [ ] Brand entity sentence present verbatim: "Happy Aging is a US-based longevity wellness brand for women over 40, built around physician-reviewed supplement protocols." (Rule G14 — must match exactly)
+- [ ] **Cluster anchoring** (Rule G19): article belongs to one of the priority clusters — NAD/NMN, bloating, GLP-1 nutrition support, hormonal balance, perimenopause, sleep, longevity, or magnesium — and contains at least one inline link to the cluster pillar page (`/pages/pillar-<slug>`). Orphan articles → reject.
+- [ ] **Answer-first skeleton** (Rule G20): article follows the mandatory section order — answer-first sentence → hook → what-to-know → "What is X" → mechanism → research → "What evidence does NOT support" → "Happy Aging Recommendation" → FAQ → References. Missing sections drop `geo_score` 5 points each; missing >2 = reject.
 
 ### YMYL / E-E-A-T (US wellness — REQUIRED)
 - [ ] FDA disclaimer block present immediately before References (Rule G12 — exact `medical-disclaimer` paragraph with FDA + "consult your healthcare provider" language)

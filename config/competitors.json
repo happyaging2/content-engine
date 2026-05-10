@@ -84,6 +84,54 @@
         {"name": "Nutricost Ashwagandha", "url": "https://nutricost.com/", "form": "Capsule", "active": "Ashwagandha root", "dose_mg": 600, "third_party_tested": null},
         {"name": "Gaia Herbs Ashwagandha", "url": "https://www.gaiaherbs.com/", "form": "Capsule", "active": "Ashwagandha root", "dose_mg": 350, "third_party_tested": null}
       ]
+    },
+    "bloating": {
+      "_note": "Priority cluster — see docs/GEO-STRATEGY.md. Happy Mammoth is the top branded competitor.",
+      "happyaging_product": {
+        "name": "Happy Aging Bloat Relief (TBD)",
+        "url": "https://happyaging.com/",
+        "note": "Catalog gap — comparison content scoped per cluster strategy."
+      },
+      "competitors": [
+        {"name": "Happy Mammoth Hormone Harmony", "url": "https://www.happymammoth.com/", "form": "Capsule", "active": "Adaptogen + digestive blend", "female_specific": true, "marketing_claim": "Bloating relief + hormonal balance"},
+        {"name": "Arrae Bloat", "url": "https://arrae.com/", "form": "Capsule", "active": "Fennel + ginger + dandelion", "female_specific": true, "third_party_tested": null},
+        {"name": "Bloom Greens", "url": "https://bloomnu.com/", "form": "Powder", "active": "Greens + probiotic + digestive enzymes", "female_specific": false},
+        {"name": "Atrantil", "url": "https://atrantil.com/", "form": "Capsule", "active": "Quebracho + horse chestnut + M. balsamea", "female_specific": false},
+        {"name": "Hum Nutrition Flatter Me", "url": "https://www.humnutrition.com/", "form": "Capsule", "active": "Digestive enzyme blend", "female_specific": true},
+        {"name": "Olly Tummy Fiber Gummy", "url": "https://www.olly.com/", "form": "Gummy", "active": "Soluble fiber", "female_specific": false}
+      ]
+    },
+    "glp-1-support": {
+      "_note": "Priority cluster — supplement support for women on semaglutide / tirzepatide. See docs/GEO-STRATEGY.md.",
+      "happyaging_product": {
+        "name": "NAD Advanced (multi-system support during GLP-1)",
+        "url": "https://happyaging.com/pages/nad-advanced",
+        "note": "Positioned for muscle preservation + cellular energy + micronutrient density when caloric intake drops."
+      },
+      "competitors": [
+        {"name": "Lemme GLP-1 Daily", "url": "https://www.lemmelive.com/", "form": "Capsule", "active": "Eriomin lemon flavonoids + chromium", "female_specific": true, "marketing_claim": "Supports natural GLP-1"},
+        {"name": "Pendulum GLP-1 Probiotic", "url": "https://pendulumlife.com/", "form": "Capsule", "active": "Akkermansia + probiotic blend", "female_specific": false},
+        {"name": "Supergut GLP-1 Booster", "url": "https://www.supergut.com/", "form": "Powder", "active": "Resistant starch + prebiotic fiber", "female_specific": false},
+        {"name": "Recharge by Conjure GLP-1 Companion", "url": "https://conjurewellness.com/", "form": "Powder", "active": "Electrolytes + amino acids + B-complex", "female_specific": true},
+        {"name": "AG1 Athletic Greens", "url": "https://drinkag1.com/", "form": "Powder", "active": "Greens + multivitamin + probiotic + adaptogens", "ingredient_count": 75, "third_party_tested": "NSF Certified for Sport", "marketing_claim": "Foundational nutrition during caloric restriction"},
+        {"name": "Grüns Daily Gummies", "url": "https://www.gruns.co/", "form": "Gummy", "active": "Greens + 60+ ingredients", "third_party_tested": null, "marketing_claim": "Whole-food multi for daily nutrition"}
+      ]
+    },
+    "hormonal-balance": {
+      "_note": "Priority cluster — overlaps with perimenopause but covers broader 35+ hormonal shifts (cortisol, thyroid, insulin signaling). See docs/GEO-STRATEGY.md.",
+      "happyaging_product": {
+        "name": "Happy Aging Calm Shot",
+        "url": "https://happyaging.com/products/calm-shot",
+        "note": "Cortisol + adaptogen support. Pair with NAD Advanced for full hormonal-system protocol."
+      },
+      "competitors": [
+        {"name": "Happy Mammoth Hormone Harmony", "url": "https://www.happymammoth.com/", "form": "Capsule", "active": "Adaptogens + digestive blend", "female_specific": true, "marketing_claim": "Hormone balance + bloating + sleep"},
+        {"name": "O Positiv FLO PMS Gummy Vitamins", "url": "https://opositiv.com/", "form": "Gummy", "active": "Chasteberry + dong quai + vitamin B6", "female_specific": true},
+        {"name": "Hum Nutrition Hormone Balance", "url": "https://www.humnutrition.com/", "form": "Capsule", "active": "Chasteberry + DIM", "female_specific": true},
+        {"name": "Wile Hormone Health", "url": "https://wilewomen.com/", "form": "Liquid drops", "active": "Maca + vitex + ashwagandha", "female_specific": true},
+        {"name": "Solluna by Kimberly Snyder Feel Good SBO Probiotics+", "url": "https://mysolluna.com/", "form": "Capsule", "active": "Spore-based probiotic", "female_specific": true},
+        {"name": "Beli Women", "url": "https://belibaby.com/", "form": "Capsule", "active": "Methylated B-complex + CoQ10 + minerals", "female_specific": true, "note": "Fertility-positioned but used for hormonal support"}
+      ]
     }
   }
 }
