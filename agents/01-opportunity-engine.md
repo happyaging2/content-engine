@@ -30,6 +30,23 @@ Sleep, magnesium, ashwagandha, sirtuins, longevity (general), skin.
 If you propose a topic that doesn't fit any current cluster, the correct move
 is to create a new pillar — do not generate orphan articles.
 
+## DISCOVERY FEED (CRITICAL — primary source of NEW topics)
+Before brainstorming candidates, **read `OPPORTUNITY-FEED.md`**. It is
+regenerated weekly by `discovery-weekly.yml` from four sources:
+
+1. **Counter-article targets** (rows tagged `[counter-target]`) — competitor
+   just published a post; first mover on the topic wins AI citations for
+   weeks. **Highest priority.**
+2. **Reddit high-score questions** — real-language signal, often pre-Google.
+   Pulled from r/Perimenopause, r/Menopause, r/Longevity, r/loseit
+   (GLP-1 community), r/supplements, r/WomensHealth.
+3. **People Also Ask (PAA)** — literal questions Google believes are
+   tightly related to our seeds. Highest extraction value for AI Overviews.
+4. **Google autocomplete** — long-tail breadth, no API cost.
+
+Use this feed as the FIRST source of NEW (non-refresh, non-comparison)
+candidates. Brainstorming is fallback when the feed is stale or empty.
+
 ## DEDUPLICATION (MANDATORY — runs before scoring)
 Before scoring, write your candidate topic list (one per line) to `/tmp/candidates.txt`
 and run:

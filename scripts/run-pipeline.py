@@ -102,6 +102,7 @@ def main():
         perf_md = _read(os.path.join(ROOT, "CONTENT-PERFORMANCE.md"))
         citations_md = _read(os.path.join(ROOT, "LLM-CITATIONS.md"))
         gap_md = _read(os.path.join(ROOT, "COMPETITOR-GAP.md"))
+        opportunity_md = _read(os.path.join(ROOT, "OPPORTUNITY-FEED.md"))
         plan = run_phase1(
             batch_date=batch_date,
             batch_size=args.batch_size,
@@ -110,6 +111,7 @@ def main():
             performance_md=perf_md,
             llm_citations_md=citations_md,
             competitor_gap_md=gap_md,
+            opportunity_feed_md=opportunity_md,
         )
 
     topics = plan.get("topics") or []
