@@ -1,0 +1,32 @@
+{
+  "title": "CoQ10 for Energy After 40: A Practical Guide for Women",
+  "slug": "coq10-guide-energy-women-over-40",
+  "tags": "CoQ10, coenzyme Q10, energy, ubiquinol, ubiquinone, women over 40, statins, fatigue, mitochondria, longevity",
+  "product_handle": "brain-tonic",
+  "image_query": "woman 40s energetic healthy active lifestyle",
+  "body_image_queries": [
+    "woman 40s energetic morning exercise walking",
+    "woman 40s healthy eating meal nutritious food",
+    "woman 40s vitality wellness smiling confident",
+    "woman 40s active lifestyle cycling outdoor"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["CoQ10 supplementation", "ubiquinol vs ubiquinone", "CoQ10 energy women", "statin CoQ10 depletion", "liposomal CoQ10"],
+  "mentions": ["ubiquinol", "ubiquinone", "mitochondria", "electron transport chain", "ATP", "statins", "perimenopause energy", "brain fog"],
+  "medical_audience": "Patient",
+  "primary_topic": "CoQ10 energy women over 40",
+  "citations": [
+    {"pmid": "17914161", "title": "Bioenergetic and antioxidant properties of coenzyme Q10"},
+    {"pmid": "18940523", "title": "Coenzyme Q10: an independent predictor of mortality in chronic heart failure"},
+    {"pmid": "14695925", "title": "The clinical use of HMG CoA-reductase inhibitors and the associated depletion of coenzyme Q10"},
+    {"pmid": "32380795", "title": "Bioavailability of coenzyme Q10: an overview of the absorption process and subsequent metabolism"},
+    {"pmid": "16551570", "title": "Coenzyme Q10: absorption, tissue uptake, metabolism and pharmacokinetics"}
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

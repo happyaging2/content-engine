@@ -1,0 +1,31 @@
+{
+  "title": "7 Signs of Low NAD+ in Women Over 40 (And What to Do About It)",
+  "slug": "low-nad-signs-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, NMN, NR, longevity, women over 40, fatigue, brain fog, perimenopause, cellular health",
+  "product_handle": "longevity-shots",
+  "image_query": "woman 40s tired morning coffee energy",
+  "body_image_queries": [
+    "woman 40s fatigue low energy midday",
+    "woman 40s brain fog working concentration",
+    "woman 40s poor sleep restless night",
+    "woman 40s muscle strength yoga active"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+", "nicotinamide adenine dinucleotide", "NAD+ decline", "aging women"],
+  "mentions": ["NMN", "NR", "sirtuins", "SIRT1", "CD38", "mitochondria", "perimenopause", "longevity"],
+  "medical_audience": "Patient",
+  "primary_topic": "signs of low NAD+ women over 40",
+  "citations": [
+    {"pmid": "33099023", "title": "Oral nicotinamide mononucleotide supplementation safely elevates NAD+ levels", "journal": "Cell Metabolism", "year": 2020},
+    {"pmid": "29249690", "title": "NAD+ intermediates: the biology and therapeutic potential of NMN and NR", "journal": "Cell Metabolism", "year": 2018},
+    {"pmid": "27304508", "title": "CD38 dictates age-related NAD decline", "journal": "Cell Metabolism", "year": 2016}
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

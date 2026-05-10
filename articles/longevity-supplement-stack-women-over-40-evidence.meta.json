@@ -1,0 +1,68 @@
+{
+  "title": "The Best Longevity Supplement Stack for Women Over 40 (Ranked by Evidence)",
+  "slug": "longevity-supplement-stack-women-over-40-evidence",
+  "author": "Happy Aging Team",
+  "tags": "longevity, supplements, women over 40, NMN, NAD+, magnesium, vitamin D, CoQ10, resveratrol, quercetin, stack, perimenopause",
+  "product_handle": "nad-advanced-longevity-formula",
+  "image_query": "woman 40s healthy lifestyle vitamins wellness routine",
+  "body_image_queries": [
+    "woman 40s morning wellness supplement routine",
+    "woman 40s active outdoor longevity lifestyle",
+    "woman 40s healthy eating Mediterranean diet",
+    "woman 40s strength training muscle fitness"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["longevity supplements", "supplement stack", "NMN", "women over 40", "healthy aging"],
+  "mentions": ["NAD+", "NMN", "resveratrol", "CoQ10", "magnesium", "vitamin D", "quercetin", "sirtuins", "senolytic", "perimenopause", "mitochondria"],
+  "medical_audience": "Patient",
+  "primary_topic": "longevity supplement stack women over 40",
+  "citations": [
+    {
+      "pmid": "33099023",
+      "title": "Oral nicotinamide mononucleotide supplementation safely elevates NAD+ levels in skeletal muscle and blood of older adults",
+      "journal": "Cell Metabolism",
+      "year": 2020,
+      "study_type": "RCT",
+      "n": 30
+    },
+    {
+      "pmid": "33888596",
+      "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women",
+      "journal": "Science",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 25
+    },
+    {
+      "pmid": "29984890",
+      "title": "Magnesium for the prevention and treatment of cardiovascular disease",
+      "journal": "Open Heart",
+      "year": 2018,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "17634462",
+      "title": "Vitamin D deficiency",
+      "journal": "New England Journal of Medicine",
+      "year": 2007,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "28869295",
+      "title": "The clinical potential of senolytic drugs",
+      "journal": "Journal of the American Geriatrics Society",
+      "year": 2017,
+      "study_type": "Review",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

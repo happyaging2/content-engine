@@ -13,6 +13,10 @@ Usage:
 import json, os, re, sys, time, glob
 import urllib.request, urllib.parse, urllib.error
 
+# Local lib for MedicalWebPage / Article / HowTo JSON-LD with reviewer Person.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib_medical_schema import inject_medical_schema  # noqa: E402
+
 SHOPIFY_STORE = "shop-happy-aging.myshopify.com"
 BLOG_ID       = "109440303424"
 ARTICLES_DIR  = os.path.dirname(os.path.abspath(__file__))
@@ -1092,8 +1096,13 @@ def main():
             body = inject_faq_schema(body, pairs)
             schema_added += 1
 
-        # 5. BlogPosting + Speakable schema
+        # 5. BlogPosting + Speakable schema (legacy; kept for backward compat)
         body = inject_article_schema(body, title, slug, meta_desc)
+
+        # 5b. MedicalWebPage / Article + Person reviewer + HowTo (GEO E-E-A-T)
+        body = inject_medical_schema(
+            body, title=title, slug=slug, meta_desc=meta_desc, meta=meta
+        )
 
         # 6. Section images + cover
         cover_src = cover_alt = None

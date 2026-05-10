@@ -1,0 +1,32 @@
+{
+  "title": "Why Your Mitochondria Are Making You Tired After 40",
+  "slug": "mitochondria-fatigue-women-over-40",
+  "tags": "mitochondria, fatigue, CoQ10, NAD+, energy, women over 40, perimenopause, longevity, ubiquinol",
+  "product_handle": "brain-tonic",
+  "image_query": "woman 40s tired fatigue low energy home",
+  "body_image_queries": [
+    "woman 40s healthy energy exercise walking outdoor",
+    "woman 40s nutritious meal kitchen healthy eating",
+    "woman 40s restful sleep bedroom recovery",
+    "woman 40s vitality active lifestyle smiling"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-09",
+  "schema_type": "MedicalWebPage",
+  "about": ["mitochondrial dysfunction", "fatigue women over 40", "CoQ10", "NAD+", "mitochondrial biogenesis", "statin CoQ10 depletion"],
+  "mentions": ["ubiquinol", "ubiquinone", "electron transport chain", "ATP", "estrogen mitochondria", "perimenopause fatigue", "NMN"],
+  "medical_audience": "Patient",
+  "primary_topic": "mitochondrial dysfunction fatigue women over 40",
+  "citations": [
+    {"pmid": "19854681", "title": "The role of mitochondria in health and disease"},
+    {"pmid": "17914161", "title": "Bioenergetic and antioxidant properties of coenzyme Q10"},
+    {"pmid": "18940523", "title": "Coenzyme Q10: an independent predictor of mortality in chronic heart failure"},
+    {"pmid": "33090546", "title": "Expression of muscle mitochondrial dynamics in response to menopause"},
+    {"pmid": "24786309", "title": "NAD+ and sirtuins in aging and disease"}
+  ],
+  "date_published": "2026-05-09",
+  "date_modified": "2026-05-09"
+}

@@ -761,6 +761,18 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
                       schema_block + r'\1', body, flags=re.IGNORECASE)
         schema_added += 1
 
+    # MedicalWebPage / Article schema with reviewer Person + HowTo (GEO E-E-A-T)
+    sys.path.insert(0, os.path.abspath("articles"))
+    try:
+        from lib_medical_schema import inject_medical_schema
+        body = inject_medical_schema(
+            body, title=title, slug=slug,
+            meta_desc=meta.get("meta_description") or meta_description(body),
+            meta=meta,
+        )
+    except Exception as e:
+        print(f"  WARN: medical schema injection failed for {slug}: {e}")
+
     # Meta description saved to meta.json for use at publish time
     meta["meta_description"] = meta_description(body)
     json.dump(meta, open(mf, "w"), indent=2, ensure_ascii=False)
@@ -805,8 +817,12 @@ for mf in metas:
     if isinstance(tags, list): tags = ", ".join(tags)
 
     summary = meta.get("meta_description", "")[:155]
+    # Publish as DRAFT by default — user reviews + publishes manually in Shopify.
+    # Override with PUBLISH_DRAFT=false (e.g. for one-off auto-publish runs).
+    publish_draft = os.environ.get("PUBLISH_DRAFT", "true").lower() != "false"
+    is_published = not publish_draft
     payload = {"article": {"title": title, "body_html": body, "summary_html": summary,
-               "author": "Happy Aging Team", "tags": tags, "published": True,
+               "author": "Happy Aging Team", "tags": tags, "published": is_published,
                "template_suffix": "timeline"}}
 
     # Cover image: prefer resolved stock URL; fall back to legacy local file

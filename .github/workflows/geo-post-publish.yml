@@ -1,0 +1,63 @@
+name: GEO — Post-publish Discovery & Linking
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "articles/*.meta.json"
+      - "articles/*-final.html"
+      - "articles/*.html"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Avoid stacking runs when several commits land within minutes
+concurrency:
+  group: geo-post-publish
+  cancel-in-progress: true
+
+jobs:
+  post-publish:
+    # Skip the runs we triggered ourselves to avoid loops
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      # 1. Build /llms.txt + /llms-full.txt (corpus index for LLMs)
+      - name: Build llms.txt
+        run: python3 scripts/build-llms-txt.py
+
+      # 2. Build pillar entity-hub pages (NMN, NAD+, magnesium, ...)
+      - name: Build pillar pages
+        run: python3 scripts/build-pillar-pages.py
+
+      # 3. Inject cross-article internal links (knowledge graph)
+      - name: Auto internal linking
+        run: python3 scripts/auto-internal-links.py
+
+      # IndexNow is handled by the Shopify app (Bing IndexNow integration on
+      # the Happy Aging store). Re-enabling our own submitter would fail Bing's
+      # key-verification check because the .txt file is owned by the app.
+      # If the app is ever removed, restore the IndexNow submit step from
+      # scripts/indexnow-submit.sh and host public/<KEY>.txt at the site root.
+
+      - name: Commit generated assets
+        run: |
+          git add public/llms.txt public/llms-full.txt pages/pillar-*.html articles/*-final.html 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "geo-post-publish: refresh discovery assets $(date +%Y-%m-%d) [skip ci]"
+            git push origin main
+          else
+            echo "No discovery-asset changes."
+          fi

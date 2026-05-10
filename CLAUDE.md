@@ -33,6 +33,46 @@ Daily run, 20 articles per cycle.
 - Published articles: articles/
 - Performance data: CONTENT-PERFORMANCE.md
 - QA + publish script: scripts/qa-and-publish.sh
+- **GEO operations manual: docs/GEO-OPS.md** — schema, llms.txt, pillar pages,
+  90-day re-review, citation monitor, dedup, IndexNow, manual ops checklist
+
+## GEO Infrastructure (US wellness market)
+- **Schema per article** (`articles/lib_medical_schema.py`): MedicalWebPage /
+  Article + Person reviewer (Dr. Daniel Yadegar, sameAs LinkedIn) + HowTo +
+  citation array. Wired into `qa-and-publish.sh` and `articles/patch-seo.py`.
+- **Retroactive schema patch**: `articles/patch-medical-schema.py` applies the
+  above to all already-published articles via Shopify Admin API.
+- **/llms.txt + /llms-full.txt**: `scripts/build-llms-txt.py` generates them
+  in `public/`. Upload as Shopify theme assets at the site root.
+- **Author page**: `pages/dr-daniel-yadegar.html` — upload as Shopify Page,
+  handle `dr-daniel-yadegar`. Carries Person JSON-LD with sameAs LinkedIn.
+- **Pillar pages**: `scripts/build-pillar-pages.py` produces 8 entity hubs
+  (NMN, NAD+, magnesium, perimenopause, sleep, longevity, ashwagandha, sirtuins).
+- **PMID enrichment**: `scripts/enrich-citations-from-pubmed.py` fetches title,
+  journal, year, study_type, n from PubMed E-utilities and populates
+  `meta.json["citations"]` (consumed by the medical schema lib).
+- **LLM citation monitor**: `scripts/llm-citation-monitor.py` queries
+  Perplexity, ChatGPT (gpt-4o-search-preview), Claude (web_search), and Google
+  AI Overviews (SerpAPI) weekly. Output: `LLM-CITATIONS.md`.
+- **Competitor citation gap**: `scripts/competitor-citation-gap.py` scores each
+  candidate query by current LLM citation landscape (low-authority cited =
+  green field). Output: `COMPETITOR-GAP.md`.
+- **Internal linking**: `scripts/auto-internal-links.py` builds the knowledge
+  graph by injecting cross-article links from shared `about`/`mentions`
+  entities + linking primary entities to pillar pages.
+- **IndexNow**: `scripts/indexnow-submit.sh` notifies Bing (= ChatGPT Search
+  index) on each publish. Requires `INDEXNOW_KEY`.
+- **90-day re-review**: `scripts/re-review-stale.py` flags articles where
+  `date_reviewed` > 90 days. Output: `REFRESH-QUEUE.md` consumed by Phase 1.
+- **Dedup**: `scripts/check-duplicate-topics.py` rejects candidate topics
+  with slug collisions, ≥55% title token overlap, or recent overlapping
+  entities. Mandatory pre-step before Phase 1 scoring.
+- **Comparison content**: `config/competitors.json` registers competing brands
+  per cluster. `scripts/generate-comparison-topics.py` produces
+  `COMPARISON-QUEUE.md`; Phase 1 reserves ≥2 batch slots/cycle. When a brief's
+  `format: comparison`, Phase 3 routes to `agents/03b-comparison-writer.md`
+  (extends 03 with FTC compliance, required `<table>`, hedged-language rules).
+  `lib_medical_schema.build_comparison_itemlist` emits `ItemList` JSON-LD.
 
 ## Publishing
 Published via Shopify Admin API (REST). Prefer the script over raw curl:

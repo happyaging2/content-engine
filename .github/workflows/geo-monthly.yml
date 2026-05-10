@@ -1,0 +1,53 @@
+name: GEO — Monthly PMID Enrichment & Schema Retro-Patch
+
+on:
+  # 1st of each month at 05:00 UTC
+  schedule:
+    - cron: "0 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich-and-patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      # 1. Pull PubMed metadata for every PMID in every article -> meta.json
+      - name: Enrich citations from PubMed
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: python3 scripts/enrich-citations-from-pubmed.py
+
+      # 2. Re-emit MedicalWebPage / Article + Person + HowTo schema on every
+      #    published article so the new citation metadata reaches Shopify.
+      - name: Retro-patch MedicalWebPage schema on Shopify
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+        run: |
+          if [ -n "$SHOPIFY_TOKEN" ]; then
+            python3 articles/patch-medical-schema.py
+          else
+            echo "SHOPIFY_TOKEN not set — skipping retro-patch."
+          fi
+
+      - name: Commit enriched citations
+        run: |
+          git add articles/*.meta.json .pubmed-cache.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "geo-monthly: PubMed enrichment $(date +%Y-%m) [skip ci]"
+            git push origin main
+          else
+            echo "No citation changes."
+          fi
