@@ -1,0 +1,32 @@
+{
+  "title": "Zone 2 Cardio and NAD+: The Exercise Protocol That Slows Aging After 40",
+  "slug": "zone-2-cardio-nad-aging-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "zone 2 cardio, NAD+, exercise, aging, energy, mitochondria, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s jogging at a comfortable pace on a tree-lined path, wearing a fitted running jacket and leggings in neutral colors, with golden morning light filtering through the trees, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s cycling outdoors in athletic wear on a sunny day, wearing a light jacket and cycling shorts, on a scenic bike path with trees and blue sky, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a brisk walk in a park wearing athletic shoes and comfortable workout clothes, with a relaxed confident expression, in a green park setting with soft morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s checking her fitness watch while resting on a park bench after exercise, wearing athletic clothes and sneakers, looking at her wrist with a satisfied expression, with greenery in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a light jog with earbuds in a suburban neighborhood at sunrise, wearing a fitted athletic top and leggings, with warm golden sunrise light on her face, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["zone 2 cardio", "NAD+ and exercise", "mitochondrial biogenesis", "longevity exercise for women", "AMPK activation"],
+  "mentions": ["zone 2 training", "mitochondria", "NAD+", "AMPK", "sirtuins", "mitochondrial biogenesis", "fat oxidation", "heart rate", "NMN"],
+  "medical_audience": "Patient",
+  "primary_topic": "zone 2 cardio NAD+ women over 40",
+  "citations": [
+    {"pmid": "29502867", "citation": "Rajman L, Chwalek K, Sinclair DA. Therapeutic potential of NAD-boosting molecules. Cell Metab. 2018."},
+    {"pmid": "34811282", "citation": "Yoshino M et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021."},
+    {"pmid": "28273063", "citation": "Mills KF et al. Long-term administration of NMN mitigates age-associated physiological decline in mice. Cell Metab. 2016."}
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
