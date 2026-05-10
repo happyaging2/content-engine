@@ -315,8 +315,9 @@ async def _phase3_async(
                     batch_date=batch_date,
                     system_blocks=sys_blocks,
                 )
-            except anthropic.APIError as e:
-                log.error("Writer failed for %r: %s", topic.get("topic"), e)
+            except Exception as e:
+                log.error("Writer failed for %r: %s: %s",
+                          topic.get("topic"), type(e).__name__, e)
                 return {"_failed": True, "topic": topic, "error": str(e)}
 
     return await asyncio.gather(*[_bounded(t) for t in topics])
@@ -337,6 +338,9 @@ def run_phase3_parallel(
 
 # ── Phase 4 — SEO Optimizer (quality gate) ─────────────────────────────────────
 
+# Phase 4 schema: `final_*` fields are OPTIONAL. When verdict=pass, the
+# optimizer omits them and we fall back to the Phase 3 article — no expensive
+# regeneration of the full HTML when nothing needs fixing.
 PHASE4_VERDICT_SCHEMA = {
     "type": "object",
     "properties": {
@@ -350,10 +354,13 @@ PHASE4_VERDICT_SCHEMA = {
             "maximum": 100,
             "description": "Cumulative GEO/FDA/FTC compliance score.",
         },
-        "final_title": {"type": "string"},
-        "final_seo_title": {"type": "string"},
-        "final_meta_description": {"type": "string"},
-        "final_body_html": {"type": "string"},
+        "final_title": {"type": ["string", "null"]},
+        "final_seo_title": {"type": ["string", "null"]},
+        "final_meta_description": {"type": ["string", "null"]},
+        "final_body_html": {
+            "type": ["string", "null"],
+            "description": "Required only when verdict=fix_and_pass. Omit/null on pass or reject.",
+        },
     },
     "required": [
         "verdict",
@@ -361,13 +368,49 @@ PHASE4_VERDICT_SCHEMA = {
         "fixes_applied",
         "fda_ftc_violations",
         "geo_score",
-        "final_title",
-        "final_seo_title",
-        "final_meta_description",
-        "final_body_html",
     ],
     "additionalProperties": False,
 }
+
+
+# Phase 4 model: Sonnet by default (5x cheaper, fast enough for checklist
+# review). Override with PHASE4_MODEL=claude-opus-4-7 for max rigor.
+PHASE4_MODEL = os.environ.get("PHASE4_MODEL", MODEL_SONNET)
+
+
+def _phase4_user_message(article: dict, batch_date: str) -> str:
+    return (
+        f"Review and (if necessary) fix this article. Apply ALL gates from "
+        f"agents/04-seo-optimizer.md, especially the FDA / FTC compliance "
+        f"hard gate.\n\n"
+        f"## Article (Phase 3 output)\n"
+        f"```json\n"
+        f"{json.dumps(article, ensure_ascii=False, indent=2)}\n"
+        f"```\n\n"
+        f"Today's date: {batch_date}\n\n"
+        f"Output rules:\n"
+        f"- `verdict`: pass = no changes needed (omit final_* fields); "
+        f"fix_and_pass = include final_body_html / final_title / "
+        f"final_seo_title / final_meta_description with your fixes; "
+        f"reject = article cannot be salvaged (disease claim, fabricated PMIDs).\n"
+        f"- `fda_ftc_violations`: every disease claim, unsubstantiated "
+        f"superlative, fabricated testimonial. Empty array if clean.\n"
+        f"- `geo_score`: 0-100. <70 = reject.\n"
+        f"- IMPORTANT: do NOT regenerate the body when verdict=pass. Saves cost."
+    )
+
+
+def _phase4_finalize(verdict: dict, article: dict) -> dict:
+    """Fill missing final_* fields from the Phase 3 article when pass."""
+    if not verdict.get("final_body_html"):
+        verdict["final_body_html"] = article.get("body_html", "")
+    if not verdict.get("final_title"):
+        verdict["final_title"] = article.get("title", "")
+    if not verdict.get("final_seo_title"):
+        verdict["final_seo_title"] = article.get("seo_title", article.get("title", ""))
+    if not verdict.get("final_meta_description"):
+        verdict["final_meta_description"] = article.get("meta_description", "")
+    return verdict
 
 
 def run_phase4(*, article: dict, batch_date: str) -> dict:
@@ -377,27 +420,9 @@ def run_phase4(*, article: dict, batch_date: str) -> dict:
     client = Anthropic()
     system = build_phase_system_blocks(["04-seo-optimizer.md"])
 
-    user_message = (
-        f"Review and (if necessary) fix this article. Apply ALL gates from "
-        f"agents/04-seo-optimizer.md, especially the FDA / FTC compliance "
-        f"hard gate. Return the final, publish-ready HTML in `final_body_html`.\n\n"
-        f"## Article (Phase 3 output)\n"
-        f"```json\n"
-        f"{json.dumps(article, ensure_ascii=False, indent=2)}\n"
-        f"```\n\n"
-        f"Today's date: {batch_date}\n\n"
-        f"Output rules:\n"
-        f"- `verdict`: pass = no changes needed; fix_and_pass = you fixed issues "
-        f"and the article is now ready; reject = article cannot be salvaged "
-        f"(disease claim, fabricated PMIDs, etc).\n"
-        f"- `fda_ftc_violations`: every disease claim, unsubstantiated "
-        f"superlative, fabricated testimonial. Empty array if clean.\n"
-        f"- `geo_score`: 0-100. <70 = reject."
-    )
-
     log.info("Phase 4: gating %s", article.get("slug", "<no-slug>")[:50])
     with client.messages.stream(
-        model=MODEL_OPUS,
+        model=PHASE4_MODEL,
         max_tokens=32000,
         thinking=THINKING_ADAPTIVE,
         output_config={
@@ -405,12 +430,12 @@ def run_phase4(*, article: dict, batch_date: str) -> dict:
             "format": {"type": "json_schema", "schema": PHASE4_VERDICT_SCHEMA},
         },
         system=system,
-        messages=[{"role": "user", "content": user_message}],
+        messages=[{"role": "user", "content": _phase4_user_message(article, batch_date)}],
     ) as stream:
         msg = stream.get_final_message()
 
     text = next((b.text for b in msg.content if b.type == "text"), "")
-    verdict = json.loads(text)
+    verdict = _phase4_finalize(json.loads(text), article)
     log.info(
         "  [%s] %s  score=%s issues=%s violations=%s",
         verdict["verdict"].upper(),
@@ -420,6 +445,77 @@ def run_phase4(*, article: dict, batch_date: str) -> dict:
         len(verdict["fda_ftc_violations"]),
     )
     return verdict
+
+
+async def _phase4_async_one(
+    async_client: AsyncAnthropic,
+    *,
+    article: dict,
+    batch_date: str,
+    system_blocks: list[dict],
+) -> dict:
+    async with async_client.messages.stream(
+        model=PHASE4_MODEL,
+        max_tokens=32000,
+        thinking=THINKING_ADAPTIVE,
+        output_config={
+            **EFFORT_HIGH,
+            "format": {"type": "json_schema", "schema": PHASE4_VERDICT_SCHEMA},
+        },
+        system=system_blocks,
+        messages=[{"role": "user", "content": _phase4_user_message(article, batch_date)}],
+    ) as stream:
+        msg = await stream.get_final_message()
+    text = next((b.text for b in msg.content if b.type == "text"), "")
+    verdict = _phase4_finalize(json.loads(text), article)
+    log.info(
+        "  [%s] %s  score=%s",
+        verdict["verdict"].upper(),
+        article.get("slug", "")[:40],
+        verdict["geo_score"],
+    )
+    return verdict
+
+
+async def _phase4_async(
+    *,
+    articles: list[dict],
+    batch_date: str,
+    concurrency: int = 5,
+) -> list[dict | None]:
+    async_client = AsyncAnthropic()
+    system_blocks = build_phase_system_blocks(["04-seo-optimizer.md"])
+    sem = asyncio.Semaphore(concurrency)
+
+    async def _bounded(art):
+        async with sem:
+            try:
+                return await _phase4_async_one(
+                    async_client,
+                    article=art,
+                    batch_date=batch_date,
+                    system_blocks=system_blocks,
+                )
+            except Exception as e:
+                log.error("Phase 4 failed for %s: %s: %s",
+                          art.get("slug"), type(e).__name__, e)
+                return None
+
+    return await asyncio.gather(*[_bounded(a) for a in articles])
+
+
+def run_phase4_parallel(
+    *,
+    articles: list[dict],
+    batch_date: str,
+    concurrency: int = 5,
+) -> list[dict | None]:
+    """Sync entry point — gates all articles in parallel. None on per-article failure."""
+    log.info("Phase 4: gating %s articles in parallel (concurrency=%s, model=%s)",
+             len(articles), concurrency, PHASE4_MODEL)
+    return asyncio.run(_phase4_async(
+        articles=articles, batch_date=batch_date, concurrency=concurrency
+    ))
 
 
 # ── Disk persistence ───────────────────────────────────────────────────────────
