@@ -1,0 +1,32 @@
+{
+  "title": "What Is NMNH? The Reduced Form of NMN for Women Over 40",
+  "slug": "nmnh-reduced-nmn-supplement-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NMNH, NMN, NAD+, cellular energy, longevity, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s reviewing supplement bottles at a kitchen counter, wearing a relaxed linen blouse, standing in a bright modern kitchen with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s jogging outdoors at sunrise in athletic gear, wearing a fitted running jacket and leggings, on a tree-lined path with golden morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s in a bright kitchen holding a glass of water and a supplement capsule, wearing a casual white top, standing at a clean marble counter with morning light streaming in, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a gentle yoga stretch in a sunlit living room, wearing soft yoga pants and a fitted tank top, on a light-colored yoga mat with houseplants in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reading in a cozy armchair with natural light, wearing a comfortable knit sweater, with a small side table and warm afternoon sunlight through a window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["NMNH supplement", "NAD+ precursors", "NMN reduced form", "cellular energy women over 40", "longevity supplements"],
+  "mentions": ["nicotinamide mononucleotide", "dihydronicotinamide mononucleotide", "NAD+", "sirtuins", "SIRT1", "SIRT3", "liposomal NAD+", "mitochondria", "NAMPT"],
+  "medical_audience": "Patient",
+  "primary_topic": "NMNH supplement women over 40",
+  "citations": [
+    {"pmid": "34811282", "citation": "Yoshino M et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021."},
+    {"pmid": "29502867", "citation": "Rajman L, Chwalek K, Sinclair DA. Therapeutic potential of NAD-boosting molecules. Cell Metab. 2018."},
+    {"pmid": "28273063", "citation": "Mills KF et al. Long-term administration of NMN mitigates age-associated physiological decline in mice. Cell Metab. 2016."}
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}

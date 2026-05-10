@@ -1,0 +1,31 @@
+{
+  "title": "NAD+ Precursors Compared: NR, NMN, NMNH, and Niacin for Women Over 40",
+  "slug": "nad-precursors-compared-nr-nmn-nmnh-niacin-women-40",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, NMN, NR, NMNH, niacin, supplements, comparison, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s confidently reviewing product labels at a clean white desk, wearing a neat casual blouse, in a bright modern home office with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s stretching her arms upward in a sunny outdoor park, wearing casual athletic clothes in soft colors, with trees and morning light in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s in a bright kitchen preparing a healthy breakfast bowl with colorful fruit and grains, wearing a comfortable linen top, at a clean white counter with sunlight streaming in, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s at a wooden desk writing in a wellness journal with a coffee mug nearby, wearing a cozy sweater, in a sunlit home study with warm tones, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+ precursors comparison", "NR vs NMN vs NMNH vs niacin", "NAD+ supplements women over 40", "nicotinamide riboside", "nicotinamide mononucleotide"],
+  "mentions": ["NR", "NMN", "NMNH", "niacin", "nicotinic acid", "NAD+", "sirtuins", "NAMPT", "liposomal NAD+", "mitochondria", "PMID 34811282"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ precursors comparison women over 40",
+  "citations": [
+    {"pmid": "34811282", "citation": "Yoshino M et al. NMN increases muscle insulin sensitivity in prediabetic women. Science. 2021."},
+    {"pmid": "29502867", "citation": "Rajman L, Chwalek K, Sinclair DA. Therapeutic potential of NAD-boosting molecules. Cell Metab. 2018."},
+    {"pmid": "28273063", "citation": "Mills KF et al. Long-term NMN mitigates age-associated decline in mice. Cell Metab. 2016."}
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}

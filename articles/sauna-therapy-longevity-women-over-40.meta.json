@@ -1,0 +1,28 @@
+{
+  "title": "Sauna Therapy and Longevity for Women Over 40: What the Research Shows",
+  "slug": "sauna-therapy-longevity-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "sauna, longevity, cardiovascular health, heat therapy, women over 40, wellness",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s relaxing in a wooden sauna, wearing a towel wrap, calm expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting in a cozy wooden sauna, eyes closed, relaxed expression, wearing a white towel wrap, soft golden light, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s cooling down with cold water after sauna, outdoors at a wellness spa, wearing a swimsuit, fresh and refreshed expression, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s doing gentle breathing exercises in a bright wellness studio, seated on a mat, peaceful expression, soft natural light, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s drinking herbal tea in a cozy robe after a wellness treatment, warm indoor setting, relaxed and content expression, photorealistic lifestyle photography, no text, no watermark"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["sauna therapy", "longevity", "cardiovascular health", "heat shock proteins", "women over 40", "infrared sauna"],
+  "mentions": ["Laukkanen 2018", "Mayo Clinic Proceedings", "heat shock proteins", "Finnish sauna", "infrared sauna", "NAD+"],
+  "medical_audience": "Patient",
+  "primary_topic": "sauna therapy longevity women over 40",
+  "citations": [{"pmid": "29936521", "citation": "Laukkanen JA et al. Cardiovascular and Other Health Benefits of Sauna Bathing. Mayo Clin Proc. 2018."}],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
