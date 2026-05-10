@@ -1353,6 +1353,15 @@ A: They work through completely different mechanisms. Soy isoflavones (genistein
 Cite: https://happyaging.com/blogs/news/black-cohosh-menopause-symptoms-after-40
 
 
+## Bloating After 40: A Step-by-Step Guide to Finding Your Triggers and Fixing Them
+Source: https://happyaging.com/blogs/news/bloating-after-40-step-by-step-guide-women
+Entities: bloating after 40, gut health women, perimenopause digestion, microbiome changes menopause, low stomach acid hypochlorhydria, FODMAP elimination protocol
+
+### Q: What Is Bloating After 40?
+A: Bloating is the sensation of fullness, pressure, or visible distension in the abdomen, usually caused by excess gas, slowed digestive motility, or increased gut sensitivity. "Bloating after 40" specifically refers to the pattern of increased frequency and severity of this sensation that many women notice during perimenopause and the postmenopausal years. It is distinct from occasional bloating that everyone experiences, in that it becomes more predictable, harder to resolve, and often tied to hormonal cycles or specific foods that were previously tolerated without issue.
+Cite: https://happyaging.com/blogs/news/bloating-after-40-step-by-step-guide-women
+
+
 ## Blood Sugar Balance After 40: The Meal Timing Strategy That Works
 Source: https://happyaging.com/blogs/news/blood-sugar-timing-after-40
 
@@ -2104,6 +2113,15 @@ Cite: https://happyaging.com/blogs/news/coq10-guide-energy-women-over-40
 ### Q: Does CoQ10 have any side effects?
 A: CoQ10 is generally very well tolerated. The most commonly reported side effects at higher doses are mild digestive upset (nausea or stomach discomfort), which is usually resolved by taking it with food. Insomnia has been reported by some users when CoQ10 is taken late at night, so morning or midday dosing is generally preferred.
 Cite: https://happyaging.com/blogs/news/coq10-guide-energy-women-over-40
+
+
+## Cold Therapy for Women Over 40: Do Ice Baths and Cold Showers Actually Work?
+Source: https://happyaging.com/blogs/news/cold-therapy-women-over-40-ice-bath-benefits
+Entities: cold therapy women over 40, ice bath benefits, cold shower wellness, cold water immersion, cryotherapy comparison
+
+### Q: What Is Cold Therapy?
+A: Cold therapy involves intentional exposure to cold temperatures to produce physiological adaptations. The three most common forms are cold showers, ice baths, and whole-body cryotherapy chambers. As of 2026, the strongest evidence supports cold therapy for muscle recovery after exercise.
+Cite: https://happyaging.com/blogs/news/cold-therapy-women-over-40-ice-bath-benefits
 
 
 ## Collagen Loss After 40: What's Happening and How to Slow It
@@ -3226,6 +3244,15 @@ A: Urine color is a practical indicator: pale yellow indicates good hydration. D
 Cite: https://happyaging.com/blogs/news/electrolytes-menopause-hydration-after-40
 
 
+## Epigenetic Age Testing After 40: What Biological Age Tests Actually Measure
+Source: https://happyaging.com/blogs/news/epigenetic-age-testing-biological-age-women-over-40
+Entities: epigenetic age testing, biological age, DNA methylation, epigenetic clocks, longevity, women over 40, sirtuins
+
+### Q: What Is Epigenetic Age Testing?
+A: Epigenetic age testing reads DNA methylation patterns from a biological sample and uses these patterns to estimate how old your cells appear to be, biologically speaking.
+Cite: https://happyaging.com/blogs/news/epigenetic-age-testing-biological-age-women-over-40
+
+
 ## Estrogen Decline After 40: Symptoms You Might Not Recognize
 Source: https://happyaging.com/blogs/news/estrogen-decline-symptoms-after-40
 
@@ -3432,6 +3459,15 @@ Cite: https://happyaging.com/blogs/news/folate-skin-health-after-40
 ### Q: Which foods are highest in folate for skin health?
 A: Cooked lentils, spinach, edamame, asparagus, avocado, eggs, and broccoli are all excellent sources. Eating a variety of these regularly provides consistent folate alongside other skin-supporting nutrients including vitamin C, zinc, and protein.
 Cite: https://happyaging.com/blogs/news/folate-skin-health-after-40
+
+
+## GLP-1 Foods and Supplements: A Practical Satiety Guide for Women Over 40
+Source: https://happyaging.com/blogs/news/glp-1-foods-supplements-satiety-women-over-40
+Entities: GLP-1 natural support, gut microbiome satiety, fiber and GLP-1, berberine GLP-1, prebiotic fiber women over 40
+
+### Q: What Is GLP-1?
+A: GLP-1 is an incretin hormone produced by L-cells in the small intestine and colon in response to eating. It signals satiety, stimulates insulin release, and slows gastric emptying.
+Cite: https://happyaging.com/blogs/news/glp-1-foods-supplements-satiety-women-over-40
 
 
 ## Glutathione for Detox After 40: Why Your Master Antioxidant Declines and How to Restore It
@@ -3924,6 +3960,15 @@ Cite: https://happyaging.com/blogs/news/cortisol-changes-after-40-women
 ### Q: How long does it take to normalize cortisol?
 A: With consistent lifestyle changes (sleep, stress management, nutrition) and appropriate supplementation (magnesium, ashwagandha), most women notice improvements in sleep quality and daytime energy within two to four weeks. Cortisol patterns measured by salivary testing typically show meaningful normalization over six to eight weeks of consistent intervention. The HPA axis is responsive to change, but it requires consistency: one good weekend of rest will not undo months of chronic stress.
 Cite: https://happyaging.com/blogs/news/cortisol-changes-after-40-women
+
+
+## How Estrogen Affects Sleep Architecture After 40: Why Your Sleep Changes
+Source: https://happyaging.com/blogs/news/estrogen-sleep-architecture-after-40-women
+Entities: estrogen sleep architecture, perimenopause sleep disruption, N3 slow-wave sleep decline, progesterone GABA sleep, magnesium sleep, melatonin perimenopause
+
+### Q: What Is Sleep Architecture?
+A: Sleep architecture is the structured pattern of sleep stages: N1 (Light Sleep), N2 (Stable Sleep), N3 (Deep Slow-Wave Sleep), and REM (Rapid Eye Movement).
+Cite: https://happyaging.com/blogs/news/estrogen-sleep-architecture-after-40-women
 
 
 ## How Estrogen Changes Drive Weight Gain After 40 (And What to Do About It)
@@ -9279,6 +9324,15 @@ Cite: https://happyaging.com/blogs/news/testosterone-muscle-connection-after-40
 ### Q: What is the best protein for muscle building after 40?
 A: Complete proteins with high leucine content are most effective for muscle protein synthesis. Whey protein has the highest leucine content and fastest absorption. Plant-based proteins can match animal proteins when combined to create a complete amino acid profile and when total leucine content per serving is optimized (at least 2.5 to 3 grams per meal). Protein timing around workouts also matters: consuming 30 to 40 grams within 2 hours post-training maximizes the anabolic window.
 Cite: https://happyaging.com/blogs/news/testosterone-muscle-connection-after-40
+
+
+## The 30-Day Longevity Reset Plan for Women Over 40: A Science-Backed Protocol
+Source: https://happyaging.com/blogs/news/30-day-longevity-reset-plan-women-over-40
+Entities: 30-day longevity plan women, NAD+ longevity protocol, five longevity pillars women, perimenopause wellness protocol, Zone 2 cardio women over 40, longevity reset plan
+
+### Q: What Is a Longevity Reset?
+A: A longevity reset is a structured, time-bounded protocol designed to establish the foundational behaviors and inputs that longevity science identifies as most impactful for biological aging in a specific population. For women over 40, this means addressing the specific physiological changes that accumulate through perimenopause and beyond: declining NAD+ levels affecting cellular energy, sleep architecture changes from hormonal shifts, gut microbiome alterations that affect immunity and mood, elevated baseline stress and cortisol, and loss of muscle mass from declining activity and protein synthesis efficiency.
+Cite: https://happyaging.com/blogs/news/30-day-longevity-reset-plan-women-over-40
 
 
 ## The Best Bedtime Routine for Women Over 40 (A Step-by-Step Guide)
