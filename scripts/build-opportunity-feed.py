@@ -141,11 +141,28 @@ def main() -> None:
                     "counter_target": True,
                 })
 
-    # Dedup by lowercased title (keep richest source)
+    # Dedup by lowercased title — keep the candidate with the strongest
+    # signal when the same topic surfaces from multiple sources. Without
+    # this, an autocomplete row would shadow a Reddit-with-score row or
+    # a competitor counter-target for the same query.
+    def _signal_priority(c: dict) -> tuple[int, int]:
+        # Higher tuple sorts first. (signal_class, secondary_strength)
+        if c.get("counter_target"):
+            return (4, 0)
+        src = c.get("source") or ""
+        if src.startswith("reddit"):
+            # Reddit ranked by engagement
+            return (3, (c.get("score") or 0) + 2 * (c.get("comments") or 0))
+        if src == "paa":
+            return (2, 0)
+        if src == "autocomplete":
+            return (1, 0)
+        return (0, 0)
+
     by_title: dict[str, dict] = {}
     for c in candidates:
         k = c["title"].lower().strip()
-        if k not in by_title:
+        if k not in by_title or _signal_priority(c) > _signal_priority(by_title[k]):
             by_title[k] = c
     candidates = list(by_title.values())
 
