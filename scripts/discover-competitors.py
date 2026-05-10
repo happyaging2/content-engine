@@ -45,19 +45,64 @@ COMPETITORS = [
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; happy-aging-research/1.0)"}
 
+# Heuristics for filtering article URLs out of a sitemap. Tightened to exclude
+# product / collection / cart / search pages from Shopify-style sitemaps.
+ARTICLE_PATH_HINTS = ("/blog", "/article", "/journal", "/learn", "/posts", "/news")
+NON_ARTICLE_PATH_HINTS = (
+    "/products/", "/collections/", "/cart", "/search",
+    "/policies/", "/account", "/checkout",
+)
+
 
 def _fetch(url: str) -> str:
     req = urllib.request.Request(url, headers=UA)
     return urllib.request.urlopen(req, timeout=15).read().decode("utf-8", errors="ignore")
 
 
-def _extract(content: str, kind: str) -> list[dict]:
+def _is_sitemap_index(content: str) -> bool:
+    """A sitemap index has <sitemapindex> as root element instead of <urlset>."""
+    return "<sitemapindex" in content[:400].lower()
+
+
+def _expand_sitemap(url: str, depth: int = 0, max_depth: int = 3) -> list[str]:
+    """Return a flat list of leaf <loc> URLs from a sitemap, recursing into
+    sitemap-index documents and into <loc> entries that point at .xml files.
+    Prevents the index-only bug where /sitemap.xml never reveals child posts."""
+    if depth > max_depth:
+        return []
+    try:
+        content = _fetch(url)
+    except Exception as e:
+        print(f"    expand fail {url}: {str(e)[:60]}")
+        return []
+    locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", content)
+    if not locs:
+        return []
+    if _is_sitemap_index(content) or any(loc.lower().endswith(".xml") or "/sitemap" in loc.lower() for loc in locs[:5]):
+        # Recurse into child sitemaps. Cap to first 8 children to avoid
+        # exploding on giant Shopify catalogs.
+        out: list[str] = []
+        for child in locs[:8]:
+            if child.lower().endswith(".xml") or "/sitemap" in child.lower():
+                out.extend(_expand_sitemap(child, depth=depth + 1, max_depth=max_depth))
+                time.sleep(0.4)
+            else:
+                out.append(child)
+        return out
+    return locs
+
+
+def _extract(content: str, kind: str, source_url: str = "") -> list[dict]:
     if kind == "sitemap":
-        # Pull <loc> entries; filter for blog-y URLs
-        urls = re.findall(r"<loc>([^<]+)</loc>", content)
-        out = []
+        # Recursively walk sitemap indexes to leaf URLs, then filter for
+        # blog-y paths and exclude product/collection/policy paths.
+        urls = _expand_sitemap(source_url) if source_url else re.findall(r"<loc>([^<]+)</loc>", content)
+        out: list[dict] = []
         for u in urls:
-            if any(seg in u.lower() for seg in ("/blog", "/article", "/journal", "/learn", "/posts", "/news")):
+            ul = u.lower()
+            if any(seg in ul for seg in NON_ARTICLE_PATH_HINTS):
+                continue
+            if any(seg in ul for seg in ARTICLE_PATH_HINTS):
                 out.append({"url": u, "title": ""})
         return out
     if kind == "rss":
@@ -92,7 +137,7 @@ def main() -> None:
         except Exception as e:
             print(f"  {comp['name']:25s} fetch fail: {str(e)[:60]}")
             continue
-        items = _extract(content, comp["kind"])
+        items = _extract(content, comp["kind"], source_url=comp["url"])
         prior = set(seen.get(comp["name"], []))
         new = [it for it in items if it["url"] not in prior]
         seen[comp["name"]] = sorted(set(prior | {it["url"] for it in items}))
