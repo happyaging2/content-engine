@@ -1,0 +1,33 @@
+{
+  "title": "NAD+ and Skin Aging: How Cellular Health Shapes Your Complexion After 40",
+  "slug": "nad-plus-skin-aging-complexion-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, skin aging, collagen, cellular health, women over 40, longevity, skin glow",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s touching her face looking at her glowing radiant complexion in a bathroom mirror, wearing a casual top, natural warm light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s applying lightweight serum to her face in a bright bathroom, glowing skin, wearing a casual top, soft natural light, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s enjoying a healthy green smoothie in a bright kitchen with a radiant smile, casual clothes, warm morning light, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s doing a gentle face massage with fingertips in front of a well-lit bathroom mirror, relaxed expression, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s relaxing with a facial mask in a cozy bathroom, wrapped in a soft white robe, candle light, serene expression, photorealistic lifestyle photography, no text, no watermark"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+ and skin aging", "collagen synthesis", "DNA repair", "sirtuins", "skin aging women over 40", "PARP enzymes", "NMN", "NR"],
+  "mentions": ["PARP enzymes", "sirtuins", "collagen", "NMN", "NR", "vitamin C serum", "retinol", "Rajman Sinclair 2018"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ skin aging women over 40",
+  "citations": [
+    {
+      "pmid": "29502867",
+      "citation": "Rajman L, Chwalek K, Sinclair DA. Therapeutic Potential of NAD-Boosting Molecules: The In Vivo Evidence. Cell Metab. 2018;27(3):529-547."
+    }
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
