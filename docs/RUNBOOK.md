@@ -30,10 +30,27 @@ photos.
 
 1. Upload `pages/dr-daniel-yadegar.html` as a Shopify Page with handle
    `dr-daniel-yadegar` (carries Person JSON-LD with sameAs LinkedIn).
-2. Run `scripts/build-pillar-pages.py`, then upload the 8 generated files in
-   `pages/pillar-*.html` as Shopify Pages.
+2. Run `scripts/build-pillar-pages.py`, then upload **all 12** generated files
+   in `pages/pillar-*.html` as Shopify Pages. Priority clusters (uploads
+   marked **`[priority]`** must exist before Phase 1 runs to avoid orphan
+   rejections):
+   - `pillar-nad` **[priority]**
+   - `pillar-nmn` **[priority]**
+   - `pillar-bloating` **[priority]**
+   - `pillar-glp-1-support` **[priority]**
+   - `pillar-hormonal-balance` **[priority]**
+   - `pillar-womens-longevity` **[priority]**
+   - `pillar-perimenopause`
+   - `pillar-magnesium`
+   - `pillar-sleep`
+   - `pillar-longevity`
+   - `pillar-ashwagandha`
+   - `pillar-sirtuins`
 3. Run `scripts/build-llms-txt.py`, then upload `public/llms.txt` and
    `public/llms-full.txt` as theme assets at the site root.
+4. Upload `public/robots.txt` as a theme asset at the site root (overrides
+   Shopify's default robots — explicitly allows OAI-SearchBot, GPTBot,
+   PerplexityBot, ClaudeBot, Applebot-Extended, Google-Extended).
 
 ---
 

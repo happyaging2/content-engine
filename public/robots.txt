@@ -1,0 +1,93 @@
+# robots.txt for happyaging.com
+# Upload as Shopify theme asset (root) — replaces the default Shopify robots.
+#
+# Strategy (see docs/GEO-STRATEGY.md §4): we explicitly allow every AI search
+# crawler. For us to be cited by AI Overviews, ChatGPT Search, Perplexity, and
+# Claude, the crawlers need to be able to read the content. Blocking GPTBot
+# does NOT block ChatGPT Search — that's OAI-SearchBot. List both.
+
+# ── Search engines ─────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ── AI search crawlers (cite content in answers) ───────────────────────────
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# ── AI training crawlers (separate from search) ────────────────────────────
+# Allow these too — being part of training corpora improves entity recognition
+# in long-tail queries. Disallow individual ones if/when leadership decides.
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ── Default ────────────────────────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# Sitemap & LLM index
+Sitemap: https://happyaging.com/sitemap.xml
+# /llms.txt and /llms-full.txt are uploaded as theme assets at the site root
+# and registered in this robots.txt as a soft signal to crawlers.

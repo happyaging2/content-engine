@@ -243,6 +243,38 @@ Use "may support", "is associated with", "studies suggest", "research indicates"
 #### Rule G17 — Freshness Signal Inline
 In the first 200 words, include a year reference tied to evidence: "Recent research through 2026 suggests..." or "As of 2026, the strongest evidence supports...". This signals recency to AI ranking systems and discourages paraphrase from older corpora.
 
+#### Rule G19 — Cluster Anchoring (REQUIRED)
+Every article must declare its **priority cluster** in `meta.json["primary_topic"]` and link to the corresponding pillar page in the body at least once.
+
+Priority clusters (per docs/GEO-STRATEGY.md):
+1. **NAD+ / NMN / cellular energy** → pillar: `/pages/pillar-nad`, `/pages/pillar-nmn`, `/pages/pillar-womens-longevity`
+2. **Bloating after 40** → pillar: `/pages/pillar-bloating`
+3. **GLP-1 nutrition support** → pillar: `/pages/pillar-glp-1-support`
+4. **Hormonal balance after 35** → pillar: `/pages/pillar-hormonal-balance`, `/pages/pillar-perimenopause`
+
+Articles that don't fit a cluster get rejected by Phase 4 (`geo_score<70`). Comparison articles must link to BOTH the cluster pillar AND the relevant comparison hub.
+
+Inline link example, in the article body:
+> "For the bigger picture on how bloating shifts during perimenopause, see Happy Aging's <a href='https://happyaging.com/pages/pillar-bloating'>Bloating After 40 guide</a>."
+
+#### Rule G20 — Answer-First Skeleton (mandatory section order)
+Every article body must follow this exact section sequence. AI search rewards predictable, extractable structure. Sections may be renamed slightly (e.g. "Why this happens" instead of "What this means") but the **order and intent** are non-negotiable.
+
+1. **Answer-first opening sentence** (Rule G1)
+2. **Hook paragraph** (1 short paragraph)
+3. **`what-to-know` box** — 3-5 bullets answering the core query (AI-extractable)
+4. **`What is [entity]` H2** (Rule G9) — definition first
+5. **Why this matters / Why it happens** H2 — mechanism in plain language
+6. **What the research says** H2 — at least one inline citation with study type, n, effect size (Rule G5)
+7. **What the evidence does NOT support** H2 (Rule G4) — honest limits
+8. **The Happy Aging Recommendation** H2 (Rule G3) — branded protocol
+9. **Frequently Asked Questions** H2 — 4+ Q&As
+10. **References** H2 — every numeric claim has a PMID or DOI
+
+Optional inserts (when topic warrants): comparison `<table>` (G11), numbered protocol `<ol>` (G16), special-population call-out (G18).
+
+The optimizer (`agents/04-seo-optimizer.md`) checks for this skeleton and downgrades `geo_score` for missing sections.
+
 ## WRITING RULES
 - Follow SEO brief EXACTLY
 - Simple English (6th-8th grade level) — our reader is a busy woman over 40, not a scientist
