@@ -1,0 +1,31 @@
+{
+  "title": "Heart Health Supplements for Women Over 40: What the Research Actually Says",
+  "slug": "heart-health-supplements-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "heart health, cardiovascular, supplements, CoQ10, omega-3, magnesium, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced-protocol.jpg",
+  "image_prompt": "A woman in her 40s doing gentle yoga with hands over heart in a peaceful outdoor garden setting, wearing comfortable yoga clothes, dappled morning sunlight through trees, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a brisk power walk in a park wearing athletic clothes, looking healthy and energized, green park background with morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating a heart-healthy salad with salmon and avocado in a bright modern kitchen, relaxed and content, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a gentle stretch routine in a sunlit living room in comfortable yoga clothes, calm and focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing supplement bottles and making notes at a clean kitchen counter in natural light, wearing casual home clothes, organized and focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["heart health supplements women", "cardiovascular risk perimenopause", "CoQ10 heart", "omega-3 cardiovascular", "NAD+ cardiac function", "magnesium heart rhythm"],
+  "mentions": ["NAD Advanced Longevity Formula", "CoQ10 ubiquinol", "omega-3 EPA DHA", "magnesium", "resveratrol", "NMN", "SIRT1", "REDUCE-IT trial", "Q-SYMBIO trial"],
+  "medical_audience": "Patient",
+  "primary_topic": "heart health supplements women over 40",
+  "citations": [
+    {"pmid": "29502867", "description": "Rajman Chwalek Sinclair 2018 Cell Metab - NAD-boosting molecules in vivo evidence review"},
+    {"pmid": "23853635", "description": "Abbasi 2012 magnesium RCT, physiological effects including cardiac-relevant outcomes"}
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
