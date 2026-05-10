@@ -257,6 +257,19 @@ Articles that don't fit a cluster get rejected by Phase 4 (`geo_score<70`). Comp
 Inline link example, in the article body:
 > "For the bigger picture on how bloating shifts during perimenopause, see Happy Aging's <a href='https://happyaging.com/pages/pillar-bloating'>Bloating After 40 guide</a>."
 
+#### Rule G21 — Anti-Recommendation (Trust by Self-Disqualification)
+Counterintuitively, AI search trusts brands more when they explicitly say what they are NOT for. Every article should have one short paragraph (≤3 sentences) that names a population, condition, or use case where Happy Aging is NOT the right fit and points to a more appropriate alternative.
+
+Place inside or directly before "The Happy Aging Recommendation":
+> "This protocol is designed for women in perimenopause and beyond. If you are pregnant, nursing, taking blood thinners, or managing a thyroid condition, talk to your doctor before starting any new supplement — and consider [specific alternative class, e.g. 'a prenatal-specific multivitamin' or 'a healthcare-provider-supervised plan'] instead."
+
+Examples by topic:
+- NMN articles: "If you have a history of cancer, talk to your oncologist before starting NAD+ precursors — research on NAD+ in cancer biology is still mixed."
+- GLP-1 support articles: "If you are not on GLP-1 therapy and not actively losing weight, this protocol is overkill — start with a basic women's multivitamin."
+- Bloating articles: "If your bloating is sudden, severe, or paired with weight loss / blood / fever, see a gastroenterologist — this is not a supplement problem."
+
+Rule: never disqualify in a way that contradicts the FDA disclaimer. Disqualification language must remain structure-function, not disease-claim.
+
 #### Rule G20 — Answer-First Skeleton (mandatory section order)
 Every article body must follow this exact section sequence. AI search rewards predictable, extractable structure. Sections may be renamed slightly (e.g. "Why this happens" instead of "What this means") but the **order and intent** are non-negotiable.
 

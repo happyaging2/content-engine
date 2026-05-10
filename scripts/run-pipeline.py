@@ -96,11 +96,20 @@ def main():
     else:
         refresh_q = _read(os.path.join(ROOT, "REFRESH-QUEUE.md"))
         comp_q = _read(os.path.join(ROOT, "COMPARISON-QUEUE.md"))
+        # Close the learning loop: feed Phase 1 the latest performance + LLM
+        # citation signals so it picks topics that are converting AND closes
+        # gaps where competitors won AI answers this week.
+        perf_md = _read(os.path.join(ROOT, "CONTENT-PERFORMANCE.md"))
+        citations_md = _read(os.path.join(ROOT, "LLM-CITATIONS.md"))
+        gap_md = _read(os.path.join(ROOT, "COMPETITOR-GAP.md"))
         plan = run_phase1(
             batch_date=batch_date,
             batch_size=args.batch_size,
             refresh_queue_md=refresh_q,
             comparison_queue_md=comp_q,
+            performance_md=perf_md,
+            llm_citations_md=citations_md,
+            competitor_gap_md=gap_md,
         )
 
     topics = plan.get("topics") or []

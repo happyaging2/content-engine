@@ -64,4 +64,13 @@ EOF
     -d "$body" -o /tmp/indexnow.out -w "    HTTP %{http_code}\n" || true
 done
 
+# ── Sitemap ping: Google + Bing fallback (legacy but still respected) ─────────
+SITEMAP_URL="https://${HOST}/sitemap.xml"
+echo "Pinging sitemap: ${SITEMAP_URL}"
+for endpoint in \
+  "https://www.google.com/ping?sitemap=${SITEMAP_URL}" \
+  "https://www.bing.com/ping?sitemap=${SITEMAP_URL}"; do
+  curl -sS -o /dev/null -w "  ${endpoint%%\?*}: HTTP %{http_code}\n" "${endpoint}" || true
+done
+
 echo "Done."
