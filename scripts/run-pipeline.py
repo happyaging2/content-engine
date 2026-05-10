@@ -10,11 +10,11 @@ Models:
   - Sonnet 4.6 (claude-sonnet-4-6) for Phase 3 (parallel writers)
 
 Usage:
-    ANTHROPIC_API_KEY=sk-ant-... python3 scripts/run-pipeline.py [--batch-size 20]
+    ANTHROPIC_API_KEY=sk-ant-... python3 scripts/run-pipeline.py [--batch-size 10]
 
 Optional:
     --batch-date YYYY-MM-DD   (default: today UTC)
-    --batch-size N            (default: 20)
+    --batch-size N            (default: 10)
     --concurrency N           (default: 5; max parallel writers)
     --dry-run                 (run Phase 1 only; print topics, do not write)
     --topics-from FILE        (skip Phase 1, load topics from JSON file)
@@ -74,7 +74,7 @@ def _cleanup_orphan(slug: str) -> None:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch-date", default=dt.date.today().isoformat())
-    ap.add_argument("--batch-size", type=int, default=20)
+    ap.add_argument("--batch-size", type=int, default=10)
     ap.add_argument("--concurrency", type=int, default=5)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--topics-from", default=None,
