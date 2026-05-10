@@ -1,0 +1,30 @@
+{
+  "title": "Hot Flash Supplements Compared: What Actually Works After 40",
+  "slug": "hot-flash-supplements-compared-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "hot flashes, perimenopause, menopause, supplements, magnesium, black cohosh, GABA, women over 40",
+  "product_handle": "calm-tonic",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/calm-tonic.jpg",
+  "image_prompt": "A woman in her 40s sitting with a cool glass of water looking calm and comfortable, wearing a light linen top, in a bright airy living room with natural afternoon light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s fanning herself gently with a magazine sitting in a bright living room, wearing a light linen blouse, looking relaxed and comfortable, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s drinking a cool glass of water looking refreshed, standing in a bright modern kitchen, wearing casual comfortable clothes, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a gentle breathing exercise with hands on chest and belly in comfortable loose clothing, seated in a calm sunlit room, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing supplement bottles on a kitchen counter with a calm, focused expression, wearing casual home clothes, bright clean kitchen background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-10",
+  "schema_type": "MedicalWebPage",
+  "about": ["hot flashes", "perimenopause supplements", "magnesium for menopause", "black cohosh", "red clover isoflavones", "GABA supplements", "evening primrose oil"],
+  "mentions": ["Calm Tonic", "liposomal magnesium", "black cohosh", "GABA", "red clover", "evening primrose oil", "hypothalamus thermoregulation"],
+  "medical_audience": "Patient",
+  "primary_topic": "hot flash supplements comparison women over 40",
+  "citations": [
+    {"pmid": "23853635", "description": "Abbasi 2012 magnesium RCT, sleep efficiency improvement 13.6% vs placebo"}
+  ],
+  "date_published": "2026-05-10",
+  "date_modified": "2026-05-10"
+}
