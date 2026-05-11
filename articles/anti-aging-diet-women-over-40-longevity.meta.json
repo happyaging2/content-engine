@@ -1,0 +1,42 @@
+{
+  "title": "The Anti-Aging Diet for Women Over 40: Foods and Eating Patterns That Support Longevity",
+  "slug": "anti-aging-diet-women-over-40-longevity",
+  "author": "Happy Aging Team",
+  "tags": "anti-aging diet, longevity, women over 40, Mediterranean diet, nutrition, NAD+, healthy aging, protein",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s preparing a colorful Mediterranean-style meal with fresh vegetables, olive oil, and fish in a bright airy kitchen, wearing a casual linen apron, healthy cooking with joy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s at a farmers market selecting colorful seasonal vegetables, wearing a light jacket and jeans, mindful food shopping, photorealistic wellness lifestyle photography, bright outdoor light",
+    "A woman in her 40s enjoying a vibrant salad bowl with salmon and avocado at a restaurant, wearing a nice blouse, healthy lunch out, photorealistic wellness photography",
+    "A woman in her 40s sipping herbal tea on a porch at golden hour, wearing casual summer clothes, relaxed and nourished, photorealistic wellness lifestyle photography, warm golden light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalCondition", "name": "Aging"},
+    {"@type": "Thing", "name": "Mediterranean Diet"},
+    {"@type": "Thing", "name": "Anti-Aging Nutrition"},
+    {"@type": "Thing", "name": "Women's Longevity"}
+  ],
+  "mentions": [
+    {"@type": "Substance", "name": "NAD+"},
+    {"@type": "Substance", "name": "Omega-3 Fatty Acids"},
+    {"@type": "Substance", "name": "Polyphenols"},
+    {"@type": "Product", "name": "NAD+ Advanced Longevity Formula"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "anti-aging diet for women over 40",
+  "citations": [
+    "Estruch R, et al. (2013). Primary prevention of cardiovascular disease with a Mediterranean diet. New England Journal of Medicine. PREDIMED Trial.",
+    "Bauer J, et al. (2013). Evidence-based recommendations for optimal dietary protein intake in older people. Journal of the American Medical Directors Association.",
+    "Crous-Bou M, et al. (2014). Mediterranean diet and telomere length in Nurses' Health Study. BMJ.",
+    "Longo VD, Panda S. (2016). Fasting, circadian rhythms, and time-restricted feeding in healthy lifespan. Cell Metabolism."
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

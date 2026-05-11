@@ -1,0 +1,42 @@
+{
+  "title": "Bloating After Menopause: Root Causes and What Actually Helps",
+  "slug": "bloating-after-menopause-root-causes-what-helps",
+  "author": "Happy Aging Team",
+  "tags": "bloating, menopause, gut health, digestive health, women over 40, probiotics, hormones",
+  "product_handle": "happiest-gut",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s sitting comfortably at a kitchen table with a warm cup of herbal tea, wearing a casual cozy sweater, relaxed and at ease expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s preparing gut-healthy foods including yogurt and vegetables in a bright kitchen, wearing casual everyday clothes, healthy cooking routine, photorealistic wellness lifestyle photography",
+    "A woman in her 40s doing gentle walking in a park after a meal, wearing comfortable casual clothes, post-meal movement, photorealistic wellness photography, natural daylight",
+    "A woman in her 40s looking relaxed and comfortable sitting outdoors in a garden, wearing a light summer dress, feeling well and at ease, photorealistic wellness lifestyle photography, warm afternoon light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalCondition", "name": "Menopausal Bloating"},
+    {"@type": "MedicalCondition", "name": "Gut Dysbiosis"},
+    {"@type": "MedicalCondition", "name": "Digestive Changes in Menopause"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "Lactobacillus acidophilus"},
+    {"@type": "Drug", "name": "Bifidobacterium longum"},
+    {"@type": "Drug", "name": "Digestive Enzymes"},
+    {"@type": "Drug", "name": "Magnesium Glycinate"},
+    {"@type": "Product", "name": "Happiest Gut"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "bloating after menopause",
+  "citations": [
+    "Santos-Marcos JA, et al. (2019). Influence of gender and menopausal status on gut microbiota. Maturitas.",
+    "Louwers YV, Laven JSE. (2020). Gut microbiome as potential alternative target in the management of postmenopausal symptoms. Current Opinion in Obstetrics and Gynecology.",
+    "Vanuytsel T, et al. (2014). Psychological stress and corticotropin-releasing hormone increase intestinal permeability in humans. Gut.",
+    "Gibson PR, Shepherd SJ. (2010). Evidence-based dietary management of functional gastrointestinal symptoms. Journal of Gastroenterology and Hepatology."
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

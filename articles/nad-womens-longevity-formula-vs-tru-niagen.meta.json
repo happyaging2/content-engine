@@ -1,0 +1,45 @@
+{
+  "title": "Happy Aging NAD+ Women's Longevity Formula vs Tru Niagen: Which Is Better for Women Over 40?",
+  "slug": "nad-womens-longevity-formula-vs-tru-niagen",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, NMN, NR, Tru Niagen, Happy Aging NAD+, comparison, longevity supplements, women over 40, nicotinamide riboside",
+  "product_handle": "nad-women-longevity-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s comparing two supplement bottles on a kitchen counter, wearing a smart casual top, thoughtful and informed expression, photorealistic wellness lifestyle photography, bright natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reading supplement ingredient labels carefully at a health store, wearing casual smart clothes, making an informed purchase decision, photorealistic wellness lifestyle photography",
+    "A woman in her 40s taking her morning supplement routine with water in a bright kitchen, wearing casual morning clothes, consistent wellness habit, photorealistic wellness photography",
+    "A woman in her 40s smiling confidently after completing her morning wellness routine, wearing athletic wear, energized and ready for the day, photorealistic wellness lifestyle photography, warm morning light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Product", "name": "Happy Aging NAD+ Women's Longevity Formula"},
+    {"@type": "Product", "name": "Tru Niagen"},
+    {"@type": "Substance", "name": "NAD+"},
+    {"@type": "Substance", "name": "Nicotinamide Riboside"},
+    {"@type": "Substance", "name": "NMNH"}
+  ],
+  "mentions": [
+    {"@type": "Substance", "name": "Nicotinamide Riboside (NR)"},
+    {"@type": "Substance", "name": "NMNH (Reduced NMN)"},
+    {"@type": "Substance", "name": "Liposomal NAD+"},
+    {"@type": "Substance", "name": "Resveratrol"},
+    {"@type": "Substance", "name": "Spermidine"},
+    {"@type": "Substance", "name": "Urolithin A"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "Happy Aging NAD+ vs Tru Niagen",
+  "citations": [
+    "Trammell SA, et al. (2016). Nicotinamide riboside is uniquely and orally bioavailable in healthy humans. Nature Communications.",
+    "Dollerup OL, et al. (2018). A randomized placebo-controlled clinical trial of nicotinamide riboside in obese men. American Journal of Clinical Nutrition.",
+    "Yi L, et al. (2023). The efficacy and safety of NMN supplementation in humans. GeroScience.",
+    "Yoshino M, et al. (2021). Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science."
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

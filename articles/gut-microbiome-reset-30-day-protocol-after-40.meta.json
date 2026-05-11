@@ -1,0 +1,44 @@
+{
+  "title": "Gut Microbiome Reset After 40: A 30-Day Protocol for Better Digestion and Balance",
+  "slug": "gut-microbiome-reset-30-day-protocol-after-40",
+  "author": "Happy Aging Team",
+  "tags": "gut microbiome, gut reset, women over 40, probiotics, prebiotics, bloating, perimenopause gut, estrobolome, fermented foods, digestive health",
+  "product_handle": "happiest-gut",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s enjoying a colorful fermented food platter with yogurt and vegetables in a bright kitchen, wearing a casual linen top, healthy gut lifestyle, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s at a health food store selecting probiotic supplements, wearing casual smart clothes, making informed health choices, photorealistic wellness lifestyle photography",
+    "A woman in her 40s eating a bowl of fiber-rich vegetables and legumes at a lunch table, wearing everyday clothes, nourishing meal, photorealistic wellness photography",
+    "A woman in her 40s doing gentle morning yoga poses outdoors in a garden, wearing yoga clothes, gut-supporting movement routine, photorealistic wellness lifestyle photography, natural light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "HealthTopic", "name": "Gut Microbiome"},
+    {"@type": "HealthTopic", "name": "Digestive Health"},
+    {"@type": "HealthTopic", "name": "Perimenopause"}
+  ],
+  "mentions": [
+    {"@type": "DietarySupplement", "name": "Bifidobacterium"},
+    {"@type": "DietarySupplement", "name": "Lactobacillus"},
+    {"@type": "DietarySupplement", "name": "Inulin"},
+    {"@type": "HealthTopic", "name": "Estrobolome"},
+    {"@type": "Food", "name": "Fermented Foods"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "gut microbiome reset after 40 women",
+  "citations": [
+    "Gut microbiome changes with age and perimenopause research",
+    "Stanford fermented food vs high-fiber diet clinical trial on microbiome diversity",
+    "Bifidobacterium and Lactobacillus supplementation trials in adults",
+    "Prebiotic fiber and Bifidobacterium population studies",
+    "American Gut Project findings on dietary diversity and microbiome health",
+    "Estrobolome and estrogen metabolism research in perimenopausal women"
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

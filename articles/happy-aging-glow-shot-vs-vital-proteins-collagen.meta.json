@@ -1,0 +1,43 @@
+{
+  "title": "Happy Aging Glow Shot vs Vital Proteins Collagen Peptides: Which Is Better for Skin After 40?",
+  "slug": "happy-aging-glow-shot-vs-vital-proteins-collagen",
+  "author": "Happy Aging Team",
+  "tags": "collagen comparison, Glow Shot, Vital Proteins, marine collagen, bovine collagen, skin after 40, collagen supplement review, women over 40",
+  "product_handle": "glow-shot",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s applying a facial serum and looking at herself in a bright bathroom mirror with a glowing complexion, wearing a comfortable robe, beauty-from-within self-care routine, photorealistic wellness lifestyle photography, warm soft lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s mixing a collagen supplement into a smoothie in a bright kitchen, wearing casual morning clothes, beauty nutrition routine, photorealistic wellness lifestyle photography",
+    "A woman in her 40s examining her healthy glowing skin in a handheld mirror, wearing a soft linen top, pleased with her skin's radiance, photorealistic wellness photography, natural light",
+    "A woman in her 40s smiling outdoors in a garden with vibrant healthy skin, wearing a light floral summer top, confident and radiant, photorealistic wellness lifestyle photography, soft natural sunlight"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Product", "name": "Happy Aging Glow Shot Marine Collagen"},
+    {"@type": "Product", "name": "Vital Proteins Collagen Peptides"},
+    {"@type": "Substance", "name": "Marine Collagen"},
+    {"@type": "Substance", "name": "Bovine Collagen"},
+    {"@type": "MedicalCondition", "name": "Skin Aging"}
+  ],
+  "mentions": [
+    {"@type": "Substance", "name": "Hydrolyzed Collagen Peptides"},
+    {"@type": "Substance", "name": "Type I Collagen"},
+    {"@type": "Substance", "name": "Type III Collagen"},
+    {"@type": "Substance", "name": "Vitamin C"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "Happy Aging Glow Shot vs Vital Proteins Collagen",
+  "citations": [
+    "Proksch E, et al. (2014). Oral supplementation of specific bioactive collagen peptides reduces skin wrinkles and increases dermal matrix synthesis. Skin Pharmacology and Physiology. PMID: 23949208.",
+    "Proksch E, et al. (2014). Oral intake of specific bioactive collagen peptides reduces skin wrinkles and increases dermal matrix synthesis. Skin Pharmacology and Physiology. PMID: 26840887.",
+    "Choi FD, et al. (2019). Oral collagen supplementation: a systematic review of dermatological applications. Journal of Drugs in Dermatology.",
+    "Hexsel D, et al. (2017). Oral supplementation with specific bioactive collagen peptides improves nail growth and reduces symptoms of brittle nails. Journal of Cosmetic Dermatology."
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}
