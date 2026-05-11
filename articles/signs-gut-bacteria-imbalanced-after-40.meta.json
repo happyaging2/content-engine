@@ -15,5 +15,8 @@
     "woman preparing gut-health bowl kimchi",
     "woman doing gentle seated yoga",
     "woman writing health journal wooden"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -9,5 +9,8 @@
     "A woman in her 40s eating a colorful vegetable and fermented food plate at a wooden table, wearing casual comfortable home clothes, warm kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s on an early morning walk through a quiet neighborhood, wearing athletic wear and a light jacket, calm morning street setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s meditating on a yoga mat with eyes closed, wearing loose comfortable yoga pants and a soft top, peaceful sunny indoor space, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

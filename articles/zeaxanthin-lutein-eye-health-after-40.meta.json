@@ -9,5 +9,8 @@
     "A woman in her 40s eating a vibrant kale and spinach salad, wearing casual home clothes, bright sunny kitchen table setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s outdoors wearing sunglasses and smiling on a sunny day walk, wearing a light summer outfit, bright outdoor park setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing a stretching routine outdoors in bright morning sunlight, wearing athletic wear, fresh green outdoor park setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

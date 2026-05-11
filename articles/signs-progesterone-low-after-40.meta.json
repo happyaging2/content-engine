@@ -14,5 +14,8 @@
     "woman resting comfortably bed lavender",
     "woman doing gentle yoga flow",
     "woman walking through garden early"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -14,5 +14,8 @@
     "woman standing bright kitchen counter",
     "woman seated light oak desk",
     "woman doing gentle standing side"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

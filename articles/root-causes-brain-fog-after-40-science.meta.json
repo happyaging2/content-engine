@@ -15,5 +15,8 @@
     "woman sitting desk journaling writing",
     "woman doing gentle morning yoga",
     "woman preparing colorful salad leafy"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

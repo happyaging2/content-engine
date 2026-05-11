@@ -9,5 +9,8 @@
     "A woman in her 40s enjoying a refreshing electrolyte drink at an outdoor cafe table, wearing a light summer blouse, bright sunny outdoor setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing light yoga stretches in a sunny park, wearing comfortable athletic wear, fresh outdoor morning setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s preparing a fresh fruit and water infusion in a bright kitchen, wearing casual home clothes, clean colorful kitchen counter setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

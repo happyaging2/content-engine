@@ -1,8 +1,8 @@
 {
   "title": "Why Your Metabolism Slows After 40 (And What You Can Do)",
   "slug": "slow-metabolism-after-40",
-  "seo_title": "Why Your Metabolism Slows After 40 \u2014 What to Do",
-  "meta_description": "Your metabolism does slow after 40 \u2014 but not as much as you think. Learn what's really driving metabolic changes and science-backed ways to address them.",
+  "seo_title": "Why Your Metabolism Slows After 40 — What to Do",
+  "meta_description": "Your metabolism does slow after 40 — but not as much as you think. Learn what's really driving metabolic changes and science-backed ways to address them.",
   "primary_keyword": "slow metabolism after 40",
   "tags": "metabolism, weight management, menopause, NAD+, women over 40, energy",
   "cluster": "Metabolism",
@@ -15,5 +15,8 @@
     "healthy metabolism food colorful meal",
     "woman exercising gym morning",
     "woman cooking healthy kitchen"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -9,5 +9,8 @@
     "A woman in her 40s drinking a large glass of water in a bright kitchen, wearing casual home clothes, fresh and hydrated morning appearance, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s relaxing with a hydrating sheet face mask in a cozy bedroom, wearing comfortable home clothes, soft warm bedroom lighting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s enjoying a nourishing breakfast with omega-3 rich foods at a bright kitchen table, wearing a casual morning blouse, inviting breakfast table setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

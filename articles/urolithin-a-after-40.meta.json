@@ -13,5 +13,8 @@
   ],
   "summary_html": "Urolithin A is a gut-produced compound that triggers mitophagy, the cellular cleanup of damaged mitochondria. Learn what it is, why production declines after 40, and what the clinical research shows.",
   "seo_title": "Urolithin A After 40: Mitochondria Benefits and Research | Happy Aging",
-  "seo_description": "What urolithin A is, why it matters after 40, and what clinical trials show about mitophagy, muscle health, and cellular energy for women."
+  "seo_description": "What urolithin A is, why it matters after 40, and what clinical trials show about mitophagy, muscle health, and cellular energy for women.",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

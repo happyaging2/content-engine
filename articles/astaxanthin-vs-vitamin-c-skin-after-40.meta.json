@@ -17,5 +17,8 @@
     "woman skincare morning bathroom portrait",
     "woman doing face massage fingertips",
     "woman sitting garden reading book"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

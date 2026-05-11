@@ -16,5 +16,8 @@
     "woman sleeping soundly cozy bed",
     "woman preparing healthy dinner leafy",
     "woman doing gentle evening stretching"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

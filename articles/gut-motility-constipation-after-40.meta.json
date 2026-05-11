@@ -16,5 +16,8 @@
     "A woman in her 40s drinking a glass of water in a bright kitchen, wearing casual morning clothes, relaxed and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing a morning walk along a tree-lined path, wearing athletic clothes, energetic and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s preparing high-fiber vegetables and lentils in a bright kitchen, wearing casual clothes, focused and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

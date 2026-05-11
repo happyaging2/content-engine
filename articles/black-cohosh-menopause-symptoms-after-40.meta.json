@@ -15,5 +15,8 @@
     "woman practicing gentle yoga outdoors",
     "woman sleeping peacefully light airy",
     "woman walking through forest trail"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

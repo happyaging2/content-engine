@@ -15,5 +15,8 @@
     "woman doing strength training light",
     "woman eating colorful high-protein meal",
     "woman meditating peaceful sunlit room"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

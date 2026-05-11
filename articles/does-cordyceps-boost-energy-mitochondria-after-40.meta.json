@@ -16,5 +16,8 @@
     "woman yoga outdoor morning light"
   ],
   "summary_html": "Cordyceps may support energy and mitochondrial function after 40 through ATP production and AMPK activation. An honest review of the clinical evidence, which forms work, and how to use it.",
-  "intent": "Honest research review (skeptic format)"
+  "intent": "Honest research review (skeptic format)",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -15,5 +15,8 @@
     "woman warrior yoga pose purple",
     "woman lying neatly made bed",
     "woman preparing vibrant anti-inflammatory bowl"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

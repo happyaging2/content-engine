@@ -15,5 +15,8 @@
     "woman finger prick blood test home health kit",
     "woman reviewing health app phone focused",
     "woman morning exercise routine energized home"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

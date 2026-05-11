@@ -15,5 +15,8 @@
     "woman doing squats barbell well-lit",
     "woman checking posture gym mirror",
     "woman eating protein-rich post-workout meal"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

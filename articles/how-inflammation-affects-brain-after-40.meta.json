@@ -15,5 +15,8 @@
     "woman writing journal sunlit kitchen",
     "woman doing brisk walk park",
     "woman preparing colorful omega-3 rich"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

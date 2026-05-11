@@ -12,7 +12,7 @@
     "progesterone and sleep"
   ],
   "cluster": "Sleep",
-  "excerpt": "Waking at 3 AM, lighter sleep, feeling unrested \u2014 these are not just stress. After 40, falling estrogen and progesterone directly disrupt the biology of deep sleep. Here is what is actually happening and what helps.",
+  "excerpt": "Waking at 3 AM, lighter sleep, feeling unrested — these are not just stress. After 40, falling estrogen and progesterone directly disrupt the biology of deep sleep. Here is what is actually happening and what helps.",
   "tags": "sleep, hormones, perimenopause, magnesium, insomnia, women over 40, cortisol",
   "author": "Dr. Daniel Yadegar, MD",
   "product_bridge": "Liposomal Sleep Blend, Liposomal Magnesium",
@@ -27,5 +27,8 @@
     "woman calm evening routine home",
     "woman reading bed evening light",
     "woman outdoor sunset walk"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -2,7 +2,7 @@
   "title": "Magnesium and Sleep: Why Women Over 40 Are Deficient",
   "slug": "magnesium-sleep-women-over-40",
   "seo_title": "Magnesium and Sleep: Why Women Over 40 Are Deficient",
-  "meta_description": "Up to 75% of women are magnesium deficient \u2014 and it's disrupting your sleep. Learn how magnesium supports rest and why liposomal forms work best.",
+  "meta_description": "Up to 75% of women are magnesium deficient — and it's disrupting your sleep. Learn how magnesium supports rest and why liposomal forms work best.",
   "primary_keyword": "magnesium sleep women",
   "tags": "magnesium, sleep, women over 40, deficiency, calm, stress relief",
   "cluster": "Sleep",
@@ -15,5 +15,8 @@
     "woman relaxing evening home cozy",
     "healthy magnesium food greens nuts",
     "woman morning routine kitchen calm"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

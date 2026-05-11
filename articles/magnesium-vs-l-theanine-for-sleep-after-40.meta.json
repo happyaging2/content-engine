@@ -17,5 +17,8 @@
     "woman lying bed dark calm",
     "woman dark kitchen night drinking",
     "woman waking naturally morning light"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

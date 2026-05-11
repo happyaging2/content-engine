@@ -17,5 +17,8 @@
     "woman doing gentle yin yoga",
     "woman preparing warm golden milk",
     "woman journaling desk near window"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

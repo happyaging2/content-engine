@@ -15,5 +15,8 @@
     "woman practicing deep breathing while",
     "woman journaling desk beside window",
     "woman walking dog quiet neighborhood"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

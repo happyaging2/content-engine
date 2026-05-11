@@ -1,8 +1,8 @@
 {
   "title": "Why Immunity Weakens After 40 (And How to Strengthen It)",
   "slug": "immune-system-after-40-women",
-  "seo_title": "Why Immunity Weakens After 40 \u2014 How to Strengthen It",
-  "meta_description": "Immune function naturally declines after 40 \u2014 a process called immunosenescence. Learn why it happens and evidence-based ways to strengthen your immune system.",
+  "seo_title": "Why Immunity Weakens After 40 — How to Strengthen It",
+  "meta_description": "Immune function naturally declines after 40 — a process called immunosenescence. Learn why it happens and evidence-based ways to strengthen your immune system.",
   "primary_keyword": "immune system after 40 women",
   "tags": "immunity, immune health, quercetin, women over 40, inflammation, aging",
   "cluster": "Immunity",
@@ -15,5 +15,8 @@
     "woman outdoor morning walk",
     "healthy colorful food meal",
     "woman relaxed confident indoor"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

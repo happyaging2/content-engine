@@ -10,5 +10,8 @@
     "woman calm outdoor morning walk",
     "woman meditating indoor peaceful",
     "woman healthy balanced meal"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

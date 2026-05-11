@@ -15,5 +15,8 @@
     "woman yoga warrior pose sunlit living room plants",
     "woman smoothie bowl kitchen healthy seeds berries",
     "woman walking beach sunrise athletic energized"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

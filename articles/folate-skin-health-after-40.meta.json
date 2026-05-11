@@ -9,5 +9,8 @@
     "A woman in her 40s eating a leafy green salad with spinach and avocado at a sunlit outdoor cafe table, wearing a light summer blouse, bright al fresco setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing a gentle morning skincare routine at a bright bathroom vanity, wearing a casual cotton top, clean modern bathroom with warm lighting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s smiling confidently outdoors with glowing healthy skin, wearing a light jacket, bright park setting with trees and natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

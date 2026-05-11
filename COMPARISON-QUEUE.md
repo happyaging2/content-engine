@@ -1,6 +1,6 @@
-# Comparison Queue — generated 2026-05-09
+# Comparison Queue — generated 2026-05-11
 
-Total candidates: **77** · Kept after dedup: **77** · Rejected: 0
+Total candidates: **128** · Kept after dedup: **128** · Rejected: 0
 
 Phase 1 reserves >=2 slots per batch of 20 for comparison topics. 
 When picking, prioritize types in this order: `ha-vs-competitor` > 
@@ -87,3 +87,54 @@ When picking, prioritize types in this order: `ha-vs-competitor` >
 | Is Nutricost Ashwagandha worth it? An evidence-based review | ashwagandha | single-brand-review | Nutricost Ashwagandha |
 | Is Gaia Herbs Ashwagandha worth it? An evidence-based review | ashwagandha | single-brand-review | Gaia Herbs Ashwagandha |
 | Ashwagandha brands compared: form, dose, and third-party testing | ashwagandha | landscape | Goli Ashwa Gummies, Moon Juice SuperYou, Nutricost Ashwagandha, Gaia Herbs Ashwagandha, Happy Aging Calm Shot |
+| Happy Aging Bloat Relief (TBD) vs Happy Mammoth Hormone Harmony | bloating | ha-vs-competitor | Happy Aging Bloat Relief (TBD), Happy Mammoth Hormone Harmony |
+| Happy Aging Bloat Relief (TBD) vs Arrae Bloat | bloating | ha-vs-competitor | Happy Aging Bloat Relief (TBD), Arrae Bloat |
+| Happy Aging Bloat Relief (TBD) vs Bloom Greens | bloating | ha-vs-competitor | Happy Aging Bloat Relief (TBD), Bloom Greens |
+| Happy Aging Bloat Relief (TBD) vs Atrantil | bloating | ha-vs-competitor | Happy Aging Bloat Relief (TBD), Atrantil |
+| Happy Aging Bloat Relief (TBD) vs Hum Nutrition Flatter Me | bloating | ha-vs-competitor | Happy Aging Bloat Relief (TBD), Hum Nutrition Flatter Me |
+| Happy Aging Bloat Relief (TBD) vs Olly Tummy Fiber Gummy | bloating | ha-vs-competitor | Happy Aging Bloat Relief (TBD), Olly Tummy Fiber Gummy |
+| Best bloating supplements for women over 40 (2026): brands compared | bloating | best-of | Happy Mammoth Hormone Harmony, Arrae Bloat, Bloom Greens, Atrantil, Hum Nutrition Flatter Me, Olly Tummy Fiber Gummy, Happy Aging Bloat Relief (TBD) |
+| Happy Mammoth Hormone Harmony vs Arrae Bloat: which is better for women over 40 | bloating | competitor-vs-competitor | Happy Mammoth Hormone Harmony, Arrae Bloat |
+| Happy Mammoth Hormone Harmony vs Bloom Greens: which is better for women over 40 | bloating | competitor-vs-competitor | Happy Mammoth Hormone Harmony, Bloom Greens |
+| Arrae Bloat vs Bloom Greens: which is better for women over 40 | bloating | competitor-vs-competitor | Arrae Bloat, Bloom Greens |
+| Is Happy Mammoth Hormone Harmony worth it? An evidence-based review | bloating | single-brand-review | Happy Mammoth Hormone Harmony |
+| Is Arrae Bloat worth it? An evidence-based review | bloating | single-brand-review | Arrae Bloat |
+| Is Bloom Greens worth it? An evidence-based review | bloating | single-brand-review | Bloom Greens |
+| Is Atrantil worth it? An evidence-based review | bloating | single-brand-review | Atrantil |
+| Is Hum Nutrition Flatter Me worth it? An evidence-based review | bloating | single-brand-review | Hum Nutrition Flatter Me |
+| Is Olly Tummy Fiber Gummy worth it? An evidence-based review | bloating | single-brand-review | Olly Tummy Fiber Gummy |
+| Bloating brands compared: form, dose, and third-party testing | bloating | landscape | Happy Mammoth Hormone Harmony, Arrae Bloat, Bloom Greens, Atrantil, Hum Nutrition Flatter Me, Olly Tummy Fiber Gummy, Happy Aging Bloat Relief (TBD) |
+| NAD Advanced (multi-system support during GLP-1) vs Lemme GLP-1 Daily | glp-1-support | ha-vs-competitor | NAD Advanced (multi-system support during GLP-1), Lemme GLP-1 Daily |
+| NAD Advanced (multi-system support during GLP-1) vs Pendulum GLP-1 Probiotic | glp-1-support | ha-vs-competitor | NAD Advanced (multi-system support during GLP-1), Pendulum GLP-1 Probiotic |
+| NAD Advanced (multi-system support during GLP-1) vs Supergut GLP-1 Booster | glp-1-support | ha-vs-competitor | NAD Advanced (multi-system support during GLP-1), Supergut GLP-1 Booster |
+| NAD Advanced (multi-system support during GLP-1) vs Recharge by Conjure GLP-1 Companion | glp-1-support | ha-vs-competitor | NAD Advanced (multi-system support during GLP-1), Recharge by Conjure GLP-1 Companion |
+| NAD Advanced (multi-system support during GLP-1) vs AG1 Athletic Greens | glp-1-support | ha-vs-competitor | NAD Advanced (multi-system support during GLP-1), AG1 Athletic Greens |
+| NAD Advanced (multi-system support during GLP-1) vs Grüns Daily Gummies | glp-1-support | ha-vs-competitor | NAD Advanced (multi-system support during GLP-1), Grüns Daily Gummies |
+| Best glp-1-support supplements for women over 40 (2026): brands compared | glp-1-support | best-of | Lemme GLP-1 Daily, Pendulum GLP-1 Probiotic, Supergut GLP-1 Booster, Recharge by Conjure GLP-1 Companion, AG1 Athletic Greens, Grüns Daily Gummies, NAD Advanced (multi-system support during GLP-1) |
+| Lemme GLP-1 Daily vs Pendulum GLP-1 Probiotic: which is better for women over 40 | glp-1-support | competitor-vs-competitor | Lemme GLP-1 Daily, Pendulum GLP-1 Probiotic |
+| Lemme GLP-1 Daily vs Supergut GLP-1 Booster: which is better for women over 40 | glp-1-support | competitor-vs-competitor | Lemme GLP-1 Daily, Supergut GLP-1 Booster |
+| Pendulum GLP-1 Probiotic vs Supergut GLP-1 Booster: which is better for women over 40 | glp-1-support | competitor-vs-competitor | Pendulum GLP-1 Probiotic, Supergut GLP-1 Booster |
+| Is Lemme GLP-1 Daily worth it? An evidence-based review | glp-1-support | single-brand-review | Lemme GLP-1 Daily |
+| Is Pendulum GLP-1 Probiotic worth it? An evidence-based review | glp-1-support | single-brand-review | Pendulum GLP-1 Probiotic |
+| Is Supergut GLP-1 Booster worth it? An evidence-based review | glp-1-support | single-brand-review | Supergut GLP-1 Booster |
+| Is Recharge by Conjure GLP-1 Companion worth it? An evidence-based review | glp-1-support | single-brand-review | Recharge by Conjure GLP-1 Companion |
+| Is AG1 Athletic Greens worth it? An evidence-based review | glp-1-support | single-brand-review | AG1 Athletic Greens |
+| Is Grüns Daily Gummies worth it? An evidence-based review | glp-1-support | single-brand-review | Grüns Daily Gummies |
+| Glp-1-Support brands compared: form, dose, and third-party testing | glp-1-support | landscape | Lemme GLP-1 Daily, Pendulum GLP-1 Probiotic, Supergut GLP-1 Booster, Recharge by Conjure GLP-1 Companion, AG1 Athletic Greens, Grüns Daily Gummies, NAD Advanced (multi-system support during GLP-1) |
+| Happy Aging Calm Shot vs Happy Mammoth Hormone Harmony | hormonal-balance | ha-vs-competitor | Happy Aging Calm Shot, Happy Mammoth Hormone Harmony |
+| Happy Aging Calm Shot vs O Positiv FLO PMS Gummy Vitamins | hormonal-balance | ha-vs-competitor | Happy Aging Calm Shot, O Positiv FLO PMS Gummy Vitamins |
+| Happy Aging Calm Shot vs Hum Nutrition Hormone Balance | hormonal-balance | ha-vs-competitor | Happy Aging Calm Shot, Hum Nutrition Hormone Balance |
+| Happy Aging Calm Shot vs Wile Hormone Health | hormonal-balance | ha-vs-competitor | Happy Aging Calm Shot, Wile Hormone Health |
+| Happy Aging Calm Shot vs Solluna by Kimberly Snyder Feel Good SBO Probiotics+ | hormonal-balance | ha-vs-competitor | Happy Aging Calm Shot, Solluna by Kimberly Snyder Feel Good SBO Probiotics+ |
+| Happy Aging Calm Shot vs Beli Women | hormonal-balance | ha-vs-competitor | Happy Aging Calm Shot, Beli Women |
+| Best hormonal-balance supplements for women over 40 (2026): brands compared | hormonal-balance | best-of | Happy Mammoth Hormone Harmony, O Positiv FLO PMS Gummy Vitamins, Hum Nutrition Hormone Balance, Wile Hormone Health, Solluna by Kimberly Snyder Feel Good SBO Probiotics+, Beli Women, Happy Aging Calm Shot |
+| Happy Mammoth Hormone Harmony vs O Positiv FLO PMS Gummy Vitamins: which is better for women over 40 | hormonal-balance | competitor-vs-competitor | Happy Mammoth Hormone Harmony, O Positiv FLO PMS Gummy Vitamins |
+| Happy Mammoth Hormone Harmony vs Hum Nutrition Hormone Balance: which is better for women over 40 | hormonal-balance | competitor-vs-competitor | Happy Mammoth Hormone Harmony, Hum Nutrition Hormone Balance |
+| O Positiv FLO PMS Gummy Vitamins vs Hum Nutrition Hormone Balance: which is better for women over 40 | hormonal-balance | competitor-vs-competitor | O Positiv FLO PMS Gummy Vitamins, Hum Nutrition Hormone Balance |
+| Is Happy Mammoth Hormone Harmony worth it? An evidence-based review | hormonal-balance | single-brand-review | Happy Mammoth Hormone Harmony |
+| Is O Positiv FLO PMS Gummy Vitamins worth it? An evidence-based review | hormonal-balance | single-brand-review | O Positiv FLO PMS Gummy Vitamins |
+| Is Hum Nutrition Hormone Balance worth it? An evidence-based review | hormonal-balance | single-brand-review | Hum Nutrition Hormone Balance |
+| Is Wile Hormone Health worth it? An evidence-based review | hormonal-balance | single-brand-review | Wile Hormone Health |
+| Is Solluna by Kimberly Snyder Feel Good SBO Probiotics+ worth it? An evidence-based review | hormonal-balance | single-brand-review | Solluna by Kimberly Snyder Feel Good SBO Probiotics+ |
+| Is Beli Women worth it? An evidence-based review | hormonal-balance | single-brand-review | Beli Women |
+| Hormonal-Balance brands compared: form, dose, and third-party testing | hormonal-balance | landscape | Happy Mammoth Hormone Harmony, O Positiv FLO PMS Gummy Vitamins, Hum Nutrition Hormone Balance, Wile Hormone Health, Solluna by Kimberly Snyder Feel Good SBO Probiotics+, Beli Women, Happy Aging Calm Shot |

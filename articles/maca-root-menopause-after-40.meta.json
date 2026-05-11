@@ -9,5 +9,8 @@
     "A woman in her 40s adding powder to a smoothie blender in a bright kitchen, wearing casual weekend clothes, fresh fruit and greens on the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing gentle morning yoga on a balcony at sunrise, wearing athletic leggings and a sports top, peaceful outdoor morning setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s walking confidently through a farmers market picking out fresh produce, wearing a smart casual outfit, bright outdoor market setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

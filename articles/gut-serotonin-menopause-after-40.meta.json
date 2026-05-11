@@ -9,5 +9,8 @@
     "A woman in her 40s walking barefoot on grass in a quiet sunny backyard, wearing comfortable outdoor clothes, bright afternoon garden setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s journaling at a kitchen table with morning coffee, wearing a cozy cardigan, warm early morning home setting with soft light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s laughing with a friend over a healthy meal at a bright cafe, wearing a smart casual top, warm welcoming restaurant setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

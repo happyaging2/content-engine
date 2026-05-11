@@ -9,5 +9,8 @@
     "A woman in her 40s cooling her face with a gentle splash of water at a bathroom sink, wearing a fresh cotton top, clean bright bathroom, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s meditating with eyes closed in a peaceful garden, wearing comfortable yoga clothes, surrounded by green plants and flowers, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s enjoying a refreshing glass of water with lemon on a sunny terrace, wearing a summer dress, bright outdoor setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

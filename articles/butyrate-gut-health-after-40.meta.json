@@ -15,5 +15,8 @@
     "woman slicing vegetables preparing high-fiber",
     "woman walking contentedly through farmers",
     "woman doing gentle yoga twist"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

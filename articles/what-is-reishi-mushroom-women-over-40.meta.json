@@ -16,5 +16,8 @@
     "woman peaceful sleep bedroom"
   ],
   "summary_html": "Reishi mushroom supports immunity and sleep after 40 through beta-glucans that activate natural killer cells and triterpenes that modulate cortisol. Learn the science, evidence, and how to use it.",
-  "intent": "Informational / educational"
+  "intent": "Informational / educational",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

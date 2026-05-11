@@ -19,5 +19,8 @@
   "word_count_target": "1800-3500",
   "faq_count": 5,
   "reference_count": 6,
-  "created_date": "2026-05-04"
+  "created_date": "2026-05-04",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

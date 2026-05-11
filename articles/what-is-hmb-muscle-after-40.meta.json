@@ -16,5 +16,8 @@
     "A woman in her 40s doing resistance band exercises in a bright living room, wearing workout clothes, determined and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s hiking on a trail with a backpack, wearing outdoor clothes, strong and active, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s eating a high-protein meal with grilled chicken and vegetables, wearing casual clothes, healthy and satisfied, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -15,5 +15,8 @@
     "woman eating nutritious meal omega-3",
     "woman jogging along coastal path",
     "woman reading book window cup"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

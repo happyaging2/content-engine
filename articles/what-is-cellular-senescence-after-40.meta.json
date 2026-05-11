@@ -16,5 +16,8 @@
     "woman practicing morning yoga light-filled",
     "woman preparing vegetable smoothie",
     "woman smiling while walking through"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

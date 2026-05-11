@@ -1,7 +1,7 @@
 {
   "title": "Why Sleep Gets Harder After 40 (And How to Fix It)",
   "slug": "sleep-problems-after-40",
-  "seo_title": "Why Sleep Gets Harder After 40 \u2014 How to Fix It",
+  "seo_title": "Why Sleep Gets Harder After 40 — How to Fix It",
   "meta_description": "Sleep problems after 40 are common but not inevitable. Learn why sleep changes at midlife and the evidence-based steps to get deep, restful sleep again.",
   "primary_keyword": "sleep problems after 40",
   "tags": "sleep, insomnia, perimenopause, women over 40, magnesium, sleep blend",
@@ -15,5 +15,8 @@
     "woman calm evening routine home",
     "woman reading bed evening light",
     "woman outdoor sunset walk"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

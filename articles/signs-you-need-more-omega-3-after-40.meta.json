@@ -16,5 +16,8 @@
     "woman gently touching face looking",
     "woman stretching hands wrists wooden",
     "woman grilling salmon outdoors sunny"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

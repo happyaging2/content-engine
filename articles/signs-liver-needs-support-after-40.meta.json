@@ -16,5 +16,8 @@
     "A woman in her 40s walking briskly through a park with green trees, wearing athletic clothes, energetic and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s sitting at a kitchen table drinking herbal tea in the morning, wearing casual clothes, calm and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s preparing a salad with leafy greens and colorful vegetables in a bright kitchen, wearing casual clothes, focused and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

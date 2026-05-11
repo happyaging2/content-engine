@@ -15,5 +15,8 @@
     "woman enjoying healthy bowl whole",
     "woman doing gentle yoga stretches",
     "woman writing health journal bright"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

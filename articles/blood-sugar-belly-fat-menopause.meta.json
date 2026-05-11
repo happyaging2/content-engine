@@ -2,7 +2,7 @@
   "title": "Blood Sugar and Belly Fat After 40: The Hidden Connection",
   "slug": "blood-sugar-belly-fat-menopause",
   "seo_title": "Blood Sugar and Belly Fat After 40 | Hidden Connection",
-  "meta_description": "Blood sugar swings after 40 drive belly fat more than calories. Learn how insulin resistance links to menopause belly fat \u2014 and evidence-based ways to address it.",
+  "meta_description": "Blood sugar swings after 40 drive belly fat more than calories. Learn how insulin resistance links to menopause belly fat — and evidence-based ways to address it.",
   "primary_keyword": "blood sugar belly fat menopause",
   "tags": "blood sugar, insulin resistance, belly fat, menopause, metabolism, women over 40",
   "cluster": "Metabolism",
@@ -15,5 +15,8 @@
     "woman yoga calm indoor morning",
     "healthy hormone food balanced meal",
     "woman walking nature trail"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

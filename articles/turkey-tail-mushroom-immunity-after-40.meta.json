@@ -9,5 +9,8 @@
     "A woman in her 40s enjoying a warm mushroom broth from a ceramic mug in her kitchen, wearing a cozy sweater, autumn kitchen setting with warm light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing a brisk outdoor walk through a park with colorful autumn trees, wearing athletic outdoor clothes, vibrant fall nature setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s smiling while preparing a plant-based meal with colorful vegetables, wearing a neat kitchen apron, bright healthy kitchen environment, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

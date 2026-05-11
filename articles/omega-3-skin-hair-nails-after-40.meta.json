@@ -16,5 +16,8 @@
     "A woman in her 40s with healthy flowing hair outdoors in natural sunlight, wearing a light blouse, confident expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s cooking a salmon dish in a bright modern kitchen, wearing casual clothes, engaged and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s with radiant healthy skin looking in a mirror and smiling, wearing a robe, confident and glowing, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

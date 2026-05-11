@@ -15,5 +15,8 @@
     "woman doing resistance band row",
     "woman eating grilled salmon roasted",
     "woman walking outdoor stairs park"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

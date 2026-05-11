@@ -12,7 +12,7 @@
     "perimenopause memory"
   ],
   "cluster": "Brain",
-  "excerpt": "Forgetting words, losing focus, thinking through cotton \u2014 brain fog is one of the most common but least discussed symptoms of perimenopause. Here is the biology behind it and what actually helps.",
+  "excerpt": "Forgetting words, losing focus, thinking through cotton — brain fog is one of the most common but least discussed symptoms of perimenopause. Here is the biology behind it and what actually helps.",
   "tags": "brain fog, CoQ10, cognitive health, perimenopause, memory, women over 40, mental clarity",
   "author": "Dr. Daniel Yadegar, MD",
   "product_bridge": "Liposomal CoQ10 Brain Tonic, Neuro Creamer",
@@ -28,5 +28,8 @@
     "woman reading book calm light",
     "healthy brain food greens eggs",
     "woman outdoor morning walk energized"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

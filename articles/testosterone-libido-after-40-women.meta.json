@@ -14,5 +14,8 @@
     "woman stretching sunrise outdoors garden",
     "woman sitting kitchen counter glass",
     "woman meditating peaceful outdoor garden"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

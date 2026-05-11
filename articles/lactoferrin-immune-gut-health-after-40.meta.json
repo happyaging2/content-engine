@@ -15,5 +15,8 @@
     "woman doing gentle outdoor stretching",
     "woman grocery store selecting fermented",
     "woman drinking glass water fresh"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

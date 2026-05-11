@@ -14,5 +14,8 @@
   ],
   "summary_html": "Learn the 5 science-confirmed pathways behind NAD+ decline after 40, including the CD38 enzyme, DNA damage, inflammation, and NAMPT decline, and what you can do about each.",
   "seo_title": "NAD+ Decline After 40: 5 Pathways Science Has Confirmed | Happy Aging",
-  "seo_description": "Discover the 5 key reasons NAD+ drops after 40, from CD38 enzyme activity to NAMPT decline, and what research says about restoring cellular energy."
+  "seo_description": "Discover the 5 key reasons NAD+ drops after 40, from CD38 enzyme activity to NAMPT decline, and what research says about restoring cellular energy.",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

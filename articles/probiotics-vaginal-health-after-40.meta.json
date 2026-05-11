@@ -9,5 +9,8 @@
     "A woman in her 40s eating a bowl of yogurt with fresh berries for breakfast, wearing a casual morning top, bright sunny kitchen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing gentle morning exercise on a yoga mat at home, wearing athletic yoga clothes, sunlit home exercise corner, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s preparing a healthy probiotic-rich meal with fermented foods in a bright kitchen, wearing a simple home outfit, colorful kitchen counter with vegetables, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

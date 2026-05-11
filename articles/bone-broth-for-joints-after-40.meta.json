@@ -15,5 +15,8 @@
     "woman stirring large pot soup",
     "woman enjoying bowl vegetable soup",
     "woman doing gentle hip flexor"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -13,5 +13,8 @@
   ],
   "summary_html": "Telomeres are the protective caps on your chromosomes, and they shorten with age and stress. Learn what accelerates shortening after 40 and which habits and nutrients actually protect them.",
   "seo_title": "Telomere Length After 40: How to Slow Shortening | Happy Aging",
-  "seo_description": "What shortens telomeres after 40 and what protects them. Real research on stress, exercise, omega-3s, and NAD+ for women who want to slow biological aging."
+  "seo_description": "What shortens telomeres after 40 and what protects them. Real research on stress, exercise, omega-3s, and NAD+ for women who want to slow biological aging.",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

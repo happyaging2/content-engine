@@ -9,5 +9,8 @@
     "A woman in her 40s relaxing with eyes closed on a comfortable couch, wearing loose linen clothing, afternoon sunlit living room, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s journaling in a sunlit bedroom with a warm cup of tea on the nightstand, wearing a casual blouse, golden morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing gentle yoga in a peaceful outdoor garden, wearing comfortable yoga pants and a light top, soft green natural surroundings, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

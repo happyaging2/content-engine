@@ -16,5 +16,8 @@
     "A woman in her 40s doing morning yoga in a bright sunlit room, wearing workout clothes, calm and focused, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s cycling outdoors on a trail through nature, wearing athletic clothes and helmet, active and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s preparing a heart-healthy meal with salmon and greens at a kitchen counter, wearing casual clothes, healthy and content, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

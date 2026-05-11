@@ -14,5 +14,8 @@
   ],
   "summary_html": "Discover what sirtuins are, how these longevity proteins depend on NAD+, and why supporting their activity after 40 matters for energy, DNA repair, and healthy aging.",
   "seo_title": "Sirtuins and Aging After 40: What They Are and How to Support Them | Happy Aging",
-  "seo_description": "Learn what sirtuins are and why these longevity proteins decline after 40. Discover how NAD+, NMN, resveratrol, and exercise support sirtuin activity."
+  "seo_description": "Learn what sirtuins are and why these longevity proteins decline after 40. Discover how NAD+, NMN, resveratrol, and exercise support sirtuin activity.",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

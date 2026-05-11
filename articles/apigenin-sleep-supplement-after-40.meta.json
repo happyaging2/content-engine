@@ -9,5 +9,8 @@
     "A woman in her 40s reading a book in bed under warm lamplight, wearing a comfortable sleep shirt, relaxed bedroom setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s practicing deep breathing seated on a meditation cushion, wearing soft yoga pants and a loose top, serene home yoga space, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s waking up refreshed and smiling in bright morning light, wearing light pajamas, clean bright bedroom with natural sunlight, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

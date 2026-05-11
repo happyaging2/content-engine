@@ -16,5 +16,8 @@
     "A woman in her 40s jogging in a park on a sunny morning, wearing athletic clothes, energetic and confident, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s stretching after exercise outdoors, wearing workout clothes, healthy and active, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s eating a healthy protein-rich meal after working out, wearing casual clothes, satisfied and glowing, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

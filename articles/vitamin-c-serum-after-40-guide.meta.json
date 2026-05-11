@@ -16,5 +16,8 @@
     "A woman in her 40s doing a gentle skincare routine in a bright bathroom, wearing a robe, healthy glowing skin, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s looking in a mirror with a radiant, healthy complexion, wearing casual clothes, confident and glowing, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s sitting in natural light by a window, healthy skin, serene expression, wearing casual clothes, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

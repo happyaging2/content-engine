@@ -9,5 +9,8 @@
     "A woman in her 40s working at a laptop with focused calm energy, wearing smart casual office clothes, bright minimalist home office setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s in a morning yoga session outdoors, wearing athletic wear, sunrise outdoor setting with soft warm light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s enjoying a healthy breakfast with green tea at a bright sunlit kitchen table, wearing a smart casual top, clean modern dining setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

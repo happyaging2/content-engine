@@ -16,5 +16,8 @@
     "woman drinking bright orange juice",
     "woman grilling salmon fillets",
     "woman looking glowing healthy skin"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

@@ -17,5 +17,8 @@
     "woman jogging tree-lined path park",
     "woman reading sunlit kitchen table",
     "woman doing light yoga stretches"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

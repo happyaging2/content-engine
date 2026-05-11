@@ -9,5 +9,8 @@
     "A woman in her 40s eating a plate of salmon and leafy greens at a bright dining table, wearing a casual blouse, warm natural light dining setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing resistance training with weights in a bright home gym, wearing athletic clothes, clean modern fitness room setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s walking on a sunny trail path with a bright smile, wearing light athletic wear and comfortable walking shoes, bright outdoor nature setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

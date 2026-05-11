@@ -16,5 +16,8 @@
     "A woman in her 40s lying peacefully in a white bedded room, wearing pajamas, eyes closed, serene expression, photorealistic wellness lifestyle photography, soft natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing a gentle morning stretch in a sunlit bedroom, wearing pajamas, looking rested and calm, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s writing in a journal at a peaceful desk in the evening, wearing casual clothes, soft lamp light, relaxed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

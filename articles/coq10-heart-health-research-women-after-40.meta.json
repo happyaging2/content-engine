@@ -15,5 +15,8 @@
     "woman jogging sunny neighborhood athletic energized",
     "woman breakfast berries nuts oats kitchen healthy morning",
     "woman yoga pose peaceful studio natural light athletic"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

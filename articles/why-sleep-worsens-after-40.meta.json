@@ -14,5 +14,8 @@
   ],
   "summary_html": "Learn why sleep worsens after 40, from changes in deep sleep and melatonin to perimenopause hormones and cortisol, plus evidence-based strategies that actually work.",
   "seo_title": "Why Sleep Gets Worse After 40 and What to Do About It | Happy Aging",
-  "seo_description": "Discover the 4 key reasons sleep gets harder after 40, how perimenopause affects sleep quality, and which evidence-based strategies (magnesium, ashwagandha, melatonin) really help."
+  "seo_description": "Discover the 4 key reasons sleep gets harder after 40, how perimenopause affects sleep quality, and which evidence-based strategies (magnesium, ashwagandha, melatonin) really help.",
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

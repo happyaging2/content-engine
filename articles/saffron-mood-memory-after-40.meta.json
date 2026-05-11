@@ -9,5 +9,8 @@
     "A woman in her 40s writing in a journal with focus and a calm expression, wearing a smart casual top, sunlit home desk area, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s doing a gentle walk in a bright botanical garden, wearing a flowing casual dress, vibrant flower and green plant surroundings, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s cooking a Mediterranean-inspired meal with colorful spices and vegetables, wearing a comfortable kitchen apron, warm well-lit kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }

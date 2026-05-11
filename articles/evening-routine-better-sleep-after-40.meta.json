@@ -16,5 +16,8 @@
     "A woman in her 40s sitting in a warm bath with candles around her, wearing her hair up, relaxed and calm, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s writing in a gratitude journal at a desk with a small lamp, wearing pajamas, focused and peaceful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
     "A woman in her 40s stretching gently on a yoga mat in a dim bedroom, wearing comfortable clothes, relaxed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
-  ]
+  ],
+  "needs_refresh": true,
+  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
+  "refresh_flagged_on": "2026-05-11"
 }
