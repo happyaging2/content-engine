@@ -2,7 +2,62 @@
 
 ---
 
-## BATCH 2026-05-10 (Current)
+## BATCH 2026-05-11 (Current)
+
+### Batch Overview
+- Date: 2026-05-11
+- Articles written: 20/20
+- QA gate: 20/20 PASS (Phase 4 verified)
+- Publishing status: Ready — articles staged as drafts; `publish-shopify.yml` GitHub Action at 11:00 UTC will deploy; or run `python3 scripts/publish_articles.py` from unrestricted network
+- SEO audit: Passed — 0 em/en dashes, author "Happy Aging Team", GEO G1-G21 verified, real PMIDs (22529837, 26468457, 23535873, 24586707)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| Sleep | 2 | Sleep Tonic ($55) |
+| Brain/Cognitive | 2 | Neuro Creamer ($61), Brain Tonic |
+| GLP-1 Support | 3 | Happiest Gut ($25), Lean Muscle Formula ($55), NAD Advanced ($99) |
+| Longevity/Anti-aging | 4 | NAD Advanced ($99), Glow Shot |
+| NAD/NMN/Methylation | 3 | NAD Advanced ($99), NMN Cell Renew |
+| Gut/Bloating | 2 | Happiest Gut ($25) |
+| Hormones | 1 | NAD Women's Formula |
+| Muscle/Metabolism | 1 | Lean Muscle Formula ($55) |
+| Comparison ha-vs-competitor | 2 | NAD Women's Formula, Glow Shot |
+
+### Articles — Batch 2026-05-11
+| # | Title | Slug | Cluster | Product | Format |
+|---|---|---|---|---|---|
+| 1 | Does NR (Nicotinamide Riboside) Actually Work After 40? | does-nr-nicotinamide-riboside-work-after-40 | NAD/NMN | nmn-cell-renew-tonic | Skeptic explainer |
+| 2 | Does Pterostilbene Work for Longevity After 40? | does-pterostilbene-work-longevity-after-40 | Longevity | nad-advanced-longevity-formula | Skeptic explainer |
+| 3 | Does PQQ Work for Brain and Energy After 40? | does-pqq-work-brain-energy-after-40 | Brain | brain-tonic | Skeptic explainer |
+| 4 | Does Glycine Improve Sleep After 40? | does-glycine-improve-sleep-after-40 | Sleep | sleep-tonic | Skeptic + protocol |
+| 5 | Does TMG Help With Methylation After 40? | does-tmg-help-methylation-after-40 | NAD/Methylation | nad-advanced-longevity-formula | Skeptic explainer |
+| 6 | Does HMB Preserve Muscle After 40? | does-hmb-preserve-muscle-after-40 | Metabolism | lean-muscle-formula | Skeptic + comparison |
+| 7 | Does Choline Protect Your Brain After 40? | does-choline-protect-brain-after-40 | Brain | neuro-creamer | Skeptic + comparison table |
+| 8 | Does Inositol Help Mood and Hormones After 40? | does-inositol-help-mood-hormones-after-40 | Hormones | nad-women-longevity-formula | Skeptic + protocol |
+| 9 | Does Sulforaphane Work for Women Over 40? | does-sulforaphane-work-women-over-40 | Longevity | nad-advanced-longevity-formula | Skeptic + protocol |
+| 10 | GLP-1 Nutrition Protocol for Women Over 40 | glp-1-nutrition-protocol-women-over-40 | GLP-1 | happiest-gut | Protocol + table |
+| 11 | GLP-1 Medication and Muscle Loss: What Women Over 40 Need to Know | glp-1-medication-muscle-loss-women-over-40 | GLP-1 | lean-muscle-formula | Guide + protocol |
+| 12 | Best Supplements to Take With GLP-1 Medications After 40 | best-supplements-take-with-glp-1-medications-after-40 | GLP-1 | nad-advanced-longevity-formula | Comparison + protocol |
+| 13 | Daily Longevity Habits for Women Over 40 | daily-longevity-habits-women-over-40 | Longevity | nad-advanced-longevity-formula | Protocol |
+| 14 | Sleep Optimization Protocol for Women Over 40 | sleep-optimization-protocol-women-over-40 | Sleep | sleep-tonic | 8-step protocol |
+| 15 | Gut Microbiome Reset: A 30-Day Protocol for Women Over 40 | gut-microbiome-reset-30-day-protocol-after-40 | Gut | happiest-gut | 30-day protocol |
+| 16 | Bloating After Menopause: Root Causes and What Actually Helps | bloating-after-menopause-root-causes-what-helps | Gut/Bloating | happiest-gut | Root cause guide |
+| 17 | Does Collagen Actually Work for Skin After 40? | does-collagen-actually-work-skin-after-40 | Longevity/Skin | glow-shot | Skeptic + comparison |
+| 18 | Anti-Aging Diet for Women Over 40 | anti-aging-diet-women-over-40-longevity | Longevity | nad-advanced-longevity-formula | Protocol + table |
+| 19 | NAD+ Women's Longevity Formula vs Tru Niagen | nad-womens-longevity-formula-vs-tru-niagen | Comparison | nad-women-longevity-formula | ha-vs-competitor |
+| 20 | Happy Aging Glow Shot vs Vital Proteins Collagen | happy-aging-glow-shot-vs-vital-proteins-collagen | Comparison | glow-shot | ha-vs-competitor |
+
+### Predicted Performance
+- **Highest GEO extraction potential:** sleep-optimization-protocol (8-step protocol = extractable list), glp-1-nutrition-protocol (food comparison table), does-choline-protect-brain (form comparison table)
+- **Featured snippet candidates:** does-glycine-improve-sleep ("what is the right dose of glycine"), does-nr-nicotinamide-riboside-work ("does NR work"), bloating-after-menopause-root-causes ("why do I bloat after menopause")
+- **High conversion potential:** nad-womens-longevity-formula-vs-tru-niagen (comparison drives purchase intent), glp-1-medication-muscle-loss (urgent problem + solution), best-supplements-take-with-glp-1 (purchase intent + trust)
+- **Internal linking bridges:** GLP-1 triple cluster (nutrition protocol -> muscle loss -> supplements); sleep duo (sleep protocol -> glycine); NAD/methylation trio (NR -> TMG -> pterostilbene)
+- **"Does X work" skeptic framing** new for this batch — 9 articles use this high-CTR pattern
+
+---
+
+## BATCH 2026-05-10 (Previous)
 
 ### Batch Overview
 - Date: 2026-05-10
