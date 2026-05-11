@@ -1,0 +1,44 @@
+{
+  "title": "Daily Longevity Habits for Women Over 40: What Research Actually Supports",
+  "slug": "daily-longevity-habits-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "longevity habits, women over 40, healthy aging, NAD+, resistance training, sleep, protein, Blue Zone, perimenopause longevity",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s starting her morning routine with meditation in a serene, sunlit bedroom, wearing comfortable morning clothes, peaceful and intentional, photorealistic wellness lifestyle photography, warm golden morning light, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a morning walk in a tree-lined neighborhood, wearing athletic clothes, energetic and purposeful, photorealistic wellness lifestyle photography, golden morning light",
+    "A woman in her 40s preparing a colorful anti-inflammatory breakfast with berries and nuts, wearing casual home clothes, healthy morning routine, photorealistic wellness photography",
+    "A woman in her 40s doing gentle yoga poses in a sunlit studio, wearing yoga clothes, flexible and strong, photorealistic wellness lifestyle photography, soft natural light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalCondition", "name": "Sarcopenia"},
+    {"@type": "HealthTopic", "name": "Longevity"},
+    {"@type": "HealthTopic", "name": "Perimenopause"}
+  ],
+  "mentions": [
+    {"@type": "DietarySupplement", "name": "NMN"},
+    {"@type": "DietarySupplement", "name": "NAD+"},
+    {"@type": "DietarySupplement", "name": "Magnesium Glycinate"},
+    {"@type": "PhysicalActivity", "name": "Resistance Training"},
+    {"@type": "HealthTopic", "name": "Time-Restricted Eating"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "daily longevity habits women over 40",
+  "citations": [
+    "Blue Zone observational studies on long-lived populations",
+    "Clinical trials on sleep duration and cardiovascular outcomes",
+    "Resistance training and sarcopenia prevention in aging women",
+    "Protein requirements and muscle protein synthesis in older adults",
+    "NAD+ and NMN supplementation trials in human subjects",
+    "Time-restricted eating and metabolic health research"
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

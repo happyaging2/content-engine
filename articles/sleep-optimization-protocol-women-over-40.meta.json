@@ -1,0 +1,45 @@
+{
+  "title": "Sleep Optimization After 40: A Complete Science-Based Protocol for Women",
+  "slug": "sleep-optimization-protocol-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "sleep optimization, women over 40, perimenopause sleep, magnesium, glycine, L-theanine, melatonin, sleep protocol, insomnia, circadian rhythm",
+  "product_handle": "sleep-tonic",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s peacefully sleeping in a cool, dimly lit bedroom with blackout curtains, wearing soft pajamas, serene sleep environment, photorealistic wellness lifestyle photography, gentle soft lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reading a book by warm lamp light before bed, wearing cozy pajamas in a relaxing bedroom, peaceful evening wind-down, photorealistic wellness lifestyle photography",
+    "A woman in her 40s doing a gentle evening yoga stretch in a dimly lit living room, wearing comfortable clothes, calming bedtime routine, photorealistic wellness photography",
+    "A woman in her 40s waking up refreshed in the morning, stretching in bed with a calm smile, wearing light pajamas in a bright morning bedroom, photorealistic wellness lifestyle photography"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalCondition", "name": "Insomnia"},
+    {"@type": "HealthTopic", "name": "Sleep Optimization"},
+    {"@type": "HealthTopic", "name": "Perimenopause"}
+  ],
+  "mentions": [
+    {"@type": "DietarySupplement", "name": "Magnesium Glycinate"},
+    {"@type": "DietarySupplement", "name": "Glycine"},
+    {"@type": "DietarySupplement", "name": "L-Theanine"},
+    {"@type": "DietarySupplement", "name": "Melatonin"},
+    {"@type": "MedicalTherapy", "name": "Cognitive Behavioral Therapy for Insomnia"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "sleep optimization protocol women over 40",
+  "citations": [
+    "Sleep architecture changes in perimenopause and menopause research",
+    "Circadian rhythm biology in aging women",
+    "Magnesium supplementation and sleep quality clinical trials",
+    "Glycine supplementation and sleep onset studies",
+    "L-theanine and alpha wave research in sleep quality",
+    "Low-dose melatonin and circadian phase studies",
+    "CBT-I clinical trials and long-term outcomes"
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

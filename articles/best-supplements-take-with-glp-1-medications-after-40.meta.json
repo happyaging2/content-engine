@@ -1,0 +1,44 @@
+{
+  "title": "Best Supplements to Take With GLP-1 Medications After 40: A Nutritionist's Guide",
+  "slug": "best-supplements-take-with-glp-1-medications-after-40",
+  "author": "Happy Aging Team",
+  "tags": "GLP-1, semaglutide, tirzepatide, supplements, nutrient gaps, B12, magnesium, NAD+, women over 40, ozempic nutrition",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s organizing her supplement routine on a bathroom counter, wearing a cozy morning robe, thoughtful and prepared expression, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s consulting with a healthcare provider in a bright clinic office, wearing a nice blouse, engaged in conversation, photorealistic wellness lifestyle photography",
+    "A woman in her 40s preparing a morning supplement routine on a kitchen counter, wearing casual morning clothes, organized and intentional, photorealistic wellness photography",
+    "A woman in her 40s enjoying a healthy breakfast bowl with fruits and nuts, wearing casual comfortable clothes, nourishing morning routine, photorealistic wellness lifestyle photography"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Drug", "name": "GLP-1 Receptor Agonist"},
+    {"@type": "DietarySupplement", "name": "Vitamin B12"},
+    {"@type": "DietarySupplement", "name": "Magnesium"},
+    {"@type": "DietarySupplement", "name": "NAD+ Precursor"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "Semaglutide"},
+    {"@type": "Drug", "name": "Tirzepatide"},
+    {"@type": "DietarySupplement", "name": "NMN"},
+    {"@type": "DietarySupplement", "name": "Omega-3"},
+    {"@type": "DietarySupplement", "name": "Zinc"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "supplements to take with GLP-1 medications women over 40",
+  "citations": [
+    "Research on nutrient depletion during caloric restriction and GLP-1 therapy",
+    "Evidence on B12 depletion in reduced gastric motility conditions",
+    "Magnesium status and supplementation studies in aging women",
+    "Omega-3 supplementation and cardiovascular outcomes in women",
+    "NAD+ precursor research in metabolic stress and aging"
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}
