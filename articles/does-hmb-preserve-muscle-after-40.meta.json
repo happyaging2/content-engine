@@ -1,0 +1,39 @@
+{
+  "title": "Does HMB Actually Work for Muscle Loss After 40? An Evidence-Based Review for Women",
+  "slug": "does-hmb-preserve-muscle-after-40",
+  "author": "Happy Aging Team",
+  "tags": "HMB, muscle loss after 40, sarcopenia, beta-hydroxy beta-methylbutyrate, women's muscle health, lean muscle, perimenopause muscle, anti-aging supplements",
+  "product_handle": "lean-muscle-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s doing light dumbbell exercises in a bright home gym, wearing athletic leggings and a tank top, strong and focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s stretching after a workout in a sunlit living room, wearing athletic wear, relaxed post-exercise, photorealistic wellness lifestyle photography, warm lighting",
+    "A woman in her 40s preparing a protein-rich meal in a bright kitchen, wearing casual clothes, healthy cooking, photorealistic wellness photography",
+    "A woman in her 40s walking up stairs confidently in a modern building, wearing business casual clothes, strong and energetic, photorealistic wellness lifestyle photography"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalSubstance", "name": "Beta-hydroxy beta-methylbutyrate (HMB)"},
+    {"@type": "MedicalCondition", "name": "Sarcopenia"},
+    {"@type": "MedicalCondition", "name": "Age-related muscle loss"}
+  ],
+  "mentions": [
+    {"@type": "MedicalSubstance", "name": "Creatine monohydrate"},
+    {"@type": "MedicalSubstance", "name": "Leucine"},
+    {"@type": "NutritionInformation", "name": "Dietary protein"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "HMB supplementation for muscle preservation in women over 40",
+  "citations": [
+    {"pmid": "23535873", "citation": "Wilson JM et al. European Journal of Applied Physiology. 2014."},
+    {"pmid": "24586707", "citation": "Deutz NE et al. Clinical Nutrition. 2013."},
+    {"doi": "10.1093/ageing/afy169", "citation": "Cruz-Jentoft AJ et al. Age and Ageing. 2019."}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

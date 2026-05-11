@@ -1,0 +1,39 @@
+{
+  "title": "Does NR (Nicotinamide Riboside) Actually Work for Women Over 40? An Evidence-Based Review",
+  "slug": "does-nr-nicotinamide-riboside-work-after-40",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, NR, nicotinamide riboside, NMN, longevity, cellular energy, perimenopause, women over 40",
+  "product_handle": "nmn-cell-renew-tonic",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s reviewing supplement bottles on a kitchen counter, wearing a casual linen shirt, bright morning kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reading supplement research on a laptop in a home office, wearing cozy sweater, focused expression, photorealistic wellness lifestyle photography, warm natural lighting",
+    "A woman in her 40s taking morning supplements with a glass of water in a sunny kitchen, wearing white pajamas, calm morning routine, photorealistic wellness photography",
+    "A woman in her 40s doing light yoga stretches outdoors at sunrise, wearing athletic wear, energetic and focused, photorealistic wellness lifestyle photography, warm natural lighting"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Drug", "name": "Nicotinamide Riboside", "alternateName": "NR"},
+    {"@type": "Drug", "name": "Nicotinamide Mononucleotide", "alternateName": "NMN"},
+    {"@type": "BiologicalProcess", "name": "NAD+ biosynthesis"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "Nicotinamide Adenine Dinucleotide", "alternateName": "NAD+"},
+    {"@type": "Drug", "name": "NMN Cell Renew Tonic"},
+    {"@type": "MedicalCondition", "name": "perimenopause"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "does NR work for women over 40",
+  "citations": [
+    {"pmid": "28832581", "authors": "Martens CR et al.", "year": 2018, "title": "Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD+ in healthy middle-aged and older adults", "journal": "Nat Commun"},
+    {"pmid": "29459476", "authors": "Airhart SE et al.", "year": 2017, "title": "An open-label, non-randomized study of the pharmacokinetics of the nutritional supplement nicotinamide riboside (NR) and its effects on blood NAD+ levels in healthy volunteers", "journal": "PLOS ONE"},
+    {"pmid": "31032835", "authors": "Elhassan YS et al.", "year": 2019, "title": "Nicotinamide riboside augments the aged human skeletal muscle NAD+ metabolome and induces transcriptomic and anti-inflammatory signatures", "journal": "Cell Rep"}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

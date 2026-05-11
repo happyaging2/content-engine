@@ -1,0 +1,35 @@
+{
+  "title": "GLP-1 Medication and Muscle Loss: How Women Over 40 Can Protect Lean Muscle",
+  "slug": "glp-1-medication-muscle-loss-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "GLP-1, muscle loss, semaglutide, tirzepatide, lean muscle, women over 40, sarcopenia, protein, resistance training, creatine",
+  "product_handle": "lean-muscle-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s doing resistance band exercises in a bright living room, wearing athletic leggings and a fitted workout top, strong and determined, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s lifting light dumbbells in a home gym setting, wearing athletic wear, focused on form, photorealistic wellness lifestyle photography, bright natural light",
+    "A woman in her 40s eating a protein-rich meal with chicken and vegetables, wearing casual clothes at a dinner table, nourishing herself intentionally, photorealistic wellness photography",
+    "A woman in her 40s doing a post-workout stretch in a park, wearing athletic clothes, refreshed after exercise, photorealistic wellness lifestyle photography, outdoor natural light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalCondition", "name": "Sarcopenia"},
+    {"@type": "Drug", "name": "GLP-1 Receptor Agonist"},
+    {"@type": "PhysicalActivity", "name": "Resistance Training"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "Semaglutide"},
+    {"@type": "Drug", "name": "Tirzepatide"},
+    {"@type": "DietarySupplement", "name": "Creatine Monohydrate"},
+    {"@type": "DietarySupplement", "name": "Whey Protein"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "GLP-1 muscle loss women over 40",
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}
