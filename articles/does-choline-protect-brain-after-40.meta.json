@@ -1,0 +1,39 @@
+{
+  "title": "Does Choline Protect Brain Health After 40? What the Research Actually Shows",
+  "slug": "does-choline-protect-brain-after-40",
+  "author": "Happy Aging Team",
+  "tags": "choline, brain health after 40, cognitive decline, acetylcholine, memory supplements, CDP-choline, Alpha-GPC, women's brain health, nootropics",
+  "product_handle": "neuro-creamer",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s sitting at a bright desk working on a laptop with focused concentration, wearing a smart casual top, sharp mental clarity expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s enjoying a cup of coffee while reading in a cozy sunlit chair, wearing comfortable clothes, intellectually engaged, photorealistic wellness lifestyle photography",
+    "A woman in her 40s writing in a planner at a kitchen table, wearing a professional blouse, organized and focused, photorealistic wellness photography",
+    "A woman in her 40s walking in a botanical garden, wearing a light summer dress, vibrant and mentally refreshed, photorealistic wellness lifestyle photography, sunny warm lighting"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalSubstance", "name": "Choline"},
+    {"@type": "MedicalSubstance", "name": "Acetylcholine"},
+    {"@type": "MedicalCondition", "name": "Cognitive decline"}
+  ],
+  "mentions": [
+    {"@type": "MedicalSubstance", "name": "CDP-Choline (Citicoline)"},
+    {"@type": "MedicalSubstance", "name": "Alpha-GPC"},
+    {"@type": "MedicalSubstance", "name": "Phosphatidylcholine"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "Choline supplementation and cognitive health in women over 40",
+  "citations": [
+    {"pmid": "26468457", "citation": "Study on choline intake and cognitive function in aging adults. Used conservatively as observational evidence."},
+    {"pmid": "30111693", "citation": "Research on dietary choline and brain health markers. Observational study design."},
+    {"doi": "10.1111/j.1753-4887.2009.00246.x", "citation": "Zeisel SH, da Costa KA. Choline: an essential nutrient for public health. Nutrition Reviews. 2009."}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

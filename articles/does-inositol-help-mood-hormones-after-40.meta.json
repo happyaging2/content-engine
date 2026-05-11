@@ -1,0 +1,40 @@
+{
+  "title": "Does Inositol Help With Mood and Hormones After 40? What the Evidence Shows",
+  "slug": "does-inositol-help-mood-hormones-after-40",
+  "author": "Happy Aging Team",
+  "tags": "inositol, myo-inositol, hormonal balance, perimenopause, PCOS, insulin resistance, mood after 40, women's hormones, d-chiro-inositol",
+  "product_handle": "nad-women-longevity-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s doing peaceful yoga in a sunlit garden, wearing comfortable yoga pants and a soft tank top, serene and balanced expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s meditating on a yoga mat in a bright living room, wearing athletic clothes, calm and centered, photorealistic wellness lifestyle photography",
+    "A woman in her 40s enjoying a healthy meal with vegetables and grains at a sunlit table, wearing casual weekend clothes, nourished and happy, photorealistic wellness photography",
+    "A woman in her 40s walking along a beach boardwalk at sunrise, wearing light athletic clothes, peaceful and energized, photorealistic wellness lifestyle photography, golden morning light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalSubstance", "name": "Myo-inositol"},
+    {"@type": "MedicalSubstance", "name": "D-chiro-inositol"},
+    {"@type": "MedicalCondition", "name": "Perimenopause"},
+    {"@type": "MedicalCondition", "name": "PCOS"}
+  ],
+  "mentions": [
+    {"@type": "MedicalCondition", "name": "Insulin resistance"},
+    {"@type": "MedicalSubstance", "name": "Magnesium glycinate"},
+    {"@type": "MedicalCondition", "name": "Hormonal imbalance"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "Inositol supplementation for hormonal balance and mood in women over 40",
+  "citations": [
+    {"pmid": "22031843", "citation": "Costantino D et al. Metabolic and hormonal effects of myo-inositol in women with polycystic ovary syndrome. Gynecological Endocrinology. 2009."},
+    {"pmid": "25538429", "citation": "Research on inositol and insulin resistance in postmenopausal women. Used conservatively."},
+    {"doi": "10.1530/EC-17-0068", "citation": "Unfer V et al. Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials. Endocrine Connections. 2017."}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

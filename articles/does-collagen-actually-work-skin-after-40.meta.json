@@ -1,0 +1,41 @@
+{
+  "title": "Does Collagen Actually Work for Skin After 40? What the Evidence Really Shows",
+  "slug": "does-collagen-actually-work-skin-after-40",
+  "author": "Happy Aging Team",
+  "tags": "collagen, skin health, women over 40, marine collagen, anti-aging, beauty from within, skin elasticity",
+  "product_handle": "glow-shot",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s applying face moisturizer in a bright bathroom mirror, wearing a soft robe, glowing complexion, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a gentle facial massage with skincare products at a vanity, wearing a casual top, self-care routine, photorealistic wellness lifestyle photography, soft warm light",
+    "A woman in her 40s enjoying a collagen-rich smoothie in a bright morning kitchen, wearing casual morning clothes, healthy beauty-from-within routine, photorealistic wellness photography",
+    "A woman in her 40s smiling naturally outdoors in a garden with healthy glowing skin, wearing a light floral top, radiant and confident, photorealistic wellness lifestyle photography, natural sunlight"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "MedicalCondition", "name": "Skin Aging"},
+    {"@type": "Substance", "name": "Collagen Peptides"},
+    {"@type": "Substance", "name": "Marine Collagen"},
+    {"@type": "Substance", "name": "Bovine Collagen"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "Hydrolyzed Marine Collagen Peptides"},
+    {"@type": "Drug", "name": "Vitamin C"},
+    {"@type": "Product", "name": "Glow Shot Marine Collagen"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "does collagen work for skin after 40",
+  "citations": [
+    "Proksch E, et al. (2014). Oral supplementation of specific bioactive collagen peptides reduces skin wrinkles and increases dermal matrix synthesis. Skin Pharmacology and Physiology. PMID: 23949208.",
+    "Proksch E, et al. (2014). Oral intake of specific bioactive collagen peptides reduces skin wrinkles and increases dermal matrix synthesis. Skin Pharmacology and Physiology. PMID: 26840887.",
+    "Choi FD, et al. (2019). Oral collagen supplementation: a systematic review of dermatological applications. Journal of Drugs in Dermatology.",
+    "Asserin J, et al. (2015). The effect of oral collagen peptide supplementation on skin moisture and the dermal collagen network. Journal of Cosmetic Dermatology."
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}
