@@ -49,7 +49,27 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          set -ex
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Preflight — secrets + imports + disk
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -ex
+          if [ -z "${ANTHROPIC_API_KEY:-}" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set on this repo."
+            echo "Fix: GitHub → Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+          # Mask any accidental key echo in logs.
+          echo "::add-mask::${ANTHROPIC_API_KEY}"
+          python3 -c "import anthropic; print('anthropic SDK', anthropic.__version__)"
+          PYTHONPATH=scripts python3 -c "from agent_runner.phases import run_phase1, run_phase3_parallel, run_phase4_parallel, save_article_files; print('imports OK')"
+          df -h .
+          ls -la articles/ | head -5
 
       - name: Configure git identity
         run: |
@@ -60,6 +80,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
+          set -ex
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then BATCH="$(date -u +%Y-%m-%d)"; fi
           SIZE="${{ github.event.inputs.batch_size || '10' }}"
@@ -67,14 +88,28 @@ jobs:
           DRY=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then DRY="--dry-run"; fi
 
-          python3 scripts/run-pipeline.py \
+          # Stream output AND save a full log artifact for post-mortem.
+          mkdir -p _run-logs
+          python3 -u scripts/run-pipeline.py \
             --batch-date "$BATCH" \
             --batch-size "$SIZE" \
             --concurrency "$CONC" \
-            $DRY
+            $DRY 2>&1 | tee _run-logs/run-${BATCH}.log
+
+      - name: Upload run log (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-log-${{ github.run_id }}
+          path: |
+            _run-logs/
+            articles/batch-*-report.md
+          retention-days: 14
+          if-no-files-found: ignore
 
       - name: Commit generated articles + meta
         run: |
+          set -ex
           git add articles/*-final.html articles/*.meta.json articles/batch-*-report.md 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "agent-pipeline: $(date -u +%Y-%m-%d) batch [skip ci]"
@@ -83,7 +118,8 @@ jobs:
               echo "push failed (attempt $i) — retrying"
               sleep $((i * 2))
             done
-            echo "push failed after 4 attempts" && exit 1
+            echo "::error::push failed after 4 attempts"
+            exit 1
           else
             echo "No new articles to commit (dry run, or all rejected)."
           fi
