@@ -1,0 +1,41 @@
+{
+  "title": "Does TMG (Trimethylglycine) Actually Work? Benefits for Women Over 40",
+  "slug": "does-tmg-help-methylation-after-40",
+  "author": "Happy Aging Team",
+  "tags": "TMG, trimethylglycine, betaine, methylation, homocysteine, NAD+, longevity, women over 40",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s standing in her kitchen looking at supplement labels with a satisfied expression, wearing a casual blazer, bright natural light, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing light resistance exercises in a home gym, wearing athletic wear, focused and strong, photorealistic wellness lifestyle photography, bright natural light",
+    "A woman in her 40s enjoying a healthy green salad lunch at a bright kitchen table, wearing casual clothes, vibrant and healthy, photorealistic wellness photography",
+    "A woman in her 40s walking in a sunlit park with a confident posture, wearing smart casual clothes, energetic midday walk, photorealistic wellness lifestyle photography"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Drug", "name": "Trimethylglycine", "alternateName": "TMG"},
+    {"@type": "Drug", "name": "Betaine"},
+    {"@type": "BiologicalProcess", "name": "methylation"},
+    {"@type": "BiologicalProcess", "name": "homocysteine metabolism"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "SAMe"},
+    {"@type": "Drug", "name": "NAD+ Women's Longevity Formula"},
+    {"@type": "Drug", "name": "NMN"},
+    {"@type": "BiologicalProcess", "name": "NAD+ recycling"},
+    {"@type": "MedicalCondition", "name": "hyperhomocysteinemia"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "does TMG work for women over 40",
+  "citations": [
+    {"pmid": "17513435", "note": "Betaine/TMG and homocysteine metabolism study; used conservatively as supporting reference"},
+    {"pmid": "19828901", "note": "Betaine/TMG methylation pathway research; used conservatively as supporting reference"}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

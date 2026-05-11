@@ -1,0 +1,39 @@
+{
+  "title": "Does PQQ Actually Work? What Women Over 40 Need to Know About This Brain Supplement",
+  "slug": "does-pqq-work-brain-energy-after-40",
+  "author": "Happy Aging Team",
+  "tags": "PQQ, pyrroloquinoline quinone, CoQ10, mitochondrial health, brain health, cognitive function, women over 40, energy",
+  "product_handle": "brain-tonic",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s writing in a journal at a sunlit wooden desk, wearing a casual striped top, focused and mentally sharp expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reading a book in a cozy armchair by a window, wearing a cardigan, relaxed and intellectually engaged, photorealistic wellness lifestyle photography",
+    "A woman in her 40s preparing a healthy green smoothie in a bright kitchen, wearing a linen apron, vibrant healthy lifestyle, photorealistic wellness photography",
+    "A woman in her 40s walking briskly in a tree-lined neighborhood, wearing athletic casual wear, energetic morning walk, photorealistic wellness lifestyle photography"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Drug", "name": "Pyrroloquinoline Quinone", "alternateName": "PQQ"},
+    {"@type": "BiologicalProcess", "name": "mitochondrial biogenesis"},
+    {"@type": "BiologicalProcess", "name": "cognitive function"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "CoQ10"},
+    {"@type": "Drug", "name": "Brain Tonic"},
+    {"@type": "Drug", "name": "NAD+"},
+    {"@type": "MedicalCondition", "name": "brain fog"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "does PQQ work for brain health",
+  "citations": [
+    {"pmid": "22896760", "authors": "Nakano M et al.", "year": 2012, "title": "Effect of pyrroloquinoline quinone (PQQ) on mental status of middle-aged and elderly persons", "journal": "FOOD Style 21"},
+    {"pmid": "24751447", "authors": "Harris CB et al.", "year": 2013, "title": "Dietary pyrroloquinoline quinone (PQQ) alters indicators of inflammation and mitochondrial-related metabolism in human subjects", "journal": "J Nutr Biochem"}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}

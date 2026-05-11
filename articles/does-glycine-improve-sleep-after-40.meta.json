@@ -1,0 +1,40 @@
+{
+  "title": "Does Glycine Help With Sleep After 40? What the Science Actually Shows",
+  "slug": "does-glycine-improve-sleep-after-40",
+  "author": "Happy Aging Team",
+  "tags": "glycine, sleep, sleep quality, women over 40, perimenopause, sleep supplements, magnesium, L-theanine",
+  "product_handle": "sleep-tonic",
+  "template_suffix": "timeline",
+  "image_prompt": "A woman in her 40s relaxing peacefully in bed with soft white pillows, wearing cozy pajamas, soft bedroom lighting with warm lamp glow, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a gentle bedtime stretch routine in a dimly lit bedroom, wearing comfortable pajamas, calm evening routine, photorealistic wellness lifestyle photography",
+    "A woman in her 40s sipping herbal tea in a cozy kitchen at night, wearing a soft robe, peaceful evening ritual, photorealistic wellness photography, warm lighting",
+    "A woman in her 40s waking up refreshed in the morning sun, sitting up in bed with a smile, wearing light pajamas, photorealistic wellness lifestyle photography, soft morning light"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-11",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    {"@type": "Drug", "name": "Glycine"},
+    {"@type": "BiologicalProcess", "name": "sleep quality"},
+    {"@type": "BiologicalProcess", "name": "thermoregulation during sleep"}
+  ],
+  "mentions": [
+    {"@type": "Drug", "name": "Magnesium"},
+    {"@type": "Drug", "name": "L-Theanine"},
+    {"@type": "Drug", "name": "Liposomal Sleep Blend"},
+    {"@type": "MedicalCondition", "name": "insomnia"},
+    {"@type": "MedicalCondition", "name": "perimenopause"}
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "does glycine help sleep after 40",
+  "citations": [
+    {"pmid": "22529837", "authors": "Bannai M, Kawai N", "year": 2012, "title": "New therapeutic strategy for amino acid medicine: glycine improves the quality of sleep", "journal": "J Pharmacol Sci"},
+    {"pmid": "23290082", "authors": "Inagawa K et al.", "year": 2006, "title": "Subjective effects of glycine ingestion before the sleep period on sleep quality", "journal": "Sleep and Biological Rhythms"}
+  ],
+  "date_published": "2026-05-11",
+  "date_modified": "2026-05-11"
+}
