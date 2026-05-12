@@ -48,12 +48,20 @@ def main():
     by_cluster = defaultdict(list)
     by_handle = defaultdict(list)
     h2_corpus = set()
+    skipped_unpublished = 0
 
     for mf in sorted(glob.glob("articles/*.meta.json")):
         try:
             meta = json.load(open(mf, encoding="utf-8"))
         except Exception as e:
             print(f"  skip {mf}: {e}", file=sys.stderr)
+            continue
+        # Only index articles confirmed live on Shopify. qa-and-publish.sh
+        # writes shopify_article_id on POST success and backfills it from
+        # the Shopify list for legacy metas. Phase 1 dedup must not block
+        # topics based on metas that never shipped.
+        if not meta.get("shopify_article_id"):
+            skipped_unpublished += 1
             continue
         slug = meta.get("slug") or os.path.basename(mf).replace(".meta.json", "")
         h2s = load_h2s(slug)
@@ -65,6 +73,7 @@ def main():
             "product_handle": meta.get("product_handle", ""),
             "tags": meta.get("tags", ""),
             "word_count": meta.get("word_count", 0),
+            "shopify_article_id": meta.get("shopify_article_id"),
             "h2s": h2s,
         }
         by_slug[slug] = entry
@@ -87,7 +96,8 @@ def main():
     print(f"  index.json: {out['count']} articles, "
           f"{len(out['by_cluster'])} clusters, "
           f"{len(out['by_handle'])} products, "
-          f"{len(out['h2_corpus'])} unique H2s")
+          f"{len(out['h2_corpus'])} unique H2s "
+          f"(skipped {skipped_unpublished} unpublished)")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,10 @@ LOG_FILE="articles/qa-${BATCH_DATE}.log"
 echo "=== JARVIS QA + Publish: Batch ${BATCH_DATE} ==="
 echo "Started: $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee "$LOG_FILE"
 
+# Mirror all subsequent stdout/stderr into the log so publish-metrics.py
+# can parse the OK/ERR/SKIP cover/DOI/Shopify-count lines.
+exec > >(tee -a "$LOG_FILE") 2>&1
+
 # Step 0: Pull latest
 echo "[0/7] Pulling latest from git..."
 git pull origin main --quiet
@@ -284,17 +288,49 @@ shopify_token = "${SHOPIFY_TOKEN}"
 api = "${API_URL}"
 covers_dir = "articles/covers"
 
-# Get existing titles (retry on flaky Shopify)
-def _list():
-    req = urllib.request.Request(f"{api}?limit=250&fields=id,title",
-        headers={"X-Shopify-Access-Token": shopify_token})
-    return json.loads(urllib.request.urlopen(req, timeout=20).read())
+# Walk every page of the Shopify blog so the dedup-index backfill below
+# sees all live articles, not just the first 250.
+def list_all():
+    url = f"{api}?limit=250&fields=id,title"
+    articles = []
+    while url:
+        def _go():
+            req = urllib.request.Request(url,
+                headers={"X-Shopify-Access-Token": shopify_token})
+            resp = urllib.request.urlopen(req, timeout=20)
+            return resp.read(), resp.headers.get("Link", "")
+        body, link = http_retry(_go, label="shopify:list")
+        articles.extend(json.loads(body)["articles"])
+        nxt = None
+        for part in link.split(","):
+            if 'rel="next"' in part:
+                nxt = part.split(";")[0].strip().strip("<>")
+        url = nxt
+    return articles
+
 existing = {}
-for a in http_retry(_list, label="shopify:list")["articles"]:
+for a in list_all():
     existing[a["title"].lower().strip()] = a["id"]
 
 metas = sorted(glob.glob("articles/*.meta.json"))
 published = 0
+backfilled = 0
+
+# Backfill shopify_article_id on any meta whose title already maps to a
+# live Shopify article. Keeps build-index.py honest on legacy metas.
+def write_meta(mf, meta):
+    json.dump(meta, open(mf, "w"), indent=2, ensure_ascii=False)
+
+for mf in metas:
+    meta = json.load(open(mf))
+    title = meta.get("title","").strip()
+    aid = existing.get(title.lower())
+    if aid and meta.get("shopify_article_id") != aid:
+        meta["shopify_article_id"] = aid
+        write_meta(mf, meta)
+        backfilled += 1
+if backfilled:
+    print(f"  Backfilled shopify_article_id on {backfilled} meta(s)")
 
 for mf in metas:
     meta = json.load(open(mf))
@@ -332,6 +368,9 @@ for mf in metas:
         aid = result["article"]["id"]
         published += 1
         existing[title.lower()] = aid
+        meta["shopify_article_id"] = aid
+        meta["published_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        write_meta(mf, meta)
         print(f"  OK {title[:50]} (id:{aid})")
     except Exception as e:
         print(f"  ERR {slug}: {str(e)[:80]}")
