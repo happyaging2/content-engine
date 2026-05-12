@@ -564,7 +564,8 @@ def _coerce_entities(items) -> list[str]:
         if isinstance(it, str):
             v = it.strip()
         elif isinstance(it, dict):
-            v = (it.get("name") or it.get("text") or it.get("label") or "").strip()
+            raw = it.get("name") or it.get("text") or it.get("label") or ""
+            v = (raw if isinstance(raw, str) else str(raw)).strip()
         else:
             v = str(it).strip()
         if v:

@@ -530,7 +530,10 @@ def coerce_entity_strings(items) -> list[str]:
         if isinstance(it, str):
             v = it.strip()
         elif isinstance(it, dict):
-            v = (it.get("name") or it.get("text") or it.get("label") or "").strip()
+            # Off-spec dicts may carry name/text/label as non-string types
+            # (numbers, nested dicts). Stringify defensively before strip.
+            raw = it.get("name") or it.get("text") or it.get("label") or ""
+            v = (raw if isinstance(raw, str) else str(raw)).strip()
         else:
             v = str(it).strip()
         if v:
