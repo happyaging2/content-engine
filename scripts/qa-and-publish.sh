@@ -5,7 +5,11 @@
 # Usage: cd /tmp/content-engine && bash scripts/qa-and-publish.sh
 # =============================================================
 
-set -e
+set -eo pipefail
+
+# Verbose-on-error trap: when any command fails, print the exact line so we
+# don't need to dig through the log to find where it died.
+trap 'rc=$?; echo "::error::qa-and-publish.sh failed (exit $rc) at line $LINENO: ${BASH_COMMAND}"; exit $rc' ERR
 
 BATCH_DATE="${1:-$(date +%Y-%m-%d)}"
 SHOPIFY_TOKEN="${SHOPIFY_TOKEN}"
@@ -898,7 +902,9 @@ for mf in sorted(glob.glob("articles/*.meta.json")):
             meta=meta,
         )
     except Exception as e:
-        print(f"  WARN: medical schema injection failed for {slug}: {e}")
+        import traceback as _tb
+        print(f"  WARN: medical schema injection failed for {slug}: {type(e).__name__}: {e}")
+        print(_tb.format_exc())
 
     # Meta description saved to meta.json for use at publish time
     meta["meta_description"] = meta_description(body)
@@ -915,7 +921,7 @@ PYEOF
 # Step 5: Publish to Shopify (articles + covers)
 echo "[5/6] Publishing to Shopify..."
 python3 << PYEOF
-import json, urllib.request, glob, os, re, time, base64
+import json, urllib.request, urllib.error, glob, os, re, time, base64
 
 shopify_token = "${SHOPIFY_TOKEN}"
 api = "${API_URL}"
@@ -995,8 +1001,14 @@ for mf in metas:
         if result["article"].get("handle"):
             existing_handles[result["article"]["handle"].lower()] = aid
         print(f"  OK {title[:50]} (id:{aid})")
+    except urllib.error.HTTPError as e:
+        # Capture Shopify's error body — usually says what's wrong
+        # (422 validation, 401 auth, 429 rate limit).
+        try: err_body = e.read().decode("utf-8", "ignore")[:400]
+        except Exception: err_body = ""
+        print(f"  ERR {slug}: HTTP {e.code} {e.reason} — {err_body}")
     except Exception as e:
-        print(f"  ERR {slug}: {str(e)[:80]}")
+        print(f"  ERR {slug}: {type(e).__name__}: {str(e)[:120]}")
     time.sleep(1)
 
 print(f"  Published {published} new articles")
