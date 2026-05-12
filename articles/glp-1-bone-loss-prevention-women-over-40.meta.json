@@ -1,0 +1,36 @@
+{
+  "title": "GLP-1 Medications and Bone Loss: What Women Over 40 Need to Know",
+  "slug": "glp-1-bone-loss-prevention-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "GLP-1 bone density, ozempic osteoporosis, semaglutide bone health, women over 40, bone loss prevention",
+  "product_handle": "bone-density-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "GLP-1 bone density women",
+  "about": ["bone mineral density changes during GLP-1 therapy", "osteoporosis prevention for women over 40 on semaglutide"],
+  "mentions": ["semaglutide", "Ozempic", "tirzepatide", "osteoblasts", "osteoclasts", "DEXA scan", "calcium citrate", "vitamin D3", "vitamin K2", "osteoporosis", "osteopenia"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "33567185",
+      "title": "Once-weekly semaglutide in adults with overweight or obesity (STEP 1)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    }
+  ],
+  "image_prompt": "A woman in her 40s doing a weighted squat at a gym with good form, wearing athletic leggings and a supportive top, focused and strong expression, bright modern gym setting with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s taking vitamin supplements with a glass of water at a kitchen table with morning light, wearing a soft cozy top, calm and intentional wellness routine, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating a calcium-rich meal of salmon and leafy greens at a clean dining table, wearing a casual blouse, healthy and vibrant expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s speaking with a female doctor at a modern medical office reviewing scan results, wearing comfortable everyday clothes, calm and informed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}

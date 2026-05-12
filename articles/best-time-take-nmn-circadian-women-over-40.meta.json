@@ -1,0 +1,32 @@
+{
+  "title": "Best Time to Take NMN for Women Over 40: Morning vs. Evening Dosing",
+  "slug": "best-time-take-nmn-circadian-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NMN timing, best time NMN, morning NMN, circadian rhythm supplements, women over 40",
+  "product_handle": "nmn-cell-renew-tonic",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "NMN timing and circadian rhythm optimization for women over 40",
+  "about": ["NMN supplementation timing", "Circadian biology and NAD+ synthesis", "NAMPT enzyme activity", "Women over 40 supplement protocols"],
+  "mentions": ["NMN", "NAD+", "NAMPT", "SIRT1", "nicotinamide mononucleotide", "circadian rhythm", "liposomal NMN", "perimenopause"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {"pmid": "32103585", "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in premenopausal women", "journal": "Science", "year": 2021, "study_type": "RCT", "n": 25},
+    {"pmid": "19940856", "title": "Circadian clock feedback cycle through NAMPT-mediated NAD+ biosynthesis", "journal": "Science", "year": 2009, "study_type": "mechanistic", "n": null},
+    {"pmid": "24786309", "title": "NAD+ and sirtuins in aging and disease", "journal": "Trends in Cell Biology", "year": 2014, "study_type": "review", "n": null},
+    {"pmid": "27721479", "title": "Nicotinamide riboside is uniquely and orally bioavailable in healthy humans", "journal": "Nature Communications", "year": 2016, "study_type": "RCT", "n": 12}
+  ],
+  "image_prompt": "A woman in her 40s holding a glass of water and a supplement capsule at a bright kitchen counter in the morning, wearing a light linen robe, sunlight streaming through a window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s stretching at a sunlit window first thing in the morning, wearing casual athleisure, calm and energized expression, clean modern home interior, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a healthy breakfast with avocado and eggs, wearing a casual blouse, bright airy kitchen, focused and content expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a light morning walk in a park, wearing workout clothes, dappled morning sunlight through trees, relaxed and healthy expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}
