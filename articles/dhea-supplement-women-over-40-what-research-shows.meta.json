@@ -1,0 +1,30 @@
+{
+  "title": "DHEA Supplement for Women Over 40: What the Research Actually Shows",
+  "slug": "dhea-supplement-women-over-40-what-research-shows",
+  "author": "Happy Aging Team",
+  "tags": "DHEA women over 40, DHEA supplement menopause, DHEA research, hormones after 40, adrenal health",
+  "product_handle": "nad-women-longevity-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "DHEA supplement women over 40",
+  "about": ["DHEA supplementation", "hormonal aging", "adrenal health", "vaginal atrophy", "menopause hormone support"],
+  "mentions": ["prasterone", "Intrarosa", "DHEA-S", "Labrie research", "testosterone", "estradiol", "perimenopause"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {"pmid": "19217678", "title": "Effect of intravaginal dehydroepiandrosterone (Prasterone) on libido and sexual dysfunction in postmenopausal women", "journal": "Menopause", "year": 2009, "study_type": "RCT", "n": 218},
+    {"pmid": "17451512", "title": "Long-term low-dose dehydroepiandrosterone oral supplementation in early and late postmenopausal women modulates endocrine parameters and synthesis of neuroactive steroids", "journal": "Fertility and Sterility", "year": 2007, "study_type": "RCT", "n": 24}
+  ],
+  "image_prompt": "A woman in her 40s sitting at a kitchen table reviewing lab results on her laptop, wearing a light linen blouse, bright modern home kitchen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s speaking with a female doctor in a bright clinical office, wearing a casual grey cardigan, comfortable wellness clinic setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s practicing morning yoga stretches on a balcony, wearing athletic leggings and a fitted tank top, outdoor setting with soft morning light and green plants nearby, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing supplement bottles on a clean white countertop, wearing a relaxed white top, modern minimalist kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}
