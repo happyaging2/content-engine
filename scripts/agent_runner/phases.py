@@ -559,6 +559,8 @@ def _coerce_entities(items) -> list[str]:
     """
     out: list[str] = []
     for it in items or []:
+        if it is None:
+            continue
         if isinstance(it, str):
             v = it.strip()
         elif isinstance(it, dict):
