@@ -1,0 +1,44 @@
+{
+  "title": "Does Green Tea EGCG Help with Aging After 40? What the Research Shows",
+  "slug": "green-tea-egcg-anti-aging-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "EGCG anti-aging, green tea extract women over 40, catechins longevity, polyphenol supplement, green tea supplement",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "EGCG green tea anti-aging women over 40",
+  "about": ["EGCG", "green tea catechins", "polyphenol antioxidants", "longevity", "cellular aging", "AMPK activation", "autophagy"],
+  "mentions": ["epigallocatechin-3-gallate", "matcha", "green tea extract", "NF-kB", "AMPK", "NMN", "NAD+", "Ohsaki study"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "16968850",
+      "title": "Green tea consumption and mortality due to cardiovascular disease, cancer, and all causes in Japan: the Ohsaki study",
+      "journal": "JAMA",
+      "year": 2006,
+      "study_type": "Prospective cohort",
+      "n": 40530
+    },
+    {
+      "pmid": "16507840",
+      "title": "Chemoprevention of human prostate cancer by oral administration of green tea catechins in volunteers with high-grade prostate intraepithelial neoplasia",
+      "journal": "Cancer Research",
+      "year": 2006,
+      "study_type": "RCT",
+      "n": 60
+    }
+  ],
+  "image_prompt": "A woman in her 40s sitting at a wooden table enjoying a cup of green tea, wearing a soft cream cardigan, bright serene home setting with natural light and plants, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s preparing matcha green tea in a modern kitchen, wearing a light grey linen top, clean minimal kitchen counter with a ceramic matcha bowl, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting in a meditation posture by a large window, wearing comfortable yoga pants and a soft top, bright room with plants and warm morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s examining a supplement bottle in a wellness setting, wearing a casual blazer over a fitted top, bright modern office or home study background with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}

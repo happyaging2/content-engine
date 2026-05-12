@@ -1,0 +1,44 @@
+{
+  "title": "Longevity Biomarker Testing for Women Over 40: What to Track and Why",
+  "slug": "longevity-biomarker-tests-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "longevity biomarkers women, biological age testing, NAD+ testing, health markers over 40, longevity testing",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "longevity biomarker tests women over 40",
+  "about": ["longevity biomarkers", "biological age testing", "epigenetic age", "HbA1c", "hs-CRP", "homocysteine", "NAD+ testing", "DunedinPACE"],
+  "mentions": ["Horvath clock", "DunedinPACE", "DHEA-S", "telomere length", "ferritin", "TSH", "vitamin D", "methylation", "hallmarks of aging"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "23746838",
+      "title": "The hallmarks of aging",
+      "journal": "Cell",
+      "year": 2013,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "24138928",
+      "title": "DNA methylation age of human tissues and cell types",
+      "journal": "Genome Biology",
+      "year": 2013,
+      "study_type": "Observational",
+      "n": 8000
+    }
+  ],
+  "image_prompt": "A woman in her 40s reviewing health lab results on a tablet at a bright modern desk, wearing a smart casual blazer over a simple top, clean home office or clinical wellness setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting in a clinical lab waiting area holding a lab requisition form, wearing a light blazer and dark jeans, bright modern medical facility with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s using a smartwatch to check her heart rate variability data in a home setting, wearing athletic leisure wear, cozy modern living room with plants and morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s meeting with a physician and reviewing results together at a desk, wearing a casual knit top, friendly modern doctor's office or telemedicine setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Best Protein Powder for Women Over 40: How to Choose, What to Avoid",
+  "slug": "protein-powder-guide-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "best protein powder women over 40, protein powder menopause, whey vs pea protein women, muscle protein synthesis",
+  "product_handle": "lean-muscle-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "best protein powder women over 40",
+  "about": ["protein powder", "muscle preservation after 40", "leucine content", "sarcopenia prevention", "protein supplementation"],
+  "mentions": ["whey isolate", "casein protein", "pea protein", "collagen peptides", "leucine", "muscle protein synthesis", "PDCAAS"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "19079931",
+      "title": "Dietary protein recommendations and the prevention of sarcopenia",
+      "journal": "Current Opinion in Clinical Nutrition and Metabolic Care",
+      "year": 2009,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "19589961",
+      "title": "Ingestion of whey hydrolysate, casein, or soy protein isolate: effects on mixed muscle protein synthesis at rest and following resistance exercise in young men",
+      "journal": "Journal of Applied Physiology",
+      "year": 2009,
+      "study_type": "RCT",
+      "n": 18
+    }
+  ],
+  "image_prompt": "A woman in her 40s preparing a protein shake in a bright modern kitchen, wearing a fitted athletic top, clean countertop with a shaker bottle and container of protein powder, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a dumbbell workout in a home gym, wearing athletic leggings and a sports bra with a light jacket, bright well-lit fitness room setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reading a supplement label carefully in a health food store, wearing a casual blazer, modern store aisle setting with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a dining table enjoying a post-workout meal with a protein shake, wearing comfortable loungewear, bright dining area with plants, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}

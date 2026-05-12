@@ -1,0 +1,44 @@
+{
+  "title": "Best Mushroom Supplement Stack for Women Over 40: Lion's Mane, Reishi, Chaga Compared",
+  "slug": "best-mushroom-supplement-stack-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "mushroom supplement women, lion's mane reishi chaga, functional mushrooms over 40, mushroom stack, nootropic mushroom",
+  "product_handle": "neuro-creamer",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "best mushroom supplements women over 40",
+  "about": ["functional mushrooms", "Lion's Mane", "Reishi", "Chaga", "Cordyceps", "cognitive health", "brain fog", "adaptogenic supplements"],
+  "mentions": ["Hericium erinaceus", "Ganoderma lucidum", "Inonotus obliquus", "Cordyceps militaris", "nerve growth factor", "beta-glucans", "fruiting body extract", "hericenones"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "18844328",
+      "title": "Improving effects of the mushroom Yamabushitake (Hericium erinaceus) on mild cognitive impairment: a double-blind placebo-controlled clinical trial",
+      "journal": "Phytotherapy Research",
+      "year": 2009,
+      "study_type": "RCT",
+      "n": 30
+    },
+    {
+      "pmid": "16341523",
+      "title": "Pharmacological actions of Cordyceps, a prized folk medicine",
+      "journal": "Journal of Pharmacy and Pharmacology",
+      "year": 2005,
+      "study_type": "Review",
+      "n": null
+    }
+  ],
+  "image_prompt": "A woman in her 40s stirring a warm mushroom coffee beverage at her kitchen table, wearing a cozy knit sweater, bright morning kitchen setting with natural light and a few plants, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s arranging supplement bottles on a clean white countertop, wearing a casual light blue top, modern minimalist kitchen setting with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s working focused at a standing desk, wearing professional casual attire, bright home office with plants and natural window light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s hiking a nature trail in the morning, wearing athletic outdoor gear in soft earthy tones, lush green forest trail setting with dappled light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}
