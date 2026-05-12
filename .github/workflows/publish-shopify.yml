@@ -51,14 +51,18 @@ jobs:
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
         run: |
-          set -ex
+          set -eo pipefail
+          set -x
           if [ -z "${SHOPIFY_TOKEN:-}" ]; then
             echo "::error::SHOPIFY_TOKEN secret is not set."
             exit 1
           fi
           echo "::add-mask::${SHOPIFY_TOKEN}"
-          # Quick token validity check — count endpoint is cheap and exposes 401 fast.
-          curl -sS -o /dev/null -w "Shopify count probe: HTTP %{http_code}\n" \
+          # Token validity check — `-f --show-error` makes 4xx/5xx exit non-zero
+          # so a missing/expired token fails the preflight fast instead of
+          # waiting 14 min for the publish step to hit auth errors.
+          curl -fsS --show-error \
+            -o /dev/null -w "Shopify count probe: HTTP %{http_code}\n" \
             -H "X-Shopify-Access-Token: ${SHOPIFY_TOKEN}" \
             "https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/109440303424/articles/count.json"
 
@@ -69,7 +73,12 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
-          set -ex
+          # `pipefail` is REQUIRED so the `| tee` below doesn't mask a non-zero
+          # exit from qa-and-publish.sh. GitHub Actions' default bash sets
+          # pipefail today, but being explicit prevents regressions if the
+          # default shell config ever changes.
+          set -eo pipefail
+          set -x
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then
             BATCH="$(date +%Y-%m-%d)"

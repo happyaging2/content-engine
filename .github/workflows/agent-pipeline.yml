@@ -80,7 +80,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          set -ex
+          set -eo pipefail
+          set -x
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then BATCH="$(date -u +%Y-%m-%d)"; fi
           SIZE="${{ github.event.inputs.batch_size || '10' }}"
