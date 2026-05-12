@@ -14,26 +14,37 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalSubstance", "name": "Myo-inositol"},
-    {"@type": "MedicalSubstance", "name": "D-chiro-inositol"},
-    {"@type": "MedicalCondition", "name": "Perimenopause"},
-    {"@type": "MedicalCondition", "name": "PCOS"}
+    "Myo-inositol",
+    "D-chiro-inositol",
+    "Perimenopause",
+    "PCOS"
   ],
   "mentions": [
-    {"@type": "MedicalCondition", "name": "Insulin resistance"},
-    {"@type": "MedicalSubstance", "name": "Magnesium glycinate"},
-    {"@type": "MedicalCondition", "name": "Hormonal imbalance"}
+    "Insulin resistance",
+    "Magnesium glycinate",
+    "Hormonal imbalance"
   ],
   "medical_audience": "Patient",
   "primary_topic": "Inositol supplementation for hormonal balance and mood in women over 40",
   "citations": [
-    {"pmid": "22031843", "citation": "Costantino D et al. Metabolic and hormonal effects of myo-inositol in women with polycystic ovary syndrome. Gynecological Endocrinology. 2009."},
-    {"pmid": "25538429", "citation": "Research on inositol and insulin resistance in postmenopausal women. Used conservatively."},
-    {"doi": "10.1530/EC-17-0068", "citation": "Unfer V et al. Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials. Endocrine Connections. 2017."}
+    {
+      "pmid": "22031843",
+      "citation": "Costantino D et al. Metabolic and hormonal effects of myo-inositol in women with polycystic ovary syndrome. Gynecological Endocrinology. 2009."
+    },
+    {
+      "pmid": "25538429",
+      "citation": "Research on inositol and insulin resistance in postmenopausal women. Used conservatively."
+    },
+    {
+      "doi": "10.1530/EC-17-0068",
+      "citation": "Unfer V et al. Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials. Endocrine Connections. 2017."
+    }
   ],
   "date_published": "2026-05-11",
   "date_modified": "2026-05-11"

@@ -24,10 +24,14 @@ import glob
 import json
 import os
 import re
+import sys
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARTICLES_DIR = os.path.join(ROOT, "articles")
+sys.path.insert(0, ARTICLES_DIR)
+from lib_medical_schema import coerce_entity_strings  # noqa: E402
+
 OUT_DIR = os.path.join(ROOT, "public")
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -58,7 +62,7 @@ def main():
         title = meta.get("title") or slug
         url = f"{BLOG_URL}/{slug}"
         topic = (meta.get("primary_topic") or meta.get("cluster") or "general").strip()
-        about = meta.get("about") or []
+        about = coerce_entity_strings(meta.get("about"))
         html_path = os.path.join(ARTICLES_DIR, f"{slug}-final.html")
         if not os.path.exists(html_path):
             html_path = os.path.join(ARTICLES_DIR, f"{slug}.html")

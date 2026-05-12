@@ -61,10 +61,14 @@ def _inject_anchor(para_html: str, anchor_text: str, url: str) -> tuple[str, boo
 
 
 def _entities(meta: dict) -> list[str]:
-    out = []
+    # Defensive against off-spec writer output where about/mentions came back
+    # as schema.org Thing dicts ({"@type":..., "name":...}) instead of strings.
+    out: list[str] = []
     for key in ("about", "mentions"):
         for v in meta.get(key) or []:
-            v = (v or "").strip()
+            if isinstance(v, dict):
+                v = v.get("name") or v.get("text") or v.get("label") or ""
+            v = (v or "").strip() if isinstance(v, str) else str(v).strip()
             if v:
                 out.append(v)
     return out
@@ -112,7 +116,8 @@ def main():
 
         # 1. Pillar links: for the article's primary `about` entity, if a pillar
         #    exists, inject one anchor in an eligible paragraph.
-        primary = (meta.get("about") or [None])[0]
+        primary_list = _entities(meta)
+        primary = primary_list[0] if primary_list else None
         if primary:
             pillar = PILLAR_MAP.get(primary.lower())
             if pillar:

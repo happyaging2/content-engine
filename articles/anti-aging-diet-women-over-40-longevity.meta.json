@@ -14,20 +14,22 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalCondition", "name": "Aging"},
-    {"@type": "Thing", "name": "Mediterranean Diet"},
-    {"@type": "Thing", "name": "Anti-Aging Nutrition"},
-    {"@type": "Thing", "name": "Women's Longevity"}
+    "Aging",
+    "Mediterranean Diet",
+    "Anti-Aging Nutrition",
+    "Women's Longevity"
   ],
   "mentions": [
-    {"@type": "Substance", "name": "NAD+"},
-    {"@type": "Substance", "name": "Omega-3 Fatty Acids"},
-    {"@type": "Substance", "name": "Polyphenols"},
-    {"@type": "Product", "name": "NAD+ Advanced Longevity Formula"}
+    "NAD+",
+    "Omega-3 Fatty Acids",
+    "Polyphenols",
+    "NAD+ Advanced Longevity Formula"
   ],
   "medical_audience": "Patient",
   "primary_topic": "anti-aging diet for women over 40",

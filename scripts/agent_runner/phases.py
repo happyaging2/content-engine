@@ -549,6 +549,27 @@ def run_phase4_parallel(
 _SLUG_RE = re.compile(r"[^a-z0-9-]+")
 
 
+def _coerce_entities(items) -> list[str]:
+    """Defensive coercion for `about`/`mentions` lists.
+
+    Sonnet has historically emitted these as schema.org Thing dicts
+    (`{"@type": "Drug", "name": "Glycine"}`) despite the JSON schema saying
+    `items: {type: string}`. Save them as plain strings so every downstream
+    consumer (llms.txt, pillar pages, internal linker, dedup) can rely on it.
+    """
+    out: list[str] = []
+    for it in items or []:
+        if isinstance(it, str):
+            v = it.strip()
+        elif isinstance(it, dict):
+            v = (it.get("name") or it.get("text") or it.get("label") or "").strip()
+        else:
+            v = str(it).strip()
+        if v:
+            out.append(v)
+    return out
+
+
 def _safe_slug(slug: str) -> str:
     s = _SLUG_RE.sub("-", (slug or "").lower()).strip("-")
     return s[:120] or "untitled"
@@ -579,8 +600,8 @@ def save_article_files(
         "excerpt": article.get("excerpt"),
         "image_query": article.get("image_query"),
         "body_image_queries": article.get("body_image_queries") or [],
-        "about": article.get("about") or [],
-        "mentions": article.get("mentions") or [],
+        "about": _coerce_entities(article.get("about")),
+        "mentions": _coerce_entities(article.get("mentions")),
         "primary_topic": article.get("primary_topic"),
         "schema_type": article.get("schema_type", "MedicalWebPage"),
         "format": article.get("format", "standard"),

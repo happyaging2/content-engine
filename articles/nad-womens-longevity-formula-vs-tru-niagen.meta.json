@@ -14,23 +14,25 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "Product", "name": "Happy Aging NAD+ Women's Longevity Formula"},
-    {"@type": "Product", "name": "Tru Niagen"},
-    {"@type": "Substance", "name": "NAD+"},
-    {"@type": "Substance", "name": "Nicotinamide Riboside"},
-    {"@type": "Substance", "name": "NMNH"}
+    "Happy Aging NAD+ Women's Longevity Formula",
+    "Tru Niagen",
+    "NAD+",
+    "Nicotinamide Riboside",
+    "NMNH"
   ],
   "mentions": [
-    {"@type": "Substance", "name": "Nicotinamide Riboside (NR)"},
-    {"@type": "Substance", "name": "NMNH (Reduced NMN)"},
-    {"@type": "Substance", "name": "Liposomal NAD+"},
-    {"@type": "Substance", "name": "Resveratrol"},
-    {"@type": "Substance", "name": "Spermidine"},
-    {"@type": "Substance", "name": "Urolithin A"}
+    "Nicotinamide Riboside (NR)",
+    "NMNH (Reduced NMN)",
+    "Liposomal NAD+",
+    "Resveratrol",
+    "Spermidine",
+    "Urolithin A"
   ],
   "medical_audience": "Patient",
   "primary_topic": "Happy Aging NAD+ vs Tru Niagen",

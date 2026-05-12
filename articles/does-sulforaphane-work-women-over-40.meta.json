@@ -14,26 +14,40 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalSubstance", "name": "Sulforaphane"},
-    {"@type": "MedicalSubstance", "name": "Glucoraphanin"},
-    {"@type": "BiologicalProcess", "name": "Nrf2 pathway activation"}
+    "Sulforaphane",
+    "Glucoraphanin",
+    "Nrf2 pathway activation"
   ],
   "mentions": [
-    {"@type": "Food", "name": "Broccoli sprouts"},
-    {"@type": "MedicalSubstance", "name": "NMN"},
-    {"@type": "MedicalSubstance", "name": "Glutathione"}
+    "Broccoli sprouts",
+    "NMN",
+    "Glutathione"
   ],
   "medical_audience": "Patient",
   "primary_topic": "Sulforaphane and Nrf2 pathway for cellular aging defense in women over 40",
   "citations": [
-    {"pmid": "22948830", "citation": "Research on sulforaphane and Nrf2 pathway activation. Used conservatively."},
-    {"pmid": "28615302", "citation": "Sulforaphane bioavailability study comparing delivery forms. Used conservatively."},
-    {"doi": "10.1073/pnas.94.19.10367", "citation": "Fahey JW et al. Broccoli sprouts: an exceptionally rich source of inducers of enzymes that protect against chemical carcinogens. Proceedings of the National Academy of Sciences. 1997."},
-    {"doi": "10.3390/antiox8070211", "citation": "Houghton CA. Sulforaphane: Its Properties, Benefits, and Challenges as a Promising Food-Derived Bioactive Compound. Antioxidants. 2019."}
+    {
+      "pmid": "22948830",
+      "citation": "Research on sulforaphane and Nrf2 pathway activation. Used conservatively."
+    },
+    {
+      "pmid": "28615302",
+      "citation": "Sulforaphane bioavailability study comparing delivery forms. Used conservatively."
+    },
+    {
+      "doi": "10.1073/pnas.94.19.10367",
+      "citation": "Fahey JW et al. Broccoli sprouts: an exceptionally rich source of inducers of enzymes that protect against chemical carcinogens. Proceedings of the National Academy of Sciences. 1997."
+    },
+    {
+      "doi": "10.3390/antiox8070211",
+      "citation": "Houghton CA. Sulforaphane: Its Properties, Benefits, and Challenges as a Promising Food-Derived Bioactive Compound. Antioxidants. 2019."
+    }
   ],
   "date_published": "2026-05-11",
   "date_modified": "2026-05-11"

@@ -14,19 +14,21 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalCondition", "name": "Skin Aging"},
-    {"@type": "Substance", "name": "Collagen Peptides"},
-    {"@type": "Substance", "name": "Marine Collagen"},
-    {"@type": "Substance", "name": "Bovine Collagen"}
+    "Skin Aging",
+    "Collagen Peptides",
+    "Marine Collagen",
+    "Bovine Collagen"
   ],
   "mentions": [
-    {"@type": "Drug", "name": "Hydrolyzed Marine Collagen Peptides"},
-    {"@type": "Drug", "name": "Vitamin C"},
-    {"@type": "Product", "name": "Glow Shot Marine Collagen"}
+    "Hydrolyzed Marine Collagen Peptides",
+    "Vitamin C",
+    "Glow Shot Marine Collagen"
   ],
   "medical_audience": "Patient",
   "primary_topic": "does collagen work for skin after 40",

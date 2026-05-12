@@ -14,20 +14,22 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalCondition", "name": "Insomnia"},
-    {"@type": "HealthTopic", "name": "Sleep Optimization"},
-    {"@type": "HealthTopic", "name": "Perimenopause"}
+    "Insomnia",
+    "Sleep Optimization",
+    "Perimenopause"
   ],
   "mentions": [
-    {"@type": "DietarySupplement", "name": "Magnesium Glycinate"},
-    {"@type": "DietarySupplement", "name": "Glycine"},
-    {"@type": "DietarySupplement", "name": "L-Theanine"},
-    {"@type": "DietarySupplement", "name": "Melatonin"},
-    {"@type": "MedicalTherapy", "name": "Cognitive Behavioral Therapy for Insomnia"}
+    "Magnesium Glycinate",
+    "Glycine",
+    "L-Theanine",
+    "Melatonin",
+    "Cognitive Behavioral Therapy for Insomnia"
   ],
   "medical_audience": "Patient",
   "primary_topic": "sleep optimization protocol women over 40",
