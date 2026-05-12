@@ -14,20 +14,22 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalCondition", "name": "Sarcopenia"},
-    {"@type": "HealthTopic", "name": "Longevity"},
-    {"@type": "HealthTopic", "name": "Perimenopause"}
+    "Sarcopenia",
+    "Longevity",
+    "Perimenopause"
   ],
   "mentions": [
-    {"@type": "DietarySupplement", "name": "NMN"},
-    {"@type": "DietarySupplement", "name": "NAD+"},
-    {"@type": "DietarySupplement", "name": "Magnesium Glycinate"},
-    {"@type": "PhysicalActivity", "name": "Resistance Training"},
-    {"@type": "HealthTopic", "name": "Time-Restricted Eating"}
+    "NMN",
+    "NAD+",
+    "Magnesium Glycinate",
+    "Resistance Training",
+    "Time-Restricted Eating"
   ],
   "medical_audience": "Patient",
   "primary_topic": "daily longevity habits women over 40",

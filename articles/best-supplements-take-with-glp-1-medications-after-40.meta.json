@@ -14,21 +14,23 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "Drug", "name": "GLP-1 Receptor Agonist"},
-    {"@type": "DietarySupplement", "name": "Vitamin B12"},
-    {"@type": "DietarySupplement", "name": "Magnesium"},
-    {"@type": "DietarySupplement", "name": "NAD+ Precursor"}
+    "GLP-1 Receptor Agonist",
+    "Vitamin B12",
+    "Magnesium",
+    "NAD+ Precursor"
   ],
   "mentions": [
-    {"@type": "Drug", "name": "Semaglutide"},
-    {"@type": "Drug", "name": "Tirzepatide"},
-    {"@type": "DietarySupplement", "name": "NMN"},
-    {"@type": "DietarySupplement", "name": "Omega-3"},
-    {"@type": "DietarySupplement", "name": "Zinc"}
+    "Semaglutide",
+    "Tirzepatide",
+    "NMN",
+    "Omega-3",
+    "Zinc"
   ],
   "medical_audience": "Patient",
   "primary_topic": "supplements to take with GLP-1 medications women over 40",

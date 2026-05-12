@@ -511,6 +511,31 @@ def inject_medical_schema(
     return html + block
 
 
+def coerce_entity_strings(items) -> list[str]:
+    """Coerce a meta.json `about`/`mentions` list to plain strings.
+
+    Older / off-spec writer outputs sometimes emit schema.org Thing dicts
+    (`{"@type": "Drug", "name": "Glycine"}`) instead of plain strings.
+    Every consumer that joins these into prose (llms.txt, pillar pages,
+    internal linker) must coerce defensively. This helper:
+      - strings → kept as-is
+      - dicts → `.name` extracted; falls back to `.text` / `.label` / ""
+      - other types → str() repr (last resort)
+    Empty strings are filtered out.
+    """
+    out: list[str] = []
+    for it in items or []:
+        if isinstance(it, str):
+            v = it.strip()
+        elif isinstance(it, dict):
+            v = (it.get("name") or it.get("text") or it.get("label") or "").strip()
+        else:
+            v = str(it).strip()
+        if v:
+            out.append(v)
+    return out
+
+
 def build_site_schema_graph() -> dict:
     """Site-wide @graph: Organization + WebSite + Person reviewer + author Org.
     Emit ONCE in the Shopify theme (theme.liquid <head>) — every page inherits.
@@ -557,6 +582,7 @@ __all__ = [
     "build_howto_schema",
     "build_comparison_itemlist",
     "build_site_schema_graph",
+    "coerce_entity_strings",
     "inject_medical_schema",
     "render_jsonld_block",
     "DEFAULT_REVIEWER",

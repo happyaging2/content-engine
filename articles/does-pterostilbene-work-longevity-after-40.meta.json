@@ -14,24 +14,32 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "Drug", "name": "Pterostilbene"},
-    {"@type": "Drug", "name": "Resveratrol"},
-    {"@type": "BiologicalProcess", "name": "sirtuin activation"}
+    "Pterostilbene",
+    "Resveratrol",
+    "sirtuin activation"
   ],
   "mentions": [
-    {"@type": "Drug", "name": "NAD+ Women's Longevity Formula"},
-    {"@type": "BiologicalProcess", "name": "AMPK activation"},
-    {"@type": "BiologicalProcess", "name": "cellular longevity"}
+    "NAD+ Women's Longevity Formula",
+    "AMPK activation",
+    "cellular longevity"
   ],
   "medical_audience": "Patient",
   "primary_topic": "does pterostilbene work for longevity",
   "citations": [
-    {"pmid": "23382939", "note": "Pterostilbene antioxidant and polyphenol research"},
-    {"pmid": "25942353", "note": "Pterostilbene cognitive function study; preliminary data"}
+    {
+      "pmid": "23382939",
+      "note": "Pterostilbene antioxidant and polyphenol research"
+    },
+    {
+      "pmid": "25942353",
+      "note": "Pterostilbene cognitive function study; preliminary data"
+    }
   ],
   "date_published": "2026-05-11",
   "date_modified": "2026-05-11"

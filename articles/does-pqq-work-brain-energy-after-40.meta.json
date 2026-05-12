@@ -14,25 +14,39 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "Drug", "name": "Pyrroloquinoline Quinone", "alternateName": "PQQ"},
-    {"@type": "BiologicalProcess", "name": "mitochondrial biogenesis"},
-    {"@type": "BiologicalProcess", "name": "cognitive function"}
+    "Pyrroloquinoline Quinone",
+    "mitochondrial biogenesis",
+    "cognitive function"
   ],
   "mentions": [
-    {"@type": "Drug", "name": "CoQ10"},
-    {"@type": "Drug", "name": "Brain Tonic"},
-    {"@type": "Drug", "name": "NAD+"},
-    {"@type": "MedicalCondition", "name": "brain fog"}
+    "CoQ10",
+    "Brain Tonic",
+    "NAD+",
+    "brain fog"
   ],
   "medical_audience": "Patient",
   "primary_topic": "does PQQ work for brain health",
   "citations": [
-    {"pmid": "22896760", "authors": "Nakano M et al.", "year": 2012, "title": "Effect of pyrroloquinoline quinone (PQQ) on mental status of middle-aged and elderly persons", "journal": "FOOD Style 21"},
-    {"pmid": "24751447", "authors": "Harris CB et al.", "year": 2013, "title": "Dietary pyrroloquinoline quinone (PQQ) alters indicators of inflammation and mitochondrial-related metabolism in human subjects", "journal": "J Nutr Biochem"}
+    {
+      "pmid": "22896760",
+      "authors": "Nakano M et al.",
+      "year": 2012,
+      "title": "Effect of pyrroloquinoline quinone (PQQ) on mental status of middle-aged and elderly persons",
+      "journal": "FOOD Style 21"
+    },
+    {
+      "pmid": "24751447",
+      "authors": "Harris CB et al.",
+      "year": 2013,
+      "title": "Dietary pyrroloquinoline quinone (PQQ) alters indicators of inflammation and mitochondrial-related metabolism in human subjects",
+      "journal": "J Nutr Biochem"
+    }
   ],
   "date_published": "2026-05-11",
   "date_modified": "2026-05-11"

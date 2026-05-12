@@ -14,19 +14,21 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalCondition", "name": "Sarcopenia"},
-    {"@type": "Drug", "name": "GLP-1 Receptor Agonist"},
-    {"@type": "PhysicalActivity", "name": "Resistance Training"}
+    "Sarcopenia",
+    "GLP-1 Receptor Agonist",
+    "Resistance Training"
   ],
   "mentions": [
-    {"@type": "Drug", "name": "Semaglutide"},
-    {"@type": "Drug", "name": "Tirzepatide"},
-    {"@type": "DietarySupplement", "name": "Creatine Monohydrate"},
-    {"@type": "DietarySupplement", "name": "Whey Protein"}
+    "Semaglutide",
+    "Tirzepatide",
+    "Creatine Monohydrate",
+    "Whey Protein"
   ],
   "medical_audience": "Patient",
   "primary_topic": "GLP-1 muscle loss women over 40",

@@ -14,20 +14,22 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalCondition", "name": "Menopausal Bloating"},
-    {"@type": "MedicalCondition", "name": "Gut Dysbiosis"},
-    {"@type": "MedicalCondition", "name": "Digestive Changes in Menopause"}
+    "Menopausal Bloating",
+    "Gut Dysbiosis",
+    "Digestive Changes in Menopause"
   ],
   "mentions": [
-    {"@type": "Drug", "name": "Lactobacillus acidophilus"},
-    {"@type": "Drug", "name": "Bifidobacterium longum"},
-    {"@type": "Drug", "name": "Digestive Enzymes"},
-    {"@type": "Drug", "name": "Magnesium Glycinate"},
-    {"@type": "Product", "name": "Happiest Gut"}
+    "Lactobacillus acidophilus",
+    "Bifidobacterium longum",
+    "Digestive Enzymes",
+    "Magnesium Glycinate",
+    "Happiest Gut"
   ],
   "medical_audience": "Patient",
   "primary_topic": "bloating after menopause",

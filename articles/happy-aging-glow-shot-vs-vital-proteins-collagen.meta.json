@@ -14,21 +14,23 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "Product", "name": "Happy Aging Glow Shot Marine Collagen"},
-    {"@type": "Product", "name": "Vital Proteins Collagen Peptides"},
-    {"@type": "Substance", "name": "Marine Collagen"},
-    {"@type": "Substance", "name": "Bovine Collagen"},
-    {"@type": "MedicalCondition", "name": "Skin Aging"}
+    "Happy Aging Glow Shot Marine Collagen",
+    "Vital Proteins Collagen Peptides",
+    "Marine Collagen",
+    "Bovine Collagen",
+    "Skin Aging"
   ],
   "mentions": [
-    {"@type": "Substance", "name": "Hydrolyzed Collagen Peptides"},
-    {"@type": "Substance", "name": "Type I Collagen"},
-    {"@type": "Substance", "name": "Type III Collagen"},
-    {"@type": "Substance", "name": "Vitamin C"}
+    "Hydrolyzed Collagen Peptides",
+    "Type I Collagen",
+    "Type III Collagen",
+    "Vitamin C"
   ],
   "medical_audience": "Patient",
   "primary_topic": "Happy Aging Glow Shot vs Vital Proteins Collagen",

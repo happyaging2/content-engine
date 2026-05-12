@@ -14,25 +14,33 @@
   "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
-  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
   "date_reviewed": "2026-05-11",
   "schema_type": "MedicalWebPage",
   "about": [
-    {"@type": "MedicalSubstance", "name": "GLP-1 (glucagon-like peptide-1)"},
-    {"@type": "MedicalCondition", "name": "Insulin resistance"},
-    {"@type": "MedicalCondition", "name": "Metabolic health in perimenopause"}
+    "GLP-1 (glucagon-like peptide-1)",
+    "Insulin resistance",
+    "Metabolic health in perimenopause"
   ],
   "mentions": [
-    {"@type": "MedicalSubstance", "name": "Semaglutide"},
-    {"@type": "MedicalSubstance", "name": "Tirzepatide"},
-    {"@type": "BiologicalProcess", "name": "Gut microbiome GLP-1 axis"},
-    {"@type": "MedicalSubstance", "name": "Short-chain fatty acids"}
+    "Semaglutide",
+    "Tirzepatide",
+    "Gut microbiome GLP-1 axis",
+    "Short-chain fatty acids"
   ],
   "medical_audience": "Patient",
   "primary_topic": "GLP-1 nutrition protocol for metabolic health and weight management in women over 40",
   "citations": [
-    {"doi": "10.1016/j.cmet.2018.01.027", "citation": "Drucker DJ. Mechanisms of action and therapeutic application of glucagon-like peptide-1. Cell Metabolism. 2018."},
-    {"doi": "10.1007/s13668-018-0248-8", "citation": "Chambers ES et al. Role of gut microbiota-generated short-chain fatty acids in metabolic and cardiovascular health. Current Nutrition Reports. 2018."}
+    {
+      "doi": "10.1016/j.cmet.2018.01.027",
+      "citation": "Drucker DJ. Mechanisms of action and therapeutic application of glucagon-like peptide-1. Cell Metabolism. 2018."
+    },
+    {
+      "doi": "10.1007/s13668-018-0248-8",
+      "citation": "Chambers ES et al. Role of gut microbiota-generated short-chain fatty acids in metabolic and cardiovascular health. Current Nutrition Reports. 2018."
+    }
   ],
   "date_published": "2026-05-11",
   "date_modified": "2026-05-11"

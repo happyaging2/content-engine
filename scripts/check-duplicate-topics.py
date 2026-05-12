@@ -81,7 +81,11 @@ def main():
                 "slug": slug,
                 "title": title,
                 "tokens": tokens(title),
-                "about": set(map(str.lower, m.get("about") or [])),
+                "about": {
+                    (e.get("name") if isinstance(e, dict) else str(e)).lower()
+                    for e in (m.get("about") or [])
+                    if (e.get("name") if isinstance(e, dict) else e)
+                },
                 "primary_topic": (m.get("primary_topic") or "").lower(),
                 "age_days": (today - pub).days if pub else None,
             }

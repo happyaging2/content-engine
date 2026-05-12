@@ -19,7 +19,11 @@ import glob
 import json
 import os
 import re
+import sys
 from collections import defaultdict
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "articles"))
+from lib_medical_schema import coerce_entity_strings  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARTICLES = os.path.join(ROOT, "articles")
@@ -180,8 +184,8 @@ def _matches(meta: dict, html: str, keywords: list[str]) -> bool:
     text = " ".join(
         [
             meta.get("title", ""),
-            " ".join(meta.get("about", [])),
-            " ".join(meta.get("mentions", [])),
+            " ".join(coerce_entity_strings(meta.get("about"))),
+            " ".join(coerce_entity_strings(meta.get("mentions"))),
             (meta.get("primary_topic") or ""),
         ]
     ).lower()
