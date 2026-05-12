@@ -47,6 +47,21 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
 
+      - name: Preflight — secrets present
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+        run: |
+          set -ex
+          if [ -z "${SHOPIFY_TOKEN:-}" ]; then
+            echo "::error::SHOPIFY_TOKEN secret is not set."
+            exit 1
+          fi
+          echo "::add-mask::${SHOPIFY_TOKEN}"
+          # Quick token validity check — count endpoint is cheap and exposes 401 fast.
+          curl -sS -o /dev/null -w "Shopify count probe: HTTP %{http_code}\n" \
+            -H "X-Shopify-Access-Token: ${SHOPIFY_TOKEN}" \
+            "https://shop-happy-aging.myshopify.com/admin/api/2024-01/blogs/109440303424/articles/count.json"
+
       - name: Step 1 — QA + Publish new batch
         env:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
@@ -54,11 +69,22 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
+          set -ex
           BATCH="${{ github.event.inputs.batch_date }}"
           if [ -z "$BATCH" ]; then
             BATCH="$(date +%Y-%m-%d)"
           fi
-          bash scripts/qa-and-publish.sh "$BATCH"
+          bash scripts/qa-and-publish.sh "$BATCH" 2>&1 | tee "articles/qa-${BATCH}-workflow.log"
+
+      - name: Upload qa-and-publish log (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-publish-log-${{ github.run_id }}
+          path: |
+            articles/qa-*.log
+          retention-days: 14
+          if-no-files-found: ignore
 
       - name: Step 2 — Re-fetch images on ALL published articles
         if: ${{ github.event.inputs.update_all_images == 'true' }}
