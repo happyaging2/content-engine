@@ -1,0 +1,52 @@
+{
+  "title": "Protein Targets for Women on Ozempic: How Much You Actually Need After 40",
+  "slug": "protein-guide-women-on-ozempic-semaglutide",
+  "author": "Happy Aging Team",
+  "tags": "ozempic protein, semaglutide nutrition, GLP-1 muscle, women over 40, protein requirements, wegovy",
+  "product_handle": "lean-muscle-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "protein requirements women on ozempic",
+  "about": ["protein intake for GLP-1 users", "muscle preservation during semaglutide weight loss in women over 40"],
+  "mentions": ["semaglutide", "Ozempic", "Wegovy", "leucine", "muscle protein synthesis", "whey protein", "creatine", "ESPEN guidelines", "anabolic resistance"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "28027956",
+      "title": "Protein intake and exercise for optimal muscle function with aging: recommendations from the ESPEN Expert Group",
+      "journal": "Clinical Nutrition",
+      "year": 2014,
+      "study_type": "Expert consensus / review",
+      "n": null
+    },
+    {
+      "pmid": "23867756",
+      "title": "Evidence-based recommendations for optimal dietary protein intake in older people: a position paper from the PROT-AGE Study Group",
+      "journal": "Journal of the American Medical Directors Association",
+      "year": 2013,
+      "study_type": "Expert consensus / review",
+      "n": null
+    },
+    {
+      "pmid": "33567185",
+      "title": "Once-weekly semaglutide in adults with overweight or obesity (STEP 1)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    }
+  ],
+  "image_prompt": "A woman in her 40s preparing a high-protein breakfast with eggs and Greek yogurt at a bright kitchen counter, wearing a casual linen top, modern kitchen with natural wood accents, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s measuring a protein shake in a clean modern kitchen, wearing athletic clothes, focused and intentional wellness routine, bright morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating a colorful protein-rich meal of salmon and vegetables at a dining table, wearing a soft white blouse, relaxed and healthy expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing nutrition information on a phone while preparing food, wearing casual home clothes, organized kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}

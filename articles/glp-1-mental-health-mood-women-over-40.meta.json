@@ -1,0 +1,44 @@
+{
+  "title": "Mental Health Effects of GLP-1 Medications: What Women Over 40 Should Know",
+  "slug": "glp-1-mental-health-mood-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "glp-1, ozempic, mental health, women over 40, semaglutide, mood, depression, wegovy",
+  "product_handle": "nad-advanced-longevity-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "GLP-1 medications mental health women",
+  "about": ["GLP-1 receptor agonists and mental health", "mood effects of semaglutide in women over 40"],
+  "mentions": ["semaglutide", "Ozempic", "Wegovy", "liraglutide", "GLP-1 receptors", "gut-brain axis", "NAD+", "vitamin B12", "magnesium", "zinc"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "16413294",
+      "title": "The biology of incretin hormones",
+      "journal": "Cell Metabolism",
+      "year": 2006,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "33567185",
+      "title": "Once-weekly semaglutide in adults with overweight or obesity (STEP 1 trial)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    }
+  ],
+  "image_prompt": "A woman in her 40s sitting quietly at a sunlit kitchen table with a glass of water and a small supplement bottle, wearing a soft cream linen shirt, modern kitchen setting with plants in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s speaking calmly with a female doctor in a bright modern medical office, wearing a relaxed blue blouse, desk with laptop and natural light streaming through window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a colorful nutrient-dense meal at a kitchen counter with fresh vegetables and lean protein, wearing a light gray athletic top, bright modern kitchen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking peacefully in a tree-lined park, wearing comfortable workout clothes, dappled morning sunlight, serene expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}

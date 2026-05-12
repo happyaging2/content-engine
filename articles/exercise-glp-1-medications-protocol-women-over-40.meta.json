@@ -1,0 +1,36 @@
+{
+  "title": "How to Exercise on GLP-1 Medications: A Protocol for Women Over 40",
+  "slug": "exercise-glp-1-medications-protocol-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "exercise ozempic, GLP-1 workout, semaglutide exercise, women over 40, strength training, muscle preservation",
+  "product_handle": "lean-muscle-formula",
+  "template_suffix": "timeline",
+  "schema_type": "MedicalWebPage",
+  "primary_topic": "how to exercise on GLP-1 medications women",
+  "about": ["exercise protocol for GLP-1 users", "muscle preservation with semaglutide for women over 40"],
+  "mentions": ["semaglutide", "Ozempic", "Wegovy", "tirzepatide", "resistance training", "STEP 1 trial", "sarcopenia", "creatine", "anabolic resistance"],
+  "medical_audience": "Patient",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-12",
+  "date_modified": "2026-05-12",
+  "date_reviewed": "2026-05-12",
+  "citations": [
+    {
+      "pmid": "33567185",
+      "title": "Once-weekly semaglutide in adults with overweight or obesity (STEP 1)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    }
+  ],
+  "image_prompt": "A woman in her 40s doing a dumbbell squat in a clean home gym, wearing fitted athletic leggings and a sports top, focused expression, bright natural light from a window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s performing a resistance band exercise in a bright modern gym, wearing athletic clothes, determined and focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a brisk walk in a leafy park with earphones, wearing comfortable athletic shoes and workout clothes, energetic and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s drinking a protein shake after a workout at home, wearing athletic clothes with hair up, post-workout glow, bright kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ]
+}
