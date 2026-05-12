@@ -55,6 +55,25 @@ def tokens(text: str) -> set[str]:
     return {t for t in text.split() if t and t not in STOPWORDS and len(t) > 2}
 
 
+def _coerce_about(items) -> list[str]:
+    """Defensive coercion for meta.json `about` lists — handles plain strings,
+    schema.org Thing dicts (name/text/label), None, and non-string scalars."""
+    out: list[str] = []
+    for it in items or []:
+        if it is None:
+            continue
+        if isinstance(it, str):
+            v = it.strip()
+        elif isinstance(it, dict):
+            raw = it.get("name") or it.get("text") or it.get("label") or ""
+            v = (raw if isinstance(raw, str) else str(raw)).strip()
+        else:
+            v = str(it).strip()
+        if v:
+            out.append(v)
+    return out
+
+
 def jaccard(a: set[str], b: set[str]) -> float:
     if not a or not b:
         return 0.0
@@ -81,11 +100,7 @@ def main():
                 "slug": slug,
                 "title": title,
                 "tokens": tokens(title),
-                "about": {
-                    (e.get("name") if isinstance(e, dict) else str(e)).lower()
-                    for e in (m.get("about") or [])
-                    if (e.get("name") if isinstance(e, dict) else e)
-                },
+                "about": {s.lower() for s in _coerce_about(m.get("about"))},
                 "primary_topic": (m.get("primary_topic") or "").lower(),
                 "age_days": (today - pub).days if pub else None,
             }
