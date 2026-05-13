@@ -1,0 +1,33 @@
+{
+  "title": "NAD+ Women's Longevity Formula vs Wonderfeel Youngr NMN: Which Is Better for Women Over 40?",
+  "slug": "nad-advanced-vs-wonderfeel-youngr-nmn-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "NAD+, NMN, Wonderfeel, supplement comparison, women over 40, longevity",
+  "meta_title": "NAD Advanced vs Wonderfeel Youngr NMN for Women Over 40",
+  "meta_description": "Comparing NAD+ Women's Longevity Formula vs Wonderfeel Youngr NMN for women over 40. See which formula better addresses female aging biology and NAD+ science.",
+  "product_handle": "nad-advanced-longevity-formula",
+  "image_prompt": "A woman in her 40s standing at a bright kitchen counter comparing two supplement bottles with a thoughtful expression, wearing a soft gray cardigan, morning sunlight streaming in, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s taking a supplement capsule with a glass of water in a sunlit kitchen, wearing a white linen shirt, looking calm and focused, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s seated at a wooden desk reviewing wellness information on a tablet, wearing a cozy knit sweater, warm afternoon light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a light outdoor walk on a tree-lined path, wearing athleisure clothing, looking energetic and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["NAD+", "NMN", "longevity", "supplement comparison", "women over 40"],
+  "mentions": ["NMN", "NMNH", "Wonderfeel Youngr", "NAD Advanced", "resveratrol", "ergothioneine", "CD38"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ and NMN supplement comparison for women over 40",
+  "citations": [
+    {"pmid": "34836809", "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women", "journal": "Science", "year": 2021, "study_type": "RCT", "n": 25},
+    {"pmid": "28068222", "title": "Long-term administration of nicotinamide mononucleotide mitigates age-associated physiological decline in mice", "journal": "Cell Metabolism", "year": 2016, "study_type": "animal RCT", "n": null},
+    {"pmid": "23140366", "title": "Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "preclinical/mechanistic", "n": null}
+  ],
+  "date_published": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-13"
+}

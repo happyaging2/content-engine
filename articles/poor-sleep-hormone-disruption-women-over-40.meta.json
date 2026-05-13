@@ -1,0 +1,33 @@
+{
+  "title": "How Poor Sleep Disrupts Hormone Balance in Women Over 40",
+  "slug": "poor-sleep-hormone-disruption-women-over-40",
+  "author": "Happy Aging Team",
+  "date_published": "2026-05-13",
+  "date_reviewed": "2026-05-13",
+  "template_suffix": "timeline",
+  "cluster": "Sleep",
+  "product_handle": "sleep-tonic",
+  "tags": "sleep hormones, cortisol, estrogen sleep, women over 40, perimenopause sleep, hormone disruption",
+  "meta_description": "Poor sleep raises cortisol and suppresses estrogen, progesterone, and growth hormone in women over 40. Learn the mechanism and a 5-step sleep-hormone protocol.",
+  "pillar_page": "https://happyaging.com/pages/pillar-sleep",
+  "image_prompt": "A woman in her 40s lying awake in bed at night looking at the ceiling with a worried expression, wearing comfortable cotton pajamas, softly lit bedroom with dim warm lamp light visible, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s practicing deep breathing before bed in a calm bedroom, wearing a soft robe, sitting on the edge of a neatly made bed with a bedside lamp casting warm light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a supplement with a glass of water in a peaceful nighttime kitchen setting, wearing casual evening clothes, warm ambient kitchen lighting in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s stretching gently in a softly lit bedroom before sleep, wearing comfortable pajamas, calm and relaxed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["sleep", "hormones", "cortisol", "women over 40", "perimenopause"],
+  "mentions": ["progesterone", "estrogen", "growth hormone", "melatonin", "magnesium"],
+  "medical_audience": "Patient",
+  "primary_topic": "Sleep and hormone disruption in women over 40",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "J Res Med Sci", "year": 2012, "study_type": "RCT", "n": 46}
+  ],
+  "date_modified": "2026-05-13",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-13"
+}

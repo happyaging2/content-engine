@@ -1,0 +1,35 @@
+{
+  "title": "Why Brain Fog Gets Worse After 40 and the NAD+ Connection",
+  "slug": "brain-fog-nad-connection-women-over-40",
+  "date_published": "2026-05-13",
+  "date_reviewed": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "author": "Happy Aging Team",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "template_suffix": "timeline",
+  "cluster": "NAD/NMN",
+  "secondary_cluster": "Brain",
+  "format": "mechanism/root cause article",
+  "product_handle": "nad-advanced-longevity-formula",
+  "pillar_page": "https://happyaging.com/pages/pillar-nad",
+  "tags": "brain fog, NAD+, women over 40, cognitive function, perimenopause brain fog, mitochondria",
+  "meta_description": "Brain fog after 40 is not just stress. Learn how declining NAD+ and estrogen combine to cloud thinking in perimenopause, and the 6-step protocol that actually helps.",
+  "image_prompt": "A woman in her 40s sitting at a sunlit desk, pressing her fingers to her temples with a thoughtful, slightly fatigued expression, wearing a soft linen blouse, home office setting with plants in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reviewing a diagram of brain cell mitochondria on a tablet, wearing a relaxed fitted top, bright modern kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a protein-rich breakfast with eggs and avocado, wearing casual morning attire, bright kitchen counter with natural light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s on a brisk morning walk in a park, wearing athletic leggings and a light jacket, dappled sunlight through trees, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["brain fog", "NAD+", "cognitive function", "perimenopause", "mitochondria"],
+  "mentions": ["NMN", "NR", "CD38", "estrogen", "BDNF", "neuroinflammation"],
+  "medical_audience": "Patient",
+  "primary_topic": "Brain fog and NAD+ decline in women over 40",
+  "citations": [
+    {"pmid": "23140366", "title": "Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "preclinical/mechanistic", "n": null},
+    {"pmid": "19460348", "title": "Circadian control of the NAD+ salvage pathway by CLOCK-SIRT1", "journal": "Cell", "year": 2009, "study_type": "mechanistic", "n": null}
+  ]
+}

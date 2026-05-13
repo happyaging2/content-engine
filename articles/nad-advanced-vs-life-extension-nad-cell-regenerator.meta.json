@@ -1,0 +1,33 @@
+{
+  "title": "NAD+ Women's Longevity Formula vs Life Extension NAD+ Cell Regenerator: An Evidence-Based Comparison for Women Over 40",
+  "slug": "nad-advanced-vs-life-extension-nad-cell-regenerator",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "NAD+, NMN, longevity supplements, women over 40, supplement comparison",
+  "meta_title": "NAD Advanced vs Life Extension NAD+ Cell Regenerator",
+  "meta_description": "Comparing NAD+ Women's Longevity Formula vs Life Extension NAD+ Cell Regenerator for women over 40. See which multi-ingredient approach wins for cellular energy.",
+  "product_handle": "nad-advanced-longevity-formula",
+  "image_prompt": "A woman in her 40s reading supplement labels at a bright kitchen counter, wearing a casual linen blouse, natural morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s holding a glass of water with a supplement capsule, wearing a white tank top, standing in a sunlit kitchen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing a wellness journal at a wooden desk, wearing a cozy cream sweater, with morning light coming through a window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s smiling while doing gentle yoga stretches on a light-colored mat, wearing athletic wear, in a bright airy living room, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["NAD+", "longevity", "supplement comparison", "NMN", "NR"],
+  "mentions": ["NMN", "NR", "NIAGEN", "nicotinamide riboside", "CD38", "Life Extension", "NAD Advanced"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ supplement comparison for women over 40",
+  "citations": [
+    {"pmid": "29862351", "title": "Repeat dose NRPT increases NAD+ levels in humans safely and sustainably", "journal": "NPJ Aging Mechanisms and Disease", "year": 2017, "study_type": "RCT", "n": 120},
+    {"pmid": "23140366", "title": "Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "preclinical/mechanistic", "n": null},
+    {"pmid": "27304503", "title": "CD38 dictates age-related NAD decline and mitochondrial dysfunction through an SIRT3-dependent mechanism", "journal": "Cell Metabolism", "year": 2016, "study_type": "preclinical", "n": null}
+  ],
+  "date_published": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-13"
+}
