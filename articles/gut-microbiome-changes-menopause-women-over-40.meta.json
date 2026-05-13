@@ -1,0 +1,41 @@
+{
+  "title": "How Your Gut Microbiome Changes During Menopause and What to Do About It",
+  "slug": "gut-microbiome-changes-menopause-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "gut microbiome, menopause gut health, women over 40, gut bacteria, bloating, perimenopause gut",
+  "product_handle": "happiest-gut",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/happiest-gut.jpg",
+  "cluster": "Gut/Bloating",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-13",
+  "date_reviewed": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-gut-health",
+  "schema_type": "MedicalWebPage",
+  "about": ["gut microbiome menopause", "perimenopause gut health", "estrobolome women", "gut bacteria changes after 40", "menopause bloating microbiome"],
+  "mentions": ["Happiest Gut", "estrobolome", "Akkermansia muciniphila", "Bifidobacterium", "Lactobacillus", "gut motility", "dysbiosis", "prebiotics", "digestive enzymes", "synbiotic"],
+  "medical_audience": "Patient",
+  "primary_topic": "gut microbiome changes during menopause women over 40",
+  "citations": [
+    {"citation": "Maturitas. Gut microbiome changes during the menopause transition: a review. 2019."},
+    {"citation": "Cochrane Database of Systematic Reviews. Probiotics for prevention of antibiotic-associated diarrhea. 2012."},
+    {"citation": "Sonnenburg JL, Backhed F. Diet-induced extinctions in the gut microbiota compound over generations. Nature. 2016."},
+    {"citation": "Zmora N, et al. Personalized gut mucosal colonization resistance to empiric probiotics is associated with unique host and microbiome features. Cell. 2018."}
+  ],
+  "image_prompt": "A woman in her 40s preparing a colorful plant-based meal in a sunlit modern kitchen, wearing a casual linen top, relaxed and focused, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing gentle morning yoga stretches in a bright living room, wearing comfortable athleisure wear, calm and centered, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s holding a glass of green smoothie in a kitchen, wearing casual weekend clothing, refreshed and energized, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking through a farmers market with fresh vegetables, wearing a relaxed summer dress, happy and purposeful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman preparing healthy plant-based meal kitchen sunlit",
+  "body_image_queries": [
+    "woman morning yoga bright living room",
+    "woman holding green smoothie kitchen casual",
+    "woman farmers market fresh vegetables summer"
+  ]
+}
