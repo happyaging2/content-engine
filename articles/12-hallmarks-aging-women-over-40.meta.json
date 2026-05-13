@@ -1,0 +1,41 @@
+{
+  "title": "The 12 Hallmarks of Aging: What They Mean for Women Over 40 (and How to Address Each One)",
+  "slug": "12-hallmarks-aging-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "12 hallmarks of aging, longevity, women over 40, cellular aging, NAD+, anti-aging",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced.jpg",
+  "cluster": "Longevity",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-13",
+  "date_reviewed": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
+  "schema_type": "MedicalWebPage",
+  "about": ["12 hallmarks of aging", "cellular aging women over 40", "NAD+ hallmarks aging", "longevity science women", "Lopez-Otin hallmarks 2023"],
+  "mentions": ["NAD Advanced Longevity Formula", "NMN", "NR", "sirtuins", "telomeres", "mitochondria", "cellular senescence", "autophagy", "epigenetics", "dysbiosis", "inflammaging", "Lopez-Otin"],
+  "medical_audience": "Patient",
+  "primary_topic": "12 hallmarks of aging women over 40",
+  "citations": [
+    {"pmid": "23746838", "citation": "Lopez-Otin C, Blasco MA, Partridge L, Serrano M, Kroemer G. The hallmarks of aging. Cell. 2013."},
+    {"pmid": "36599349", "citation": "Lopez-Otin C, Blasco MA, Partridge L, Serrano M, Kroemer G. Hallmarks of aging: an expanding universe. Cell. 2023."},
+    {"pmid": "23140366", "citation": "Gomes AP, Price NL, Ling AJ, et al. Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging. Cell. 2013."},
+    {"pmid": "34836809", "citation": "Yoshino M, Yoshino J, Kayser BD, et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021."}
+  ],
+  "image_prompt": "A woman in her 40s running on a scenic trail at sunrise, wearing athletic running gear, strong and energized, photorealistic wellness lifestyle photography, warm golden natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing resistance training with dumbbells in a bright home gym, wearing athletic wear, focused and strong, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sleeping peacefully in a serene, minimalist bedroom, wearing comfortable pajamas, rested and calm, photorealistic wellness lifestyle photography, soft warm lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s meditating outdoors in a garden setting, wearing casual comfortable clothing, peaceful and centered, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman running scenic trail sunrise athletic energized",
+  "body_image_queries": [
+    "woman resistance training home gym athletic",
+    "woman sleeping peacefully minimalist bedroom",
+    "woman meditating outdoors garden morning light"
+  ]
+}

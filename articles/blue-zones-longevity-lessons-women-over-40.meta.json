@@ -1,0 +1,41 @@
+{
+  "title": "Blue Zones and Longevity: What Women Over 40 Can Learn From the World's Longest-Living Cultures",
+  "slug": "blue-zones-longevity-lessons-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "Blue Zones, longevity, healthy aging, women over 40, Mediterranean diet, ikigai, lifestyle habits",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced.jpg",
+  "cluster": "Longevity",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-13",
+  "date_reviewed": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
+  "schema_type": "MedicalWebPage",
+  "about": ["Blue Zones longevity women", "Power 9 habits longevity", "Okinawa diet longevity", "ikigai purpose longevity", "plant-based diet centenarians"],
+  "mentions": ["NAD Advanced Longevity Formula", "Blue Zones", "Dan Buettner", "ikigai", "Power 9", "Sardinia", "Okinawa", "Nicoya Peninsula", "Ikaria", "Loma Linda", "Mediterranean diet", "sirtuins", "NAD+"],
+  "medical_audience": "Patient",
+  "primary_topic": "Blue Zones longevity lessons women over 40",
+  "citations": [
+    {"citation": "Buettner D, Skemp S. Blue Zones: Lessons From the World's Longest Lived. American Journal of Lifestyle Medicine. 2016."},
+    {"citation": "Fraser GE, Shavlik DJ. Ten years of life: Is it a matter of choice? Archives of Internal Medicine. 2001."},
+    {"pmid": "36599349", "citation": "Lopez-Otin C, et al. Hallmarks of aging: an expanding universe. Cell. 2023."},
+    {"pmid": "23140366", "citation": "Gomes AP, et al. Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging. Cell. 2013."}
+  ],
+  "image_prompt": "A woman in her 40s walking through a sunlit Mediterranean village street with colorful flower pots, wearing a casual sundress, joyful and purposeful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sharing a meal with friends at an outdoor table with fresh vegetables and olives, wearing a casual blouse, laughing and connected, photorealistic wellness lifestyle photography, warm golden hour lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s tending a kitchen garden with fresh herbs and vegetables, wearing casual weekend clothes, engaged and peaceful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a sunny outdoor cafe with a cup of tea, wearing a relaxed linen outfit, reflective and content, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman walking sunlit Mediterranean village street joyful",
+  "body_image_queries": [
+    "woman sharing outdoor meal friends fresh vegetables golden hour",
+    "woman tending kitchen garden herbs vegetables weekend",
+    "woman outdoor cafe tea sunny linen relaxed"
+  ]
+}
