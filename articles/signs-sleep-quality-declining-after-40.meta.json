@@ -1,0 +1,32 @@
+{
+  "title": "7 Signs Your Sleep Quality Is Declining After 40 (and What to Do About It)",
+  "slug": "signs-sleep-quality-declining-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "sleep quality, women over 40, perimenopause sleep, sleep deprivation, sleep signs, insomnia",
+  "meta_title": "7 Signs Your Sleep Quality Is Declining After 40",
+  "meta_description": "Waking at 3am, feeling unrested after 8 hours, vivid dreams? These 7 signs show your sleep quality is declining after 40, plus what you can do about it now.",
+  "product_handle": "sleep-tonic",
+  "image_prompt": "A woman in her 40s lying awake in a dimly lit bedroom at night with a thoughtful expression, wearing soft cotton pajamas, moonlight through sheer curtains, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting on the edge of a bed in the early morning looking tired but composed, wearing cozy pajamas in a softly lit bedroom, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a calming bedtime routine, applying facial lotion at a bathroom mirror, wearing a light robe, warm bathroom lighting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s waking up refreshed and stretching her arms in a bright morning bedroom, wearing white cotton pajamas, golden morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["sleep quality", "perimenopause sleep", "insomnia", "women over 40", "sleep architecture"],
+  "mentions": ["magnesium glycinate", "melatonin", "glycine", "L-theanine", "GABA", "progesterone", "estrogen", "cortisol", "NAD+", "slow-wave sleep", "REM sleep"],
+  "medical_audience": "Patient",
+  "primary_topic": "Signs of declining sleep quality in women over 40",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "Journal of Research in Medical Sciences", "year": 2012, "study_type": "RCT", "n": 46},
+    {"pmid": "23140366", "title": "Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "preclinical/mechanistic", "n": null}
+  ],
+  "date_published": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-13"
+}

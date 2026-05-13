@@ -1,0 +1,31 @@
+{
+  "title": "Does Passionflower Actually Help Sleep After 40? An Evidence-Based Review",
+  "slug": "passionflower-sleep-supplement-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "passionflower, sleep supplement, women over 40, sleep quality, perimenopause, herbal sleep",
+  "meta_title": "Does Passionflower Help Sleep After 40? Evidence Review",
+  "meta_description": "Passionflower has modest evidence for sleep quality. Here is an honest look at what the research shows for women over 40 and how it compares to better-studied options.",
+  "product_handle": "sleep-tonic",
+  "image_prompt": "A woman in her 40s relaxing in bed with soft lighting reading a book before sleep, wearing cozy pale blue pajamas, warm bedside lamp glow, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s holding a warm herbal tea mug in both hands in a calm evening kitchen, wearing a soft robe, gentle ambient light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s arranging supplement capsules on a bedside table with a glass of water, wearing comfortable nightwear, looking relaxed and peaceful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s waking up refreshed in a bright morning bedroom, stretching her arms upward with a peaceful smile, wearing light cotton pajamas, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["passionflower", "sleep quality", "sleep supplements", "perimenopause", "women over 40"],
+  "mentions": ["passionflower", "Passiflora incarnata", "GABA", "magnesium glycinate", "L-theanine", "glycine", "melatonin", "perimenopause", "progesterone"],
+  "medical_audience": "Patient",
+  "primary_topic": "Passionflower for sleep quality in women over 40",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "Journal of Research in Medical Sciences", "year": 2012, "study_type": "RCT", "n": 46}
+  ],
+  "date_published": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-13"
+}

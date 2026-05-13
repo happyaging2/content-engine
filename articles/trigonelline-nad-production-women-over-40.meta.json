@@ -1,0 +1,33 @@
+{
+  "title": "Does Trigonelline Boost NAD+ Levels After 40? What the Research Shows",
+  "slug": "trigonelline-nad-production-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "trigonelline, NAD+, coffee, fenugreek, NAD precursor, women over 40, longevity",
+  "meta_title": "Trigonelline and NAD+ After 40: What the Research Shows",
+  "meta_description": "Trigonelline is a new potential NAD+ precursor found in coffee and fenugreek. Here is what the current research actually shows for women over 40 in 2026.",
+  "product_handle": "nad-advanced-longevity-formula",
+  "image_prompt": "A woman in her 40s holding a warm mug of coffee at a sunlit kitchen table, wearing a cozy navy cardigan, looking thoughtful and relaxed, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s examining fenugreek seeds in a small bowl on a wooden kitchen counter, wearing a light sage green top, morning light filtering in, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s seated at a desk looking at a laptop with a focused expression, wearing a soft white blouse, a supplement bottle beside her, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a gentle morning stretch in a bright living room, wearing light athletic wear, looking energized and calm, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "Article",
+  "about": ["trigonelline", "NAD+", "NAD+ precursors", "longevity", "women over 40"],
+  "mentions": ["trigonelline", "NMN", "NR", "nicotinic acid", "Preiss-Handler pathway", "CD38", "fenugreek", "coffee"],
+  "medical_audience": "Patient",
+  "primary_topic": "Trigonelline as a NAD+ precursor for women over 40",
+  "citations": [
+    {"pmid": "23140366", "title": "Declining NAD+ induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "preclinical/mechanistic", "n": null},
+    {"pmid": "19460348", "title": "Circadian control of the NAD+ salvage pathway by CLOCK-SIRT1", "journal": "Cell", "year": 2009, "study_type": "preclinical/mechanistic", "n": null},
+    {"pmid": "27304503", "title": "CD38 dictates age-related NAD decline and mitochondrial dysfunction through an SIRT3-dependent mechanism", "journal": "Cell Metabolism", "year": 2016, "study_type": "preclinical", "n": null}
+  ],
+  "date_published": "2026-05-13",
+  "date_modified": "2026-05-13",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-13"
+}
