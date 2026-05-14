@@ -1,0 +1,34 @@
+{
+  "title": "NMN vs NR: Which NAD+ Precursor Is Better for Women Over 40?",
+  "slug": "nmn-vs-nr-nad-precursor-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "NAD+, NMN, NR, nicotinamide riboside, nicotinamide mononucleotide, women over 40, cellular energy, metabolism, longevity",
+  "meta_title": "NMN vs NR for Women Over 40: Which NAD+ Precursor Works Better?",
+  "meta_description": "NMN and NR both raise NAD+ levels, but they differ in pathway, evidence, and best use case for women over 40. See the comparison table and the research-backed recommendation.",
+  "product_handle": "nmn-cell-renew-tonic",
+  "image_prompt": "A woman in her 40s jogging on a tree-lined path in the morning light, wearing a fitted athletic jacket and leggings, earbuds in, smiling with energy and vitality, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s reviewing a supplement label at a bright kitchen counter, wearing a casual linen blouse, looking focused and confident, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s stretching before a morning run in a park, wearing colorful athletic leggings and a zip-up jacket, surrounded by green trees, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a wooden desk with a glass of water and supplement capsules, wearing a light sweater, writing in a wellness journal, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["NMN supplementation", "NR supplementation", "NAD+ precursors", "women's metabolic health over 40"],
+  "mentions": ["nicotinamide mononucleotide", "nicotinamide riboside", "NAD+", "sirtuins", "mitochondria", "insulin sensitivity"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ precursor comparison for women over 40",
+  "citations": [
+    {"pmid": "33009199", "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women", "journal": "Science", "year": 2021, "study_type": "RCT", "n": 25},
+    {"pmid": "34836809", "title": "Chronic nicotinamide mononucleotide supplementation elevates blood nicotinamide adenine dinucleotide levels in healthy subjects", "journal": "NPJ Aging", "year": 2022, "study_type": "clinical trial", "n": 30},
+    {"pmid": "23140366", "title": "Declining NAD(+) induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "mechanistic study", "n": null},
+    {"pmid": "36599349", "title": "Hallmarks of Aging: An Expanding Universe", "journal": "Cell", "year": 2023, "study_type": "review", "n": null}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

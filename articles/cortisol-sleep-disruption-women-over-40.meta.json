@@ -1,0 +1,31 @@
+{
+  "title": "Cortisol and Sleep: Why Stress Disrupts Sleep for Women Over 40",
+  "slug": "cortisol-sleep-disruption-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "sleep, cortisol, stress, HPA axis, perimenopause, tired but wired, women over 40, sleep disruption",
+  "meta_title": "Cortisol and Sleep: Why Stress Disrupts Sleep for Women Over 40 | Happy Aging",
+  "meta_description": "High evening cortisol is the root cause of tired-but-wired sleep disruption in women over 40. Learn the mechanism, the symptom pattern, and what actually lowers it.",
+  "product_handle": "sleep-tonic",
+  "image_prompt": "A woman in her 40s meditating in a sunlit living room with eyes closed and a calm peaceful expression, wearing comfortable light grey athleisure clothes, sitting cross-legged on a yoga mat, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting at a kitchen table in the morning drinking coffee and looking out a sunny window, wearing casual home clothes, bright morning light, relaxed and rested expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing slow deep breathing exercises on a yoga mat in the evening, wearing comfortable workout leggings and a fitted top, soft lamp lighting, calm focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a walk outside in a quiet neighborhood in the early morning with golden hour sunlight, wearing a light jacket and athletic shoes, relaxed posture, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["Cortisol and Sleep", "HPA Axis Dysregulation", "Tired But Wired", "Evening Cortisol"],
+  "mentions": ["Magnesium Glycinate", "Ashwagandha", "L-Theanine", "Melatonin", "CBT-I", "Cortisol Awakening Response"],
+  "medical_audience": "Patient",
+  "primary_topic": "How elevated evening cortisol disrupts sleep in women over 40",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "J Res Med Sci", "year": 2012, "study_type": "RCT", "n": 46}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

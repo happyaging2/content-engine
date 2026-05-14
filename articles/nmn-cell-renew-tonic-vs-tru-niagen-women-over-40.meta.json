@@ -1,0 +1,32 @@
+{
+  "title": "NMN Cell Renew Tonic vs Tru Niagen: Which Is Better for Women Over 40?",
+  "slug": "nmn-cell-renew-tonic-vs-tru-niagen-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "NMN Cell Renew Tonic, Tru Niagen, NMN vs NR, NAD+ supplements, women over 40, supplement comparison",
+  "meta_title": "NMN Cell Renew Tonic vs Tru Niagen: Which Is Better for Women Over 40?",
+  "meta_description": "NMN and NR both raise NAD+ but take different pathways. Honest side-by-side comparison of NMN Cell Renew Tonic and Tru Niagen: ingredients, evidence, price, and who each is best for.",
+  "product_handle": "nmn-cell-renew-tonic",
+  "image_prompt": "A woman in her 40s comparing two supplement bottles on a clean marble kitchen counter, wearing a smart casual blazer and trousers, looking thoughtful and informed, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting at a laptop researching health information at a bright home office desk, wearing a professional but relaxed cardigan, looking engaged and confident, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a morning supplement with a glass of water in a sunny kitchen, wearing a casual linen shirt, looking healthy and serene, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a brisk outdoor jog on a paved path through a park, wearing athletic leggings and a fitted long-sleeve top, looking energized and strong, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["NMN vs NR supplement comparison", "NAD+ precursor supplements for women", "NMN Cell Renew Tonic", "Tru Niagen"],
+  "mentions": ["NMN", "NR", "NIAGEN", "NAD+", "sirtuins", "insulin sensitivity", "ChromaDex"],
+  "medical_audience": "Patient",
+  "primary_topic": "NMN Cell Renew Tonic vs Tru Niagen comparison for women over 40",
+  "citations": [
+    {"pmid": "33009199", "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women", "journal": "Science", "year": 2021, "study_type": "RCT", "n": 25},
+    {"pmid": "34836809", "title": "Chronic NMN supplementation elevates blood NAD+ levels in healthy subjects", "journal": "NPJ Aging", "year": 2022, "study_type": "clinical trial", "n": 30}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

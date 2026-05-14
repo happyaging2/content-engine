@@ -1,0 +1,32 @@
+{
+  "title": "Urolithin A and Mitophagy: What Women Over 40 Need to Know",
+  "slug": "urolithin-a-mitophagy-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "urolithin A, mitophagy, mitochondria, women over 40, gut bacteria, cellular health, longevity, muscle endurance",
+  "meta_title": "Urolithin A and Mitophagy: What Women Over 40 Need to Know",
+  "meta_description": "Urolithin A activates mitophagy, the cellular process that clears damaged mitochondria. Learn what the human evidence shows, why most women over 40 can't produce it from food, and a 5-step protocol.",
+  "product_handle": "nad-advanced-longevity-formula",
+  "image_prompt": "A woman in her 40s preparing a colorful fruit bowl with pomegranates and berries in a bright sunlit kitchen, wearing a casual linen top, smiling contentedly, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a light yoga stretch in a spacious living room with morning light coming through windows, wearing comfortable athletic wear with long sleeves, looking relaxed and focused, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a kitchen table reading a health article on a tablet, wearing a cozy sweater, with a glass of water and supplement bottle nearby, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking briskly in a park on a sunny morning, wearing a light jacket and athletic pants, looking energized and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["urolithin A supplementation", "mitophagy", "mitochondrial health", "women's longevity over 40"],
+  "mentions": ["mitophagy", "mitochondria", "PINK1/Parkin pathway", "ellagic acid", "gut microbiome", "pomegranate", "muscle endurance"],
+  "medical_audience": "Patient",
+  "primary_topic": "Urolithin A and mitophagy for women over 40",
+  "citations": [
+    {"pmid": "36599349", "title": "Hallmarks of Aging: An Expanding Universe", "journal": "Cell", "year": 2023, "study_type": "review", "n": null},
+    {"pmid": "23140366", "title": "Declining NAD(+) induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "mechanistic study", "n": null}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

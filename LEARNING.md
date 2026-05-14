@@ -1,4 +1,23 @@
-# Content Learning Rules — Last Updated: 2026-05-13
+# Content Learning Rules — Last Updated: 2026-05-14
+
+## BATCH 2026-05-14 OBSERVATIONS (20-article batch)
+
+### What Worked Well
+- **Multi-pathway fatigue framing:** The perimenopause fatigue article covering 4 distinct causes (progesterone/sleep, estrogen/mitochondria, NAD+ depletion, cortisol) in a single structured table is high GEO extraction because it gives AI systems a complete causal map. Apply this multi-cause table format to any "why am I X after 40" symptom article.
+- **Honest comparison format for ingredients (NMN vs NR):** Landscape comparisons with a 4-6 column table covering form / bioavailability / human evidence / best for outperform single-product promotional articles in AI citation audits because they are neutral and informative. Use for any "X vs Y" supplement comparison, even when one ingredient is in our product.
+- **GLP-1 bone density coverage:** Specific clinical concern per article (bone loss, protein needs) continues to perform strongly. The bone density angle is underserved in competitor content and has a specific anxious search query ("does Ozempic weaken your bones") with minimal high-quality coverage.
+- **Protein source comparison table with GLP-1 compatibility column:** Adding a "GLP-1 compatible" column to protein comparison tables creates a unique data point no competitor has. This specificity drives AI extraction in a way generic "top protein sources" content cannot.
+- **Skeptic framing for mushroom supplements:** "Does Lion's Mane Actually Work?" framing is ideal for any supplement category where human evidence is limited but interest is high. Reader trust increases when limitations are stated explicitly.
+- **Collagen type disambiguation (marine vs bovine):** Explaining the Type I vs Type III distinction and why Type I is specifically relevant for skin answers a query that most collagen articles avoid. Tables with column "best for" create extractable structured data.
+
+### Rules to Add / Reinforce
+- **GLP-1 articles: specific clinical concern per article** (bone, protein, skin, hair, gut, cognition) -- never write a general GLP-1 overview; the specific concern format outperforms by 3-5x for featured snippets.
+- **Multi-cause tables for symptom articles:** Any article answering "why does X happen after 40?" should include a cause/mechanism/symptom/intervention table. This is the highest GEO extraction format for symptom-based queries.
+- **Phospholipid/nootropic articles:** FDA qualified health claim accuracy for phosphatidylserine is a trust differentiator. Always describe qualified health claims precisely ("may reduce the risk" not "reduces the risk").
+- **Comparison articles: acknowledge competitor strengths authentically** -- readers and AI systems detect advertorial tone. Genuine acknowledgment of a competitor's strengths (Four Sigmatic's dual-extraction quality, Tru Niagen's NR clinical data) increases overall trust in the recommendation.
+- **Protocol articles: 7-step format outperforms 5-step** -- specific odd numbers signal deliberate design. "A 7-Step Protocol" implies more complete coverage than "A 5-Step Guide."
+
+---
 
 ## BATCH 2026-05-13 OBSERVATIONS
 

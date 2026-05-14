@@ -1,0 +1,31 @@
+{
+  "title": "How to Fix Broken Sleep in Perimenopause: A 7-Step Protocol",
+  "slug": "fix-broken-sleep-perimenopause-7-step-protocol",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "sleep, perimenopause, sleep protocol, women over 40, cortisol, progesterone, sleep disruption, magnesium glycinate",
+  "meta_title": "How to Fix Broken Sleep in Perimenopause: 7-Step Protocol | Happy Aging",
+  "meta_description": "Perimenopause breaks sleep through 3 pathways. This 7-step protocol addresses hormones, cortisol, and temperature regulation together for lasting improvement.",
+  "product_handle": "sleep-tonic",
+  "image_prompt": "A woman in her 40s doing gentle yoga stretches before bed in a softly lit room, wearing light sage green workout clothes, calming bedroom environment with dim warm lighting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting in a dimly lit living room reading a book with a cup of herbal tea, wearing soft comfortable loungewear, warm lamp light, peaceful relaxed expression before bedtime, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s waking up refreshed in the morning, sitting up in bed with sunlight streaming through the curtains, wearing white cotton pajamas, smiling calmly, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a warm bath in a beautifully lit bathroom in the evening, wearing a spa headband, surrounded by candles and soft towels, completely relaxed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["Perimenopause Sleep Disruption", "Sleep Protocol", "Hormonal Sleep", "Cortisol and Sleep"],
+  "mentions": ["Magnesium Glycinate", "L-Theanine", "Ashwagandha", "Melatonin", "HRT", "CBT-I", "Progesterone"],
+  "medical_audience": "Patient",
+  "primary_topic": "Fixing broken sleep during perimenopause with a 7-step protocol",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "J Res Med Sci", "year": 2012, "study_type": "RCT", "n": 46}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

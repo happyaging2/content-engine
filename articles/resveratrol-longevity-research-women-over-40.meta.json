@@ -1,0 +1,32 @@
+{
+  "title": "Resveratrol for Longevity in Women Over 40: What the 2026 Research Actually Shows",
+  "slug": "resveratrol-longevity-research-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "resveratrol, longevity, SIRT1, sirtuins, pterostilbene, women over 40, NAD+, polyphenols, cellular aging",
+  "meta_title": "Resveratrol for Longevity in Women Over 40: What the Research Actually Shows",
+  "meta_description": "Resveratrol has a real mechanism but poor human bioavailability. Learn what 2026 research actually shows, why the animal results don't translate, and what works better for sirtuin activation in women over 40.",
+  "product_handle": "nad-advanced-longevity-formula",
+  "image_prompt": "A woman in her 40s reading a book in a bright sunlit living room, wearing a cozy cashmere sweater and relaxed trousers, seated comfortably in an armchair with a cup of tea nearby, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s standing at a farmers market examining fresh grapes and berries, wearing a casual weekend outfit with a light jacket, smiling naturally, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s looking thoughtfully at supplement bottles in a well-lit pharmacy, wearing a turtleneck and tailored pants, looking discerning and informed, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a brisk outdoor walk in a leafy neighborhood, wearing athletic leggings and a zip-up fleece, looking energized and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["resveratrol supplementation", "sirtuin activation", "longevity research for women", "bioavailability of polyphenols"],
+  "mentions": ["resveratrol", "pterostilbene", "SIRT1", "NAD+", "NMN", "caloric restriction", "French paradox"],
+  "medical_audience": "Patient",
+  "primary_topic": "Resveratrol longevity evidence for women over 40",
+  "citations": [
+    {"pmid": "36599349", "title": "Hallmarks of Aging: An Expanding Universe", "journal": "Cell", "year": 2023, "study_type": "review", "n": null},
+    {"pmid": "23746838", "title": "The Hallmarks of Aging", "journal": "Cell", "year": 2013, "study_type": "review", "n": null}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

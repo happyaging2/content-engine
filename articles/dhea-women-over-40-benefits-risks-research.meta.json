@@ -1,0 +1,31 @@
+{
+  "title": "DHEA for Women Over 40: Benefits, Risks, and What the Research Says",
+  "slug": "dhea-women-over-40-benefits-risks-research",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "DHEA, hormones, perimenopause, adrenopause, women over 40, hormonal balance, bone density, libido",
+  "meta_title": "DHEA for Women Over 40: Benefits, Risks, and Research | Happy Aging",
+  "meta_description": "DHEA declines sharply after 40. Learn what RCTs actually show about benefits for bone, libido, and mood, plus the real risks most articles skip over.",
+  "product_handle": "nad-women-longevity-formula",
+  "image_prompt": "A woman in her 40s doing yoga poses in a lush green garden outdoors, wearing comfortable light-colored yoga pants and a fitted tank top, soft morning sunlight filtering through trees, peaceful and focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s having a conversation with a female doctor in a bright clean medical office, wearing casual everyday clothes, attentive and engaged expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a bone-strengthening squat exercise in a home gym, wearing athletic leggings and a sports top, natural light from a nearby window, focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing supplement bottles on a kitchen counter while writing in a wellness journal, wearing a comfortable linen shirt, bright airy kitchen setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["DHEA", "Adrenopause", "Hormonal Balance", "Bone Density", "Libido After 40"],
+  "mentions": ["Prasterone", "7-Keto DHEA", "HRT", "Estrogen", "Testosterone"],
+  "medical_audience": "Patient",
+  "primary_topic": "DHEA supplementation for women over 40: evidence, benefits, and risks",
+  "citations": [
+    {"pmid": "23746838", "title": "The Hallmarks of Aging", "journal": "Cell", "year": 2013, "study_type": "review", "n": null}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

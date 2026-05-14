@@ -1,0 +1,31 @@
+{
+  "title": "Magnesium Glycinate for Sleep in Women Over 40: How It Works",
+  "slug": "magnesium-glycinate-sleep-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "sleep, magnesium, perimenopause, sleep support, magnesium glycinate, women over 40, GABA, cortisol",
+  "meta_title": "Magnesium Glycinate for Sleep in Women Over 40 | Happy Aging",
+  "meta_description": "Magnesium glycinate supports sleep by activating GABA receptors and lowering cortisol. Learn why this form outperforms others for women over 40 and how to use it.",
+  "product_handle": "sleep-tonic",
+  "image_prompt": "A woman in her 40s lying peacefully in bed with fluffy white pillows, wearing soft blue pajamas, cozy bedroom with warm lamp light and linen sheets, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s holding a glass of water and a small supplement capsule at her bedside table at night, wearing cozy plaid pajamas, soft bedroom lighting with a lamp glowing warmly, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s stretching and smiling in the morning after waking up refreshed, wearing light cotton pajamas, sunlight coming through sheer curtains in a tidy bedroom, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a kitchen table reading a book with a cup of herbal tea in the evening, wearing comfortable loungewear, warm kitchen lighting, calm relaxed expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["Magnesium Glycinate", "Sleep Support", "GABA Receptors", "Cortisol Regulation", "Perimenopause Sleep"],
+  "mentions": ["Magnesium Citrate", "Magnesium Oxide", "Magnesium L-Threonate", "GABA", "Melatonin"],
+  "medical_audience": "Patient",
+  "primary_topic": "Magnesium glycinate for sleep in women over 40",
+  "citations": [
+    {"pmid": "23853635", "title": "The effect of magnesium supplementation on primary insomnia in elderly", "journal": "J Res Med Sci", "year": 2012, "study_type": "RCT", "n": 46}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}

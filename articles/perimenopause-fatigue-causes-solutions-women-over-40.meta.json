@@ -1,0 +1,32 @@
+{
+  "title": "Perimenopause Fatigue: Why You Are Exhausted and What Actually Helps",
+  "slug": "perimenopause-fatigue-causes-solutions-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "perimenopause, fatigue, energy, NAD+, mitochondria, cortisol, progesterone, estrogen, women over 40, hormones",
+  "meta_title": "Perimenopause Fatigue: Why You Are Exhausted and What Helps | Happy Aging",
+  "meta_description": "Perimenopause fatigue has 4 causes: progesterone decline, mitochondrial changes, NAD+ depletion, and cortisol dysregulation. Learn the 5-step morning protocol that addresses all four.",
+  "product_handle": "nad-women-longevity-formula",
+  "image_prompt": "A woman in her 40s stretching her arms wide and smiling at sunrise outdoors on a hillside, wearing bright athletic gear with a fitted jacket and leggings, vibrant golden morning light, energized and joyful expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a light dumbbell workout in a sunny home gym in the morning, wearing athletic leggings and a fitted workout top, natural light from large windows, focused and energized expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating a healthy protein-rich breakfast at a bright kitchen table, wearing casual home clothes, a plate of eggs and avocado in front of her, smiling and relaxed, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting in a doctor's office speaking with a female physician, wearing casual everyday clothes, calm and engaged expression, bright modern medical office setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "schema_type": "MedicalWebPage",
+  "about": ["Perimenopause Fatigue", "NAD+ Decline", "Mitochondrial Function", "HPA Axis Dysregulation"],
+  "mentions": ["NMN", "NAD+", "Progesterone", "Estrogen", "Cortisol", "Magnesium Glycinate", "HRT"],
+  "medical_audience": "Patient",
+  "primary_topic": "Perimenopause fatigue: causes and evidence-based solutions for women over 40",
+  "citations": [
+    {"pmid": "23140366", "title": "Declining NAD(+) induces a pseudohypoxic state disrupting nuclear-mitochondrial communication during aging", "journal": "Cell", "year": 2013, "study_type": "mechanistic study", "n": null},
+    {"pmid": "36599349", "title": "Hallmarks of Aging: An Expanding Universe", "journal": "Cell", "year": 2023, "study_type": "review", "n": null}
+  ],
+  "date_published": "2026-05-14",
+  "date_modified": "2026-05-14",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_reviewed": "2026-05-14"
+}
