@@ -2,7 +2,65 @@
 
 ---
 
-## BATCH 2026-05-13 (Current)
+## BATCH 2026-05-15 (Current)
+
+### Batch Overview
+- Date: 2026-05-15
+- Articles written: 20/20
+- QA gate: 20/20 PASS (Phase 4 verified)
+- Publishing status: Staged as drafts; `publish-shopify.yml` GitHub Action at 11:00 UTC will deploy
+- SEO audit: Passed — 0 em/en dashes, author "Happy Aging Team", template "timeline", GEO G1-G18 verified, real PMIDs used (33533182, 35099874, 16123266, 30688659, 33950804, 28778708, 26903613, 30930171, 11247889, 11474859, 33567185, 23602572, 25556099, 17308863, 10832087, 17574800, 10432133, 27328030, 25424513, 20152934, 27164923, 18609300, 20824168, 25081826, 30610225, 24269871, 24401291, 28786550, 15113709, 20601100, 27481613, 24286286, 17582837)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| NAD+/Longevity | 3 | NAD Advanced ($99) |
+| Sleep | 2 | Sleep Tonic ($55) |
+| Gut/Bloating | 2 | Happiest Gut ($25) |
+| GLP-1 Support | 3 | Happiest Gut ($25), Lean Muscle Formula ($55) |
+| Hormones | 3 | NAD Women's Formula ($99), Happiest Gut ($25) |
+| Brain | 2 | Neuro Creamer ($61) |
+| Skin | 3 | Glow Shot ($55), NAD Advanced ($99) |
+| Energy/Metabolism | 2 | NAD Advanced ($99) |
+
+Clusters covered: 8 (requirement: ≥5) ✓
+NAD/NMN + Longevity + Sleep: 5 articles (requirement: ≥4) ✓
+Comparison articles: 3 (NAD Advanced vs Wonderfeel, Glow Shot vs Ancient Nutrition, CBT-I vs supplements) ✓
+
+### Articles — Batch 2026-05-15
+| # | Title | Slug | Cluster | Product | Format |
+|---|---|---|---|---|---|
+| 1 | GlyNAC Supplement for Women Over 40 | glynac-supplement-women-over-40 | NAD+/Longevity | nad-advanced | Explainer + protocol |
+| 2 | Klotho Protein and Longevity for Women Over 40 | klotho-protein-longevity-women-over-40 | NAD+/Longevity | nad-advanced | Explainer + table |
+| 3 | NAD Advanced vs Wonderfeel Youngr NMN for Women Over 40 | nad-advanced-vs-wonderfeel-youngr-nmn-women-over-40 | NAD+/Longevity | nad-advanced | ha-vs-competitor |
+| 4 | Sleep Inertia After 40: Morning Grogginess Solutions | sleep-inertia-after-40-morning-grogginess | Sleep | sleep-tonic | Explainer + 7-step protocol |
+| 5 | CBT-I vs Sleep Supplements for Women Over 40 | cbti-vs-sleep-supplements-women-over-40 | Sleep | sleep-tonic | Comparison |
+| 6 | Resistant Starch and Gut Health for Women Over 40 | resistant-starch-gut-health-women-over-40 | Gut/Bloating | happiest-gut | Guide + food table |
+| 7 | Bovine Colostrum for Gut and Immunity After 40 | bovine-colostrum-gut-immunity-women-over-40 | Gut/Bloating | happiest-gut | Skeptic review |
+| 8 | Constipation on GLP-1 Medications After 40 | constipation-glp-1-medications-women-over-40 | GLP-1 Support | happiest-gut | 7-step protocol |
+| 9 | Electrolytes on GLP-1 Medications for Women Over 40 | electrolytes-glp-1-medications-women-over-40 | GLP-1 Support | lean-muscle-formula | Guide + electrolyte table |
+| 10 | Protein Quality and Leucine on GLP-1 for Women Over 40 | protein-quality-leucine-glp-1-women-over-40 | GLP-1 Support | lean-muscle-formula | Guide + protein table |
+| 11 | Cortisol and Bone Density After 40 | cortisol-bone-density-after-40 | Hormones | nad-womens-longevity | Guide + protocol |
+| 12 | Natural Progesterone Cream After 40: An Honest Review | natural-progesterone-cream-after-40 | Hormones | nad-womens-longevity | Skeptic review |
+| 13 | Vaginal Microbiome Changes After 40 | vaginal-microbiome-after-40 | Hormones | happiest-gut | Guide + table |
+| 14 | Magnesium L-Threonate and Cognitive Decline After 40 | magnesium-l-threonate-cognitive-decline-after-40 | Brain | neuro-creamer | Skeptic review + comparison |
+| 15 | Phosphatidylserine for Sleep and Stress After 40 | phosphatidylserine-sleep-stress-after-40 | Brain | neuro-creamer | Explainer + 5-step protocol |
+| 16 | NRF2 Pathway Activation for Women Over 40 | nrf2-pathway-activation-women-over-40 | Skin | nad-advanced | Explainer + activator table |
+| 17 | Glow Shot vs Ancient Nutrition Multi Collagen for Women Over 40 | glow-shot-vs-ancient-nutrition-multi-collagen-women-over-40 | Skin | glow-shot | ha-vs-competitor |
+| 18 | Polyphenol Supplements for Skin After 40 | polyphenol-supplements-skin-after-40 | Skin | glow-shot | Skeptic review + comparison |
+| 19 | Red Light Therapy for Women Over 40 | red-light-therapy-women-over-40 | Energy/Metabolism | nad-advanced | Guide + 7-step protocol |
+| 20 | Weighted Vest for Bone Density After 40 | weighted-vest-bone-density-women-over-40 | Energy/Metabolism | nad-advanced | Guide + protocol + comparison table |
+
+### Predicted Performance
+- **Highest GEO extraction potential:** constipation-glp-1 (7-step protocol, minimal competition), electrolytes-glp-1 (unique 4-electrolyte table), protein-quality-leucine-glp-1 (leucine threshold table with GLP-1 column), nrf2-pathway (multi-supplement mechanism hub)
+- **Featured snippet candidates:** sleep-inertia-after-40 ("why am I so groggy in the morning after 40"), vaginal-microbiome-after-40 ("vaginal microbiome perimenopause"), klotho-protein-longevity ("what is klotho protein aging"), magnesium-l-threonate-cognitive ("does Magtein work for memory")
+- **High conversion potential:** glow-shot-vs-ancient-nutrition (ha-vs-competitor format, skin cluster), nad-advanced-vs-wonderfeel (NAD cluster top revenue driver), cbti-vs-sleep-supplements (high commercial intent)
+- **Trust-building skeptic articles:** bovine-colostrum, natural-progesterone-cream, magnesium-l-threonate, polyphenol-supplements — these lower bounce and signal editorial integrity to AI citation systems
+- **Novel topical authority builders:** red-light-therapy and weighted-vest expand into non-supplement wellness, increasing cluster depth for Energy/Metabolism and bone health
+
+---
+
+## BATCH 2026-05-13 (Previous)
 
 ### Batch Overview
 - Date: 2026-05-13

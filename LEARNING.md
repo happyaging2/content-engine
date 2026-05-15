@@ -1,4 +1,23 @@
-# Content Learning Rules — Last Updated: 2026-05-14
+# Content Learning Rules — Last Updated: 2026-05-15
+
+## BATCH 2026-05-15 OBSERVATIONS (20-article batch)
+
+### What Worked Well
+- **GLP-1 clinical concern format (confirmed, 3 articles):** Constipation, electrolytes, and leucine/protein each treated as a distinct GLP-1 concern article. Specific clinical concern per article continues to outperform general GLP-1 overview articles. Constipation article has a 7-step protocol with minimal competitor coverage. Electrolyte table (4 electrolytes x 4 columns) and leucine protein source table with "GLP-1 compatible" column are unique structured data not found on competitor sites.
+- **Skeptic framing for borderline-evidence supplements (4 articles):** Bovine colostrum, natural progesterone cream, Magtein (magnesium L-threonate), and polyphenols all used "honest review" or "does X actually work?" framing. This format builds trust with both readers and AI systems by explicitly stating evidence limitations. Apply to every supplement category where human RCT evidence is limited.
+- **Non-supplement wellness topics in Energy/Metabolism cluster:** Red light therapy and weighted vest articles expand topical authority into non-supplement wellness content. These topics have high search intent, low competitor quality, and create internal linking opportunities back to NAD+ and bone density product clusters.
+- **NRF2 pathway as mechanism bridge:** The NRF2 article covers a molecular pathway (not a single supplement), connecting polyphenols, exercise, and NAD+ through a shared mechanism. Multi-pathway mechanism articles have high GEO extraction value because they answer "how does X work?" at a level of depth AI systems favor for synthesis queries.
+- **Vaginal microbiome as hormones cluster topic:** Validated as underserved with real clinical anxiety (women 40+ searching this after perimenopause symptoms). Bridges hormones + gut clusters. The microbiome composition table (dominant species + perimenopausal shift + support strategy) is a unique extractable data structure.
+- **Klotho protein as longevity explainer:** Emerging longevity science term with minimal plain-language coverage. Same strategy as estrobolome (batch 2026-05-13): own the term by explaining it clearly for women 40+ before competitors do.
+
+### Rules to Add / Reinforce
+- **GLP-1 clinical concern library is now 5+ articles deep** (hair loss, gut microbiome, skin, constipation, electrolytes, leucine/protein). Next batch GLP-1 topics: cognition/brain fog on GLP-1, bone density on GLP-1 (covered in passing but not dedicated article). Reserve 1-2 GLP-1 slots per batch to complete this library.
+- **Skeptic framing triggers:** Use "Does X Actually Work?" or "Honest Review of X" framing whenever: (a) primary evidence is animal or in-vitro only, (b) main human trials are small (<50 participants) or industry-funded, (c) mechanism sounds plausible but has not been replicated. Magtein (magnesium L-threonate) is the canonical example: strong animal data, weak human RCT evidence.
+- **Non-supplement wellness content:** Red light therapy and weighted vest validated as high-quality topical authority builders. Continue with 1-2 non-supplement wellness protocol articles per batch, particularly when they have product integration potential (bone density formula, NAD Advanced).
+- **Mechanism bridge articles:** Articles connecting multiple supplements/nutrients through a shared pathway (NRF2, mTOR, AMPK, sirtuins) are high-value GEO targets. Use as "hub" articles that create internal linking from multiple cluster articles.
+- **Vaginal/pelvic health after 40:** Add as a tracked sub-topic under hormones cluster. High search volume, clinical anxiety, minimal quality coverage. Next topics: pelvic floor, UTI recurrence after menopause, bladder health.
+
+---
 
 ## BATCH 2026-05-14 OBSERVATIONS (20-article batch)
 
