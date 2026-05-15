@@ -1,0 +1,52 @@
+{
+  "title": "GlyNAC Supplement After 40: What the 2026 Research Says About This Longevity Stack",
+  "slug": "glynac-supplement-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "NAD+, longevity, GlyNAC, glutathione, mitochondria, antioxidant, women over 40, aging, N-acetylcysteine, glycine",
+  "product_handle": "nad-advanced-longevity-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["GlyNAC supplementation", "glutathione deficiency in aging", "mitochondrial dysfunction after 40", "oxidative stress in women"],
+  "mentions": ["glycine", "N-acetylcysteine", "glutathione", "Rajagopal Sekhar", "Baylor College of Medicine", "mitochondrial dysfunction", "perimenopause oxidative stress"],
+  "medical_audience": "Patient",
+  "primary_topic": "GlyNAC supplement for women over 40",
+  "citations": [
+    {
+      "pmid": "33533182",
+      "title": "Deficient synthesis of glutathione underlies oxidative stress in aging and can be corrected by dietary cysteine and glycine supplementation",
+      "journal": "Clinical and Translational Medicine",
+      "year": 2021,
+      "study_type": "pilot study",
+      "n": 8
+    },
+    {
+      "pmid": "35099874",
+      "title": "Supplementing Glycine and N-Acetylcysteine (GlyNAC) in Older Adults Improves Glutathione Deficiency, Oxidative Stress, Mitochondrial Dysfunction, Inflammation, Physical Function, and Aging Hallmarks: A Randomized Clinical Trial",
+      "journal": "The Journals of Gerontology: Series A",
+      "year": 2023,
+      "study_type": "RCT",
+      "n": 24
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s reading at a sunny kitchen table, wearing a casual light blue top, warm morning light streaming through the window, a glass of water and supplement bottle nearby, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s examining supplement labels in a well-lit kitchen, wearing a casual button-up shirt, focused expression, natural daylight, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s stretching after a workout in a bright home gym, wearing athletic wear including fitted top and leggings, healthy and energetic expression, warm lighting, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s sitting at a desk reviewing health information on a laptop, wearing a cozy knit sweater, home office setting with plants and natural light, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s preparing a nutritious breakfast with colorful vegetables and eggs, wearing a floral apron over casual clothes, bright modern kitchen, photorealistic wellness photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s wellness supplements longevity",
+  "body_image_queries": [
+    "woman 40s reading supplement label kitchen",
+    "woman 40s post workout stretching healthy",
+    "woman 40s health research laptop home",
+    "woman 40s healthy cooking vegetables kitchen"
+  ]
+}

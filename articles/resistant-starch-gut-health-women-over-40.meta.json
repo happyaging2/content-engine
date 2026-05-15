@@ -1,0 +1,52 @@
+{
+  "title": "Resistant Starch After 40: The Prebiotic Fiber Your Gut Microbiome Is Missing",
+  "slug": "resistant-starch-gut-health-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "gut health, resistant starch, prebiotic fiber, microbiome, butyrate, women over 40, bloating",
+  "product_handle": "happiest-gut",
+  "schema_type": "MedicalWebPage",
+  "about": ["resistant starch", "gut microbiome diversity", "prebiotic fiber", "butyrate production", "insulin sensitivity"],
+  "mentions": ["Akkermansia muciniphila", "Bifidobacterium", "short-chain fatty acids", "butyrate", "RS1", "RS2", "RS3"],
+  "medical_audience": "Patient",
+  "primary_topic": "resistant starch gut health women over 40",
+  "citations": [
+    {
+      "pmid": "30930171",
+      "title": "Dynamics of Human Gut Microbiota and Short-Chain Fatty Acids in Response to Dietary Interventions with Three Fermentable Fibers",
+      "journal": "Cell Host and Microbe",
+      "year": 2019,
+      "study_type": "RCT crossover",
+      "n": 26
+    },
+    {
+      "pmid": "12612178",
+      "title": "Prior short-term consumption of resistant starch enhances postprandial insulin sensitivity in healthy subjects",
+      "journal": "Diabetologia",
+      "year": 2003,
+      "study_type": "Controlled trial",
+      "n": 10
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s preparing a colorful healthy grain bowl in a bright modern kitchen, wearing a casual linen top, surrounded by whole grains, green bananas, and fresh vegetables on the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s slicing a green banana in a sunlit kitchen, wearing a casual cotton top, placing banana slices into a smoothie blender, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark",
+    "A woman in her 40s portioning cooked and cooled rice into meal prep containers in her kitchen, wearing a casual shirt, organized containers on the counter, photorealistic wellness lifestyle photography, bright natural lighting, no text, no watermark",
+    "A woman in her 40s reading food labels in a grocery store aisle, wearing a relaxed casual outfit, examining a package of whole grain oats, photorealistic wellness lifestyle photography, soft store lighting, no text, no watermark",
+    "A woman in her 40s eating a bowl of overnight oats topped with fresh berries at a kitchen table, wearing casual morning clothes, coffee cup beside her, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark"
+  ],
+  "image_query": "woman 40s gut health prebiotic fiber kitchen",
+  "body_image_queries": [
+    "woman 40s green banana smoothie kitchen",
+    "woman 40s meal prep rice containers kitchen",
+    "woman 40s reading food labels grocery store",
+    "woman 40s eating overnight oats breakfast"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "NRF2 Pathway Activation After 40: The Cellular Defense System That Fights Aging",
+  "slug": "nrf2-pathway-activation-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "longevity, cellular health, antioxidants, NRF2, sulforaphane, oxidative stress, women over 40, skin health, neuroprotection",
+  "product_handle": "nad-advanced-longevity-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["NRF2 pathway", "antioxidant defense system", "cellular aging", "oxidative stress", "sulforaphane", "NAD+ and NRF2"],
+  "mentions": ["KEAP1", "sulforaphane", "curcumin", "quercetin", "resveratrol", "NAD+", "SIRT1", "proteostasis", "hallmarks of aging"],
+  "medical_audience": "Patient",
+  "primary_topic": "NRF2 pathway activation for women over 40",
+  "citations": [
+    {
+      "pmid": "30610225",
+      "title": "Therapeutic targeting of the NRF2 and KEAP1 partnership in chronic diseases",
+      "journal": "Nature Reviews Drug Discovery",
+      "year": 2019,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "24269871",
+      "title": "Regulation of Nrf2-an update",
+      "journal": "Free Radical Biology and Medicine",
+      "year": 2014,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "15113709",
+      "title": "Polyphenols: food sources and bioavailability",
+      "journal": "American Journal of Clinical Nutrition",
+      "year": 2004,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "doi": "10.1016/j.cell.2022.11.001",
+      "title": "Hallmarks of aging: An expanding universe",
+      "journal": "Cell",
+      "year": 2023,
+      "study_type": "Review",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s eating colorful vegetables and broccoli at a dinner table, wearing a casual blouse, warm kitchen setting with natural evening lighting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s preparing fresh broccoli sprouts in a bright modern kitchen, wearing a casual linen shirt, focused and calm, photorealistic wellness lifestyle photography, natural daylight, no text, no watermark",
+    "A woman in her 40s holding a colorful bowl of mixed vegetables and greens at a sunny dining table, wearing a casual blouse, looking healthy and vibrant, photorealistic lifestyle photography, warm natural light, no text, no watermark",
+    "A woman in her 40s doing a light outdoor jog in a park, wearing athletic clothes, confident posture, morning light filtering through trees, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s reading ingredient labels on supplement bottles in a well-lit pharmacy or health store, wearing a smart casual top, thoughtful expression, photorealistic lifestyle photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s healthy eating vegetables antioxidants",
+  "body_image_queries": [
+    "woman 40s broccoli sprouts kitchen preparation",
+    "woman 40s colorful vegetables salad bowl",
+    "woman 40s outdoor jogging park morning",
+    "woman 40s supplement bottle health store"
+  ]
+}
