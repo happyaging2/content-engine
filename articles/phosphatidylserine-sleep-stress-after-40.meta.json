@@ -1,0 +1,50 @@
+{
+  "title": "Phosphatidylserine for Sleep and Stress After 40: Does It Actually Work?",
+  "slug": "phosphatidylserine-sleep-stress-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "brain health, phosphatidylserine, sleep, cortisol, stress, perimenopause, HPA axis, cognitive health",
+  "product_handle": "neuro-creamer",
+  "schema_type": "MedicalWebPage",
+  "about": ["phosphatidylserine", "cortisol attenuation", "sleep support", "stress management", "perimenopause"],
+  "mentions": ["HPA axis", "Baumeister 2008", "Fahey 1998", "FDA qualified health claim", "soy-derived PS", "bovine PS", "melatonin comparison", "ashwagandha"],
+  "medical_audience": "Patient",
+  "primary_topic": "phosphatidylserine for sleep and cortisol stress support in women over 40",
+  "citations": [
+    {
+      "pmid": "18609300",
+      "title": "Influence of phosphatidylserine on cognitive performance and cortical activity after induced stress",
+      "journal": "Stress",
+      "year": 2008,
+      "study_type": "RCT",
+      "n": null
+    },
+    {
+      "pmid": null,
+      "title": "The hormonal and perceptive effects of phosphatidylserine administration during two weeks of resistive exercise-induced overtraining",
+      "journal": "Biology of Sport",
+      "year": 1998,
+      "study_type": "Placebo-Controlled Trial",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s doing relaxing evening stretches on a yoga mat at home in a softly lit living room, wearing comfortable fitted exercise pants and a light top in soft colors, calm and centered expression, photorealistic wellness lifestyle photography, warm natural evening lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting at a desk in the evening writing in a sleep tracking diary under soft lamp light, wearing comfortable casual clothes, calm and reflective expression, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s preparing for bed by dimming lights and setting a cool bedroom environment, wearing a comfortable sleep top and lounge pants, relaxed and intentional expression, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s holding a supplement capsule and glass of water in late afternoon light by a kitchen window, wearing casual daywear, calm purposeful expression, photorealistic lifestyle photography, warm light, no text, no watermark"
+  ],
+  "image_query": "woman 40s evening yoga stretches home relaxation",
+  "body_image_queries": [
+    "woman 40s evening sleep tracking diary journaling",
+    "woman 40s preparing for sleep bedroom environment",
+    "woman 40s taking supplement afternoon kitchen light"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Weighted Vest Walking for Bone Density After 40: What the 2026 Research Shows",
+  "slug": "weighted-vest-bone-density-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "bone density, weighted vest, osteoporosis prevention, weight-bearing exercise, women over 40, longevity, calcium, vitamin D, menopause",
+  "product_handle": "nad-advanced-longevity-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["bone density", "weighted vest exercise", "osteoporosis prevention", "Wolff's Law", "bone mineral density", "weight-bearing exercise for women"],
+  "mentions": ["DEXA scan", "osteoblasts", "osteoclasts", "Wolff's Law", "vitamin D", "vitamin K2", "magnesium", "calcium", "collagen", "resistance training", "BMD", "T-score"],
+  "medical_audience": "Patient",
+  "primary_topic": "Weighted vest walking for bone density in women over 40",
+  "citations": [
+    {"pmid": "17582837", "title": "Effects of exercise and nutrition on postural balance and risk of falling in elderly people with decreased bone mineral density: randomized controlled trial pilot study", "journal": "Clinical Rehabilitation", "year": 2007, "study_type": "RCT", "n": null},
+    {"doi": "10.1097/00003677-200301000-00009", "title": "Designing exercise regimens to increase bone strength", "journal": "Exercise and Sport Sciences Reviews", "year": 2003, "study_type": "Review", "n": null}
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s walking confidently in a park wearing a weighted vest and athletic clothes, upright and strong posture, outdoor daytime setting with greenery, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s walking briskly on a park path in athletic wear, confident healthy posture, green trees in background, photorealistic wellness lifestyle photography, warm daylight, no text, no watermark",
+    "A woman in her 40s doing a squat exercise with light dumbbells in a bright home gym or living room, athletic wear, focused and healthy expression, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s sitting at a table reviewing supplement bottles with vitamin D and calcium visible, wearing casual clothing, bright kitchen, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s stretching after a walk outdoors, seated on a park bench, athletic wear, relaxed and healthy expression, warm natural light, photorealistic wellness lifestyle photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s walking park exercise bone health",
+  "body_image_queries": ["woman 40s walking park brisk athletic", "woman 40s squats home workout dumbbells", "woman 40s bone health supplements vitamin D kitchen", "woman 40s stretching park bench after workout"]
+}
