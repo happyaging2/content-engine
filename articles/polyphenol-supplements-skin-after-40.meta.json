@@ -1,0 +1,33 @@
+{
+  "title": "Polyphenol Supplements for Skin After 40: Resveratrol, Quercetin, and What Actually Works",
+  "slug": "polyphenol-supplements-skin-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "polyphenols, skin health, resveratrol, quercetin, astaxanthin, antioxidants, women over 40, skin aging, collagen",
+  "product_handle": "glow-shot",
+  "schema_type": "MedicalWebPage",
+  "about": ["polyphenol supplements", "skin aging", "resveratrol", "quercetin", "astaxanthin", "antioxidants for skin"],
+  "mentions": ["resveratrol", "quercetin", "astaxanthin", "grape seed extract", "EGCG", "SIRT1", "NRF2", "collagen", "matrix metalloproteinases"],
+  "medical_audience": "Patient",
+  "primary_topic": "Polyphenol supplements for skin health in women over 40",
+  "citations": [
+    {"pmid": "15113709", "title": "Polyphenols: food sources and bioavailability", "journal": "American Journal of Clinical Nutrition", "year": 2004, "study_type": "Review", "n": null},
+    {"pmid": "20601100", "title": "The grape antioxidant resveratrol for skin disorders: promise, prospects, and challenges", "journal": "Archives of Biochemistry and Biophysics", "year": 2011, "study_type": "Review", "n": null}
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s eating a mixed berry bowl with yogurt in a sunny kitchen, wearing a casual top, natural morning light streaming in, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s smiling and holding a bowl of fresh colorful berries in a bright sunny kitchen, wearing a casual blouse, natural light, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s reading supplement labels at a pharmacy or health store, thoughtful expression, wearing casual clothing, natural lighting, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s with glowing healthy skin applying a serum in a bright bathroom, wearing a casual robe, soft morning light, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s drinking green tea at a table near a window with plants, relaxed and healthy appearance, wearing a comfortable top, photorealistic wellness lifestyle photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s berries antioxidants healthy skin",
+  "body_image_queries": ["woman 40s eating berries bright kitchen", "woman 40s reading supplement labels", "woman 40s applying serum glowing skin bathroom", "woman 40s drinking green tea window plants"]
+}

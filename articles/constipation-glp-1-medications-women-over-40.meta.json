@@ -1,0 +1,60 @@
+{
+  "title": "Constipation on Ozempic or Wegovy: A 7-Step Protocol for Women Over 40",
+  "slug": "constipation-glp-1-medications-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "GLP-1 medications, constipation, Ozempic, Wegovy, semaglutide, gut health, women over 40, magnesium, fiber, gut motility",
+  "product_handle": "happiest-gut",
+  "schema_type": "MedicalWebPage",
+  "about": ["GLP-1 constipation", "semaglutide side effects", "gut motility", "dietary fiber", "magnesium citrate"],
+  "mentions": ["Ozempic", "Wegovy", "semaglutide", "tirzepatide", "STEP 1 trial", "magnesium citrate", "resistant starch", "prebiotic fiber"],
+  "medical_audience": "Patient",
+  "primary_topic": "constipation GLP-1 medications Ozempic Wegovy women over 40",
+  "citations": [
+    {
+      "pmid": "33567185",
+      "title": "Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1 Trial)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    },
+    {
+      "pmid": "11427691",
+      "title": "Short-chain fatty acids and human colonic function: roles of resistant starch and nonstarch polysaccharides",
+      "journal": "Physiological Reviews",
+      "year": 2001,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "doi": "10.1111/apt.16808",
+      "title": "Gastrointestinal effects of GLP-1 receptor agonists: mechanisms and clinical implications",
+      "journal": "Alimentary Pharmacology and Therapeutics",
+      "year": 2022,
+      "study_type": "Review",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s drinking a large glass of water in a bright modern kitchen, wearing casual everyday clothes, looking comfortable and healthy, surrounded by fresh vegetables and fruit on the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s filling a large water bottle at a kitchen sink, wearing casual home clothes, bright modern kitchen in the background, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark",
+    "A woman in her 40s preparing a high-fiber meal with broccoli, lentils, and whole grains, wearing casual clothes in a well-lit kitchen, photorealistic wellness lifestyle photography, warm natural light, no text, no watermark",
+    "A woman in her 40s taking an after-dinner walk outside on a sunny suburban path, wearing comfortable casual clothes and sneakers, relaxed and healthy, photorealistic wellness lifestyle photography, golden hour light, no text, no watermark",
+    "A woman in her 40s organizing supplements and vitamins in a kitchen drawer, wearing casual home clothes, calm and organized, photorealistic wellness lifestyle photography, bright indoor light, no text, no watermark"
+  ],
+  "image_query": "woman 40s drinking water kitchen healthy hydration",
+  "body_image_queries": [
+    "woman 40s filling water bottle kitchen",
+    "woman 40s preparing high fiber meal kitchen broccoli lentils",
+    "woman 40s walking after dinner outdoor suburban",
+    "woman 40s organizing supplements vitamins kitchen"
+  ]
+}

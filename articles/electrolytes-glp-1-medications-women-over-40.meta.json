@@ -1,0 +1,60 @@
+{
+  "title": "Electrolytes on GLP-1 Medications: What Women Over 40 Actually Need",
+  "slug": "electrolytes-glp-1-medications-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "GLP-1 medications, electrolytes, Ozempic, Wegovy, magnesium, potassium, sodium, women over 40, perimenopause, fatigue",
+  "product_handle": "lean-muscle-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["electrolyte balance on GLP-1 medications", "magnesium deficiency", "potassium depletion", "GLP-1 nutritional support", "perimenopause electrolytes"],
+  "mentions": ["Ozempic", "Wegovy", "Mounjaro", "semaglutide", "magnesium citrate", "magnesium glycinate", "potassium", "sodium", "STEP 1 trial"],
+  "medical_audience": "Patient",
+  "primary_topic": "electrolytes GLP-1 medications women over 40",
+  "citations": [
+    {
+      "pmid": "33567185",
+      "title": "Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1 Trial)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    },
+    {
+      "pmid": "22364157",
+      "title": "Suboptimal magnesium status in the United States: are the health consequences underestimated?",
+      "journal": "Nutrition Reviews",
+      "year": 2012,
+      "study_type": "Review",
+      "n": null
+    },
+    {
+      "pmid": "26696633",
+      "title": "Hypomagnesemia in Type 2 Diabetes: A Vicious Circle?",
+      "journal": "Diabetes",
+      "year": 2016,
+      "study_type": "Review",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s preparing a colorful salad with avocado, leafy greens, and roasted sweet potato in a bright modern kitchen, wearing casual everyday clothes, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s slicing an avocado at a kitchen counter, wearing casual clothes, bright healthy vegetables around her on the counter, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark",
+    "A woman in her 40s taking a magnesium supplement with a glass of water before bed, wearing comfortable pajamas in a softly lit bedroom, photorealistic wellness lifestyle photography, warm evening light, no text, no watermark",
+    "A woman in her 40s eating a salmon and spinach bowl at a kitchen table, wearing casual home clothes, looking healthy and satisfied, photorealistic wellness lifestyle photography, bright natural light, no text, no watermark",
+    "A woman in her 40s using a food tracking app on her phone at the kitchen table, wearing casual clothes, a healthy meal in front of her, photorealistic wellness lifestyle photography, warm indoor light, no text, no watermark"
+  ],
+  "image_query": "woman 40s healthy salad avocado greens kitchen",
+  "body_image_queries": [
+    "woman 40s slicing avocado kitchen healthy eating",
+    "woman 40s taking supplement magnesium bedtime",
+    "woman 40s eating salmon spinach bowl healthy",
+    "woman 40s food tracking app phone healthy meal"
+  ]
+}

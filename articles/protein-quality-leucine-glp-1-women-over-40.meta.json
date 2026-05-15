@@ -1,0 +1,68 @@
+{
+  "title": "Protein Quality on GLP-1 Medications: Why Leucine Content Matters More Than Total Grams",
+  "slug": "protein-quality-leucine-glp-1-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "GLP-1 medications, leucine, muscle protein synthesis, protein quality, sarcopenia, Ozempic, Wegovy, women over 40, anabolic resistance, whey protein",
+  "product_handle": "lean-muscle-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["leucine threshold", "muscle protein synthesis", "anabolic resistance", "GLP-1 protein nutrition", "sarcopenia prevention"],
+  "mentions": ["leucine", "mTORC1", "whey protein", "PDCAAS", "semaglutide", "Ozempic", "Wegovy", "branched-chain amino acids", "muscle protein synthesis"],
+  "medical_audience": "Patient",
+  "primary_topic": "protein quality leucine GLP-1 medications women over 40 muscle preservation",
+  "citations": [
+    {
+      "pmid": "23602572",
+      "title": "Evidence-Based Recommendations for Optimal Dietary Protein Intake in Older People: A Position Paper from the PROT-AGE Study Group",
+      "journal": "Journal of the American Medical Directors Association",
+      "year": 2013,
+      "study_type": "Position paper / systematic review",
+      "n": null
+    },
+    {
+      "pmid": "25556099",
+      "title": "Leucine co-ingestion improves post-prandial muscle protein accretion in elderly men",
+      "journal": "Clinical Nutrition",
+      "year": 2013,
+      "study_type": "RCT",
+      "n": 12
+    },
+    {
+      "pmid": "15044519",
+      "title": "Amino acid ingestion improves muscle protein synthesis in the young and elderly",
+      "journal": "American Journal of Physiology Endocrinology and Metabolism",
+      "year": 2004,
+      "study_type": "Controlled trial",
+      "n": 16
+    },
+    {
+      "pmid": "33567185",
+      "title": "Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1 Trial)",
+      "journal": "New England Journal of Medicine",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 1961
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s in workout clothes preparing a protein-rich meal at a kitchen counter, placing chicken breast and leafy greens into a bowl, looking healthy and energetic, photorealistic wellness lifestyle photography, bright natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s measuring a scoop of protein powder into a shaker bottle in a kitchen, wearing casual athletic wear, photorealistic wellness lifestyle photography, bright morning kitchen light, no text, no watermark",
+    "A woman in her 40s eating Greek yogurt with berries at a kitchen table, wearing casual clothes, a healthy morning breakfast scene, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark",
+    "A woman in her 40s doing resistance band exercises in her living room, wearing comfortable workout clothes, looking focused and healthy, photorealistic wellness lifestyle photography, bright indoor natural light, no text, no watermark",
+    "A woman in her 40s plating a salmon and vegetable meal at a kitchen counter, wearing casual clothes, fresh colorful vegetables around her, photorealistic wellness lifestyle photography, warm natural kitchen light, no text, no watermark"
+  ],
+  "image_query": "woman 40s protein meal kitchen workout clothes healthy",
+  "body_image_queries": [
+    "woman 40s measuring protein powder shaker kitchen",
+    "woman 40s eating Greek yogurt berries breakfast",
+    "woman 40s resistance band exercise home workout",
+    "woman 40s plating salmon vegetables kitchen healthy meal"
+  ]
+}

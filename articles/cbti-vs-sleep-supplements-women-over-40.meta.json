@@ -1,0 +1,80 @@
+{
+  "title": "CBT-I vs Sleep Supplements: Which Works Better for Women Over 40?",
+  "slug": "cbti-vs-sleep-supplements-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "CBT-I, sleep supplements, insomnia treatment, sleep therapy, magnesium glycinate, melatonin, women over 40, perimenopause insomnia, sleep quality",
+  "product_handle": "sleep-tonic",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    "CBT-I for chronic insomnia",
+    "Sleep supplements vs therapy",
+    "Insomnia treatment in midlife women",
+    "Magnesium and sleep quality",
+    "Melatonin for circadian sleep"
+  ],
+  "mentions": [
+    "CBT-I",
+    "Cognitive Behavioral Therapy for Insomnia",
+    "Magnesium glycinate",
+    "Melatonin",
+    "Phosphatidylserine",
+    "AASM",
+    "Sleep restriction therapy",
+    "Stimulus control",
+    "Digital CBT-I",
+    "Sleepio",
+    "Somryst",
+    "Sleep apnea",
+    "GABA"
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "CBT-I versus sleep supplements comparison for women over 40",
+  "citations": [
+    {
+      "pmid": "26903613",
+      "title": "Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians",
+      "journal": "Annals of Internal Medicine",
+      "year": 2016,
+      "study_type": "Clinical practice guideline / meta-analysis",
+      "n": null
+    },
+    {
+      "pmid": "23853635",
+      "title": "The effect of magnesium supplementation on primary insomnia in elderly: A double-blind placebo-controlled clinical trial",
+      "journal": "Journal of Research in Medical Sciences",
+      "year": 2012,
+      "study_type": "RCT",
+      "n": 46
+    },
+    {
+      "pmid": "28778708",
+      "title": "Waking up is the hardest thing I do all day: Sleep inertia and sleep drunkenness",
+      "journal": "Sleep Medicine Reviews",
+      "year": 2017,
+      "study_type": "Systematic review",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her mid-40s relaxing in a cozy armchair before bed with a warm mug of herbal tea, wearing a soft plush robe in a muted warm tone, gentle lamp lighting creating a calm atmosphere, a small plant and a book on the side table, photorealistic wellness lifestyle photography, warm amber lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting at a desk writing in a sleep diary journal by soft lamp light, wearing a cozy long-sleeve top, nighttime home setting, calm focused expression, photorealistic, no text",
+    "A woman in her late 40s in a comfortable bed reading a book with a bedside lamp on, wearing pajamas, glasses on, relaxed and winding-down expression, tidy bedroom with dim warm lighting, photorealistic lifestyle photography, no text",
+    "A woman in her 40s on a video call with a healthcare provider, sitting at a home desk in casual evening wear, laptop open, taking notes, engaged expression, home office setting with warm lighting, photorealistic, no text",
+    "A woman in her 40s preparing sleep supplements and a glass of water on a nightstand before bed, wearing a cozy robe, soft bedside lamp light, calm and routine evening atmosphere, photorealistic, no text"
+  ],
+  "image_query": "woman 40s relaxing evening herbal tea cozy robe",
+  "body_image_queries": [
+    "woman 40s sleep diary journal evening lamp",
+    "woman 40s reading book bed bedside lamp night",
+    "woman 40s telehealth video call home evening",
+    "woman 40s sleep supplements nightstand bedroom evening"
+  ]
+}

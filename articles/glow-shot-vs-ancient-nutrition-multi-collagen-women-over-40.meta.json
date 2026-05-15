@@ -1,0 +1,33 @@
+{
+  "title": "Happy Aging Glow Shot vs Ancient Nutrition Multi Collagen: Honest 2026 Comparison",
+  "slug": "glow-shot-vs-ancient-nutrition-multi-collagen-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "collagen, skin health, marine collagen, comparison, women over 40, glow shot, anti-aging, hyaluronic acid, vitamin C",
+  "product_handle": "glow-shot",
+  "schema_type": "MedicalWebPage",
+  "about": ["collagen supplementation", "skin elasticity", "marine collagen", "collagen types", "women's skin health after 40"],
+  "mentions": ["Happy Aging Glow Shot", "Ancient Nutrition Multi Collagen", "Type I collagen", "Type II collagen", "Type III collagen", "hyaluronic acid", "vitamin C", "liposomal delivery"],
+  "medical_audience": "Patient",
+  "primary_topic": "Collagen supplement comparison for women over 40",
+  "citations": [
+    {"pmid": "24401291", "title": "Oral supplementation of specific collagen peptides has beneficial effects on human skin physiology: a double-blind, placebo-controlled study", "journal": "Skin Pharmacology and Physiology", "year": 2014, "study_type": "RCT", "n": 69},
+    {"pmid": "28786550", "title": "Vitamin C-enriched gelatin supplementation before intermittent activity augments collagen synthesis", "journal": "Journal of the International Society of Sports Nutrition", "year": 2017, "study_type": "RCT", "n": null}
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s applying skincare in a bright bathroom, glowing healthy complexion, wearing a casual light robe, natural morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s looking at her glowing skin in a bathroom mirror, wearing a casual robe, soft morning light, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s holding a collagen supplement drink in her kitchen, smiling, wearing casual clothing, bright natural light, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s comparing two supplement bottles at a kitchen counter, reading labels carefully, wearing comfortable casual top, natural lighting, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s eating a colorful salad with fresh vegetables at a bright dining table, healthy glow, wearing a casual blouse, photorealistic wellness lifestyle photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s skincare collagen supplement wellness",
+  "body_image_queries": ["woman 40s bathroom mirror glowing skin", "woman 40s collagen drink kitchen", "woman 40s comparing supplement bottles", "woman 40s healthy salad bright kitchen"]
+}

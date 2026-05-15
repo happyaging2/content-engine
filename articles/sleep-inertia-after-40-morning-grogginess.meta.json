@@ -1,0 +1,70 @@
+{
+  "title": "Sleep Inertia After 40: Why You Wake Up Groggy and What You Can Do About It",
+  "slug": "sleep-inertia-after-40-morning-grogginess",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "sleep inertia, morning grogginess, sleep quality, perimenopause sleep, women over 40, slow-wave sleep, magnesium, sleep supplements, circadian rhythm",
+  "product_handle": "sleep-tonic",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    "Sleep inertia mechanisms",
+    "Morning grogginess after 40",
+    "Perimenopausal sleep disruption",
+    "Slow-wave sleep and hormonal changes",
+    "Magnesium and sleep quality"
+  ],
+  "mentions": [
+    "Sleep inertia",
+    "Slow-wave sleep",
+    "SWS",
+    "Adenosine",
+    "Progesterone",
+    "Estrogen",
+    "Magnesium glycinate",
+    "Phosphatidylserine",
+    "Cortisol",
+    "GABA",
+    "Sleep apnea"
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "Sleep inertia and morning grogginess in women over 40",
+  "citations": [
+    {
+      "pmid": "28778708",
+      "title": "Waking up is the hardest thing I do all day: Sleep inertia and sleep drunkenness",
+      "journal": "Sleep Medicine Reviews",
+      "year": 2017,
+      "study_type": "Systematic review",
+      "n": null
+    },
+    {
+      "pmid": "23853635",
+      "title": "The effect of magnesium supplementation on primary insomnia in elderly: A double-blind placebo-controlled clinical trial",
+      "journal": "Journal of Research in Medical Sciences",
+      "year": 2012,
+      "study_type": "RCT",
+      "n": 46
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her mid-40s waking up in a bright, airy bedroom with morning sunlight streaming through sheer curtains, stretching her arms above her head with a calm and restful expression, wearing soft cotton pajamas in a light color, white and neutral bedding, photorealistic wellness lifestyle photography, warm natural morning light, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting on the edge of her bed in the morning, wearing pajamas, looking out a sunlit window with a peaceful expression, soft white bedding, warm morning light, photorealistic, no text",
+    "A woman in her late 40s doing gentle morning stretches in a bright bedroom, wearing comfortable pajamas or loungewear, hands raised overhead, relaxed posture, natural daylight, photorealistic wellness photography, no text",
+    "A woman in her 40s holding a mug of herbal tea while standing at a sunny window in the morning, wearing a cozy robe, calm and reflective expression, warm kitchen or living room light, photorealistic, no text",
+    "A woman in her 40s stepping outside her front door in the morning, wearing a light robe or casual outfit, face tilted toward the sunlight with eyes closed, green garden background, photorealistic lifestyle photography, no text"
+  ],
+  "image_query": "woman 40s waking up morning bedroom restful",
+  "body_image_queries": [
+    "woman 40s morning bedroom sunlight peaceful",
+    "woman 40s morning stretches bedroom pajamas",
+    "woman 40s herbal tea morning window cozy",
+    "woman 40s morning sunlight outdoors garden"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Magnesium L-Threonate for Cognitive Decline After 40: Is the Premium Price Worth It?",
+  "slug": "magnesium-l-threonate-cognitive-decline-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "brain health, magnesium, magnesium l-threonate, Magtein, cognitive decline, perimenopause, brain fog, memory, sleep",
+  "product_handle": "neuro-creamer",
+  "schema_type": "MedicalWebPage",
+  "about": ["magnesium L-threonate", "cognitive decline", "brain health", "magnesium deficiency", "perimenopause brain fog"],
+  "mentions": ["Magtein", "MIT research", "Slutsky 2010", "Liu 2016", "magnesium glycinate", "NMDA receptors", "blood-brain barrier", "synaptic plasticity"],
+  "medical_audience": "Patient",
+  "primary_topic": "magnesium L-Threonate for cognitive support in women over 40",
+  "citations": [
+    {
+      "pmid": "20152934",
+      "title": "Enhancement of learning and memory by elevating brain magnesium",
+      "journal": "Neuron",
+      "year": 2010,
+      "study_type": "Animal Study",
+      "n": null
+    },
+    {
+      "pmid": "27164923",
+      "title": "Efficacy and safety of MMFS-01, a synapse density enhancer, for treating cognitive impairment in older adults: a randomized, double-blind, placebo-controlled trial",
+      "journal": "Journal of Alzheimer's Disease",
+      "year": 2016,
+      "study_type": "RCT",
+      "n": 44
+    },
+    {
+      "pmid": null,
+      "doi": "10.1007/s00394-023-03123-x",
+      "title": "Dietary magnesium intake is related to larger brain volumes and lower white matter lesions with notable differences by age and sex",
+      "journal": "European Journal of Nutrition",
+      "year": 2023,
+      "study_type": "Observational Cohort",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s reading a book in a sunlit living room with focused attention, wearing a casual blouse in a warm neutral color, sitting comfortably in an armchair by the window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a light aerobic walk outdoors in a park on a sunny morning, wearing comfortable athletic clothes in soft colors, relaxed and energized expression, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s taking supplement capsules with a glass of water at a bright kitchen table, wearing casual morning clothes, calm purposeful expression, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s journaling cognitive tracking notes at a desk with natural light, wearing a comfortable top, focused and engaged expression, photorealistic lifestyle photography, warm light, no text, no watermark"
+  ],
+  "image_query": "woman 40s reading book sunlit living room focused",
+  "body_image_queries": [
+    "woman 40s walking outdoors park morning exercise",
+    "woman 40s taking supplements capsules water kitchen",
+    "woman 40s journaling writing at desk natural light"
+  ]
+}

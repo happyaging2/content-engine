@@ -1,0 +1,33 @@
+{
+  "title": "Red Light Therapy for Women Over 40: Energy, Skin, and Inflammation Benefits Explained",
+  "slug": "red-light-therapy-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "red light therapy, photobiomodulation, mitochondria, skin collagen, women over 40, energy, NAD+, inflammation, muscle recovery",
+  "product_handle": "nad-advanced-longevity-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["red light therapy", "photobiomodulation", "mitochondrial function", "skin collagen", "cellular energy", "women's health over 40"],
+  "mentions": ["cytochrome c oxidase", "photobiomodulation", "NAD+", "ATP", "near-infrared light", "mitochondria", "collagen fibroblasts", "muscle recovery"],
+  "medical_audience": "Patient",
+  "primary_topic": "Red light therapy benefits and protocol for women over 40",
+  "citations": [
+    {"pmid": "27481613", "title": "Mechanisms and mitochondrial redox signaling in photobiomodulation", "journal": "Photochemistry and Photobiology", "year": 2018, "study_type": "Review", "n": null},
+    {"pmid": "24286286", "title": "A controlled trial to determine the efficacy of red and near-infrared light treatment in patient satisfaction, reduction of fine lines, wrinkles, skin roughness, and intradermal collagen density increase", "journal": "Photomedicine and Laser Surgery", "year": 2014, "study_type": "RCT", "n": 54}
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s sitting relaxed near a large window with warm morning sunlight streaming in, hands resting in her lap, wearing a casual comfortable top, serene and healthy expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing morning stretches near a sunny window in athletic wear, relaxed and healthy, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark",
+    "A woman in her 40s sitting calmly at a kitchen table with morning light, taking a supplement with water, wearing casual clothing, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s performing light resistance training with dumbbells in a bright home gym or living room, athletic wear, confident posture, photorealistic wellness lifestyle photography, no text, no watermark",
+    "A woman in her 40s with glowing healthy complexion sitting outdoors in warm sunlight, relaxed posture, wearing a casual top, photorealistic wellness lifestyle photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s morning light wellness energy",
+  "body_image_queries": ["woman 40s stretching sunny window morning", "woman 40s taking supplement morning kitchen", "woman 40s home workout resistance training", "woman 40s glowing skin outdoor sunlight"]
+}

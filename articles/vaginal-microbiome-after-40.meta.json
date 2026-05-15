@@ -1,0 +1,50 @@
+{
+  "title": "Vaginal Microbiome After 40: How Hormonal Changes Affect It and What Research Shows",
+  "slug": "vaginal-microbiome-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "hormones, vaginal microbiome, perimenopause, probiotics, Lactobacillus, gut health, vaginal health, menopause",
+  "product_handle": "happiest-gut",
+  "schema_type": "MedicalWebPage",
+  "about": ["vaginal microbiome", "perimenopause", "Lactobacillus", "vaginal pH", "estrogen decline"],
+  "mentions": ["Lactobacillus rhamnosus GR-1", "Lactobacillus reuteri RC-14", "vaginal estrogen", "bacterial vaginosis", "boric acid", "genitourinary syndrome of menopause"],
+  "medical_audience": "Patient",
+  "primary_topic": "vaginal microbiome changes in women over 40 and evidence-based support strategies",
+  "citations": [
+    {
+      "pmid": "27328030",
+      "title": "Menopause and the vaginal microbiome",
+      "journal": "Maturitas",
+      "year": 2016,
+      "study_type": "Literature Review",
+      "n": null
+    },
+    {
+      "pmid": "25424513",
+      "title": "Vaginal lactobacillus species and risk of cervical and vaginal infections",
+      "journal": "International Journal of STD and AIDS",
+      "year": 2014,
+      "study_type": "Observational Prospective",
+      "n": null
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s practicing a calm morning wellness routine with a cup of herbal tea in a sunlit kitchen, wearing a comfortable robe in a neutral color, relaxed and serene expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s at a gynecologist appointment in a clean professional medical office, wearing casual daywear and a paper gown over shoulders, calm and attentive expression, photorealistic lifestyle photography, natural lighting, no text, no watermark",
+    "A woman in her 40s reviewing a probiotic supplement bottle in a bright kitchen, wearing a casual blouse, reading label with focused expression, photorealistic wellness photography, warm natural lighting, no text, no watermark",
+    "A woman in her 40s preparing a colorful bowl of fermented foods including yogurt and kimchi on a kitchen counter, wearing casual home clothes, purposeful and relaxed expression, photorealistic lifestyle photography, no text, no watermark"
+  ],
+  "image_query": "woman 40s morning wellness routine herbal tea kitchen",
+  "body_image_queries": [
+    "woman 40s gynecologist appointment medical office",
+    "woman 40s reading probiotic supplement label kitchen",
+    "woman 40s preparing fermented food healthy meal"
+  ]
+}

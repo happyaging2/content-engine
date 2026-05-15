@@ -1,0 +1,60 @@
+{
+  "title": "Bovine Colostrum for Women Over 40: What the Research Says About Gut Health and Immunity",
+  "slug": "bovine-colostrum-gut-immunity-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "bovine colostrum, gut health, gut immunity, leaky gut, immunoglobulins, lactoferrin, IGF-1, women over 40",
+  "product_handle": "happiest-gut",
+  "schema_type": "MedicalWebPage",
+  "about": ["bovine colostrum", "gut barrier function", "immunoglobulins", "gut immunity", "intestinal permeability"],
+  "mentions": ["IgG", "IgA", "lactoferrin", "IGF-1", "proline-rich polypeptides", "Playford 2001", "Antonio 2001"],
+  "medical_audience": "Patient",
+  "primary_topic": "bovine colostrum gut health immunity women over 40",
+  "citations": [
+    {
+      "pmid": "11247889",
+      "title": "Bovine colostrum is a health food supplement which prevents NSAID induced gut damage",
+      "journal": "Gut",
+      "year": 2001,
+      "study_type": "RCT",
+      "n": 8
+    },
+    {
+      "pmid": "11474859",
+      "title": "The effects of bovine colostrum supplementation on body composition and exercise performance in active men and women",
+      "journal": "Nutrition",
+      "year": 2001,
+      "study_type": "RCT",
+      "n": 33
+    },
+    {
+      "pmid": "21148400",
+      "title": "The nutriceutical bovine colostrum truncates the increase in gut permeability caused by heavy exercise in athletes",
+      "journal": "American Journal of Physiology Gastrointestinal and Liver Physiology",
+      "year": 2011,
+      "study_type": "RCT",
+      "n": 16
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s drinking a morning smoothie in a sunny kitchen, wearing a relaxed casual shirt, standing at a bright kitchen counter with fresh fruit and a glass of milk nearby, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s preparing a morning wellness drink in a bright kitchen, wearing a casual linen shirt, measuring powder into a glass of water with fruit nearby, photorealistic wellness lifestyle photography, warm morning light, no text, no watermark",
+    "A woman in her 40s reviewing supplement labels at a pharmacy or health food store, wearing casual clothes, focused and thoughtful expression, photorealistic wellness lifestyle photography, soft retail lighting, no text, no watermark",
+    "A woman in her 40s stretching and doing light yoga at home after a workout, wearing comfortable athletic clothes, looking relaxed and healthy, photorealistic wellness lifestyle photography, bright natural indoor light, no text, no watermark",
+    "A woman in her 40s sitting at a kitchen table looking at her laptop, wearing casual home clothes, a wellness journal open beside her, photorealistic wellness lifestyle photography, warm natural light, no text, no watermark"
+  ],
+  "image_query": "woman 40s morning wellness drink kitchen healthy",
+  "body_image_queries": [
+    "woman 40s preparing wellness supplement drink kitchen",
+    "woman 40s reading supplement labels health store",
+    "woman 40s light yoga stretching home",
+    "woman 40s laptop wellness research kitchen"
+  ]
+}

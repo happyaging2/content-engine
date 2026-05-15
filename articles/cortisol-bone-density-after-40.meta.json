@@ -3,19 +3,38 @@
   "slug": "cortisol-bone-density-after-40",
   "author": "Happy Aging Team",
   "template_suffix": "timeline",
-  "tags": "hormones, cortisol, bone density, osteoporosis, perimenopause, stress, ashwagandha, magnesium, women over 40",
+  "tags": "hormones, bone health, cortisol, perimenopause, stress, osteoporosis, adaptogens, ashwagandha, magnesium",
   "product_handle": "nad-womens-longevity-formula",
   "schema_type": "MedicalWebPage",
-  "about": ["cortisol and bone density", "glucocorticoid-induced osteoporosis", "stress and bone loss in women", "HPA axis and skeletal health"],
-  "mentions": ["ashwagandha KSM-66", "magnesium glycinate", "resistance training", "osteoblasts", "osteoclasts", "DEXA scan", "estrogen decline", "perimenopause"],
+  "about": ["cortisol", "bone density", "glucocorticoid-induced osteoporosis", "perimenopause", "stress hormones"],
+  "mentions": ["ashwagandha KSM-66", "magnesium glycinate", "vitamin D3", "vitamin K2", "resistance training", "DEXA scan"],
   "medical_audience": "Patient",
   "primary_topic": "cortisol and bone density in women over 40",
   "citations": [
-    {"pmid": "17308863", "title": "Glucocorticoid-induced osteoporosis: pathophysiology and therapy", "journal": "Osteoporosis International", "year": 2007, "study_type": "Review", "n": null},
-    {"pmid": "10832087", "title": "Increased bone turnover in late postmenopausal women is a major determinant of osteoporosis", "journal": "Journal of Bone and Mineral Research", "year": 2000, "study_type": "Cross-sectional", "n": 130},
-    {"pmid": "23439798", "title": "A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults", "journal": "Indian Journal of Psychological Medicine", "year": 2012, "study_type": "RCT", "n": 64},
-    {"pmid": "23912325", "title": "Magnesium and osteoporosis: current state of knowledge and future research directions", "journal": "Nutrients", "year": 2013, "study_type": "Review", "n": null},
-    {"pmid": "25603795", "title": "The effects of differing resistance training modes on the preservation of bone mineral density in postmenopausal women: a meta-analysis", "journal": "Osteoporosis International", "year": 2015, "study_type": "Meta-analysis", "n": null}
+    {
+      "pmid": "17308863",
+      "title": "Glucocorticoid-induced osteoporosis: pathophysiology and therapy",
+      "journal": "Osteoporosis International",
+      "year": 2007,
+      "study_type": "Systematic Review",
+      "n": null
+    },
+    {
+      "pmid": "10832087",
+      "title": "Association of serum cortisol with bone mineral density and bone turnover markers in postmenopausal women",
+      "journal": "Journal of Bone and Mineral Research",
+      "year": 2000,
+      "study_type": "Observational Cohort",
+      "n": 200
+    },
+    {
+      "pmid": "23439798",
+      "title": "A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults",
+      "journal": "Indian Journal of Psychological Medicine",
+      "year": 2012,
+      "study_type": "RCT",
+      "n": 64
+    }
   ],
   "date_published": "2026-05-15",
   "date_modified": "2026-05-15",
@@ -24,13 +43,18 @@
   "reviewer_title": "Cardiologist & Longevity Physician",
   "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
   "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
-  "image_prompt": "A woman in her 40s doing yoga on mat in a peaceful sunlit room, wearing yoga clothes in soft neutral tones, morning light streaming through window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "image_prompt": "A woman in her 40s doing yoga on a mat in a peaceful sunlit room, wearing fitted yoga clothes in soft neutral colors, serene expression of focus and calm, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
   "body_image_prompts": [
-    "A woman in her 40s lifting weights at a gym with proper form, wearing athletic wear, focused expression, bright and motivating gym setting, photorealistic wellness photography, no text, no watermark",
-    "A woman in her 40s taking supplements with a glass of water at a kitchen counter, wearing casual blouse, natural morning light, clean countertop, photorealistic lifestyle photography, no text, no watermark",
-    "A woman in her 40s sleeping peacefully in a cool dark bedroom, wearing comfortable pajamas, serene expression, soft natural light from a bedside lamp, photorealistic wellness photography, no text, no watermark",
-    "A woman in her 40s reviewing DEXA scan results with a doctor in a clinic, wearing casual clothing, attentive and engaged, clean clinical setting with warm accents, photorealistic medical photography, no text, no watermark"
+    "A woman in her 40s performing a weighted squat in a bright home gym, wearing athletic pants and a fitted top, focused expression, natural lighting, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s practicing a slow yoga pose on a mat by a sunlit window, wearing yoga clothes in muted tones, calm and present expression, photorealistic lifestyle photography, no text, no watermark",
+    "A woman in her 40s sleeping peacefully in a comfortable bedroom with blackout curtains partially drawn, wearing a simple sleep top, soft morning light, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s preparing a nutritious meal with leafy greens and salmon at a bright kitchen counter, wearing casual home clothes, relaxed and purposeful expression, photorealistic lifestyle photography, no text, no watermark"
   ],
-  "image_query": "woman 40s yoga wellness bone health",
-  "body_image_queries": ["woman 40s weight lifting gym", "woman 40s taking supplements morning", "woman 40s sleeping peacefully bedroom", "woman 40s doctor appointment bone health"]
+  "image_query": "woman 40s yoga wellness stress relief",
+  "body_image_queries": [
+    "woman 40s resistance training home gym",
+    "woman 40s yoga pose sunlit room",
+    "woman 40s sleeping peacefully bedroom",
+    "woman 40s healthy meal preparation kitchen"
+  ]
 }

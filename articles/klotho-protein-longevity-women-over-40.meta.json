@@ -1,0 +1,77 @@
+{
+  "title": "Klotho Protein and Longevity After 40: The Aging Biomarker Women Should Know",
+  "slug": "klotho-protein-longevity-women-over-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "longevity, Klotho, aging biomarkers, NAD+, vitamin D, magnesium, cognitive aging, bone health, women over 40, perimenopause",
+  "product_handle": "nad-advanced-longevity-formula",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    "Klotho protein and aging",
+    "Longevity biomarkers in women",
+    "Cognitive aging after 40",
+    "Bone density and hormonal changes",
+    "Cardiovascular aging in women"
+  ],
+  "mentions": [
+    "Klotho protein",
+    "KL gene",
+    "FGF23",
+    "Vitamin D",
+    "Magnesium",
+    "SIRT1",
+    "NAD+ precursors",
+    "NMN",
+    "Perimenopause",
+    "Arterial stiffness"
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "Klotho protein and longevity strategies for women over 40",
+  "citations": [
+    {
+      "pmid": "16123266",
+      "title": "Suppression of Aging in Mice by the Hormone Klotho",
+      "journal": "Science",
+      "year": 2005,
+      "study_type": "Animal study",
+      "n": null
+    },
+    {
+      "pmid": "30688659",
+      "title": "Klotho: A longevity gene and a cognitive biomarker",
+      "journal": "Journal of Clinical Investigation",
+      "year": 2019,
+      "study_type": "Observational cohort",
+      "n": null
+    },
+    {
+      "pmid": "33950804",
+      "title": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women",
+      "journal": "Science",
+      "year": 2021,
+      "study_type": "RCT",
+      "n": 25
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her mid-40s doing gentle yoga in a sunlit garden, wearing fitted yoga pants and a flowy athletic top in earth tones, surrounded by green plants and flowers, relaxed and grounded expression, golden morning light, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s jogging along a tree-lined path in a park, wearing athletic leggings and a fitted zip-up jacket, healthy and energized expression, soft morning light filtering through trees, photorealistic, no text",
+    "A woman in her late 40s discussing health results with a female physician in a modern clinic, wearing a casual blazer, both looking at a tablet screen, professional and reassuring atmosphere, photorealistic, no text",
+    "A woman in her 40s preparing vitamin supplements and a glass of water at a kitchen counter, wearing a comfortable cardigan, organized supplement bottles visible, bright natural light, photorealistic wellness photography, no text",
+    "A woman in her 40s doing weight-bearing exercises with dumbbells in a home gym, wearing athletic leggings and a sports top, focused and strong, good natural lighting, photorealistic, no text"
+  ],
+  "image_query": "woman 40s yoga garden longevity wellness",
+  "body_image_queries": [
+    "woman 40s jogging park morning exercise",
+    "woman 40s doctor health consultation clinic",
+    "woman 40s supplements vitamins kitchen morning",
+    "woman 40s strength training home gym dumbbells"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Natural Progesterone Cream After 40: What the Research Actually Shows",
+  "slug": "natural-progesterone-cream-after-40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "tags": "hormones, progesterone, perimenopause, bioidentical hormones, wild yam, bone density, HRT, hormone balance",
+  "product_handle": "nad-womens-longevity-formula",
+  "schema_type": "MedicalWebPage",
+  "about": ["natural progesterone cream", "bioidentical progesterone", "wild yam cream", "perimenopause", "hormone support"],
+  "mentions": ["USP progesterone", "diosgenin", "Prometrium", "oral micronized progesterone", "Leonetti study", "transdermal progesterone"],
+  "medical_audience": "Patient",
+  "primary_topic": "natural progesterone cream evidence for women over 40",
+  "citations": [
+    {
+      "pmid": "17574800",
+      "title": "Systemic absorption of progesterone from Progest cream in postmenopausal women",
+      "journal": "Maturitas",
+      "year": 2007,
+      "study_type": "Literature Review",
+      "n": null
+    },
+    {
+      "pmid": "10432133",
+      "title": "Transdermal progesterone cream for vasomotor symptoms and postmenopausal bone loss",
+      "journal": "Obstetrics and Gynecology",
+      "year": 1999,
+      "study_type": "RCT",
+      "n": 102
+    }
+  ],
+  "date_published": "2026-05-15",
+  "date_modified": "2026-05-15",
+  "date_reviewed": "2026-05-15",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "image_prompt": "A woman in her 40s applying skincare cream in a bright bathroom with natural light coming through a frosted window, wearing a casual cotton top in a soft color, calm and thoughtful expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting at a consultation with a female doctor in a clean medical office, wearing a casual blouse, attentive and engaged expression, photorealistic lifestyle photography, natural lighting, no text, no watermark",
+    "A woman in her 40s reviewing a prescription bottle and reading a label carefully at a pharmacy counter, wearing a comfortable cardigan, focused expression, photorealistic wellness photography, no text, no watermark",
+    "A woman in her 40s journaling symptoms in a notebook at a kitchen table with a cup of herbal tea, wearing a comfortable home outfit, thoughtful expression, photorealistic lifestyle photography, warm light, no text, no watermark",
+    "A woman in her 40s sleeping peacefully in a well-arranged bedroom, wearing a soft sleep top, calm restful expression, photorealistic wellness photography, soft ambient light, no text, no watermark"
+  ],
+  "image_query": "woman 40s skincare wellness bathroom morning routine",
+  "body_image_queries": [
+    "woman 40s doctor consultation medical office",
+    "woman 40s reading supplement label pharmacy",
+    "woman 40s journaling symptoms health tracking",
+    "woman 40s restful sleep bedroom"
+  ]
+}
