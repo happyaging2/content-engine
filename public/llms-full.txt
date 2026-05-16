@@ -231,6 +231,31 @@ A: Alpha-GPC is generally well tolerated at doses of 300-600 mg per day. It is u
 Cite: https://happyaging.com/blogs/news/acetylcholine-memory-after-40
 
 
+## Adaptogens for Perimenopause: Which Ones Actually Help After 40?
+Source: https://happyaging.com/blogs/news/adaptogens-perimenopause-which-help-after-40
+Entities: Adaptogens, Perimenopause, HPA axis, Hormonal balance, Stress resilience, Women over 40
+
+### Q: Which adaptogen is best for hot flashes?
+A: Among the adaptogens studied, ashwagandha (KSM-66) has the most direct evidence for reducing hot flash frequency in perimenopausal women, from a 2021 RCT specifically in this population. However, the reduction observed was moderate, not elimination. Ashwagandha appears to help with the sleep disruption and stress component that amplifies hot flash impact. For more severe vasomotor symptoms, hormone therapy has significantly stronger evidence and should be considered through conversation with your physician.
+Cite: https://happyaging.com/blogs/news/adaptogens-perimenopause-which-help-after-40
+
+### Q: Can I take multiple adaptogens at once?
+A: Combining adaptogens is common in traditional medicine systems and is not generally contraindicated. However, stacking multiple adaptogens makes it difficult to know which one is working if you experience a benefit, and which one might be causing any side effects. Starting with one adaptogen (ashwagandha is the best-supported first choice for perimenopause) and assessing effect over 6 to 8 weeks before adding another is a more methodical approach that also controls cost.
+Cite: https://happyaging.com/blogs/news/adaptogens-perimenopause-which-help-after-40
+
+### Q: How long do adaptogens take to work?
+A: Adaptogens are not acute interventions. They work gradually by modulating the HPA axis over time. Most RCTs measure effects at 6 to 12 weeks. Expecting significant changes within the first two weeks is unrealistic. A fair assessment period is 8 to 12 weeks of consistent daily use at the appropriate dose. If you have not noticed any subjective benefit by 12 weeks, that adaptogen may not be the right fit for your physiology.
+Cite: https://happyaging.com/blogs/news/adaptogens-perimenopause-which-help-after-40
+
+### Q: Are adaptogens safe to take long-term?
+A: Most of the adaptogens discussed here have traditional use histories spanning centuries and modern safety studies generally showing good tolerability for 12-week trial periods, which is the typical RCT duration. Long-term safety data beyond 12 months is limited for most. Ashwagandha and rhodiola are the best-studied for safety. Taking breaks (for example, 5 days on, 2 days off, or cycling off for one month per quarter) is a common approach in traditional herbal medicine to prevent tolerance, though there is no strong clinical evidence specifically requiring this for modern standardized extracts.
+Cite: https://happyaging.com/blogs/news/adaptogens-perimenopause-which-help-after-40
+
+### Q: Is ashwagandha safe for women with thyroid conditions?
+A: Ashwagandha may stimulate thyroid hormone production, which could be relevant for women with thyroid conditions or who take thyroid medications. The clinical significance of this interaction varies by individual. If you have Hashimoto's hypothyroidism and are on levothyroxine, discuss ashwagandha with your physician before starting. For women with hyperthyroidism, ashwagandha is generally not recommended without medical supervision. Women with well-managed thyroid conditions should discuss their specific situation with their prescribing physician.
+Cite: https://happyaging.com/blogs/news/adaptogens-perimenopause-which-help-after-40
+
+
 ## Adrenal Fatigue After 40: Signs, Causes, and Natural Recovery
 Source: https://happyaging.com/blogs/news/adrenal-fatigue-after-40
 
@@ -7465,6 +7490,35 @@ Cite: https://happyaging.com/blogs/news/nad-advanced-vs-tru-niagen-women-over-40
 ### Q: Is Tru Niagen worth the price?
 A: For a single-ingredient NR supplement, Tru Niagen is well-priced relative to alternatives. It has the cleanest evidence base for NR specifically. If NR is the specific precursor you want, Tru Niagen is one of the most credible options available.
 Cite: https://happyaging.com/blogs/news/nad-advanced-vs-tru-niagen-women-over-40
+
+
+## NAD+ and Cognitive Decline After 40: What the Research Says About Memory and Focus
+Source: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
+Entities: NAD+, Cognitive decline, Brain health, NMN supplementation, Women's longevity, Perimenopause
+
+### Q: What Is NAD+ and Why Does Your Brain Need It?
+A: NAD+ stands for nicotinamide adenine dinucleotide. It is a coenzyme present in every cell in your body, playing a central role in converting nutrients into cellular energy (ATP) through the process of oxidative phosphorylation. But NAD+ does far more than just fuel energy production. It is a required cofactor for a family of proteins called sirtuins (SIRT1-SIRT7), which regulate gene expression, DNA repair, inflammation, and cellular stress responses. It is also the substrate for PARP enzymes (poly ADP-ribose polymerases), which repair DNA damage.
+Cite: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
+
+### Q: Does NAD+ supplementation help with brain fog during perimenopause?
+A: Brain fog during perimenopause is multi-factorial: sleep disruption, hormonal fluctuations, stress, and NAD+ decline all contribute. NAD+ precursor supplementation addresses one real component of this picture but is unlikely to fully resolve brain fog on its own. In Happy Aging's view, a comprehensive approach (sleep optimization, stress management, regular exercise, and NAD+ support) is more likely to produce meaningful improvement than any single intervention. Many women report subjective improvements in mental clarity with NAD+ precursor supplementation, though placebo-controlled cognitive outcome data in perimenopausal women specifically is still limited.
+Cite: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
+
+### Q: What is the difference between NMN, NR, and NMNH for brain health?
+A: NMN (nicotinamide mononucleotide), NR (nicotinamide riboside), and NMNH (reduced NMN) are all NAD+ precursors that follow slightly different conversion pathways to raise cellular NAD+ levels. NMN is closer to NAD+ in the biosynthetic pathway and has been the primary subject of the human clinical trials published to date. NR has the longest human clinical trial history for NAD+ elevation in tissues. NMNH is a newer, reduced form that may raise NAD+ more efficiently in some contexts. For brain health specifically, none of these has been definitively established as superior over the others in human cognitive endpoint trials. Current best evidence supports NMN and NR as effective at raising NAD+ systemically.
+Cite: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
+
+### Q: How much NAD+ precursor should a woman over 40 take?
+A: The human trials have used doses ranging from 250 mg to 1,000 mg of NMN or NR per day. The Yoshino et al. (2021) Science trial used 250 mg of NMN daily in postmenopausal women and showed significant NAD+ metabolome increases. Higher doses may be used in some protocols. There is no single established optimal dose for cognitive support specifically. A dose in the 250 to 500 mg per day range of a quality NMN or NR product is a reasonable starting point aligned with the clinical trial evidence.
+Cite: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
+
+### Q: Can I get enough NAD+ precursors from food?
+A: Dietary NAD+ precursors include niacin (vitamin B3) in meat, fish, and mushrooms, and tryptophan in most protein-containing foods. These provide baseline NAD+ support, but at amounts that are likely insufficient to meaningfully counteract the age-related decline in NAD+ levels. The doses used in clinical trials (250 to 1,000 mg NMN or NR) are far above what can be obtained from a normal diet. This is why targeted supplementation is necessary for those seeking to actively support their NAD+ levels in midlife.
+Cite: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
+
+### Q: Is there any risk to taking NAD+ precursor supplements?
+A: NMN and NR have good safety records in the human trials conducted to date, with no serious adverse events reported at typical supplement doses. Mild side effects including gastrointestinal discomfort and flushing have been noted rarely, typically at higher doses. Long-term safety data beyond 12 months is limited. Women who take medications or have cancer history should discuss with their physician before starting, as NAD+ metabolism intersects with cell proliferation pathways. For healthy women over 40, the risk-benefit profile appears favorable based on current data.
+Cite: https://happyaging.com/blogs/news/nad-cognition-memory-women-over-40
 
 
 ## NAD+ and DNA Repair After 40: What the Science Actually Shows
