@@ -3254,6 +3254,35 @@ A: Nicotinamide riboside is a naturally occurring form of vitamin B3. It belongs
 Cite: https://happyaging.com/blogs/news/does-nr-nicotinamide-riboside-work-after-40
 
 
+## Does PQQ Actually Work? An Honest Review of This Mitochondria Supplement for Women Over 40
+Source: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+Entities: PQQ supplementation review, Mitochondrial biogenesis in aging, CoQ10 vs PQQ for energy
+
+### Q: What Is PQQ?
+A: Pyrroloquinoline quinone is a small molecule that functions as a redox cofactor in biological reactions. Some researchers have called it a "vitamin-like" compound, though it has not been officially classified as a vitamin. It is found in trace amounts in a range of foods. Natto (fermented soybeans) contains the highest concentrations among commonly tested foods. Parsley, green peppers, kiwi fruit, and green tea also contain measurable amounts. Human breast milk contains PQQ, which has led some researchers to suggest it may play a developmental role.
+Cite: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+
+### Q: Does PQQ actually create new mitochondria in humans?
+A: In animal studies, yes, quite convincingly. In humans, this has not been directly tested at the cellular level in a published study. The one human RCT used self-reported outcomes like fatigue and sleep quality, not mitochondrial biogenesis markers. The mechanism is plausible and the animal data is strong, but human confirmation at the cellular level is still missing.
+Cite: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+
+### Q: Is PQQ safe to take?
+A: Based on available evidence, PQQ appears to be safe at doses used in the human trial (20 mg/day for 8 weeks). No serious adverse effects were reported. Long-term safety data in humans is not available because long-term human studies have not been conducted. The safety profile appears favorable, but this should be understood as "no red flags found yet" rather than "confirmed safe long-term."
+Cite: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+
+### Q: Can I get enough PQQ from food?
+A: Food sources of PQQ include natto, parsley, green peppers, kiwi, and green tea. The concentrations in these foods are much lower than the 20 mg dose used in the human trial. To get supplemental-dose PQQ from food alone would require consuming impractical quantities. Supplementation is the only realistic route to the doses studied in research.
+Cite: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+
+### Q: Why is CoQ10 recommended over PQQ for women over 40?
+A: CoQ10 has been tested in dozens of human randomized controlled trials across multiple populations and health conditions. PQQ has one human RCT with 17 participants. CoQ10 also has a direct, well-established mechanism in mitochondrial energy production. The evidence gap between the two is substantial. Both are interesting, but CoQ10 is the evidence-based choice as a foundation.
+Cite: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+
+### Q: Should I take PQQ and CoQ10 together?
+A: There is no known interaction between PQQ and CoQ10, and some practitioners do combine them. Some early research suggests they may have complementary mechanisms: CoQ10 supports existing mitochondria's energy production, while PQQ may support mitochondrial biogenesis. This combination is a reasonable strategy if budget allows, with CoQ10 as the proven foundation and PQQ as an experimental addition.
+Cite: https://happyaging.com/blogs/news/pqq-mitochondria-energy-women-over-40
+
+
 ## Does PQQ Actually Work? What Women Over 40 Need to Know About This Brain Supplement
 Source: https://happyaging.com/blogs/news/does-pqq-work-brain-energy-after-40
 Entities: Pyrroloquinoline Quinone, mitochondrial biogenesis, cognitive function
