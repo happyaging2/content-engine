@@ -1,23 +1,41 @@
 {
-  "title": "Adaptogens for Perimenopause: Which Ones Actually Help",
+  "title": "Adaptogens for Perimenopause: Which Ones Actually Help After 40?",
   "slug": "adaptogens-perimenopause-which-help-after-40",
-  "tags": "adaptogens, perimenopause, hormones, stress, women over 40",
-  "product_handle": "calm-tonic",
   "author": "Happy Aging Team",
+  "tags": "adaptogens, perimenopause, ashwagandha, rhodiola, maca, shatavari, holy basil, hormones, women over 40, HPA axis, stress",
+  "product_handle": "nad-women-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-womens-longevity-formula.jpg",
   "cluster": "Hormones",
-  "image_query": "woman calm nature garden wellness midlife",
-  "body_image_queries": [
-    "woman herbal tea outdoor morning calm nature",
-    "woman yoga meditation peaceful retreat",
-    "woman healthy lifestyle active outdoors midlife"
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-hormones",
+  "schema_type": "MedicalWebPage",
+  "about": ["Adaptogens", "Perimenopause", "HPA axis", "Hormonal balance", "Stress resilience", "Women over 40"],
+  "mentions": ["Ashwagandha", "KSM-66", "Rhodiola rosea", "Maca root", "Holy Basil", "Shatavari", "Cortisol", "HPO axis", "Hot flashes", "Withanolides"],
+  "medical_audience": "Patient",
+  "primary_topic": "Adaptogen supplementation for perimenopausal symptom support in women over 40",
+  "citations": [
+    {"citation": "Pratte MA, et al. An alternative treatment for anxiety: a systematic review of human trial results reported for the Ayurvedic herb ashwagandha (Withania somnifera). J Altern Complement Med. 2014. PMID: 25405876"},
+    {"citation": "Hung SK, et al. The effectiveness and efficacy of Rhodiola rosea L.: A systematic review of randomized clinical trials. Phytomedicine. 2011. PMID: 21036578"}
   ],
-  "image_prompt": "A woman in her 40s sitting peacefully in a sunlit garden with herbal plants around her, wearing a comfortable linen outfit, serene expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "image_prompt": "A woman in her 40s sitting peacefully in a sunlit garden doing morning meditation, wearing a soft dusty rose linen top and ivory wide-leg pants, seated on a cushion surrounded by blooming herbs and greenery, serene and grounded expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
   "body_image_prompts": [
-    "A woman in her 40s holding a warm mug of herbal tea while sitting outdoors on a porch, wearing casual clothes, relaxed and content, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
-    "A woman in her 40s doing yoga in a peaceful outdoor setting with trees, wearing yoga pants and a top, focused and calm, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
-    "A woman in her 40s walking through a forest path with trees, wearing comfortable clothes, healthy and energetic, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+    "A woman in her 40s practicing gentle outdoor yoga on a wooden deck, wearing a fitted sage green long-sleeve athletic top and dark charcoal leggings, arms extended in a peaceful pose, soft early morning light, dew on surrounding plants, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s steeping herbal tea from dried plant herbs at a rustic kitchen counter, wearing a warm caramel-toned linen apron over a white top, focused and calm expression, ceramic bowls of dried herbs and botanicals visible, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reading a book in a bright sunlit living room corner, wearing a relaxed periwinkle blue cardigan and cream trousers, feet tucked up on a cozy armchair, serene and engaged expression, soft afternoon light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a calm evening walk through a tree-lined neighborhood street in autumn, wearing a burgundy wool coat and fitted dark pants, relaxed contented expression, golden hour light filtering through amber leaves, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
   ],
-  "needs_refresh": true,
-  "refresh_reason": "missing date_reviewed; no structured citations; no `about` entities; no reviewer_url",
-  "refresh_flagged_on": "2026-05-11"
+  "image_query": "woman over 40 adaptogen herbal wellness perimenopause calm",
+  "body_image_queries": [
+    "woman 40s outdoor yoga morning deck peaceful gentle",
+    "woman over 40 herbal tea botanical kitchen wellness",
+    "woman 40s reading book sunlit living room relaxed",
+    "woman 40s autumn evening walk neighborhood golden light"
+  ]
 }

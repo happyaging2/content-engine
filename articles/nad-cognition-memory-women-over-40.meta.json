@@ -1,0 +1,41 @@
+{
+  "title": "NAD+ and Cognitive Decline After 40: What the Research Says About Memory and Focus",
+  "slug": "nad-cognition-memory-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "NAD+, cognitive decline, memory, brain health, NMN, NR, NMNH, women over 40, perimenopause, brain fog, sirtuins",
+  "product_handle": "nad-women-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-womens-longevity-formula.jpg",
+  "cluster": "Brain/Longevity",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-brain",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+", "Cognitive decline", "Brain health", "NMN supplementation", "Women's longevity", "Perimenopause"],
+  "mentions": ["SIRT1", "SIRT3", "PARP enzymes", "CD38", "NMN", "NR", "NMNH", "Amyloid", "Brain fog", "Glymphatic system", "Estrogen-NAD+ interaction"],
+  "medical_audience": "Patient",
+  "primary_topic": "NAD+ precursor supplementation for brain health and cognitive support in women over 40",
+  "citations": [
+    {"citation": "Yoshino M, et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021. PMID: 34730967"},
+    {"citation": "Elhassan YS, et al. Nicotinamide Riboside Augments the Aged Human Skeletal Muscle NAD+ Metabolome and Induces Transcriptomic and Anti-inflammatory Signatures. Cell Rep. 2019. PMID: 31533038"}
+  ],
+  "image_prompt": "A woman in her 40s reading a book in a bright sunlit study, wearing a smart navy blazer over a white top, seated at a wooden desk with a cup of tea, focused and engaged expression, warm morning light through large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s writing in a journal at a clean bright kitchen table, wearing a soft grey cashmere sweater, a cup of green tea and a small supplement bottle visible nearby, thoughtful concentrated expression, golden morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s running on a tree-lined path in a city park, wearing a fitted white athletic top and navy running tights, energized confident expression, bright mid-morning sunlight, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s practicing mindful breathing in a quiet bedroom, wearing a soft cream-colored robe, seated on the edge of a neatly made bed with eyes gently closed and hands relaxed on knees, early morning diffused light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s engaged in a focused conversation with a friend over coffee in a bright cafe, wearing a patterned silk blouse in soft blues and greens, animated and sharp expression showing mental engagement, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 brain health memory focus reading wellness",
+  "body_image_queries": [
+    "woman 40s writing journal morning light kitchen focused",
+    "woman over 40 running park morning athletic energized",
+    "woman 40s mindful breathing bedroom morning calm meditation",
+    "woman 40s engaged conversation coffee cafe bright focused"
+  ]
+}
