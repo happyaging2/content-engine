@@ -1,0 +1,41 @@
+{
+  "title": "Spermidine and Autophagy After 40: An Honest Review of the Evidence",
+  "slug": "spermidine-autophagy-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "spermidine, autophagy, longevity, cellular health, women over 40, anti-aging, brain health, polyamines",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced.jpg",
+  "cluster": "Longevity",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
+  "schema_type": "MedicalWebPage",
+  "about": ["Spermidine", "Autophagy", "Cellular longevity", "Women's health after 40", "Cognitive health"],
+  "mentions": ["EP300 inhibition", "mTOR pathway", "Wheat germ", "NMN", "Resveratrol", "Senescence", "Cardioprotection", "Memory"],
+  "medical_audience": "Patient",
+  "primary_topic": "Spermidine supplementation and autophagy for cellular longevity in women over 40",
+  "citations": [
+    {"citation": "Madeo F, et al. Spermidine in health and disease. Science. 2018. PMID: 29569166"},
+    {"citation": "Eisenberg T, et al. Cardioprotection and lifespan extension by the natural polyamine spermidine. Nat Med. 2016. PMID: 27775706"}
+  ],
+  "image_prompt": "A woman in her 40s stretching at sunrise on a wooden deck overlooking a peaceful garden, wearing a fitted light blue athletic top and dark yoga pants, arms raised in a full-body stretch, golden morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s jogging along a tree-lined path in a park, wearing a light grey running jacket and fitted black pants, confident energized expression, bright morning sunlight filtering through trees, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s writing in a health journal at a sunlit kitchen table, wearing a relaxed navy blue top, cup of green tea beside her, organized supplements visible on a nearby shelf, focused and thoughtful expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a bowl of whole grains and vegetables in a modern kitchen, wearing a warm terracotta-colored blouse, fresh wheat germ and mushrooms visible on the counter, calm satisfied expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a mindful cool-down stretch on a yoga mat outdoors in a backyard, wearing a soft green athletic set, surrounded by greenery and late afternoon sunlight, serene and grounded expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 longevity healthy lifestyle cellular wellness",
+  "body_image_queries": [
+    "woman 40s jogging park morning light energized active",
+    "woman over 40 health journal supplements kitchen organized",
+    "woman 40s preparing whole grains healthy meal kitchen",
+    "woman 40s outdoor yoga cool-down stretch backyard garden"
+  ]
+}

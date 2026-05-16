@@ -1,0 +1,39 @@
+{
+  "title": "UTI Recurrence After Menopause: A Prevention Protocol for Women Over 40",
+  "slug": "uti-prevention-after-menopause",
+  "author": "Happy Aging Team",
+  "tags": "UTI prevention, recurrent UTI, menopause, women over 40, D-mannose, vaginal microbiome, Lactobacillus, cranberry, probiotics, urogenital health",
+  "product_handle": "happiest-gut",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/happiest-gut.jpg",
+  "cluster": "Immunity/Hormones",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-hormones",
+  "schema_type": "MedicalWebPage",
+  "about": ["Recurrent UTI prevention after menopause", "Vaginal microbiome and urinary health", "Genitourinary syndrome of menopause"],
+  "mentions": ["D-mannose", "Cranberry PACs", "Lactobacillus rhamnosus GG", "Topical estrogen", "E. coli fimbriae", "Gut-vaginal microbiome axis"],
+  "medical_audience": "Patient",
+  "primary_topic": "Evidence-based prevention protocol for recurrent UTIs in postmenopausal women",
+  "citations": [
+    {"citation": "Foxman B. Epidemiology of urinary tract infections: incidence, morbidity, and economic costs. Am J Med. 2002. PMID: 12113866"},
+    {"citation": "Stapleton AE. The vaginal microbiota and urinary tract infection. Microbiol Spectr. 2016. PMID: 27337453"}
+  ],
+  "image_prompt": "A woman in her 40s drinking a large glass of water in a bright cozy kitchen with fresh herbs on the windowsill, wearing a soft floral blouse, serene and healthy expression, photorealistic wellness lifestyle photography, warm morning natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s preparing a colorful gut-healthy meal with fermented vegetables and leafy greens at a kitchen counter, wearing a light blue linen apron, warm afternoon light, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a physician's office consultation desk with a calm and engaged expression, wearing a soft teal blouse, listening to a healthcare provider across the desk, photorealistic wellness lifestyle photography, warm clinic lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking through a farmers market selecting fresh produce with a reusable tote bag, wearing a comfortable striped sundress, relaxed and smiling, photorealistic wellness lifestyle photography, bright outdoor natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 drinking water hydration wellness kitchen",
+  "body_image_queries": [
+    "woman preparing healthy fermented food gut health kitchen",
+    "woman doctor consultation healthcare appointment",
+    "woman farmers market fresh produce shopping"
+  ]
+}
