@@ -1,0 +1,41 @@
+{
+  "title": "Magnesium Glycinate vs Magnesium L-Threonate for Sleep After 40: What the Research Says",
+  "slug": "magnesium-glycinate-vs-threonate-sleep-after-40",
+  "author": "Happy Aging Team",
+  "tags": "magnesium, sleep, magnesium glycinate, magnesium l-threonate, women over 40, insomnia, sleep quality, perimenopause, magnesium forms, GABA, cognitive support",
+  "product_handle": "sleep-tonic",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/sleep-tonic.jpg",
+  "cluster": "Sleep",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-sleep",
+  "schema_type": "MedicalWebPage",
+  "about": ["Magnesium glycinate for sleep", "Magnesium L-threonate for cognition", "Magnesium deficiency in women over 40"],
+  "mentions": ["GABA receptors", "NMDA receptors", "blood-brain barrier", "perimenopause", "magnesium bioavailability", "Magtein"],
+  "medical_audience": "Patient",
+  "primary_topic": "Magnesium forms comparison for sleep and cognition in women over 40",
+  "citations": [
+    {"citation": "Abbasi B, et al. The effect of magnesium supplementation on primary insomnia in elderly: A double-blind placebo-controlled clinical trial. J Res Med Sci. 2012. PMID: 23853635"},
+    {"citation": "Slutsky I, et al. Enhancement of learning and memory by elevating brain magnesium. Neuron. 2010. PMID: 20132384"}
+  ],
+  "image_prompt": "A woman in her 40s relaxing in bed reading a book before sleep, wearing a soft cotton pajama set, in a warmly lit cozy bedroom with natural wood accents and white bedding, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s standing in a bright kitchen in the morning, wearing a linen blouse and jeans, holding a glass of water with a supplement capsule in her palm, looking calm and rested, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a gentle evening yoga stretch on a mat in a softly lit living room, wearing a fitted athletic long-sleeve top and yoga pants, surrounded by candles and soft cushions, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a wooden desk with a journal and herbal tea, wearing a cozy cardigan, in a calm home office with warm lamp light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s waking up refreshed in a bright sunlit bedroom, wearing a soft sleep shirt, stretching her arms upward with a relaxed smile, white linen bedding, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 sleeping peacefully in bed",
+  "body_image_queries": [
+    "woman taking magnesium supplement morning",
+    "woman doing evening yoga at home",
+    "woman writing in journal with herbal tea at desk",
+    "woman waking up refreshed in sunny bedroom"
+  ]
+}

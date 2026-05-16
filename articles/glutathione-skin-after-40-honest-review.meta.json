@@ -1,0 +1,41 @@
+{
+  "title": "Glutathione for Skin After 40: An Honest Review of the Evidence",
+  "slug": "glutathione-skin-after-40-honest-review",
+  "author": "Happy Aging Team",
+  "tags": "glutathione, skin health, antioxidants, women over 40, skin brightening, vitamin C, NAC, anti-aging skin",
+  "product_handle": "glow-shot",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/glow-shot.jpg",
+  "cluster": "Skin",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
+  "schema_type": "MedicalWebPage",
+  "about": ["glutathione supplementation", "skin brightening after 40", "antioxidant defense and aging"],
+  "mentions": ["N-acetylcysteine", "vitamin C", "selenium", "alpha-lipoic acid", "tyrosinase", "melanin index"],
+  "medical_audience": "Patient",
+  "primary_topic": "Glutathione for skin health in women over 40",
+  "citations": [
+    {"citation": "Richie JP, et al. Randomized controlled trial of oral glutathione supplementation on body stores of glutathione. Eur J Nutr. 2015. PMID: 25122648"},
+    {"citation": "Sonthalia S, et al. Glutathione as a skin-lightening agent: Facts, myths, evidence and controversies. Indian Dermatol Online J. 2016. PMID: 27559499"}
+  ],
+  "image_prompt": "A woman in her 40s examining her skin in a well-lit bathroom mirror with a warm smile, wearing a light cotton robe, bright natural morning light streaming through the window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s applying vitamin C serum to her face in a sunlit bathroom, wearing a crisp white blouse, organized skincare products on the counter beside her, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a fresh green smoothie in a modern kitchen, wearing a casual linen shirt, vegetables and citrus fruits spread across the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a wooden desk reading supplement labels carefully, wearing a relaxed navy sweater, soft afternoon light from a nearby window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s outdoors on a morning walk wearing sunscreen and a wide-brimmed hat, dressed in a light athletic jacket and leggings, tree-lined suburban path bathed in soft sunlight, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman 40s skincare antioxidant routine",
+  "body_image_queries": [
+    "woman applying face serum morning routine",
+    "woman preparing green smoothie healthy kitchen",
+    "woman reading supplement label carefully",
+    "woman walking outdoors sun protection hat"
+  ]
+}

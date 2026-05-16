@@ -1,0 +1,41 @@
+{
+  "title": "Quercetin for Immunity and Inflammation After 40: What the Research Actually Shows",
+  "slug": "quercetin-immunity-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "quercetin, immunity, inflammation, inflammaging, antioxidants, flavonoids, senolytic, women over 40, longevity",
+  "product_handle": "nad-women-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-womens-longevity-formula.jpg",
+  "cluster": "Immunity/Longevity",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
+  "schema_type": "MedicalWebPage",
+  "about": ["quercetin supplementation", "inflammation after 40", "senolytic compounds", "immune health women"],
+  "mentions": ["quercetin", "flavonoids", "COX-2", "5-LOX", "histamine", "senescent cells", "inflammaging", "SASP", "bromelain", "vitamin C"],
+  "medical_audience": "Patient",
+  "primary_topic": "Quercetin for immunity and inflammation in women over 40",
+  "citations": [
+    {"citation": "Li Y, et al. Quercetin, Inflammation and Immunity. Nutrients. 2016. PMID: 26927161"},
+    {"citation": "Zhu Y, et al. The Achilles' heel of senescent cells: from transcriptome to senolytic drugs. Aging Cell. 2015. PMID: 25754370"}
+  ],
+  "image_prompt": "A woman in her 40s drinking herbal tea in a cozy sunlit kitchen, wearing a soft cream-colored knit sweater, surrounded by fresh apples and red onions on the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s walking through a farmers market selecting fresh produce, wearing a light olive linen shirt and dark jeans, outdoor morning light with colorful vegetable stalls in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a colorful salad with kale and red onions in a bright modern kitchen, wearing a striped apron over a white blouse, focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a kitchen table reviewing supplement bottles with reading glasses on, wearing a navy blue cardigan, organized wellness items on the table, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s stretching her arms overhead in a sun-filled living room, wearing light gray athletic wear, relaxed and energized expression, morning light streaming through large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman 40s healthy eating antioxidants kitchen",
+  "body_image_queries": [
+    "woman 40s farmers market fresh vegetables",
+    "woman 40s preparing salad kale kitchen",
+    "woman 40s reviewing supplements kitchen table",
+    "woman 40s morning stretch living room"
+  ]
+}
