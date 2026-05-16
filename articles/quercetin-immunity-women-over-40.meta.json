@@ -16,26 +16,26 @@
   "template_suffix": "timeline",
   "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
   "schema_type": "MedicalWebPage",
-  "about": ["quercetin supplementation", "inflammation after 40", "senolytic compounds", "immune health women"],
-  "mentions": ["quercetin", "flavonoids", "COX-2", "5-LOX", "histamine", "senescent cells", "inflammaging", "SASP", "bromelain", "vitamin C"],
+  "about": ["Quercetin", "Inflammation", "Senolytic compounds", "Immune function", "Women's longevity"],
+  "mentions": ["COX-2 inhibition", "5-LOX inhibition", "Inflammaging", "Senescent cells", "Mast cell stabilization", "Bioavailability", "Bromelain", "NAD+"],
   "medical_audience": "Patient",
-  "primary_topic": "Quercetin for immunity and inflammation in women over 40",
+  "primary_topic": "Quercetin supplementation for immune and inflammation support in women over 40",
   "citations": [
     {"citation": "Li Y, et al. Quercetin, Inflammation and Immunity. Nutrients. 2016. PMID: 26927161"},
     {"citation": "Zhu Y, et al. The Achilles' heel of senescent cells: from transcriptome to senolytic drugs. Aging Cell. 2015. PMID: 25754370"}
   ],
-  "image_prompt": "A woman in her 40s drinking herbal tea in a cozy sunlit kitchen, wearing a soft cream-colored knit sweater, surrounded by fresh apples and red onions on the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "image_prompt": "A woman in her 40s drinking herbal tea at a sunlit kitchen counter, wearing a soft cream linen blouse, relaxed home setting with fresh herbs on the windowsill, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
   "body_image_prompts": [
-    "A woman in her 40s walking through a farmers market selecting fresh produce, wearing a light olive linen shirt and dark jeans, outdoor morning light with colorful vegetable stalls in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
-    "A woman in her 40s preparing a colorful salad with kale and red onions in a bright modern kitchen, wearing a striped apron over a white blouse, focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
-    "A woman in her 40s sitting at a kitchen table reviewing supplement bottles with reading glasses on, wearing a navy blue cardigan, organized wellness items on the table, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
-    "A woman in her 40s stretching her arms overhead in a sun-filled living room, wearing light gray athletic wear, relaxed and energized expression, morning light streaming through large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+    "A woman in her 40s walking briskly through a farmers market, wearing a light olive green jacket and dark jeans, holding a canvas bag with fresh produce including onions and apples, outdoor morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing gentle stretches on a yoga mat in a bright living room, wearing a fitted athletic top and leggings in muted teal, morning sunlight streaming through large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s seated at a wooden table reviewing supplement bottles and a journal, wearing a relaxed grey pullover, organized home desk setting with a cup of green tea nearby, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking through a sunlit garden path, wearing a floral linen shirt and linen pants, surrounded by blooming plants and dappled light, confident and calm expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
   ],
-  "image_query": "woman 40s healthy eating antioxidants kitchen",
+  "image_query": "woman over 40 healthy immune system wellness lifestyle",
   "body_image_queries": [
-    "woman 40s farmers market fresh vegetables",
-    "woman 40s preparing salad kale kitchen",
-    "woman 40s reviewing supplements kitchen table",
-    "woman 40s morning stretch living room"
+    "woman 40s farmers market fresh produce healthy eating",
+    "woman over 40 morning yoga stretching bright living room",
+    "woman 40s reviewing supplements organized home wellness",
+    "woman 40s walking garden path sunlight calm confident"
   ]
 }

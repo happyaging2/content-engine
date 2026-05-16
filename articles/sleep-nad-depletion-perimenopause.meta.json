@@ -1,0 +1,39 @@
+{
+  "title": "Sleep Disruption and NAD+ Depletion in Perimenopause: What's Happening and What Helps",
+  "slug": "sleep-nad-depletion-perimenopause",
+  "author": "Happy Aging Team",
+  "tags": "sleep, perimenopause, NAD+, progesterone, GABA, magnesium, L-theanine, apigenin, circadian rhythm, women over 40, insomnia",
+  "product_handle": "sleep-tonic",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/sleep-tonic.jpg",
+  "cluster": "Sleep",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-sleep",
+  "schema_type": "MedicalWebPage",
+  "about": ["perimenopausal sleep disruption", "NAD+ and circadian rhythm", "GABA and sleep women over 40"],
+  "mentions": ["progesterone", "estrogen", "GABA", "SIRT1", "CLOCK", "PARP1", "magnesium", "apigenin", "L-theanine", "melatonin", "cortisol", "HPA axis"],
+  "medical_audience": "Patient",
+  "primary_topic": "sleep disruption NAD+ perimenopause women",
+  "citations": [
+    {"citation": "Abbasi B, et al. The effect of magnesium supplementation on primary insomnia in elderly: A double-blind placebo-controlled clinical trial. J Res Med Sci. 2012. PMID: 23853635"},
+    {"citation": "Yoshino J, et al. NAD+ intermediates: The biology and therapeutic potential of NMN and NR. Cell Metab. 2018. PMID: 29249689"}
+  ],
+  "image_prompt": "A woman in her 40s lying peacefully in a neatly made bed reading a paperback book, wearing a soft cream long-sleeve pajama top, warm bedside lamp casting gentle amber light, cozy calm bedroom with white linen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s sitting on the edge of a bed in a serene bedroom doing a gentle neck roll stretch before sleep, wearing a sage green long-sleeve pajama set, soft lamp lighting and white pillows behind her, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s drinking herbal tea at a bedside table in evening light, wearing a navy blue cozy robe, a small lamp glowing warmly beside her and a book on the nightstand, photorealistic wellness lifestyle photography, warm ambient lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing a seated forward fold yoga stretch on a mat in a softly lit bedroom before bed, wearing a lavender fitted long-sleeve shirt and heather grey leggings, candles casting warm light in the background, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 restful sleep bedroom calm night routine perimenopause",
+  "body_image_queries": [
+    "woman 40s bedroom stretch before sleep calm",
+    "woman over 40 herbal tea bedtime evening lamp",
+    "woman 40s yoga evening bedroom candlelight stretch"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Urolithin A and Mitochondrial Health: What Women Over 40 Need to Know",
+  "slug": "urolithin-a-mitochondria-muscles-after-40",
+  "author": "Happy Aging Team",
+  "tags": "urolithin A, mitochondria, mitophagy, women over 40, longevity, muscle health, energy, perimenopause, cellular aging",
+  "product_handle": "nad-advanced-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-advanced.jpg",
+  "cluster": "Energy/Longevity",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-womens-longevity",
+  "schema_type": "MedicalWebPage",
+  "about": ["urolithin A supplementation", "mitophagy and aging", "mitochondrial health women over 40"],
+  "mentions": ["ellagitannins", "pomegranate", "mitophagy", "autophagy", "AMPK", "CoQ10", "NMN", "gut microbiome", "muscle endurance"],
+  "medical_audience": "Patient",
+  "primary_topic": "urolithin A mitochondria women over 40",
+  "citations": [
+    {"citation": "Andreux PA, et al. The mitophagy activator urolithin A is safe and induces a molecular signature of improved mitochondrial and cellular health in humans. Nat Metab. 2019. PMID: 31285545"},
+    {"citation": "Ryu D, et al. Urolithin A induces mitophagy and prolongs lifespan in C. elegans and increases muscle function in rodents. Nat Med. 2016. PMID: 27548523"}
+  ],
+  "image_prompt": "A woman in her 40s doing a brisk morning jog on a tree-lined running path, wearing a cobalt blue long-sleeve running top and charcoal leggings, soft dappled early morning light through the trees, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a standing stretch with arms raised on a yoga mat in a bright home studio, wearing a dusty rose long-sleeve workout top and dark teal leggings, hardwood floor and large windows behind her, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing bodyweight squats in a sunny backyard garden, wearing a forest green fitted athletic tank and black athletic shorts over leggings, lush green garden in the background, photorealistic wellness lifestyle photography, natural daylight, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting cross-legged on a mat outdoors in a park after exercise, hands resting on knees, looking calm and energized, wearing a soft orange athletic zip-up hoodie and slate grey leggings, dappled sunlight through trees, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 exercise energy mitochondria fitness active",
+  "body_image_queries": [
+    "woman 40s yoga stretch morning home studio",
+    "woman over 40 outdoor exercise squats garden",
+    "woman 40s sitting park meditate after workout"
+  ]
+}

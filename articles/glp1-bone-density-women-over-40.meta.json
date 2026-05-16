@@ -1,0 +1,61 @@
+{
+  "title": "GLP-1 Medications and Bone Density Loss: What Women Over 40 Need to Know",
+  "slug": "glp1-bone-density-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "GLP-1, Ozempic, Wegovy, semaglutide, bone density, osteoporosis, women over 40, perimenopause, weight loss, bone health, DEXA scan",
+  "product_handle": "bone-density-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/bone-density-formula.jpg",
+  "cluster": "GLP-1",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": [
+    "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"
+  ],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-glp-1-support",
+  "schema_type": "MedicalWebPage",
+  "about": [
+    "GLP-1 medications and bone density",
+    "Bone loss during rapid weight loss",
+    "Perimenopause bone health"
+  ],
+  "mentions": [
+    "semaglutide",
+    "tirzepatide",
+    "Ozempic",
+    "Wegovy",
+    "Mounjaro",
+    "osteoblasts",
+    "DEXA scan",
+    "vitamin K2",
+    "sarcopenia",
+    "mechanical loading",
+    "calcium",
+    "vitamin D3"
+  ],
+  "medical_audience": "Patient",
+  "primary_topic": "GLP-1 medication effects on bone density in women over 40",
+  "citations": [
+    {
+      "citation": "Vilsboll T, et al. Effects of glucagon-like peptide-1 receptor agonists on weight loss: systematic review and meta-analyses of randomised controlled trials. BMJ. 2012. PMID: 22236411"
+    }
+  ],
+  "image_prompt": "A woman in her 40s doing a dumbbell squat in a bright home gym, wearing a fitted athletic long-sleeve top and high-waisted leggings, focused expression, mirrors and free weights in background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a strength training deadlift with light weights at a modern gym, wearing a fitted workout tank and athletic leggings, determined expression, clean well-lit environment, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting with a healthcare provider reviewing a bone scan printout, wearing a casual blazer and trousers, at a bright medical consultation office, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a high-protein meal in a modern kitchen, wearing a casual button-up shirt, cooking salmon and vegetables, surrounded by fresh ingredients, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s taking a vitamin supplement with a glass of water at her kitchen counter in the morning, wearing a cozy robe, bright sunlit kitchen with plants visible, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 strength training bone health",
+  "body_image_queries": [
+    "woman doing strength training deadlift gym",
+    "woman discussing bone scan with doctor",
+    "woman cooking healthy high protein meal",
+    "woman taking supplements morning kitchen"
+  ]
+}

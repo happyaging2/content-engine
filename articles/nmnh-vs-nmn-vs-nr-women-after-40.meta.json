@@ -1,0 +1,40 @@
+{
+  "title": "NMNH vs NMN vs NR: Which NAD+ Precursor Is Best for Women After 40?",
+  "slug": "nmnh-vs-nmn-vs-nr-women-after-40",
+  "author": "Happy Aging Team",
+  "tags": "NMNH, NMN, NR, NAD+, nicotinamide riboside, nicotinamide mononucleotide, women over 40, longevity, NAD+ precursors, perimenopause",
+  "product_handle": "nmn-cell-renew-tonic",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nmn-cell-renew.jpg",
+  "cluster": "Longevity/NAD+",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-nad",
+  "schema_type": "MedicalWebPage",
+  "about": ["NAD+ precursor comparison", "NMN supplementation women", "NMNH vs NMN vs NR"],
+  "mentions": ["nicotinamide riboside", "nicotinamide mononucleotide", "dihydronicotinamide mononucleotide", "SIRT1", "PARP1", "sirtuins", "liposomal NMN"],
+  "medical_audience": "Patient",
+  "primary_topic": "NMNH vs NMN vs NR women over 40",
+  "citations": [
+    {"citation": "Yoshino M, et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science. 2021. PMID: 34730967"},
+    {"citation": "Elhassan YS, et al. Nicotinamide Riboside Augments the Aged Human Skeletal Muscle NAD+ Metabolome and Induces Transcriptomic and Anti-inflammatory Signatures. Cell Rep. 2019. PMID: 31533038"},
+    {"citation": "Bogan KL, Brenner C. Nicotinic acid, nicotinamide, and nicotinamide riboside: a molecular evaluation of NAD+ precursor vitamins in human nutrition. Annu Rev Nutr. 2008. PMID: 18429691"}
+  ],
+  "image_prompt": "A woman in her 40s stretching her arms overhead at sunrise on a wooden deck overlooking a garden, wearing a teal fitted long-sleeve athletic top and black leggings, soft golden morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing a gentle yoga tree pose outdoors in a sunlit backyard, wearing a rust-orange yoga tank top and olive-green yoga pants, lush green garden backdrop, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s writing in a wellness journal at a bright wooden desk near a window, wearing a navy blue crew-neck sweater, morning light casting a warm glow, houseplants in the background, photorealistic wellness lifestyle photography, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking energetically along a coastal path by the ocean, wearing a grey athletic zip-up jacket and dark blue joggers, bright clear sky and sea behind her, photorealistic wellness lifestyle photography, natural daylight, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 energy longevity NAD supplement wellness",
+  "body_image_queries": [
+    "woman 40s yoga outdoor morning stretch",
+    "woman over 40 journaling wellness morning light",
+    "woman 40s walking coastal active lifestyle"
+  ]
+}

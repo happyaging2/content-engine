@@ -1,0 +1,39 @@
+{
+  "title": "Choline and Brain Fog After 40: How Acetylcholine Decline Affects Memory and Focus",
+  "slug": "choline-brain-fog-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "choline, brain fog, acetylcholine, memory, focus, women over 40, perimenopause, nootropics, CDP-choline, alpha-GPC",
+  "product_handle": "neuro-creamer",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/neuro-creamer.jpg",
+  "cluster": "Brain",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-brain",
+  "schema_type": "MedicalWebPage",
+  "about": ["Choline deficiency in women", "Acetylcholine and memory", "Brain fog in perimenopause"],
+  "mentions": ["CDP-choline", "Alpha-GPC", "PEMT gene", "Phosphatidylcholine", "White matter hyperintensities", "Framingham Offspring Cohort"],
+  "medical_audience": "Patient",
+  "primary_topic": "Choline and acetylcholine decline as a driver of brain fog and memory issues in women over 40",
+  "citations": [
+    {"citation": "Poly C, et al. The relation of dietary choline to cognitive performance and white-matter hyperintensity in the Framingham Offspring Cohort. Am J Clin Nutr. 2011. PMID: 21878571"},
+    {"citation": "Zeisel SH. A brief history of choline. Ann Nutr Metab. 2012. PMID: 22905264"}
+  ],
+  "image_prompt": "A woman in her 40s reading a book with focused concentration in a sunlit living room, wearing a cozy sage green cardigan, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s writing thoughtfully in a journal at a wooden desk with a cup of tea nearby, wearing a cream-colored blouse, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a breakfast with eggs and vegetables in a bright modern kitchen, wearing a light blue apron, smiling with a focused expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s sitting at a laptop with a calm focused expression in a home office, wearing a soft burgundy sweater, with plants visible in the background, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 focused reading concentration brain health",
+  "body_image_queries": [
+    "woman journaling writing focused thoughtful",
+    "woman making breakfast eggs healthy kitchen",
+    "woman working laptop focused home office"
+  ]
+}

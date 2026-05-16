@@ -1,0 +1,41 @@
+{
+  "title": "Myo-Inositol and Hormonal Balance After 40: Does It Actually Work?",
+  "slug": "myo-inositol-hormones-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "myo-inositol, hormonal balance, PCOS, perimenopause, insulin sensitivity, women over 40, hormones, inositol",
+  "product_handle": "nad-women-longevity-formula",
+  "product_image_url": "https://cdn.shopify.com/s/files/1/0869/3704/3264/files/nad-womens-longevity-formula.jpg",
+  "cluster": "Hormones",
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-16",
+  "date_reviewed": "2026-05-16",
+  "date_modified": "2026-05-16",
+  "template_suffix": "timeline",
+  "pillar_page": "https://happyaging.com/pages/pillar-hormones",
+  "schema_type": "MedicalWebPage",
+  "about": ["Myo-inositol", "Hormonal balance", "PCOS", "Perimenopause", "Insulin sensitivity"],
+  "mentions": ["D-chiro-inositol", "FSH signaling", "Insulin resistance", "Androgen excess", "Ovulation", "Thyroid function", "Hashimoto's thyroiditis"],
+  "medical_audience": "Patient",
+  "primary_topic": "Myo-inositol supplementation for hormonal balance in women over 40",
+  "citations": [
+    {"citation": "Nestler JE, et al. Ovulatory and metabolic effects of D-chiro-inositol in the polycystic ovary syndrome. N Engl J Med. 1999. PMID: 10199874"},
+    {"citation": "Unfer V, et al. Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials. Endocr Connect. 2017. PMID: 28592638"}
+  ],
+  "image_prompt": "A woman in her 40s meditating in a sunlit garden, sitting cross-legged on a cushion, wearing a soft white linen top and pale grey yoga pants, surrounded by green plants and flowers, calm peaceful expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing gentle yoga in a bright airy studio, wearing a fitted coral athletic top and navy leggings, standing in warrior pose with a serene expression, morning light streaming through large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a healthy meal in a modern kitchen, wearing a light sage green blouse, slicing citrus fruits and grains on a wooden cutting board with focused calm expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s consulting with a healthcare provider in a bright clinic, wearing a relaxed burgundy blouse, attentive and engaged expression, warm professional setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s walking in a tree-lined park in early morning, wearing a light lavender zip-up jacket and fitted dark pants, relaxed confident stride, dappled sunlight through leaves, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman over 40 hormonal balance wellness calm lifestyle",
+  "body_image_queries": [
+    "woman 40s yoga studio morning light active wellness",
+    "woman over 40 healthy meal preparation kitchen citrus",
+    "woman 40s healthcare consultation clinic professional",
+    "woman 40s walking park morning light confident relaxed"
+  ]
+}
