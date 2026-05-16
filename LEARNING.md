@@ -1,3 +1,25 @@
+# Content Learning Rules — Last Updated: 2026-05-16
+
+## BATCH 2026-05-16 OBSERVATIONS (20-article batch)
+
+### What Worked Well
+- **GLP-1 bone density and brain fog articles (new territory):** Articles #8 and #9 complete the GLP-1 clinical concern library with the two most-anticipated missing angles. Bone density is greenfield (minimal high-authority competitor content for "does Ozempic weaken bones?"). Brain fog is the most-searched GLP-1 side effect query with very low quality coverage. Both predicted to be strong featured snippet candidates.
+- **NMNH as a differentiated NAD+ topic:** The three-way NMNH vs NMN vs NR comparison (article #3) covers a genuinely emerging form (Reduced NMN) that no mainstream wellness site has explained clearly for women. Being first to own this term follows the estrobolome and klotho strategies from prior batches. High GEO extraction probability for "what is NMNH" queries.
+- **AG1 comparison as high-traffic anchor (article #10):** AG1/Athletic Greens has one of the largest brand awareness footprints in the supplement space. A direct Happiest Gut vs AG1 comparison captures "AG1 alternative" and "is AG1 worth it" queries with very high conversion potential. Predicted to be the top-traffic article of this batch.
+- **Pelvic floor protocol completes the pelvic health sub-topic (article #7):** The LEARNING.md from batch 2026-05-15 flagged pelvic floor as a priority next topic. Article #7 delivers a 7-step protocol format. Combined with the UTI prevention article (#15), this batch now owns the pelvic/bladder health sub-topic within the hormones cluster.
+- **Urolithin A as the next mitochondrial frontier (article #4):** After establishing the NAD+ and CoQ10 mitochondrial angles in prior batches, urolithin A introduces mitophagy as a distinct mechanism. The "only 30-40% of people can produce urolithin A" statistic is a high-extraction data point that creates genuine reader urgency to investigate their own gut bacteria profile.
+- **Myo-inositol skeptic framing (article #17):** The honest separation of strong PCOS evidence from weaker perimenopause evidence for myo-inositol is exactly the format AI systems cite for trust signals. The explicit "if you have PCOS, yes; if you don't, evidence is thinner" structure answers the exact search intent more precisely than any competitor content.
+
+### Rules to Add / Reinforce
+- **GLP-1 clinical concern library is now 7 articles deep** (hair loss, gut microbiome, skin, constipation, electrolytes, leucine/protein, bone density, brain fog). The library is nearly complete. Next batch: GLP-1 and muscle loss (sarcopenia) is the remaining major clinical concern gap. Reserve 1 GLP-1 slot per future batch.
+- **AG1 comparison strategy:** The Athletic Greens brand comparison validates the "large brand awareness competitor" strategy beyond NAD+ comparisons. For each major product category, identify the highest brand-awareness competitor and write the direct comparison. Next AG1-equivalent targets: Ritual multivitamin vs Happy Aging formula, Seed probiotic vs Happiest Gut.
+- **Emerging form differentiation articles:** NMNH followed the estrobolome/klotho pattern of owning an emerging scientific term. Next candidates: urolithin A bioavailability testing (gut bacteria producer status), spermidine wheat germ sources, fisetin bioavailability. Own the form/bioavailability differentiation conversation.
+- **Pelvic/bladder health sub-topic is now 2 articles deep** (pelvic floor exercises, UTI prevention). Next: stress incontinence exercises vs pessary vs surgery comparison; interstitial cystitis after menopause; bladder training protocol. Keep 1 slot per batch in hormones cluster for pelvic/bladder health.
+- **Parallel writing at 4x5 is viable and efficient:** Four parallel agents each writing 5 articles produced high-quality output with 0 QA violations across 20 articles. Continue this parallelization pattern. Key: provide complete citation lists, CDN image URLs, and exact pillar page slugs in the agent brief to avoid hallucination.
+- **Cross-cluster products:** NAD+ Women's Longevity Formula appeared in 6 of 20 articles (30%) without feeling repetitive because each article addressed a different mechanism. Continue using it as the default CTA for any article connecting NAD+, hormones, brain, or longevity pathways.
+
+---
+
 # Content Learning Rules — Last Updated: 2026-05-15
 
 ## BATCH 2026-05-15 OBSERVATIONS (20-article batch)

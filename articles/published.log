@@ -113,3 +113,29 @@ Articles ready (20 total):
 18. skin-radiance-supplements-ranked-women-over-40 | "Best Skin Radiance Supplements (Evidence-Based Ranking)" | Liposomal Glutathione
 19. quercetin-inflammation-women-over-40 | "Quercetin and Inflammation After 40" | Liposomal Quercetin
 20. molecular-hydrogen-recovery-women-over-40 | "Molecular Hydrogen for Cellular Recovery After 40" | Hydroburn
+=== Phase 5: Shopify Publish — Sat May 16 09:39:13 UTC 2026 ===
+
+FAILED nad-advanced-vs-tru-niagen-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED happy-aging-glow-shot-vs-vital-proteins-collagen-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED nmnh-vs-nmn-vs-nr-women-after-40 → HTTP 403 — Host not in allowlist
+FAILED urolithin-a-mitochondria-muscles-after-40 → HTTP 403 — Host not in allowlist
+FAILED sleep-nad-depletion-perimenopause → HTTP 403 — Host not in allowlist
+FAILED magnesium-glycinate-vs-threonate-sleep-after-40 → HTTP 403 — Host not in allowlist
+FAILED pelvic-floor-exercises-incontinence-after-40 → HTTP 403 — Host not in allowlist
+FAILED glp1-bone-density-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED glp1-brain-fog-cognition-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED happiest-gut-vs-athletic-greens-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED glutathione-skin-after-40-honest-review → HTTP 403 — Host not in allowlist
+FAILED choline-brain-fog-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED pqq-mitochondria-energy-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED blood-sugar-balance-protocol-women-after-40 → HTTP 403 — Host not in allowlist
+FAILED uti-prevention-after-menopause → HTTP 403 — Host not in allowlist
+FAILED quercetin-immunity-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED myo-inositol-hormones-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED spermidine-autophagy-women-over-40 → HTTP 403 — Host not in allowlist
+FAILED adaptogens-perimenopause-which-help-after-40 → HTTP 403 — Host not in allowlist
+FAILED nad-cognition-memory-women-over-40 → HTTP 403 — Host not in allowlist
+
+Summary: 0 published, 20 failed
+Note: HTTP 403/422 in sandbox is expected — publish-shopify.yml Action at 11:00 UTC handles deployment
+
