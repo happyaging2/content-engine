@@ -139,3 +139,4 @@ FAILED nad-cognition-memory-women-over-40 → HTTP 403 — Host not in allowlist
 Summary: 0 published, 20 failed
 Note: HTTP 403/422 in sandbox is expected — publish-shopify.yml Action at 11:00 UTC handles deployment
 
+2026-05-17 batch: HTTP 403 sandbox — 20 articles staged for publish-shopify.yml Action at 11:00 UTC
