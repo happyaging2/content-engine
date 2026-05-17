@@ -1,0 +1,426 @@
+# Opportunity Feed — 2026-05-17
+
+Aggregated from autocomplete, PAA, Reddit, and competitor sitemaps. **2497 candidates** across **9 clusters**. Phase 1 (Opportunity Engine) reads this file as input alongside REFRESH-QUEUE.md, COMPARISON-QUEUE.md, LLM-CITATIONS.md, COMPETITOR-GAP.md.
+
+**How to use:** prioritize counter-article targets (a competitor just published — first mover wins citations) + Reddit high-score questions (real-language signal, often pre-Google) + autocomplete/PAA for breadth.
+
+## nad-nmn  (289)
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/nicotinamide-riboside-vs-nmn-debunking-the-nmn-science  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-nicotinamide-riboside-vs-nmn-debunking-the-nmn-science`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/navigating-nr-nmn-and-other-nad-precursors-to-find-the-best-nad-supplement  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-navigating-nr-nmn-and-other-nad-precursors-to-find-the`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/resveratrol-the-science-the-limitations-and-healthy-aging-alternatives-to-consider  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-resveratrol-the-science-the-limitations-and-healthy-ag`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/nr-vs-nmn-head-to-head-study  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-nr-vs-nmn-head-to-head-study`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/nmn-vs-nad  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-nmn-vs-nad`
+- [autocomplete] benefits of nmn for women  → suggested slug: `benefits-of-nmn-for-women`
+- [autocomplete] best nmn for women  → suggested slug: `best-nmn-for-women`
+- [autocomplete] best nmn for women over 40  → suggested slug: `best-nmn-for-women-over-40`
+- [autocomplete] best nmn for women over 50  → suggested slug: `best-nmn-for-women-over-50`
+- [autocomplete] best nmn supplement for women  → suggested slug: `best-nmn-supplement-for-women`
+- [autocomplete] best nmn supplement for women over 50  → suggested slug: `best-nmn-supplement-for-women-over-50`
+- [autocomplete] can i take nmn at night  → suggested slug: `can-i-take-nmn-at-night`
+- [autocomplete] can you get nmn naturally  → suggested slug: `can-you-get-nmn-naturally`
+- [autocomplete] do nmn supplements work  → suggested slug: `do-nmn-supplements-work`
+- [autocomplete] does nmn make you look younger  → suggested slug: `does-nmn-make-you-look-younger`
+- [autocomplete] does nmn work for women  → suggested slug: `does-nmn-work-for-women`
+- [autocomplete] how do you get an nmn naturally  → suggested slug: `how-do-you-get-an-nmn-naturally`
+- [autocomplete] how long does it take for nmn to start working  → suggested slug: `how-long-does-it-take-for-nmn-to-start-working`
+- [autocomplete] how long for nmn to start working  → suggested slug: `how-long-for-nmn-to-start-working`
+- [autocomplete] how to boost nmn naturally  → suggested slug: `how-to-boost-nmn-naturally`
+- [autocomplete] how to consume nmn  → suggested slug: `how-to-consume-nmn`
+- [autocomplete] how to get nmn naturally  → suggested slug: `how-to-get-nmn-naturally`
+- [autocomplete] how to increase nmn  → suggested slug: `how-to-increase-nmn`
+- [autocomplete] how to increase nmn naturally  → suggested slug: `how-to-increase-nmn-naturally`
+- [autocomplete] how to take nmn  → suggested slug: `how-to-take-nmn`
+- [autocomplete] is nmn fda approved  → suggested slug: `is-nmn-fda-approved`
+- [autocomplete] is nmn for women  → suggested slug: `is-nmn-for-women`
+- [autocomplete] is nmn for women and men  → suggested slug: `is-nmn-for-women-and-men`
+- [autocomplete] is nmn for women or men  → suggested slug: `is-nmn-for-women-or-men`
+- [autocomplete] is nmn good for menopausal women  → suggested slug: `is-nmn-good-for-menopausal-women`
+- [autocomplete] is nmn good for women  → suggested slug: `is-nmn-good-for-women`
+- [autocomplete] is nmn ok for women  → suggested slug: `is-nmn-ok-for-women`
+- [autocomplete] is nmn safe for humans  → suggested slug: `is-nmn-safe-for-humans`
+- [autocomplete] is nmn safe for women  → suggested slug: `is-nmn-safe-for-women`
+- [autocomplete] is nmn supplement good for women  → suggested slug: `is-nmn-supplement-good-for-women`
+- [autocomplete] nmn for female fertility  → suggested slug: `nmn-for-female-fertility`
+- [autocomplete] nmn for women australia  → suggested slug: `nmn-for-women-australia`
+- [autocomplete] nmn for women benefits  → suggested slug: `nmn-for-women-benefits`
+- [autocomplete] nmn for women over 50  → suggested slug: `nmn-for-women-over-50`
+- [autocomplete] nmn for women reddit  → suggested slug: `nmn-for-women-reddit`
+- [autocomplete] nmn good for women  → suggested slug: `nmn-good-for-women`
+- [autocomplete] nmn side effects for women  → suggested slug: `nmn-side-effects-for-women`
+- [autocomplete] nmn supplement benefits for women  → suggested slug: `nmn-supplement-benefits-for-women`
+- [autocomplete] nmn supplement for men or women  → suggested slug: `nmn-supplement-for-men-or-women`
+- [autocomplete] nmn supplement for women  → suggested slug: `nmn-supplement-for-women`
+- [autocomplete] the best nmn for women  → suggested slug: `the-best-nmn-for-women`
+- [autocomplete] what is nmn anti aging  → suggested slug: `what-is-nmn-anti-aging`
+- [autocomplete] what is nmn for  → suggested slug: `what-is-nmn-for`
+- [autocomplete] what is nmn for women  → suggested slug: `what-is-nmn-for-women`
+- [autocomplete] what is nmn good for  → suggested slug: `what-is-nmn-good-for`
+
+## bloating  (526)
+- [counter-target] https://pendulumlife.com/blogs/news/all-about-the-bloat-do-probiotics-help-with-bloating  → suggested slug: `https-pendulumlife-com-blogs-news-all-about-the-bloat-do-probiotics-help-with-bloating`
+- [counter-target] https://pendulumlife.com/blogs/resources/harnessing-glp-1-in-the-digestive-tract-for-better-metabolic-health  → suggested slug: `https-pendulumlife-com-blogs-resources-harnessing-glp-1-in-the-digestive-tract-for-better-metabolic-`
+- [counter-target] https://pendulumlife.com/blogs/news/digestive-enzymes-vs-probiotics  → suggested slug: `https-pendulumlife-com-blogs-news-digestive-enzymes-vs-probiotics`
+- [counter-target] https://lemmelive.com/blogs/news/what-helps-with-bloating  → suggested slug: `https-lemmelive-com-blogs-news-what-helps-with-bloating`
+- [counter-target] https://lemmelive.com/blogs/news/do-probiotics-help-with-bloating-here-s-what-the-science-says  → suggested slug: `https-lemmelive-com-blogs-news-do-probiotics-help-with-bloating-here-s-what-the-science-says`
+- [counter-target] https://lemmelive.com/blogs/news/digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-difference-and-do-you-need-all-three  → suggested slug: `https-lemmelive-com-blogs-news-digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-difference-a`
+- [counter-target] https://lemmelive.com/blogs/news/lactospore%C2%AE-and-de111%C2%AE-the-clinically-studied-probiotic-strains-in-lemme-debloat-gummies  → suggested slug: `https-lemmelive-com-blogs-news-lactospore-c2-ae-and-de111-c2-ae-the-clinically-studied-probiotic-str`
+- [counter-target] https://lemmelive.com/blogs/news/why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-and-what-actually-helps  → suggested slug: `https-lemmelive-com-blogs-news-why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-and-`
+- [counter-target] https://lemmelive.com/blogs/news/how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison-of-lemme-debloat-olly-beat-the-bloat-arrae-bloat-hum-flatter-me-and-love-wellness-bye-bye-bloat  → suggested slug: `https-lemmelive-com-blogs-news-how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison-of`
+- [counter-target] https://lemmelive.com/es/blogs/news/what-helps-with-bloating  → suggested slug: `https-lemmelive-com-es-blogs-news-what-helps-with-bloating`
+- [counter-target] https://lemmelive.com/es/blogs/news/do-probiotics-help-with-bloating-here-s-what-the-science-says  → suggested slug: `https-lemmelive-com-es-blogs-news-do-probiotics-help-with-bloating-here-s-what-the-science-says`
+- [counter-target] https://lemmelive.com/es/blogs/news/digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-difference-and-do-you-need-all-three  → suggested slug: `https-lemmelive-com-es-blogs-news-digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-differenc`
+- [counter-target] https://lemmelive.com/es/blogs/news/lactospore%C2%AE-and-de111%C2%AE-the-clinically-studied-probiotic-strains-in-lemme-debloat-gummies  → suggested slug: `https-lemmelive-com-es-blogs-news-lactospore-c2-ae-and-de111-c2-ae-the-clinically-studied-probiotic-`
+- [counter-target] https://lemmelive.com/es/blogs/news/why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-and-what-actually-helps  → suggested slug: `https-lemmelive-com-es-blogs-news-why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-a`
+- [counter-target] https://lemmelive.com/es/blogs/news/how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison-of-lemme-debloat-olly-beat-the-bloat-arrae-bloat-hum-flatter-me-and-love-wellness-bye-bye-bloat  → suggested slug: `https-lemmelive-com-es-blogs-news-how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/what-helps-with-bloating  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-what-helps-with-bloating`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/do-probiotics-help-with-bloating-here-s-what-the-science-says  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-do-probiotics-help-with-bloating-here-s-what-the-science-says`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-difference-and-do-you-need-all-three  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-differ`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/lactospore%C2%AE-and-de111%C2%AE-the-clinically-studied-probiotic-strains-in-lemme-debloat-gummies  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-lactospore-c2-ae-and-de111-c2-ae-the-clinically-studied-probiot`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-and-what-actually-helps  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-cause`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison-of-lemme-debloat-olly-beat-the-bloat-arrae-bloat-hum-flatter-me-and-love-wellness-bye-bye-bloat  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-how-to-choose-a-bloating-supplement-a-dietitians-honest-compari`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/what-helps-with-bloating  → suggested slug: `https-lemmelive-com-en-au-blogs-news-what-helps-with-bloating`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/do-probiotics-help-with-bloating-here-s-what-the-science-says  → suggested slug: `https-lemmelive-com-en-au-blogs-news-do-probiotics-help-with-bloating-here-s-what-the-science-says`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-difference-and-do-you-need-all-three  → suggested slug: `https-lemmelive-com-en-au-blogs-news-digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-differ`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/lactospore%C2%AE-and-de111%C2%AE-the-clinically-studied-probiotic-strains-in-lemme-debloat-gummies  → suggested slug: `https-lemmelive-com-en-au-blogs-news-lactospore-c2-ae-and-de111-c2-ae-the-clinically-studied-probiot`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-and-what-actually-helps  → suggested slug: `https-lemmelive-com-en-au-blogs-news-why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-cause`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison-of-lemme-debloat-olly-beat-the-bloat-arrae-bloat-hum-flatter-me-and-love-wellness-bye-bye-bloat  → suggested slug: `https-lemmelive-com-en-au-blogs-news-how-to-choose-a-bloating-supplement-a-dietitians-honest-compari`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/what-helps-with-bloating  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-what-helps-with-bloating`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/do-probiotics-help-with-bloating-here-s-what-the-science-says  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-do-probiotics-help-with-bloating-here-s-what-the-science-says`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-difference-and-do-you-need-all-three  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-digestive-enzymes-vs-probiotics-vs-prebiotics-what-s-the-differ`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/lactospore%C2%AE-and-de111%C2%AE-the-clinically-studied-probiotic-strains-in-lemme-debloat-gummies  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-lactospore-c2-ae-and-de111-c2-ae-the-clinically-studied-probiot`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-causes-and-what-actually-helps  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-why-am-i-so-bloated-all-the-time-a-dietitian-explains-the-cause`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/how-to-choose-a-bloating-supplement-a-dietitians-honest-comparison-of-lemme-debloat-olly-beat-the-bloat-arrae-bloat-hum-flatter-me-and-love-wellness-bye-bye-bloat  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-how-to-choose-a-bloating-supplement-a-dietitians-honest-compari`
+- [counter-target] The Top Foods that Cause Bloating (and What to Eat Instead)  → suggested slug: `the-top-foods-that-cause-bloating-and-what-to-eat-instead`
+- [counter-target] Bloating &amp; Your Menstrual Period  → suggested slug: `bloating-amp-your-menstrual-period`
+- [autocomplete] 40 year old male bloating  → suggested slug: `40-year-old-male-bloating`
+- [autocomplete] bloated stomach in my 40s  → suggested slug: `bloated-stomach-in-my-40s`
+- [autocomplete] bloating after 40 men  → suggested slug: `bloating-after-40-men`
+- [autocomplete] bloating after age 40  → suggested slug: `bloating-after-age-40`
+- [autocomplete] bloating and weight gain after 40  → suggested slug: `bloating-and-weight-gain-after-40`
+- [autocomplete] bloating at 40 weeks pregnant  → suggested slug: `bloating-at-40-weeks-pregnant`
+- [autocomplete] bloating at age 40  → suggested slug: `bloating-at-age-40`
+- [autocomplete] bloating in 40 year old woman  → suggested slug: `bloating-in-40-year-old-woman`
+- [autocomplete] bloating in late 40s  → suggested slug: `bloating-in-late-40s`
+- [autocomplete] does bloating get worse with age  → suggested slug: `does-bloating-get-worse-with-age`
+- [autocomplete] how to get rid of bloating after 40  → suggested slug: `how-to-get-rid-of-bloating-after-40`
+- [autocomplete] how to reduce bloating after 40  → suggested slug: `how-to-reduce-bloating-after-40`
+- [autocomplete] how to reduce bloating over 40  → suggested slug: `how-to-reduce-bloating-over-40`
+- [autocomplete] how to stop bloating after 40  → suggested slug: `how-to-stop-bloating-after-40`
+- [autocomplete] im bloating really bad  → suggested slug: `im-bloating-really-bad`
+
+## glp-1  (220)
+- [counter-target] https://pendulumlife.com/blogs/resources/glp-1-probiotic-factsheet  → suggested slug: `https-pendulumlife-com-blogs-resources-glp-1-probiotic-factsheet`
+- [counter-target] https://pendulumlife.com/blogs/resources/glp-1-probiotic-patient-education  → suggested slug: `https-pendulumlife-com-blogs-resources-glp-1-probiotic-patient-education`
+- [counter-target] https://pendulumlife.com/blogs/resources/protocol-support-glp-1-production  → suggested slug: `https-pendulumlife-com-blogs-resources-protocol-support-glp-1-production`
+- [counter-target] https://pendulumlife.com/blogs/resources/protocol-effective-weight-maintenance-and-appetite-support-after-glp-1-medications  → suggested slug: `https-pendulumlife-com-blogs-resources-protocol-effective-weight-maintenance-and-appetite-support-af`
+- [counter-target] https://lemmelive.com/blogs/news/what-is-glp-1-and-why-does-it-matter-for-weight-management  → suggested slug: `https-lemmelive-com-blogs-news-what-is-glp-1-and-why-does-it-matter-for-weight-management`
+- [counter-target] https://lemmelive.com/blogs/news/gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-more-than-you-think  → suggested slug: `https-lemmelive-com-blogs-news-gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-more-`
+- [counter-target] https://lemmelive.com/es/blogs/news/what-is-glp-1-and-why-does-it-matter-for-weight-management  → suggested slug: `https-lemmelive-com-es-blogs-news-what-is-glp-1-and-why-does-it-matter-for-weight-management`
+- [counter-target] https://lemmelive.com/es/blogs/news/gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-more-than-you-think  → suggested slug: `https-lemmelive-com-es-blogs-news-gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-mo`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/what-is-glp-1-and-why-does-it-matter-for-weight-management  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-what-is-glp-1-and-why-does-it-matter-for-weight-management`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-more-than-you-think  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/what-is-glp-1-and-why-does-it-matter-for-weight-management  → suggested slug: `https-lemmelive-com-en-au-blogs-news-what-is-glp-1-and-why-does-it-matter-for-weight-management`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-more-than-you-think  → suggested slug: `https-lemmelive-com-en-au-blogs-news-gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/what-is-glp-1-and-why-does-it-matter-for-weight-management  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-what-is-glp-1-and-why-does-it-matter-for-weight-management`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter-more-than-you-think  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-gut-health-on-glp-1-medications-why-fiber-and-probiotics-matter`
+- [autocomplete] best fiber supplement on ozempic  → suggested slug: `best-fiber-supplement-on-ozempic`
+- [autocomplete] best supplements for ozempic face  → suggested slug: `best-supplements-for-ozempic-face`
+- [autocomplete] best supplements for ozempic hair loss  → suggested slug: `best-supplements-for-ozempic-hair-loss`
+- [autocomplete] best supplements for people on ozempic  → suggested slug: `best-supplements-for-people-on-ozempic`
+- [autocomplete] best supplements for women on ozempic  → suggested slug: `best-supplements-for-women-on-ozempic`
+- [autocomplete] best supplements like ozempic  → suggested slug: `best-supplements-like-ozempic`
+- [autocomplete] best supplements on ozempic  → suggested slug: `best-supplements-on-ozempic`
+- [autocomplete] best supplements to take when on ozempic  → suggested slug: `best-supplements-to-take-when-on-ozempic`
+- [autocomplete] best supplements while on ozempic  → suggested slug: `best-supplements-while-on-ozempic`
+- [autocomplete] best vitamins on ozempic  → suggested slug: `best-vitamins-on-ozempic`
+- [autocomplete] best vitamins while on ozempic  → suggested slug: `best-vitamins-while-on-ozempic`
+- [autocomplete] can i change the day i take ozempic  → suggested slug: `can-i-change-the-day-i-take-ozempic`
+- [autocomplete] can i take iron supplements on ozempic  → suggested slug: `can-i-take-iron-supplements-on-ozempic`
+- [autocomplete] can i take iron supplements while on ozempic  → suggested slug: `can-i-take-iron-supplements-while-on-ozempic`
+- [autocomplete] can i take supplements on ozempic  → suggested slug: `can-i-take-supplements-on-ozempic`
+- [autocomplete] can you take 1mg of ozempic  → suggested slug: `can-you-take-1mg-of-ozempic`
+- [autocomplete] can you take fiber supplements on ozempic  → suggested slug: `can-you-take-fiber-supplements-on-ozempic`
+- [autocomplete] can you take iron supplements on ozempic  → suggested slug: `can-you-take-iron-supplements-on-ozempic`
+- [autocomplete] can you take ozempic by itself  → suggested slug: `can-you-take-ozempic-by-itself`
+- [autocomplete] can you take ozempic while on insulin  → suggested slug: `can-you-take-ozempic-while-on-insulin`
+- [autocomplete] can you take supplements on ozempic  → suggested slug: `can-you-take-supplements-on-ozempic`
+- [autocomplete] do i need to take supplements on ozempic  → suggested slug: `do-i-need-to-take-supplements-on-ozempic`
+- [autocomplete] does it matter what time of day you take ozempic  → suggested slug: `does-it-matter-what-time-of-day-you-take-ozempic`
+- [autocomplete] does it matter when you take ozempic  → suggested slug: `does-it-matter-when-you-take-ozempic`
+- [autocomplete] does ozempic interact with other medications  → suggested slug: `does-ozempic-interact-with-other-medications`
+- [autocomplete] drugs comparable to ozempic  → suggested slug: `drugs-comparable-to-ozempic`
+- [autocomplete] fiber supplements on ozempic  → suggested slug: `fiber-supplements-on-ozempic`
+- [autocomplete] hair supplements while on ozempic  → suggested slug: `hair-supplements-while-on-ozempic`
+- [autocomplete] how much is a month supply of ozempic  → suggested slug: `how-much-is-a-month-supply-of-ozempic`
+- [autocomplete] how to get ozempic out of system  → suggested slug: `how-to-get-ozempic-out-of-system`
+- [autocomplete] how to increase ozempic  → suggested slug: `how-to-increase-ozempic`
+- [autocomplete] how to put ozempic  → suggested slug: `how-to-put-ozempic`
+- [autocomplete] lowest dose of ozempic  → suggested slug: `lowest-dose-of-ozempic`
+- [autocomplete] protein supplements on ozempic  → suggested slug: `protein-supplements-on-ozempic`
+- [autocomplete] recommended supplements while on ozempic  → suggested slug: `recommended-supplements-while-on-ozempic`
+- [autocomplete] should i take fiber supplements on ozempic  → suggested slug: `should-i-take-fiber-supplements-on-ozempic`
+
+## hormonal  (266)
+- [counter-target] https://pendulumlife.com/blogs/news/researchers-look-at-whether-probiotics-can-slow-osteoporosis-in-early-menopause  → suggested slug: `https-pendulumlife-com-blogs-news-researchers-look-at-whether-probiotics-can-slow-osteoporosis-in-ea`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/energy-age-and-estrogen  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-energy-age-and-estrogen`
+- [counter-target] How Does Exercise Impact Hormones?  → suggested slug: `how-does-exercise-impact-hormones`
+- [autocomplete] perimenopause swelling hands and feet  → suggested slug: `perimenopause-swelling-hands-and-feet`
+- [autocomplete] perimenopause swelling in legs  → suggested slug: `perimenopause-swelling-in-legs`
+- [autocomplete] perimenopause swollen lower abdomen  → suggested slug: `perimenopause-swollen-lower-abdomen`
+- [autocomplete] perimenopause swollen lymph nodes  → suggested slug: `perimenopause-swollen-lymph-nodes`
+- [autocomplete] perimenopause swollen lymph nodes armpit  → suggested slug: `perimenopause-swollen-lymph-nodes-armpit`
+- [autocomplete] perimenopause swollen lymph nodes reddit  → suggested slug: `perimenopause-swollen-lymph-nodes-reddit`
+- [autocomplete] perimenopause swollen neck glands  → suggested slug: `perimenopause-swollen-neck-glands`
+- [autocomplete] perimenopause swollen painful breasts  → suggested slug: `perimenopause-swollen-painful-breasts`
+- [autocomplete] perimenopause swollen tender breasts  → suggested slug: `perimenopause-swollen-tender-breasts`
+- [autocomplete] swollen gums perimenopause reddit  → suggested slug: `swollen-gums-perimenopause-reddit`
+- [autocomplete] supplements for swollen thyroid  → suggested slug: `supplements-for-swollen-thyroid`
+- [autocomplete] are perimenopause supplements safe  → suggested slug: `are-perimenopause-supplements-safe`
+- [autocomplete] are perimenopause supplements worth it  → suggested slug: `are-perimenopause-supplements-worth-it`
+- [autocomplete] barbara o neill perimenopause supplements  → suggested slug: `barbara-o-neill-perimenopause-supplements`
+- [autocomplete] best estrogen supplements for perimenopause  → suggested slug: `best-estrogen-supplements-for-perimenopause`
+- [autocomplete] best herbal supplements for perimenopause  → suggested slug: `best-herbal-supplements-for-perimenopause`
+- [autocomplete] best hormone balancing supplements for perimenopause  → suggested slug: `best-hormone-balancing-supplements-for-perimenopause`
+- [autocomplete] best hormone replacement for perimenopause  → suggested slug: `best-hormone-replacement-for-perimenopause`
+- [autocomplete] best natural supplements for perimenopause  → suggested slug: `best-natural-supplements-for-perimenopause`
+- [autocomplete] best natural vitamins for perimenopause  → suggested slug: `best-natural-vitamins-for-perimenopause`
+- [autocomplete] best non hormonal supplement for menopause  → suggested slug: `best-non-hormonal-supplement-for-menopause`
+- [autocomplete] best perimenopause supplements 2026  → suggested slug: `best-perimenopause-supplements-2026`
+- [autocomplete] best perimenopause supplements australia  → suggested slug: `best-perimenopause-supplements-australia`
+- [autocomplete] best perimenopause supplements canada  → suggested slug: `best-perimenopause-supplements-canada`
+- [autocomplete] best perimenopause supplements for brain fog  → suggested slug: `best-perimenopause-supplements-for-brain-fog`
+- [autocomplete] best perimenopause supplements for hot flashes  → suggested slug: `best-perimenopause-supplements-for-hot-flashes`
+- [autocomplete] best perimenopause supplements for joint pain  → suggested slug: `best-perimenopause-supplements-for-joint-pain`
+- [autocomplete] best perimenopause supplements for libido  → suggested slug: `best-perimenopause-supplements-for-libido`
+- [autocomplete] best perimenopause supplements for mood  → suggested slug: `best-perimenopause-supplements-for-mood`
+- [autocomplete] best perimenopause supplements for sleep  → suggested slug: `best-perimenopause-supplements-for-sleep`
+- [autocomplete] best perimenopause supplements for weight loss  → suggested slug: `best-perimenopause-supplements-for-weight-loss`
+- [autocomplete] best perimenopause supplements for weight loss australia  → suggested slug: `best-perimenopause-supplements-for-weight-loss-australia`
+- [autocomplete] best perimenopause supplements for weight loss uk  → suggested slug: `best-perimenopause-supplements-for-weight-loss-uk`
+- [autocomplete] best perimenopause supplements gummies  → suggested slug: `best-perimenopause-supplements-gummies`
+- [autocomplete] best perimenopause supplements ireland  → suggested slug: `best-perimenopause-supplements-ireland`
+- [autocomplete] best perimenopause supplements nz  → suggested slug: `best-perimenopause-supplements-nz`
+- [autocomplete] best perimenopause supplements on amazon  → suggested slug: `best-perimenopause-supplements-on-amazon`
+- [autocomplete] best perimenopause supplements on the market  → suggested slug: `best-perimenopause-supplements-on-the-market`
+- [autocomplete] best perimenopause supplements otc  → suggested slug: `best-perimenopause-supplements-otc`
+- [autocomplete] best perimenopause supplements reddit  → suggested slug: `best-perimenopause-supplements-reddit`
+- [autocomplete] best perimenopause supplements uk reviews  → suggested slug: `best-perimenopause-supplements-uk-reviews`
+- [autocomplete] best supplements for perimenopause anxiety  → suggested slug: `best-supplements-for-perimenopause-anxiety`
+- [autocomplete] best supplements for perimenopause symptoms  → suggested slug: `best-supplements-for-perimenopause-symptoms`
+- [autocomplete] best supplements to support perimenopause  → suggested slug: `best-supplements-to-support-perimenopause`
+- [autocomplete] best women's vitamins for perimenopause  → suggested slug: `best-women-s-vitamins-for-perimenopause`
+- [autocomplete] can i take perimenopause supplements  → suggested slug: `can-i-take-perimenopause-supplements`
+- [autocomplete] can perimenopause supplements cause weight gain  → suggested slug: `can-perimenopause-supplements-cause-weight-gain`
+
+## sleep  (45)
+- [counter-target] https://pendulumlife.com/blogs/resources/supplementation-with-a-five-strain-probiotic-formula-improved-validated-metrics-of-sleep-quality-and-measures-of-sleep-related-physical-and-mental-health  → suggested slug: `https-pendulumlife-com-blogs-resources-supplementation-with-a-five-strain-probiotic-formula-improved`
+- [counter-target] https://pendulumlife.com/blogs/resources/unlocking-sleep-and-energy-support-through-the-microbiome-a-study-of-pendulum-metabolic-daily  → suggested slug: `https-pendulumlife-com-blogs-resources-unlocking-sleep-and-energy-support-through-the-microbiome-a-s`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/how-does-sleep-deprivation-affect-your-cells  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-how-does-sleep-deprivation-affect-your-cells`
+- [counter-target] https://lemmelive.com/blogs/news/herbs-for-sleep-7-of-the-most-effective  → suggested slug: `https-lemmelive-com-blogs-news-herbs-for-sleep-7-of-the-most-effective`
+- [counter-target] https://lemmelive.com/blogs/news/lemme-sleep-vs-olly-sleep  → suggested slug: `https-lemmelive-com-blogs-news-lemme-sleep-vs-olly-sleep`
+- [counter-target] https://lemmelive.com/blogs/news/lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-works  → suggested slug: `https-lemmelive-com-blogs-news-lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-works`
+- [counter-target] https://lemmelive.com/blogs/news/why-cant-i-fall-asleep  → suggested slug: `https-lemmelive-com-blogs-news-why-cant-i-fall-asleep`
+- [counter-target] https://lemmelive.com/blogs/news/melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingredient-actually-does  → suggested slug: `https-lemmelive-com-blogs-news-melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingredi`
+- [counter-target] https://lemmelive.com/blogs/news/is-it-safe-to-take-melatonin-every-night  → suggested slug: `https-lemmelive-com-blogs-news-is-it-safe-to-take-melatonin-every-night`
+- [counter-target] https://lemmelive.com/es/blogs/news/herbs-for-sleep-7-of-the-most-effective  → suggested slug: `https-lemmelive-com-es-blogs-news-herbs-for-sleep-7-of-the-most-effective`
+- [counter-target] https://lemmelive.com/es/blogs/news/lemme-sleep-vs-olly-sleep  → suggested slug: `https-lemmelive-com-es-blogs-news-lemme-sleep-vs-olly-sleep`
+- [counter-target] https://lemmelive.com/es/blogs/news/lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-works  → suggested slug: `https-lemmelive-com-es-blogs-news-lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-wor`
+- [counter-target] https://lemmelive.com/es/blogs/news/why-cant-i-fall-asleep  → suggested slug: `https-lemmelive-com-es-blogs-news-why-cant-i-fall-asleep`
+- [counter-target] https://lemmelive.com/es/blogs/news/melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingredient-actually-does  → suggested slug: `https-lemmelive-com-es-blogs-news-melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingr`
+- [counter-target] https://lemmelive.com/es/blogs/news/is-it-safe-to-take-melatonin-every-night  → suggested slug: `https-lemmelive-com-es-blogs-news-is-it-safe-to-take-melatonin-every-night`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/herbs-for-sleep-7-of-the-most-effective  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-herbs-for-sleep-7-of-the-most-effective`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/lemme-sleep-vs-olly-sleep  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-lemme-sleep-vs-olly-sleep`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-works  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/why-cant-i-fall-asleep  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-why-cant-i-fall-asleep`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingredient-actually-does  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-i`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/is-it-safe-to-take-melatonin-every-night  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-is-it-safe-to-take-melatonin-every-night`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/herbs-for-sleep-7-of-the-most-effective  → suggested slug: `https-lemmelive-com-en-au-blogs-news-herbs-for-sleep-7-of-the-most-effective`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/lemme-sleep-vs-olly-sleep  → suggested slug: `https-lemmelive-com-en-au-blogs-news-lemme-sleep-vs-olly-sleep`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-works  → suggested slug: `https-lemmelive-com-en-au-blogs-news-lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/why-cant-i-fall-asleep  → suggested slug: `https-lemmelive-com-en-au-blogs-news-why-cant-i-fall-asleep`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingredient-actually-does  → suggested slug: `https-lemmelive-com-en-au-blogs-news-melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-i`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/is-it-safe-to-take-melatonin-every-night  → suggested slug: `https-lemmelive-com-en-au-blogs-news-is-it-safe-to-take-melatonin-every-night`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/herbs-for-sleep-7-of-the-most-effective  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-herbs-for-sleep-7-of-the-most-effective`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/lemme-sleep-vs-olly-sleep  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-lemme-sleep-vs-olly-sleep`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-works  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-lemme-sleep-vs-natrol-sleep-gummies-which-sleep-gummy-actually-`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/why-cant-i-fall-asleep  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-why-cant-i-fall-asleep`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-ingredient-actually-does  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-melatonin-magnesium-and-l-theanine-what-each-sleep-supplement-i`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/is-it-safe-to-take-melatonin-every-night  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-is-it-safe-to-take-melatonin-every-night`
+- [counter-target] Can Bad Sleep Lead to Bad Sex?  → suggested slug: `can-bad-sleep-lead-to-bad-sex`
+- [counter-target] Should You Have a Sleep Divorce to Avoid a Real One?  → suggested slug: `should-you-have-a-sleep-divorce-to-avoid-a-real-one`
+- [counter-target] Better Sleep, Better Mood  → suggested slug: `better-sleep-better-mood`
+- [counter-target] No Sleep, More Stress, No Sleep: Breaking The Cycle this Holiday Season  → suggested slug: `no-sleep-more-stress-no-sleep-breaking-the-cycle-this-holiday-season`
+- [counter-target] Calm and Sleep Go Hand-in-Hand  → suggested slug: `calm-and-sleep-go-hand-in-hand`
+- [counter-target] 3 Tips for the Best Sleep of Your Life  → suggested slug: `3-tips-for-the-best-sleep-of-your-life`
+- [counter-target] Why Sleep? The Importance of Catching Enough Z’s  → suggested slug: `why-sleep-the-importance-of-catching-enough-z-s`
+- [autocomplete] best magnesium glycinate for women sleep  → suggested slug: `best-magnesium-glycinate-for-women-sleep`
+- [autocomplete] magnesium glycinate dosage women sleep  → suggested slug: `magnesium-glycinate-dosage-women-sleep`
+- [autocomplete] magnesium glycinate sleep women  → suggested slug: `magnesium-glycinate-sleep-women`
+- [autocomplete] ashwagandha for women for sleep  → suggested slug: `ashwagandha-for-women-for-sleep`
+- [autocomplete] ashwagandha for women sleep  → suggested slug: `ashwagandha-for-women-sleep`
+
+## magnesium  (199)
+- [autocomplete] are there any drug interactions with magnesium glycinate  → suggested slug: `are-there-any-drug-interactions-with-magnesium-glycinate`
+- [autocomplete] benefits of magnesium glycinate for women over 40  → suggested slug: `benefits-of-magnesium-glycinate-for-women-over-40`
+- [autocomplete] benefits of magnesium glycinate for women over 50  → suggested slug: `benefits-of-magnesium-glycinate-for-women-over-50`
+- [autocomplete] benefits of magnesium glycinate woman  → suggested slug: `benefits-of-magnesium-glycinate-woman`
+- [autocomplete] benefits of magnesium glycinate women  → suggested slug: `benefits-of-magnesium-glycinate-women`
+- [autocomplete] best magnesium glycinate for menopausal women  → suggested slug: `best-magnesium-glycinate-for-menopausal-women`
+- [autocomplete] best magnesium glycinate for women over 40  → suggested slug: `best-magnesium-glycinate-for-women-over-40`
+- [autocomplete] best magnesium glycinate for women over 60  → suggested slug: `best-magnesium-glycinate-for-women-over-60`
+- [autocomplete] best magnesium glycinate for women over 65  → suggested slug: `best-magnesium-glycinate-for-women-over-65`
+- [autocomplete] best magnesium glycinate for women over 70  → suggested slug: `best-magnesium-glycinate-for-women-over-70`
+- [autocomplete] best magnesium glycinate for women reddit  → suggested slug: `best-magnesium-glycinate-for-women-reddit`
+- [autocomplete] best magnesium glycinate supplement for women reddit  → suggested slug: `best-magnesium-glycinate-supplement-for-women-reddit`
+- [autocomplete] best magnesium glycinate supplement women  → suggested slug: `best-magnesium-glycinate-supplement-women`
+- [autocomplete] best magnesium glycinate women  → suggested slug: `best-magnesium-glycinate-women`
+- [autocomplete] best magnesium glycinate women over 50  → suggested slug: `best-magnesium-glycinate-women-over-50`
+- [autocomplete] best magnesium supplement women  → suggested slug: `best-magnesium-supplement-women`
+- [autocomplete] best magnesium supplement women over 40  → suggested slug: `best-magnesium-supplement-women-over-40`
+- [autocomplete] best magnesium supplement women over 50  → suggested slug: `best-magnesium-supplement-women-over-50`
+- [autocomplete] best magnesium supplement women over 60  → suggested slug: `best-magnesium-supplement-women-over-60`
+- [autocomplete] best magnesium supplement women reddit  → suggested slug: `best-magnesium-supplement-women-reddit`
+- [autocomplete] best magnesium supplement women uk  → suggested slug: `best-magnesium-supplement-women-uk`
+- [autocomplete] best magnesium supplement women's health  → suggested slug: `best-magnesium-supplement-women-s-health`
+- [autocomplete] can magnesium glycinate be taken by women  → suggested slug: `can-magnesium-glycinate-be-taken-by-women`
+- [autocomplete] can magnesium glycinate keep you awake  → suggested slug: `can-magnesium-glycinate-keep-you-awake`
+- [autocomplete] chelated magnesium glycinate for women  → suggested slug: `chelated-magnesium-glycinate-for-women`
+- [autocomplete] daily dose of magnesium glycinate women  → suggested slug: `daily-dose-of-magnesium-glycinate-women`
+- [autocomplete] daily recommended magnesium glycinate women  → suggested slug: `daily-recommended-magnesium-glycinate-women`
+- [autocomplete] does magnesium glycinate help women  → suggested slug: `does-magnesium-glycinate-help-women`
+- [autocomplete] dosage for magnesium glycinate women  → suggested slug: `dosage-for-magnesium-glycinate-women`
+- [autocomplete] dosage of magnesium glycinate women  → suggested slug: `dosage-of-magnesium-glycinate-women`
+- [autocomplete] healthkart magnesium glycinate women  → suggested slug: `healthkart-magnesium-glycinate-women`
+- [autocomplete] hk vitals magnesium glycinate women benefits  → suggested slug: `hk-vitals-magnesium-glycinate-women-benefits`
+- [autocomplete] how does magnesium glycinate benefits women  → suggested slug: `how-does-magnesium-glycinate-benefits-women`
+- [autocomplete] how many mg magnesium glycinate women  → suggested slug: `how-many-mg-magnesium-glycinate-women`
+- [autocomplete] how much magnesium glycinate do women need daily  → suggested slug: `how-much-magnesium-glycinate-do-women-need-daily`
+- [autocomplete] how much magnesium glycinate do women need per day  → suggested slug: `how-much-magnesium-glycinate-do-women-need-per-day`
+- [autocomplete] how much magnesium glycinate should women take daily  → suggested slug: `how-much-magnesium-glycinate-should-women-take-daily`
+- [autocomplete] how much magnesium glycinate woman  → suggested slug: `how-much-magnesium-glycinate-woman`
+- [autocomplete] how much magnesium glycinate women  → suggested slug: `how-much-magnesium-glycinate-women`
+- [autocomplete] how much magnesium glycinate women daily  → suggested slug: `how-much-magnesium-glycinate-women-daily`
+- [autocomplete] how much magnesium glycinate women need  → suggested slug: `how-much-magnesium-glycinate-women-need`
+- [autocomplete] how much magnesium glycinate women over 50  → suggested slug: `how-much-magnesium-glycinate-women-over-50`
+- [autocomplete] how much magnesium.glycinate can women take per day  → suggested slug: `how-much-magnesium-glycinate-can-women-take-per-day`
+- [autocomplete] how to get magnesium glycinate  → suggested slug: `how-to-get-magnesium-glycinate`
+- [autocomplete] how to make magnesium glycinate  → suggested slug: `how-to-make-magnesium-glycinate`
+- [autocomplete] how to make magnesium glycinate taste better  → suggested slug: `how-to-make-magnesium-glycinate-taste-better`
+- [autocomplete] how to take magnesium glycinate women  → suggested slug: `how-to-take-magnesium-glycinate-women`
+- [autocomplete] importance of magnesium glycinate for women  → suggested slug: `importance-of-magnesium-glycinate-for-women`
+- [autocomplete] is magnesium glycinate best for women  → suggested slug: `is-magnesium-glycinate-best-for-women`
+- [autocomplete] is magnesium glycinate better  → suggested slug: `is-magnesium-glycinate-better`
+
+## ashwagandha  (169)
+- [counter-target] https://lemmelive.com/blogs/news/ashwagandha-gummies  → suggested slug: `https-lemmelive-com-blogs-news-ashwagandha-gummies`
+- [counter-target] https://lemmelive.com/blogs/news/ashwagandha-uses-benefits  → suggested slug: `https-lemmelive-com-blogs-news-ashwagandha-uses-benefits`
+- [counter-target] https://lemmelive.com/es/blogs/news/ashwagandha-gummies  → suggested slug: `https-lemmelive-com-es-blogs-news-ashwagandha-gummies`
+- [counter-target] https://lemmelive.com/es/blogs/news/ashwagandha-uses-benefits  → suggested slug: `https-lemmelive-com-es-blogs-news-ashwagandha-uses-benefits`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/ashwagandha-gummies  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-ashwagandha-gummies`
+- [counter-target] https://lemmelive.com/en-ca/blogs/news/ashwagandha-uses-benefits  → suggested slug: `https-lemmelive-com-en-ca-blogs-news-ashwagandha-uses-benefits`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/ashwagandha-gummies  → suggested slug: `https-lemmelive-com-en-au-blogs-news-ashwagandha-gummies`
+- [counter-target] https://lemmelive.com/en-au/blogs/news/ashwagandha-uses-benefits  → suggested slug: `https-lemmelive-com-en-au-blogs-news-ashwagandha-uses-benefits`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/ashwagandha-gummies  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-ashwagandha-gummies`
+- [counter-target] https://lemmelive.com/en-gb/blogs/news/ashwagandha-uses-benefits  → suggested slug: `https-lemmelive-com-en-gb-blogs-news-ashwagandha-uses-benefits`
+- [autocomplete] ashwagandha benefits for female fertility  → suggested slug: `ashwagandha-benefits-for-female-fertility`
+- [autocomplete] ashwagandha benefits for female sexually  → suggested slug: `ashwagandha-benefits-for-female-sexually`
+- [autocomplete] ashwagandha benefits for female weight loss  → suggested slug: `ashwagandha-benefits-for-female-weight-loss`
+- [autocomplete] ashwagandha benefits for women adhd  → suggested slug: `ashwagandha-benefits-for-women-adhd`
+- [autocomplete] ashwagandha benefits for women amazon  → suggested slug: `ashwagandha-benefits-for-women-amazon`
+- [autocomplete] ashwagandha benefits for women and men  → suggested slug: `ashwagandha-benefits-for-women-and-men`
+- [autocomplete] ashwagandha benefits for women and side effects  → suggested slug: `ashwagandha-benefits-for-women-and-side-effects`
+- [autocomplete] ashwagandha benefits for women goli  → suggested slug: `ashwagandha-benefits-for-women-goli`
+- [autocomplete] ashwagandha benefits for women gummies  → suggested slug: `ashwagandha-benefits-for-women-gummies`
+- [autocomplete] ashwagandha benefits for women hindi  → suggested slug: `ashwagandha-benefits-for-women-hindi`
+- [autocomplete] ashwagandha benefits for women how much  → suggested slug: `ashwagandha-benefits-for-women-how-much`
+- [autocomplete] ashwagandha benefits for women how much to take  → suggested slug: `ashwagandha-benefits-for-women-how-much-to-take`
+- [autocomplete] ashwagandha benefits for women in hindi  → suggested slug: `ashwagandha-benefits-for-women-in-hindi`
+- [autocomplete] ashwagandha benefits for women in marathi  → suggested slug: `ashwagandha-benefits-for-women-in-marathi`
+- [autocomplete] ashwagandha benefits for women in urdu  → suggested slug: `ashwagandha-benefits-for-women-in-urdu`
+- [autocomplete] ashwagandha benefits for women ksm 66  → suggested slug: `ashwagandha-benefits-for-women-ksm-66`
+- [autocomplete] ashwagandha benefits for women over 50  → suggested slug: `ashwagandha-benefits-for-women-over-50`
+- [autocomplete] ashwagandha benefits for women powder  → suggested slug: `ashwagandha-benefits-for-women-powder`
+- [autocomplete] ashwagandha benefits for women reddit  → suggested slug: `ashwagandha-benefits-for-women-reddit`
+- [autocomplete] ashwagandha benefits for women tea  → suggested slug: `ashwagandha-benefits-for-women-tea`
+- [autocomplete] ashwagandha benefits for women uk  → suggested slug: `ashwagandha-benefits-for-women-uk`
+- [autocomplete] ashwagandha benefits for women urdu  → suggested slug: `ashwagandha-benefits-for-women-urdu`
+- [autocomplete] ashwagandha benefits for women weight loss  → suggested slug: `ashwagandha-benefits-for-women-weight-loss`
+- [autocomplete] ashwagandha benefits for women when to take  → suggested slug: `ashwagandha-benefits-for-women-when-to-take`
+- [autocomplete] ashwagandha benefits for women's health  → suggested slug: `ashwagandha-benefits-for-women-s-health`
+- [autocomplete] ashwagandha benefits women's health  → suggested slug: `ashwagandha-benefits-women-s-health`
+- [autocomplete] ashwagandha can be used by female  → suggested slug: `ashwagandha-can-be-used-by-female`
+- [autocomplete] ashwagandha can women take it  → suggested slug: `ashwagandha-can-women-take-it`
+- [autocomplete] ashwagandha for libido for women  → suggested slug: `ashwagandha-for-libido-for-women`
+- [autocomplete] ashwagandha for women adhd  → suggested slug: `ashwagandha-for-women-adhd`
+- [autocomplete] ashwagandha for women amazon  → suggested slug: `ashwagandha-for-women-amazon`
+- [autocomplete] ashwagandha for women amount  → suggested slug: `ashwagandha-for-women-amount`
+- [autocomplete] ashwagandha for women and men  → suggested slug: `ashwagandha-for-women-and-men`
+- [autocomplete] ashwagandha for women anxiety  → suggested slug: `ashwagandha-for-women-anxiety`
+- [autocomplete] ashwagandha for women benefits  → suggested slug: `ashwagandha-for-women-benefits`
+- [autocomplete] ashwagandha for women benefits in hindi  → suggested slug: `ashwagandha-for-women-benefits-in-hindi`
+- [autocomplete] ashwagandha for women best  → suggested slug: `ashwagandha-for-women-best`
+- [autocomplete] ashwagandha for women best brand  → suggested slug: `ashwagandha-for-women-best-brand`
+- [autocomplete] ashwagandha for women dosage  → suggested slug: `ashwagandha-for-women-dosage`
+- [autocomplete] ashwagandha for women effects  → suggested slug: `ashwagandha-for-women-effects`
+
+## collagen-skin  (7)
+- [counter-target] https://pendulumlife.com/blogs/news/the-skinny-on-gut-health-how-beneficial-bacteria-can-help-control-your-appetite  → suggested slug: `https-pendulumlife-com-blogs-news-the-skinny-on-gut-health-how-beneficial-bacteria-can-help-control-`
+- [counter-target] https://pendulumlife.com/blogs/news/gut-check-for-glowing-skin-the-gut-skin-connection  → suggested slug: `https-pendulumlife-com-blogs-news-gut-check-for-glowing-skin-the-gut-skin-connection`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/could-the-key-to-better-hair-and-skin-begin-inside-of-us  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-could-the-key-to-better-hair-and-skin-begin-inside-of-`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/science-based-skincare-ingredients-for-healthy-skin  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-science-based-skincare-ingredients-for-healthy-skin`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/nad-for-skin-benefits-and-importance  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-nad-for-skin-benefits-and-importance`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/best-nutrients-for-skin-and-hair  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-best-nutrients-for-skin-and-hair`
+- [counter-target] https://www.truniagen.com/blogs/tru-niagen-labs/nad-science-meets-skincare-introducing-niagen-nanocloud  → suggested slug: `https-www-truniagen-com-blogs-tru-niagen-labs-nad-science-meets-skincare-introducing-niagen-nanoclou`
+
+## uncategorized  (776)
+- [counter-target] https://gruns.co/blogs/news  → suggested slug: `https-gruns-co-blogs-news`
+- [counter-target] https://gruns.co/blogs/bear-necessities  → suggested slug: `https-gruns-co-blogs-bear-necessities`
+- [counter-target] https://gruns.co/blogs/supergreens  → suggested slug: `https-gruns-co-blogs-supergreens`
+- [counter-target] https://gruns.co/blogs/vitamins  → suggested slug: `https-gruns-co-blogs-vitamins`
+- [counter-target] https://gruns.co/blogs/bear-necessities/supercharge-your-health-with-green-supplements-a-complete-guide  → suggested slug: `https-gruns-co-blogs-bear-necessities-supercharge-your-health-with-green-supplements-a-complete-guid`
+- [counter-target] https://gruns.co/blogs/bear-necessities/ag1-vs-gruns-which-green-supplement-wins-for-daily-nutrition  → suggested slug: `https-gruns-co-blogs-bear-necessities-ag1-vs-gruns-which-green-supplement-wins-for-daily-nutrition`
+- [counter-target] https://gruns.co/blogs/bear-necessities/top-natural-multivitamin-alternatives-busy-lives-2025  → suggested slug: `https-gruns-co-blogs-bear-necessities-top-natural-multivitamin-alternatives-busy-lives-2025`
+- [counter-target] https://gruns.co/blogs/supergreens/complete-list-10-super-greens-powder-benefits  → suggested slug: `https-gruns-co-blogs-supergreens-complete-list-10-super-greens-powder-benefits`
+- [counter-target] https://gruns.co/blogs/supergreens/skip-powders-daily-vitamins-go-energy  → suggested slug: `https-gruns-co-blogs-supergreens-skip-powders-daily-vitamins-go-energy`
+- [counter-target] https://gruns.co/blogs/supergreens/6-ag1-alternatives-youll-actually-crave  → suggested slug: `https-gruns-co-blogs-supergreens-6-ag1-alternatives-youll-actually-crave`
+- [counter-target] https://gruns.co/blogs/supergreens/super-greens-gummies-dietitian-picks-top-2025  → suggested slug: `https-gruns-co-blogs-supergreens-super-greens-gummies-dietitian-picks-top-2025`
+- [counter-target] https://gruns.co/blogs/supergreens/greens-powder-subscriptions-2025-winner  → suggested slug: `https-gruns-co-blogs-supergreens-greens-powder-subscriptions-2025-winner`
+- [counter-target] https://gruns.co/blogs/supergreens/super-greens-supplements-8-gummies-replace-11-capsules-daily  → suggested slug: `https-gruns-co-blogs-supergreens-super-greens-supplements-8-gummies-replace-11-capsules-daily`
+- [counter-target] https://gruns.co/blogs/supergreens/gut-health-chew-form-prebiotic-gummies-outsmart-powders  → suggested slug: `https-gruns-co-blogs-supergreens-gut-health-chew-form-prebiotic-gummies-outsmart-powders`
+- [counter-target] https://gruns.co/blogs/supergreens/daily-vitamin-gummies-men-actually-taste-good  → suggested slug: `https-gruns-co-blogs-supergreens-daily-vitamin-gummies-men-actually-taste-good`
+- [counter-target] https://gruns.co/blogs/supergreens/greens-powder-probiotic-vs-prebiotic  → suggested slug: `https-gruns-co-blogs-supergreens-greens-powder-probiotic-vs-prebiotic`
+- [counter-target] https://gruns.co/blogs/supergreens/dietitian-ranks-6-best-ag1-alternatives-2025  → suggested slug: `https-gruns-co-blogs-supergreens-dietitian-ranks-6-best-ag1-alternatives-2025`
+- [counter-target] https://gruns.co/blogs/supergreens/greens-gummies-vs-powder-whats-more-effective-supplement  → suggested slug: `https-gruns-co-blogs-supergreens-greens-gummies-vs-powder-whats-more-effective-supplement`
+- [counter-target] https://gruns.co/blogs/supergreens/grns-vs-bloom-greens-2025-taste-price-results  → suggested slug: `https-gruns-co-blogs-supergreens-grns-vs-bloom-greens-2025-taste-price-results`
+- [counter-target] https://gruns.co/blogs/supergreens/happens-your-body-you-take-greens-powder-day  → suggested slug: `https-gruns-co-blogs-supergreens-happens-your-body-you-take-greens-powder-day`
+- [counter-target] https://gruns.co/blogs/supergreens/best-super-greens-powders-2025  → suggested slug: `https-gruns-co-blogs-supergreens-best-super-greens-powders-2025`
+- [counter-target] https://gruns.co/blogs/supergreens/prebiotic-supplements-microbiome-8-chew-fix  → suggested slug: `https-gruns-co-blogs-supergreens-prebiotic-supplements-microbiome-8-chew-fix`
+- [counter-target] https://gruns.co/blogs/supergreens/best-gut-health-supplements  → suggested slug: `https-gruns-co-blogs-supergreens-best-gut-health-supplements`
+- [counter-target] https://gruns.co/blogs/supergreens/alternatives-multivitamins  → suggested slug: `https-gruns-co-blogs-supergreens-alternatives-multivitamins`
+- [counter-target] https://gruns.co/blogs/news/grns-your-daily-gummy-super-greens-weight-goals  → suggested slug: `https-gruns-co-blogs-news-grns-your-daily-gummy-super-greens-weight-goals`
+- [counter-target] https://gruns.co/blogs/supergreens/super-greens-weight-loss  → suggested slug: `https-gruns-co-blogs-supergreens-super-greens-weight-loss`
+- [counter-target] https://gruns.co/blogs/supergreens/daily-vitamin-packs-go  → suggested slug: `https-gruns-co-blogs-supergreens-daily-vitamin-packs-go`
+- [counter-target] https://gruns.co/blogs/vitamins/vitamin-gummies-adults  → suggested slug: `https-gruns-co-blogs-vitamins-vitamin-gummies-adults`
+- [counter-target] https://pendulumlife.com/blogs/news  → suggested slug: `https-pendulumlife-com-blogs-news`
+- [counter-target] https://pendulumlife.com/blogs/resources  → suggested slug: `https-pendulumlife-com-blogs-resources`
+- [counter-target] https://pendulumlife.com/blogs/news/your-guide-to-month-one-on-pendulum-glucose-control  → suggested slug: `https-pendulumlife-com-blogs-news-your-guide-to-month-one-on-pendulum-glucose-control`
+- [counter-target] https://pendulumlife.com/blogs/news/5-tips-for-building-a-daily-probiotic-habit  → suggested slug: `https-pendulumlife-com-blogs-news-5-tips-for-building-a-daily-probiotic-habit`
+- [counter-target] https://pendulumlife.com/blogs/news/why-we-started-pendulum  → suggested slug: `https-pendulumlife-com-blogs-news-why-we-started-pendulum`
+- [counter-target] https://pendulumlife.com/blogs/news/a-dietitians-tips-for-a-healthy-type-2-diabetes-eating  → suggested slug: `https-pendulumlife-com-blogs-news-a-dietitians-tips-for-a-healthy-type-2-diabetes-eating`
+- [counter-target] https://pendulumlife.com/blogs/news/6-swaps-for-a-healthier-you  → suggested slug: `https-pendulumlife-com-blogs-news-6-swaps-for-a-healthier-you`
+- [counter-target] https://pendulumlife.com/blogs/news/your-guide-to-month-two-on-pendulum-glucose-control  → suggested slug: `https-pendulumlife-com-blogs-news-your-guide-to-month-two-on-pendulum-glucose-control`
+- [counter-target] https://pendulumlife.com/blogs/news/4-top-holiday-travel-tips-for-type-2-diabetes  → suggested slug: `https-pendulumlife-com-blogs-news-4-top-holiday-travel-tips-for-type-2-diabetes`
+- [counter-target] https://pendulumlife.com/blogs/news/your-guide-to-month-three-on-pendulum-glucose-control  → suggested slug: `https-pendulumlife-com-blogs-news-your-guide-to-month-three-on-pendulum-glucose-control`
+- [counter-target] https://pendulumlife.com/blogs/news/why-are-synbiotics-important  → suggested slug: `https-pendulumlife-com-blogs-news-why-are-synbiotics-important`
+- [counter-target] https://pendulumlife.com/blogs/news/ask-the-dietitian-how-much-fiber-do-i-actually-need  → suggested slug: `https-pendulumlife-com-blogs-news-ask-the-dietitian-how-much-fiber-do-i-actually-need`
+- [counter-target] https://pendulumlife.com/blogs/news/5-gut-health-goals-that-are-easy-to-achieve  → suggested slug: `https-pendulumlife-com-blogs-news-5-gut-health-goals-that-are-easy-to-achieve`
+- [counter-target] https://pendulumlife.com/blogs/news/what-is-blood-sugar  → suggested slug: `https-pendulumlife-com-blogs-news-what-is-blood-sugar`
+- [counter-target] https://pendulumlife.com/blogs/news/can-you-reduce-your-risk-of-type-2-diabetes  → suggested slug: `https-pendulumlife-com-blogs-news-can-you-reduce-your-risk-of-type-2-diabetes`
+- [counter-target] https://pendulumlife.com/blogs/news/ask-the-dietitian-what-are-gut-healthy-foods-i-can-eat-during-the-big-game  → suggested slug: `https-pendulumlife-com-blogs-news-ask-the-dietitian-what-are-gut-healthy-foods-i-can-eat-during-the-`
+- [counter-target] https://pendulumlife.com/blogs/news/ask-the-dietitian-how-do-i-realistically-manage-my-sweets-craving  → suggested slug: `https-pendulumlife-com-blogs-news-ask-the-dietitian-how-do-i-realistically-manage-my-sweets-craving`
+- [counter-target] https://pendulumlife.com/blogs/news/caring-for-a-loved-one-with-t2d-barbara-and-mark  → suggested slug: `https-pendulumlife-com-blogs-news-caring-for-a-loved-one-with-t2d-barbara-and-mark`
+- [counter-target] https://pendulumlife.com/blogs/news/can-you-inherit-type-2-diabetes  → suggested slug: `https-pendulumlife-com-blogs-news-can-you-inherit-type-2-diabetes`
+- [counter-target] https://pendulumlife.com/blogs/news/type-2-diabetes-and-heart-health  → suggested slug: `https-pendulumlife-com-blogs-news-type-2-diabetes-and-heart-health`
+- [counter-target] https://pendulumlife.com/blogs/news/we-re-non-gmo-project-verified  → suggested slug: `https-pendulumlife-com-blogs-news-we-re-non-gmo-project-verified`
+- [counter-target] https://pendulumlife.com/blogs/news/ask-the-dietitian-are-there-gut-microbiome-friendly-fast-food-options  → suggested slug: `https-pendulumlife-com-blogs-news-ask-the-dietitian-are-there-gut-microbiome-friendly-fast-food-opti`
+
