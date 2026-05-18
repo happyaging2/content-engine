@@ -42,9 +42,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -77,8 +77,11 @@ jobs:
           git config user.name "GitHub Actions"
 
       - name: Run pipeline (Phase 1 -> 3 -> 4)
+        id: pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONUNBUFFERED: "1"
+          PYTHONFAULTHANDLER: "1"
         run: |
           set -eo pipefail
           set -x
@@ -91,20 +94,34 @@ jobs:
 
           # Stream output AND save a full log artifact for post-mortem.
           mkdir -p _run-logs
-          python3 -u scripts/run-pipeline.py \
+          # Use stdbuf to make sure Python's stdout is line-buffered, so tee
+          # gets every line even on crash (no buffer left in flight).
+          stdbuf -oL -eL python3 scripts/run-pipeline.py \
             --batch-date "$BATCH" \
             --batch-size "$SIZE" \
             --concurrency "$CONC" \
             $DRY 2>&1 | tee _run-logs/run-${BATCH}.log
+          echo "EXITED OK"
+
+      - name: Dump environment + filesystem state (always)
+        if: always()
+        run: |
+          set +e
+          echo "==== git status ===="; git status --short
+          echo "==== articles/ recent ===="; ls -lt articles/ 2>/dev/null | head -20
+          echo "==== _run-logs ===="; ls -la _run-logs/ 2>/dev/null
+          echo "==== latest run log (last 200 lines) ===="
+          tail -200 _run-logs/run-*.log 2>/dev/null
 
       - name: Upload run log (always)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: run-log-${{ github.run_id }}
           path: |
             _run-logs/
             articles/batch-*-report.md
+            articles/*.meta.json
           retention-days: 14
           if-no-files-found: ignore
 
