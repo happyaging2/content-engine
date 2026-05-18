@@ -84,9 +84,12 @@ PHASE1_SCHEMA = {
                     "is_refresh": {"type": "boolean"},
                     "refresh_slug": {
                         "type": ["string", "null"],
-                        "description": "If is_refresh=true, the existing slug to update.",
+                        "description": "If is_refresh=true, the existing slug to update. null otherwise.",
                     },
                 },
+                # Anthropic strict-mode structured output requires EVERY
+                # property to appear in `required`. Optional fields use a
+                # nullable type and the model returns null when absent.
                 "required": [
                     "topic",
                     "primary_keyword",
@@ -98,6 +101,7 @@ PHASE1_SCHEMA = {
                     "article_angle",
                     "priority_score",
                     "is_refresh",
+                    "refresh_slug",
                 ],
                 "additionalProperties": False,
             },
@@ -187,6 +191,10 @@ def run_phase1(
 
 # ── Phase 3 — Content Writer (parallel) ────────────────────────────────────────
 
+# Anthropic structured-output strict mode requires EVERY property listed in
+# `properties` to also appear in `required`. Optional fields use a nullable
+# type union (`["string", "null"]`) and the model returns null when absent.
+# Same applies to nested object schemas.
 PHASE3_OUTPUT_SCHEMA = {
     "type": "object",
     "properties": {
@@ -220,7 +228,7 @@ PHASE3_OUTPUT_SCHEMA = {
                     "dose": {"type": ["string", "null"]},
                     "third_party_tested": {"type": ["string", "null"]},
                 },
-                "required": ["name", "url"],
+                "required": ["name", "url", "form", "active", "dose", "third_party_tested"],
                 "additionalProperties": False,
             },
         },
@@ -236,6 +244,7 @@ PHASE3_OUTPUT_SCHEMA = {
                     "study_type": {"type": ["string", "null"]},
                     "n": {"type": ["integer", "null"]},
                 },
+                "required": ["pmid", "doi", "title", "year", "study_type", "n"],
                 "additionalProperties": False,
             },
         },
@@ -250,14 +259,17 @@ PHASE3_OUTPUT_SCHEMA = {
         "slug",
         "meta_description",
         "primary_keyword",
+        "secondary_keywords",
         "tags",
         "excerpt",
         "image_query",
         "body_image_queries",
         "about",
+        "mentions",
         "primary_topic",
         "schema_type",
         "format",
+        "products_compared",
         "citations",
         "body_html",
     ],
@@ -364,9 +376,10 @@ def run_phase3_parallel(
 
 # ── Phase 4 — SEO Optimizer (quality gate) ─────────────────────────────────────
 
-# Phase 4 schema: `final_*` fields are OPTIONAL. When verdict=pass, the
-# optimizer omits them and we fall back to the Phase 3 article — no expensive
-# regeneration of the full HTML when nothing needs fixing.
+# Phase 4 schema. Anthropic strict mode requires ALL properties in
+# `required`; we keep `final_*` nullable so verdict=pass can return null
+# (the runner falls back to the Phase 3 article when null — no expensive
+# regeneration of the full HTML when nothing needs fixing).
 PHASE4_VERDICT_SCHEMA = {
     "type": "object",
     "properties": {
@@ -385,7 +398,7 @@ PHASE4_VERDICT_SCHEMA = {
         "final_meta_description": {"type": ["string", "null"]},
         "final_body_html": {
             "type": ["string", "null"],
-            "description": "Required only when verdict=fix_and_pass. Omit/null on pass or reject.",
+            "description": "Required string when verdict=fix_and_pass. Return null on pass or reject.",
         },
     },
     "required": [
@@ -394,6 +407,10 @@ PHASE4_VERDICT_SCHEMA = {
         "fixes_applied",
         "fda_ftc_violations",
         "geo_score",
+        "final_title",
+        "final_seo_title",
+        "final_meta_description",
+        "final_body_html",
     ],
     "additionalProperties": False,
 }
