@@ -1,8 +1,8 @@
-# Refresh Queue — generated 2026-05-11
+# Refresh Queue — generated 2026-05-18
 
 Threshold: articles not reviewed within **90 days** are added below. Phase 4 (SEO Optimizer) reads this list and re-runs PMID validation, citation enrichment, and bumps `date_reviewed` + `date_modified` on the corresponding article.
 
-Total flagged: **543**
+Total flagged: **542**
 
 | Slug | Age (days) | Reasons |
 |---|---:|---|
@@ -10,7 +10,6 @@ Total flagged: **543**
 | `acetyl-l-carnitine-vs-l-carnitine-after-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |
 | `acetylcholine-memory-after-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |
 | `adaptogens-guide-women-over-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |
-| `adaptogens-perimenopause-which-help-after-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |
 | `adrenal-fatigue-after-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |
 | `adrenal-fatigue-vs-burnout-after-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |
 | `adrenal-recovery-protocol-after-40` | — | missing date_reviewed; no structured citations; no `about` entities; no reviewer_url |

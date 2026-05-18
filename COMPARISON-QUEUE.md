@@ -1,6 +1,6 @@
-# Comparison Queue — generated 2026-05-11
+# Comparison Queue — generated 2026-05-18
 
-Total candidates: **128** · Kept after dedup: **128** · Rejected: 0
+Total candidates: **128** · Kept after dedup: **122** · Rejected: 6
 
 Phase 1 reserves >=2 slots per batch of 20 for comparison topics. 
 When picking, prioritize types in this order: `ha-vs-competitor` > 
@@ -10,9 +10,6 @@ When picking, prioritize types in this order: `ha-vs-competitor` >
 
 | Topic | Cluster | Type | Products |
 |---|---|---|---|
-| NAD+ Women's Longevity Formula vs Tru Niagen | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Tru Niagen |
-| NAD+ Women's Longevity Formula vs Elysium Health Basis | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Elysium Health Basis |
-| NAD+ Women's Longevity Formula vs Life Extension NAD+ Cell Regenerator | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Life Extension NAD+ Cell Regenerator |
 | NAD+ Women's Longevity Formula vs Wonderfeel Youngr NMN | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Wonderfeel Youngr NMN |
 | NAD+ Women's Longevity Formula vs DoNotAge Pure NMN | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, DoNotAge Pure NMN |
 | NAD+ Women's Longevity Formula vs Renue NMN | longevity | ha-vs-competitor | NAD+ Women's Longevity Formula, Renue NMN |
@@ -26,7 +23,6 @@ When picking, prioritize types in this order: `ha-vs-competitor` >
 | Elysium Health Basis vs Life Extension NAD+ Cell Regenerator: which is better for women over 40 | longevity | competitor-vs-competitor | Elysium Health Basis, Life Extension NAD+ Cell Regenerator |
 | Is Tru Niagen worth it? An evidence-based review | longevity | single-brand-review | Tru Niagen |
 | Is Elysium Health Basis worth it? An evidence-based review | longevity | single-brand-review | Elysium Health Basis |
-| Is Life Extension NAD+ Cell Regenerator worth it? An evidence-based review | longevity | single-brand-review | Life Extension NAD+ Cell Regenerator |
 | Is Wonderfeel Youngr NMN worth it? An evidence-based review | longevity | single-brand-review | Wonderfeel Youngr NMN |
 | Is DoNotAge Pure NMN worth it? An evidence-based review | longevity | single-brand-review | DoNotAge Pure NMN |
 | Is Renue NMN worth it? An evidence-based review | longevity | single-brand-review | Renue NMN |
@@ -50,8 +46,6 @@ When picking, prioritize types in this order: `ha-vs-competitor` >
 | Is Amberen worth it? An evidence-based review | perimenopause | single-brand-review | Amberen |
 | Is Hum Nutrition Hormone Balance worth it? An evidence-based review | perimenopause | single-brand-review | Hum Nutrition Hormone Balance |
 | Perimenopause brands compared: form, dose, and third-party testing | perimenopause | landscape | Bonafide Relizen, Estroven Complete Multi-Symptom, Equelle (Pharmavite), Amberen, Hum Nutrition Hormone Balance, Happy Aging Calm Shot |
-| Happy Aging Glow Shot vs Vital Proteins Collagen Peptides | skin | ha-vs-competitor | Happy Aging Glow Shot, Vital Proteins Collagen Peptides |
-| Happy Aging Glow Shot vs Ancient Nutrition Multi Collagen | skin | ha-vs-competitor | Happy Aging Glow Shot, Ancient Nutrition Multi Collagen |
 | Happy Aging Glow Shot vs Sports Research Collagen Peptides | skin | ha-vs-competitor | Happy Aging Glow Shot, Sports Research Collagen Peptides |
 | Happy Aging Glow Shot vs NeoCell Super Collagen | skin | ha-vs-competitor | Happy Aging Glow Shot, NeoCell Super Collagen |
 | Happy Aging Glow Shot vs Hum Nutrition Collagen Love | skin | ha-vs-competitor | Happy Aging Glow Shot, Hum Nutrition Collagen Love |
@@ -138,3 +132,12 @@ When picking, prioritize types in this order: `ha-vs-competitor` >
 | Is Solluna by Kimberly Snyder Feel Good SBO Probiotics+ worth it? An evidence-based review | hormonal-balance | single-brand-review | Solluna by Kimberly Snyder Feel Good SBO Probiotics+ |
 | Is Beli Women worth it? An evidence-based review | hormonal-balance | single-brand-review | Beli Women |
 | Hormonal-Balance brands compared: form, dose, and third-party testing | hormonal-balance | landscape | Happy Mammoth Hormone Harmony, O Positiv FLO PMS Gummy Vitamins, Hum Nutrition Hormone Balance, Wile Hormone Health, Solluna by Kimberly Snyder Feel Good SBO Probiotics+, Beli Women, Happy Aging Calm Shot |
+
+## Rejected (already covered)
+
+- ~~NAD+ Women's Longevity Formula vs Tru Niagen~~  ·  ha-vs-competitor
+- ~~NAD+ Women's Longevity Formula vs Elysium Health Basis~~  ·  ha-vs-competitor
+- ~~NAD+ Women's Longevity Formula vs Life Extension NAD+ Cell Regenerator~~  ·  ha-vs-competitor
+- ~~Is Life Extension NAD+ Cell Regenerator worth it? An evidence-based review~~  ·  single-brand-review
+- ~~Happy Aging Glow Shot vs Vital Proteins Collagen Peptides~~  ·  ha-vs-competitor
+- ~~Happy Aging Glow Shot vs Ancient Nutrition Multi Collagen~~  ·  ha-vs-competitor

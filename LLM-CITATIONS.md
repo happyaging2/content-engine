@@ -1,4 +1,4 @@
-# LLM Citation Monitor — 2026-05-11
+# LLM Citation Monitor — 2026-05-18
 
 Domain tracked: `happyaging.com`. Queries: 50.
 
@@ -16,6 +16,10 @@ Domain tracked: `happyaging.com`. Queries: 50.
 
 ## Misses (no citation, top 30)
 
+- [perplexity] the 12 hallmarks of aging what they mean for women over 40 (and how to address each one)
+- [chatgpt] the 12 hallmarks of aging what they mean for women over 40 (and how to address each one)
+- [claude] the 12 hallmarks of aging what they mean for women over 40 (and how to address each one)
+- [google_ai_overview] the 12 hallmarks of aging what they mean for women over 40 (and how to address each one)
 - [perplexity] the 30-day longevity reset plan for women over 40 a science-backed protocol
 - [chatgpt] the 30-day longevity reset plan for women over 40 a science-backed protocol
 - [claude] the 30-day longevity reset plan for women over 40 a science-backed protocol
@@ -36,13 +40,9 @@ Domain tracked: `happyaging.com`. Queries: 50.
 - [chatgpt] the complete guide to adaptogens for women over 40
 - [claude] the complete guide to adaptogens for women over 40
 - [google_ai_overview] the complete guide to adaptogens for women over 40
-- [perplexity] adaptogens for perimenopause which ones actually help
-- [chatgpt] adaptogens for perimenopause which ones actually help
-- [claude] adaptogens for perimenopause which ones actually help
-- [google_ai_overview] adaptogens for perimenopause which ones actually help
+- [perplexity] adaptogens for perimenopause which ones actually help after 40
+- [chatgpt] adaptogens for perimenopause which ones actually help after 40
+- [claude] adaptogens for perimenopause which ones actually help after 40
+- [google_ai_overview] adaptogens for perimenopause which ones actually help after 40
 - [perplexity] adrenal fatigue after 40 signs, causes, and natural recovery
 - [chatgpt] adrenal fatigue after 40 signs, causes, and natural recovery
-- [claude] adrenal fatigue after 40 signs, causes, and natural recovery
-- [google_ai_overview] adrenal fatigue after 40 signs, causes, and natural recovery
-- [perplexity] adrenal fatigue vs burnout after 40 what is the difference
-- [chatgpt] adrenal fatigue vs burnout after 40 what is the difference
