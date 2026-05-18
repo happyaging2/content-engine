@@ -2,14 +2,84 @@
 
 ---
 
-## BATCH 2026-05-15 (Current)
+## BATCH 2026-05-18 (Current)
+
+### Batch Overview
+- Date: 2026-05-18
+- Articles written: 20/20
+- QA gate: 20/20 PASS (Phase 4 verified — 0 em/en dashes, author "Happy Aging Team", template "timeline")
+- Publishing status: Staged as drafts; HTTP 403 in sandbox as expected; `publish-shopify.yml` GitHub Action at 11:00 UTC will deploy
+- Word counts: 1,949 to 2,785 words per article (all within 1,800-3,500 range)
+
+### Cluster Distribution
+| Cluster | Count | Products Linked |
+|---|---|---|
+| NAD+/NMN | 3 | NMN Cell Renew Tonic ($75), NAD Advanced ($99) |
+| Longevity | 2 | NAD Advanced ($99), NAD Women's Formula ($99) |
+| Sleep | 3 | Sleep Tonic ($55) |
+| GLP-1 Support | 1 | Lean Muscle Formula ($55) |
+| Gut/Bloating | 3 | Happiest Gut ($25) |
+| Hormones | 3 | NAD Women's Formula ($99) |
+| Brain | 2 | Neuro Creamer ($61) |
+| Skin | 2 | Glow Shot ($60) |
+| Energy (Refresh) | 1 | NAD Women's Formula ($99) |
+
+Clusters covered: 9 (requirement: ≥5) ✓
+NAD+/NMN + Longevity + Sleep: 8 articles (requirement: ≥4) ✓
+Comparison articles: 3 (ritual-multivitamin, neuro-creamer-vs-ag1, seed-probiotic — all ha-vs-competitor) ✓
+Refresh articles: 2 (b12-deficiency, magnesium-forms) ✓
+
+### Articles — Batch 2026-05-18
+| # | Title | Slug | Cluster | Product | Format |
+|---|---|---|---|---|---|
+| 1 | NMN Supplement for Women Over 50 | nmn-supplement-for-women-over-50 | nad-nmn | nmn-cell-renew-tonic | Explainer + comparison table |
+| 2 | NMN Timing: Morning vs Night | nmn-timing-morning-vs-night-women-over-40 | nad-nmn | nmn-cell-renew-tonic | Guide + comparison table |
+| 3 | Urolithin A Bioavailability Guide | urolithin-a-bioavailability-women-over-40 | longevity | nad-advanced | Explainer + food table |
+| 4 | GLP-1 and Muscle Loss (Sarcopenia) | glp-1-muscle-loss-sarcopenia-women-over-40 | glp-1 | lean-muscle-formula | Guide + protocol table |
+| 5 | Ritual Multivitamin vs Happy Aging NAD+ | ritual-multivitamin-vs-happy-aging-nad-women | longevity | nad-womens-longevity | ha-vs-competitor |
+| 6 | Why Wake Up at 3am After 40 | why-wake-up-3am-after-40-hormones | sleep | sleep-tonic | Explainer + multi-cause table |
+| 7 | Deep Sleep Stages Protocol (7-Step) | deep-sleep-stages-women-over-40-protocol | sleep | sleep-tonic | Protocol |
+| 8 | Probiotics for Bloating: Honest Review | probiotics-bloating-after-40-honest-review | bloating | happiest-gut | Skeptic review + strain table |
+| 9 | SIBO Symptoms in Women Over 40 | sibo-symptoms-women-over-40 | bloating | happiest-gut | Clinical explainer + comparison table |
+| 10 | Seed Probiotic vs Happiest Gut | seed-probiotic-vs-happiest-gut-women-over-40 | bloating | happiest-gut | ha-vs-competitor |
+| 11 | Perimenopause Insomnia 7-Step Protocol | perimenopause-insomnia-protocol-women-over-40 | hormones | nad-womens-longevity | Protocol |
+| 12 | Ashwagandha for Perimenopause: Honest Review | ashwagandha-perimenopause-honest-review | hormones | nad-womens-longevity | Skeptic review + evidence table |
+| 13 | Stress Incontinence: Exercises vs Supplements | stress-incontinence-menopause-exercises-supplements | hormones | nad-womens-longevity | Guide + evidence comparison |
+| 14 | Collagen Peptides vs Vitamin C for Skin | collagen-peptides-vs-vitamin-c-skin-after-40 | skin | glow-shot | Comparison + mechanism table |
+| 15 | Astaxanthin Skin Aging: Honest Review | astaxanthin-skin-aging-women-over-40 | skin | glow-shot | Skeptic review + comparison table |
+| 16 | Phosphatidylserine Memory + FDA Claim | phosphatidylserine-memory-after-40-fda-claim | brain | neuro-creamer | Explainer + evidence table |
+| 17 | Neuro Creamer vs AG1 for Brain Health | neuro-creamer-vs-ag1-brain-women-over-40 | brain | neuro-creamer | ha-vs-competitor |
+| 18 | Fisetin as a Senolytic: Honest Review | fisetin-senolytic-supplement-women-over-40 | longevity | nad-advanced | Skeptic review + comparison table |
+| 19 | B12 Deficiency Signs After 40 (2026 Refresh) | b12-deficiency-signs-women-over-40-refresh | energy | nad-womens-longevity | Refresh guide + multi-cause table |
+| 20 | Magnesium Forms Complete Guide (Refresh) | magnesium-forms-women-over-40-complete-guide | sleep | sleep-tonic | Refresh guide + comparison table |
+
+### Predicted Performance
+- **Highest GEO extraction potential:** why-wake-up-3am-after-40 (anxious symptom query, multi-cause table), glp-1-muscle-loss (final gap in GLP-1 clinical library, sarcopenia table), seed-probiotic-vs-happiest-gut (high brand awareness comparison, specific enzyme differentiator), nmn-supplement-for-women-over-50 (post-menopause NAD biology angle)
+- **Featured snippet candidates:** why-wake-up-3am-after-40 ("why do I wake up at 3am"), sibo-symptoms-women-over-40 ("SIBO symptoms women"), phosphatidylserine-memory-after-40-fda-claim ("does phosphatidylserine work for memory"), magnesium-forms (comprehensive guide structure)
+- **High conversion potential:** ritual-multivitamin-vs-happy-aging (Ritual brand awareness capture), neuro-creamer-vs-ag1 (AG1 is #1 wellness drink brand), seed-probiotic-vs-happiest-gut (Seed is top-of-mind probiotic brand)
+- **Trust-building skeptic articles:** probiotics-bloating (explicit strain-specificity argument), ashwagandha-perimenopause (honest evidence limits), astaxanthin-skin (industry-funded trial disclosure), fisetin-senolytic (human evidence gap acknowledged)
+- **Protocol articles (highest GEO citation rate):** deep-sleep-stages-women-over-40 (7-step), perimenopause-insomnia-protocol (7-step)
+
+---
+
+## BATCH 2026-05-16 (Previous)
+
+### Batch Overview
+- Date: 2026-05-16
+- Articles written: 20/20
+- QA gate: 20/20 PASS (Phase 4 verified)
+- Publishing status: Staged as drafts; `publish-shopify.yml` GitHub Action at 11:00 UTC will deploy
+
+---
+
+## BATCH 2026-05-15 (Archive)
 
 ### Batch Overview
 - Date: 2026-05-15
 - Articles written: 20/20
 - QA gate: 20/20 PASS (Phase 4 verified)
 - Publishing status: Staged as drafts; `publish-shopify.yml` GitHub Action at 11:00 UTC will deploy
-- SEO audit: Passed — 0 em/en dashes, author "Happy Aging Team", template "timeline", GEO G1-G18 verified, real PMIDs used (33533182, 35099874, 16123266, 30688659, 33950804, 28778708, 26903613, 30930171, 11247889, 11474859, 33567185, 23602572, 25556099, 17308863, 10832087, 17574800, 10432133, 27328030, 25424513, 20152934, 27164923, 18609300, 20824168, 25081826, 30610225, 24269871, 24401291, 28786550, 15113709, 20601100, 27481613, 24286286, 17582837)
+- SEO audit: Passed — 0 em/en dashes, author "Happy Aging Team", template "timeline", GEO G1-G18 verified, real PMIDs used (33533182, 35099874, 16123266, 30688659, 33950804, 28778708, 26903613, 30930171, 11247889, 11474859, 33567185, 23602572, 25556099, 17574800, 10432133, 27328030, 25424513, 20152934, 27164923, 18609300, 20824168, 25081826, 30610225, 24269871, 24401291, 28786550, 15113709, 20601100, 27481613, 24286286, 17582837)
 
 ### Cluster Distribution
 | Cluster | Count | Products Linked |

@@ -1,141 +1,25 @@
-2026-04-09T15:14:17Z NETWORK_ERROR slug=why-do-i-feel-so-tired-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
-2026-04-09T15:14:17Z NETWORK_ERROR slug=sleep-problems-after-40-women — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
-2026-04-09T15:14:17Z NETWORK_ERROR slug=metabolism-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
-2026-04-09T15:14:17Z NETWORK_ERROR slug=brain-fog-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
-2026-04-09T15:14:17Z NETWORK_ERROR slug=collagen-after-40 — Shopify API not reachable from this environment. Run batch-2026-04-09-publish-payloads.sh from unrestricted network.
-FAILED: why-do-i-feel-so-tired-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/longevity-shots.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
-FAILED: sleep-problems-after-40-women — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/sleep-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
-FAILED: metabolism-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/nmn-cell-renew-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
-FAILED: brain-fog-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/brain-tonic.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
-FAILED: collagen-after-40 — {"errors":{"base":["Image upload failed. Image https:\/\/cdn.shopify.com\/s\/files\/1\/0869\/3704\/3264\/files\/glow-shot.jpg failed to download. - file not found. Check that file can be found at your URL."]}}
+# Shopify Publish Log — 2026-05-18
+Run started: Mon May 18 09:25:07 UTC 2026
 
-=== Batch 2026-04-14 Publish Run ===
-does-nad-plus-work-for-energy-after-40: HTTP_000
-root-causes-chronic-fatigue-after-40: HTTP_000
-what-to-eat-for-energy-after-40: HTTP_000
-does-magnesium-actually-improve-sleep-after-40: HTTP_000
-what-to-eat-for-better-sleep-after-40: HTTP_000
-does-nmn-help-hormonal-balance-women-over-40: HTTP_000
-root-causes-hormonal-imbalance-after-40: HTTP_000
-what-to-eat-for-hormone-balance-after-40: HTTP_000
-does-coq10-help-metabolism-weight-after-40: HTTP_000
-root-causes-slow-metabolism-after-40-guide: HTTP_000
-does-marine-collagen-work-for-skin-after-40: HTTP_000
-what-to-eat-for-glowing-skin-after-40: HTTP_000
-does-glutathione-work-for-gut-health-after-40: HTTP_000
-what-to-eat-for-gut-health-after-40: HTTP_000
-does-neuro-creamer-work-for-brain-focus-after-40: HTTP_000
-root-causes-brain-fog-after-40-science: HTTP_000
-what-to-eat-to-clear-brain-fog-after-40: HTTP_000
-does-curcumin-work-for-inflammation-after-40: HTTP_000
-root-causes-chronic-inflammation-after-40: HTTP_000
-what-to-eat-fight-inflammation-after-40: HTTP_000
+nmn-supplement-for-women-over-50 | HTTP_ERROR:403:Forbidden
+nmn-timing-morning-vs-night-women-over-40 | HTTP_ERROR:403:Forbidden
+urolithin-a-bioavailability-women-over-40 | HTTP_ERROR:403:Forbidden
+glp-1-muscle-loss-sarcopenia-women-over-40 | HTTP_ERROR:403:Forbidden
+ritual-multivitamin-vs-happy-aging-nad-women | HTTP_ERROR:403:Forbidden
+why-wake-up-3am-after-40-hormones | HTTP_ERROR:403:Forbidden
+deep-sleep-stages-women-over-40-protocol | HTTP_ERROR:403:Forbidden
+probiotics-bloating-after-40-honest-review | HTTP_ERROR:403:Forbidden
+sibo-symptoms-women-over-40 | HTTP_ERROR:403:Forbidden
+seed-probiotic-vs-happiest-gut-women-over-40 | HTTP_ERROR:403:Forbidden
+perimenopause-insomnia-protocol-women-over-40 | HTTP_ERROR:403:Forbidden
+ashwagandha-perimenopause-honest-review | HTTP_ERROR:403:Forbidden
+stress-incontinence-menopause-exercises-supplements | HTTP_ERROR:403:Forbidden
+collagen-peptides-vs-vitamin-c-skin-after-40 | HTTP_ERROR:403:Forbidden
+astaxanthin-skin-aging-women-over-40 | HTTP_ERROR:403:Forbidden
+phosphatidylserine-memory-after-40-fda-claim | HTTP_ERROR:403:Forbidden
+neuro-creamer-vs-ag1-brain-women-over-40 | HTTP_ERROR:403:Forbidden
+fisetin-senolytic-supplement-women-over-40 | HTTP_ERROR:403:Forbidden
+b12-deficiency-signs-women-over-40-refresh | HTTP_ERROR:403:Forbidden
+magnesium-forms-women-over-40-complete-guide | HTTP_ERROR:403:Forbidden
 
-=== Batch 2026-04-14 Publish Attempt ===
-Date: 2026-04-14
-Status: ALL 20 ARTICLES BLOCKED (HTTP_000 - sandbox network restriction)
-Articles ready for publish with all content, tags, and template_suffix=timeline.
-Require manual publish or environment with outbound HTTPS access to Shopify API.
-Author: Happy Aging Team | Template: timeline | All 20 QA PASSED
-[2026-04-23 09:56:48] === Batch 2026-04-23 Publish Start (20 articles) ===
-[2026-04-23 09:56:48] [1/20] Publishing: Signs Your Liver Needs Support After 40
-[2026-04-23 09:56:48] HTTP_ERROR 403: 'Signs Your Liver Needs Support After 40' -> Host not in allowlist
-[2026-04-23 09:56:50] [2/20] Publishing: What Is Berberine and Does It Help Blood Sugar After 40?
-[2026-04-23 09:56:50] HTTP_ERROR 403: 'What Is Berberine and Does It Help Blood Sugar After 40?' -> Host not in allowlist
-[2026-04-23 09:56:52] [3/20] Publishing: How to Support Liver Detox After 40: What Actually Works
-[2026-04-23 09:56:52] HTTP_ERROR 403: 'How to Support Liver Detox After 40: What Actually Works' -> Host not in allowlist
-[2026-04-23 09:56:54] [4/20] Publishing: Insulin Resistance After 40: Signs, Causes, and What Helps
-[2026-04-23 09:56:54] HTTP_ERROR 403: 'Insulin Resistance After 40: Signs, Causes, and What Helps' -> Host not in allowlist
-[2026-04-23 09:56:56] [5/20] Publishing: Why Diets Stop Working After 40 (And What Does Instead)
-[2026-04-23 09:56:56] HTTP_ERROR 403: 'Why Diets Stop Working After 40 (And What Does Instead)' -> Host not in allowlist
-[2026-04-23 09:56:58] [6/20] Publishing: What Are Sirtuins and How Do They Affect Aging After 40?
-[2026-04-23 09:56:58] HTTP_ERROR 403: 'What Are Sirtuins and How Do They Affect Aging After 40?' -> Host not in allowlist
-[2026-04-23 09:57:00] [7/20] Publishing: What Is Fisetin and Can It Slow Aging After 40?
-[2026-04-23 09:57:00] HTTP_ERROR 403: 'What Is Fisetin and Can It Slow Aging After 40?' -> Host not in allowlist
-[2026-04-23 09:57:02] [8/20] Publishing: How to Support Mitochondrial Health After 40 (The Science-Backed Approach)
-[2026-04-23 09:57:03] HTTP_ERROR 403: 'How to Support Mitochondrial Health After 40 (The Science-Backed Approach)' -> Host not in allowlist
-[2026-04-23 09:57:05] [9/20] Publishing: What Is Phosphatidylserine and Can It Help Memory After 40?
-[2026-04-23 09:57:05] HTTP_ERROR 403: 'What Is Phosphatidylserine and Can It Help Memory After 40?' -> Host not in allowlist
-[2026-04-23 09:57:07] [10/20] Publishing: Lion's Mane Mushroom for Brain Health After 40: What the Research Shows
-[2026-04-23 09:57:07] HTTP_ERROR 403: 'Lion\'s Mane Mushroom for Brain Health After 40: What the Research Shows' -> Host not in allowlist
-[2026-04-23 09:57:09] [11/20] Publishing: What Is the Gut-Brain Axis and Why Does It Matter After 40?
-[2026-04-23 09:57:09] HTTP_ERROR 403: 'What Is the Gut-Brain Axis and Why Does It Matter After 40?' -> Host not in allowlist
-[2026-04-23 09:57:11] [12/20] Publishing: How Leaky Gut Affects Hormones After 40
-[2026-04-23 09:57:11] HTTP_ERROR 403: 'How Leaky Gut Affects Hormones After 40' -> Host not in allowlist
-[2026-04-23 09:57:13] [13/20] Publishing: Menopause and Cardiovascular Risk: What Women Over 40 Need to Know
-[2026-04-23 09:57:13] HTTP_ERROR 403: 'Menopause and Cardiovascular Risk: What Women Over 40 Need to Know' -> Host not in allowlist
-[2026-04-23 09:57:15] [14/20] Publishing: Best Heart-Healthy Supplements for Women Over 40
-[2026-04-23 09:57:15] HTTP_ERROR 403: 'Best Heart-Healthy Supplements for Women Over 40' -> Host not in allowlist
-[2026-04-23 09:57:17] [15/20] Publishing: Vitamin C and Collagen: Why This Combination Matters for Skin After 40
-[2026-04-23 09:57:17] HTTP_ERROR 403: 'Vitamin C and Collagen: Why This Combination Matters for Skin After 40' -> Host not in allowlist
-[2026-04-23 09:57:19] [16/20] Publishing: What Is Astaxanthin and Can It Improve Skin After 40?
-[2026-04-23 09:57:19] HTTP_ERROR 403: 'What Is Astaxanthin and Can It Improve Skin After 40?' -> Host not in allowlist
-[2026-04-23 09:57:21] [17/20] Publishing: Perimenopause Brain Fog: The Hormone Connection Explained
-[2026-04-23 09:57:21] HTTP_ERROR 403: 'Perimenopause Brain Fog: The Hormone Connection Explained' -> Host not in allowlist
-[2026-04-23 09:57:23] [18/20] Publishing: Estrogen and Weight Gain After 40: What's Really Happening
-[2026-04-23 09:57:23] HTTP_ERROR 403: 'Estrogen and Weight Gain After 40: What\'s Really Happening' -> Host not in allowlist
-[2026-04-23 09:57:25] [19/20] Publishing: Ubiquinol vs. Ubiquinone: Which Form of CoQ10 Is Best After 40?
-[2026-04-23 09:57:25] HTTP_ERROR 403: 'Ubiquinol vs. Ubiquinone: Which Form of CoQ10 Is Best After 40?' -> Host not in allowlist
-[2026-04-23 09:57:27] [20/20] Publishing: Best Supplements for Menopause Fatigue: What Actually Works
-[2026-04-23 09:57:27] HTTP_ERROR 403: 'Best Supplements for Menopause Fatigue: What Actually Works' -> Host not in allowlist
-[2026-04-23 09:57:27] === Batch Complete: 0 published, 20 failed ===
-[2026-04-24 09:10:00] === Batch 2026-04-24 publish started (20 articles) ===
-[2026-04-24 09:10:00] Network blocked (Host not in allowlist) — Shopify admin API inaccessible from sandbox
-[2026-04-24 09:10:00] Publish script saved: articles/batch-2026-04-24-publish.py
-[2026-04-24 09:10:00] Run from unrestricted environment: SHOPIFY_TOKEN=<token> python3 articles/batch-2026-04-24-publish.py
-[2026-04-24 09:10:00] Articles ready: 20/20 QA-passed HTML files in articles/
-[2026-04-24 09:10:00] === Batch Complete: 0 published (network blocked), 20 ready for external publish ===
-
---- BATCH 2026-05-09 ---
-Environment: Shopify Admin API returned 403 (host not in allowlist) for all publish attempts.
-Articles staged and ready. Manual publish required or run from allowed host:
-
-bash scripts/qa-and-publish.sh 2026-05-09
-
-Articles ready (20 total):
-1. nmn-week-by-week-results-women-over-40 | "What to Expect Week by Week When You Take NMN After 40" | NMN Cell Renew Tonic
-2. low-nad-signs-women-over-40 | "7 Signs of Low NAD+ in Women Over 40" | NAD+ Longevity Shot
-3. resveratrol-nad-combination-after-40 | "Resveratrol and NAD+: Why This Combination Matters After 40" | NAD+ Longevity Shot
-4. nad-perimenopause-fatigue-connection | "The NAD+ and Perimenopause Fatigue Connection" | NAD+ Longevity Shot
-5. nmn-morning-vs-evening-timing-after-40 | "NMN Morning vs Evening: When Is the Best Time?" | NMN Cell Renew Tonic
-6. longevity-supplement-stack-women-over-40-evidence | "Best Longevity Supplement Stack (Ranked by Evidence)" | NAD+ Advanced Protocol
-7. waking-3am-hormone-fix-after-40 | "Why You Wake Up at 3am After 40 (Hormone Fix)" | Liposomal Sleep Blend
-8. sleep-supplements-ranked-women-over-40 | "Sleep Supplements for Women Over 40: Ranked by Evidence" | Liposomal Magnesium
-9. mitochondria-fatigue-women-over-40 | "Why Your Mitochondria Are Making You Tired After 40" | Liposomal CoQ10
-10. coq10-guide-energy-women-over-40 | "CoQ10 for Energy After 40: A Practical Guide" | Liposomal CoQ10
-11. adrenal-health-hormones-women-over-40 | "Adrenal Health After 40: Connected to Every Hormone Problem" | Liposomal Magnesium
-12. perimenopause-supplement-protocol-women-over-40 | "The Complete Perimenopause Supplement Protocol" | NAD+ Advanced Protocol
-13. word-finding-perimenopause-brain-after-40 | "Word-Finding Problems in Perimenopause" | Neuro Creamer
-14. alpha-gpc-choline-brain-after-40 | "Alpha-GPC and Choline for Brain Health After 40" | Liposomal CoQ10
-15. gut-bloating-hormone-connection-after-40 | "The Gut-Hormone Connection: Why Bloating Gets Worse" | Happiest Gut
-16. prebiotic-probiotic-postbiotic-women-over-40 | "Prebiotic vs Probiotic vs Postbiotic: What You Actually Need" | Happiest Gut
-17. marine-collagen-guide-women-over-40 | "Marine Collagen for Women Over 40: Benefits and What to Expect" | Glow Shot
-18. skin-radiance-supplements-ranked-women-over-40 | "Best Skin Radiance Supplements (Evidence-Based Ranking)" | Liposomal Glutathione
-19. quercetin-inflammation-women-over-40 | "Quercetin and Inflammation After 40" | Liposomal Quercetin
-20. molecular-hydrogen-recovery-women-over-40 | "Molecular Hydrogen for Cellular Recovery After 40" | Hydroburn
-=== Phase 5: Shopify Publish — Sat May 16 09:39:13 UTC 2026 ===
-
-FAILED nad-advanced-vs-tru-niagen-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED happy-aging-glow-shot-vs-vital-proteins-collagen-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED nmnh-vs-nmn-vs-nr-women-after-40 → HTTP 403 — Host not in allowlist
-FAILED urolithin-a-mitochondria-muscles-after-40 → HTTP 403 — Host not in allowlist
-FAILED sleep-nad-depletion-perimenopause → HTTP 403 — Host not in allowlist
-FAILED magnesium-glycinate-vs-threonate-sleep-after-40 → HTTP 403 — Host not in allowlist
-FAILED pelvic-floor-exercises-incontinence-after-40 → HTTP 403 — Host not in allowlist
-FAILED glp1-bone-density-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED glp1-brain-fog-cognition-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED happiest-gut-vs-athletic-greens-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED glutathione-skin-after-40-honest-review → HTTP 403 — Host not in allowlist
-FAILED choline-brain-fog-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED pqq-mitochondria-energy-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED blood-sugar-balance-protocol-women-after-40 → HTTP 403 — Host not in allowlist
-FAILED uti-prevention-after-menopause → HTTP 403 — Host not in allowlist
-FAILED quercetin-immunity-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED myo-inositol-hormones-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED spermidine-autophagy-women-over-40 → HTTP 403 — Host not in allowlist
-FAILED adaptogens-perimenopause-which-help-after-40 → HTTP 403 — Host not in allowlist
-FAILED nad-cognition-memory-women-over-40 → HTTP 403 — Host not in allowlist
-
-Summary: 0 published, 20 failed
-Note: HTTP 403/422 in sandbox is expected — publish-shopify.yml Action at 11:00 UTC handles deployment
-
+Published: 0 | Staged (API error): 20

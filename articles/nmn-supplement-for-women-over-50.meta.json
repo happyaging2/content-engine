@@ -1,0 +1,24 @@
+{
+  "title": "NMN Supplement for Women Over 50: What the Research Actually Says",
+  "slug": "nmn-supplement-for-women-over-50",
+  "cluster": "nad-nmn",
+  "tags": "NMN, NAD+, women over 50, longevity supplements, cellular energy",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "product_handle": "nmn-cell-renew-tonic",
+  "product_url": "https://happyaging.com/products/nmn-cell-renew-tonic",
+  "date_published": "2026-05-18",
+  "date_reviewed": "2026-05-18",
+  "image_prompt": "A woman in her 50s sitting at a bright kitchen counter with a glass of water and supplement bottle, wearing a relaxed linen top, morning light streaming through the window, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 50s doing light strength training with dumbbells in a home gym, wearing athletic wear, focused and energized expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 50s walking briskly in a park on a sunny morning, wearing comfortable athletic clothes, bright and energetic, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 50s preparing a healthy bowl of edamame and vegetables in a modern kitchen, wearing a casual top, calm and nourished, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman 50s supplement morning kitchen",
+  "body_image_queries": [
+    "woman 50s strength training dumbbells home gym",
+    "woman 50s walking park sunny morning",
+    "woman 50s preparing healthy food kitchen"
+  ]
+}
