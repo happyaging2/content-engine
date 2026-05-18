@@ -1,0 +1,24 @@
+{
+  "title": "GLP-1 and Muscle Loss: What Women on Ozempic Need to Know About Sarcopenia",
+  "slug": "glp-1-muscle-loss-sarcopenia-women-over-40",
+  "cluster": "glp-1",
+  "tags": "GLP-1, Ozempic, sarcopenia, muscle loss, women over 40, protein",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "product_handle": "lean-muscle-formula",
+  "product_url": "https://happyaging.com/products/lean-muscle-formula",
+  "date_published": "2026-05-18",
+  "date_reviewed": "2026-05-18",
+  "image_prompt": "A woman in her 40s doing a dumbbell workout at a home gym with a bright window behind her, wearing athletic wear, strong and determined expression, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing resistance band exercises in a modern gym, wearing workout clothes, focused and strong, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s preparing a high-protein meal with grilled chicken and vegetables at a kitchen counter, wearing a casual top, healthy and purposeful, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s consulting with a female healthcare provider in a bright clinical setting, both engaged in conversation, professional and warm, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman 40s dumbbell workout home gym",
+  "body_image_queries": [
+    "woman 40s resistance band exercise gym",
+    "woman 40s preparing high protein meal kitchen",
+    "woman 40s consulting healthcare provider clinic"
+  ]
+}
