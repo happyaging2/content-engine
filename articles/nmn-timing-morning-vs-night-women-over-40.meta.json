@@ -1,0 +1,24 @@
+{
+  "title": "NMN Timing: Morning vs Night, What Actually Matters for Women Over 40",
+  "slug": "nmn-timing-morning-vs-night-women-over-40",
+  "cluster": "nad-nmn",
+  "tags": "NMN, NAD+, when to take NMN, NMN timing, women over 40",
+  "author": "Happy Aging Team",
+  "template_suffix": "timeline",
+  "product_handle": "nmn-cell-renew-tonic",
+  "product_url": "https://happyaging.com/products/nmn-cell-renew-tonic",
+  "date_published": "2026-05-18",
+  "date_reviewed": "2026-05-18",
+  "image_prompt": "A woman in her 40s standing in a bright morning kitchen holding a glass of water and a supplement capsule, wearing a comfortable robe, soft morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing yoga stretches on a mat in a sunlit living room during the morning, wearing athletic leggings and a tank top, peaceful and energized, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s eating a nutritious breakfast with fruit and oatmeal at a bright dining table, wearing casual morning clothes, relaxed and nourished, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s winding down in a cozy bedroom setting at night with a book, wearing pajamas, calm and restful, photorealistic wellness lifestyle photography, warm ambient lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "image_query": "woman 40s morning supplement kitchen",
+  "body_image_queries": [
+    "woman 40s yoga morning sunlit living room",
+    "woman 40s healthy breakfast fruit oatmeal",
+    "woman 40s reading bedroom night cozy"
+  ]
+}

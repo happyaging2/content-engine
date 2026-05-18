@@ -1,3 +1,25 @@
+# Content Learning Rules — Last Updated: 2026-05-18
+
+## BATCH 2026-05-18 OBSERVATIONS (20-article batch)
+
+### What Worked Well
+- **GLP-1 clinical library now complete:** The sarcopenia/muscle loss article (#4) completes the 8-article GLP-1 clinical concern library (hair loss, gut microbiome, skin, constipation, electrolytes, leucine/protein, bone density, brain fog, muscle loss). Future batches: reserve 1 GLP-1 slot for emerging new angles (compounding pharmacy alternatives, tirzepatide-specific vs semaglutide-specific muscle loss differences, GLP-1 and bone health protocol) rather than new clinical concerns.
+- **Pelvic health sub-topic now 3 articles deep** (pelvic floor exercises, UTI prevention, stress incontinence after menopause). Combined with bladder health, this forms a complete pelvic health library. Next: interstitial cystitis after menopause, overactive bladder vs stress incontinence disambiguation.
+- **Large brand comparison strategy validated (third batch):** AG1 athletic greens comparison (neuro-creamer-vs-ag1) and Ritual multivitamin comparison (ritual-multivitamin-vs-happy-aging) both follow the seed-probiotic precedent. These capture brand-awareness query traffic at the top of the purchase funnel. The AG1 and Ritual brands have among the highest supplement brand search volumes in the US. Predicted to be top traffic drivers.
+- **Multi-cause symptom table format re-confirmed:** The 3am wake-up article used the multi-cause table (Cause / Mechanism / Signs / What Helps) that performed well in the perimenopause fatigue article. This is now a reliable GEO extraction format for "why do I X after 40" queries.
+- **Urolithin A bioavailability angle (non-producer gap):** The 30-40% non-producer fact creates genuine reader urgency and is unique extractable data not on any competitor site. Follows estrobolome/klotho strategy of owning an emerging scientific term before competitors.
+- **FDA qualified health claim framing (phosphatidylserine):** Explaining the precise meaning of an FDA "qualified health claim" is a trust differentiator that no competitor content does well. This approach can be replicated for omega-3 (qualified health claim for cardiovascular), calcium (bone health), and folate (neural tube defect).
+
+### Rules to Add / Reinforce
+- **GLP-1 clinical library is complete at 9 articles.** Do not generate more clinical concern articles unless new mechanisms emerge in peer-reviewed literature. Next GLP-1 angle: lifestyle optimization on GLP-1 (exercise protocols, protein timing, sleep quality on GLP-1) — a positive framing pivot vs. the concern framing of the completed library.
+- **Large brand comparison hit list:** Ritual and Seed are validated. Next targets per prior LEARNING.md planning: Thorne Research multivitamin vs Happy Aging NAD Women's Formula; Olly probiotics vs Happiest Gut; NOW Foods NMN vs NMN Cell Renew. Each should acknowledge the competitor's genuine strengths to maintain trust.
+- **FDA qualified health claim articles:** Replicate the phosphatidylserine approach for: omega-3 DHA/EPA (cardiovascular qualified health claim), calcium + Vitamin D (osteoporosis), folate (neural tube). High-value content type that signals regulatory knowledge.
+- **Pelvic health library next topics:** interstitial cystitis after menopause; overactive bladder vs. stress incontinence (disambiguation article for confused searchers); pelvic organ prolapse prevention exercises.
+- **Parallel 4x5 writing remains the production standard.** 20/20 articles pass QA on first run. Agent briefs must include: verified CDN image URLs, cluster pillar slugs, real PMID examples, and explicit product CDN URL and handle. This brief completeness eliminates hallucination of citations and product images.
+- **Refresh article strategy:** Two refreshes per batch (b12-deficiency, magnesium-forms this batch) updates key evergreen articles. Refresh candidates should be chosen for: (a) high existing search volume, (b) recent studies that change guidance, (c) articles missing reviewer_url or GEO fields.
+
+---
+
 # Content Learning Rules — Last Updated: 2026-05-16
 
 ## BATCH 2026-05-16 OBSERVATIONS (20-article batch)
