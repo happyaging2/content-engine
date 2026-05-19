@@ -1,0 +1,39 @@
+{
+  "title": "How to Maintain Weight Loss After Stopping GLP-1 Medications: A Protocol for Women Over 40",
+  "slug": "glp-1-weight-maintenance-after-stopping-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "GLP-1, semaglutide, weight maintenance, women over 40, gut health, probiotic, weight regain, GLP-1 off-ramp, Ozempic, Wegovy",
+  "template_suffix": "timeline",
+  "product_handle": "happiest-gut",
+  "primary_topic": "Weight maintenance protocol after stopping GLP-1 medications for women over 40",
+  "cluster": "glp-1",
+  "schema_type": "Article",
+  "about": ["GLP-1 medication discontinuation", "weight maintenance after semaglutide", "gut microbiome and satiety", "muscle preservation during GLP-1", "weight regain prevention"],
+  "mentions": ["semaglutide", "tirzepatide", "Ozempic", "Wegovy", "Mounjaro", "Lactobacillus", "Bifidobacterium", "gut microbiome", "GLP-1"],
+  "medical_audience": "Patient",
+  "image_query": "woman over 40 cooking healthy meal kitchen confident wellness",
+  "body_image_queries": [
+    "woman 40s hiking scenic trail water bottle outdoor athletic clothes nature",
+    "woman 40s writing health goals journal porch morning coffee casual clothes",
+    "woman 40s restaurant mindful food choices nice blouse bright modern setting"
+  ],
+  "image_prompt": "A woman in her 40s cooking a balanced healthy meal in her kitchen with confidence and contentment, wearing a casual apron over her clothes, warm inviting kitchen with herbs on the counter, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s hiking on a scenic trail with a water bottle, wearing outdoor athletic clothes and hiking boots, beautiful nature trail setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s writing a health goals journal on a cozy porch with morning coffee, wearing casual weekend clothes, peaceful outdoor porch setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s enjoying a meal out at a restaurant making mindful food choices, wearing a nice blouse, bright modern restaurant setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-19",
+  "date_modified": "2026-05-19",
+  "date_reviewed": "2026-05-19",
+  "citations": [
+    {"pmid": "33763514", "citation": "Wilding et al. 2021, semaglutide STEP 1 RCT"},
+    {"pmid": "35441465", "citation": "Jastreboff et al. 2022, tirzepatide SURMOUNT-1 RCT"}
+  ],
+  "seo_title": "How to Maintain Weight Loss After Stopping GLP-1 Medications: A Protocol for Women Over 40",
+  "meta_description": "Most women regain weight after stopping GLP-1 medications. This physician-reviewed protocol for women over 40 addresses the gut, muscle, and behavioral factors that determine maintenance success."
+}

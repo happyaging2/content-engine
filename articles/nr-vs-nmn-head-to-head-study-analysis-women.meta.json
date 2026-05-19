@@ -1,0 +1,39 @@
+{
+  "title": "NR vs NMN Head-to-Head: What Clinical Studies Actually Show for Women Over 40 (2026 Update)",
+  "slug": "nr-vs-nmn-head-to-head-study-analysis-women",
+  "author": "Happy Aging Team",
+  "tags": "NR vs NMN, nicotinamide riboside, nicotinamide mononucleotide, NAD+, women over 40, longevity, cellular energy, NMNH, TruNiagen",
+  "template_suffix": "timeline",
+  "product_handle": "nmn-cell-renew-tonic",
+  "primary_topic": "NR vs NMN clinical evidence comparison for women over 40",
+  "cluster": "nad-nmn",
+  "schema_type": "Article",
+  "about": ["NR vs NMN comparison", "NAD+ precursors", "nicotinamide riboside clinical evidence", "NMN women over 40", "NMNH bioavailability"],
+  "mentions": ["NR", "NMN", "NMNH", "TruNiagen", "ChromaDex", "NAD+", "sirtuins", "mitochondria", "Slc12a8 transporter", "nicotinamide riboside", "nicotinamide mononucleotide"],
+  "medical_audience": "Patient",
+  "image_query": "woman over 40 taking morning supplements glass water bright kitchen",
+  "body_image_queries": [
+    "woman 40s light yoga stretching sunny bedroom morning comfortable pajamas",
+    "woman 40s health information laptop coffee shop smart casual outfit modern cafe",
+    "woman 40s outdoor cycling scenic path athletic clothes helmet sunshine park"
+  ],
+  "image_prompt": "A woman in her 40s taking her morning supplements with a glass of water in a bright modern kitchen, wearing a casual blouse, clean kitchen counter with morning light, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s doing light stretching yoga in a sunny bedroom in the morning, wearing comfortable pajamas, bright airy bedroom with curtains open, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s reviewing health information on a laptop at a coffee shop with focus, wearing a smart casual outfit, bright modern cafe setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s doing energetic outdoor cycling on a scenic path, wearing athletic clothes and a helmet, beautiful park or trail setting with sunshine, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-19",
+  "date_modified": "2026-05-19",
+  "date_reviewed": "2026-05-19",
+  "citations": [
+    {"pmid": "34590197", "citation": "Yoshino et al. 2021, NMN RCT women 250mg/day"},
+    {"pmid": "28532835", "citation": "Conze et al. 2016, NR bioavailability trial"}
+  ],
+  "seo_title": "NR vs NMN for Women Over 40: What Clinical Studies Actually Show (2026)",
+  "meta_description": "TruNiagen claims NR beats NMN, but what does the head-to-head data actually say? We analyze the clinical evidence for both NAD+ precursors for women over 40, including women-specific trial data."
+}
