@@ -4300,6 +4300,35 @@ A: Fermented foods and probiotic supplements provide different benefits. Ferment
 Cite: https://happyaging.com/blogs/news/gut-microbiome-immunity-after-menopause-women
 
 
+## HMB Supplement for Women Over 40: What the Research Shows About Preventing Muscle Loss
+Source: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+Entities: HMB supplementation, sarcopenia prevention, muscle protein breakdown, women over 40 muscle health, leucine metabolites
+
+### Q: What Is HMB?
+A: Beta-hydroxy beta-methylbutyrate (HMB) is a metabolite produced when your body breaks down the branched-chain amino acid leucine. Approximately 5 percent of dietary leucine is converted to HMB in healthy adults. Because leucine is one of the most abundant amino acids in high-protein foods and the key trigger for muscle protein synthesis, HMB was initially investigated as a way to capture the muscle-protecting benefits of leucine in a more concentrated, direct form. HMB was first identified as a biologically relevant compound in the 1990s, when animal studies showed significant anti-catabolic effects, meaning it appeared to substantially slow the breakdown of muscle tissue. This led to its commercialization as a sports supplement. HMB works through a distinct mechanism from protein itself: it inhibits the ubiquitin-proteasome pathway, which is the cellular machinery responsible for breaking down damaged or unneeded muscle proteins. By slowing this degradation pathway, HMB shifts the muscle protein balance in favor of net gain or maintenance, even when muscle breakdown would otherwise exceed muscle building. This is theoretically valuable for women over 40, who experience accelerating muscle protein breakdown as estrogen declines and who face sarcopenia risk with each passing decade.
+Cite: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+
+### Q: How long does it take for HMB to work?
+A: Most HMB studies run for at least 8 to 12 weeks before measuring lean mass outcomes. Unlike creatine, which can produce noticeable changes in muscle fullness within a week (partly from water retention in muscle), HMB's anti-catabolic effects accumulate over weeks rather than producing acute noticeable changes. If you add HMB to your stack, plan to evaluate over 12 weeks while keeping protein and training consistent.
+Cite: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+
+### Q: Can I get enough HMB from food?
+A: Technically yes, but practically no. Leucine-rich foods (chicken, fish, dairy, eggs, soy) are the dietary source of HMB, but only about 5 percent of leucine converts to HMB. To get 3 grams of HMB from food alone, you would need to consume approximately 60 grams of leucine, which would require eating roughly 500 to 700 grams of pure protein daily. This is not a practical food-based strategy, which is why supplemental HMB was developed.
+Cite: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+
+### Q: Does HMB interfere with medications?
+A: No significant drug interactions with HMB have been identified in clinical literature. HMB is a naturally occurring metabolite and does not affect cytochrome P450 liver enzymes at therapeutic doses. Women taking statins should discuss any supplement additions with their prescribing physician as statin-related muscle effects (myopathy) theoretically interact with muscle metabolism pathways, though no direct HMB-statin interaction has been studied.
+Cite: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+
+### Q: Is the free acid form worth the higher price?
+A: The free acid form (HMB-FA) absorbs faster and achieves higher peak plasma concentrations than the calcium salt form (Ca-HMB). For acute workout performance applications where timing matters, this difference may be meaningful. For daily muscle preservation in women over 40, where consistent daily dosing over months is the goal rather than acute pre-workout effects, the difference is likely modest. If cost is a consideration, Ca-HMB at 3 grams daily is a reasonable and well-studied choice.
+Cite: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+
+### Q: Can I take HMB and creatine together?
+A: Yes, and this combination is actually well-studied. Research on combining creatine monohydrate and HMB suggests they work through sufficiently different mechanisms (energy availability and synthesis versus breakdown inhibition) that their effects are additive rather than redundant. This combination represents a comprehensive approach to muscle protein balance from both ends simultaneously.
+Cite: https://happyaging.com/blogs/news/hmb-muscle-loss-prevention-women-over-40
+
+
 ## HRV After 40: What Heart Rate Variability Tells You About Your Biological Age
 Source: https://happyaging.com/blogs/news/hrv-heart-rate-variability-biological-aging-women-40
 Entities: heart rate variability, HRV, biological aging, autonomic nervous system, perimenopause, cardiovascular health, women over 40
@@ -8317,6 +8346,15 @@ Entities: Probiotic supplement comparison for women over 40, Digestive enzyme su
 ### Q: What Is Each Product?
 A: Olly Probiotic + Prebiotic is a gummy supplement sold at Target, CVS, Walmart, and Amazon. The formula centers on Bacillus coagulans, a shelf-stable probiotic strain that survives room-temperature storage and stomach acid more reliably than many lactobacillus or bifidobacterium strains. The dose is 1 billion CFU per gummy serving. It includes inulin, a prebiotic fiber derived from chicory root, to provide fermentation substrate for the probiotic bacteria. The gummy form is fruit-flavored and easy to take. Price is typically $18 to $22 for a monthly supply depending on retailer.
 Cite: https://happyaging.com/blogs/news/olly-probiotics-vs-happiest-gut-women-over-40
+
+
+## Omega-3 DHA and the FDA Qualified Health Claim for Brain Health: What Women Over 40 Should Know
+Source: https://happyaging.com/blogs/news/omega-3-dha-fda-qualified-health-claim-women-over-40
+Entities: DHA and cognitive function in women over 40, FDA qualified health claims for omega-3 fatty acids, Phospholipid DHA brain bioavailability
+
+### Q: What Is a Qualified Health Claim, and What Has the FDA Actually Approved for Omega-3?
+A: A qualified health claim is a specific regulatory category used by the FDA for food and supplement labels. It occupies the space between an unqualified health claim (where the evidence is conclusive and well-established, such as the claim that calcium supports bone health) and no claim at all. Qualified health claims are permitted when the scientific evidence is suggestive but not conclusive, and they must be accompanied by a specific qualifying statement acknowledging the limits of the evidence.
+Cite: https://happyaging.com/blogs/news/omega-3-dha-fda-qualified-health-claim-women-over-40
 
 
 ## Omega-3 Dosage Guide for Women Over 40: How Much Do You Actually Need?
