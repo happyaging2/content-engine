@@ -1,0 +1,39 @@
+{
+  "title": "HMB Supplement for Women Over 40: What the Research Shows About Preventing Muscle Loss",
+  "slug": "hmb-muscle-loss-prevention-women-over-40",
+  "author": "Happy Aging Team",
+  "tags": "HMB, muscle loss, sarcopenia, women over 40, lean muscle, beta-hydroxy beta-methylbutyrate, metabolism, muscle preservation",
+  "template_suffix": "timeline",
+  "product_handle": "lean-muscle-formula",
+  "primary_topic": "HMB supplementation for muscle loss prevention in women over 40",
+  "cluster": "metabolism",
+  "schema_type": "Article",
+  "about": ["HMB supplementation", "sarcopenia prevention", "muscle protein breakdown", "women over 40 muscle health", "leucine metabolites"],
+  "mentions": ["beta-hydroxy beta-methylbutyrate", "HMB free acid", "creatine monohydrate", "ubiquitin-proteasome pathway", "muscle protein synthesis", "leucine"],
+  "medical_audience": "Patient",
+  "image_query": "woman over 40 resistance training gym dumbbells",
+  "body_image_queries": [
+    "woman 40s eating high protein meal chicken quinoa vegetables kitchen",
+    "woman 40s measuring waist smiling confidence bathroom mirror athletic wear",
+    "woman 40s stretching yoga mat outdoors after workout park"
+  ],
+  "image_prompt": "A woman in her 40s doing resistance training with dumbbells in a bright gym with determination, wearing athletic leggings and a workout tank, modern fitness studio with large windows, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+  "body_image_prompts": [
+    "A woman in her 40s eating a high-protein meal with chicken breast, quinoa and vegetables at a clean kitchen table, wearing casual home clothes, bright modern kitchen, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s measuring her waist and smiling with confidence at a bathroom mirror, wearing athletic wear, clean bright bathroom, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality",
+    "A woman in her 40s stretching after a workout on a yoga mat outdoors, wearing athletic clothes, sunny park or backyard setting, photorealistic wellness lifestyle photography, warm natural lighting, no text, no watermark, no nudity, high quality"
+  ],
+  "reviewer": "Dr. Daniel Yadegar, MD, FACC, RPVI",
+  "reviewer_title": "Cardiologist & Longevity Physician",
+  "reviewer_url": "https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/",
+  "reviewer_sameAs": ["https://www.linkedin.com/in/daniel-yadegar-md-facc-rpvi-aa55a958/"],
+  "date_published": "2026-05-19",
+  "date_modified": "2026-05-19",
+  "date_reviewed": "2026-05-19",
+  "citations": [
+    {"pmid": "11591884", "citation": "Wilson et al. 2001, meta-analysis HMB lean mass"},
+    {"pmid": "24833583", "citation": "Wilson et al. 2014, HMB free acid RCT, older adults muscle"}
+  ],
+  "seo_title": "HMB for Women Over 40: Does It Actually Prevent Muscle Loss? (Research Review)",
+  "meta_description": "HMB has real science behind it, but does it work for healthy women over 40? We review the evidence honestly, including what it does and doesn't do for sarcopenia prevention."
+}
