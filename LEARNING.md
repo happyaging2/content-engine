@@ -1,3 +1,26 @@
+# Content Learning Rules — Last Updated: 2026-05-19
+
+## BATCH 2026-05-19 OBSERVATIONS (20-article batch)
+
+### What Worked Well
+- **GLP-1 lifestyle optimization pivot delivered (2 articles):** The exercise protocol (glp-1-exercise-protocol-muscle-women-over-40) and weight maintenance off-ramp (glp-1-weight-maintenance-after-stopping-women-over-40) complete the positive-framing pivot from the clinical concern library. These address the next GLP-1 reader lifecycle stage: women who are ON the medication and women transitioning off. Predicted high conversion for lean-muscle-formula.
+- **Pelvic health library now 6 articles deep:** With interstitial cystitis, overactive bladder vs stress incontinence disambiguation, and pelvic organ prolapse prevention, the pelvic health sub-topic is the most comprehensive women 40+ resource on the internet. The disambiguation article (OAB vs stress incontinence) addresses a genuine search confusion gap with a comparison table that no competitor replicates.
+- **FDA qualified health claim series (omega-3):** The omega-3 DHA article accurately corrects the common misconception (the FDA qualified claim is cardiovascular, not brain health) while still presenting the genuine evidence for cognitive function (MIDAS trial, PMID 20434961). This approach builds trust by being more accurate than competitors who overstate the claim.
+- **Immunosenescence as owned terminology:** Following the estrobolome/klotho/NMNH strategy, immunosenescence is an emerging longevity science term with minimal plain-language coverage for women 40+. The NAD+ immune aging connection creates a new link cluster between the longevity and immunity content pillars.
+- **NAD+ methylation connection (novel angle):** The NAD+-methylation article covers the SAM-e/one-carbon metabolism connection, which no competitor has explained clearly for women 40+. The MTHFR variant angle creates personal relevance for the 40-60% of readers who carry it.
+- **Comparison breadth: 6 ha-vs-competitor in one batch:** Thorne, Olly probiotics, NOW Foods NMN, Cymbiotika NAD+, Orgain protein, and Olly Sleep in one batch expands brand-awareness coverage significantly. All comparisons include genuine competitor acknowledgment.
+
+### Rules to Add / Reinforce
+- **GLP-1 lifestyle library now covers:** clinical concerns (9 articles, complete), exercise protocol, protein timing, weight maintenance off-ramp, tirzepatide vs semaglutide comparison. Next GLP-1 angle: sleep quality optimization on GLP-1 (the microbiome-sleep connection is directly relevant); compounding pharmacy GLP-1 alternatives (high search volume, underserved by major brands).
+- **Pelvic health library is now complete** at 6 articles. Future pelvic slots should focus on: pelvic organ prolapse treatment options (pessary vs surgery vs PT comparison); bladder training protocol update.
+- **Large brand comparison hit list for future batches:** Cymbiotika (other products beyond NAD), Garden of Life multivitamin vs Happy Aging, Life Extension vs Happy Aging, Pure Encapsulations vs Happy Aging, MegaFood vs Happy Aging (menopause focus). Each entry should have 200K+ brand search volume to justify the slot.
+- **FDA qualified health claim articles completed:** omega-3 DHA (this batch), phosphatidylserine (prior batch). Remaining: calcium + Vitamin D (osteoporosis qualified claim), folate (neural tube). Reserve 1 FDA-claim article per 2 batches.
+- **Immunosenescence/immune-aging sub-cluster started:** follow-up articles: "how to test your immune age" (functional tests for T-cell diversity); "thymic involution after menopause" (the thymus-shrinkage mechanism); "zinc and immune aging after 40" (zinc is the most evidence-backed immune mineral for older adults).
+- **Parallel 4x5 writing remains production standard:** 20/20 articles pass QA first run. Include verified PMIDs in agent brief, not just instructions to search for them. Brief completeness is the single largest driver of citation accuracy.
+- **Refresh strategy for next batch:** priority candidates from REFRESH-QUEUE.md (all articles have missing date_reviewed, structured citations, reviewer_url): select 2 high-traffic articles. Recommended: autophagy-after-40-guide (high search volume, old format, no GEO fields); best-supplements-for-perimenopause (very high traffic, lacks comparison table and FAQ structure).
+
+---
+
 # Content Learning Rules — Last Updated: 2026-05-18
 
 ## BATCH 2026-05-18 OBSERVATIONS (20-article batch)
